@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "STHeitiSC-Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+        }
+
+        body {
+            min-width: 1200px;
+        }
+
+        .sprite {
+            width: 1200px;
+            margin: auto;
+            background: url('/static/brain/nao/index/img/sprite.png') no-repeat;
+        }
+
+        .absolute {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .z-anim {
+            animation: define-z-animation 1s;
+        }
+
+        .b-anim {
+            will-change: transform;
+            animation: define-b-animation 1s;
+        }
+
+        .s-anim {
+            animation: define-s-animation 1s;
+        }
+
+        .w-anim {
+            animation: define-w-animation 1s;
+        }
+
+        @keyframes define-w-animation {
+            0% {
+                opacity: 0;
+                transform: translate(0, 20px);
+            }
+        }
+
+        @keyframes define-s-animation {
+            0% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes define-b-animation {
+            0% {
+                opacity: 0;
+                transform: scale(0)
+            }
+        }
+
+        @keyframes define-z-animation {
+            0% {
+                opacity: 0;
+            }
+        }
+
+        @media all and (min-resolution: 2dppx) {
+            .sprite {
+                background: url("/static/brain/nao/index/img/sprite@2x.png") no-repeat;
+                background-size: 1600px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="body">
+    <div style="position: relative; height: 500px; background: url(./img/brain-layer.jpg) center;background-size: cover;overflow: hidden">
+        <div class="absolute"
+             data-anim="z-anim"
+             data-anim-delay="1"
+             style="width: 1200px; height: 100%; right: 0; margin: auto; background: url(./img/brain-z-layer.png) center"></div>
+        <div class="absolute"
+             data-anim="s-anim"
+             data-anim-delay="1"
+             style="width: 1200px; height: 100%; right: 0; margin: auto; background: url(./img/brain-s-layer.png) center"></div>
+        <div class="absolute"
+             data-anim="w-anim"
+             data-anim-delay="1"
+             style="width: 1200px; height: 100%; right: 0; margin: auto; background: url(./img/brain-w-layer.png) center"></div>
+        <div class="absolute"
+             data-anim="b-anim"
+             style="width: 1200px; height: 100%; right: 0; margin: auto; background: url(./img/brain-b-layer.png) center"></div>
+        <div class="absolute" style="width: 1200px; height: 100%; right: 0; margin: auto;"></div>
+    </div>
+    <div style="height: 36px;line-height: 36px;background: #fafafa">
+        <div class="js-content"></div>
+    </div>
+    <div style="height: 526px; background-position: center -532px" class="sprite"></div>
+    <div style="background: #fafafa">
+        <div style="height: 350px; background-position: center -1060px" class="sprite"></div>
+    </div>
+    <div style="height: 153px; background-position: center -1408px" class="sprite"></div>
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    (function () {
+        $('[data-anim]').each(function (index, elem) {
+            elem = $(elem);
+            var delay = parseInt(elem.data('anim-delay'), 10) || 0;
+            elem.addClass(elem.data('anim')).css({
+                animationPlayState: 'paused'
+            });
+            setTimeout(function () {
+                elem.css({
+                    animationPlayState: ''
+                })
+            }, delay * 1000);
+        })
+    })();
+</script>
+</body>
+</html>

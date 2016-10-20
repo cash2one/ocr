@@ -1,0 +1,192 @@
+.top-section {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin: 0 auto;
+    background: #2c4d9f url(/static/brain/img/page/ml/ml-bg.png) no-repeat center center / 100% 100%;
+}
+.top-pic {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background: url(/static/brain/img/page/ml/ml-sprite-cp@2x.png) no-repeat center 0 / 1600px;
+}
+.btn-bg-blue {
+    position: absolute;
+    background: url(/static/brain/img/page/ml/api-cp@2x.png) no-repeat center center;
+    background-size: cover;
+    transition: all .1s;
+}
+.btn-bg-blue:hover {
+    background: url(/static/brain/img/page/ml/api-hover-cp@2x.png) no-repeat center center;
+    background-size: cover;
+}
+.intro-section {
+    width: 100%;
+    height: 445px;
+    position: relative;
+    margin: 0 auto;
+    background: #fff;
+}
+.intro-pic {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background: url(/static/brain/img/page/ml/ml-sprite-cp@2x.png) no-repeat center -500px / 1600px;
+}
+.intro-detail {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    top: 360px;
+    line-height: 30px;
+    text-align: center;
+    transition: all .1s;
+    color: #008cfa;
+    background: #fff;
+    border: 1px solid #008cfa;
+    font-size: 14px;
+    font-weight: 200;
+}
+.intro-detail:hover {
+    background: #008cfa;
+    color: #fff;
+}
+.sep-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, .1);
+}
+.advan-section {
+    width: 100%;
+    height: 385px;
+    position: relative;
+    margin: 0 auto;
+}
+.advan-pic {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background: url(/static/brain/img/page/ml/ml-sprite-cp@2x.png) no-repeat center -945px / 1600px;
+}
+.app-case {
+    width: 100%;
+    height: 120px;
+    position: relative;
+    margin: 0 auto;
+    background: url(/static/brain/img/page/ml/ml-sprite-cp@2x.png) no-repeat center -1330px / 1600px;
+}
+.product-section {
+    width: 100%;
+    height: 510px;
+    position: relative;
+    margin: 0 auto;
+    /*background: blue;*/
+}
+.scroll {
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+}
+.scroll li {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.slide-1 {
+    background: url(/static/brain/img/page/ml/ml-scroll-1@2x.png) no-repeat center center;
+    background-size: cover;
+}
+.slide-2 {
+    background: url(/static/brain/img/page/ml/ml-scroll-2@2x.png) no-repeat center center;
+    background-size: cover;
+}
+.slide-3 {
+    background: url(/static/brain/img/page/ml/ml-scroll-3@2x.png) no-repeat center center;
+    background-size: cover;
+}
+.slide-4 {
+    background: url(/static/brain/img/page/ml/ml-scroll-4@2x.png) no-repeat center center;
+    background-size: cover;
+}
+.scroll-btn {
+    position: absolute;
+    width: 100%;
+    line-height: 70px;
+    height: 70px;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    font-size: 0;
+}
+.scroll-btn li {
+    width: 160px;
+    display: inline-block;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 100;
+    vertical-align: middle;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.scroll-btn li:hover {
+    color: #008cfa;
+}
+
+.scroll-btn li.on {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .8) 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .8) 100%);
+    color: #0077d5;
+}
+.product-pic {
+    height: 100%;
+    margin: 0 auto;
+    background: url(/static/brain/img/page/ml/ml-sprite-cp@2x.png) no-repeat center -1450px / 1600px;
+}
+
+.contact-section {
+    width: 100%;
+    height: 170px;
+    position: relative;
+    margin: 0 auto;
+    background: #f5f5f5;
+}
+.contact-pic {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background: url(/static/brain/img/page/ml/ml-sprite-cp@2x.png) no-repeat center -1960px / 1600px;
+}
+.contact {
+    position: absolute;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    color: #008cfa;
+    background: #f5f5f5;
+}
+.contact:hover {
+    color: #4daffc;
+}
+.hi {
+    width: 80px;
+    top: 108px;
+    left: 288px;
+}
+.mail {
+    width: 145px;
+    top: 108px;
+    left: 566px;
+}
+.hetu {
+    width: 95px;
+    top: 108px;
+    left: 965px;
+}
+

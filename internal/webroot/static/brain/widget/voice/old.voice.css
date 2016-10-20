@@ -1,0 +1,269 @@
+body {
+    overflow-x: hidden;
+}
+
+a {
+    cursor: pointer;
+}
+
+/* top picture section*/
+.top-section {
+    width: 100%;
+    min-width: 1280px;
+    height: 500px;
+    background: url(/static/brain/img/page/voice/top-back.png) no-repeat center center / 100% 100%;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+.pic {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    display: inline-block;
+}
+.top-pic {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+.wave-l {
+    position: absolute;
+    top: 150px;
+    left: -150px;
+}
+.wave-r {
+    position: absolute;
+    top: 150px;
+    left: 740px;
+}
+.text {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    display: inline-block;
+}
+.top-title {
+    position: absolute;
+    top: 210px;
+    left: 10px;;
+}
+.top-description {
+    position: absolute;
+    top: 300px;
+    left: 10px;;
+}
+
+/* introduction section*/
+.intro-section {
+    width: 100%;
+    min-width: 1280px;
+    height: 420px;
+    background: #fff;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+.intro-title {
+    margin: 0 auto;
+    top: 50px;
+    position: relative;
+}
+.intro-list {
+    position: relative;
+    padding: 40px 0 0 50px;
+    display: inline-block;
+}
+.intro-item {
+    position: relative;
+    padding: 50px 100px 0 100px;
+    display: inline-block;
+}
+
+.intro-item a {
+    bottom: 0;
+    margin: auto;
+    left: 36%;
+    width: 90px;
+    height: 30px;
+    position: absolute;
+}
+
+/* advantage section*/
+.advan-section {
+    width: 100%;
+    min-width: 1280px;
+    height: 390px;
+    background: #cccccc;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+.advan-title {
+    margin: 0 auto;
+    top: 50px;
+    position: relative;
+}
+.advan-list {
+    position: relative;
+    padding: 40px 0 0 50px;
+    display: inline-block;
+}
+.advan-item {
+    position: relative;
+    padding: 50px 30px 0 30px;
+    display: inline-block;
+}
+
+.pad-top {
+   top: 23px;
+}
+
+/* product section */
+/*width根据屏幕初始化或者resize之后设置*/
+.product-section {
+    width: 100%;
+    height: 100%;
+    min-width: 1280px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+}
+.carousel {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.carousel-item {
+    height: 100%;
+    display: inline-block;
+}
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+}
+.carousel-btn {
+    position: absolute;
+    bottom: 0;
+    width: 900px;
+    margin: auto;
+}
+.carousel-btn li {
+    width: 160px;
+    height: 70px;
+    margin: 0 20px 0;
+    z-index: 1;
+    font-weight: lighter;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+}
+.carousel-btn li.active {
+    background: rgba(0, 0, 0, .7);
+    color: #008cfa;
+}
+.carousel-item li:hover {
+    cursor: pointer;
+}
+/* experience section */
+.experience-section {
+    width: 100%;
+    min-width: 1280px;
+    height: 240px;
+    background: #0077d5;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+.experience-title {
+    margin: 0 auto;
+    top: 50px;
+    position: relative;
+}
+.experience-list {
+    position: relative;
+    padding: 40px 0 0 0;
+    display: inline-block;
+}
+.experience-item {
+    position: relative;
+    padding: 50px 20px 0 20px;
+    display: inline-block;
+}
+/* api section */
+.api-section {
+    width: 100%;
+    min-width: 1280px;
+    height: 210px;
+    background: #fff;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+.api-title {
+    margin: 0 auto;
+    top: 50px;
+    position: relative;
+}
+.api-list {
+    position: relative;
+    padding: 40px 0 0 0;
+    display: inline-block;
+}
+.api-item {
+    position: relative;
+    padding: 50px 130px 0 130px;
+    display: inline-block;
+}
+.api-item a {
+    bottom: 0;
+    margin: auto;
+    left: 38%;
+    width: 80px;
+    height: 20px;
+    position: absolute;
+}
+.api-sep {
+    width: 2px;
+    height: 41px;
+    background: url(/static/brain/img/page/voice/api-sep.png) no-repeat center center;
+    display: inline-block;
+    position: relative;
+}
+
+/* contact section */
+.contact-section {
+    width: 100%;
+    min-width: 1280px;
+    height: 170px;
+    background: #cccccc;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-title {
+    margin: 0 auto;
+    top: 50px;
+    position: relative;
+}
+.contact-list {
+    position: relative;
+    padding: 40px 0 0 0;
+    display: inline-block;
+}
+.contact-item {
+    position: relative;
+    padding: 50px 70px 0 70px;
+    display: inline-block;
+}
+.contact-item a {
+    bottom: 0;
+    margin: auto;
+    height: 20px;
+    position: absolute;
+}

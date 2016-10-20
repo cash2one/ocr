@@ -1,0 +1,142 @@
+.sprite {
+    width: 1200px;
+    margin: auto;
+    background: url(/static/brain/page/home/img/sprite-cp@2x.png) no-repeat;
+    position: relative;
+    background-size: 1600px;
+}
+
+.absolute {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.z-anim {
+    animation: define-z-animation 1s;
+}
+
+.b-anim {
+    will-change: transform;
+    animation: define-b-animation 1s;
+}
+
+.s-anim {
+    animation: define-s-animation 1s;
+}
+
+.w-anim {
+    animation: define-w-animation 1s;
+}
+
+@keyframes define-w-animation {
+    0% {
+        opacity: 0;
+        transform: translate(0, 20px);
+    }
+}
+
+@keyframes define-s-animation {
+    0% {
+        opacity: 0;
+    }
+}
+
+@keyframes define-b-animation {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes define-z-animation {
+    0% {
+        opacity: 0;
+    }
+}
+
+@media all and (min-resolution: 2dppx) {
+    .sprite {
+        background: url(/static/brain/page/home/img/sprite-cp@2x.png) no-repeat;
+        background-size: 1600px;
+    }
+}
+
+.a {
+    background: #2c4d9f url(/static/brain/page/home/img/brain-layer.jpg) center;
+}
+
+.b {
+    background: url(/static/brain/page/home/img/brain-z-layer.png) center;
+}
+
+.c {
+    background: url(/static/brain/page/home/img/brain-s-layer.png) center;
+}
+
+.d {
+    background: url(/static/brain/page/home/img/brain-w-layer.png) center;
+}
+
+.e {
+    background: url(/static/brain/page/home/img/brain-b-layer.png) center;
+}
+
+.bell {
+    width: 14px;
+    height: 100%;
+    margin: 0 10px 0 50px;
+    position: relative;
+    background: url(/static/brain/page/home/img/bell.png) center no-repeat;
+    background-size: 100%;
+    float: left;
+}
+
+.js-content {
+  overflow: hidden;
+}
+
+.js-content span {
+    font-size: 12px;
+    line-height: 36px;
+    color: #666666;
+    display: inline-block;
+    margin-right: 50px;
+}
+.js-content span:hover {
+    color: #008cfa;
+}
+.service-section {
+    line-height: 20px;
+    height: 20px;
+    text-align: center;
+    background: #fff;
+    font-weight: 200;
+    color: #666666;
+}
+.service-section:hover {
+    color: #008cfa;
+}
+
+.service-detail {
+    line-height: 34px;
+    text-align: center;
+    background: #fff;
+    width: 60px;
+    font-weight: 200;
+    color: #008cfa;
+}
+.service-detail:hover {
+    color: #4daffc;
+}
+
+.contact {
+    text-align: center;
+    font-size: 16px;
+    background: #fff;
+    color: #008cfa;
+    font-weight: 200;
+}
+.contact:hover {
+    color: #4daffc;
+}

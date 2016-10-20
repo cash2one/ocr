@@ -1,0 +1,242 @@
+.nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-width: 1200px;
+    height: 50px;
+    background: rgba(0, 0, 0, .15);
+    z-index: 1;
+    min-width: 1200px;
+}
+
+.nav .item {
+    width: 90px;
+    height: 50px;
+    position: relative;
+}
+.nav #icon {
+    width: 90px;
+    height: 28px;
+    margin: 12px 0 0 30px;
+    background: url(/static/brain/img/logo-cp@2x.png) no-repeat center center / 100% 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.nav #navlist {
+    height: 30px;
+    padding: 15px 0 0 150px;
+    display: inline-block;
+    position: absolute;
+}
+.nav #navlist .navitem {
+    height: 32px;
+    position: relative;
+    margin: 0 23px 0 23px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    display: inline-block;
+    z-index: 2;
+}
+.nav #navlist .navitem:hover {
+    color: #fff;
+    opacity: .6;
+}
+.nav #navlist .active {
+    border-bottom: 3px solid #fff;
+}
+
+.nav #how-to-start {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 1px;
+}
+
+#hts-btn {
+    position: absolute;
+    width: 155px;
+    height: 50px;
+    right: 0;
+    top:0;
+    cursor: pointer;
+    background: url(/static/brain/img/how-to-start-btn@2x.png) no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+}
+
+#hts-detail {
+    position: absolute;
+    width: 703px;
+    height: 288px;
+    right: 0;
+    top: 50px;
+    background: url(/static/brain/img/how-to-start-detail@2x.png) no-repeat center center;
+    background-size: cover;
+    display: none;
+}
+
+#top-easydl {
+    position: absolute;
+    width: 60px;
+    height: 18px;
+    top: 52px;
+    left: 59px;
+    font-size: 14px;
+    color: #fcee7c;
+    background: #008cfa;
+    opacity: 0;
+}
+#top-easydl:hover {
+    opacity: 1;
+}
+#top-image {
+    position: absolute;
+    width: 60px;
+    height: 18px;
+    top: 52px;
+    left: 143px;
+    font-size: 14px;
+    color: #fcee7c;
+    background: #008cfa;
+    opacity: 0;
+}
+#top-image:hover {
+    opacity: 1;
+}
+#top-speech {
+    position: absolute;
+    width: 60px;
+    height: 18px;
+    top: 52px;
+    left: 226px;
+    font-size: 14px;
+    color: #fcee7c;
+    background: #008cfa;
+    opacity: 0;
+}
+#top-speech:hover {
+    opacity: 1;
+}
+#top-bigdata {
+    position: absolute;
+    width: 79px;
+    height: 18px;
+    top: 52px;
+    left: 314px;
+    font-size: 14px;
+    color: #fcee7c;
+    background: #008cfa;
+    opacity: 0;
+}
+#top-bigdata:hover {
+    opacity: 1;
+}
+#top-userprofile {
+    position: absolute;
+    width: 60px;
+    height: 18px;
+    top: 52px;
+    left: 418px;
+    font-size: 14px;
+    color: #fcee7c;
+    background: #008cfa;
+    opacity: 0;
+}
+#top-userprofile:hover {
+    opacity: 1;
+}
+#top-bdkg {
+    position: absolute;
+    width: 100px;
+    height: 18px;
+    top: 52px;
+    left: 503px;
+    font-size: 14px;
+    color: #fcee7c;
+    background: #008cfa;
+    opacity: 0;
+}
+#top-bdkg:hover {
+    opacity: 1;
+}
+#top-recsys {
+    position: absolute;
+    width: 60px;
+    height: 18px;
+    top: 52px;
+    left: 627px;
+    font-size: 14px;
+    color: #fcee7c;
+    background: #008cfa;
+    opacity: 0;
+}
+#top-recsys:hover {
+    opacity: 1;
+}
+#top-hetu {
+    position: absolute;
+    width: 75px;
+    height: 19px;
+    top: 157px;
+    left: 172px;
+    font-size: 14px;
+    color: #fcee7c;
+    background: #008cfa;
+    opacity: 0;
+}
+#top-hetu:hover {
+    opacity: 1;
+}
+#top-hi {
+    position: absolute;
+    width: 53px;
+    height: 19px;
+    top: 157px;
+    left: 326px;
+    font-size: 14px;
+    color: #fcee7c;
+    background: #008cfa;
+    opacity: 0;
+
+}
+#top-hi:hover {
+    opacity: 1;
+}
+#top-mail {
+    position: absolute;
+    width: 126px;
+    height: 19px;
+    top: 158px;
+    left: 523px;
+    line-height: 19px;
+    font-size: 14px;
+    color: #fcee7c;
+    background: #008cfa;
+    opacity: 0;
+}
+#top-mail:hover {
+    opacity: 1;
+}
+#top-start {
+    position: absolute;
+    width: 210px;
+    height: 48px;
+    top: 218px;
+    left: 247px;
+    font-size: 18px;
+    color: #008cfa;
+    line-height: 48px;
+    text-align: center;
+    /*transition: all .1s;*/
+    /*background: url(/static/img/start-ai@2x.png) no-repeat center
+     * center;*/
+    background-size: cover;
+}
+#top-start:hover {
+    background: url(/static/brain/img/start-ai-hover@2x.png) no-repeat center center;
+    background-size: cover;
+}
