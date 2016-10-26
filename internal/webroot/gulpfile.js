@@ -1,4 +1,9 @@
 'use strict';
+/**
+ *@file gulp tasks config file
+ *@author shiliang@baidu.com
+ *
+ */
 
 var browserify = require('browserify');
 var gulp = require('gulp');
@@ -14,11 +19,11 @@ var babelify = require('babelify');
 var uglify = require('gulp-uglify');
 
 gulp.task('jsCompile', function () {
-    glob('./src/entry/**.jsx', function(err, files) {
+    glob('./src/entry/**.jsx', function (err, files) {
         if (err) {
             gutil.log(err);
         }
-        var tasks = files.map(function(entry) {
+        var tasks = files.map(function (entry) {
             gutil.log('File: ' + entry + ', started');
             var b = browserify({
                 entries: [entry],
@@ -30,19 +35,19 @@ gulp.task('jsCompile', function () {
                 .pipe(
                     rename({
                         dirname: '',
-                        extname:".bundle.js"
+                        extname: '.bundle.js'
                     })
                 )
                 .pipe(buffer())
                 .pipe(uglify())
                 .on('error', gutil.log)
                 .on('end', function () {
-                    gutil.log('File: ' + entry + ', finished')
+                    gutil.log('File: ' + entry + ', finished');
                 })
                 .pipe(gulp.dest('./dist/js/'));
         });
 
-        eventStream.merge(tasks).on('end', function (){
+        eventStream.merge(tasks).on('end', function () {
             gutil.log('Task jsCompile: finished!');
         });
     });
@@ -54,7 +59,7 @@ gulp.task('less', function () {
         .pipe(
             rename({
                 dirname: '',
-                extname:".css"
+                extname: '.css'
             })
         )
         .pipe(gulp.dest('./dist/css'));
@@ -63,12 +68,12 @@ gulp.task('less', function () {
 gulp.task('jsCompile_watch', function () {
     return watch('./src/**/*.jsx', function () {
         gutil.log('Task jsCompile: started!');
-        glob('./src/entry/**.jsx', function(err, files) {
+        glob('./src/entry/**.jsx', function (err, files) {
             if (err) {
                 gutil.log(err);
             }
 
-            var tasks = files.map(function(entry) {
+            var tasks = files.map(function (entry) {
                 var b = browserify({
                     entries: [entry],
                     debug: true,
@@ -81,7 +86,7 @@ gulp.task('jsCompile_watch', function () {
                     .pipe(
                         rename({
                             dirname: '',
-                            extname:".bundle.js"
+                            extname: '.bundle.js'
                         })
                     )
                     .pipe(buffer())
@@ -89,7 +94,7 @@ gulp.task('jsCompile_watch', function () {
                     .pipe(gulp.dest('./dist/js/'));
             });
 
-            eventStream.merge(tasks).on('end', function (){
+            eventStream.merge(tasks).on('end', function () {
                 gutil.log('Task jsCompile: finished!');
             });
         });
@@ -104,7 +109,7 @@ gulp.task('less_watch', function () {
             .pipe(
                 rename({
                     dirname: '',
-                    extname:".css"
+                    extname: '.css'
                 })
             )
             .pipe(gulp.dest('./dist/css'));
