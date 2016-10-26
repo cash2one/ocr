@@ -1,0 +1,57 @@
+/* color settings*/
+@white: #fff;
+@black: #333;
+@red: #e83247;
+@purple: #5856a3;
+@grey: #e1e1e6;
+@grey-bg: #f6f6f6;
+
+/* font-size settings*/
+@font-size-1: 12px;
+@font-size-2: @font-size-1 * 1.25;
+@font-size-3: @font-size-1 * 1.5;
+
+@standard-spacing: 15px;
+
+/*page styles*/
+@fonts: "Microsoft YaHei", "Arial Narrow", Arial, "sans-serif";
+
+html, body {
+  font-family: @fonts;
+  min-width: 1180px;
+  overflow-x: hidden;
+}
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: @fonts;
+  margin: 0;
+}
+
+.basic-transition (@property: all, @time) {
+  -webkit-transition: @property @time ease;
+  -moz-transition: @property @time ease;
+  -o-transition: @property @time ease;
+  transition: @property @time ease;
+}
+
+.icon (@url, @x, @y) {
+  background-image: @url;
+  background-repeat: no-repeat;
+  background-position: @x @y;
+  background-position-x: @x;
+  background-position-y: @y;
+}
+
+.row {
+  width: 1210px;
+  max-width: 1210px;
+  padding: 0 15px;
+}
+.clearfix {
+  width: 100%;
+  clear: both;
+}

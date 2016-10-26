@@ -1,0 +1,141 @@
+@topNavHeight: 50px;
+
+.top-bar {
+  height: @topNavHeight;
+  background-color: rgba(0, 0, 0, .15);
+  margin-bottom: -@topNavHeight;
+  position: relative;
+  z-index: 1;
+  padding: 0;
+
+  ul {
+    background-color: transparent;
+    height: @topNavHeight;
+    padding: 0;
+  }
+
+  .top-bar-left {
+
+    ul.menu > li {
+      &.site-logo {
+        margin-right: 30px;
+
+        img {
+          height: 30px;
+        }
+      }
+
+      a {
+        color: @white;
+        padding: 0;
+        line-height: @topNavHeight;
+        position: relative;
+
+        &.active:before, &:hover:before {
+          content: '';
+          display: inline-block;
+          width: 100%;
+          height: 3px;
+          background-color: @white;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+
+      & + li {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+
+.top-bar-links {
+  margin-right: -15px;
+
+  ul.menu > li {
+    margin: 0 15px;
+    position: relative;
+
+    a {
+      color: fadeOut(@white, 40%);
+      padding: 0;
+      line-height: @topNavHeight;
+      font-size: 14px;
+
+      &:hover {
+        color: fadeOut(@white, 20%);
+      }
+    }
+
+    + li:before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      height: 10px;
+      width: 1px;
+      background-color: fadeOut(@white, 20%);
+      left: -15px;
+      top: 20px;
+    }
+  }
+}
+
+.callout {
+  background-image: url('../../images/common-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+
+  & > .row {
+    position: relative;
+  }
+
+  &.large {
+    height: 500px;
+    padding: 0;
+    border: none;
+  }
+
+  .foreground {
+    height: 500px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .callout-content {
+    width: 450px;
+    position: absolute;
+    right: 15px;
+    top: 150px;
+
+    h1 {
+      font-size: 50px;
+      color: @white;
+    }
+    .lead {
+      margin: 20px 0 30px 0;
+      font-size: 22px;
+      color: @white;
+    }
+
+    .start-button {
+      width: 140px;
+      height: 45px;
+      line-height: 45px;
+      border: 2px solid @white;
+      background-color: transparent;
+      color: @white;
+      padding: 0;
+      font-size: 20px;
+      font-family: 'Microsoft Yahei Light', @fonts;
+
+      &:hover {
+        background-color: @white;
+        color: #008cfa;
+      }
+    }
+  }
+}

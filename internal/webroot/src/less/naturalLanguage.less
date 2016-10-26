@@ -1,0 +1,55 @@
+/*global css framework*/
+@import (inline) '../../node_modules/foundation-sites/dist/foundation-flex.min.css';
+
+@import 'common/theme.less';
+@import 'common/topNavi.less';
+@import 'common/content.less';
+@import 'common/carousel.less';
+@import 'common/bottomInfo.less';
+
+.callout {
+  .foreground{
+    .icon(url('../../images/natural-fg.png'), 100px, center);
+  }
+}
+.tech-introduction{
+  .content-item {
+    width: 490px;
+    padding-left: 200px;
+
+    & + .content-item {
+      width: 690px;
+      padding-right: 200px;
+    }
+  }
+}
+.tech-advantage {
+  .content-item {
+    width: 205px;
+
+    & + .content-item {
+      width: 325px;
+      padding-left: 120px;
+    }
+  }
+}
+
+.tech-introduction .row .content-item:nth-child(1) .content-icon{
+  .icon(url('../../images/natural-icons.png'), 0px, 0);
+}
+.tech-introduction .row .content-item:nth-child(2) .content-icon{
+  .icon(url('../../images/natural-icons.png'), -120px, 0);
+}
+
+.tech-advantage .row .content-item:nth-child(1) .content-icon{
+  .icon(url('../../images/natural-icons.png'), 0px, -118px);
+}
+.tech-advantage .row .content-item:nth-child(2) .content-icon{
+  .icon(url('../../images/natural-icons.png'), -90px, -118px);
+}
+.tech-advantage .row .content-item:nth-child(3) .content-icon{
+  .icon(url('../../images/natural-icons.png'), -180px, -118px);
+}
+.tech-advantage .row .content-item:nth-child(4) .content-icon{
+  .icon(url('../../images/natural-icons.png'), -270px, -118px);
+}

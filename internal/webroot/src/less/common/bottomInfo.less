@@ -1,0 +1,94 @@
+.bottom-info{
+  background-color: #444;
+  padding: 30px 0;
+
+  #contact-us {
+    display: inline-block;
+
+    & > li {
+      display: inline-block;
+      line-height: 24px;
+      margin-right: 24px;
+      float: left;
+      background-size: 24px;
+
+      &.contact-hi {
+        .icon(url('../../images/contact-icons.png'), 0, -10px);
+      }
+      &.contact-email {
+        .icon(url('../../images/contact-icons.png'), 0, -47px);
+      }
+      &.contact-hetu {
+        .icon(url('../../images/contact-icons.png'), 0, -82px);
+      }
+
+      & + li {
+        margin-left: 30px;
+        font-size: 14px;
+        color: @white;
+        padding-left: 34px;
+
+        a {
+          color: @white;
+        }
+      }
+    }
+    h2 {
+      color: @white;
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+
+  hr {
+    width: 1180px;
+    border-bottom-color: fadeOut(@white, 50%);
+  }
+
+  .platform-links {
+    @height: 14px;
+    margin-bottom: 10px;
+    height: @height;
+    line-height: @height;
+
+    & > li {
+      display: inline-block;
+      position: relative;
+      margin-right: 10px;
+      height: @height;
+      line-height: @height;
+      float: left;
+
+      & + li {
+        margin-left: 10px;
+
+        &:before {
+          content: "";
+          position: absolute;
+          display: inline-block;
+          height: @height;
+          width: 1px;
+          background-color: fadeOut(@white, 50%);
+          left: -10px;
+          top: 0;
+        }
+      }
+
+      a {
+        font-size: 12px;
+        color: fadeOut(@white, 50%);
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: 5px;
+    color: fadeOut(@white, 50%);
+
+    p {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}

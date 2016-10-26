@@ -1,0 +1,60 @@
+/*global css framework*/
+@import (inline) '../../node_modules/foundation-sites/dist/foundation-flex.min.css';
+
+@import 'common/theme.less';
+@import 'common/topNavi.less';
+@import 'common/content.less';
+@import 'common/carousel.less';
+@import 'common/bottomInfo.less';
+
+.callout {
+  .foreground{
+    .icon(url('../../images/image-fg.png'), -120px, center);
+  }
+}
+.tech-introduction{
+  .content-item {
+    width: 220px;
+
+    & + .content-item {
+      width: 320px;
+      padding-left: 100px;
+    }
+  }
+}
+.tech-advantage {
+  .content-item {
+    width: 260px;
+
+    & + .content-item {
+      width: 460px;
+      padding-left: 200px;
+    }
+  }
+}
+
+.tech-introduction .row .content-item:nth-child(1) .content-icon{
+  .icon(url('../../images/image-icons.png'), -7px, 0);
+}
+.tech-introduction .row .content-item:nth-child(2) .content-icon{
+  .icon(url('../../images/image-icons.png'), -129px, 0);
+}
+.tech-introduction .row .content-item:nth-child(3) .content-icon{
+  .icon(url('../../images/image-icons.png'), -251px, 0);
+}
+.tech-introduction .row .content-item:nth-child(4) .content-icon{
+  .icon(url('../../images/image-icons.png'), -373px, 0);
+}
+
+.tech-advantage .row .content-item:nth-child(1) .content-icon{
+  .icon(url('../../images/image-icons.png'), 0px, -124px);
+}
+.tech-advantage .row .content-item:nth-child(2) .content-icon{
+  .icon(url('../../images/image-icons.png'), -90px, -124px);
+}
+.tech-advantage .row .content-item:nth-child(3) .content-icon{
+  .icon(url('../../images/image-icons.png'), -180px, -124px);
+}
+.tech-advantage .row .content-item:nth-child(4) .content-icon{
+  .icon(url('../../images/image-icons.png'), -270px, -126px);
+}
