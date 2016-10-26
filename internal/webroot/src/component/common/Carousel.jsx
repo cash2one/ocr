@@ -76,7 +76,7 @@ class Carousel extends React.Component {
                 <li key={'carousel-image-' + k} style={imageStyle}>
                 </li>
             );
-            if (i < len - 1) {
+            if (k < len - 1) {
                 carouselIndicators.push(
                     <li key={'carousel-indicator-' + k} className={this.state.count % (len - 1) === k ? 'active' : ''}>
                         <a onClick={this.changeSlider} data-index={k}>{this.props.content[k].label}</a>
