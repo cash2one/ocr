@@ -19,6 +19,8 @@
 html, body {
   font-family: @fonts;
   min-width: 1180px;
+}
+body {
   overflow-x: hidden;
 }
 ul, ol {
@@ -54,4 +56,25 @@ h1, h2, h3, h4, h5, h6 {
 .clearfix {
   width: 100%;
   clear: both;
+}
+.animate (@name, @duration, @delay, @iteration){
+    animation-name: @name;
+    animation-duration: @duration;
+    animation-delay: @delay;
+    animation-iteration-count: @iteration;
+    /* Firefox: */
+    -moz-animation-name: @name;
+    -moz-animation-duration: @duration;
+    -moz-animation-delay: @delay;
+    -moz-animation-iteration-count: @iteration;
+    /* Safari 和 Chrome: */
+    -webkit-animation-name: @name;
+    -webkit-animation-duration: @duration;
+    -webkit-animation-delay: @delay;
+    -webkit-animation-iteration-count: @iteration;
+    /* Opera: */
+    -o-animation-name: @name;
+    -o-animation-duration: @duration;
+    -o-animation-delay: @delay;
+    -o-animation-iteration-count: @iteration;
 }
