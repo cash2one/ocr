@@ -63,7 +63,7 @@ class Carousel extends React.Component {
         if (this.state.count !== 0 || this.state.isClickEvent) {
             var transitionStyleProps =  ['WebkitTransition', 'MozTransition', 'OTransition', 'transition'];
             for (var j = 0; j < 4; j++){
-                carouselStyle[transitionStyleProps[i]] = 'all 1s';
+                carouselStyle[transitionStyleProps[j]] = 'all 1s';
             }
         }
 
