@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>百度大脑</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="百度大脑,机器学习,大数据,图像识别,语音识别">
+    <link rel="icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../dist/css/image.css">
+</head>
+<body>
+
+{%include  'views/common/navigation.html'%}
+
+<section class="callout large">
+    <div class="row">
+        <div class="foreground"></div>
+        <div class="callout-content">
+            <h1>图像技术</h1>
+            <p class="lead">基于深度学习算法，智能识别图像类别、内容和含义，支持基于图像识别的场景应用</p>
+            <a href="http://hetu.baidu.com/api/?categoryId=187" target="_blank" class="button start-button">平台接口 ></a>
+        </div>
+    </div>
+</section>
+
+<section class="tech-introduction content-section">
+    <div class="row">
+        <h2 class="columns medium-12">技术介绍</h2>
+    </div>
+    <div class="row">
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>OCR文字识别</h3>
+            <p>多语言文字检测和识别<br>整图文字行定位和单字图像识别</p>
+            <div class="content-consult">
+                <a href="http://idl-api.baidu.com/?r=idl/tec#" target="_blank" class="button">查看详情</a>
+                <a href="http://idl-api.baidu.com/?r=demo/ocr&type=LocateRecognize" target="_blank" class="button">技术体验</a>
+            </div>
+        </div>
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>人脸识别</h3>
+            <p>人脸检测、五官定位<br>验证和识别、属性分析</p>
+            <div class="content-consult">
+                <a href="http://idl-api.baidu.com/?r=idl/tec#" target="_blank" class="button">查看详情</a>
+                <a href="http://idl-api.baidu.com/?r=demo/facebase"  target="_blank" class="button">技术体验</a>
+            </div>
+        </div>
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>图像识别</h3>
+            <p>通用检测和识别<br>图像分类、主体识别、图像质量评估</p>
+            <div class="content-consult">
+                <a href="http://idl-api.baidu.com/?r=idl/tec#" target="_blank" class="button">查看详情</a>
+                <a href="http://idl-api.baidu.com/?r=demo/democlass&type=class970"  target="_blank" class="button">技术体验</a>
+            </div>
+        </div>
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>图像搜索</h3>
+            <p>基于图像内容识别<br>检索系统，垂类目标检测、识别</p>
+            <div class="content-consult">
+                <a href="http://idl-api.baidu.com/?r=idl/tec#" target="_blank" class="button">查看详情</a>
+                <a href="http://stu.baidu.com"  target="_blank" class="button">技术体验</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tech-advantage content-section">
+    <div class="row">
+        <h2 class="columns medium-12">技术优势</h2>
+    </div>
+    <div class="row">
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>识别范畴广</h3>
+            <p>支持10国文字，4万通用类别图像1000种品牌Logo，并有花卉、菜品、色情等重点垂类</p>
+        </div>
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>识别精度高</h3>
+            <p>文档识别精度90%；人脸检测准确率98%（FDDB）；通用图片识别TOP5精度71%；Logo误检率0.3%</p>
+        </div>
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>技术标准化</h3>
+            <p>规范接口，统一的平台化服务,支持亿级别图像检索，多个平台支持日均千万量级请求</p>
+        </div>
+    </div>
+</section>
+<section class="user-case-carousel content-section">
+    <div class="row">
+        <h2 class="columns medium-12">应用案例</h2>
+    </div>
+    <div id="carousel-container"></div>
+</section>
+{%include  'views/common/bottomInfo.html'%}
+<script src="/dist/js/image.bundle.js"></script>
+
+</body>
+</html>

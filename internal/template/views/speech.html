@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>百度大脑</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="百度大脑,机器学习,大数据,图像识别,语音识别">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/dist/css/speech.css">
+</head>
+<body>
+{%include  'views/common/navigation.html'%}
+
+<section class="callout large">
+    <div class="row">
+        <div class="foreground"></div>
+        <div class="callout-content">
+            <h1>语音技术</h1>
+            <p class="lead">多场景语音技术，让你的应用长上耳朵、开口说话，让声音成为你的通行证</p>
+            <a href="http://hetu.baidu.com/api/?categoryId=188" target="_blank" class="button start-button">平台接口 ></a>
+        </div>
+    </div>
+</section>
+
+<section class="tech-introduction content-section">
+    <div class="row">
+        <h2 class="columns medium-12">技术介绍</h2>
+    </div>
+    <div class="row">
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>语音识别</h3>
+            <p>将声音转化为文字，让你的应用长上耳朵<br>支持多场景的语音识别和语音唤醒</p>
+            <div class="content-consult">
+                <a href="http://yuyin.baidu.com/asr?from=baiduAI" target="_blank" class="button">查看详情</a>
+                <a href="http://yuyin.baidu.com/?from=baiduAI#try" target="_blank" class="button">技术体验</a>
+            </div>
+        </div>
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>模型预测和评估</h3>
+            <p>模将文字转化为声音<br>让你的应用开口说话</p>
+            <div class="content-consult">
+                <a href="http://yuyin.baidu.com/tts?from=baiduAI" target="_blank" class="button">查看详情</a>
+                <a href="http://yuyin.baidu.com/?from=baiduAI#try"  target="_blank" class="button">技术体验</a>
+            </div>
+        </div>
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>声纹识别</h3>
+            <p>检测声纹特征，进行安全校验<br>让声音成为你的通行证</p>
+            <div class="content-consult">
+                <a href="mailto:ai@baidu.com" class="button">技术咨询</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tech-advantage content-section">
+    <div class="row">
+        <h2 class="columns medium-12">技术优势</h2>
+    </div>
+    <div class="row">
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>接入流程简单</h3>
+            <p>开通方式简便快捷，无需等待，自助申请，快速开通，快速接入</p>
+        </div>
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>效果表现优秀</h3>
+            <p>提供基于百度大脑的业界顶级声学模型和语音模型，效果行业领先，为业务产品营造顺畅体验</p>
+        </div>
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>丰富解决方案</h3>
+            <p>支持安卓、IOS以及全平台的REST API方式调用，提供多垂类识别，多语言、多音色合成</p>
+        </div>
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>离线在线融合模式</h3>
+            <p>根据当前用户网络状况，自动判断使用本地引擎还是云端引擎进行处理，可以兼顾速度及流量消耗</p>
+        </div>
+    </div>
+</section>
+<section class="user-case-carousel content-section">
+    <div class="row">
+        <h2 class="columns medium-12">应用案例</h2>
+    </div>
+    <div id="carousel-container"></div>
+</section>
+{%include  'views/common/bottomInfo.html'%}
+<script src="/dist/js/speech.bundle.js"></script>
+
+</body>
+</html>

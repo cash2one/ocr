@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>百度大脑</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="百度大脑,机器学习,大数据,图像识别,语音识别">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/dist/css/userProfile.css">
+</head>
+<body>
+{%include  'views/common/navigation.html'%}
+
+<section class="callout large">
+    <div class="row">
+        <div class="foreground"></div>
+        <div class="callout-content">
+            <h1>用户理解</h1>
+            <p class="lead">融合百度线上线下用户行为，建立虚拟“强帐号”体系，描绘用户社会关系图谱，理解用户特征，兴趣偏好，支持用户分析和个性化推荐</p>
+            <a href="http://hetu.baidu.com/api/?categoryId=190" target="_blank" class="button start-button">平台接口 ></a>
+        </div>
+    </div>
+</section>
+
+<section class="tech-introduction content-section">
+    <div class="row">
+        <h2 class="columns medium-12">技术介绍</h2>
+    </div>
+    <div class="row">
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>USER PROFILE</h3>
+            <p>通过标签描绘用户的基本属性、行为习惯、消费和兴趣偏好、心理动机，支持个性化服务和精准人群识别</p>
+            <div class="content-consult">
+                <a href="http://erised.baidu.com" target="_blank" class="button">查看详情</a>
+                <a href="http://erised.baidu.com/erised/person" target="_blank" class="button">技术体验</a>
+            </div>
+        </div>
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>Global Session</h3>
+            <p>贯通用户域内-域外、pc-wise、线上-线下行为，实时输出全局会话，理解用户上下文，提供session相关服务</p>
+            <div class="content-consult">
+                <a href="http://session.baidu.com" target="_blank" class="button">查看详情</a>
+                <a href="http://session.baidu.com/#pc_experience" target="_blank" class="button">技术体验</a>
+            </div>
+        </div>
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>ID MAPPING & SOCIAL GRAPH</h3>
+            <p>挖掘同用户的不同ID、不同用户之间的关系，支持跨屏ID打通、社交关系识别等场景</p>
+            <div class="content-consult">
+                <a href="http://idm.baidu.com" target="_blank" class="button">查看详情</a>
+                <a href="http://idm.baidu.com/#product" target="_blank" class="button">技术体验</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>到店大数据(谛听)</h3>
+            <p>捕获用户实时及历史线下到店信息，支持O2O业务识别用户线下到店场景，沉淀用户线下到店行为特征</p>
+            <div class="content-consult">
+                <a href="http://offlinedata.baidu.com/" target="_blank" class="button">查看详情</a>
+                <a href="http://offlinedata.baidu.com/introduce" target="_blank" class="button">技术体验</a>
+            </div>
+        </div>
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>推荐服务</h3>
+            <p>通过所见即所得界面，帮助开发者三步操作（建应用，传数据，跑服务）快速搭建一套推荐系统，并支持算法效果优化</p>
+            <div class="content-consult">
+                <a href="http://recsys.baidu.com" target="_blank" class="button">查看详情</a>
+                <a href="http://recsys.baidu.com/recsys/quickstart?tpl=index&doc=MovieDemo" target="_blank" class="button">技术体验</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tech-advantage content-section">
+    <div class="row">
+        <h2 class="columns medium-12">技术优势</h2>
+    </div>
+    <div class="row">
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>超大规模数据聚合</h3>
+            <p>贯通全网用户线上线下行为数据，覆盖354w个线下POI店铺，精准识别用户身份，关系及特征，理解用户需求</p>
+        </div>
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>高性能高效预测</h3>
+            <p>Global Session及IDM&IDSG支持百亿次/天的在线调用，毫秒级响应，高效识别ID对关联模式，高效预测减枝</p>
+        </div>
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>用户标签体系丰富</h3>
+            <p>用户画像标签体系，包含5大维度、30个垂类、千万级别标签，并在O2O、金融领域进行深入挖掘</p>
+        </div>
+        <div class="columns content-item">
+            <div class="content-icon"></div>
+            <h3>快速搭建服务易用</h3>
+            <p>无需编码，三步搭建推荐系统，完全云计算化。支持产品类型广，推荐算法成熟，开放特征参数调整</p>
+        </div>
+    </div>
+</section>
+<section class="user-case-carousel content-section">
+    <div class="row">
+        <h2 class="columns medium-12">应用案例</h2>
+    </div>
+    <div id="carousel-container"></div>
+</section>
+{%include  'views/common/bottomInfo.html'%}
+<script src="/dist/js/userProfile.bundle.js"></script>
+
+</body>
+</html>
