@@ -117,8 +117,7 @@ gulp.task('less_watch', function () {
     });
 });
 
-gulp.task('apply-prod-environment', function() {
-    console.log(process.env.NODE_ENV);
+gulp.task('apply-prod-environment', function () {
     process.env.NODE_ENV = 'production';
 });
 
