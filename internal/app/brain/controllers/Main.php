@@ -12,7 +12,7 @@ class Controller_Main extends Ap_Controller_Abstract {
         'ml' => 'actions/page/MachineLearning.php',
         'kg' => 'actions/page/KnowledgeGraph.php',
         'nlp' => 'actions/page/Nlp.php',
-        'userprofile' => 'actions/page/UserProfile.php',
+        'userProfile' => 'actions/page/UserProfile.php',
 
         'news' => 'actions/page/News.php',
     );
