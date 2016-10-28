@@ -6,18 +6,18 @@
  **************************************************************************/
  
 /**
- * @file Ocr.php
+ * @file EasyDl.php
  * @author huanglinhao(huanglinhao@baidu.com)
- * @date 2016/06/18 18:48:45
+ * @date 2016/06/20 11:14:59
  * @brief 
  *  
  **/
-class Action_Ocr extends Ap_Action_Abstract {
+class Action_KnowledegGraph extends Ap_Action_Abstract {
 
     public function execute() {
         Brain_Output::htmlOutput(
             $arrPageInfo, 
-            'brain/page/tx/tx.tpl'
+            'views/knowledgeGraph.html'
         );
     }
 }

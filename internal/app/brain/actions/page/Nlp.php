@@ -17,7 +17,7 @@ class Action_Nlp extends Ap_Action_Abstract {
     public function execute() {
         Brain_Output::htmlOutput(
             $arrPageInfo, 
-            'brain/page/language/language.tpl'
+            'views/naturalLanguage.html'
         );
     }
 }

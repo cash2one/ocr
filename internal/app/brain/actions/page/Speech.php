@@ -17,7 +17,7 @@ class Action_Speech extends Ap_Action_Abstract {
     public function execute() {
         Brain_Output::htmlOutput(
             $arrPageInfo, 
-            'brain/page/voice/voice.tpl'
+            'views/speech.html'
         );
     }
 }

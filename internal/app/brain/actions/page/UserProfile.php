@@ -17,7 +17,7 @@ class Action_UserProfile extends Ap_Action_Abstract {
     public function execute() {
         Brain_Output::htmlOutput(
             $arrPageInfo, 
-            'brain/page/up/up.tpl'
+            'views/userProfile.html'
         );
     }
 }

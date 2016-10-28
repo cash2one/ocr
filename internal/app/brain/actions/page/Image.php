@@ -17,7 +17,7 @@ class Action_Image extends Ap_Action_Abstract {
     public function execute() {
         Brain_Output::htmlOutput(
             $arrPageInfo, 
-            'brain/page/tx/tx.tpl'
+            'views/image.html'
         );
     }
 }

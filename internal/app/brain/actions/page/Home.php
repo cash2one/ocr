@@ -16,10 +16,10 @@
 class Action_Home extends Ap_Action_Abstract {
 
     public function execute() {
-        $arrPageInfo['messagelist'] = Bd_Conf::getAppConf('messagelist');
+//        $arrPageInfo['messagelist'] = Bd_Conf::getAppConf('messagelist');
         Brain_Output::htmlOutput(
             $arrPageInfo, 
-            'brain/page/home/home.tpl'
+            'views/home.html'
         );
     }
 }

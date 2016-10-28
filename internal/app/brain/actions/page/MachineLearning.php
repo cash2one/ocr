@@ -6,18 +6,18 @@
  **************************************************************************/
  
 /**
- * @file Voice.php
+ * @file EasyDl.php
  * @author huanglinhao(huanglinhao@baidu.com)
- * @date 2016/06/18 18:49:22
+ * @date 2016/06/20 11:14:59
  * @brief 
  *  
  **/
-class Action_Voice extends Ap_Action_Abstract {
+class Action_EasyDl extends Ap_Action_Abstract {
 
     public function execute() {
         Brain_Output::htmlOutput(
             $arrPageInfo, 
-            'brain/page/voice/voice.tpl'
+            'views/machineLearning.html'
         );
     }
 }
