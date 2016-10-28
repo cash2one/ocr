@@ -4,7 +4,7 @@
   "description": "AI platform is a website which includes the introductions of ai technologies opened by Baidu ",
   "main": "index.js",
   "scripts": {
-    "build": "SET NODE_ENV=production && echo \"Start building!\" && gulp && exit 0",
+    "build": "echo \"Start building!\" && gulp --env production && exit 0",
     "watch": "gulp watch"
   },
   "keywords": [
@@ -25,6 +25,7 @@
     "babel-preset-react": "^6.16.0",
     "babelify": "^7.3.0",
     "browserify": "^13.1.0",
+    "envify": "^3.4.1",
     "event-stream": "^3.3.4",
     "glob": "^7.1.1",
     "gulp": "^3.9.1",

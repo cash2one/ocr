@@ -117,6 +117,11 @@ gulp.task('less_watch', function () {
     });
 });
 
-gulp.task('default', ['jsCompile', 'less']);
+gulp.task('apply-prod-environment', function() {
+    console.log(process.env.NODE_ENV);
+    process.env.NODE_ENV = 'production';
+});
+
+gulp.task('default', ['apply-prod-environment', 'jsCompile', 'less']);
 
 gulp.task('watch', ['jsCompile_watch', 'less_watch']);

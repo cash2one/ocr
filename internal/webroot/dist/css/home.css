@@ -7,7 +7,7 @@
 html,
 body {
   font-family: "Microsoft YaHei", "Arial Narrow", Arial, "sans-serif";
-  min-width: 1180px;
+  min-width: 1210px;
 }
 body {
   overflow-x: hidden;
@@ -480,65 +480,77 @@ h6 {
   animation-duration: 1s;
   animation-delay: 0;
   animation-iteration-count: 1;
+  animation-timing-function: ease;
   /* Firefox: */
   -moz-animation-name: brain-move;
   -moz-animation-duration: 1s;
   -moz-animation-delay: 0;
   -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease;
   /* Safari 和 Chrome: */
   -webkit-animation-name: brain-move;
   -webkit-animation-duration: 1s;
   -webkit-animation-delay: 0;
   -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
   /* Opera: */
   -o-animation-name: brain-move;
   -o-animation-duration: 1s;
   -o-animation-delay: 0;
   -o-animation-iteration-count: 1;
+  -o-animation-timing-function: ease;
 }
 .callout .foreground > .foreground-overlay:nth-child(2) {
   background-image: url('../../images/home-top-tech.png');
   animation-name: tech-roll-up;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-delay: 0;
   animation-iteration-count: 1;
+  animation-timing-function: ease-in;
   /* Firefox: */
   -moz-animation-name: tech-roll-up;
-  -moz-animation-duration: 1.5s;
+  -moz-animation-duration: 1s;
   -moz-animation-delay: 0;
   -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-in;
   /* Safari 和 Chrome: */
   -webkit-animation-name: tech-roll-up;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 1s;
   -webkit-animation-delay: 0;
   -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
   /* Opera: */
   -o-animation-name: tech-roll-up;
-  -o-animation-duration: 1.5s;
+  -o-animation-duration: 1s;
   -o-animation-delay: 0;
   -o-animation-iteration-count: 1;
+  -o-animation-timing-function: ease-in;
 }
 .callout .foreground > .foreground-overlay:nth-child(3) {
   background-image: url('../../images/home-top-tech-around.png');
   animation-name: tech-fade-in;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-delay: 0;
   animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
   /* Firefox: */
   -moz-animation-name: tech-fade-in;
-  -moz-animation-duration: 2s;
+  -moz-animation-duration: 1.5s;
   -moz-animation-delay: 0;
   -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-in-out;
   /* Safari 和 Chrome: */
   -webkit-animation-name: tech-fade-in;
-  -webkit-animation-duration: 2s;
+  -webkit-animation-duration: 1.5s;
   -webkit-animation-delay: 0;
   -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
   /* Opera: */
   -o-animation-name: tech-fade-in;
-  -o-animation-duration: 2s;
+  -o-animation-duration: 1.5s;
   -o-animation-delay: 0;
   -o-animation-iteration-count: 1;
+  -o-animation-timing-function: ease-in-out;
 }
 .content-section {
   border-bottom: none;
@@ -693,4 +705,47 @@ h6 {
   background-position: -543px -284px;
   background-position-x: -543px;
   background-position-y: -284px;
+}
+.news {
+  background-color: #fafafa;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+}
+#news-broadcast-container {
+  width: 100%;
+}
+#news-broadcast-container .news-broadcast {
+  display: flex;
+  flex-flow: row;
+}
+#news-broadcast-container .news-broadcast > * {
+  height: 30px;
+  line-height: 30px;
+}
+#news-broadcast-container .news-broadcast .news-icon {
+  width: 30px;
+  background-image: url('../../images/home-icons.png');
+  background-repeat: no-repeat;
+  background-position: -609px -157px;
+  background-position-x: -609px;
+  background-position-y: -157px;
+}
+#news-broadcast-container .news-broadcast .news-content {
+  flex: 1;
+  width: 1100px;
+  list-style: disc inside;
+}
+#news-broadcast-container .news-broadcast .news-content > li {
+  float: left;
+  width: 33.33333333%;
+}
+#news-broadcast-container .news-broadcast .news-content > li a {
+  color: #666;
+}
+#news-broadcast-container .news-broadcast .news-more {
+  width: 50px;
+}
+#news-broadcast-container .news-broadcast .news-more a {
+  color: #666;
 }

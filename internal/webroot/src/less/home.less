@@ -151,15 +151,15 @@
 
       &:nth-child(1) {
         background-image: url('../../images/home-top-brain.png');
-        .animate(brain-move, 1s, 0, 1);
+        .animate(brain-move, 1s, 0, 1, ease);
       }
       &:nth-child(2) {
         background-image: url('../../images/home-top-tech.png');
-        .animate(tech-roll-up, 1.5s, 0, 1);
+        .animate(tech-roll-up, 1s, 0, 1, ease-in);
       }
       &:nth-child(3) {
         background-image: url('../../images/home-top-tech-around.png');
-        .animate(tech-fade-in, 2s, 0, 1);
+        .animate(tech-fade-in, 1.5s, 0, 1, ease-in-out);
       }
     }
   }
@@ -304,4 +304,52 @@
 
 .user-case .row .content-item:nth-child(4) .content-icon {
   .icon(url('../../images/home-icons.png'), -543px, -284px);
+}
+
+
+.news {
+  background-color: #fafafa;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+}
+
+#news-broadcast-container {
+  width: 100%;
+
+  .news-broadcast {
+    display: flex;
+    flex-flow: row;
+
+    & > * {
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .news-icon {
+      width: 30px;
+      .icon(url('../../images/home-icons.png'), -609px, -157px);
+    }
+    .news-content {
+      flex: 1;
+      width: 1100px;
+      list-style: disc inside;
+
+      & > li {
+        float: left;
+        width: 33.33333333%;
+
+        a {
+          color: #666;
+        }
+      }
+    }
+
+    .news-more {
+      width: 50px;
+      a {
+        color: #666;
+      }
+    }
+  }
 }
