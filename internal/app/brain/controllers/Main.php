@@ -9,10 +9,10 @@ class Controller_Main extends Ap_Controller_Abstract {
         'home' => 'actions/page/Home.php',
         'speech' => 'actions/page/Speech.php',
         'image' => 'actions/page/Image.php',
-        'ml' => 'actions/page/MachineLearning.php',
-        'kg' => 'actions/page/KnowledgeGraph.php',
+        'ml' => 'actions/page/Ml.php',
+        'kg' => 'actions/page/Kg.php',
         'nlp' => 'actions/page/Nlp.php',
-        'userProfile' => 'actions/page/UserProfile.php',
+        'userprofile' => 'actions/page/UserProfile.php',
 
         'news' => 'actions/page/News.php',
     );
