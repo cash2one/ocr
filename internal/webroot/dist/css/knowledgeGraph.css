@@ -355,74 +355,94 @@ h6 {
   line-height: 16px;
 }
 .callout .foreground {
-  background-image: url('../../images/machine-fg.png');
+  background-image: url('../../images/knowledge-fg.png');
   background-repeat: no-repeat;
-  background-position: -100px center;
-  background-position-x: -100px;
+  background-position: -120px center;
+  background-position-x: -120px;
   background-position-y: center;
 }
-.tech-introduction .content-item,
+.tech-introduction > .row:nth-child(n+2) .content-item {
+  width: 260px;
+}
+.tech-introduction > .row:nth-child(n+2) .content-item + .content-item {
+  width: 460px;
+  padding-left: 200px;
+}
+.tech-introduction > .row:nth-child(n+3) .content-item {
+  width: 490px;
+  padding-left: 200px;
+}
+.tech-introduction > .row:nth-child(n+3) .content-item + .content-item {
+  width: 690px;
+  padding-right: 200px;
+}
 .tech-advantage .content-item {
-  width: 220px;
+  width: 260px;
 }
-.tech-introduction .content-item + .content-item,
 .tech-advantage .content-item + .content-item {
-  width: 320px;
-  padding-left: 100px;
+  width: 460px;
+  padding-left: 200px;
 }
-.tech-introduction .row .content-item:nth-child(1) .content-icon {
-  background-image: url('../../images/machine-icons.png');
+.tech-introduction .row:nth-child(n+2) .content-item:nth-child(1) .content-icon {
+  background-image: url('../../images/user-icons.png');
   background-repeat: no-repeat;
-  background-position: 9px 0;
-  background-position-x: 9px;
+  background-position: 2px 0;
+  background-position-x: 2px;
   background-position-y: 0;
 }
-.tech-introduction .row .content-item:nth-child(2) .content-icon {
-  background-image: url('../../images/machine-icons.png');
+.tech-introduction .row:nth-child(n+2) .content-item:nth-child(2) .content-icon {
+  background-image: url('../../images/user-icons.png');
   background-repeat: no-repeat;
-  background-position: -107px 0;
-  background-position-x: -107px;
+  background-position: -119px 0;
+  background-position-x: -119px;
   background-position-y: 0;
 }
-.tech-introduction .row .content-item:nth-child(3) .content-icon {
-  background-image: url('../../images/machine-icons.png');
+.tech-introduction .row:nth-child(n+2) .content-item:nth-child(3) .content-icon {
+  background-image: url('../../images/user-icons.png');
   background-repeat: no-repeat;
-  background-position: -230px 0;
-  background-position-x: -230px;
+  background-position: -240px 0;
+  background-position-x: -240px;
   background-position-y: 0;
 }
-.tech-introduction .row .content-item:nth-child(4) .content-icon {
-  background-image: url('../../images/machine-icons.png');
+.tech-introduction .row:nth-child(n+3) .content-item:nth-child(1) .content-icon {
+  background-image: url('../../images/user-icons.png');
   background-repeat: no-repeat;
-  background-position: -349px 0;
-  background-position-x: -349px;
+  background-position: -361px 0;
+  background-position-x: -361px;
+  background-position-y: 0;
+}
+.tech-introduction .row:nth-child(n+3) .content-item:nth-child(2) .content-icon {
+  background-image: url('../../images/user-icons.png');
+  background-repeat: no-repeat;
+  background-position: -480px 0;
+  background-position-x: -480px;
   background-position-y: 0;
 }
 .tech-advantage .row .content-item:nth-child(1) .content-icon {
-  background-image: url('../../images/machine-icons.png');
+  background-image: url('../../images/user-icons.png');
   background-repeat: no-repeat;
-  background-position: 0px -145px;
+  background-position: 0px -135px;
   background-position-x: 0px;
-  background-position-y: -145px;
+  background-position-y: -135px;
 }
 .tech-advantage .row .content-item:nth-child(2) .content-icon {
-  background-image: url('../../images/machine-icons.png');
+  background-image: url('../../images/user-icons.png');
   background-repeat: no-repeat;
-  background-position: -120px -145px;
-  background-position-x: -120px;
-  background-position-y: -145px;
+  background-position: -90px -135px;
+  background-position-x: -90px;
+  background-position-y: -135px;
 }
 .tech-advantage .row .content-item:nth-child(3) .content-icon {
-  background-image: url('../../images/machine-icons.png');
+  background-image: url('../../images/user-icons.png');
   background-repeat: no-repeat;
-  background-position: -240px -145px;
-  background-position-x: -240px;
-  background-position-y: -145px;
+  background-position: -180px -135px;
+  background-position-x: -180px;
+  background-position-y: -135px;
 }
 .tech-advantage .row .content-item:nth-child(4) .content-icon {
-  background-image: url('../../images/machine-icons.png');
+  background-image: url('../../images/user-icons.png');
   background-repeat: no-repeat;
-  background-position: -360px -145px;
-  background-position-x: -360px;
-  background-position-y: -145px;
+  background-position: -270px -135px;
+  background-position-x: -270px;
+  background-position-y: -135px;
 }

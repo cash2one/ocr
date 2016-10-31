@@ -1,0 +1,77 @@
+/*global css framework*/
+@import (inline) '../../node_modules/foundation-sites/dist/foundation-flex.min.css';
+
+@import 'common/theme.less';
+@import 'common/topNavi.less';
+@import 'common/content.less';
+@import 'common/carousel.less';
+@import 'common/bottomInfo.less';
+
+.callout {
+  .foreground{
+    .icon(url('../../images/knowledge-fg.png'), -120px, center);
+  }
+}
+
+.tech-introduction{
+  & > .row:nth-child(n+2) {
+    .content-item {
+      width: 260px;
+
+      & + .content-item {
+        width: 460px;
+        padding-left: 200px;
+      }
+    }
+  }
+  & > .row:nth-child(n+3) {
+    .content-item {
+      width: 490px;
+      padding-left: 200px;
+
+      & + .content-item {
+        width: 690px;
+        padding-right: 200px;
+      }
+    }
+  }
+}
+.tech-advantage {
+  .content-item {
+    width: 260px;
+
+    & + .content-item {
+      width: 460px;
+      padding-left: 200px;
+    }
+  }
+}
+
+.tech-introduction .row:nth-child(n+2) .content-item:nth-child(1) .content-icon{
+  .icon(url('../../images/user-icons.png'), 2px, 0);
+}
+.tech-introduction .row:nth-child(n+2) .content-item:nth-child(2) .content-icon{
+  .icon(url('../../images/user-icons.png'), -119px, 0);
+}
+.tech-introduction .row:nth-child(n+2) .content-item:nth-child(3) .content-icon{
+  .icon(url('../../images/user-icons.png'), -240px, 0);
+}
+.tech-introduction .row:nth-child(n+3) .content-item:nth-child(1) .content-icon{
+  .icon(url('../../images/user-icons.png'), -361px, 0);
+}
+.tech-introduction .row:nth-child(n+3) .content-item:nth-child(2) .content-icon{
+  .icon(url('../../images/user-icons.png'), -480px, 0);
+}
+
+.tech-advantage .row .content-item:nth-child(1) .content-icon{
+  .icon(url('../../images/user-icons.png'), 0px, -135px);
+}
+.tech-advantage .row .content-item:nth-child(2) .content-icon{
+  .icon(url('../../images/user-icons.png'), -90px, -135px);
+}
+.tech-advantage .row .content-item:nth-child(3) .content-icon{
+  .icon(url('../../images/user-icons.png'), -180px, -135px);
+}
+.tech-advantage .row .content-item:nth-child(4) .content-icon{
+  .icon(url('../../images/user-icons.png'), -270px, -135px);
+}
