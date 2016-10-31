@@ -138,13 +138,14 @@ h6 {
 }
 .callout .callout-content .lead {
   margin: 20px 0 30px 0;
-  font-size: 22px;
+  font-size: 20px;
   color: #fff;
+  font-family: 'Microsoft Yahei Light', "Microsoft YaHei", "Arial Narrow", Arial, "sans-serif";
 }
 .callout .callout-content .start-button {
   width: 140px;
   height: 45px;
-  line-height: 45px;
+  line-height: 41px;
   border: 2px solid #fff;
   background-color: transparent;
   color: #fff;
@@ -229,15 +230,17 @@ h6 {
   content: "";
   position: absolute;
   display: inline-block;
-  height: 14px;
+  height: 10px;
   width: 1px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(204, 204, 204, 0.9);
   left: -10px;
-  top: 0;
+  top: 2px;
 }
 .bottom-info .platform-links > li a {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  float: left;
 }
 .bottom-info .copyright {
   margin-top: 5px;
