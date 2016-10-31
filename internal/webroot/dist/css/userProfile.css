@@ -401,15 +401,15 @@ h6 {
 .tech-introduction .row:nth-child(n+2) .content-item:nth-child(3) .content-icon {
   background-image: url('../../images/user-icons.png');
   background-repeat: no-repeat;
-  background-position: -240px 0;
-  background-position-x: -240px;
+  background-position: -361px 0;
+  background-position-x: -361px;
   background-position-y: 0;
 }
 .tech-introduction .row:nth-child(n+3) .content-item:nth-child(1) .content-icon {
   background-image: url('../../images/user-icons.png');
   background-repeat: no-repeat;
-  background-position: -361px 0;
-  background-position-x: -361px;
+  background-position: -240px 0;
+  background-position-x: -240px;
   background-position-y: 0;
 }
 .tech-introduction .row:nth-child(n+3) .content-item:nth-child(2) .content-icon {

@@ -20,26 +20,17 @@ var _hmt = _hmt || [];
 })();
 </script>
     {%block name="head_static"%}{%/block%}
+    <link rel="stylesheet" href="/dist/css/news.css">
 {%/head%}
 {%body%}
-    <div class="wrapper">
+    {%include  'views/common/navigation.html'%}
+    <div class="wrapper" style="margin-bottom: 80px;">
         <div class="content-wrapper">
-            {%block name="header"%}
-                {%widget
-                name="brain:widget/nav/nav.tpl"
-                page_name="nav"
-                %}
-            {%/block%}
             <div class="main">
                 {%block name="content"%}{%/block%}
             </div>
-            {%block name="footer"%}
-                {%widget
-                name="brain:widget/footer/footer.tpl"
-                page_name="footer"
-                %}
-            {%/block%}
         </div>
     </div>
+    {%include  'views/common/bottomInfo.html'%}
 {%require name='brain:page/layout/layout.tpl'%}{%/body%}
 {%/html%}
