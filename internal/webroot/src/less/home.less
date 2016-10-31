@@ -202,6 +202,10 @@
       border-left: none;
     }
 
+    h3 {
+      margin-top: 10px;
+    }
+
     .content-icon {
       height: 120px;
       width: 130px;
@@ -338,12 +342,11 @@
   width: 100%;
 
   .news-broadcast {
-    display: flex;
-    flex-flow: row;
-
     & > * {
       height: 30px;
       line-height: 30px;
+      display: inline-block;
+      float: left;
     }
 
     .news-icon {
@@ -351,12 +354,12 @@
       .icon(url('../../images/home-icons.png'), -609px, -157px);
     }
     .news-content {
-      flex: 1;
       width: 1100px;
 
       & > li {
         float: left;
         width: 33.33333333%;
+        display: inline-block;
 
         &:before {
           content: "";
@@ -371,6 +374,10 @@
 
         a {
           color: #666;
+
+          &:hover {
+            color: #008cfa;
+          }
         }
       }
     }
