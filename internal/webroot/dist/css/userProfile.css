@@ -63,6 +63,7 @@ h6 {
   padding: 0;
   line-height: 50px;
   position: relative;
+  font-size: 16px;
 }
 .top-bar .top-bar-left ul.menu > li a.active:before,
 .top-bar .top-bar-left ul.menu > li a:hover:before {
