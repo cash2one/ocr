@@ -214,12 +214,31 @@
       font-size: 12px;
       border-top: 1px solid #ebebeb;
       padding: 10px 0;
-      list-style: disc inside;
       color: #666;
 
       & > li {
         float: left;
         margin-right: 10px;
+        position: relative;
+
+        &:before {
+          content: "";
+          position: relative;
+          width: 2px;
+          height: 2px;
+          background-color: #666;
+          display: inline-block;
+          margin-right: 5px;
+          top: -3px;
+        }
+
+        & > a {
+          color: #666;
+
+          &:hover {
+            color: #008cfa;
+          }
+        }
       }
     }
     .content-more {
@@ -333,11 +352,21 @@
     .news-content {
       flex: 1;
       width: 1100px;
-      list-style: disc inside;
 
       & > li {
         float: left;
         width: 33.33333333%;
+
+        &:before {
+          content: "";
+          position: relative;
+          width: 2px;
+          height: 2px;
+          background-color: #666;
+          display: inline-block;
+          margin-right: 5px;
+          top: -3px;
+        }
 
         a {
           color: #666;
@@ -349,6 +378,10 @@
       width: 50px;
       a {
         color: #666;
+
+        &:hover {
+          color: #008cfa;
+        }
       }
     }
   }

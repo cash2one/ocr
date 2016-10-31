@@ -63,6 +63,7 @@ h6 {
   padding: 0;
   line-height: 50px;
   position: relative;
+  font-size: 16px;
 }
 .top-bar .top-bar-left ul.menu > li a.active:before,
 .top-bar .top-bar-left ul.menu > li a:hover:before {
@@ -593,12 +594,28 @@ h6 {
   font-size: 12px;
   border-top: 1px solid #ebebeb;
   padding: 10px 0;
-  list-style: disc inside;
   color: #666;
 }
 .tech-introduction .content-item ul.tech-feature > li {
   float: left;
   margin-right: 10px;
+  position: relative;
+}
+.tech-introduction .content-item ul.tech-feature > li:before {
+  content: "";
+  position: relative;
+  width: 2px;
+  height: 2px;
+  background-color: #666;
+  display: inline-block;
+  margin-right: 5px;
+  top: -3px;
+}
+.tech-introduction .content-item ul.tech-feature > li > a {
+  color: #666;
+}
+.tech-introduction .content-item ul.tech-feature > li > a:hover {
+  color: #008cfa;
 }
 .tech-introduction .content-item .content-more > a {
   background-image: url('../../images/home-icons.png');
@@ -734,11 +751,20 @@ h6 {
 #news-broadcast-container .news-broadcast .news-content {
   flex: 1;
   width: 1100px;
-  list-style: disc inside;
 }
 #news-broadcast-container .news-broadcast .news-content > li {
   float: left;
   width: 33.33333333%;
+}
+#news-broadcast-container .news-broadcast .news-content > li:before {
+  content: "";
+  position: relative;
+  width: 2px;
+  height: 2px;
+  background-color: #666;
+  display: inline-block;
+  margin-right: 5px;
+  top: -3px;
 }
 #news-broadcast-container .news-broadcast .news-content > li a {
   color: #666;
@@ -748,4 +774,7 @@ h6 {
 }
 #news-broadcast-container .news-broadcast .news-more a {
   color: #666;
+}
+#news-broadcast-container .news-broadcast .news-more a:hover {
+  color: #008cfa;
 }

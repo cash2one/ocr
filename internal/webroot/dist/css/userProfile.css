@@ -63,6 +63,7 @@ h6 {
   padding: 0;
   line-height: 50px;
   position: relative;
+  font-size: 16px;
 }
 .top-bar .top-bar-left ul.menu > li a.active:before,
 .top-bar .top-bar-left ul.menu > li a:hover:before {
@@ -400,15 +401,15 @@ h6 {
 .tech-introduction .row:nth-child(n+2) .content-item:nth-child(3) .content-icon {
   background-image: url('../../images/user-icons.png');
   background-repeat: no-repeat;
-  background-position: -240px 0;
-  background-position-x: -240px;
+  background-position: -361px 0;
+  background-position-x: -361px;
   background-position-y: 0;
 }
 .tech-introduction .row:nth-child(n+3) .content-item:nth-child(1) .content-icon {
   background-image: url('../../images/user-icons.png');
   background-repeat: no-repeat;
-  background-position: -361px 0;
-  background-position-x: -361px;
+  background-position: -240px 0;
+  background-position-x: -240px;
   background-position-y: 0;
 }
 .tech-introduction .row:nth-child(n+3) .content-item:nth-child(2) .content-icon {
