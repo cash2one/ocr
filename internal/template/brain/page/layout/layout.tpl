@@ -24,7 +24,7 @@ var _hmt = _hmt || [];
 {%/head%}
 {%body%}
     {%include  'views/common/navigation.html'%}
-    <div class="wrapper" style="margin-bottom: 80px;">
+    <div class="wrapper" style="margin-bottom: 80px;height:auto;">
         <div class="content-wrapper">
             <div class="main">
                 {%block name="content"%}{%/block%}
