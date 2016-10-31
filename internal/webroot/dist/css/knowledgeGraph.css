@@ -383,66 +383,80 @@ h6 {
   width: 460px;
   padding-left: 200px;
 }
-.tech-introduction .row:nth-child(n+2) .content-item:nth-child(1) .content-icon {
-  background-image: url('../../images/user-icons.png');
+.tech-introduction .row:nth-child(2) .content-item:nth-child(1) .content-icon {
+  background-image: url('../../images/knowledge-icons.png');
   background-repeat: no-repeat;
-  background-position: 2px 0;
-  background-position-x: 2px;
+  background-position: 6px 0;
+  background-position-x: 6px;
   background-position-y: 0;
 }
-.tech-introduction .row:nth-child(n+2) .content-item:nth-child(2) .content-icon {
-  background-image: url('../../images/user-icons.png');
+.tech-introduction .row:nth-child(2) .content-item:nth-child(2) .content-icon {
+  background-image: url('../../images/knowledge-icons.png');
   background-repeat: no-repeat;
-  background-position: -119px 0;
-  background-position-x: -119px;
+  background-position: -114px 0;
+  background-position-x: -114px;
   background-position-y: 0;
 }
-.tech-introduction .row:nth-child(n+2) .content-item:nth-child(3) .content-icon {
-  background-image: url('../../images/user-icons.png');
+.tech-introduction .row:nth-child(2) .content-item:nth-child(3) .content-icon {
+  background-image: url('../../images/knowledge-icons.png');
   background-repeat: no-repeat;
-  background-position: -240px 0;
-  background-position-x: -240px;
+  background-position: -236px 0;
+  background-position-x: -236px;
   background-position-y: 0;
 }
-.tech-introduction .row:nth-child(n+3) .content-item:nth-child(1) .content-icon {
-  background-image: url('../../images/user-icons.png');
+.tech-introduction .row:nth-child(3) .content-item:nth-child(1) .content-icon {
+  background-image: url('../../images/knowledge-icons.png');
   background-repeat: no-repeat;
-  background-position: -361px 0;
-  background-position-x: -361px;
+  background-position: -357px 0;
+  background-position-x: -357px;
   background-position-y: 0;
 }
-.tech-introduction .row:nth-child(n+3) .content-item:nth-child(2) .content-icon {
-  background-image: url('../../images/user-icons.png');
+.tech-introduction .row:nth-child(3) .content-item:nth-child(2) .content-icon {
+  background-image: url('../../images/knowledge-icons.png');
   background-repeat: no-repeat;
-  background-position: -480px 0;
-  background-position-x: -480px;
+  background-position: -475px 0;
+  background-position-x: -475px;
   background-position-y: 0;
 }
-.tech-advantage .row .content-item:nth-child(1) .content-icon {
-  background-image: url('../../images/user-icons.png');
+.tech-advantage .row:nth-child(2) .content-item:nth-child(1) .content-icon {
+  background-image: url('../../images/knowledge-icons.png');
   background-repeat: no-repeat;
-  background-position: 0px -135px;
+  background-position: 0px -109px;
   background-position-x: 0px;
-  background-position-y: -135px;
+  background-position-y: -109px;
 }
-.tech-advantage .row .content-item:nth-child(2) .content-icon {
-  background-image: url('../../images/user-icons.png');
+.tech-advantage .row:nth-child(2) .content-item:nth-child(2) .content-icon {
+  background-image: url('../../images/knowledge-icons.png');
   background-repeat: no-repeat;
-  background-position: -90px -135px;
+  background-position: -90px -109px;
   background-position-x: -90px;
-  background-position-y: -135px;
+  background-position-y: -109px;
 }
-.tech-advantage .row .content-item:nth-child(3) .content-icon {
-  background-image: url('../../images/user-icons.png');
+.tech-advantage .row:nth-child(2) .content-item:nth-child(3) .content-icon {
+  background-image: url('../../images/knowledge-icons.png');
   background-repeat: no-repeat;
-  background-position: -180px -135px;
+  background-position: -180px -109px;
   background-position-x: -180px;
-  background-position-y: -135px;
+  background-position-y: -109px;
 }
-.tech-advantage .row .content-item:nth-child(4) .content-icon {
-  background-image: url('../../images/user-icons.png');
+.tech-advantage .row:nth-child(3) .content-item:nth-child(1) .content-icon {
+  background-image: url('../../images/knowledge-icons.png');
   background-repeat: no-repeat;
-  background-position: -270px -135px;
+  background-position: -270px -109px;
   background-position-x: -270px;
-  background-position-y: -135px;
+  background-position-y: -109px;
+}
+.tech-advantage .row:nth-child(3) .content-item:nth-child(2) .content-icon {
+  background-image: url('../../images/knowledge-icons.png');
+  background-repeat: no-repeat;
+  background-position: -360px -109px;
+  background-position-x: -360px;
+  background-position-y: -109px;
+}
+.tech-advantage .row:nth-child(3) .content-item:nth-child(3) .content-icon {
+  background-image: url('../../images/knowledge-icons.png');
+  background-repeat: no-repeat;
+  background-position: -450px -109px;
+  background-position-x: -450px;
+  background-position-y: -109px;
 }
