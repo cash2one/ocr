@@ -55,6 +55,9 @@ h6 {
 .top-bar .top-bar-left ul.menu > li.site-logo {
   margin-right: 30px;
 }
+.top-bar .top-bar-left ul.menu > li.site-logo a {
+  text-decoration: none;
+}
 .top-bar .top-bar-left ul.menu > li.site-logo img {
   height: 30px;
 }
@@ -671,8 +674,11 @@ h6 {
   background-position-x: -611px;
   background-position-y: -195px;
   padding-left: 20px;
-  color: #008cfa;
+  color: #4daffc;
   font-size: 12px;
+}
+.tech-introduction .content-item .content-more > a:hover {
+  color: #008cfa;
 }
 .user-case {
   background-color: #fafafa;
@@ -688,6 +694,12 @@ h6 {
   top: -4px;
   left: 10px;
   color: #666;
+}
+.user-case h2 > small a {
+  color: #4daffc;
+}
+.user-case h2 > small a:hover {
+  color: #008cfa;
 }
 .user-case .content-item {
   width: 220px;
@@ -789,9 +801,10 @@ h6 {
   width: 30px;
   background-image: url('../../images/home-icons.png');
   background-repeat: no-repeat;
-  background-position: -609px -157px;
-  background-position-x: -609px;
-  background-position-y: -157px;
+  background-position: -304px -68px;
+  background-position-x: -304px;
+  background-position-y: -68px;
+  background-size: 346px 198px;
 }
 #news-broadcast-container .news-broadcast .news-content {
   width: 1100px;
