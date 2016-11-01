@@ -55,8 +55,8 @@ h6 {
 .top-bar .top-bar-left ul.menu > li.site-logo {
   margin-right: 30px;
 }
-.top-bar .top-bar-left ul.menu > li.site-logo a {
-  text-decoration: none;
+.top-bar .top-bar-left ul.menu > li.site-logo a:before {
+  content: none;
 }
 .top-bar .top-bar-left ul.menu > li.site-logo img {
   height: 30px;
