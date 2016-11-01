@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "STHeitiSC-Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+        }
+
+        body {
+            min-width: 1200px;
+        }
+
+        .m {
+
+        }
+
+        .sprite {
+            width: 1200px;
+            margin: auto;
+            background: url('/static/brain/nao/recognize/img/sprite.png') no-repeat;
+        }
+
+        @media all and (min-resolution: 2dppx){
+            .sprite {
+                background: url("/static/brain/nao/recognize/img/sprite@2x.png") no-repeat;
+                background-size: 1600px;
+            }
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .scroll-item {
+            width: 100%;
+            height: 100%;
+        }
+
+        .scroll > div {
+            display: inline-block;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .scroll > div:nth-child(1) {
+            background-image: url("/static/brain/nao/recognize/img/1.jpg");
+        }
+
+        .scroll > div:nth-child(2) {
+            background-image: url("/static/brain/nao/recognize/img/2.jpg");
+        }
+
+        .scroll > div:nth-child(3) {
+            background-image: url("/static/brain/nao/recognize/img/3.jpg");
+        }
+
+        .scroll > div:nth-child(4) {
+            background-image: url("/static/brain/nao/recognize/img/4.jpg");
+        }
+
+        .tip-btn-w {
+            position: absolute;
+            width: 100%;
+            line-height: 60px;
+            left: 0;
+            bottom: 0;
+            text-align: center;
+        }
+
+        .tip-btn {
+            display: inline-block;
+            width: 180px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .on {
+            color: #0077d5;
+            background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .2) 100%);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .2) 100%);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="body">
+    <div style="height: 500px;background: url(img/bg-gradient.jpg); background-size: 100% 100%">
+        <div class="sprite" style="height: 100%;background-position: center 0"></div>
+    </div>
+    <div class="sprite relative" style="height: 417px;background-position: center -500px">
+        <a class="absolute" style="height: 30px; width: 90px; left: 85px; top: 336px;" href="#"></a>
+        <a class="absolute" style="height: 30px; width: 90px; left: 398px; top: 336px;" href="#"></a>
+        <a class="absolute" style="height: 30px; width: 90px; left: 713px; top: 336px;" href="#"></a>
+        <a class="absolute" style="height: 30px; width: 90px; left: 1025px; top: 336px;" href="#"></a>
+    </div>
+    <div style="background-color: #f5f5f5">
+        <div class="sprite" style="height: 385px;background-position: center -905px;"></div>
+    </div>
+    <div class="s-w relative" style="height: 514px;overflow: hidden;">
+        <div class="scroll" style="height: 100%; white-space: nowrap; font-size: 0;">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="tip-btn-w">
+            <div class="tip-btn">拍照翻译</div>
+            <div class="tip-btn">拍照搜索</div>
+            <div class="tip-btn">刷脸身份证验证</div>
+            <div class="tip-btn">图片质量管理</div>
+        </div>
+    </div>
+    <div style="background-color: #0077d5">
+        <div class="sprite" style="height: 240px; background-position: center -1814px; "></div>
+    </div>
+    <div class="sprite" style="height: 210px;background-position: center -2052px"></div>
+    <div style="background: #f5f5f5">
+        <div class="sprite" style="height: 210px;background-position: center -2265px"></div>
+    </div>
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    (function () {
+        var duration = 4000,
+                count = 4,
+                state = {
+                    set index(val) {
+                        var me = this;
+                        clearTimeout(me.timeout);
+                        val = val % count;
+                        this._index = val;
+                        $('.scroll').css({
+                            transform: 'translate(-' + this._index + '00%,0)',
+                            transition: 'all 1s'
+                        });
+                        $('.tip-btn').removeClass('on').eq(val).addClass('on');
+                        this.timeout = setTimeout(function () {
+                            me.index = 1 + me._index;
+                        }, duration);
+
+                    },
+                    get index() {
+                        return this._index;
+                    },
+                    timeout: null
+                };
+
+        state.index = 0;
+
+        $('.tip-btn').each(function (index, el) {
+            $(el).on('click', function () {
+                state.index = index
+            });
+        });
+
+        function div() {
+            return $('<div></div>');
+        }
+    })();
+</script>
+</body>
+</html>

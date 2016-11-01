@@ -1,0 +1,62 @@
+.ai {
+    width: 290px;
+    height: 360px;
+    background: #008cfa;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    z-index: 0;
+    display: none;
+}
+
+.ai .step-one {
+    width: 260px;
+    height: 137px;
+    background: url(/static/img/home/ai-frame-one.png) no-repeat center;
+    margin: 10px auto 0;
+}
+.ai .step-one .ai-title {
+}
+.ai .step-one .ai-detail {
+}
+
+.ai .step-two {
+    width: 260px;
+    height: 137px;
+    background: url(/static/img/home/ai-frame-one.png) no-repeat center;
+    margin: auto;
+}
+
+.ai .step-three {
+    width: 260px;
+    height: 60px;
+    background: url(/static/img/home/ai-frame-two.png) no-repeat center;
+    margin: auto;
+}
+
+.ai-title {
+    font-size: 18px;
+    color: #fff;
+    padding-left: 20px;
+    line-height: 50px;
+}
+.ai-detail {
+    float: left;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.ai-list {
+    margin: 0 15px;
+}
+
+.ai-list li {
+    float: left;
+    padding: 0 10px;
+}
+
+.strong-show {
+    color: #fae619;
+}
+

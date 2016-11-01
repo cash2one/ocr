@@ -1,0 +1,2114 @@
+{
+    "res": {
+        "brain:page/bd/bd.css": {
+            "uri": "/index/static/brain/page/bd/bd.css",
+            "type": "css"
+        },
+        "brain:page/bd/bd.js": {
+            "uri": "/index/static/brain/page/bd/bd.js",
+            "type": "js",
+            "deps": [
+                "brain:page/bd/bd.css"
+            ]
+        },
+        "brain:page/bd/bd.tpl": {
+            "uri": "/template/brain/page/bd/bd.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "brain:page/bd/bd.js",
+                "brain:page/bd/bd.css"
+            ]
+        },
+        "brain:page/deletenews/deletenews.css": {
+            "uri": "/index/static/brain/page/deletenews/deletenews.css",
+            "type": "css"
+        },
+        "brain:page/deletenews/deletenews.js": {
+            "uri": "/index/static/brain/page/deletenews/deletenews.js",
+            "type": "js",
+            "deps": [
+                "brain:widget/pager/pager.js",
+                "brain:page/deletenews/deletenews.css"
+            ]
+        },
+        "brain:page/deletenews/deletenews.tpl": {
+            "uri": "/template/brain/page/deletenews/deletenews.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "brain:page/deletenews/deletenews.js",
+                "brain:page/deletenews/deletenews.css"
+            ]
+        },
+        "brain:page/editnews/ckeditor/adapters/jquery.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/adapters/jquery.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/build-config.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/build-config.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/ckeditor.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/ckeditor.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/config.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/config.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/contents.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/contents.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/lang/en.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/lang/en.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/lang/zh-cn.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/lang/zh-cn.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/af.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/af.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/da.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/da.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/de.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/de.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/el.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/el.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/en.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/en.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/es.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/es.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/et.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/et.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/he.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/he.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/id.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/id.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/it.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/it.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/km.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/km.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/no.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/no.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/si.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/si.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/th.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/th.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/clipboard/dialogs/paste.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/clipboard/dialogs/paste.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/colordialog/dialogs/colordialog.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/colordialog/dialogs/colordialog.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/plugins/colordialog/dialogs/colordialog.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/colordialog/dialogs/colordialog.js",
+            "type": "js",
+            "deps": [
+                "brain:page/editnews/ckeditor/plugins/colordialog/dialogs/colordialog.css"
+            ]
+        },
+        "brain:page/editnews/ckeditor/plugins/dialog/dialogDefinition.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/dialog/dialogDefinition.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/div/dialogs/div.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/div/dialogs/div.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/find/dialogs/find.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/find/dialogs/find.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/flash/dialogs/flash.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/flash/dialogs/flash.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/forms/dialogs/button.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/forms/dialogs/button.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/forms/dialogs/checkbox.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/forms/dialogs/checkbox.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/forms/dialogs/form.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/forms/dialogs/form.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/forms/dialogs/hiddenfield.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/forms/dialogs/hiddenfield.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/forms/dialogs/radio.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/forms/dialogs/radio.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/forms/dialogs/select.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/forms/dialogs/select.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/forms/dialogs/textarea.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/forms/dialogs/textarea.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/forms/dialogs/textfield.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/forms/dialogs/textfield.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/iframe/dialogs/iframe.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/iframe/dialogs/iframe.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/image/dialogs/image.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/image/dialogs/image.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/link/dialogs/anchor.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/link/dialogs/anchor.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/link/dialogs/link.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/link/dialogs/link.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/liststyle/dialogs/liststyle.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/liststyle/dialogs/liststyle.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/pastefromword/filter/default.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/pastefromword/filter/default.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/scayt/dialogs/options.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/scayt/dialogs/options.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/scayt/dialogs/toolbar.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/scayt/dialogs/toolbar.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/plugins/smiley/dialogs/smiley.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/smiley/dialogs/smiley.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/af.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/af.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/ar.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/ar.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/bg.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/bg.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/ca.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/ca.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/cs.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/cs.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/cy.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/cy.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/da.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/da.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/de.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/de.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/el.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/el.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/en.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/en.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/eo.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/eo.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/es.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/es.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/et.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/et.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/eu.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/eu.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/fa.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/fa.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/fi.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/fi.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/fr.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/fr.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/gl.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/gl.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/he.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/he.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/hr.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/hr.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/hu.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/hu.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/id.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/id.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/it.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/it.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/ja.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/ja.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/km.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/km.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/ko.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/ko.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/ku.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/ku.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/lt.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/lt.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/lv.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/lv.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/nb.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/nb.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/nl.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/nl.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/no.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/no.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/pl.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/pl.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/pt.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/pt.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/ru.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/ru.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/si.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/si.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/sk.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/sk.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/sl.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/sl.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/sq.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/sq.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/sv.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/sv.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/th.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/th.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/tr.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/tr.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/tt.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/tt.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/ug.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/ug.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/uk.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/uk.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/vi.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/vi.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/lang/zh.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/lang/zh.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/specialchar/dialogs/specialchar.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/specialchar/dialogs/specialchar.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/table/dialogs/table.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/table/dialogs/table.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/tabletools/dialogs/tableCell.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/tabletools/dialogs/tableCell.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/templates/dialogs/templates.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/templates/dialogs/templates.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/plugins/templates/dialogs/templates.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/templates/dialogs/templates.js",
+            "type": "js",
+            "deps": [
+                "brain:page/editnews/ckeditor/plugins/templates/dialogs/templates.css"
+            ]
+        },
+        "brain:page/editnews/ckeditor/plugins/templates/templates/default.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/templates/templates/default.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/plugins/wsc/dialogs/wsc.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/wsc/dialogs/wsc.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/plugins/wsc/dialogs/wsc.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/wsc/dialogs/wsc.js",
+            "type": "js",
+            "deps": [
+                "brain:page/editnews/ckeditor/plugins/wsc/dialogs/wsc.css"
+            ]
+        },
+        "brain:page/editnews/ckeditor/plugins/wsc/dialogs/wsc_ie.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/plugins/wsc/dialogs/wsc_ie.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/samples/css/samples.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/css/samples.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/samples/js/sample.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/js/sample.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/samples/js/sf.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/js/sf.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/samples/old/assets/uilanguages/languages.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/old/assets/uilanguages/languages.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/samples/old/dialog/assets/my_dialog.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/old/dialog/assets/my_dialog.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/samples/old/htmlwriter/assets/outputforflash/swfobject.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/old/htmlwriter/assets/outputforflash/swfobject.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/samples/old/sample.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/old/sample.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/samples/old/sample.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/old/sample.js",
+            "type": "js",
+            "deps": [
+                "brain:page/editnews/ckeditor/samples/old/sample.css"
+            ]
+        },
+        "brain:page/editnews/ckeditor/samples/toolbarconfigurator/css/fontello.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/toolbarconfigurator/css/fontello.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/samples/toolbarconfigurator/js/fulltoolbareditor.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/toolbarconfigurator/js/fulltoolbareditor.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/samples/toolbarconfigurator/js/toolbarmodifier.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/toolbarconfigurator/js/toolbarmodifier.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/samples/toolbarconfigurator/js/toolbartextmodifier.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/toolbarconfigurator/js/toolbartextmodifier.js",
+            "type": "js"
+        },
+        "brain:page/editnews/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js",
+            "type": "js",
+            "deps": [
+                "brain:page/editnews/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css"
+            ]
+        },
+        "brain:page/editnews/ckeditor/samples/toolbarconfigurator/lib/codemirror/javascript.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/toolbarconfigurator/lib/codemirror/javascript.js",
+            "type": "js",
+            "deps": [
+                "../../lib/codemirror"
+            ]
+        },
+        "brain:page/editnews/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js",
+            "type": "js",
+            "deps": [
+                "../../lib/codemirror",
+                "brain:page/editnews/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css"
+            ]
+        },
+        "brain:page/editnews/ckeditor/skins/moono/dialog.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/skins/moono/dialog.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/skins/moono/dialog_ie.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/skins/moono/dialog_ie.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/skins/moono/dialog_ie7.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/skins/moono/dialog_ie7.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/skins/moono/dialog_ie8.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/skins/moono/dialog_ie8.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/skins/moono/dialog_iequirks.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/skins/moono/dialog_iequirks.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/skins/moono/editor.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/skins/moono/editor.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/skins/moono/editor_gecko.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/skins/moono/editor_gecko.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/skins/moono/editor_ie.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/skins/moono/editor_ie.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/skins/moono/editor_ie7.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/skins/moono/editor_ie7.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/skins/moono/editor_ie8.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/skins/moono/editor_ie8.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/skins/moono/editor_iequirks.css": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/skins/moono/editor_iequirks.css",
+            "type": "css"
+        },
+        "brain:page/editnews/ckeditor/styles.js": {
+            "uri": "/index/static/brain/page/editnews/ckeditor/styles.js",
+            "type": "js"
+        },
+        "brain:page/editnews/editnews.css": {
+            "uri": "/index/static/brain/page/editnews/editnews.css",
+            "type": "css"
+        },
+        "brain:page/editnews/editnews.js": {
+            "uri": "/index/static/brain/page/editnews/editnews.js",
+            "type": "js",
+            "deps": [
+                "brain:page/editnews/editnews.css"
+            ]
+        },
+        "brain:page/editnews/editnews.tpl": {
+            "uri": "/template/brain/page/editnews/editnews.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "brain:page/editnews/editnews.js",
+                "brain:page/editnews/editnews.css"
+            ]
+        },
+        "brain:page/editnews/editor.css": {
+            "uri": "/index/static/brain/page/editnews/editor.css",
+            "type": "css"
+        },
+        "brain:page/home/home.css": {
+            "uri": "/index/static/brain/page/home/home.css",
+            "type": "css"
+        },
+        "brain:page/home/home.js": {
+            "uri": "/index/static/brain/page/home/home.js",
+            "type": "js",
+            "deps": [
+                "brain:page/home/home.css"
+            ]
+        },
+        "brain:page/home/home.tpl": {
+            "uri": "/template/brain/page/home/home.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "brain:page/home/home.js",
+                "brain:page/home/home.css"
+            ]
+        },
+        "brain:page/language/language.css": {
+            "uri": "/index/static/brain/page/language/language.css",
+            "type": "css"
+        },
+        "brain:page/language/language.js": {
+            "uri": "/index/static/brain/page/language/language.js",
+            "type": "js",
+            "deps": [
+                "brain:page/language/language.css"
+            ]
+        },
+        "brain:page/language/language.tpl": {
+            "uri": "/template/brain/page/language/language.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "brain:page/language/language.js",
+                "brain:page/language/language.css"
+            ]
+        },
+        "brain:page/layout/layout.css": {
+            "uri": "/index/static/brain/page/layout/layout.css",
+            "type": "css"
+        },
+        "brain:page/layout/layout.js": {
+            "uri": "/index/static/brain/page/layout/layout.js",
+            "type": "js",
+            "deps": [
+                "brain:page/layout/layout.css"
+            ]
+        },
+        "brain:page/layout/layout.tpl": {
+            "uri": "/template/brain/page/layout/layout.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "brain:page/layout/layout.js",
+                "brain:page/layout/layout.css"
+            ]
+        },
+        "brain:page/ml/ml.css": {
+            "uri": "/index/static/brain/page/ml/ml.css",
+            "type": "css"
+        },
+        "brain:page/ml/ml.js": {
+            "uri": "/index/static/brain/page/ml/ml.js",
+            "type": "js",
+            "deps": [
+                "brain:page/ml/ml.css"
+            ]
+        },
+        "brain:page/ml/ml.tpl": {
+            "uri": "/template/brain/page/ml/ml.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "brain:page/ml/ml.js",
+                "brain:page/ml/ml.css"
+            ]
+        },
+        "brain:page/modifynews/ckeditor/adapters/jquery.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/adapters/jquery.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/build-config.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/build-config.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/ckeditor.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/ckeditor.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/config.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/config.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/contents.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/contents.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/lang/en.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/lang/en.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/lang/zh-cn.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/lang/zh-cn.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/af.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/af.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/da.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/da.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/de.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/de.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/el.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/el.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/en.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/en.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/es.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/es.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/et.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/et.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/he.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/he.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/id.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/id.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/it.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/it.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/km.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/km.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/no.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/no.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/si.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/si.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/th.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/th.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/clipboard/dialogs/paste.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/clipboard/dialogs/paste.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/colordialog/dialogs/colordialog.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/colordialog/dialogs/colordialog.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/plugins/colordialog/dialogs/colordialog.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/colordialog/dialogs/colordialog.js",
+            "type": "js",
+            "deps": [
+                "brain:page/modifynews/ckeditor/plugins/colordialog/dialogs/colordialog.css"
+            ]
+        },
+        "brain:page/modifynews/ckeditor/plugins/dialog/dialogDefinition.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/dialog/dialogDefinition.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/div/dialogs/div.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/div/dialogs/div.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/find/dialogs/find.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/find/dialogs/find.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/flash/dialogs/flash.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/flash/dialogs/flash.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/forms/dialogs/button.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/forms/dialogs/button.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/forms/dialogs/checkbox.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/forms/dialogs/checkbox.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/forms/dialogs/form.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/forms/dialogs/form.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/forms/dialogs/hiddenfield.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/forms/dialogs/hiddenfield.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/forms/dialogs/radio.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/forms/dialogs/radio.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/forms/dialogs/select.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/forms/dialogs/select.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/forms/dialogs/textarea.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/forms/dialogs/textarea.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/forms/dialogs/textfield.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/forms/dialogs/textfield.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/iframe/dialogs/iframe.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/iframe/dialogs/iframe.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/image/dialogs/image.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/image/dialogs/image.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/link/dialogs/anchor.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/link/dialogs/anchor.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/link/dialogs/link.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/link/dialogs/link.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/liststyle/dialogs/liststyle.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/liststyle/dialogs/liststyle.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/pastefromword/filter/default.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/pastefromword/filter/default.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/scayt/dialogs/options.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/scayt/dialogs/options.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/scayt/dialogs/toolbar.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/scayt/dialogs/toolbar.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/plugins/smiley/dialogs/smiley.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/smiley/dialogs/smiley.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/af.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/af.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/ar.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/ar.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/bg.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/bg.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/ca.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/ca.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/cs.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/cs.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/cy.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/cy.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/da.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/da.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/de.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/de.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/el.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/el.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/en.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/en.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/eo.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/eo.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/es.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/es.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/et.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/et.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/eu.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/eu.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/fa.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/fa.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/fi.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/fi.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/fr.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/fr.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/gl.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/gl.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/he.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/he.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/hr.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/hr.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/hu.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/hu.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/id.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/id.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/it.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/it.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/ja.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/ja.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/km.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/km.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/ko.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/ko.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/ku.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/ku.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/lt.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/lt.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/lv.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/lv.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/nb.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/nb.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/nl.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/nl.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/no.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/no.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/pl.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/pl.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/pt.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/pt.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/ru.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/ru.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/si.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/si.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/sk.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/sk.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/sl.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/sl.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/sq.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/sq.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/sv.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/sv.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/th.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/th.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/tr.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/tr.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/tt.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/tt.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/ug.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/ug.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/uk.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/uk.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/vi.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/vi.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/zh.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/lang/zh.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/specialchar/dialogs/specialchar.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/specialchar/dialogs/specialchar.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/table/dialogs/table.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/table/dialogs/table.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/tabletools/dialogs/tableCell.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/tabletools/dialogs/tableCell.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/templates/dialogs/templates.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/templates/dialogs/templates.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/plugins/templates/dialogs/templates.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/templates/dialogs/templates.js",
+            "type": "js",
+            "deps": [
+                "brain:page/modifynews/ckeditor/plugins/templates/dialogs/templates.css"
+            ]
+        },
+        "brain:page/modifynews/ckeditor/plugins/templates/templates/default.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/templates/templates/default.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/plugins/wsc/dialogs/wsc.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/wsc/dialogs/wsc.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/plugins/wsc/dialogs/wsc.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/wsc/dialogs/wsc.js",
+            "type": "js",
+            "deps": [
+                "brain:page/modifynews/ckeditor/plugins/wsc/dialogs/wsc.css"
+            ]
+        },
+        "brain:page/modifynews/ckeditor/plugins/wsc/dialogs/wsc_ie.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/plugins/wsc/dialogs/wsc_ie.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/samples/css/samples.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/css/samples.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/samples/js/sample.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/js/sample.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/samples/js/sf.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/js/sf.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/samples/old/assets/uilanguages/languages.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/old/assets/uilanguages/languages.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/samples/old/dialog/assets/my_dialog.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/old/dialog/assets/my_dialog.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/samples/old/htmlwriter/assets/outputforflash/swfobject.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/old/htmlwriter/assets/outputforflash/swfobject.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/samples/old/sample.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/old/sample.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/samples/old/sample.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/old/sample.js",
+            "type": "js",
+            "deps": [
+                "brain:page/modifynews/ckeditor/samples/old/sample.css"
+            ]
+        },
+        "brain:page/modifynews/ckeditor/samples/toolbarconfigurator/css/fontello.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/toolbarconfigurator/css/fontello.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/samples/toolbarconfigurator/js/fulltoolbareditor.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/toolbarconfigurator/js/fulltoolbareditor.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/samples/toolbarconfigurator/js/toolbarmodifier.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/toolbarconfigurator/js/toolbarmodifier.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/samples/toolbarconfigurator/js/toolbartextmodifier.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/toolbarconfigurator/js/toolbartextmodifier.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js",
+            "type": "js",
+            "deps": [
+                "brain:page/modifynews/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css"
+            ]
+        },
+        "brain:page/modifynews/ckeditor/samples/toolbarconfigurator/lib/codemirror/javascript.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/toolbarconfigurator/lib/codemirror/javascript.js",
+            "type": "js",
+            "deps": [
+                "../../lib/codemirror"
+            ]
+        },
+        "brain:page/modifynews/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js",
+            "type": "js",
+            "deps": [
+                "../../lib/codemirror",
+                "brain:page/modifynews/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css"
+            ]
+        },
+        "brain:page/modifynews/ckeditor/skins/moono/dialog.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/skins/moono/dialog.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/skins/moono/dialog_ie.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/skins/moono/dialog_ie.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/skins/moono/dialog_ie7.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/skins/moono/dialog_ie7.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/skins/moono/dialog_ie8.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/skins/moono/dialog_ie8.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/skins/moono/dialog_iequirks.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/skins/moono/dialog_iequirks.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/skins/moono/editor.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/skins/moono/editor.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/skins/moono/editor_gecko.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/skins/moono/editor_gecko.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/skins/moono/editor_ie.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/skins/moono/editor_ie.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/skins/moono/editor_ie7.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/skins/moono/editor_ie7.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/skins/moono/editor_ie8.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/skins/moono/editor_ie8.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/skins/moono/editor_iequirks.css": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/skins/moono/editor_iequirks.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/ckeditor/styles.js": {
+            "uri": "/index/static/brain/page/modifynews/ckeditor/styles.js",
+            "type": "js"
+        },
+        "brain:page/modifynews/editnews.css": {
+            "uri": "/index/static/brain/page/modifynews/editnews.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/editnews.js": {
+            "uri": "/index/static/brain/page/modifynews/editnews.js",
+            "type": "js",
+            "deps": [
+                "brain:page/modifynews/editnews.css"
+            ]
+        },
+        "brain:page/modifynews/editnews.tpl": {
+            "uri": "/template/brain/page/modifynews/editnews.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "brain:page/modifynews/editnews.js",
+                "brain:page/modifynews/editnews.css"
+            ]
+        },
+        "brain:page/modifynews/editor.css": {
+            "uri": "/index/static/brain/page/modifynews/editor.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/modifynews.css": {
+            "uri": "/index/static/brain/page/modifynews/modifynews.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/modifynews.js": {
+            "uri": "/index/static/brain/page/modifynews/modifynews.js",
+            "type": "js",
+            "deps": [
+                "brain:page/modifynews/modifynews.css"
+            ]
+        },
+        "brain:page/modifynews/modifynews.tpl": {
+            "uri": "/template/brain/page/modifynews/modifynews.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "brain:page/modifynews/modifynews.js",
+                "brain:page/modifynews/modifynews.css"
+            ]
+        },
+        "brain:page/modifynews/modifynewslist.css": {
+            "uri": "/index/static/brain/page/modifynews/modifynewslist.css",
+            "type": "css"
+        },
+        "brain:page/modifynews/modifynewslist.js": {
+            "uri": "/index/static/brain/page/modifynews/modifynewslist.js",
+            "type": "js",
+            "deps": [
+                "brain:widget/pager/pager.js",
+                "brain:page/modifynews/modifynewslist.css"
+            ]
+        },
+        "brain:page/modifynews/modifynewslist.tpl": {
+            "uri": "/template/brain/page/modifynews/modifynewslist.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "brain:page/modifynews/modifynewslist.js",
+                "brain:page/modifynews/modifynewslist.css"
+            ]
+        },
+        "brain:page/news/detail.css": {
+            "uri": "/index/static/brain/page/news/detail.css",
+            "type": "css"
+        },
+        "brain:page/news/detail.js": {
+            "uri": "/index/static/brain/page/news/detail.js",
+            "type": "js",
+            "deps": [
+                "brain:page/news/detail.css"
+            ]
+        },
+        "brain:page/news/detail.tpl": {
+            "uri": "/template/brain/page/news/detail.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "brain:page/news/detail.js",
+                "brain:page/news/detail.css"
+            ]
+        },
+        "brain:page/news/news.css": {
+            "uri": "/index/static/brain/page/news/news.css",
+            "type": "css"
+        },
+        "brain:page/news/news.js": {
+            "uri": "/index/static/brain/page/news/news.js",
+            "type": "js",
+            "deps": [
+                "brain:page/news/news.css"
+            ]
+        },
+        "brain:page/news/news.tpl": {
+            "uri": "/template/brain/page/news/news.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "brain:page/news/news.js",
+                "brain:page/news/news.css"
+            ]
+        },
+        "brain:page/test.js": {
+            "uri": "/index/static/brain/page/test.js",
+            "type": "js"
+        },
+        "brain:page/tx/tx.css": {
+            "uri": "/index/static/brain/page/tx/tx.css",
+            "type": "css"
+        },
+        "brain:page/tx/tx.js": {
+            "uri": "/index/static/brain/page/tx/tx.js",
+            "type": "js",
+            "deps": [
+                "brain:page/tx/tx.css"
+            ]
+        },
+        "brain:page/tx/tx.tpl": {
+            "uri": "/template/brain/page/tx/tx.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "brain:page/tx/tx.js",
+                "brain:page/tx/tx.css"
+            ]
+        },
+        "brain:page/up/up.css": {
+            "uri": "/index/static/brain/page/up/up.css",
+            "type": "css"
+        },
+        "brain:page/up/up.js": {
+            "uri": "/index/static/brain/page/up/up.js",
+            "type": "js",
+            "deps": [
+                "brain:page/up/up.css"
+            ]
+        },
+        "brain:page/up/up.tpl": {
+            "uri": "/template/brain/page/up/up.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "brain:page/up/up.js",
+                "brain:page/up/up.css"
+            ]
+        },
+        "brain:page/voice/voice.css": {
+            "uri": "/index/static/brain/page/voice/voice.css",
+            "type": "css"
+        },
+        "brain:page/voice/voice.js": {
+            "uri": "/index/static/brain/page/voice/voice.js",
+            "type": "js",
+            "deps": [
+                "brain:page/voice/voice.css"
+            ]
+        },
+        "brain:page/voice/voice.tpl": {
+            "uri": "/template/brain/page/voice/voice.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "brain:page/voice/voice.js",
+                "brain:page/voice/voice.css"
+            ]
+        },
+        "brain:static/base/base.css": {
+            "uri": "/index/static/brain/base/base.css",
+            "type": "css"
+        },
+        "brain:static/common/backbone-min.js": {
+            "uri": "/index/static/brain/common/backbone-min.js",
+            "type": "js",
+            "deps": [
+                "underscore",
+                "jquery"
+            ]
+        },
+        "brain:static/common/dataController.js": {
+            "uri": "/index/static/brain/common/dataController.js",
+            "type": "js"
+        },
+        "brain:static/common/jquery-ui-1.10.4.custom.js": {
+            "uri": "/index/static/brain/common/jquery-ui-1.10.4.custom.js",
+            "type": "js"
+        },
+        "brain:static/common/jquery-ui.css": {
+            "uri": "/index/static/brain/common/jquery-ui.css",
+            "type": "css"
+        },
+        "brain:static/common/jquery.js": {
+            "uri": "/index/static/brain/common/jquery.js",
+            "type": "js"
+        },
+        "brain:static/common/m.js": {
+            "uri": "/index/static/brain/common/m.js",
+            "type": "js"
+        },
+        "brain:static/common/underscore-min.js": {
+            "uri": "/index/static/brain/common/underscore-min.js",
+            "type": "js"
+        },
+        "brain:static/config/config.js": {
+            "uri": "/index/static/brain/config/config.js",
+            "type": "js"
+        },
+        "brain:static/fullpage/jquery-1.8.3.min.js": {
+            "uri": "/index/static/brain/fullpage/jquery-1.8.3.min.js",
+            "type": "js"
+        },
+        "brain:static/fullpage/jquery-ui-1.10.3.min.js": {
+            "uri": "/index/static/brain/fullpage/jquery-ui-1.10.3.min.js",
+            "type": "js"
+        },
+        "brain:static/fullpage/jquery.fullPage.css": {
+            "uri": "/index/static/brain/fullpage/jquery.fullPage.css",
+            "type": "css"
+        },
+        "brain:static/fullpage/jquery.fullPage.js": {
+            "uri": "/index/static/brain/fullpage/jquery.fullPage.js",
+            "type": "js",
+            "deps": [
+                "brain:static/fullpage/jquery.fullPage.css"
+            ]
+        },
+        "brain:static/fullpage/jquery.fullPage.min.js": {
+            "uri": "/index/static/brain/fullpage/jquery.fullPage.min.js",
+            "type": "js"
+        },
+        "brain:static/modjs/mod.js": {
+            "uri": "/index/static/brain/modjs/mod.js",
+            "type": "js"
+        },
+        "brain:static/ui/Dialog/Dialog.css": {
+            "uri": "/index/static/brain/ui/Dialog/Dialog.css",
+            "type": "css"
+        },
+        "brain:static/ui/Dialog/Dialog.js": {
+            "uri": "/index/static/brain/ui/Dialog/Dialog.js",
+            "type": "js",
+            "deps": [
+                "brain:static/ui/Dialog/Dialog.css"
+            ]
+        },
+        "brain:widget/ai/ai.css": {
+            "uri": "/index/static/brain/widget/ai/ai.css",
+            "type": "css"
+        },
+        "brain:widget/ai/ai.tpl": {
+            "uri": "brain/widget/ai/ai.tpl",
+            "type": "tpl",
+            "deps": [
+                "brain:widget/ai/ai.css"
+            ]
+        },
+        "brain:widget/bd/bd.css": {
+            "uri": "/index/static/brain/widget/bd/bd.css",
+            "type": "css"
+        },
+        "brain:widget/bd/bd.js": {
+            "uri": "/index/static/brain/widget/bd/bd.js",
+            "type": "js",
+            "deps": [
+                "brain:widget/bd/bd.css"
+            ]
+        },
+        "brain:widget/bd/bd.tpl": {
+            "uri": "brain/widget/bd/bd.tpl",
+            "type": "tpl",
+            "deps": [
+                "brain:widget/bd/bd.js",
+                "brain:widget/bd/bd.css"
+            ]
+        },
+        "brain:widget/footer/footer.css": {
+            "uri": "/index/static/brain/widget/footer/footer.css",
+            "type": "css"
+        },
+        "brain:widget/footer/footer.tpl": {
+            "uri": "brain/widget/footer/footer.tpl",
+            "type": "tpl",
+            "deps": [
+                "brain:widget/footer/footer.css"
+            ]
+        },
+        "brain:widget/home/home.tpl": {
+            "uri": "brain/widget/home/home.tpl",
+            "type": "tpl"
+        },
+        "brain:widget/messagebar/messagebar.css": {
+            "uri": "/index/static/brain/widget/messagebar/messagebar.css",
+            "type": "css"
+        },
+        "brain:widget/messagebar/messagebar.tpl": {
+            "uri": "brain/widget/messagebar/messagebar.tpl",
+            "type": "tpl",
+            "deps": [
+                "brain:widget/messagebar/messagebar.css"
+            ]
+        },
+        "brain:widget/ml/ml.css": {
+            "uri": "/index/static/brain/widget/ml/ml.css",
+            "type": "css"
+        },
+        "brain:widget/ml/ml.js": {
+            "uri": "/index/static/brain/widget/ml/ml.js",
+            "type": "js",
+            "deps": [
+                "brain:widget/ml/ml.css"
+            ]
+        },
+        "brain:widget/ml/ml.tpl": {
+            "uri": "brain/widget/ml/ml.tpl",
+            "type": "tpl",
+            "deps": [
+                "brain:widget/ml/ml.js",
+                "brain:widget/ml/ml.css"
+            ]
+        },
+        "brain:widget/nav/nav.css": {
+            "uri": "/index/static/brain/widget/nav/nav.css",
+            "type": "css"
+        },
+        "brain:widget/nav/nav.js": {
+            "uri": "/index/static/brain/widget/nav/nav.js",
+            "type": "js",
+            "deps": [
+                "brain:widget/nav/nav.css"
+            ]
+        },
+        "brain:widget/nav/nav.tpl": {
+            "uri": "brain/widget/nav/nav.tpl",
+            "type": "tpl",
+            "deps": [
+                "brain:widget/nav/nav.js",
+                "brain:widget/nav/nav.css"
+            ]
+        },
+        "brain:widget/news/news.css": {
+            "uri": "/index/static/brain/widget/news/news.css",
+            "type": "css"
+        },
+        "brain:widget/news/news.js": {
+            "uri": "/index/static/brain/widget/news/news.js",
+            "type": "js",
+            "deps": [
+                "brain:widget/pager/pager.js",
+                "brain:widget/news/news.css"
+            ]
+        },
+        "brain:widget/news/news.tpl": {
+            "uri": "brain/widget/news/news.tpl",
+            "type": "tpl",
+            "deps": [
+                "brain:widget/news/news.js",
+                "brain:widget/news/news.css"
+            ]
+        },
+        "brain:widget/pager/pager.css": {
+            "uri": "/index/static/brain/widget/pager/pager.css",
+            "type": "css"
+        },
+        "brain:widget/pager/pager.js": {
+            "uri": "/index/static/brain/widget/pager/pager.js",
+            "type": "js",
+            "deps": [
+                "brain:widget/pager/pager.css"
+            ]
+        },
+        "brain:widget/up/up.css": {
+            "uri": "/index/static/brain/widget/up/up.css",
+            "type": "css"
+        },
+        "brain:widget/up/up.js": {
+            "uri": "/index/static/brain/widget/up/up.js",
+            "type": "js",
+            "deps": [
+                "brain:widget/up/up.css"
+            ]
+        },
+        "brain:widget/up/up.tpl": {
+            "uri": "brain/widget/up/up.tpl",
+            "type": "tpl",
+            "deps": [
+                "brain:widget/up/up.js",
+                "brain:widget/up/up.css"
+            ]
+        },
+        "brain:widget/voice/voice.css": {
+            "uri": "/index/static/brain/widget/voice/voice.css",
+            "type": "css"
+        },
+        "brain:widget/voice/voice.js": {
+            "uri": "/index/static/brain/widget/voice/voice.js",
+            "type": "js",
+            "deps": [
+                "brain:widget/voice/voice.css"
+            ]
+        },
+        "brain:widget/voice/voice.tpl": {
+            "uri": "brain/widget/voice/voice.tpl",
+            "type": "tpl",
+            "deps": [
+                "brain:widget/voice/voice.js",
+                "brain:widget/voice/voice.css"
+            ]
+        }
+    },
+    "pkg": {}
+}

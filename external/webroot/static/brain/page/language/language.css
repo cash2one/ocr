@@ -1,0 +1,136 @@
+.sprite {
+    width: 1200px;
+    margin: auto;
+    background: url('/index/static/brain/page/language/img/sprite.png') no-repeat;
+    position: relative;
+    background-size: 1600px;
+}
+
+@media all and (min-resolution: 2dppx) {
+    .sprite {
+        background: url("/index/static/brain/page/language/img/sprite.png") no-repeat;
+        background-size: 1600px;
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.scroll-item {
+    width: 100%;
+    height: 100%;
+}
+
+.scroll > div {
+    display: inline-block;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.scroll > div:nth-child(1),
+.scroll > div:nth-child(7) {
+    background-image: url("http://c.hiphotos.baidu.com/space/pic/item/a8014c086e061d95e0742c9a73f40ad162d9ca66.jpg");
+    /*background-image: url("./img/1-cp.png");*/
+}
+
+.scroll > div:nth-child(2) {
+    background-image: url("http://g.hiphotos.baidu.com/space/pic/item/a8ec8a13632762d0010cbf1da8ec08fa513dc666.jpg");
+    /*background-image: url("./img/2-cp.png");*/
+}
+
+.scroll > div:nth-child(3) {
+    background-image: url("http://f.hiphotos.baidu.com/space/pic/item/c8ea15ce36d3d53993e417613287e950342ab0b2.jpg");
+    /*background-image: url("./img/3-cp.png");*/
+}
+
+.scroll > div:nth-child(4) {
+    background-image: url("http://h.hiphotos.baidu.com/space/pic/item/1e30e924b899a901ab2d409415950a7b0208f57c.jpg");
+    /*background-image: url("./img/4-cp.png");*/
+}
+
+.scroll > div:nth-child(5) {
+    background-image: url("http://d.hiphotos.baidu.com/space/pic/item/f3d3572c11dfa9ec79364db56ad0f703918fc17c.jpg");
+    /*background-image: url("./img/5-cp.jpg");*/
+}
+
+.scroll > div:nth-child(6) {
+    background-image: url("http://b.hiphotos.baidu.com/space/pic/item/faf2b2119313b07efb6448aa04d7912396dd8cb2.jpg");
+    /*background-image: url("./img/6-cp.png");*/
+}
+
+.tip-btn-w {
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    height: 60px;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.tip-btn {
+    display: inline-block;
+    width: 180px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.tip-btn:hover {
+    color: #008cfa;
+}
+.on {
+    color: #0077d5;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .8) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .8) 100%);
+}
+
+.a {
+    background: #2c4d9f url(/index/static/brain/page/language/img/bg-gradient-cp.jpg);
+}
+
+.btn-bg-blue {
+    background: url(/index/static/brain/page/language/img/api-cp@2x.png) no-repeat center center;
+    background-size: cover;
+    transition: all .1s;
+}
+.btn-bg-blue:hover {
+    background: url(./img/api-hover-cp@2x.png) no-repeat center center;
+    background-size: cover;
+}
+
+.btn-bg-white {
+    background: #fff;
+    border: 1px solid;
+    box-sizing: border-box;
+    transition: all .1s;
+    color: #008cfa;
+}
+
+.btn-bg-white:hover {
+    background: #008cfa;
+    color: #fff;
+}
+.sep-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, .1);
+}
+
+.contact {
+    text-align: center;
+    font-size: 16px;
+    color: #008cfa;
+    background: #f5f5f5;
+    font-weight: 200;
+}
+.contact:hover {
+    color: #4daffc;
+}

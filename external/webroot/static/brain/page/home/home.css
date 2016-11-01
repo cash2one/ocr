@@ -1,0 +1,266 @@
+.sprite {
+    width: 1200px;
+    margin: auto;
+    background: url(/index/static/brain/page/home/img/sprite-cp@2x.png) no-repeat;
+    position: relative;
+    background-size: 1600px;
+}
+
+.absolute {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.z-anim {
+    animation: define-z-animation 1s;
+}
+
+.b-anim {
+    will-change: transform;
+    animation: define-b-animation 1s;
+}
+
+.s-anim {
+    animation: define-s-animation 1s;
+}
+
+.w-anim {
+    animation: define-w-animation 1s;
+}
+
+@keyframes define-w-animation {
+    0% {
+        opacity: 0;
+        transform: translate(0, 20px);
+    }
+}
+
+@keyframes define-s-animation {
+    0% {
+        opacity: 0;
+    }
+}
+
+@keyframes define-b-animation {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes define-z-animation {
+    0% {
+        opacity: 0;
+    }
+}
+
+@media all and (min-resolution: 2dppx) {
+    .sprite {
+        background: url(/index/static/brain/page/home/img/sprite-cp@2x.png) no-repeat;
+        background-size: 1600px;
+    }
+}
+
+.a {
+    background: #2c4d9f url(/index/static/brain/page/home/img/brain-layer.jpg) center;
+}
+
+.b {
+    background: url(/index/static/brain/page/home/img/brain-z-layer.png) center;
+}
+
+.c {
+    background: url(/index/static/brain/page/home/img/brain-s-layer.png) center;
+}
+
+.d {
+    background: url(/index/static/brain/page/home/img/brain-w-layer.png) center;
+}
+
+.e {
+    background: url(/index/static/brain/page/home/img/brain-b-layer.png) center;
+}
+
+.bell {
+    width: 14px;
+    height: 100%;
+    margin: 0 10px 0 50px;
+    position: relative;
+    background: url(/index/static/brain/page/home/img/bell.png) center no-repeat;
+    background-size: 100%;
+    float: left;
+}
+
+.js-content {
+    overflow: hidden;
+}
+
+.js-content span {
+    font-size: 12px;
+    line-height: 36px;
+    color: #666666;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.js-content span:hover {
+    color: #008cfa;
+}
+
+.service-section {
+    line-height: 20px;
+    height: 20px;
+    text-align: center;
+    background: #fff;
+    font-weight: 200;
+    color: #666666;
+}
+
+.service-section:hover {
+    color: #008cfa;
+}
+
+.service-detail {
+    line-height: 34px;
+    text-align: center;
+    background: #fff;
+    width: 60px;
+    font-weight: 200;
+    color: #008cfa;
+}
+
+.service-detail:hover {
+    color: #4daffc;
+}
+
+.contact {
+    text-align: center;
+    font-size: 16px;
+    background: #fff;
+    color: #008cfa;
+    font-weight: 200;
+}
+
+.contact:hover {
+    color: #4daffc;
+}
+
+.modal-bg {
+    opacity: .5;
+    background: #000;
+}
+
+.modal-content {
+    width: 460px;
+    height: 340px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -230px;
+    margin-top: -170px;
+    background: #fff;
+}
+
+.modal-head {
+    line-height: 59px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+
+.modal-content td {
+    padding-bottom: 10px;
+}
+
+.modal-content input[type="text"] {
+    line-height: 30px;
+    width: 250px;
+    height: 30px;
+}
+
+.modal-content input[type="radio"] {
+    margin-right: 4px;
+}
+
+.modal-content .error {
+    line-height: 20px;
+    height: 20px;
+    font-size: 12px;
+    position: relative;
+    color: #e10000;
+    margin: 20px 0;
+    left: 127px;
+}
+
+.sub, .cancel {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 35px;
+    height: 35px;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    color: #fff;
+    width: 100px;
+    background: #008cfa;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cancel {
+    background: #ccc;
+    margin-left: 20px;
+}
+.x {
+    background: url(/index/static/brain/img/x.png) center;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    float: right;
+    top: 20px;
+    position: relative;
+    right: 20px;
+    cursor: pointer;
+}
+.modal-success {
+    background: url(/index/static/brain/img/success.png) no-repeat center;
+    width: 450px;
+    height: 200px;
+}
+.modal-error {
+    background: url(/index/static/brain/img/error.png) no-repeat center;
+    width: 450px;
+    height: 200px;
+}
+.modal-loading {
+    text-align: center;
+    position: relative;
+    top: 84px;
+    font-size: 14px;
+}
+.back {
+    width: 100px;
+    height: 35px;
+    background: #008cfa;
+    display: inline-block;
+    line-height: 35px;
+    color: #fff;
+    left: 177px;
+    top: 190px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+.back:hover,
+.sub:hover {
+    background-color: #4daffc;
+}
+.cancel:hover {
+    background-color: #b2b2b2;
+}
+.modal-success,
+.modal-error,
+.modal-loading {
+    display: none;
+}

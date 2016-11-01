@@ -1,0 +1,20 @@
+.cke_editable div,
+.cke_editable p {
+    line-height: 2;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.cke_editable table td {
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+.cke_editable img {
+    margin: 20px 0;
+}
+
+html .cke_editable a {
+    color: #008CFA;
+}

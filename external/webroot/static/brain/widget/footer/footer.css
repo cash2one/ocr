@@ -1,0 +1,46 @@
+.footer {
+    height: 100px;
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    background-color: #333;
+}
+
+.footer .section {
+    position: relative;
+    margin-top: 10px;
+}
+.footer .team {
+    position: relative;
+    padding: 5px 0 5px 40px;
+}
+
+.footer .team .item {
+    position: relative;
+    font-size: 12px;
+    color: #fff;
+    opacity: .5;
+    padding: 0 10px 0 10px;
+}
+.footer .team .item:hover {
+    opacity: 1;
+}
+
+.footer .team .separator {
+    width: 1px;
+    height: 10px;
+    display: inline-block;
+    background-color: #fff;
+    position: relative;
+    opacity: .5;
+}
+
+.footer .copyright {
+    position: relative;
+    font-size: 12px;
+    color: #fff;
+    opacity: .5;
+    display: block;
+    padding-left: 50px;
+    padding-top: 5px;
+}

@@ -1,0 +1,1 @@
+$('#nav-contact').prop('href', './home#contact-us');

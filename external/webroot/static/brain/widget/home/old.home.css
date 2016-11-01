@@ -1,0 +1,3392 @@
+/* group common */
+#menu {
+    position: absolute;
+    top: 20%;
+    width: 90px;
+    height: 360px;
+    margin: 0 auto;
+    padding: 0 0 0 10px;
+    z-index: 1;
+    background: url(/static/brain/img/left-nav.png) no-repeat center center;
+}
+
+#menu li {
+    padding: 17px 0 15px 60px;
+    font-size: 13px;
+    width: 115px;
+}
+
+#menu li a {
+    cursor: pointer;
+    opacity: .5;
+}
+
+#menu .active {
+    background: url(/static/brain/img/left-nav-active.png) no-repeat 39px 3px;
+}
+
+#menu li .word {
+    margin: 0 0 0 40px;
+    opacity: .5;
+    display: none;
+}
+
+#menu .hover {
+    padding: 17px 0 15px 5px;
+}
+
+.section {
+    min-width: 1100px;
+}
+
+@keyframes text-fly {
+    from {
+        right: -480px;
+        opacity: 0;
+    }
+    to {
+        right: -30px; 
+        opacity: 1;
+    }
+}
+@-moz-keyframes text-fly {
+    from {
+        right: -480px;
+        opacity: 0;
+    }
+    to {
+        right: -30px; 
+        opacity: 1;
+    }
+}
+@-webkit-keyframes text-fly {
+    from {
+        right: -480px;
+        opacity: 0;
+    }
+    to {
+        right: -30px; 
+        opacity: 1;
+    }
+}
+@-o-keyframes text-fly {
+    from {
+        right: -480px;
+        opacity: 0;
+    }
+    to {
+        right: -30px; 
+        opacity: 1;
+    }
+}
+
+ol {
+    list-style-type: disc;
+    color: #fff;
+    padding: 0 0 0 20px;
+}
+.title {
+    font-size: 50px;
+    color: #fff;
+    font-weight: 200;
+}
+.description {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 100;
+    opacity: .6;
+    width: 400px;
+}
+.arrow {
+    padding: 0 0 0 35px;
+    width: 10px;
+    height: 18px;
+    opacity: 1;
+    background: url(/static/brain/img/arrow.png) no-repeat center center;
+}
+.arrow:hover {
+    opacity: 1;
+    background: url(/static/brain/img/arrow-hover.png) no-repeat center center;
+}
+.pad-top {
+    padding-top: 20px;
+}
+
+/* group home */
+#brain-home {
+    position: relative;
+    width: 1280px;
+    min-width: 1280px;
+    height: 676px;
+    min-height: 676px;
+    margin: auto;
+    padding-right: 60px;
+    display: none;
+}
+@keyframes back-star-cloud {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .8;
+    }
+}
+#brain-home #content #back-star-cloud {
+    position: absolute;
+    width: 1200px;
+    height: 680px;
+    margin: 60px 0 0 30px;
+    opacity: 0;
+    background: url(/static/brain/img/back-star-cloud.png) no-repeat center center;
+    -webkit-animation: back-star-cloud 1s linear 0s 1 normal forwards;
+       -moz-animation: back-star-cloud 1s linear 0s 1 normal forwards;
+            animation: back-star-cloud 1s linear 0s 1 normal forwards;
+}
+
+#brain-home #content {
+    width: 1200px;
+    height: 680px;
+    position: relative;
+    margin: auto;
+}
+
+@keyframes brain {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+@-moz-keyframes brain {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+@-webkit-keyframes brain {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+#brain-home #content #main-brain {
+    position: absolute;
+    width: 538px;
+    height: 681px;
+    left: 331px;
+    top: 30px;
+    background: url(/static/brain/img/home/brain.png) no-repeat center center / 100% 100%;
+    -webkit-animation: brain 1s linear 0s 1 normal forwards;
+       -moz-animation: brain 1s linear 0s 1 normal forwards;
+            animation: brain 1s linear 0s 1 normal forwards;
+    transform-origin: 310px 290px;
+}
+
+#brain-home #content #baidu-brain {
+    position: absolute;
+    width: 335px;
+    height: 168px;
+    left: 415px;
+    top: 165px;
+    background: url(/static/brain/img/home/baidu-brain.png) no-repeat center center / 100% 100%;
+    -webkit-animation: brain 1s linear 0s 1 normal forwards;
+       -moz-animation: brain 1s linear 0s 1 normal forwards;
+            animation: brain 1s linear 0s 1 normal forwards;
+    transform-origin: 230px 150px;
+}
+
+@keyframes flash-points {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes flash-points {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes flash-points {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#brain-home #content #flash-points {
+    position: absolute;
+    width: 538px;
+    height: 681px;
+    left: 331px;
+    top: 30px;
+    opacity: 0;
+    background: url(/static/brain/img/home/flash-point.png) 235px 40px no-repeat, url(/static/brain/img/home/flash-point.png) 395px 90px no-repeat, url(/static/brain/img/home/flash-point.png) 36px 208px no-repeat,url(/static/brain/img/home/flash-point.png) 105px 395px no-repeat,url(/static/brain/img/home/flash-point.png) 230px 250px no-repeat,url(/static/brain/img/home/flash-point.png) 396px 288px no-repeat,url(/static/brain/img/home/flash-point.png) 474px 368px no-repeat,url(/static/brain/img/home/flash-point.png) 448px 422px no-repeat;
+    -webkit-animation: flash-points 1s linear 1s 1 normal forwards;
+       -moz-animation: flash-points 1s linear 1s 1 normal forwards;
+            animation: flash-points 1s linear 1s 1 normal forwards;
+}
+
+@keyframes word-bd {
+    from {
+        top: 140px;
+        opacity: 0;
+    }
+    to {
+        top: 130px;
+        opacity: 1;
+    }
+}
+@-moz-keyframes word-bd {
+    from {
+        top: 140px;
+        opacity: 0;
+    }
+    to {
+        top: 130px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes word-bd {
+    from {
+        top: 140px;
+        opacity: 0;
+    }
+    to {
+        top: 130px;
+        opacity: 1;
+    }
+}
+#brain-home #content #word-bd {
+    position: absolute;
+    width: 257px;
+    height: 60px;
+    left: 255px;
+    top: 130px;
+    color: #fff;
+    font-size: 26px;
+    opacity: 0;
+    background: url(/static/brain/img/home/bd-line.png) 0 25px no-repeat;
+    padding: 0 0 0 30px;
+    -webkit-animation: word-bd 1s linear 1s 1 normal forwards;
+       -moz-animation: word-bd 1s linear 1s 1 normal forwards;
+            animation: word-bd 1s linear 1s 1 normal forwards;
+}
+
+@keyframes word-ml {
+    from {
+        opacity: 0;
+        top: 240px;
+    }
+    to {
+        opacity: 1;
+        top: 230px;
+    }
+}
+@-moz-keyframes word-ml {
+    from {
+        opacity: 0;
+        top: 240px;
+    }
+    to {
+        opacity: 1;
+        top: 230px;
+    }
+}
+@-webkit-keyframes word-ml {
+    from {
+        opacity: 0;
+        top: 240px;
+    }
+    to {
+        opacity: 1;
+        top: 230px;
+    }
+}
+#brain-home #content #word-ml {
+    position: absolute;
+    width: 307px;
+    height: 60px;
+    left: 200px;
+    top: 230px;
+    color: #fff;
+    opacity: 0;
+    font-size: 30px;
+    background: url(/static/brain/img/home/ml-line.png) 0 25px no-repeat;
+    padding: 0 0 0 30px;
+    -webkit-animation: word-ml 1s linear 1s 1 normal forwards;
+       -moz-animation: word-ml 1s linear 1s 1 normal forwards;
+            animation: word-ml 1s linear 1s 1 normal forwards;
+}
+
+@keyframes word-vic {
+    from {
+        opacity: 0;
+        top: 345px;
+    }
+    to {
+        opacity: 1;
+        top: 335px;
+    }
+}
+@-moz-keyframes word-vic {
+    from {
+        opacity: 0;
+        top: 345px;
+    }
+    to {
+        opacity: 1;
+        top: 335px;
+    }
+}
+@-webkit-keyframes word-vic {
+    from {
+        opacity: 0;
+        top: 345px;
+    }
+    to {
+        opacity: 1;
+        top: 335px;
+    }
+}
+#brain-home #content #word-vic {
+    position: absolute;
+    width: 367px;
+    height: 60px;
+    left: 225px;
+    top: 335px;
+    color: #fff;
+    opacity: 0;
+    font-size: 26px;
+    background: url(/static/brain/img/home/voice-recognize-line.png) 0 25px no-repeat;
+    padding: 0 0 0 30px;
+    -webkit-animation: word-vic 1s linear 1s 1 normal forwards;
+       -moz-animation: word-vic 1s linear 1s 1 normal forwards;
+            animation: word-vic 1s linear 1s 1 normal forwards;
+}
+
+@keyframes word-up {
+    from {
+        opacity: 0;
+        top: 160px;
+    }
+    to {
+        opacity: 1;
+        top: 150px;
+    }
+}
+@-moz-keyframes word-up {
+    from {
+        opacity: 0;
+        top: 160px;
+    }
+    to {
+        opacity: 1;
+        top: 150px;
+    }
+}
+@-webkit-keyframes word-up {
+    from {
+        opacity: 0;
+        top: 160px;
+    }
+    to {
+        opacity: 1;
+        top: 150px;
+    }
+}
+#brain-home #content #word-up {
+    position: absolute;
+    width: 286px;
+    height: 60px;
+    left: 700px;
+    top: 150px;
+    color: #fff;
+    opacity: 0;
+    font-size: 26px;
+    background: url(/static/brain/img/home/voice-compound-line.png) 0 25px no-repeat;
+    padding: 0 0 0 90px;
+    -webkit-animation: word-up 1s linear 1s 1 normal forwards;
+       -moz-animation: word-up 1s linear 1s 1 normal forwards;
+            animation: word-up 1s linear 1s 1 normal forwards;
+}
+@keyframes word-pic {
+    from {
+        opacity: 0;
+        top: 280px;
+    }
+    to {
+        opacity: 1;
+        top: 270px;
+    }
+}
+@-moz-keyframes word-pic {
+    from {
+        opacity: 0;
+        top: 280px;
+    }
+    to {
+        opacity: 1;
+        top: 270px;
+    }
+}
+@-webkit-keyframes word-pic {
+    from {
+        opacity: 0;
+        top: 280px;
+    }
+    to {
+        opacity: 1;
+        top: 270px;
+    }
+}
+#brain-home #content #word-pic {
+    position: absolute;
+    width: 286px;
+    height: 60px;
+    left: 795px;
+    top: 270px;
+    color: #fff;
+    opacity: 0;
+    font-size: 26px;
+    background: url(/static/brain/img/home/pic-recognize-line.png) 0 25px no-repeat;
+    padding: 0 0 0 136px;
+    -webkit-animation: word-pic 1s linear 1s 1 normal forwards;
+       -moz-animation: word-pic 1s linear 1s 1 normal forwards;
+            animation: word-pic 1s linear 1s 1 normal forwards;
+}
+
+@keyframes word-vicc {
+    from {
+        opacity: 0;
+        top: 430px;
+    }
+    to {
+        opacity: 1;
+        top: 420px;
+    }
+}
+@-moz-keyframes word-vicc {
+    from {
+        opacity: 0;
+        top: 430px;
+    }
+    to {
+        opacity: 1;
+        top: 420px;
+    }
+}
+@-webkit-keyframes word-vicc {
+    from {
+        opacity: 0;
+        top: 430px;
+    }
+    to {
+        opacity: 1;
+        top: 420px;
+    }
+}
+#brain-home #content #word-vicc {
+    position: absolute;
+    width: 286px;
+    height: 60px;
+    left: 820px;
+    top: 420px;
+    color: #fff;
+    opacity: 0;
+    font-size: 26px;
+    background: url(/static/brain/img/home/voice-compound-line.png) 0 25px no-repeat;
+    padding: 0 0 0 90px;
+    -webkit-animation: word-vicc 1s linear 1s 1 normal forwards;
+       -moz-animation: word-vicc 1s linear 1s 1 normal forwards;
+            animation: word-vicc 1s linear 1s 1 normal forwards;
+}
+
+@keyframes word-back-one {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .2;
+    }
+}
+@-moz-keyframes word-back-one {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .2;
+    }
+}
+@-webkit-keyframes word-back-one {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .2;
+    }
+}
+@keyframes word-back-two {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .4;
+    }
+}
+@-moz-keyframes word-back-two {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .4;
+    }
+}
+@-webkit-keyframes word-back-two {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .4;
+    }
+}
+#brain-home #content #user-action {
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    left: 180px;
+    top: 90px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    opacity: 0;
+    -webkit-animation: word-back-one 1s linear 1s 1 normal forwards;
+       -moz-animation: word-back-one 1s linear 1s 1 normal forwards;
+            animation: word-back-one 1s linear 1s 1 normal forwards;
+}
+#brain-home #content #knowledge-graph {
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    left: 70px;
+    top: 170px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    opacity: 0;
+    -webkit-animation: word-back-one 1s linear 1s 1 normal forwards;
+       -moz-animation: word-back-one 1s linear 1s 1 normal forwards;
+            animation: word-back-one 1s linear 1s 1 normal forwards;
+}
+
+
+#brain-home #content #face-location {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    left: 120px;
+    top: 320px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    opacity: 0;
+    -webkit-animation: word-back-one 1s linear 1s 1 normal forwards;
+       -moz-animation: word-back-one 1s linear 1s 1 normal forwards;
+            animation: word-back-one 1s linear 1s 1 normal forwards;
+}
+
+#brain-home #content #remote-recognize {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    left: 260px;
+    top: 460px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    opacity: 0;
+    -webkit-animation: word-back-two 1s linear 1s 1 normal forwards;
+       -moz-animation: word-back-two 1s linear 1s 1 normal forwards;
+            animation: word-back-two 1s linear 1s 1 normal forwards;
+}
+
+#brain-home #content #vehicle-recognize {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    left: 210px;
+    top: 550px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    opacity: 0;
+    -webkit-animation: word-back-two 1s linear 1s 1 normal forwards;
+       -moz-animation: word-back-two 1s linear 1s 1 normal forwards;
+            animation: word-back-two 1s linear 1s 1 normal forwards;
+}
+
+#brain-home #content #user-profile {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    left: 880px;
+    top: 100px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    opacity: 0;
+    -webkit-animation: word-back-one 1s linear 1s 1 normal forwards;
+       -moz-animation: word-back-one 1s linear 1s 1 normal forwards;
+            animation: word-back-one 1s linear 1s 1 normal forwards;
+}
+
+#brain-home #content #ar {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    left: 1000px;
+    top: 210px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    opacity: 0;
+    -webkit-animation: word-back-one 1s linear 1s 1 normal forwards;
+       -moz-animation: word-back-one 1s linear 1s 1 normal forwards;
+            animation: word-back-one 1s linear 1s 1 normal forwards;
+}
+
+#brain-home #content #brand-recognize {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    left: 1040px;
+    top: 360px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    opacity: 0;
+    -webkit-animation: word-back-two 1s linear 1s 1 normal forwards;
+       -moz-animation: word-back-two 1s linear 1s 1 normal forwards;
+            animation: word-back-two 1s linear 1s 1 normal forwards;
+}
+
+#brain-home #content #natural-mosaic {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    left: 930px;
+    top: 550px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    opacity: 0;
+    -webkit-animation: word-back-two 1s linear 1s 1 normal forwards;
+       -moz-animation: word-back-two 1s linear 1s 1 normal forwards;
+            animation: word-back-two 1s linear 1s 1 normal forwards;
+}
+
+@keyframes triangle {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes triangle {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes triangle {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#brain-home #content #triangle {
+    position: absolute;
+    width: 1500px;
+    height: 700px;
+    left: -150px;
+    top: 40px;
+    background: url(/static/brain/img/home/triangle-one.png) 0 320px no-repeat, url(/static/brain/img/home/triangle-two.png) 1350px 270px no-repeat, url(/static/brain/img/home/triangle-three.png) 60px 90px no-repeat, url(/static/brain/img/home/triangle-four.png) 180px 560px no-repeat, url(/static/brain/img/home/triangle-five.png) 1300px 90px no-repeat;
+    -webkit-animation: triangle 2s linear 0s 1 normal forwards;
+       -moz-animation: triangle 2s linear 0s 1 normal forwards;
+            animation: triangle 2s linear 0s 1 normal forwards;
+}
+
+/* group machine learning */
+#brain-ml {
+    position: relative;
+    width: 1280px;
+    min-width: 1280px;
+    height: 576px;
+    min-height: 576px;
+    margin: auto;
+    display: none;
+
+    margin: auto;
+    display: none;
+}
+
+#brain-ml .pic {
+    position: relative;
+    width: 900px;
+    height: 460px;
+    margin: auto;
+}
+
+@keyframes ml-center-triangle {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes ml-center-triangle {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes ml-center-triangle {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes ml-center-triangle {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#brain-ml .pic #ml-center-triangle {
+    position: absolute;
+    background: url(/static/brain/img/ml/ml-center-triangle.png) no-repeat center center / 100% 100%;
+    transform-origin: 260px 225px;
+    display: inline-block;
+    left: 180px;
+    top: 140px;
+    -webkit-animation: ml-center-triangle 1s linear 0s 1 normal forwards;
+       -moz-animation: ml-center-triangle 1s linear 0s 1 normal forwards;
+            animation: ml-center-triangle 1s linear 0s 1 normal forwards;
+    transform-origin: 100px 135px;
+    width: 226px;
+    height: 242px;
+}
+
+@keyframes ml-cluster {
+    from {
+        opacity: 0;
+        top: 175px;
+        left: 310px;
+    }
+    to {
+        opacity: 1;
+        top: 165px;
+        left: 388px;
+    }
+}
+@-moz-keyframes ml-cluster {
+    from {
+        opacity: 0;
+        top: 175px;
+        left: 310px;
+    }
+    to {
+        opacity: 1;
+        top: 165px;
+        left: 388px;
+    }
+}
+@-webkit-keyframes ml-cluster {
+    from {
+        opacity: 0;
+        top: 175px;
+        left: 310px;
+    }
+    to {
+        opacity: 1;
+        top: 165px;
+        left: 388px;
+    }
+}
+@-o-keyframes ml-cluster {
+    from {
+        opacity: 0;
+        top: 175px;
+        left: 310px;
+    }
+    to {
+        opacity: 1;
+        top: 165px;
+        left: 388px;
+    }
+}
+#brain-ml .pic #ml-cluster {
+    position: absolute;
+    background: url(/static/brain/img/ml/ml-cluster.png) no-repeat center center;
+    width: 155px;
+    height: 127px;
+    left: 388px;
+    top: 165px;
+    opacity: 0;
+    -webkit-animation: ml-cluster .5s linear 1s 1 normal forwards;
+       -moz-animation: ml-cluster .5s linear 1s 1 normal forwards;
+            animation: ml-cluster .5s linear 1s 1 normal forwards;
+}
+@keyframes ml-category {
+    from {
+        opacity: 0;
+        left: 190px;
+        top: 120px;
+    }
+    to {
+        opacity: 1;
+        left: 140px;
+        top: 60px;
+    }
+}
+@-moz-keyframes ml-category {
+    from {
+        opacity: 0;
+        left: 190px;
+        top: 120px;
+    }
+    to {
+        opacity: 1;
+        left: 140px;
+        top: 60px;
+    }
+}
+@-webkit-keyframes ml-category {
+    from {
+        opacity: 0;
+        left: 190px;
+        top: 120px;
+    }
+    to {
+        opacity: 1;
+        left: 140px;
+        top: 60px;
+    }
+}
+@-o-keyframes ml-category {
+    from {
+        opacity: 0;
+        left: 190px;
+        top: 120px;
+    }
+    to {
+        opacity: 1;
+        left: 140px;
+        top: 60px;
+    }
+}
+#brain-ml .pic #ml-category {
+    position: absolute;
+    background: url(/static/brain/img/ml/ml-category.png) no-repeat center center;
+    width: 140px;
+    height: 157px;
+    left: 140px;
+    top: 60px;
+    opacity: 0;
+    -webkit-animation: ml-category .5s linear 1s 1 normal forwards;
+       -moz-animation: ml-category .5s linear 1s 1 normal forwards;
+            animation: ml-category .5s linear 1s 1 normal forwards;
+}
+
+@keyframes ml-regression {
+    from {
+        opacity: 0;
+        left: 182px;
+        top: 280px;
+    }
+    to {
+        opacity: 1;
+        left: 162px;
+        top: 330px;
+    }
+}
+@-moz-keyframes ml-regression {
+    from {
+        opacity: 0;
+        left: 182px;
+        top: 280px;
+    }
+    to {
+        opacity: 1;
+        left: 162px;
+        top: 330px;
+    }
+}
+@-webkit-keyframes ml-regression {
+    from {
+        opacity: 0;
+        left: 182px;
+        top: 280px;
+    }
+    to {
+        opacity: 1;
+        left: 162px;
+        top: 330px;
+    }
+}
+@-o-keyframes ml-regression {
+    from {
+        opacity: 0;
+        left: 182px;
+        top: 280px;
+    }
+    to {
+        opacity: 1;
+        left: 162px;
+        top: 330px;
+    }
+}
+#brain-ml .pic #ml-regression {
+    position: absolute;
+    background: url(/static/brain/img/ml/ml-regression.png) no-repeat center center;
+    width: 126px;
+    height: 159px;
+    left: 162px;
+    top: 330px;
+    opacity: 0;
+    -webkit-animation: ml-regression .5s linear 1s 1 normal forwards;
+       -moz-animation: ml-regression .5s linear 1s 1 normal forwards;
+            animation: ml-regression .5s linear 1s 1 normal forwards;
+}
+
+@keyframes ml-triangle-one {
+    from {
+        opacity: 0;
+        left: 380px;
+        top: 358px;
+    }
+    to {
+        opacity: 1;
+        left: 410px;
+        top: 388px;
+    }
+}
+@-moz-keyframes ml-triangle-one {
+    from {
+        opacity: 0;
+        left: 380px;
+        top: 358px;
+    }
+    to {
+        opacity: 1;
+        left: 410px;
+        top: 388px;
+    }
+}
+@-webkit-keyframes ml-triangle-one {
+    from {
+        opacity: 0;
+        left: 380px;
+        top: 358px;
+    }
+    to {
+        opacity: 1;
+        left: 410px;
+        top: 388px;
+    }
+}
+@-o-keyframes ml-triangle-one {
+    from {
+        opacity: 0;
+        left: 380px;
+        top: 358px;
+    }
+    to {
+        opacity: 1;
+        left: 410px;
+        top: 388px;
+    }
+}
+#brain-ml .pic #ml-triangle-one {
+    position: absolute;
+    background: url(/static/brain/img/ml/ml-triangle-one.png) no-repeat center center;
+    width: 106px;
+    height: 113px;
+    left: 410px;
+    top: 388px;
+    opacity: 0;
+    -webkit-animation: ml-triangle-one 1s linear 1s 1 normal forwards;
+       -moz-animation: ml-triangle-one 1s linear 1s 1 normal forwards;
+            animation: ml-triangle-one 1s linear 1s 1 normal forwards;
+}
+
+@keyframes ml-triangle-two {
+    from {
+        opacity: 0;
+        left: 92px;
+        top: 258px;
+    }
+    to {
+        opacity: 1;
+        left: 52px;
+        top: 268px;
+    }
+}
+@-moz-keyframes ml-triangle-two {
+    from {
+        opacity: 0;
+        left: 92px;
+        top: 258px;
+    }
+    to {
+        opacity: 1;
+        left: 52px;
+        top: 268px;
+    }
+}
+@-webkit-keyframes ml-triangle-two {
+    from {
+        opacity: 0;
+        left: 92px;
+        top: 258px;
+    }
+    to {
+        opacity: 1;
+        left: 52px;
+        top: 268px;
+    }
+}
+@-o-keyframes ml-triangle-two {
+    from {
+        opacity: 0;
+        left: 92px;
+        top: 258px;
+    }
+    to {
+        opacity: 1;
+        left: 52px;
+        top: 268px;
+    }
+}
+#brain-ml .pic #ml-triangle-two {
+    position: absolute;
+    background: url(/static/brain/img/ml/ml-triangle-two.png) no-repeat center center;
+    width: 117px;
+    height: 86px;
+    left: 52px;
+    top: 268px;
+    opacity: 0;
+    -webkit-animation: ml-triangle-two 1s linear 1s 1 normal forwards;
+       -moz-animation: ml-triangle-two 1s linear 1s 1 normal forwards;
+            animation: ml-triangle-two 1s linear 1s 1 normal forwards;
+}
+
+@keyframes ml-triangle-three {
+    from {
+        opacity: 0;
+        left: 358px;
+        top: 48px;
+    }
+    to {
+        opacity: 1;
+        left: 378px;
+        top: 8px;
+    }
+}
+@-moz-keyframes ml-triangle-three {
+    from {
+        opacity: 0;
+        left: 358px;
+        top: 48px;
+    }
+    to {
+        opacity: 1;
+        left: 378px;
+        top: 8px;
+    }
+}
+@-webkit-keyframes ml-triangle-three {
+    from {
+        opacity: 0;
+        left: 358px;
+        top: 48px;
+    }
+    to {
+        opacity: 1;
+        left: 378px;
+        top: 8px;
+    }
+}
+@-o-keyframes ml-triangle-three {
+    from {
+        opacity: 0;
+        left: 358px;
+        top: 48px;
+    }
+    to {
+        opacity: 1;
+        left: 378px;
+        top: 8px;
+    }
+}
+#brain-ml .pic #ml-triangle-three {
+    position: absolute;
+    background: url(/static/brain/img/ml/ml-triangle-three.png) no-repeat center center;
+    width: 87px;
+    height: 121px;
+    left: 378px;
+    top: 8px;
+    opacity: 0;
+    -webkit-animation: ml-triangle-three 1s linear 1s 1 normal forwards;
+       -moz-animation: ml-triangle-three 1s linear 1s 1 normal forwards;
+            animation: ml-triangle-three 1s linear 1s 1 normal forwards;
+}
+
+@keyframes back-line {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: .125;
+    }
+    50% {
+        opacity: .25;
+    }
+    75% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes back-line {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: .125;
+    }
+    50% {
+        opacity: .25;
+    }
+    75% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes back-line {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: .125;
+    }
+    50% {
+        opacity: .25;
+    }
+    75% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes back-line {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: .125;
+    }
+    50% {
+        opacity: .25;
+    }
+    75% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#brain-ml .pic #ml-thin-line {
+    position: absolute;
+    background: url(/static/brain/img/ml/ml-thin-line.png) no-repeat center center;
+    width: 357px;
+    height: 388px;
+    left: 120px;
+    top: 60px;
+    opacity: 0;
+    -webkit-animation: back-line 2s linear 0s 1 normal forwards;
+       -moz-animation: back-line 2s linear 0s 1 normal forwards;
+            animation: back-line 2s linear 0s 1 normal forwards;
+}
+#brain-ml .pic #ml-back-line {
+    position: absolute;
+    background: url(/static/brain/img/ml/ml-back-line.png) no-repeat center center;
+    width: 1230px;
+    height: 784px;
+    left: -295px;
+    top: -125px;
+    opacity: 0;
+    -webkit-animation: back-line 2s linear 0s 1 normal forwards;
+       -moz-animation: back-line 2s linear 0s 1 normal forwards;
+            animation: back-line 2s linear 0s 1 normal forwards;
+}
+
+#brain-ml .text {
+    position: absolute;
+    width: 440px;
+    height: 230px;
+    top: 90px;
+    opacity: 0;
+    display: inline-block;
+    -webkit-animation: text-fly 1s linear 1s 1 normal forwards;
+       -moz-animation: text-fly 1s linear 1s 1 normal forwards;
+            animation: text-fly 1s linear 1s 1 normal forwards;
+}
+
+/* group bigdata */
+#brain-bd {
+    position: relative;
+    width: 1280px;
+    min-width: 1280px;
+    height: 576px;
+    min-height: 576px;
+    margin: auto;
+    display: none;
+}
+#brain-bd .pic {
+    position: relative;
+    width: 900px;
+    height: 460px;
+    margin: auto;
+}
+
+@keyframes brain-bd-pic {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+@-moz-keyframes brain-bd-pic {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+@-webkit-keyframes brain-bd-pic {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+@-o-keyframes brain-bd-pic {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+#brain-bd .pic #bd-star-cloud {
+    display: inline-block;
+    position: absolute;
+    left: -140px;
+    top: 140px;
+    background: url(/static/brain/img/bigdata/bd-star-cloud.png) no-repeat center center / 100% 100%;
+    -webkit-animation: brain-bd-pic 1s linear 0s 1 normal forwards;
+       -moz-animation: brain-bd-pic 1s linear 0s 1 normal forwards;
+            animation: brain-bd-pic 1s linear 0s 1 normal forwards;
+    transform-origin: 432px 189px;
+    width: 900px;
+    height: 480px;
+    opacity: 1;
+}
+
+@keyframes brain-bd-float-shop {
+    from {
+        top: 85px;
+        opacity: 0;
+    }
+    to {
+        top: 55px;
+        opacity: 1;
+    }
+}
+@-moz-keyframes brain-bd-float-shop {
+    from {
+        top: 85px;
+        opacity: 0;
+    }
+    to {
+        top: 55px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes brain-bd-float-shop {
+    from {
+        top: 85px;
+        opacity: 0;
+    }
+    to {
+        top: 55px;
+        opacity: 1;
+    }
+}
+@-o-keyframes brain-bd-float-shop {
+    from {
+        top: 85px;
+        opacity: 0;
+    }
+    to {
+        top: 55px;
+        opacity: 1;
+    }
+}
+#brain-bd .pic #bd-shop {
+    display: inline-block;
+    left: 315px;
+    top: 100px;
+    width: 102px;
+    height: 221px;
+    opacity: 0;
+    position: absolute;
+    background: url(/static/brain/img/bigdata/bd-shop.png) no-repeat center center;
+    -webkit-animation: brain-bd-float-shop 1s linear .5s 1 normal forwards;
+       -moz-animation: brain-bd-float-shop 1s linear .5s 1 normal forwards;
+            animation: brain-bd-float-shop 1s linear .5s 1 normal forwards;
+}
+
+@keyframes brain-bd-float-global {
+    from {
+        top: 70px;
+        opacity: 0;
+    }
+    to {
+        top: 40px;
+        opacity: 1;
+    }
+}
+@-moz-keyframes brain-bd-float-global {
+    from {
+        top: 70px;
+        opacity: 0;
+    }
+    to {
+        top: 40px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes brain-bd-float-global {
+    from {
+        top: 70px;
+        opacity: 0;
+    }
+    to {
+        top: 40px;
+        opacity: 1;
+    }
+}
+@-o-keyframes brain-bd-float-global {
+    from {
+        top: 70px;
+        opacity: 0;
+    }
+    to {
+        top: 40px;
+        opacity: 1;
+    }
+}
+#brain-bd .pic #bd-global {
+    left: 165px;
+    top: 90px;
+    width: 91px;
+    height: 254px;
+    opacity: 0;
+    position: absolute;
+    background: url(/static/brain/img/bigdata/bd-global.png) no-repeat center center;
+    -webkit-animation: brain-bd-float-global 1s linear .5s 1 normal forwards;
+       -moz-animation: brain-bd-float-global 1s linear .5s 1 normal forwards;
+            animation: brain-bd-float-global 1s linear .5s 1 normal forwards;
+}
+
+@keyframes brain-bd-float-search {
+    from {
+        top: 180px;
+        opacity: 0;
+    }
+    to {
+        top: 150px;
+        opacity: 1;
+    }
+}
+@-moz-keyframes brain-bd-float-search {
+    from {
+        top: 180px;
+        opacity: 0;
+    }
+    to {
+        top: 150px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes brain-bd-float-search {
+    from {
+        top: 180px;
+        opacity: 0;
+    }
+    to {
+        top: 150px;
+        opacity: 1;
+    }
+}
+@-o-keyframes brain-bd-float-search {
+    from {
+        top: 180px;
+        opacity: 0;
+    }
+    to {
+        top: 150px;
+        opacity: 1;
+    }
+}
+#brain-bd .pic #bd-search {
+    left: 490px;
+    top: 150px;
+    width: 91px;
+    height: 170px;
+    opacity: 0;
+    position: absolute;
+    background: url(/static/brain/img/bigdata/bd-search.png) no-repeat center center;
+    -webkit-animation: brain-bd-float-search 1s linear 1s 1 normal forwards;
+       -moz-animation: brain-bd-float-search 1s linear 1s 1 normal forwards;
+            animation: brain-bd-float-search 1s linear 1s 1 normal forwards;
+}
+
+@keyframes brain-bd-float-wifi {
+    from {
+        top: 185px;
+        opacity: 0;
+    }
+    to {
+        top: 155px;
+        opacity: 1;
+    }
+}
+@-moz-keyframes brain-bd-float-wifi {
+    from {
+        top: 185px;
+        opacity: 0;
+    }
+    to {
+        top: 155px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes brain-bd-float-wifi {
+    from {
+        top: 185px;
+        opacity: 0;
+    }
+    to {
+        top: 155px;
+        opacity: 1;
+    }
+}
+@-o-keyframes brain-bd-float-wifi {
+    from {
+        top: 185px;
+        opacity: 0;
+    }
+    to {
+        top: 155px;
+        opacity: 1;
+    }
+}
+#brain-bd .pic #bd-wifi {
+    left: 18px;
+    top: 185px;
+    width: 91px;
+    height: 193px;
+    opacity: 0;
+    position: absolute;
+    background: url(/static/brain/img/bigdata/bd-wifi.png) no-repeat center center;
+    -webkit-animation: brain-bd-float-wifi 1s linear 1s 1 normal forwards;
+       -moz-animation: brain-bd-float-wifi 1s linear 1s 1 normal forwards;
+            animation: brain-bd-float-wifi 1s linear 1s 1 normal forwards;
+}
+
+@keyframes brain-bd-float-prefer {
+    from {
+        top: 205px;
+        opacity: 0;
+    }
+    to {
+        top: 175px;
+        opacity: 1;
+    }
+}
+@-moz-keyframes brain-bd-float-prefer {
+    from {
+        top: 205px;
+        opacity: 0;
+    }
+    to {
+        top: 175px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes brain-bd-float-prefer {
+    from {
+        top: 205px;
+        opacity: 0;
+    }
+    to {
+        top: 175px;
+        opacity: 1;
+    }
+}
+@keyframes brain-bd-float-identity {
+    from {
+        top: 190px;
+        opacity: 0;
+    }
+    to {
+        top: 160px;
+        opacity: 1;
+    }
+}
+@-moz-keyframes brain-bd-float-identity {
+    from {
+        top: 190px;
+        opacity: 0;
+    }
+    to {
+        top: 160px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes brain-bd-float-identity {
+    from {
+        top: 190px;
+        opacity: 0;
+    }
+    to {
+        top: 160px;
+        opacity: 1;
+    }
+}
+@keyframes brain-bd-float-location {
+    from {
+        top: 235px;
+        opacity: 0;
+    }
+    to {
+        top: 205px;
+        opacity: 1;
+    }
+}
+@-moz-keyframes brain-bd-float-location {
+    from {
+        top: 235px;
+        opacity: 0;
+    }
+    to {
+        top: 205px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes brain-bd-float-location {
+    from {
+        top: 235px;
+        opacity: 0;
+    }
+    to {
+        top: 205px;
+        opacity: 1;
+    }
+}
+#brain-bd .pic #bd-prefer {
+    left: 400px;
+    top: 205px;
+    width: 64px;
+    height: 157px;
+    opacity: 0;
+    position: absolute;
+    background: url(/static/brain/img/bigdata/bd-prefer.png) no-repeat center center;
+    -webkit-animation: brain-bd-float-prefer 1s linear 1.5s 1 normal forwards;
+       -moz-animation: brain-bd-float-prefer 1s linear 1.5s 1 normal forwards;
+            animation: brain-bd-float-prefer 1s linear 1.5s 1 normal forwards;
+}
+
+#brain-bd .pic #bd-identity {
+    left: 245px;
+    top: 190px;
+    width: 64px;
+    height: 147px;
+    opacity: 0;
+    position: absolute;
+    background: url(/static/brain/img/bigdata/bd-identity.png) no-repeat center center;
+    -webkit-animation: brain-bd-float-identity 1s linear 1.5s 1 normal forwards;
+       -moz-animation: brain-bd-float-identity 1s linear 1.5s 1 normal forwards;
+            animation: brain-bd-float-identity 1s linear 1.5s 1 normal forwards;
+}
+
+#brain-bd .pic #bd-location {
+    left: 120px;
+    top: 235px;
+    width: 66px;
+    height: 127px;
+    opacity: 0;
+    position: absolute;
+    background: url(/static/brain/img/bigdata/bd-location.png) no-repeat center center;
+    -webkit-animation: brain-bd-float-location 1s linear 1.5s 1 normal forwards;
+       -moz-animation: brain-bd-float-location 1s linear 1.5s 1 normal forwards;
+            animation: brain-bd-float-location 1s linear 1.5s 1 normal forwards;
+}
+
+@keyframes brain-bd-float-triangle {
+    from {
+        opacity: 0;
+        top: 70px;
+    }
+    to {
+        opacity: 1;
+        top: 60px;
+    }
+}
+@-moz-keyframes brain-bd-float-triangle {
+    from {
+        opacity: 0;
+        top: 70px;
+    }
+    to {
+        opacity: 1;
+        top: 60px;
+    }
+}
+@-webkit-keyframes brain-bd-float-triangle {
+    from {
+        opacity: 0;
+        top: 70px;
+    }
+    to {
+        opacity: 1;
+        top: 60px;
+    }
+}
+#brain-bd .pic #bd-triangle {
+    left: 0;
+    top: 60px;
+    width: 635px;
+    height: 175px;
+    opacity: 0;
+    position: absolute;
+    background: url(/static/brain/img/bigdata/bd-triangle.png) no-repeat center center;
+    -webkit-animation: brain-bd-float-triangle 1s linear 2s 1 normal forwards;
+       -moz-animation: brain-bd-float-triangle 1s linear 2s 1 normal forwards;
+            animation: brain-bd-float-triangle 1s linear 2s 1 normal forwards;
+
+
+}
+
+#brain-bd .text {
+    position: absolute;
+    width: 440px;
+    height: 230px;
+    top: 90px;
+    opacity: 0;
+    display: inline-block;
+    -webkit-animation: text-fly 1s linear 1s 1 normal forwards;
+       -moz-animation: text-fly 1s linear 1s 1 normal forwards;
+            animation: text-fly 1s linear 1s 1 normal forwards;
+}
+
+/* @group ocr */
+#brain-ocr {
+    position: relative;
+    width: 1280px;
+    min-width: 1280px;
+    height: 576px;
+    min-height: 576px;
+    margin: auto;
+    display: none;
+}
+
+@keyframes brain-ocr-pic {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: .25;
+    }
+    50% {
+        opacity: .5;
+    }
+    75% {
+        opacity: .75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes brain-ocr-pic {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: .25;
+    }
+    50% {
+        opacity: .5;
+    }
+    75% {
+        opacity: .75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes brain-ocr-pic {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: .25;
+    }
+    50% {
+        opacity: .5;
+    }
+    75% {
+        opacity: .75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#brain-ocr .pic {
+    width: 900px;
+    height: 460px;
+    position: relative;
+    margin: auto;
+    -webkit-animation: brain-ocr-pic 1s linear 0s 1 normal forwards;
+       -moz-animation: brain-ocr-pic 1s linear 0s 1 normal forwards;
+            animation: brain-ocr-pic 1s linear 0s 1 normal forwards;
+}
+
+#brain-ocr .pic #ocr-line {
+    position: relative;
+    width: 1090px;
+    height: 112px;
+    left: -300px;
+    top: 174px;
+    opacity: .3;
+    background: url(/static/brain/img/ocr/ocr-line.png) no-repeat center center;
+}
+#brain-ocr .text {
+    position: absolute;
+    width: 440px;
+    height: 230px;
+    top: 90px;
+    opacity: 0;
+    display: inline-block;
+    -webkit-animation: text-fly 1s linear 1s 1 normal forwards;
+       -moz-animation: text-fly 1s linear 1s 1 normal forwards;
+            animation: text-fly 1s linear 1s 1 normal forwards;
+}
+
+.pic #ocr-1 {
+    position: absolute;
+    left: 174px;
+    width: 268px;
+    height: 368px;
+    top: 60px;
+    background: url(/static/brain/img/ocr/ocr-1.png) no-repeat center center;
+}
+
+@keyframes brain-ocr-2 {
+    from {
+        left: 174px;
+    }
+    to {
+        left: 294px;
+    }
+}
+@-moz-keyframes brain-ocr-2 {
+    from {
+        left: 174px;
+    }
+    to {
+        left: 294px;
+    }
+}
+@-webkit-keyframes brain-ocr-2 {
+    from {
+        left: 174px;
+    }
+    to {
+        left: 294px;
+    }
+}
+.pic #ocr-2 {
+    position: absolute;
+    width: 268px;
+    height: 368px;
+    left: 174px;
+    top: 60px;
+    background: url(/static/brain/img/ocr/ocr-2.png) no-repeat center center;
+    -webkit-animation: brain-ocr-2 1s linear 0s 1 normal forwards;
+       -moz-animation: brain-ocr-2 1s linear 0s 1 normal forwards;
+            animation: brain-ocr-2 1s linear 0s 1 normal forwards;
+}
+
+@keyframes brain-ocr-3 {
+    from {
+        left: 174px;
+    }
+    to {
+        left: 54px;
+    }
+
+}
+@-moz-keyframes brain-ocr-3 {
+    from {
+        left: 174px;
+    }
+    to {
+        left: 54px;
+    }
+}
+@-webkit-keyframes brain-ocr-3 {
+    from {
+        left: 174px;
+    }
+    to {
+        left: 54px;
+    }
+}
+.pic #ocr-3 {
+    width: 268px;
+    height: 368px;
+    position: absolute;
+    left: 174px;
+    top: 60px;
+    background: url(/static/brain/img/ocr/ocr-3.png) no-repeat center center;
+    -webkit-animation: brain-ocr-3 1s linear 0s 1 normal forwards;
+       -moz-animation: brain-ocr-3 1s linear 0s 1 normal forwards;
+            animation: brain-ocr-3 1s linear 0s 1 normal forwards;
+}
+
+@keyframes brain-ocr-4 {
+    from {
+        left: 174px;
+    }
+    to {
+        left: 400px;
+    }
+}
+@-moz-keyframes brain-ocr-4 {
+    from {
+        left: 174px;
+    }
+    to {
+        left: 400px;
+    }
+}
+@-webkit-keyframes brain-ocr-4 {
+    from {
+        left: 174px;
+    }
+    to {
+        left: 400px;
+    }
+}
+.pic #ocr-4 {
+    width: 268px;
+    height: 368px;
+    position: absolute;
+    left: 174px;
+    top: 60px;
+    background: url(/static/brain/img/ocr/ocr-4.png) no-repeat center center;
+    -webkit-animation: brain-ocr-4 1s linear 0s 1 normal forwards;
+       -moz-animation: brain-ocr-4 1s linear 0s 1 normal forwards;
+            animation: brain-ocr-4 1s linear 0s 1 normal forwards;
+}
+
+@keyframes brain-ocr-5 {
+    from {
+        left: 174px;
+    }
+    to {
+        left: -50px;
+    }
+}
+@-moz-keyframes brain-ocr-5 {
+    from {
+        left: 174px;
+    }
+    to {
+        left: -50px;
+    }
+}
+@-webkit-keyframes brain-ocr-5 {
+    from {
+        left: 174px;
+    }
+    to {
+        left: -50px;
+    }
+}
+.pic #ocr-5 {
+    width: 268px;
+    height: 368px;
+    position: absolute;
+    left: 174px;
+    top: 60px;
+    background: url(/static/brain/img/ocr/ocr-5.png) no-repeat center center;
+    -webkit-animation: brain-ocr-5 1s linear 0s 1 normal forwards;
+       -moz-animation: brain-ocr-5 1s linear 0s 1 normal forwards;
+            animation: brain-ocr-5 1s linear 0s 1 normal forwards;
+}
+
+@keyframes ocr-block-scan-show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes ocr-block-scan-show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes ocr-block-scan-show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.pic #ocr-block {
+    position: absolute;
+    top: 30px;
+    left: 174px;
+    width: 268px;
+    opacity: 0;
+    height: 368px;
+    background: url(/static/brain/img/ocr/ocr-block.png) no-repeat center center;
+    -webkit-animation: ocr-block-scan-show .5s linear 1s 1 normal forwards;
+       -moz-animation: ocr-block-scan-show .5s linear 1s 1 normal forwards;
+            animation: ocr-block-scan-show .5s linear 1s 1 normal forwards;
+}
+
+@keyframes ocr-scan {
+    from {
+        top: 120px;
+    }
+    to {
+        top: 304px;
+    }
+}
+@-moz-keyframes ocr-scan {
+    from {
+        top: 120px;
+    }
+    to {
+        top: 304px;
+    }
+}
+@-webkit-keyframes ocr-scan {
+    from {
+        top: 120px;
+    }
+    to {
+        top: 304px;
+    }
+}
+.pic #ocr-scan {
+    position: absolute;
+    left: 206px;
+    width: 205px;
+    height: 4px;
+    top: 65px;
+    opacity: 0;
+    background: url(/static/brain/img/ocr/ocr-scan.png) no-repeat center center;
+    -webkit-animation: ocr-scan 2s linear 1s infinite normal forwards;
+       -moz-animation: ocr-scan 2s linear 1s infinite normal forwards;
+            animation: ocr-scan 2s linear 1s infinite normal forwards;
+}
+
+/* group voice */
+
+#brain-vic {
+    position: relative;
+    width: 1280px;
+    min-width: 1280px;
+    height: 576px;
+    min-height: 576px;
+    margin: auto;
+    display: none;
+}
+
+#brain-vic .pic {
+    position: relative;
+    width: 900px;
+    height: 460px;
+    margin: auto;
+}
+
+#brain-vic .text {
+    position: absolute;
+    width: 440px;
+    height: 230px;
+    top: 90px;
+    opacity: 0;
+    display: inline-block;
+    -webkit-animation: text-fly 1s linear 1s 1 normal forwards;
+       -moz-animation: text-fly 1s linear 1s 1 normal forwards;
+            animation: text-fly 1s linear 1s 1 normal forwards;
+}
+
+@keyframes vic-micro {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes vic-micro {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes vic-micro {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#brain-vic .pic #vic-micro {
+    position: absolute;
+    top: 120px;
+    left: 220px;
+    width: 149px;
+    height: 265px;
+    background: url(/static/brain/img/voice/voice-micro.png) no-repeat center center / 100% 100%;
+    opacity: 0;
+    transform-origin: 70px 110px;
+    -webkit-animation: vic-micro 1s linear 0s 1 normal forwards;
+       -moz-animation: vic-micro 1s linear 0s 1 normal forwards;
+            animation: vic-micro 1s linear 0s 1 normal forwards;
+}
+
+@keyframes vic-phone {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 175px;
+        top: 140px;
+        opacity: 1;
+    }
+}
+@-moz-keyframes vic-phone {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 175px;
+        top: 140px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes vic-phone {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 175px;
+        top: 140px;
+        opacity: 1;
+    }
+}
+#brain-vic .pic #vic-phone {
+    position: absolute;
+    top: 140px;
+    left: 175px;
+    width: 50px;
+    height: 50px;
+    background: url(/static/brain/img/voice/voice-phone.png) no-repeat center center;
+    opacity: 0;
+    -webkit-animation: vic-phone 1s linear .5s 1 normal forwards;
+       -moz-animation: vic-phone 1s linear .5s 1 normal forwards;
+            animation: vic-phone 1s linear .5s 1 normal forwards;
+}
+
+@keyframes vic-book {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 135px;
+        top: 255px;
+        opacity: 1;
+    }
+}
+@-moz-keyframes vic-book {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 135px;
+        top: 255px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes vic-book {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 135px;
+        top: 255px;
+        opacity: 1;
+    }
+}
+#brain-vic .pic #vic-book {
+    position: absolute;
+    top: 255px;
+    left: 135px;
+    width: 50px;
+    height: 50px;
+    background: url(/static/brain/img/voice/voice-book.png) no-repeat center center;
+    opacity: 0;
+    -webkit-animation: vic-book 1s linear .5s 1 normal forwards;
+       -moz-animation: vic-book 1s linear .5s 1 normal forwards;
+            animation: vic-book 1s linear .5s 1 normal forwards;
+}
+
+@keyframes vic-car {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 370px;
+        top: 320px;
+        opacity: 1;
+    }
+}
+@-moz-keyframes vic-car {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 370px;
+        top: 320px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes vic-car {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 370px;
+        top: 320px;
+        opacity: 1;
+    }
+}
+#brain-vic .pic #vic-car {
+    position: absolute;
+    top: 320px;
+    left: 370px;
+    width: 50px;
+    height: 50px;
+    background: url(/static/brain/img/voice/voice-car.png) no-repeat center center;
+    opacity: 0;
+    -webkit-animation: vic-car 1s linear .5s 1 normal forwards;
+       -moz-animation: vic-car 1s linear .5s 1 normal forwards;
+            animation: vic-car 1s linear .5s 1 normal forwards;
+}
+
+@keyframes vic-computer {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 385px;
+        top: 195px;
+        opacity: 1;
+    }
+}
+@-moz-keyframes vic-computer {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 385px;
+        top: 195px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes vic-computer {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 385px;
+        top: 195px;
+        opacity: 1;
+    }
+}
+#brain-vic .pic #vic-computer {
+    position: absolute;
+    top: 195px;
+    left: 385px;
+    width: 50px;
+    height: 50px;
+    background: url(/static/brain/img/voice/voice-computer.png) no-repeat center center;
+    opacity: 0;
+    -webkit-animation: vic-computer 1s linear .5s 1 normal forwards;
+       -moz-animation: vic-computer 1s linear .5s 1 normal forwards;
+            animation: vic-computer 1s linear .5s 1 normal forwards;
+}
+
+@keyframes vic-dialog {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 155px;
+        top: 195px;
+        opacity: 1;
+    }
+}
+@-moz-keyframes vic-dialog {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 155px;
+        top: 195px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes vic-dialog {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 155px;
+        top: 195px;
+        opacity: 1;
+    }
+}
+#brain-vic .pic #vic-dialog {
+    position: absolute;
+    top: 195px;
+    left: 155px;
+    width: 50px;
+    height: 50px;
+    background: url(/static/brain/img/voice/voice-dialog.png) no-repeat center center;
+    opacity: 0;
+    -webkit-animation: vic-dialog 1s linear 1s 1 normal forwards;
+       -moz-animation: vic-dialog 1s linear 1s 1 normal forwards;
+            animation: vic-dialog 1s linear 1s 1 normal forwards;
+}
+
+@keyframes vic-cloud {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 160px;
+        top: 310px;
+        opacity: 1;
+    }
+}
+@-moz-keyframes vic-cloud {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 160px;
+        top: 310px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes vic-cloud {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 160px;
+        top: 310px;
+        opacity: 1;
+    }
+}
+#brain-vic .pic #vic-cloud {
+    position: absolute;
+    top: 310px;
+    left: 160px;
+    width: 50px;
+    height: 50px;
+    background: url(/static/brain/img/voice/voice-cloud.png) no-repeat center center;
+    opacity: 0;
+    -webkit-animation: vic-cloud 1s linear 1s 1 normal forwards;
+       -moz-animation: vic-cloud 1s linear 1s 1 normal forwards;
+            animation: vic-cloud 1s linear 1s 1 normal forwards;
+}
+
+@keyframes vic-house {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 360px;
+        top: 135px;
+        opacity: 1;
+    }
+}
+@-moz-keyframes vic-house {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 360px;
+        top: 135px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes vic-house {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 360px;
+        top: 135px;
+        opacity: 1;
+    }
+}
+#brain-vic .pic #vic-house {
+    position: absolute;
+    top: 135px;
+    left: 360px;
+    width: 50px;
+    height: 50px;
+    background: url(/static/brain/img/voice/voice-house.png) no-repeat center center;
+    opacity: 0;
+    -webkit-animation: vic-house 1s linear 1s 1 normal forwards;
+       -moz-animation: vic-house 1s linear 1s 1 normal forwards;
+            animation: vic-house 1s linear 1s 1 normal forwards;
+}
+
+@keyframes vic-ring {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 395px;
+        top: 260px;
+        opacity: 1;
+    }
+}
+@-moz-keyframes vic-ring {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 395px;
+        top: 260px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes vic-ring {
+    0% {
+        left: 290px;
+        top: 235px;
+        opacity: 0;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        left: 395px;
+        top: 260px;
+        opacity: 1;
+    }
+}
+#brain-vic .pic #vic-ring {
+    position: absolute;
+    top: 260px;
+    left: 395px;
+    width: 50px;
+    height: 50px;
+    background: url(/static/brain/img/voice/voice-ring.png) no-repeat center center;
+    opacity: 0;
+    -webkit-animation: vic-ring 1s linear 1s 1 normal forwards;
+       -moz-animation: vic-ring 1s linear 1s 1 normal forwards;
+            animation: vic-ring 1s linear 1s 1 normal forwards;
+}
+@keyframes vic-wave-1 {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: .75;
+    }
+    50% {
+        opacity: .5;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@-moz-keyframes vic-wave-1 {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: .75;
+    }
+    50% {
+        opacity: .5;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes vic-wave-1 {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: .75;
+    }
+    50% {
+        opacity: .5;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+#brain-vic .pic #vic-wave-1 {
+    position: absolute;
+    top: 136px;
+    left: 102px;
+    width: 376px;
+    height: 225px;
+    background: url(/static/brain/img/voice/voice-wave-1.png) no-repeat center center;
+    opacity: 0;
+    -webkit-animation: vic-wave-1 1s linear 1.5s infinite normal forwards;
+       -moz-animation: vic-wave-1 1s linear 1.5s infinite normal forwards;
+            animation: vic-wave-1 1s linear 1.5s infinite normal forwards;
+}
+@keyframes vic-wave-2 {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .75;
+    }
+    75% {
+        opacity: .5;
+    }
+    100% {
+        opacity: .25;
+    }
+}
+@-moz-keyframes vic-wave-2 {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .75;
+    }
+    75% {
+        opacity: .5;
+    }
+    100% {
+        opacity: .25;
+    }
+}
+@-webkit-keyframes vic-wave-2 {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .75;
+    }
+    75% {
+        opacity: .5;
+    }
+    100% {
+        opacity: .25;
+    }
+}
+#brain-vic .pic #vic-wave-2 {
+    position: absolute;
+    top: 120px;
+    left: 70px;
+    width: 444px;
+    height: 256px;
+    background: url(/static/brain/img/voice/voice-wave-2.png) no-repeat center center;
+    opacity: 0;
+    -webkit-animation: vic-wave-2 1s linear 1.5s infinite normal forwards;
+       -moz-animation: vic-wave-2 1s linear 1.5s infinite normal forwards;
+            animation: vic-wave-2 1s linear 1.5s infinite normal forwards;
+}
+
+@keyframes vic-wave-3 {
+    0% {
+        opacity: .25;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: .75;
+    }
+    100% {
+        opacity: .5;
+    }
+}
+@-moz-keyframes vic-wave-3 {
+    0% {
+        opacity: .25;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: .75;
+    }
+    100% {
+        opacity: .5;
+    }
+}
+@-webkit-keyframes vic-wave-3 {
+    0% {
+        opacity: .25;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: .75;
+    }
+    100% {
+        opacity: .5;
+    }
+}
+#brain-vic .pic #vic-wave-3 {
+    position: absolute;
+    top: 92px;
+    left: 36px;
+    width: 517px;
+    height: 309px;
+    background: url(/static/brain/img/voice/voice-wave-3.png) no-repeat center center;
+    opacity: 0;
+    -webkit-animation: vic-wave-3 1s linear 1.5s infinite normal forwards;
+       -moz-animation: vic-wave-3 1s linear 1.5s infinite normal forwards;
+            animation: vic-wave-3 1s linear 1.5s infinite normal forwards;
+}
+
+@keyframes vic-wave-4 {
+    0% {
+        opacity: .5;
+    }
+    25% {
+        opacity: .25;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100 {
+        opacity: .75;
+    }
+}
+@-moz-keyframes vic-wave-4 {
+    0% {
+        opacity: .5;
+    }
+    25% {
+        opacity: .25;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100 {
+        opacity: .75;
+    }
+}
+@-webkit-keyframes vic-wave-4 {
+    0% {
+        opacity: .5;
+    }
+    25% {
+        opacity: .25;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100 {
+        opacity: .75;
+    }
+}
+#brain-vic .pic #vic-wave-4 {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 593px;
+    height: 354px;
+    background: url(/static/brain/img/voice/voice-wave-4.png) no-repeat center center;
+    opacity: 0;
+    -webkit-animation: vic-wave-4 1s linear 1.5s infinite normal forwards;
+       -moz-animation: vic-wave-4 1s linear 1.5s infinite normal forwards;
+            animation: vic-wave-4 1s linear 1.5s infinite normal forwards;
+}
+
+@keyframes vic-wave {
+    0% {
+        opacity: .75;
+    }
+    25% {
+        opacity: .5;
+    }
+    50% {
+        opacity: .25;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes vic-wave {
+    0% {
+        opacity: .75;
+    }
+    25% {
+        opacity: .5;
+    }
+    50% {
+        opacity: .25;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes vic-wave {
+    0% {
+        opacity: .75;
+    }
+    25% {
+        opacity: .5;
+    }
+    50% {
+        opacity: .25;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#brain-vic .pic #vic-wave-l {
+    position: absolute;
+    top: 130px;
+    left: -285px;
+    width: 253px;
+    height: 276px;
+    background: url(/static/brain/img/voice/voice-wave-l.png) no-repeat center center;
+    opacity: 0;
+    -webkit-animation: vic-wave 1s linear 1.5s infinite normal forwards;
+       -moz-animation: vic-wave 1s linear 1.5s infinite normal forwards;
+            animation: vic-wave 1s linear 1.5s infinite normal forwards;
+}
+#brain-vic .pic #vic-wave-r {
+    position: absolute;
+    top: 130px;
+    left: 630px;
+    width: 581px;
+    height: 276px;
+    background: url(/static/brain/img/voice/voice-wave-r.png) no-repeat center center;
+    opacity: 0;
+    -webkit-animation: vic-wave 1s linear 1.5s infinite normal forwards;
+       -moz-animation: vic-wave 1s linear 1.5s infinite normal forwards;
+            animation: vic-wave 1s linear 1.5s infinite normal forwards;
+}
+/* group user profile */
+
+#brain-up {
+    position: relative;
+    width: 1280px;
+    min-width: 1280px;
+    height: 576px;
+    min-height: 576px;
+    margin: auto;
+    display: none;
+}
+
+#brain-up .pic {
+    position: relative;
+    width: 900px;
+    height: 460px;
+    margin: auto;
+}
+
+@keyframes outer-circle {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes outer-circle {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes outer-circle {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#brain-up .pic #outer-circle {
+    position: absolute;
+    width: 691px;
+    height: 691px;
+    left: -50px;
+    top: -100px;
+    opacity: 0;
+    background: url(/static/brain/img/up/outer-circle.png) no-repeat center center;
+    -webkit-animation: outer-circle 2s linear 0s 1 normal forwards;
+       -moz-animation: outer-circle 2s linear 0s 1 normal forwards;
+            animation: outer-circle 2s linear 0s 1 normal forwards;
+}
+
+@keyframes center-person {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes center-person {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes center-person {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+#brain-up .pic #center-person {
+    position: absolute;
+    width: 132px;
+    height: 133px;
+    left: 230px;
+    top: 170px;
+    opacity: 1;
+    background: url(/static/brain/img/up/person.png) no-repeat center center;
+    transform-origin: 70px 40px;
+    -webkit-animation: center-person 1s linear 0s 1 normal forwards;
+       -moz-animation: center-person 1s linear 0s 1 normal forwards;
+            animation: center-person 1s linear 0s 1 normal forwards;
+}
+
+@keyframes up-wifi {
+    from {
+        top: 180px;
+    }
+    to {
+        top: 170px;
+    }
+}
+
+@-moz-keyframes up-wifi {
+    from {
+        top: 180px;
+    }
+    to {
+        top: 170px;
+    }
+}
+
+@-webkit-keyframes up-wifi {
+    from {
+        top: 180px;
+    }
+    to {
+        top: 170px;
+    }
+}
+#brain-up .pic #up-wifi {
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    left: 70px;
+    top: 170px;
+    background: url(/static/brain/img/up/wifi.png) no-repeat center center;
+    -webkit-animation: up-wifi 1s linear .5s 1 normal forwards;
+       -moz-animation: up-wifi 1s linear .5s 1 normal forwards;
+            animation: up-wifi 1s linear .5s 1 normal forwards;
+}
+
+@keyframes up-location {
+    from {
+        top: 400px;
+    }
+    to {
+        top: 390px;
+    }
+}
+
+@-moz-keyframes up-location {
+    from {
+        top: 400px;
+    }
+    to {
+        top: 390px;
+    }
+}
+
+@-webkit-keyframes up-location {
+    from {
+        top: 400px;
+    }
+    to {
+        top: 390px;
+    }
+}
+#brain-up .pic #up-location {
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    left: 130px;
+    top: 390px;
+    background: url(/static/brain/img/up/location.png) no-repeat center center;
+    -webkit-animation: up-location 1s linear .5s 1 normal forwards;
+       -moz-animation: up-location 1s linear .5s 1 normal forwards;
+            animation: up-location 1s linear .5s 1 normal forwards;
+}
+
+@keyframes up-identity {
+    from {
+        top: 440px;
+    }
+    to {
+        top: 430px;
+    }
+}
+
+@-moz-keyframes up-identity {
+    from {
+        top: 440px;
+    }
+    to {
+        top: 430px;
+    }
+}
+
+@-webkit-keyframes up-identity {
+    from {
+        top: 440px;
+    }
+    to {
+        top: 430px;
+    }
+}
+#brain-up .pic #up-identity {
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    left: 310px;
+    top: 430px;
+    background: url(/static/brain/img/up/identity.png) no-repeat center center;
+    -webkit-animation: up-identity 1s linear .5s 1 normal forwards;
+       -moz-animation: up-identity 1s linear .5s 1 normal forwards;
+            animation: up-identity 1s linear .5s 1 normal forwards;
+}
+
+@keyframes up-computer {
+    from {
+        top: 220px;
+    }
+    to {
+        top: 210px;
+    }
+}
+
+@-moz-keyframes up-computer {
+    from {
+        top: 220px;
+    }
+    to {
+        top: 210px;
+    }
+}
+
+@-webkit-keyframes up-computer {
+    from {
+        top: 220px;
+    }
+    to {
+        top: 210px;
+    }
+}
+#brain-up .pic #up-computer {
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    left: 440px;
+    top: 210px;
+    background: url(/static/brain/img/up/computer.png) no-repeat center center;
+    -webkit-animation: up-computer 1s linear .5s 1 normal forwards;
+       -moz-animation: up-computer 1s linear .5s 1 normal forwards;
+            animation: up-computer 1s linear .5s 1 normal forwards;
+}
+
+@keyframes up-phone {
+    from {
+        top: 40px;
+    }
+    to {
+        top: 30px;
+    }
+}
+@-moz-keyframes up-phone {
+    from {
+        top: 40px;
+    }
+    to {
+        top: 30px;
+    }
+}
+@-webkit-keyframes up-phone {
+    from {
+        top: 40px;
+    }
+    to {
+        top: 30px;
+    }
+}
+#brain-up .pic #up-phone {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 260px;
+    top: 30px;
+    background: url(/static/brain/img/up/phone.png) no-repeat center center;
+    -webkit-animation: up-phone 1s linear .5s 1 normal forwards;
+       -moz-animation: up-phone 1s linear .5s 1 normal forwards;
+            animation: up-phone 1s linear .5s 1 normal forwards;
+}
+
+@keyframes up-show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes up-show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes up-show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#brain-up .pic #up-dialog {
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    left: 110px;
+    top: 60px;
+    background: url(/static/brain/img/up/dialog.png) no-repeat center center;
+    opacity: 0;
+    -webkit-animation: up-show 1s linear 1s 1 normal forwards;
+       -moz-animation: up-show 1s linear 1s 1 normal forwards;
+            animation: up-show 1s linear 1s 1 normal forwards;
+}
+#brain-up .pic #up-basket {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    left: 20px;
+    top: 300px;
+    background: url(/static/brain/img/up/basket.png) no-repeat center center;
+    opacity: 0;
+    -webkit-animation: up-show 1s linear 1s 1 normal forwards;
+       -moz-animation: up-show 1s linear 1s 1 normal forwards;
+            animation: up-show 1s linear 1s 1 normal forwards;
+}
+#brain-up .pic #up-tag {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    left: 480px;
+    top: 360px;
+    background: url(/static/brain/img/up/tag.png) no-repeat center center;
+    opacity: 0;
+    -webkit-animation: up-show 1s linear 1s 1 normal forwards;
+       -moz-animation: up-show 1s linear 1s 1 normal forwards;
+            animation: up-show 1s linear 1s 1 normal forwards;
+}
+#brain-up .pic #up-house {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    left: 450px;
+    top: 30px;
+    background: url(/static/brain/img/up/house.png) no-repeat center center;
+    opacity: 0;
+    -webkit-animation: up-show 1s linear 1s 1 normal forwards;
+       -moz-animation: up-show 1s linear 1s 1 normal forwards;
+            animation: up-show 1s linear 1s 1 normal forwards;
+}
+#brain-up .text {
+    position: absolute;
+    width: 440px;
+    height: 230px;
+    top: 90px;
+    opacity: 0;
+    display: inline-block;
+    -webkit-animation: text-fly 1s linear 1s 1 normal forwards;
+       -moz-animation: text-fly 1s linear 1s 1 normal forwards;
+            animation: text-fly 1s linear 1s 1 normal forwards;
+}
+/* group scene */
+#brain-scene {
+    position: relative;
+    min-height: 760px;
+    min-width: 1280px;
+    margin: -100px auto;
+    display: none;
+}
+
+#brain-scene #scene-title {
+    width: 1020px;
+    position: relative;
+    font-size: 50px;
+    color: #fff;
+    padding: 130px 0 20px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#brain-scene .scene-list {
+    width: 1020px;
+    min-width: 1020px;
+    margin: 0 auto;
+    position: relative;
+}
+#brain-scene .scene-list #scene-waimai {
+    position: relative;
+    margin: 0 auto;
+    width: 250px;
+    display: inline-block;
+}
+
+#brain-scene .scene-list #scene-nuomi {
+    position: relative;
+    margin: 0 auto;
+    width: 250px;
+    display: inline-block;
+}
+#brain-scene .scene-list #scene-trans {
+    position: relative;
+    margin: 0 auto;
+    width: 250px;
+    display: inline-block;
+}
+#brain-scene .scene-list #scene-verify {
+    position: relative;
+    margin: 0 auto;
+    width: 250px;
+    display: inline-block;
+}
+
+#brain-scene .scene-list .mod-pic {
+    width: 250px;
+    height: 120px;
+    vertical-align: middle;
+    display: table-cell;
+    padding-bottom: 10px;
+}
+
+#brain-scene .scene-list .mod-pic img {
+    margin: auto;
+    vertical-align: middle;
+}
+#brain-scene .scene-list .mod-title {
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    width: 220px;
+    display: block;
+    margin: 0 auto;
+}
+#brain-scene .scene-list .mod-desc {
+    width: 220px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 100;
+    text-align: center;
+    padding: 10px 0 0 0;
+    display: block;
+    opacity: .6;
+    margin: 0 auto;
+}
+
+#brain-scene #scene-line {
+    position: relative;
+    background: #fff;
+    opacity: .1;
+    width: 1020px;
+    margin: 30px auto 30px;
+    height: 1px;
+}
+
+#brain-scene .start-use {
+    width: 1120px;
+    position: relative;
+    font-size: 50px;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#brain-scene .start-use .btn {
+    position: relative;
+    width: 260px;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+    border: 2px solid #fff;
+    font-size: 30px;
+    color: #fff;
+    margin: 0 auto;
+}
+
+#brain-scene .start-use .btn:hover {
+    color: #0077d5;
+    background: #fff;
+}
+

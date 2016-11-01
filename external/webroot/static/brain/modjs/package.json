@@ -1,0 +1,21 @@
+{
+  "name": "modjs",
+  "version": "1.0.5",
+  "description": "modjs, 是 FIS(前端集成解决方案)的前端框架，主要用于模块管理和加载，适用于线上运行时，具有代码精简、使用简单、运行高性能的特点。",
+  "main": "mod.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/walterShen/modJS"
+  },
+  "keywords": [
+    "kernal"
+  ],
+  "author": "fisteam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/walterShen/modJS/issues"
+  }
+}
