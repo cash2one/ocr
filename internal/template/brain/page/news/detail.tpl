@@ -75,7 +75,7 @@ page_name="nav"
     <div class="pg" style="position: absolute; bottom: 0; left: 0;height: 40px;width: 100%"></div>
 </div>
 <script>
-    document.querySelector('#nav-contact').parentNode.href = '/home#contact-us' ;
+    // document.querySelector('#nav-contact').parentNode.href = '/home#contact-us' ;
 </script>
 {%require name='brain:page/news/detail.tpl'%}{%/block%}
 
