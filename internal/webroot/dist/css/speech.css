@@ -319,7 +319,7 @@ h6 {
 }
 .bottom-info hr {
   width: 1180px;
-  border-bottom-color: rgba(204, 204, 204, 0.9);
+  border-bottom-color: rgba(204, 204, 204, 0.2);
   margin: 20px auto;
 }
 .bottom-info .platform-links {
@@ -344,7 +344,7 @@ h6 {
   display: inline-block;
   height: 10px;
   width: 1px;
-  background-color: rgba(204, 204, 204, 0.9);
+  background-color: rgba(204, 204, 204, 0.2);
   left: -10px;
   top: 2px;
 }
