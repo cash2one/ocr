@@ -567,8 +567,9 @@ h6 {
 .callout .foreground-links > li {
   display: inline-block;
   position: absolute;
-  width: 150px;
+  width: 120px;
   height: 30px;
+  user-select: none;
 }
 .callout .foreground-links > li > a {
   color: transparent;
@@ -590,15 +591,15 @@ h6 {
 }
 .callout .foreground-links > li:nth-child(4) {
   top: 130px;
-  left: 711px;
+  left: 691px;
 }
 .callout .foreground-links > li:nth-child(5) {
   top: 227px;
-  left: 811px;
+  left: 791px;
 }
 .callout .foreground-links > li:nth-child(6) {
   top: 347px;
-  left: 790px;
+  left: 770px;
 }
 .content-section {
   border-bottom: none;
@@ -768,7 +769,6 @@ h6 {
   background-position: 0px -284px;
   background-position-x: 0px;
   background-position-y: -284px;
-  user-select: none;
 }
 .user-case .row .content-item:nth-child(2) .content-icon {
   background-image: url('../../images/home-icons.png');
@@ -776,7 +776,6 @@ h6 {
   background-position: -177px -284px;
   background-position-x: -177px;
   background-position-y: -284px;
-  user-select: none;
 }
 .user-case .row .content-item:nth-child(3) .content-icon {
   background-image: url('../../images/home-icons.png');
@@ -784,7 +783,6 @@ h6 {
   background-position: -359px -284px;
   background-position-x: -359px;
   background-position-y: -284px;
-  user-select: none;
 }
 .user-case .row .content-item:nth-child(4) .content-icon {
   background-image: url('../../images/home-icons.png');
@@ -792,7 +790,6 @@ h6 {
   background-position: -543px -284px;
   background-position-x: -543px;
   background-position-y: -284px;
-  user-select: none;
 }
 .news {
   background-color: #fafafa;
