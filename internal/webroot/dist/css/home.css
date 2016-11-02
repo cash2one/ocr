@@ -357,14 +357,18 @@ h6 {
 }
 .bottom-info .copyright {
   margin-top: 5px;
-  color: rgba(255, 255, 255, 0.5);
 }
-.bottom-info .copyright p {
+.bottom-info .copyright a {
+  color: rgba(255, 255, 255, 0.5);
   font-size: 12px;
   line-height: 16px;
 }
 .callout {
   background-image: url('../../images/home-top-bg.png');
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 .callout .foreground {
   position: relative;
@@ -563,13 +567,14 @@ h6 {
 }
 .callout .foreground-links {
   position: absolute;
+  top: 0;
+  left: 0;
 }
 .callout .foreground-links > li {
   display: inline-block;
   position: absolute;
   width: 120px;
   height: 30px;
-  user-select: none;
 }
 .callout .foreground-links > li > a {
   color: transparent;
@@ -579,27 +584,27 @@ h6 {
 }
 .callout .foreground-links > li:nth-child(1) {
   top: 107px;
-  left: 295px;
+  left: 310px;
 }
 .callout .foreground-links > li:nth-child(2) {
   top: 193px;
-  left: 234px;
+  left: 250px;
 }
 .callout .foreground-links > li:nth-child(3) {
   top: 281px;
-  left: 279px;
+  left: 295px;
 }
 .callout .foreground-links > li:nth-child(4) {
   top: 130px;
-  left: 691px;
+  left: 705px;
 }
 .callout .foreground-links > li:nth-child(5) {
   top: 227px;
-  left: 791px;
+  left: 805px;
 }
 .callout .foreground-links > li:nth-child(6) {
   top: 347px;
-  left: 770px;
+  left: 785px;
 }
 .content-section {
   border-bottom: none;

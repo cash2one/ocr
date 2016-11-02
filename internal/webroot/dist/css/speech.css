@@ -357,9 +357,9 @@ h6 {
 }
 .bottom-info .copyright {
   margin-top: 5px;
-  color: rgba(255, 255, 255, 0.5);
 }
-.bottom-info .copyright p {
+.bottom-info .copyright a {
+  color: rgba(255, 255, 255, 0.5);
   font-size: 12px;
   line-height: 16px;
 }

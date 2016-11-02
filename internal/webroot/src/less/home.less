@@ -8,6 +8,11 @@
 
 .callout {
   background-image: url('../../images/home-top-bg.png');
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
   .foreground {
     position: relative;
 
@@ -165,13 +170,14 @@
   }
   .foreground-links {
     position: absolute;
+    top: 0;
+    left: 0;
 
     & > li {
       display: inline-block;
       position: absolute;
       width: 120px;
       height: 30px;
-      user-select: none;
 
       & > a{
         color: transparent;
@@ -183,27 +189,27 @@
 
     & > li:nth-child(1) {
       top: 107px;
-      left: 295px;
+      left: 310px;
     }
     & > li:nth-child(2) {
       top: 193px;
-      left: 234px;
+      left: 250px;
     }
     & > li:nth-child(3) {
       top: 281px;
-      left: 279px;
+      left: 295px;
     }
     & > li:nth-child(4) {
       top: 130px;
-      left: 691px;
+      left: 705px;
     }
     & > li:nth-child(5) {
       top: 227px;
-      left: 791px;
+      left: 805px;
     }
     & > li:nth-child(6) {
       top: 347px;
-      left: 770px;
+      left: 785px;
     }
   }
 }
