@@ -8,7 +8,7 @@
 {%require name="brain:page/home/home.js"%}
 {%/block%}
 {%block name="content"%}
-<div> class="introduction">
+<div class="introduction">
     <h1>技术服务：机器学习、语音技术、图像技术、语音技术、用户画像</h1>
     <h2>应用场景</h2>
     <ol>

@@ -13,7 +13,7 @@
     page_name="nav"
     %}
 {%/block%}
-<div> class="introduction">
+<div class="introduction">
     <h1>机器学习</h1>
     <p><b>开放易用的深度学习平台PaddlePaddle，为企业级应用和学术调研提供支持</b></p>
     <ul>
