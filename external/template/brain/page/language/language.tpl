@@ -1,13 +1,21 @@
 {%extends file="brain/page/layout/layout.tpl"%}
 
-{%block name="title"%}百度大脑{%/block%}
-{%block name="seo_keywords"%}百度大脑,机器学习,大数据,图像识别,语音识别{%/block%}
-{%block name="seo_description"%}{%/block%}
+{%block name="title"%}自然语言-百度大脑{%/block%}
+{%block name="seo_keywords"%}百度大脑,Baidu Brain,百度AI,百度大脑开放平台,自然语言{%/block%}
+{%block name="seo_description"%}自然语言，基于自然语言处理技术，结合基于大数据挖掘产生的知识图谱及相关技术，对人类自然语言进行分析、理解、生成、翻译，实现自然的人机对话交互。{%/block%}
 {%block name="head_static"%}
 {%require name="brain:page/language/laguage.css"%}
 {%require name="brain:page/language/language.js"%}
 {%/block%}
 {%block name="content"%}
+<div> class="introduction">
+    <h1>自然语言</h1>
+    <p><b>基于自然语言处理技术，结合基于大数据挖掘产生的知识图谱及相关技术，对人类自然语言进行分析、理解、生成、翻译，实现自然的人机对话交互</b></p>
+    <ul>
+        <li><b>NLP Cloud</b></li>
+        <li><b>机器翻译</b></li>
+    </ul>
+</div>
 <div class="body">
     <div class="a" style="height: 500px; background-size: 100% 100%">
         <div class="sprite" style="height: 100%;background-position: center 0">

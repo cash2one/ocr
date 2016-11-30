@@ -1,13 +1,31 @@
 {%extends file="brain/page/layout/layout.tpl"%}
 
 {%block name="title"%}百度大脑{%/block%}
-{%block name="seo_keywords"%}百度大脑,机器学习,大数据,图像识别,语音识别{%/block%}
-{%block name="seo_description"%}{%/block%}
+{%block name="seo_keywords"%}百度大脑,Baidu Brain,百度AI,机器学习,大数据,图像技术,语音技术,自然语言处理,用户画像{%/block%}
+{%block name="seo_description"%}百度大脑，汇集百度人工智能技术成果，已建成超大规模神经网络，拥有万亿级参数，能模拟人脑的工作机制，对开发者、创业者、企业等开放核心能力和底层技术。{%/block%}
 {%block name="head_static"%}
 {%require name="brain:page/home/home.css"%}
 {%require name="brain:page/home/home.js"%}
 {%/block%}
 {%block name="content"%}
+<div> class="introduction">
+    <h1>技术服务：机器学习、语音技术、图像技术、语音技术、用户画像</h1>
+    <h2>应用场景</h2>
+    <ol>
+        <li>
+            <h3>智慧物流</h3>
+            <p><b>基于大数据分析能力和机器学习算法进行调度优化，太原铁路局提升物流调度效率达59%</b></p>
+        </li>
+        <li>
+            <h3>用户个性化营销方案</h3>
+            <p><b>O2O业务通过用户画像个性化营销模型进行个性化补贴，在同等预算下显著提升用户黏性</b></p>
+        </li>
+        <li>
+            <h3>真人验证及实名认证</h3>
+            <p><b>金融场景通过人脸识别，比对身份证照片，多方位验证用户身份，自助完成真人实名认证</b></p>
+        </li>
+    </ol>
+</div>
 <div class="body">
     <div class="a" style="position: relative; height: 500px ;background-size: cover;overflow: hidden">
         <div class="absolute b"
@@ -177,12 +195,11 @@
            style="text-align: left; outline: none; position: absolute;left: 120px;top: 91px;width: 145px;height: 30px; line-height: 24px;">ai@baidu.com</a>
         <a href="#" class="subscribe contact"
            style="text-align: left; outline: none; position: absolute;left: 404px;top: 91px;width: 145px;height: 30px; line-height: 24px;">邮件订阅</a>
-        <!--
-        <a href="baidu://addgroup/?id=1516306" class="contact"
-           style="width: 75px; height: 25px; position: absolute; left: 86px; top: 92px; line-height: 24px;">1516306</a>
-        <a href="http://hetu.baidu.com/api/area/ai" class="contact" target="_blank"
-            style="width: 90px; height: 25px; position: absolute; left: 755px; top: 92px; line-height: 24px;">河图AI专区</a>
-            -->
+        <a href="#" class="contact get-qr-code" role="button"
+           style="width: 75px; height: 25px; position: absolute; left: 86px; top: 92px; line-height: 24px;">
+           <span>点击获取公众号二维码</span>
+           <img src="/index/static/brain/img/qr-code.png" style="display:none; position: absolute; left: 50%; top: 50%;margin: -70px 0 0 -70px;">
+        </a>
     </div>
 </div>
 

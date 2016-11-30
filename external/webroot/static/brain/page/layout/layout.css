@@ -38,3 +38,11 @@ a {
 .scroll div{
     background-position: center 1px !important;
 }
+.introduction {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    color: transparent !important;
+    z-index: -1;
+}

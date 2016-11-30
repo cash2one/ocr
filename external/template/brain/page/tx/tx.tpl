@@ -1,13 +1,22 @@
 {%extends file="brain/page/layout/layout.tpl"%}
 
-{%block name="title"%}百度大脑{%/block%}
-{%block name="seo_keywords"%}百度大脑,机器学习,大数据,图像识别,语音识别{%/block%}
-{%block name="seo_description"%}{%/block%}
+{%block name="title"%}图像技术-百度大脑{%/block%}
+{%block name="seo_keywords"%}百度大脑,Baidu Brain,百度AI,百度大脑开放平台,图像技术{%/block%}
+{%block name="seo_description"%}图像技术，基于深度学习算法，智能识别图像中文字内容和含义、通过人脸图像比对验证相似度以及检测图片色情度。{%/block%}
 {%block name="head_static"%}
 {%require name="brain:page/tx/tx.css"%}
 {%require name="brain:page/tx/tx.js"%}
 {%/block%}
 {%block name="content"%}
+<div> class="introduction">
+    <h1>图像技术</h1>
+    <p><b>基于深度学习算法，智能识别图像中文字内容和含义、通过人脸图像比对验证相似度以及检测图片色情度</b></p>
+    <ul>
+        <li><b>OCR</b></li>
+        <li><b>人脸识别</b></li>
+        <li><b>色情识别</b></li>
+    </ul>
+</div>
 <div class="body">
     <div class="a" style="height: 500px; background-size: 100% 100%">
         <div class="sprite" style="height: 100%;background-position: center 0">

@@ -94,6 +94,15 @@
         modal.close();
     });
 
+    $(document.body).on('click', '.get-qr-code', function (e) {
+        e.preventDefault();
+        $('.get-qr-code > img').show();
+    });
+
+    $(document.body).on('click', function (e) {
+        $('.get-qr-code > img').hide();
+    });
+
     $(document.body).on('submit', '.frm', function (e) {
         e.preventDefault();
         var url = './subscribe';
