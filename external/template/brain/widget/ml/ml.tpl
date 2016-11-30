@@ -1,3 +1,12 @@
+<div class="introduction">
+    <h1>机器学习</h1>
+    <p><b>开放易用的深度学习平台PaddlePaddle，为企业级应用和学术调研提供支持</b></p>
+    <ul>
+        <li><b>多种深度学习模型</b></li>
+        <li><b>高效模型训练</b></li>
+        <li><b>模型预测和评估</b></li>
+    </ul>
+</div>
 <div class="top-section">
     <div class="top-pic">
             <a class="btn-bg-blue"

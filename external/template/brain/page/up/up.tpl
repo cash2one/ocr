@@ -13,14 +13,6 @@
     page_name="nav"
     %}
 {%/block%}
-<div class="introduction">
-    <h1>用户画像</h1>
-    <p><b>基于海量互联网数据，利用大数据分析处理能力，理解用户特征、兴趣偏好，实现精准的用户分析和个性化推荐</b></p>
-    <ul>
-        <li><b>用户画像</b></li>
-        <li><b>推荐服务</b></li>
-    </ul>
-</div>
 {%block name="content"%}
     {%widget
     name="brain:widget/up/up.tpl"

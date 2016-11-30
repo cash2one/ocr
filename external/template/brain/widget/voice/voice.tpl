@@ -1,3 +1,11 @@
+<div class="introduction">
+    <h1>语音技术</h1>
+    <p><b>多场景语音服务支持专家，让你的应用长上耳朵、开口说话</b></p>
+    <ul>
+        <li><b>语音识别</b></li>
+        <li><b>语音合成</b></li>
+    </ul>
+</div>
 <div class="top-section">
     <div class="top-pic">
             <!--<a class="btn-bg-blue"
