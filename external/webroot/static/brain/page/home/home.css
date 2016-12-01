@@ -158,10 +158,10 @@
     left: 50%;
     top: 50%;
     background: #fff;
-    transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .modal-head {
@@ -305,7 +305,7 @@
     display: inline-block;
 }
 
-.consult-modal-content .qr-code-input a{
+.consult-modal-content .qr-code-input a {
     display: inline-block;
     vertical-align: middle;
     float: right;
@@ -313,7 +313,7 @@
     overflow: hidden;
     width: 30%;
 }
-.consult-modal-content .qr-code-input a > img{
+.consult-modal-content .qr-code-input a > img {
     height: 34px;
 }
 .consult-modal-content .form-actions {
