@@ -55,28 +55,28 @@
     }
 
     var modal = Modal();
-    var fragment = '<div class="modal-head">订阅百度大脑最新消息<span class="x"></span></div>' +
-        '<div style="margin-top: 20px" class="modal-form">' +
-        '<td class="modal-form"><form class="frm">' +
-        '<table style="width: 100%; font-size: 14px;line-height: 40px;">' +
-        '<tr><td style="text-align: right; width: 106px">姓名</td><td  style="padding-left: 20px"><input type="text" name="name"/></td></tr>' +
-        '<tr><td style="text-align: right; width: 106px">性别</td><td  style="padding-left: 20px"><label style="margin-right: 20px"><input checked type="radio" value="1" name="sex"/><span>先生</span></label><label><input type="radio" value="2" name="sex"/><span>女士</span></label></td></tr>' +
-        '<tr><td style="text-align: right; width: 106px">邮箱</td><td  style="padding-left: 20px"><input type="text" name="email"/></td></tr>' +
-        '<tr><td style="text-align: right; width: 106px">验证码</td>' +
-        '<td  style="padding-left: 20px" class="qr-code-input">' +
-        '<input type="text" maxlength="4"  style="width:60px" name="code">' +
-        '<a style="margin-right: 45%;"><img alt="点击刷新验证码" style="margin-top:2px"  src="/seccode?action=show"></a>' +
-        '</td></tr>' +
-        '</table><p class="error"></p>' +
-        '<div style="text-align: center;position: relative;left: 7px;">' +
-        '<input type="submit" class="sub" value="提交"/>' +
-        '<span class="cancel">取消</span>' +
-        '</div>' +
-        '</form></div>' +
-        '<div class="modal-loading">正在提交...........</div>' +
-        '<div class="modal-success"></div>' +
-        '<div class="modal-error"><span class="back">返回</span></div>' +
-        '</div>';
+    var fragment = '<div class="modal-head">订阅百度大脑最新消息<span class="x"></span></div>'
+        + '<div style="margin-top: 20px" class="modal-form">'
+        + '<td class="modal-form"><form class="frm">'
+        + '<table style="width: 100%; font-size: 14px;line-height: 40px;">'
+        + '<tr><td style="text-align: right; width: 106px">姓名</td><td  style="padding-left: 20px"><input type="text" name="name"/></td></tr>'
+        + '<tr><td style="text-align: right; width: 106px">性别</td><td  style="padding-left: 20px"><label style="margin-right: 20px"><input checked type="radio" value="1" name="sex"/><span>先生</span></label><label><input type="radio" value="2" name="sex"/><span>女士</span></label></td></tr>'
+        + '<tr><td style="text-align: right; width: 106px">邮箱</td><td  style="padding-left: 20px"><input type="text" name="email"/></td></tr>'
+        + '<tr><td style="text-align: right; width: 106px">验证码</td>'
+        + '<td  style="padding-left: 20px" class="qr-code-input">'
+        + '<input type="text" maxlength="4"  style="width:60px" name="code">'
+        + '<a style="margin-right: 45%;"><img alt="点击刷新验证码" style="margin-top:2px"  src="/seccode?action=show"></a>'
+        + '</td></tr>'
+        + '</table><p class="error"></p>'
+        + '<div style="text-align: center;position: relative;left: 7px;">'
+        + '<input type="submit" class="sub" value="提交"/>'
+        + '<span class="cancel">取消</span>'
+        + '</div>'
+        + '</form></div>'
+        + '<div class="modal-loading">正在提交...........</div>'
+        + '<div class="modal-success"></div>'
+        + '<div class="modal-error"><span class="back">返回</span></div>'
+        + '</div>';
 
     $(document.body).on('click', '.subscribe', function (e) {
         e.preventDefault();
@@ -143,7 +143,7 @@
                 },
                 err: '姓名不支持输入特殊字符'
             };
-        for (var i = 0,len = arr.length - 1; i < len; i++) {
+        for (var i = 0, len = arr.length - 1; i < len; i++) {
             if (!test[i].tester(arr[i].value)) {
                 $error.html(test[i].err);
                 isPass = 0;
@@ -154,7 +154,6 @@
             $error.html(testName.err);
             isPass = 0;
         }
-        console.log(arr)        
         if (isPass === 1) {
             $.post('/seccode', {
                 action: 'check',
@@ -190,7 +189,6 @@
                 $('.modal-success').hide();
             });
         }
-        
     });
 
     var consultModalHedaer = '<div class="modal-head">合作咨询<span class="x"></span></div>';
