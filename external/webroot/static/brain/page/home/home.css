@@ -282,7 +282,7 @@
     display: inline-block;
     width: 28%;
 }
-.consult-modal-content input[type=text] {
+.consult-modal-content input[type="text"] {
     width: 100%;
     border: 1px solid #ebebeb;
     line-height: 34px;
@@ -300,7 +300,7 @@
     resize: none;
     height: 9em;
 }
-.consult-modal-content .qr-code-input input{
+.consult-modal-content .qr-code-input input {
     width: 40%;
     display: inline-block;
 }

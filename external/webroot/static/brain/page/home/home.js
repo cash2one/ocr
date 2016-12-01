@@ -245,11 +245,11 @@
                     '<p>出了点小问题，请稍候重试</p>',
                 '</div>',
                 '<div class="form-actions">',
-                   '<button type="submit" class="btn-primary" id="consult-info-back">返回</button>',
-                   '<button type="button" class="btn-cancel" id="consult-info-cancel">取消</button>',
+                    '<button type="submit" class="btn-primary" id="consult-info-back">返回</button>',
+                    '<button type="button" class="btn-cancel" id="consult-info-cancel">取消</button>',
                 '</div>',
             '</div>'
-        ].join(''),
+        ].join('')
     };
 
     $(document.body).on('click', '.consult', function (e) {
@@ -266,7 +266,7 @@
         ];
         form.find(inputsToCheck.join()).removeClass('has-error');
         form.find('#consult-info-warning').html('');
-        for (var i in inputsToCheck) {
+        for (var i = 0, len = inputsToCheck.length; i < len; i++) {
             var input = form.find(inputsToCheck[i]);
             if (!input.val()) {
                 input.addClass('has-error');
@@ -274,7 +274,7 @@
                 return false;
             }
         }
-        
+
         $.post('/seccode', {
             action: 'check',
             code: form.find('input[name=code]').val()
@@ -294,9 +294,9 @@
                 phone: form.find('input[name=phone]').val(),
                 contactWay: form.find('input[name=contactWay]').val(),
                 content: form.find('textarea[name=content]').val()
-            }, function() {
+            }, function () {
                 modal.container.html(consultModalHtml.success);
-            }).fail(function() {
+            }).fail(function () {
                 modal.container.html(consultModalHtml.fail);
             });
         }).fail(function (re) {
@@ -316,7 +316,7 @@
     });
     $(document.body).on('click', '.qr-code-input>a', function (e) {
         e.preventDefault();
-        $(this).find('img').attr('src', '/sccode?t=' + new Date().getTime() );
+        $(this).find('img').attr('src', '/sccode?t=' + new Date().getTime());
     });
 })();
 
