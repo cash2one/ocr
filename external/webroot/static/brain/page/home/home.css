@@ -171,9 +171,6 @@
     font-size: 16px;
 }
 
-.modal-content td {
-    padding-bottom: 10px;
-}
 
 .modal-content input[type="text"] {
     line-height: 30px;
@@ -300,12 +297,12 @@
     resize: none;
     height: 9em;
 }
-.consult-modal-content .qr-code-input input {
+.qr-code-input input {
     width: 40%;
     display: inline-block;
 }
 
-.consult-modal-content .qr-code-input a {
+.qr-code-input a {
     display: inline-block;
     vertical-align: middle;
     float: right;
@@ -314,7 +311,7 @@
     width: 30%;
     cursor: pointer;
 }
-.consult-modal-content .qr-code-input a > img {
+.qr-code-input a > img {
     height: 34px;
 }
 .consult-modal-content .form-actions {
