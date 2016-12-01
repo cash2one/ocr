@@ -21,7 +21,7 @@ class Brain_Seccode {
         $_SESSION[$_SERVER['REMOTE_ADDR'].'_seccode'] = $seccode;
 
         header("Expires: -1");
-        header("Cache-Control: no-store, private, post-check=0, pre-check=0, max-age=0", FALSE);
+        header("Cache-Control: no-store, private, post-check=0, pre-check=0, max-age=0", flase);
         header("Pragma: no-cache");
 
         $code = new Lib_Seccode();
@@ -72,6 +72,7 @@ class Brain_Seccode {
      * checkSeccode 检验验证码
      * 
      * @static
+     * @param mixed $strCode
      * @access public
      * @return Boolean
      */
@@ -80,11 +81,11 @@ class Brain_Seccode {
 
         if($strCode != '' && $seccode != '' && $seccode == $strCode)
         {
-            return True;
+            return true;
         }
         else
         {
-            return False;
+            return false;
         }
 
     }
