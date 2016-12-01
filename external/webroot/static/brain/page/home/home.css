@@ -407,15 +407,14 @@
     vertical-align: middle;
     -webkit-animation: loading 4s linear infinite;
        -moz-animation: loading 4s linear infinite;
-         -o-animation: loading 4s linear infinite;
             animation: loading 4s linear infinite;
 }
-.consult-modal-content .qr-code-alert{
+.consult-modal-content .qr-code-alert {
     text-align: center;
     background: #f5f5f5;
     margin: 0 -20px -15px;
     padding: 15px 0;
 }
-.consult-modal-content .qr-code-alert img{
+.consult-modal-content .qr-code-alert img {
     display: inline-block;
 }

@@ -278,7 +278,7 @@
         $.post('/seccode', {
             action: 'check',
             code: form.find('input[name=code]').val()
-        },'json').success(function (res) {
+        }, 'json').success(function (res) {
             if (res.errno !== 0) {
                 var codeInput = form.find('input[name=code]');
                 codeInput.addClass('has-error');
