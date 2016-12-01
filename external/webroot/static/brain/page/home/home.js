@@ -296,12 +296,16 @@
                 content: form.find('textarea[name=content]').val(),
                 code: form.find('input[name=code]').val(),
                 action: 'add'
-            }, function () {
+            }, function (res) {
+                if (res.errno !== 0) {
+                    modal.container.html(consultModalHtml.fail);
+                    return false;
+                }
                 modal.container.html(consultModalHtml.success);
             }).fail(function () {
                 modal.container.html(consultModalHtml.fail);
             });
-        }).fail(function (re) {
+        }).fail(function () {
             modal.container.html(consultModalHtml.fail);
         });
     });
