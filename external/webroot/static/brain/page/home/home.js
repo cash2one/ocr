@@ -180,7 +180,7 @@
                         } else {
                             $('.modal-success').hide();
                             $('.modal-error').show();
-                       }
+                        }
                     }
                 });
             }).fail(function () {
