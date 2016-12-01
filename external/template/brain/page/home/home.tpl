@@ -191,14 +191,14 @@
         </div>
     </div>
     <div style="height: 153px; background-position: center -1408px" class="sprite" id="contact-us">
-        <a href="mailto:ai@baidu.com" class="contact"
-           style="text-align: left; outline: none; position: absolute;left: 120px;top: 91px;width: 145px;height: 30px; line-height: 24px;">ai@baidu.com</a>
+        <a href="#" class="contact consult "
+           style="text-align: left; outline: none; position: absolute;left: 125px;top: 91px;height: 30px; line-height: 24px;">立即提交</a>
         <a href="#" class="subscribe contact"
-           style="text-align: left; outline: none; position: absolute;left: 404px;top: 91px;width: 145px;height: 30px; line-height: 24px;">邮件订阅</a>
+           style="text-align: left; outline: none; position: absolute;left: 369px;top: 91px;height: 30px; line-height: 24px;">邮件订阅</a>
         <a href="#" class="contact get-qr-code" role="button"
-           style="width: 75px; height: 25px; position: absolute; left: 86px; top: 92px; line-height: 24px;">
+           style="width: 75px; height: 25px; position: absolute;width:175px; left: 550px; top: 92px; line-height: 24px;">
            <span>点击获取公众号二维码</span>
-           <img src="/index/static/brain/img/qr-code.png" style="display:none; position: absolute; left: 50%; top: 50%;margin: -70px 0 0 -70px;">
+           <img src="/index/static/brain/page/home/img/qr-code.png" style="display:none; position: absolute; left: 50%; top: 50%;margin: -70px 0 0 -70px;">
         </a>
     </div>
 </div>

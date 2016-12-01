@@ -2,7 +2,7 @@
 
 {%block name="title"%}{%$data.title%}-百度大脑{%/block%}
 {%block name="seo_keywords"%}百度大脑,Baidu Brain,百度AI,百度大脑开放平台{%/block%}
-{%block name="seo_description"%}{%substr($data.content, 0, 20)%}{%/block%}
+{%block name="seo_description"%}{%mb_substr(trim(str_replace(array("\r", "\n", "\t", "\r\n", " ", "　"), '', trim(strip_tags($data.content)))), 0, 20, 'utf-8')%}{%/block%}
 {%block name="head_static"%}
 {%require name="brain:widget/news/news.css"%}
 {%require name="brain:page/editnews/editor.css"%}

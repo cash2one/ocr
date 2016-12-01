@@ -152,14 +152,16 @@
 }
 
 .modal-content {
-    width: 460px;
-    height: 340px;
+    min-width: 460px;
+    min-height: 340px;
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -230px;
-    margin-top: -170px;
     background: #fff;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .modal-head {
@@ -263,4 +265,90 @@
 .modal-error,
 .modal-loading {
     display: none;
+}
+
+
+
+.consult-modal-content {
+    color: #666;
+    font-size: 14px;
+    line-height: 34px;
+    padding: 15px 20px;
+}
+.consult-modal-content  ul {
+    margin-bottom: 10px;
+}
+.consult-modal-content  ul > li {
+    display: inline-block;
+    width: 28%;
+}
+.consult-modal-content input[type="text"] {
+    width: 100%;
+    border: 1px solid #ebebeb;
+    line-height: 34px;
+    margin-bottom: 10px;
+    height: 34px;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.consult-modal-content textarea {
+    width: 100%;
+    border: 1px solid #ebebeb;
+    box-sizing: border-box;
+    padding: 10px;
+    resize: none;
+    height: 9em;
+}
+.consult-modal-content .qr-code-input input {
+    width: 40%;
+    display: inline-block;
+}
+
+.consult-modal-content .qr-code-input a {
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    margin-right: 25%;
+    overflow: hidden;
+    width: 30%;
+}
+.consult-modal-content .qr-code-input a > img {
+    height: 34px;
+}
+.consult-modal-content .form-actions {
+    text-align: center;
+    margin-top: 10px;
+}
+.consult-modal-content .btn-primary {
+    background-color: #008cfa;
+    color: #fff;
+    line-height: 34px;
+    padding: 0 45px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.consult-modal-content .btn-cancel {
+    background-color: #ccc;
+    color: #fff;
+    line-height: 34px;
+    padding: 0 45px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.consult-modal-content button + button {
+    margin-left: 15px;
+}
+.consult-modal-content .has-error {
+    border-color: #dc0000 !important;
+}
+.consult-modal-content #consult-info-warning {
+    color: #dc0000;
+    font-size: 12px;
+    line-height: 1em;
+}
+.consult-modal-content p {
+    text-align: center;
 }
