@@ -216,12 +216,12 @@
         ].join(''),
         loading: consultModalHedaer + [
             '<div class="consult-modal-content">',
-                '<div class="loading">正在提交<span class="loading-dot"></span></div>',
+                '<div class="loading">正在提交<span class="loading-dot">...........</span></div>',
             '</div>'
         ].join(''),
         success: consultModalHedaer + [
             '<div class="consult-modal-content">',
-                '<div>',
+                '<div class="alert-image">',
                     '<img src="/index/static/brain/page/home/img/consult-success.png">',
                 '</div>',
                 '<div>',
@@ -231,14 +231,14 @@
                     '<p>您的咨询已提交，我们会及时和您联系！</p>',
                     '<p>欢迎您加关注我们的官方微信，获取最新动态！</p>',
                     '<div>',
-                        '<img src="/home/qr-code.png">',
+                        '<img src="/index/static/brain/page/home/img/qr-code.png">',
                     '</div>',
                 '</div>',
             '</div>'
         ].join(''),
         fail: consultModalHedaer + [
             '<div class="consult-modal-content">',
-                '<div>',
+                '<div class="alert-image">',
                     '<img src="/index/static/brain/page/home/img/consult-fail.png">',
                 '</div>',
                 '<div>',
@@ -278,29 +278,30 @@
         $.post('/seccode', {
             action: 'check',
             code: form.find('input[name=code]').val()
-        }).done(function (res) {
-            console.log(res);
+        },'json').success(function (res) {
             if (res.errno !== 0) {
                 var codeInput = form.find('input[name=code]');
                 codeInput.addClass('has-error');
                 form.find('#consult-info-warning').html(codeInput.attr('placeholder'));
+                $('.qr-code-input img').attr('src', '/seccode?action=show&t=' + new Date().getTime());
                 return false;
             }
             modal.container.html(consultModalHtml.loading);
-            $.post('/test', {
+            $.post('/case', {
                 tech: form.find('input[name=tech]:checked').val(),
                 company: form.find('input[name=company]').val(),
                 username: form.find('input[name=username]').val(),
                 phone: form.find('input[name=phone]').val(),
                 contactWay: form.find('input[name=contactWay]').val(),
-                content: form.find('textarea[name=content]').val()
+                content: form.find('textarea[name=content]').val(),
+                code: form.find('input[name=code]').val(),
+                action: 'add'
             }, function () {
                 modal.container.html(consultModalHtml.success);
             }).fail(function () {
                 modal.container.html(consultModalHtml.fail);
             });
         }).fail(function (re) {
-            console.log(re);
             modal.container.html(consultModalHtml.fail);
         });
     });
@@ -316,7 +317,7 @@
     });
     $(document.body).on('click', '.qr-code-input>a', function (e) {
         e.preventDefault();
-        $(this).find('img').attr('src', '/sccode?t=' + new Date().getTime());
+        $(this).find('img').attr('src', '/seccode?action=show&t=' + new Date().getTime());
     });
 })();
 

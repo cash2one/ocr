@@ -17,7 +17,7 @@
             <div class="separator"></div>
             <span class="item"><a href="http://recsys.baidu.com/" target="_blank">Recsys推荐云平台</a></span>
             <div class="separator"></div>
-            <span class="item"><a href="http://cloud.baidu.com/" target="_blank">百度云</a></span>
+            <span class="item"><a href="https://cloud.baidu.com/?t=cp:online-media%7Cci:%7Ccn:ai" target="_blank">百度云</a></span>
         </div>
         <!--
         <div class="team">
