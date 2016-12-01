@@ -417,4 +417,5 @@
 }
 .consult-modal-content .qr-code-alert img {
     display: inline-block;
+    margin-top: 10px;
 }
