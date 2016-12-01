@@ -15,7 +15,8 @@ class Controller_Main extends Ap_Controller_Abstract {
         'userprofile' => 'actions/page/UserProfile.php',
 
         'news' => 'actions/page/News.php',
-
+        'case' => 'actions/page/Case.php',
+        'seccode' => 'actions/page/Seccode.php',
         'subscribe' => 'actions/page/Subscribe.php',
     );
 }

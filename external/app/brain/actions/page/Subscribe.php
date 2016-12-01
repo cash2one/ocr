@@ -24,51 +24,97 @@ class Action_Subscribe extends Ap_Action_Abstract {
     public function execute() {
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
-        $strAction = $arrInput['action'];
+        $strEmail = Brain_Util::getParamAsString($arrInput, 'email', '');
+        
         $arrRet = array(
             'errno' => 0,
             'msg' => 'success',
             'data' => (object) array(),
         );
-        $name = Brain_Util::getParamAsString($arrInput, 'name', '');
-        if (!empty($name) && !preg_match("/^[\x{4e00}-\x{9fa5}A-Za-z0-9 _-]+$/u",$name)) {
-            $arrRet = array(
-                'errno' => 1,
-                'msg' => '姓名只允许有中文、字母',
-                'data' => (object) array(),
-            );
+
+        $strCode = strtoupper(Brain_Util::getParamAsString($arrInput, 'code'));
+        if(!Brain_Seccode::checkSeccode($strCode))
+        {
+            $arrRet['errno'] = 2;
+            $arrRet['msg'] = 'code is wrong';
             Brain_Output::jsonOutput($arrRet);
-            exit;
-        }
-        $sex = Brain_Util::getParamAsInt($arrInput, 'sex', 1);
-        if ($sex !== 1 && $sex !== 2) {
-            $sex = 1;
-        }
-        $email = Brain_Util::getParamAsString($arrInput, 'email', '');
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $arrRet = array(
-                'errno' => 1,
-                'msg' => '邮件地址格式错误',
-                'data' => (object) array(),
-            );
-            Brain_Output::jsonOutput($arrRet);
-            exit;
-        }
-        if (!empty($email) && !preg_match('/^[.A-Za-z0-9@_-]+$/u', $email)) {
-            $arrRet = array(
-                'errno' => 1,
-                'msg' => '邮件地址错误',
-                'data' => (object) array(),
-            );
-            Brain_Output::jsonOutput($arrRet);
-            exit;
+            return;
         }
 
-        $subscribe = new Dao_Subscribe();
-        try {
-            $arrSub = $subscribe->insertSubscribe($name, $sex, $email);
-        } catch (Exception $e) {
+        if (!filter_var($strEmail, FILTER_VALIDATE_EMAIL)) {
+            $arrRet['errno'] = 1;
+            $arrRet['msg'] = '邮件地址格式错误';
+            Brain_Output::jsonOutput($arrRet);
+            return;
         }
+        
+        $dbSubscribe = new Dao_Subscribe();
+        $subscribeInfo = $dbSubscribe->getSubscribe($strEmail);
+        
+        if(empty($subscribeInfo))
+        {
+            $strName = Brain_Util::getParamAsString($arrInput, 'name', '');
+            if (!empty($strName) && !preg_match("/^[\x{4e00}-\x{9fa5}A-Za-z0-9 _-]+$/u", $strName)) {
+                $arrRet['errno'] = 1;
+                $arrRet['msg'] = '姓名只允许有中文、字母';
+                Brain_Output::jsonOutput($arrRet);
+                return;
+            }
+            
+            $sex = Brain_Util::getParamAsInt($arrInput, 'sex', 1);
+            if ($sex !== 1 && $sex !== 2) {
+                $sex = 1;
+            }
+            
+            try {
+                $arrSub = $dbSubscribe->insertSubscribe($strName, $sex, $strEmail);
+            } catch (Exception $e) {
+            }
+        }
+        else{
+        
+            //验证token 
+            $strCreatetime = $subscribeInfo[0]['createtime'];
+            $strId = $subscribeInfo[0]['id'];
+            $strToken = Brain_Util::getParamAsString($arrInput, 'token', '');
+            if ($strToken != md5($strEmail . $strCreatetime . $strId))
+            { 
+                $arrRet['errno'] = 1;
+                $arrRet['msg'] = 'token is invalid!';
+                Brain_Output::jsonOutput($arrRet);
+                return; 
+            } 
+            
+            $strAction = Brain_Util::getParamAsString($arrInput, 'action', '');
+            if ('subAll' === $strAction) {
+                
+                try {
+                    $dbSubscribe->subscribe('all'); 
+                } catch (Exception $e) {
+                }
+                $arrRet['msg'] = 'subscribe all info success!';
+            }
+            else if ('subImportant' === $strAction) {
+            
+                try {
+                    $dbSubscribe->subscribe('important');
+                } catch (Exception $e) {
+                }
+                $arrRet['msg'] = 'subscribe important info success!';
+            }
+            else if ('subNone' === $strAction) {
+            
+                try {
+                    $dbSubscribe->subscribe('none');
+                } catch (Exception $e) {
+                }
+                $arrRet['msg'] = 'cancel subscribe success!';
+            } else {
+                $arrRet['errno'] = -1;
+                $arrRet['msg'] = 'action is wrong';
+            }
+        }
+        
         Brain_Output::jsonOutput($arrRet);
     }
 }

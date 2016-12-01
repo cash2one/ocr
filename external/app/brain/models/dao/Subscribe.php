@@ -19,6 +19,7 @@ class Dao_Subscribe extends Dao_Base {
         'sex',
         'email',
         'createtime',
+        'subscribe_tag',
     );
 
     /**
@@ -50,6 +51,7 @@ class Dao_Subscribe extends Dao_Base {
             'name' => $name,
             'sex' => $sex,
             'email' => $email,
+            'subscribe_tag' => 'all',
         );  
         $arrOptions = null;
         $arrOnDup = $arrRow;
@@ -63,5 +65,55 @@ class Dao_Subscribe extends Dao_Base {
             $strConnId = '' . $this->objDB->getInsertId();
             return $strConnId;
         } 
+    }
+    
+    /**
+     * getSubscribe 
+     * 
+     * @param mixed $strId 
+     * @access public
+     * @return void
+     */ 
+    public function getSubscribe($strEmail) {
+        $arrFields = $this->arrDefaultFields;
+        $arrConds = array(
+            'email=' => $strEmail,
+        );  
+        $arrOptions = null;
+        $arrAppends = array(
+            'limit 1',
+        );
+
+        $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
+    
+        $arrDBRet = $this->query($strSQL);
+
+        return $arrDBRet;
+    } 
+    
+    /** 
+     * subscribe 
+     *   
+     * @param mixed $strEmail 
+     * @param mixed $strTag 
+     * @access public
+     * @return void
+     */
+    public function subscribe($strEmail, $strTag) {
+        $arrRow = array(
+            'subscribe_tag' => $strTag,
+        );
+        $arrConds = array(
+            'email=' => $strEmail,
+        );
+        $arrOptions = null;
+        $strSQL = $this->objSQLAssember->getUpdate($this->strTable, $arrRow, $arrConds);
+        Bd_Log::addNotice('update', $strSQL);
+        $arrDBRet = $this->objDB->query($strSQL);
+        if ($arrDBRet === false) {
+            throw new Exception('query failed', Lib_Const::ERRORNO_DB_QUERY_FAILED);
+        } else {
+            return $arrDBRet;
+        }
     }
 }
