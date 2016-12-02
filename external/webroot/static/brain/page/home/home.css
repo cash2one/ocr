@@ -298,7 +298,7 @@
     height: 9em;
 }
 .qr-code-input input {
-    width: 40%;
+    width: 40% !important;
     display: inline-block;
 }
 
