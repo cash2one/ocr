@@ -48,10 +48,11 @@ class Brain_Seccode {
      * getSeccode 获取验证码
      * 
      * @static
+     * @param mixed $strIsClear
      * @access public
      * @return void
      */
-    public static function getSeccode() {
+    public static function getSeccode($isClear=1) {
         session_start();
         $seccode = $_SESSION[$_SERVER['REMOTE_ADDR'].'_seccode'];
 
@@ -61,7 +62,10 @@ class Brain_Seccode {
         }
         else
         {
-            unset($_SESSION[$_SERVER['REMOTE_ADDR'].'_seccode']);
+            if($isClear == 1)
+            {
+                unset($_SESSION[$_SERVER['REMOTE_ADDR'].'_seccode']);
+            }
             $code = new Lib_Seccode();
             $code->seccodeconvert($seccode);
             return $seccode;
@@ -73,11 +77,12 @@ class Brain_Seccode {
      * 
      * @static
      * @param mixed $strCode
+     * @param mixed $strIsClear
      * @access public
      * @return Boolean
      */
-    public static function checkSeccode($strCode) {
-        $seccode = Brain_Seccode::getSeccode();
+    public static function checkSeccode($strCode, $isClear=1) {
+        $seccode = Brain_Seccode::getSeccode($isClear);
 
         if($strCode != '' && $seccode != '' && $seccode == $strCode)
         {

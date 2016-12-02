@@ -26,11 +26,6 @@ class Action_Case extends Ap_Action_Abstract {
         $arrInput = $arrRequest['request_param'];
         $strAction = $arrInput['action'];
 
-        $arrRet = array(
-            'errno' => 0,
-            'msg' => 'success',
-            'data' => (object) array(),
-        );
         $dbCase = new Dao_Case();
 
         if ('add' === $strAction) {
@@ -55,19 +50,18 @@ class Action_Case extends Ap_Action_Abstract {
                         $strContent, $strContactway, $strTech);
                 } catch (Exception $e) {
                 }
+                
+                Brain_Output::jsonOutput(0, 'success');
             }
             else{
-                $arrRet['errno'] = -2;
-                $arrRet['msg'] = 'code is wrong';
+                Brain_Output::jsonOutput(1, 'code is wrong');
             }
 
         } else {
-            $arrRet['errno'] = -1;
-            $arrRet['msg'] = 'action is wrong';
+            Brain_Output::jsonOutput(1, 'action is wrong');
+
             //Brain_Output::htmlOutput(array(), 'brain/page/Case/Case.tpl');
         }
-        
-        Brain_Output::jsonOutput($arrRet);
     }
 }
 

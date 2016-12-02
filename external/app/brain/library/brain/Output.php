@@ -42,12 +42,21 @@ class Brain_Output {
      *
      * @date 2016/05/12 19:19:44
     **/
-    public function jsonOutput($arrPageInfo) {
-        header('Content-Type: text/javascript; charset=UTF-8');
+    public function jsonOutput($errno, $msg, $data='') {
+        //header('Content-Type: text/javascript; charset=UTF-8');
+        header('Content-Type: text/json; charset=UTF-8');
         header('Access-Control-Allow-Origin: *');
+        
+        $arrPageInfo = array(
+            'errno' => $errno,
+            'msg' => $msg,
+            'data' => $data,
+        );
+        
         $strRet = json_encode($arrPageInfo, JSON_UNESCAPED_UNICODE);
         echo $strRet;
     }
+
 
     /**
      * @brief jsonp输出

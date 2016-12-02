@@ -25,26 +25,16 @@ class Action_Subscribe extends Ap_Action_Abstract {
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
         $strEmail = Brain_Util::getParamAsString($arrInput, 'email', '');
-        
-        $arrRet = array(
-            'errno' => 0,
-            'msg' => 'success',
-            'data' => (object) array(),
-        );
 
         $strCode = strtoupper(Brain_Util::getParamAsString($arrInput, 'code'));
         if(!Brain_Seccode::checkSeccode($strCode))
         {
-            $arrRet['errno'] = 2;
-            $arrRet['msg'] = 'code is wrong';
-            Brain_Output::jsonOutput($arrRet);
+            Brain_Output::jsonOutput(2, 'code is wrong');
             return;
         }
 
         if (!filter_var($strEmail, FILTER_VALIDATE_EMAIL)) {
-            $arrRet['errno'] = 1;
-            $arrRet['msg'] = '邮件地址格式错误';
-            Brain_Output::jsonOutput($arrRet);
+            Brain_Output::jsonOutput(1, '邮件地址格式错误');
             return;
         }
         
@@ -55,9 +45,7 @@ class Action_Subscribe extends Ap_Action_Abstract {
         {
             $strName = Brain_Util::getParamAsString($arrInput, 'name', '');
             if (!empty($strName) && !preg_match("/^[\x{4e00}-\x{9fa5}A-Za-z0-9 _-]+$/u", $strName)) {
-                $arrRet['errno'] = 1;
-                $arrRet['msg'] = '姓名只允许有中文、字母';
-                Brain_Output::jsonOutput($arrRet);
+                Brain_Output::jsonOutput(1, '姓名只允许有中文、字母');
                 return;
             }
             
@@ -70,6 +58,7 @@ class Action_Subscribe extends Ap_Action_Abstract {
                 $arrSub = $dbSubscribe->insertSubscribe($strName, $sex, $strEmail);
             } catch (Exception $e) {
             }
+            Brain_Output::jsonOutput(0, 'success');
         }
         else{
         
@@ -79,9 +68,7 @@ class Action_Subscribe extends Ap_Action_Abstract {
             $strToken = Brain_Util::getParamAsString($arrInput, 'token', '');
             if ($strToken != md5($strEmail . $strCreatetime . $strId))
             { 
-                $arrRet['errno'] = 1;
-                $arrRet['msg'] = 'token is invalid!';
-                Brain_Output::jsonOutput($arrRet);
+                Brain_Output::jsonOutput(1, 'token is invalid!');
                 return; 
             } 
             
@@ -92,7 +79,7 @@ class Action_Subscribe extends Ap_Action_Abstract {
                     $dbSubscribe->subscribe('all'); 
                 } catch (Exception $e) {
                 }
-                $arrRet['msg'] = 'subscribe all info success!';
+                Brain_Output::jsonOutput(0, 'subscribe all info success!');
             }
             else if ('subImportant' === $strAction) {
             
@@ -100,7 +87,7 @@ class Action_Subscribe extends Ap_Action_Abstract {
                     $dbSubscribe->subscribe('important');
                 } catch (Exception $e) {
                 }
-                $arrRet['msg'] = 'subscribe important info success!';
+                Brain_Output::jsonOutput(0, 'subscribe important info success!');
             }
             else if ('subNone' === $strAction) {
             
@@ -108,14 +95,11 @@ class Action_Subscribe extends Ap_Action_Abstract {
                     $dbSubscribe->subscribe('none');
                 } catch (Exception $e) {
                 }
-                $arrRet['msg'] = 'cancel subscribe success!';
+                Brain_Output::jsonOutput(0, 'cancel subscribe success!');
             } else {
-                $arrRet['errno'] = -1;
-                $arrRet['msg'] = 'action is wrong';
+                Brain_Output::jsonOutput(1, 'action is wrong');
             }
         }
-        
-        Brain_Output::jsonOutput($arrRet);
     }
 }
 

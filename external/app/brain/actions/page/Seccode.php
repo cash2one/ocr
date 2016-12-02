@@ -22,8 +22,25 @@ class Action_Seccode extends Ap_Action_Abstract {
      * @return void
      */
     public function execute() {
-
-        Brain_Seccode::showSeccode();
+        $arrRequest = Saf_SmartMain::getCgi();
+        $arrInput = $arrRequest['request_param'];
+        $strAction = Brain_Util::getParamAsString($arrInput, 'action', '');
+        $strCode = strtoupper(Brain_Util::getParamAsString($arrInput, 'code', ''));
+        
+        if ('show' === $strAction) {
+            Brain_Seccode::showSeccode();
+        }
+        else if ('check' === $strAction) {
+            
+            if(!Brain_Seccode::checkSeccode($strCode, 0))
+            {
+                Brain_Output::jsonOutput(1, 'fail');
+            }
+            else
+            {
+                Brain_Output::jsonOutput(0, 'success');
+            }
+        }
     }
 }
 

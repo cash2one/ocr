@@ -26,30 +26,27 @@ class Action_News extends Ap_Action_Abstract {
         $arrInput = $arrRequest['request_param'];
         $strAction = $arrInput['action'];
 
-        $arrRet = array(
-            'errno' => 0,
-            'msg' => 'success',
-            'data' => (object) array(),
-        );
         $dbNews = new Dao_News();
 
         if ('list' === $strAction) {
             $strPn = '' . Brain_Util::getParamAsInt($arrInput, 'pn', 0);
             $strRn = '' . Brain_Util::getParamAsInt($arrInput, 'rn', 10);
             $arrNews = $dbNews->getNewsList($strPn, $strRn);
-            if (is_array($arrNews) && count($arrNews) > 0) {
-                $arrRet['data'] = $arrNews;
-            }
-            Brain_Output::jsonOutput($arrRet);
+
+            Brain_Output::jsonOutput(0, 'success', $arrNews);
         } else if ('top3' === $strAction) {
             $arrNews = $dbNews->getNewsList('0', '3');
-            if (is_array($arrNews) && count($arrNews) > 0) {
-                $arrRet['data'] = $arrNews;
-            }
-            Brain_Output::jsonOutput($arrRet);
+
+            Brain_Output::jsonOutput(0, 'success', $arrNews);
         } else if ('detail' === $strAction) {
             $strId = Brain_Util::getParamAsString($arrInput, 'id');
             $arrNews = $dbNews->getNews($strId);
+            
+            $arrRet = array(
+                'errno' => 0,
+                'msg' => 'success',
+                'data' => (object) array(),
+            );
             if (is_array($arrNews) && count($arrNews) > 0) {
                 $arrRet['data'] = $arrNews[0];
                 $dbNews->addPv($strId);
@@ -62,7 +59,7 @@ class Action_News extends Ap_Action_Abstract {
             $strId = Brain_Util::getParamAsString($arrInput, 'id');
 
             $dbNews->deleteNews($strId);
-            Brain_Output::jsonOutput($arrRet);
+            Brain_Output::jsonOutput(0, 'success');
         } else if ('update' === $strAction) {
             // new
             exit;
@@ -75,7 +72,7 @@ class Action_News extends Ap_Action_Abstract {
             $strId = Brain_Util::getParamAsString($arrInput, 'id');
 
             $dbNews->updateNews($strId, $strTitle, $strTime, $strAuthor, $strContent, $strLink, $strAbs);
-            Brain_Output::jsonOutput($arrRet);
+            Brain_Output::jsonOutput(0, 'success');
         } else if ('add' === $strAction) {
             // new
             exit;
@@ -86,7 +83,7 @@ class Action_News extends Ap_Action_Abstract {
             $strAbs = Brain_Util::getParamAsString($arrInput, 'abs');
             $strLink = Brain_Util::getParamAsString($arrInput, 'link');
             $dbNews->insertNews($strTitle, $strTime, $strAuthor, $strContent, $strLink, $strAbs);
-            Brain_Output::jsonOutput($arrRet);
+            Brain_Output::jsonOutput(0, 'success');
         } else if ('edit' === $strAction) {
             // new
             exit;
