@@ -64,7 +64,7 @@
         + '<tr><td style="text-align: right; width: 106px">邮箱</td><td  style="padding-left: 20px"><input type="text" name="email"/></td></tr>'
         + '<tr><td style="text-align: right; width: 106px">验证码</td>'
         + '<td  style="padding-left: 20px" class="qr-code-input">'
-        + '<input type="text" maxlength="4"  style="width:60px" name="code">'
+        + '<input type="text" maxlength="4"  style="width:60px !important" name="code">'
         + '<a style="margin-right: 45%;"><img alt="点击刷新验证码" style="margin-top:2px"  src="/seccode?action=show"></a>'
         + '</td></tr>'
         + '</table><p class="error"></p>'
