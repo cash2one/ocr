@@ -35,7 +35,7 @@ class Action_Case extends Ap_Action_Abstract {
             $strCompany = Brain_Util::getParamAsString($arrInput, 'company');
             $strPhone = Brain_Util::getParamAsString($arrInput, 'phone');
             $strContent = Brain_Util::getParamAsString($arrInput, 'content');
-            $strContactway= Brain_Util::getParamAsString($arrInput, 'contactway');
+            $strContactway= Brain_Util::getParamAsString($arrInput, 'contactWay');
             $strTech = Brain_Util::getParamAsString($arrInput, 'tech');
             
             $strCode = strtoupper(Brain_Util::getParamAsString($arrInput, 'code'));
@@ -45,11 +45,18 @@ class Action_Case extends Ap_Action_Abstract {
             
             if($strCode != '' && $seccode != '' && $seccode == $strCode)
             {
+                $caseId = null;
                 try {
-                    $dbCase->insertCase($strUsername, $strCompany, $strPhone,
+                    $caseId = $dbCase->insertCase($strUsername, $strCompany, $strPhone,
                         $strContent, $strContactway, $strTech);
                 } catch (Exception $e) {
-                }
+                }   
+
+                //发送邮件
+                if ($caseId)
+                {   
+                    $dbCase->sendCase($caseId);
+                }   
                 
                 Brain_Output::jsonOutput(0, 'success');
             }

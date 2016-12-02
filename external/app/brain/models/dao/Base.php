@@ -50,14 +50,14 @@ class Dao_Base {
                 // 对于唯一索引冲突（1062），单独提示一下
                 if ($errno === 1062) {
                     throw new Exception('query failed(sql=' . $strSQL . ')', 
-                        Brain_Const::ERRORNO_DB_DUPLICATE_ENTRY); 
+                        Lib_Const::ERRORNO_DB_DUPLICATE_ENTRY); 
                 }
-                throw new Exception('query failed(sql=' . $strSQL . ')', Brain_Const::ERRORNO_DB_QUERY_FAILED); 
+                throw new Exception('query failed(sql=' . $strSQL . ')', Lib_Const::ERRORNO_DB_QUERY_FAILED); 
             } else {
                 return $arrDBRet;
             }
         }
-        throw new Exception('objDB in Dao_Base is not an object', Brain_Const::ERRORNO_DB_GENERAL_ERROR); 
+        throw new Exception('objDB in Dao_Base is not an object', Lib_Const::ERRORNO_DB_GENERAL_ERROR); 
     }
 
     /**
@@ -73,7 +73,7 @@ class Dao_Base {
         if ($this->objDB) {
             $arrDBRet = $this->objDB->query($strSQL);
             if ($arrDBRet === false) {
-                throw new Exception('query failed(sql=' . $strSQL . ')', Brain_Const::ERRORNO_DB_QUERY_FAILED); 
+                throw new Exception('query failed(sql=' . $strSQL . ')', Lib_Const::ERRORNO_DB_QUERY_FAILED); 
             } else {
                 $strSQLFoundRows = 'select found_rows() as found_rows';
                 $arrFoundRows = $this->objDB->query($strSQLFoundRows);
@@ -85,7 +85,7 @@ class Dao_Base {
                 return $arrDBRet;
             }
         }
-        throw new Exception('objDB in Dao_Base is not an object', Brain_Const::ERRORNO_DB_GENERAL_ERROR); 
+        throw new Exception('objDB in Dao_Base is not an object', Lib_Const::ERRORNO_DB_GENERAL_ERROR); 
     }
 
     /**
@@ -100,7 +100,7 @@ class Dao_Base {
             $strRet = $this->objDB->escapeString($str);
             return $strRet;
         }
-        throw new Exception('objDB in Dao_Base is not an object', Brain_Const::ERRORNO_DB_GENERAL_ERROR); 
+        throw new Exception('objDB in Dao_Base is not an object', Lib_Const::ERRORNO_DB_GENERAL_ERROR); 
     }
 
     /**

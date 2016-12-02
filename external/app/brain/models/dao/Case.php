@@ -19,8 +19,8 @@ class Dao_Case extends Dao_Base {
         'username',
         'company',
         'phone',
-        'email',
         'contactway',
+        'content',
         'tech',
         'create_time',
     );
@@ -70,6 +70,112 @@ class Dao_Case extends Dao_Base {
             $strConnId = '' . $this->objDB->getInsertId();
             return $strConnId;
         } 
+    }
+
+    /**
+     * sendCase
+     * 
+     * @param mixed $caseId
+     * @access public
+     * @return void
+     */
+    public function sendCase($caseId) {
+        $data_case = $this->getSubscribe($caseId);
+        $title = 'AI官网客户咨询（No.'. str_pad($caseId, 4, "0", STR_PAD_LEFT) .'）';
+        $subject = " 
+            <style type=\"text/css\">
+
+            .msgtable {
+                width: 810px;
+                font-size: 14px;
+            }
+            table {
+                border-collapse: collapse;
+                empty-cells: show;
+            }
+            .msgtable th {
+                background-color: #F3F3F3;
+            }
+            .msgtable th {
+                border: 1px solid #BBBBBB;
+                font-weight: 700;
+                padding: 4px;
+            }
+
+            .msgtable td {
+                border: 1px solid #BBBBBB;
+                padding: 4px;
+            }
+
+            ul.nav li {
+                border-left: 5px solid #FF9000;
+                display: inline;
+                font-size: 18px;
+                font-weight: bold;
+                margin: 0 40px;
+                padding-left: 15px;
+            }
+            </style>
+            <table border='0' cellspacing='0' cellpadding='0'  class='msgtable'>
+                <tr>
+                     <th colspan='4'>$title</th>
+                </tr>
+                <tr>
+                    <th>意向技术:</th>
+                    <td>{$data_case[0]['tech']}</td>
+                    <th>咨询时间:</th>
+                    <td>{$data_case[0]['create_time']}</td>
+                </tr>
+                <tr>
+                    <th>客户公司:</th>
+                    <td>{$data_case[0]['company']}</td>
+                    <th>客户称呼:</th>
+                    <td>{$data_case[0]['username']}</td>
+                </tr>
+                <tr>
+                    <th>联系电话:</th>
+                    <td>{$data_case[0]['phone']}</td>
+                    <th>其他联系方式:</th>
+                    <td>{$data_case[0]['contactway']}</td>
+                </tr>
+                <tr>
+                    <td colspan='4'>
+                        <p><strong><span style=\"font-family:宋体\">咨询内容：</span></strong></p>
+                        <p><span  style=\"font-family:宋体\">
+                            {$data_case[0]['content']}
+                        </span></p>
+                    </td>
+                </tr>
+            </table>
+        ";
+        $smtp = new Bd_Smtp();
+        $smtp->setFrom('ai-news@baidu.com');
+        $smtp->addAddress('xuyifei@baidu.com');
+        $smtp->send($title, $subject);
+    }
+
+    /**
+     * getCase 
+     * 
+     * @param mixed $caseId 
+     * @access public
+     * @return void
+     */
+    public function getSubscribe($caseId) {
+        $arrFields = $this->arrDefaultFields;
+        $arrConds = array(
+            'id=' => $caseId,
+        );
+        $arrOptions = null;
+        $arrAppends = array(
+            'limit 1',
+        );
+
+        $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
+
+        $arrDBRet = $this->query($strSQL);
+
+        return $arrDBRet;
     }
 
 }
