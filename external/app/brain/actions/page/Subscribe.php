@@ -25,13 +25,7 @@ class Action_Subscribe extends Ap_Action_Abstract {
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
         $strEmail = Brain_Util::getParamAsString($arrInput, 'email', '');
-
-        $strCode = strtoupper(Brain_Util::getParamAsString($arrInput, 'code'));
-        if(!Brain_Seccode::checkSeccode($strCode))
-        {
-            Brain_Output::jsonOutput(2, 'code is wrong');
-            return;
-        }
+        $strAction = Brain_Util::getParamAsString($arrInput, 'action', 'add');
 
         if (!filter_var($strEmail, FILTER_VALIDATE_EMAIL)) {
             Brain_Output::jsonOutput(1, '邮件地址格式错误');
@@ -41,8 +35,16 @@ class Action_Subscribe extends Ap_Action_Abstract {
         $dbSubscribe = new Dao_Subscribe();
         $subscribeInfo = $dbSubscribe->getSubscribe($strEmail);
         
-        if(empty($subscribeInfo))
+        if($strAction == 'add')
         {
+            $strCode = strtoupper(Brain_Util::getParamAsString($arrInput, 'code'));
+            if(!Brain_Seccode::checkSeccode($strCode) &&
+                $strAction != 'chooseReason')
+            {
+                Brain_Output::jsonOutput(2, 'code is wrong');
+                return;
+            }
+
             $strName = Brain_Util::getParamAsString($arrInput, 'name', '');
             if (!empty($strName) && !preg_match("/^[\x{4e00}-\x{9fa5}A-Za-z0-9 _-]+$/u", $strName)) {
                 Brain_Output::jsonOutput(1, '姓名只允许有中文、字母');
@@ -54,51 +56,68 @@ class Action_Subscribe extends Ap_Action_Abstract {
                 $sex = 1;
             }
             
-            try {
-                $arrSub = $dbSubscribe->insertSubscribe($strName, $sex, $strEmail);
-            } catch (Exception $e) {
+            //如果用户曾经订阅过，则订阅所有
+            if(empty($subscribeInfo))
+            {
+                try {
+                    $arrSub = $dbSubscribe->insertSubscribe($strName, $sex, $strEmail);
+                } catch (Exception $e) {
+                }
+                Brain_Output::jsonOutput(0, 'success');
             }
-            Brain_Output::jsonOutput(0, 'success');
+            else{
+                try {
+                    $dbSubscribe->subscribe($strEmail, 'all', $strReason); 
+                } catch (Exception $e) {
+                }
+                Brain_Output::jsonOutput(0, 'success');
+            }
         }
-        else{
+        else if($strAction == 'chooseReason'){
+            $strToken = Brain_Util::getParamAsString($arrInput, 'token', '');
+            
+            $arrPageInfo['email'] = $strEmail;
+            $arrPageInfo['token'] = $strToken;
+            Brain_Output::htmlOutput(
+                $arrPageInfo, 
+                'brain/email/unsubscribe.html'
+            );
+        }
+        else if($strAction == 'unsubscribe'){
         
             //验证token 
-            $strCreatetime = $subscribeInfo[0]['createtime'];
+            $strSex = $subscribeInfo[0]['sex'];
             $strId = $subscribeInfo[0]['id'];
             $strToken = Brain_Util::getParamAsString($arrInput, 'token', '');
-            if ($strToken != md5($strEmail . $strCreatetime . $strId))
+            $strReason = Brain_Util::getParamAsString($arrInput, 'reason', '');
+            $strFollow = Brain_Util::getParamAsInt($arrInput, 'follow');
+
+            if ($strToken != md5($strEmail . $strSex . $strId))
             { 
                 Brain_Output::jsonOutput(1, 'token is invalid!');
                 return; 
             } 
             
-            $strAction = Brain_Util::getParamAsString($arrInput, 'action', '');
-            if ('subAll' === $strAction) {
-                
-                try {
-                    $dbSubscribe->subscribe('all'); 
-                } catch (Exception $e) {
-                }
-                Brain_Output::jsonOutput(0, 'subscribe all info success!');
-            }
-            else if ('subImportant' === $strAction) {
+            if (1 == $strFollow) {
             
                 try {
-                    $dbSubscribe->subscribe('important');
+                    $dbSubscribe->subscribe($strEmail, 'important', $strReason);
                 } catch (Exception $e) {
                 }
-                Brain_Output::jsonOutput(0, 'subscribe important info success!');
+                //Brain_Output::jsonOutput(0, 'subscribe important info success!');
             }
-            else if ('subNone' === $strAction) {
+            else if (0 === $strFollow) {
             
                 try {
-                    $dbSubscribe->subscribe('none');
+                    $dbSubscribe->subscribe($strEmail, 'none', $strReason);
                 } catch (Exception $e) {
                 }
-                Brain_Output::jsonOutput(0, 'cancel subscribe success!');
+                //Brain_Output::jsonOutput(0, 'cancel subscribe success!');
             } else {
-                Brain_Output::jsonOutput(1, 'action is wrong');
+                //Brain_Output::jsonOutput(1, 'action is wrong');
             }
+            
+            Brain_Output::htmlOutput(array(), 'brain/email/unsubscribe-notice.html');
         }
     }
 }

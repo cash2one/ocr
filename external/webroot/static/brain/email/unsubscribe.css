@@ -1,0 +1,63 @@
+body.unsubscribe {
+    text-align: center;
+    padding: 40px 0;
+}
+body.unsubscribe h1 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+body.unsubscribe form {
+    width: 400px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 40px;
+    font-size: 14px;
+    color: #666;
+}
+
+body.unsubscribe form ul label {
+    color: #999;
+}
+body.unsubscribe form  input[type="radio"],
+body.unsubscribe form  input[type="checkbox"] {
+    margin-right: 10px;
+    float: left;
+    margin-top: 13px;
+}
+body.unsubscribe form ul {
+    margin-bottom: 15px;
+}
+body.unsubscribe .form-actions {
+    text-align: center;
+    margin-top: 30px;
+}
+body.unsubscribe .form-actions button + button{
+    margin-left: 15px;
+}
+body.unsubscribe .form-actions .btn-primary {
+    background-color: #008cfa;
+    color: #fff;
+    line-height: 34px;
+    padding: 0 45px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+body.unsubscribe .form-actions .btn-cancel {
+    background-color: #ccc;
+    color: #fff;
+    line-height: 34px;
+    padding: 0 45px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+body.unsubscribe p {
+    color: #999;
+    line-height: 40px;
+    font-size: 14px
+}
+body.unsubscribe img {
+    margin: 15px auto;
+}

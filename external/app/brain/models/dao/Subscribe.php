@@ -96,12 +96,14 @@ class Dao_Subscribe extends Dao_Base {
      *   
      * @param mixed $strEmail 
      * @param mixed $strTag 
+     * @param mixed $strReason 
      * @access public
      * @return void
      */
-    public function subscribe($strEmail, $strTag) {
+    public function subscribe($strEmail, $strTag, $strReason) {
         $arrRow = array(
             'subscribe_tag' => $strTag,
+            'reason' => $strReason,
         );
         $arrConds = array(
             'email=' => $strEmail,
