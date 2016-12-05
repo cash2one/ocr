@@ -80,7 +80,7 @@ class Action_Subscribe extends Ap_Action_Abstract {
             $arrPageInfo['token'] = $strToken;
             Brain_Output::htmlOutput(
                 $arrPageInfo, 
-                'brain/email/unsubscribe.html'
+                'brain/email/unsubscribe.tpl'
             );
         }
         else if($strAction == 'unsubscribe'){
@@ -117,7 +117,7 @@ class Action_Subscribe extends Ap_Action_Abstract {
                 //Brain_Output::jsonOutput(1, 'action is wrong');
             }
             
-            Brain_Output::htmlOutput(array(), 'brain/email/unsubscribe-notice.html');
+            Brain_Output::htmlOutput(array(), 'brain/email/unsubscribe-notice.tpl');
         }
     }
 }

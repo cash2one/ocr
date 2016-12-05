@@ -4,7 +4,7 @@ body.unsubscribe {
 }
 body.unsubscribe h1 {
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 30px;
 }
 body.unsubscribe form {
@@ -32,7 +32,7 @@ body.unsubscribe .form-actions {
     text-align: center;
     margin-top: 30px;
 }
-body.unsubscribe .form-actions button + button{
+body.unsubscribe .form-actions button + button {
     margin-left: 15px;
 }
 body.unsubscribe .form-actions .btn-primary {
@@ -56,7 +56,7 @@ body.unsubscribe .form-actions .btn-cancel {
 body.unsubscribe p {
     color: #999;
     line-height: 40px;
-    font-size: 14px
+    font-size: 14px;
 }
 body.unsubscribe img {
     margin: 15px auto;
