@@ -8,7 +8,7 @@
 {%require name="brain:page/language/language.js"%}
 {%/block%}
 {%block name="content"%}
-<div class="introduction">
+<div class="introduction" style="position: fixed;top: 0;width: 100%;left: 0;color: transparent !important;z-index: -1;">
     <h1>自然语言</h1>
     <p><b>基于自然语言处理技术，结合基于大数据挖掘产生的知识图谱及相关技术，对人类自然语言进行分析、理解、生成、翻译，实现自然的人机对话交互</b></p>
     <ul>

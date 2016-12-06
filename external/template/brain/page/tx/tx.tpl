@@ -8,7 +8,7 @@
 {%require name="brain:page/tx/tx.js"%}
 {%/block%}
 {%block name="content"%}
-<div class="introduction">
+<div class="introduction" style="position: fixed;top: 0;width: 100%;left: 0;color: transparent !important;z-index: -1;">
     <h1>图像技术</h1>
     <p><b>基于深度学习算法，智能识别图像中文字内容和含义、通过人脸图像比对验证相似度以及检测图片色情度</b></p>
     <ul>

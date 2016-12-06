@@ -1,4 +1,4 @@
-<div class="introduction">
+<div class="introduction" style="position: fixed;top: 0;width: 100%;left: 0;color: transparent !important;z-index: -1;">
     <h1>语音技术</h1>
     <p><b>多场景语音服务支持专家，让你的应用长上耳朵、开口说话</b></p>
     <ul>
