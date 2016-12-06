@@ -141,7 +141,7 @@ class Dao_Case extends Dao_Base {
                 <tr>
                     <td colspan='4'>
                         <p><strong><span style=\"font-family:宋体\">咨询内容：</span></strong></p>
-                        <p><span  style=\"font-family:宋体\">
+                        <p><span>
                             {$data_case[0]['content']}
                         </span></p>
                     </td>
