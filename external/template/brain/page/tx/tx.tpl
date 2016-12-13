@@ -117,11 +117,13 @@
     </div>
     -->
     <div style="background: #f5f5f5" id="contact-us">
-        <div class="sprite" style="height: 172px;background-position: center -1925px">
-            <a class="contact" href="mailto:ai@baidu.com"
-               style="outline: none; position: absolute; left: 597px; top: 108px; width: 110px; height: 30px;">ai@baidu.com</a>
-            <!--<a class="contact" href="baidu://addgroup/?id=1516306" style="width: 80px; height: 25px; position: absolute; left: 290px; top: 109px;">1516306</a>-->
-            <!--<a class="contact" href="http://hetu.baidu.com/api/area/ai" style="width: 90px; height: 25px; position: absolute; left: 968px; top: 108px;" target="_blank">河图AI专区</a>-->
+        <div class="sprite" style="height: 172px;background-position: center -1965px">
+          <a href="#" class="contact consult" style="text-align: left; outline: none; position: absolute;left: 125px;top: 91px;height: 30px; line-height: 24px;">立即提交</a>
+          <a href="#" class="subscribe contact" style="text-align: left; outline: none; position: absolute;left: 369px;top: 91px;height: 30px; line-height: 24px;">邮件订阅</a>
+          <a href="#" class="contact get-qr-code" role="button" style="width: 75px; height: 25px; position: absolute;width:175px; left: 550px; top: 92px; line-height: 24px;">
+              <span>点击获取公众号二维码</span>
+              <img src="/index/static/brain/page/home/img/qr-code.png" style="display:none; position: absolute; left: 50%; top: 50%;margin: -70px 0 0 -70px;">
+          </a>
         </div>
     </div>
 </div>

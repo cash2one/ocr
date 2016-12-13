@@ -3,13 +3,13 @@
     margin: auto;
     background: url('/index/static/brain/page/tx/img/tx-sprite-cp@2x.png') no-repeat;
     position: relative;
-    background-size: 1600px;
+    background-size: 1620px;
 }
 
 @media all and (min-resolution: 2dppx) {
     .sprite {
         background: url("/index/static/brain/page/tx/img/tx-sprite-cp@2x.png") no-repeat;
-        background-size: 1600px;
+        background-size: 1620px;
     }
 }
 
