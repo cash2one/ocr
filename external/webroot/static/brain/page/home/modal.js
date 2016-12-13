@@ -69,8 +69,9 @@
         var test = [
             {
                 tester: function (val) {
-                    if (!val)
+                    if (!val) {
                         return false;
+                    }
                     return /^[\u4e00-\u9fa5a-zA-Z]+$/.test(val);
                 },
                 err: '请输入姓名'
@@ -298,11 +299,11 @@
 function Modal() {
     if (!Modal.container) {
         Modal.container = $(
-            '<div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; display: none">' +
-            '<div class="modal-bg" style="position: absolute;width: 100%; height: 100%;top: 0; left: 0;">' +
-            '</div>' +
-            '<div class="modal-content"></div>' +
-            '</div>');
+            '<div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; display: none">'
+            + '<div class="modal-bg" style="position: absolute;width: 100%; height: 100%;top: 0; left: 0;">'
+            + '</div>'
+            + '<div class="modal-content"></div>'
+            + '</div>');
         $(document.body).append(Modal.container);
     }
     var container = Modal.container;
@@ -314,5 +315,5 @@ function Modal() {
         close: function () {
             container.hide();
         }
-    }
+    };
 }

@@ -11,9 +11,9 @@
     top: 50%;
     background: #fff;
     -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .modal-head {
@@ -44,7 +44,8 @@
     left: 127px;
 }
 
-.sub, .cancel {
+.sub,
+.cancel {
     display: inline-block;
     vertical-align: top;
     line-height: 35px;
@@ -255,8 +256,8 @@
     display: inline-block;
     vertical-align: middle;
     -webkit-animation: loading 4s linear infinite;
-    -moz-animation: loading 4s linear infinite;
-    animation: loading 4s linear infinite;
+       -moz-animation: loading 4s linear infinite;
+            animation: loading 4s linear infinite;
 }
 .consult-modal-content .qr-code-alert {
     text-align: center;
