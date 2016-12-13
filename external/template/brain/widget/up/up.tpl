@@ -107,9 +107,9 @@
 -->
 <div class="contact-section" id="contact-us">
     <div class="contact-pic">
-        <a href="#" class="contact consult" style="text-align: left; outline: none; position: absolute;left: 125px;top: 91px;height: 30px; line-height: 24px;">立即提交</a>
-        <a href="#" class="subscribe contact" style="text-align: left; outline: none; position: absolute;left: 369px;top: 91px;height: 30px; line-height: 24px;">邮件订阅</a>
-        <a href="#" class="contact get-qr-code" role="button" style="width: 75px; height: 25px; position: absolute;width:175px; left: 550px; top: 92px; line-height: 24px;">
+        <a href="#" class="contact consult" style="text-align: left; outline: none; position: absolute;left: 125px;top: 107px;height: 30px; line-height: 24px;">立即提交</a>
+        <a href="#" class="subscribe contact" style="text-align: left; outline: none; position: absolute;left: 369px;top: 107px;height: 30px; line-height: 24px;">邮件订阅</a>
+        <a href="#" class="contact get-qr-code" role="button" style="width: 75px; height: 25px; position: absolute;width:175px; left: 550px; top: 107px; line-height: 24px;">
             <span>点击获取公众号二维码</span>
             <img src="/index/static/brain/page/home/img/qr-code.png" style="display:none; position: absolute; left: 50%; top: 50%;margin: -70px 0 0 -70px;">
         </a>
