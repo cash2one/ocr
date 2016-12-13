@@ -27,34 +27,14 @@
     </div>
     <div class="sprite relative" style="height: 443px;background-position: center -500px" id="intro">
         <a class="absolute btn-bg-white"
-           style="height: 30px;  width: 80px; left: 95px; top: 337px; line-height: 28px; text-align: center;"
+           style="height: 31px;  width: 81px; left: 89px; top: 347px; line-height: 28px; text-align: center;"
            href="https://cloud.baidu.com/product/ocr.html" target="_blank">查看更多</a>
-        <!--<a class="absolute btn-bg-white"
-           style="height: 30px;  width: 80px; left: 285px; top: 361px; line-height: 28px; text-align: center;"
-           href="http://idl-api.baidu.com/?r=demo/ocr&type=LocateRecognize" target="_blank">技术体验</a>
-        -->
         <a class="absolute btn-bg-white"
-           style="height: 30px;  width: 80px; left: 562px; top: 337px; line-height: 28px; text-align: center;"
+           style="height: 31px;  width: 82px; left: 561px; top: 347px; line-height: 28px; text-align: center;"
            href="https://cloud.baidu.com/product/bfr.html" target="_blank">查看更多</a>
-        <!--<a class="absolute btn-bg-white"
-           style="height: 30px;  width: 80px; left: 925px; top: 361px; line-height: 28px; text-align: center;"
-           href="http://idl-api.baidu.com/?r=demo/facebase" target="_blank">技术体验</a>
-           -->
         <a class="absolute btn-bg-white"
-           style="height: 30px;  width: 80px; left: 1035px; top: 337px; line-height: 28px; text-align: center;"
+           style="height: 31px;  width: 82px; left: 1040px; top: 347px; line-height: 28px; text-align: center;"
            href="mailto:ai@baidu.com" target="_blank">技术咨询</a>
-        <!--
-        <a class="absolute btn-bg-white"
-           style="height: 30px;  width: 80px; left: 762px; top: 337px; line-height: 28px; text-align: center;"
-           href="http://idl-api.baidu.com/?r=demo/democlass&type=class970" target="_blank">技术体验</a>
-
-        <a class="absolute btn-bg-white"
-           style="height: 30px;  width: 80px; left: 985px; top: 337px; line-height: 28px; text-align: center;"
-           href="http://idl-api.baidu.com/?r=idl/tec" target="_blank">查看更多</a>
-        <a class="absolute btn-bg-white"
-           style="height: 30px;  width: 80px; left: 1075px; top: 337px; line-height: 28px; text-align: center;"
-           href="http://stu.baidu.com" target="_blank">技术体验</a>
-           -->
     </div>
     <!--<div class="sep-line"></div>-->
     <div>
@@ -118,9 +98,9 @@
     -->
     <div style="background: #f5f5f5" id="contact-us">
         <div class="sprite" style="height: 172px;background-position: center -1965px">
-          <a href="#" class="contact consult" style="text-align: left; outline: none; position: absolute;left: 125px;top: 107px;height: 30px; line-height: 24px;">立即提交</a>
-          <a href="#" class="subscribe contact" style="text-align: left; outline: none; position: absolute;left: 369px;top: 107px;height: 30px; line-height: 24px;">邮件订阅</a>
-          <a href="#" class="contact get-qr-code" role="button" style="width: 75px; height: 25px; position: absolute;width:175px; left: 550px; top: 107px; line-height: 24px;">
+          <a href="#" class="contact consult" style="text-align: left; outline: none; position: absolute;left: 125px;top: 93px;height: 30px; line-height: 24px;">立即提交</a>
+          <a href="#" class="subscribe contact" style="text-align: left; outline: none; position: absolute;left: 369px;top: 93px;height: 30px; line-height: 24px;">邮件订阅</a>
+          <a href="#" class="contact get-qr-code" role="button" style="width: 75px; height: 25px; position: absolute;width:175px; left: 550px; top: 93px; line-height: 24px;">
               <span>点击获取公众号二维码</span>
               <img src="/index/static/brain/page/home/img/qr-code.png" style="display:none; position: absolute; left: 50%; top: 50%;margin: -70px 0 0 -70px;">
           </a>
