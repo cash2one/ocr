@@ -16,7 +16,7 @@
         + '<tr><td style="text-align: right; width: 106px">验证码</td>'
         + '<td  style="padding-left: 20px" class="qr-code-input">'
         + '<input type="text" maxlength="4"  style="width:60px !important" name="code">'
-        + '<a style="margin-right: 45%;"><img alt="点击刷新验证码" style="margin-top:2px"  src="/seccode?action=show"></a>'
+        + '<a style="margin-right: 45%;"><img alt="点击刷新验证码" style="margin-top:2px"  src="/index/seccode?action=show"></a>'
         + '</td></tr>'
         + '</table><p class="error"></p>'
         + '<div style="text-align: center;position: relative;left: 7px;">'
@@ -107,7 +107,7 @@
             isPass = 0;
         }
         if (isPass === 1) {
-            $.post('/seccode', {
+            $.post('/index/seccode', {
                 action: 'check',
                 code: arr[3].value
             }, 'json').success(function (res) {
@@ -175,7 +175,7 @@
             '</div>',
             '<div class="qr-code-input">',
             '<input type="text" maxlength="4"  placeholder="请输入正确的验证码" name="code">',
-            '<a><img alt="点击刷新验证码" src="/seccode?action=show"></a>',
+            '<a><img alt="点击刷新验证码" src="/index/seccode?action=show"></a>',
             '</div>',
             '<div id="consult-info-warning"></div>',
             '<div class="form-actions">',
@@ -245,7 +245,7 @@
             }
         }
 
-        $.post('/seccode', {
+        $.post('/index/seccode', {
             action: 'check',
             code: form.find('input[name=code]').val()
         }, 'json').success(function (res) {
@@ -253,7 +253,7 @@
                 var codeInput = form.find('input[name=code]');
                 codeInput.addClass('has-error');
                 form.find('#consult-info-warning').html(codeInput.attr('placeholder'));
-                $('.qr-code-input img').attr('src', '/seccode?action=show&t=' + new Date().getTime());
+                $('.qr-code-input img').attr('src', '/index/seccode?action=show&t=' + new Date().getTime());
                 return false;
             }
             modal.container.html(consultModalHtml.loading);
@@ -291,7 +291,7 @@
     });
     $(document.body).on('click', '.qr-code-input>a', function (e) {
         e.preventDefault();
-        $(this).find('img').attr('src', '/seccode?action=show&t=' + new Date().getTime());
+        $(this).find('img').attr('src', '/index/seccode?action=show&t=' + new Date().getTime());
     });
 })();
 
