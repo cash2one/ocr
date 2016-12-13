@@ -17,8 +17,14 @@ class Brain_Seccode {
      */
     public static function showSeccode() {
         $seccode = rand(100000, 999999);
-        session_start();
-        $_SESSION[$_SERVER['REMOTE_ADDR'].'_seccode'] = $seccode;
+        
+        //session_start();
+        //$_SESSION[$_SERVER['REMOTE_ADDR'].'_seccode'] = $seccode;
+        $session_k = md5(time() . rand());
+        setcookie("seccode", $session_k, time() + 30 * 60);
+        $dbSession = new Dao_Session();
+        $dbSession->setSession($session_k, $seccode, date('Y-m-d H:i:s', time() + 30 * 60));
+        $dbSession->clearExpiredSession();
 
         header("Expires: -1");
         header("Cache-Control: no-store, private, post-check=0, pre-check=0, max-age=0", flase);
@@ -53,8 +59,12 @@ class Brain_Seccode {
      * @return void
      */
     public static function getSeccode($isClear=1) {
-        session_start();
-        $seccode = $_SESSION[$_SERVER['REMOTE_ADDR'].'_seccode'];
+        //session_start();
+        //$seccode = $_SESSION[$_SERVER['REMOTE_ADDR'].'_seccode'];
+        $session_k = $_COOKIE["seccode"];
+        $dbSession = new Dao_Session();
+        $dataSession = $dbSession->getSession($session_k);
+        $seccode = $dataSession[0]['v'];
 
         if($seccode == '')
         {
@@ -64,7 +74,9 @@ class Brain_Seccode {
         {
             if($isClear == 1)
             {
-                unset($_SESSION[$_SERVER['REMOTE_ADDR'].'_seccode']);
+                //unset($_SESSION[$_SERVER['REMOTE_ADDR'].'_seccode']);
+                setcookie("seccode", '', time() - 30 * 60);
+                $dbSession->setSession($session_k, '', 0);
             }
             $code = new Lib_Seccode();
             $code->seccodeconvert($seccode);
