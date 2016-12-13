@@ -844,6 +844,17 @@
                 "brain:page/home/home.css"
             ]
         },
+        "brain:page/home/modal.js": {
+            "uri": "/index/static/brain/page/home/modal.js",
+            "type": "js",
+            "deps": [
+                "brain:page/home/modal.css"
+            ]
+        },
+        "brain:page/home/modal.css": {
+            "uri": "/index/static/brain/page/home/modal.css",
+            "type": "css"
+        },
         "brain:page/home/home.tpl": {
             "uri": "/template/brain/page/home/home.tpl",
             "type": "tpl",
@@ -851,6 +862,8 @@
                 "isPage": true
             },
             "deps": [
+                "brain:page/home/modal.css",
+                "brain:page/home/modal.js",
                 "brain:page/home/home.js",
                 "brain:page/home/home.css"
             ]
@@ -873,6 +886,8 @@
                 "isPage": true
             },
             "deps": [
+                "brain:page/home/modal.css",
+                "brain:page/home/modal.js",
                 "brain:page/language/language.js",
                 "brain:page/language/language.css"
             ]
@@ -917,6 +932,8 @@
                 "isPage": true
             },
             "deps": [
+                "brain:page/home/modal.css",
+                "brain:page/home/modal.js",
                 "brain:page/ml/ml.js",
                 "brain:page/ml/ml.css"
             ]
@@ -1820,6 +1837,8 @@
                 "isPage": true
             },
             "deps": [
+                "brain:page/home/modal.css",
+                "brain:page/home/modal.js",
                 "brain:page/tx/tx.js",
                 "brain:page/tx/tx.css"
             ]
@@ -1842,6 +1861,8 @@
                 "isPage": true
             },
             "deps": [
+                "brain:page/home/modal.css",
+                "brain:page/home/modal.js",
                 "brain:page/up/up.js",
                 "brain:page/up/up.css"
             ]
@@ -1864,6 +1885,8 @@
                 "isPage": true
             },
             "deps": [
+                "brain:page/home/modal.css",
+                "brain:page/home/modal.js",
                 "brain:page/voice/voice.js",
                 "brain:page/voice/voice.css"
             ]
