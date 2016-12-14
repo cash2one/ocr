@@ -38,8 +38,7 @@ class Action_Subscribe extends Ap_Action_Abstract {
         if($strAction == 'add')
         {
             $strCode = strtoupper(Brain_Util::getParamAsString($arrInput, 'code'));
-            if(!Brain_Seccode::checkSeccode($strCode) &&
-                $strAction != 'chooseReason')
+            if(!Brain_Seccode::checkSeccode($strCode))
             {
                 Brain_Output::jsonOutput(2, 'code is wrong');
                 return;

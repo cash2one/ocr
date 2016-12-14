@@ -21,7 +21,7 @@ class Brain_Seccode {
         //session_start();
         //$_SESSION[$_SERVER['REMOTE_ADDR'].'_seccode'] = $seccode;
         $session_k = md5(time() . rand());
-        setcookie("seccode", $session_k, time() + 30 * 60);
+        setcookie("seccode", $session_k, time() + 30 * 60, '/');
         $dbSession = new Dao_Session();
         $dbSession->setSession($session_k, $seccode, date('Y-m-d H:i:s', time() + 30 * 60));
         $dbSession->clearExpiredSession();
@@ -75,7 +75,7 @@ class Brain_Seccode {
             if($isClear == 1)
             {
                 //unset($_SESSION[$_SERVER['REMOTE_ADDR'].'_seccode']);
-                setcookie("seccode", '', time() - 30 * 60);
+                setcookie("seccode", '', time() - 30 * 60, '/');
                 $dbSession->setSession($session_k, '', 0);
             }
             $code = new Lib_Seccode();
@@ -96,6 +96,7 @@ class Brain_Seccode {
     public static function checkSeccode($strCode, $isClear=1) {
         $seccode = Brain_Seccode::getSeccode($isClear);
 
+        //echo $seccode, ',', $strCode;
         if($strCode != '' && $seccode != '' && $seccode == $strCode)
         {
             return true;
