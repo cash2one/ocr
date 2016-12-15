@@ -45,7 +45,7 @@ export const CONSULTATION_TMPL = {
         '</form>'
     ].join(''),
     'LOADING': [
-        '<div class="consult-loading">正在提交<span class="loading-dot">...........</span></div>',
+        '<div class="consult-loading">正在提交<span class="loading-dot">...........</span></div>'
     ].join(''),
     'SUCCESS': [
         '<div class="consult-success">',
