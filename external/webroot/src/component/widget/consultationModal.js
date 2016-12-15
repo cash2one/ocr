@@ -69,7 +69,7 @@ export class ConsultationModal extends Modal {
                     return false;
                 }
             }
-            checkQRCode ({
+            checkQRCode({
                 code: form.find('input[name=code]').val(),
                 success: res => {
                     if (res.errno !== 0) {
@@ -102,7 +102,7 @@ export class ConsultationModal extends Modal {
                     });
                 },
                 fail: () => this.applyFail()
-            })
+            });
         });
 
         modal.on('click', 'button.cancel', e => {
@@ -121,4 +121,4 @@ export class ConsultationModal extends Modal {
         });
 
     }
-};
+}

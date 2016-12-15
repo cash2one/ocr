@@ -78,7 +78,7 @@ export class SubscriptionModal extends Modal {
                     return false;
                 }
             }
-            checkQRCode ({
+            checkQRCode({
                 code: form.find('input[name=code]').val(),
                 success: res => {
                     if (res.errno !== 0) {
@@ -126,4 +126,4 @@ export class SubscriptionModal extends Modal {
         });
 
     }
-};
+}

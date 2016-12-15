@@ -17,7 +17,7 @@ export class News {
     }
 
     render() {
-        let convertTimeFormat = (seconds) => {
+        let convertTimeFormat = seconds => {
             let date = new Date(seconds * 1000);
             let fillZero = function (number) {
                 return (number < 10 ? '0' : '') + number;
@@ -44,4 +44,4 @@ export class News {
             fail: res => {throw ('获取新闻数据接口发生错误，error msg: ' + res.msg);}
         });
     }
-};
+}
