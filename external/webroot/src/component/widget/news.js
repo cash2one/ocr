@@ -3,14 +3,14 @@
  * @author shiliang@baidu.com
  */
 'use strict';
-'use strict';
 
-import {getNews} from '../../model/news';
-import {NEWS_TMPL} from '../../partials/news';
 import EJS from 'ejs';
 import $ from 'jquery';
+import {getNews} from '../../model/news';
+import {NEWS_TMPL} from '../../partials/news';
 
-export class News {
+
+export default class News {
     constructor({selector, newsCounter}) {
         this.selector = selector;
         this.newsCounter = newsCounter;

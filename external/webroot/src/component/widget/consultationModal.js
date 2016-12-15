@@ -7,12 +7,12 @@
 import EJS from 'ejs';
 import $ from 'jquery';
 
-import CONSULTATION_TMPL from '../../partials/consultation';
 import Modal from '../common/modal';
+import {CONSULTATION_TMPL} from '../../partials/consultation';
 import {checkQRCode, sendConsultation} from '../../model/consultation';
 
 
-export class ConsultationModal extends Modal {
+export default class ConsultationModal extends Modal {
     constructor(container = 'body', id = 'consultation-modal', title = '合作咨询') {
         super(container, id, title);
     }

@@ -7,13 +7,13 @@
 import EJS from 'ejs';
 import $ from 'jquery';
 
-import SUBSCRIPTION_TMPL from '../../partials/subscription';
 import Modal from '../common/modal';
+import {SUBSCRIPTION_TMPL} from '../../partials/subscription';
 import {checkQRCode} from '../../model/consultation';
 import {subscribe} from '../../model/subscription';
 
 
-export class SubscriptionModal extends Modal {
+export default class SubscriptionModal extends Modal {
     constructor(container = 'body', id = 'subscription-modal', title = '订阅百度大脑最新消息') {
         super(container, id, title);
     }

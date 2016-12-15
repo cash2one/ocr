@@ -5,7 +5,7 @@
 'use strict';
 
 import $ from 'jquery';
-import {News} from '../component/widget/news';
+import News from '../component/widget/news';
 import ConsultationModal from '../component/widget/consultationModal';
 import SubscriptionModal from '../component/widget/subscriptionModal';
 
