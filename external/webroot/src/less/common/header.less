@@ -1,0 +1,263 @@
+@header-background-color: #14191e;
+@header-height: 50px;
+@template-png: url('../../images/template.png');
+
+
+header.header-nav{
+  height: @header-height;
+  background-color: @header-background-color;
+  color: @white;
+  border-bottom: 1px solid fadeOut(@white, 95%);
+
+  .logo {
+    height: 100%;
+    width: 100px;
+    background: @template-png no-repeat -10px 0;
+    margin-right: 60px;
+    display: inline-block;
+    float: left;
+
+    & > a {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .top-nav {
+    height: 100%;
+    display: inline-block;
+    float: left;
+
+    & > ul {
+      display: block;
+
+      & > li {
+        display: inline-block;
+        float: left;
+        line-height: @header-height - 2px;
+        padding: 0 4px;
+        margin: 0 16px;
+        border-bottom: 3px solid transparent;
+        position: relative;
+
+        & > a {
+          display: inline-block;
+        }
+
+        .sub-top-nav{
+          display: none;
+          position: absolute;
+          top: 51px;
+          left: -16px;
+          background-color: @header-background-color;
+          box-shadow: 0 2px 6px rgba(0,0,0,.4);
+          padding: 20px 10px;
+          min-width: 90px;
+          z-index: 99;
+
+          & > li {
+            line-height: normal;
+            line-height: initial;
+            padding: 0 10px;
+
+            & + li {
+              margin-top: 20px;
+            }
+
+            & > a {
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+
+      & > li:hover {
+        border-bottom: 3px solid @white;
+
+        & > .sub-top-nav{
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .login {
+    height: 100%;
+    display: inline-block;
+    float: right;
+
+    & > ul {
+      display: block;
+
+      & > li {
+        display: inline-block;
+        float: left;
+        margin-left: 20px;
+        line-height: @header-height - 2px;
+
+        & > a {
+          display: inline-block;
+
+          &.free-demo {
+            border-radius: 2px;
+            background-color: #0073eb;
+            box-shadow: 2px 0 3px fadeOut(@black, 80%);
+            height: 26px;
+            line-height: 26px;
+            margin-top: 11px;
+            padding: 0 15px;
+
+            &:hover {
+              background-color: #1a81ed;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#tech-service {
+  width: 1160px;
+  left: -254px;
+
+  & > li {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .tech-title {
+    font-size: @font-size-4;
+    margin-bottom: 20px;
+
+    .tech-title-icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      float: left;
+      margin-top: 2px;
+      margin-right: 10px;
+    }
+  }
+
+  .sub-tech-title {
+    position: relative;
+
+    span {
+      padding: 0 10px 0 30px;
+      background-color: @header-background-color;
+      position: relative;
+      z-index: 1;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      background-color: fadeOut(#f5f5f5, 50%);
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 1px;
+      background-color: fadeOut(#fff, 95%);
+      position: absolute;
+      top: 9px;
+      left: 0;
+      right: 30px;
+      z-index: 0;
+    }
+  }
+
+  .tech-list {
+    padding: 0 30px;
+    margin-bottom: 10px;
+
+    & > li {
+      margin-top: 10px;
+      display: inline-block;
+      margin-right: 10px;
+      background-color: fadeOut(@white, 95%);
+      position: relative;
+
+      & > a {
+        font-size: @font-size-1;
+        display: inline-block;
+        height: 26px;
+        padding: 0 10px;
+        width: 100px;
+        line-height: 26px;
+        position: relative;
+        z-index: 1;
+
+        &:active {
+          outline: none;
+          background-color: #005cbc;
+          box-shadow: 0 2px 5px fadeOut(@black, 60%);
+        }
+      }
+
+      &:hover {
+        a {
+          box-shadow: 0 2px 3px fadeOut(@black, 80%);
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        background-color: #0073eb;
+        transition: all 0.2s linear;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  #tech-user-profile,
+  #tech-machine-learning {
+    width: 25%;
+    margin-top: 10px;
+  }
+
+  #tech-nlp {
+    margin-top: -19px;
+  }
+
+  #tech-speech .tech-title-icon {
+    .icon(@template-png, -130px, -10px);
+  }
+
+  #tech-image .tech-title-icon {
+    .icon(@template-png, -190px, -10px);
+  }
+
+  #tech-nlp .tech-title-icon {
+    .icon(@template-png, -160px, -10px);
+  }
+
+  #tech-user-profile .tech-title-icon {
+    .icon(@template-png, -220px, -10px);
+  }
+
+  #tech-machine-learning .tech-title-icon {
+    .icon(@template-png, -250px, -10px);
+  }
+}
