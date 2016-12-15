@@ -62,7 +62,7 @@
 
     $(document.body).on('submit', '.frm', function (e) {
         e.preventDefault();
-        var url = './subscribe';
+        var url = '/index/subscribe';
         var arr = $(this).serializeArray();
         var $error = $('.error');
         var isPass = 1;
@@ -257,7 +257,7 @@
                 return false;
             }
             modal.container.html(consultModalHtml.loading);
-            $.post('/case', {
+            $.post('/index/case', {
                 tech: form.find('input[name=tech]:checked').val(),
                 company: form.find('input[name=company]').val(),
                 username: form.find('input[name=username]').val(),
