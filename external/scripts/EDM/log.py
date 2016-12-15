@@ -123,7 +123,7 @@ def add_streamhandler(level, fmt):
     return add_handler(logging.StreamHandler, level, fmt, True)
 
 
-def add_filehandler(level, fmt, filename , mode, backup_count, limit, when):
+def add_filehandler(level, fmt, filename, mode, backup_count, limit, when):
     """Add a file handler to the global logger."""
     kwargs = {}
 
@@ -138,12 +138,12 @@ def add_filehandler(level, fmt, filename , mode, backup_count, limit, when):
     # Choose the filehandler based on the passed arguments
     if backup_count == 0: # Use FileHandler
         cls = logging.FileHandler
-        kwargs['mode' ] = mode
+        kwargs['mode'] = mode
     elif when is None:  # Use RotatingFileHandler
         cls = logging.handlers.RotatingFileHandler
         kwargs['maxBytes'] = limit
         kwargs['backupCount'] = backup_count
-        kwargs['mode' ] = mode
+        kwargs['mode'] = mode
     else: # Use TimedRotatingFileHandler
         cls = logging.handlers.TimedRotatingFileHandler
         kwargs['when'] = when
