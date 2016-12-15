@@ -81,6 +81,7 @@ def send(receiver, sub, content, img_list):
 
 
 class SendThread(threading.Thread):
+    """"send thread""
     def __init__(self, receiver, sub, content, img_list):
         """
         init

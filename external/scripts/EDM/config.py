@@ -1,4 +1,7 @@
 # -*- coding: UTF-8 -*-
+"""
+config
+"""
 import MySQLdb
 import time
 import os
@@ -47,7 +50,7 @@ def exec_sql(sql, balanceTime=0):
     '''
 
     if balanceTime > 0:
-        results = threading.Thread(target=do_exec_sql,args=(sql_cmd,balanceTime,)).start()
+        results = threading.Thread(target=do_exec_sql, args=(sql_cmd, balanceTime,)).start()
     else:
         results = do_exec_sql(sql_cmd)
     return results

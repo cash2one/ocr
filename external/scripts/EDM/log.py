@@ -1,7 +1,7 @@
 #!/usr/local/python/bin
 # coding=utf-8
 
-'''Implements a simple log library.
+"""Implements a simple log library.
 
 This module is a simple encapsulation of logging module to provide a more
 convenient interface to write log. The log will both print to stdout and
@@ -46,7 +46,7 @@ Example 2: Use set_logger to change settings
 
     # Change default log formatter
     log.set_logger(fmt = '[%(levelname)s] %(message)s'
-'''
+"""
 
 __author__ = "tuantuan.lv <dangoakachan@foxmail.com>"
 __status__ = "Development"
@@ -72,31 +72,33 @@ COLOR_RESET='\033[1;0m'
 
 # Define log color
 LOG_COLORS = {
-	'DEBUG': '%s',
-	'INFO': COLOR_GREEN + '%s' + COLOR_RESET,
-	'WARNING': COLOR_YELLOW + '%s' + COLOR_RESET,
-	'ERROR': COLOR_RED + '%s' + COLOR_RESET,
-	'CRITICAL': COLOR_RED + '%s' + COLOR_RESET,
-	'EXCEPTION': COLOR_RED + '%s' + COLOR_RESET,
+    'DEBUG': '%s',
+    'INFO': COLOR_GREEN + '%s' + COLOR_RESET,
+    'WARNING': COLOR_YELLOW + '%s' + COLOR_RESET,
+    'ERROR': COLOR_RED + '%s' + COLOR_RESET,
+    'CRITICAL': COLOR_RED + '%s' + COLOR_RESET,
+    'EXCEPTION': COLOR_RED + '%s' + COLOR_RESET,
 }
 
 # Global logger
 g_logger = None
 
+
 class ColoredFormatter(logging.Formatter):
-	'''A colorful formatter.'''
+    """A colorful formatter."""
 
-	def __init__(self, fmt = None, datefmt = None):
-		logging.Formatter.__init__(self, fmt, datefmt)
+    def __init__(self, fmt=None, datefmt=None):
+        logging.Formatter.__init__(self, fmt, datefmt)
 
-	def format(self, record):
-		level_name = record.levelname
-		msg = logging.Formatter.format(self, record)
+    def format(self, record):
+        level_name = record.levelname
+        msg = logging.Formatter.format(self, record)
 
-		return LOG_COLORS.get(level_name, '%s') % msg
+        return LOG_COLORS.get(level_name, '%s') % msg
+
 
 def add_handler(cls, level, fmt, colorful, **kwargs):
-    '''Add a configured handler to the global logger.'''
+    """Add a configured handler to the global logger."""
     global g_logger
 
     if isinstance(level, str):
@@ -115,12 +117,14 @@ def add_handler(cls, level, fmt, colorful, **kwargs):
 
     return handler
 
+
 def add_streamhandler(level, fmt):
-    '''Add a stream handler to the global logger.'''
+    """Add a stream handler to the global logger."""
     return add_handler(logging.StreamHandler, level, fmt, True)
 
+
 def add_filehandler(level, fmt, filename , mode, backup_count, limit, when):
-    '''Add a file handler to the global logger.'''
+    """Add a file handler to the global logger."""
     kwargs = {}
 
     # If the filename is not set, use the default filename
@@ -148,8 +152,9 @@ def add_filehandler(level, fmt, filename , mode, backup_count, limit, when):
 
     return add_handler(cls, level, fmt, False, **kwargs)
 
+
 def init_logger():
-    '''Reload the global logger.'''
+    """Reload the global logger."""
     global g_logger
 
     if g_logger is None:
@@ -160,10 +165,11 @@ def init_logger():
 
     g_logger.setLevel(logging.DEBUG)
 
-def set_logger(filename = None, mode = 'a', level='ERROR:DEBUG',
-               fmt = '[%(levelname)s] [%(asctime)s] [%(filename)s:%(lineno)d] [msg:%(message)s]',
-               backup_count = 5, limit = 20480, when = None):
-    '''Configure the global logger.'''
+
+def set_logger(filename=None, mode='a', level='ERROR:DEBUG',
+               fmt='[%(levelname)s] [%(asctime)s] [%(filename)s:%(lineno)d] [msg:%(message)s]',
+               backup_count=5, limit=20480, when=None):
+    """Configure the global logger."""
     level = level.split(':')
 
     if len(level) == 1: # Both set to the same level
@@ -179,8 +185,9 @@ def set_logger(filename = None, mode = 'a', level='ERROR:DEBUG',
     # Import the common log functions for convenient
     import_log_funcs()
 
+
 def import_log_funcs():
-    '''Import the common log functions from the global logger to the module.'''
+    """Import the common log functions from the global logger to the module."""
     global g_logger
 
     curr_mod = sys.modules[__name__]
@@ -188,8 +195,8 @@ def import_log_funcs():
                  'exception']
 
     for func_name in log_funcs:
-		func = getattr(g_logger, func_name)
-		setattr(curr_mod, func_name, func)
+        func = getattr(g_logger, func_name)
+        setattr(curr_mod, func_name, func)
 
 # Set a default logger
 set_logger()
