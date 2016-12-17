@@ -12,8 +12,12 @@ import SubscriptionModal from '../component/widget/subscriptionModal';
 
 $(document).ready(function () {
     // 绑定视窗滚动事件
-    $(window).scroll(() => {
+    let toggleBackTop = () => {
         $('.back-top').toggle($('body').scrollTop() > $(window).height() / 2);
+    };
+    toggleBackTop();
+    $(window).scroll(() => {
+        toggleBackTop();
     });
 
     $('.back-top > a').click(() => {

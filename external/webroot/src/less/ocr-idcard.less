@@ -1,0 +1,41 @@
+@import 'common/helper.less';
+@import 'common/global.less';
+
+@banner: url('../../images/ocr-idcard-banner.png');
+@icons: url('../../images/ocr-idcard-icons.png');
+@intro: url('../../images/ocr-idcard-intro.png');
+
+@import './common/tech-page.less';
+
+.tech-section {
+  &.tech-feature{
+    .feature-item + .feature-item{
+      margin-left: 110px;
+    }
+
+    .feature-item:nth-child(1) .feature-icon{
+      .icon(@icons, -10px, -10px);
+    }
+    .feature-item:nth-child(2) .feature-icon{
+      .icon(@icons, -100px, -10px);
+    }
+    .feature-item:nth-child(3) .feature-icon{
+      .icon(@icons, -190px, -10px);
+    }
+  }
+  &.tech-scene{
+    .scene-item + .scene-item{
+      margin-left: 50px;
+    }
+
+    .scene-item:nth-child(1) .scene-icon{
+      .icon(@icons, -10px, -110px);
+    }
+    .scene-item:nth-child(2) .scene-icon{
+      .icon(@icons, -60px, -110px);
+    }
+    .scene-item:nth-child(3) .scene-icon{
+      .icon(@icons, -110px, -110px);
+    }
+  }
+}

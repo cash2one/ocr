@@ -153,7 +153,7 @@ gulp.task('html_watch', function () {
 
             var tasks = files.map(function (entry) {
                 var data = fs.readFileSync(entry, 'utf-8');
-                var basename = entry.match(/\/(\w+)\.html/)[1];
+                var basename = entry.match(/\/([\w-]+)\.html/)[1];
                 return gulp.src('./src/view/common/template.html')
                     .pipe(replace(/{{body}}/g, data))
                     .pipe(replace(/<\/head>/g, '<link rel="stylesheet" href="/dist/css/' + basename + '.css"></head>'))
