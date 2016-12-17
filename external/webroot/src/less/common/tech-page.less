@@ -1,0 +1,241 @@
+.tech-section {
+  padding: 50px 0 40px;
+
+  h2 {
+    font-size: 30px;
+    color: #333;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .shadow {
+    position: relative;
+
+    &::after {
+      content: "";
+      -webkit-transition: all .1s linear;
+      -moz-transition: all .1s linear;
+      -o-transition: all .1s linear;
+      transition: all .1s linear;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: -10px;
+      top: -10px;
+      padding: 10px;
+      background-color: @white;
+      z-index: -1;
+      opacity: 0;
+    }
+
+    &:hover::after {
+      border-top-color: @blue;
+      opacity: 1;
+      box-shadow: 0 2px 8px fadeOut(@black, 80%);
+    }
+  }
+
+  &.tech-banner {
+    height: 400px;
+    box-sizing: border-box;
+    background-color: #f0f7fc;
+    .icon(@banner, center, center);
+
+    .container {
+      height: auto;
+    }
+
+    h1 {
+      font-size: 42px;
+      line-height: 42px;
+      padding: 50px 0 13px;
+    }
+
+    p {
+      font-size: @font-size-3;
+      line-height: @font-size-3 + 15px;
+      color: #666;
+      margin-bottom: 33px;
+    }
+
+    a + a {
+      margin-left: 10px;
+    }
+  }
+
+  &.tech-intro {
+    height: 400px;
+    .icon(@intro, center, center);
+    background-size: cover;
+
+    .container {
+      height: auto;
+
+      & > h2 {
+        color: @white;
+        margin-bottom: 15px;
+      }
+
+      & > p {
+        color: @white;
+        text-align: center;
+        font-size: @font-size-3;
+        line-height: @font-size-3 + 10px;
+        margin: 0 auto;
+      }
+    }
+
+  }
+
+  &.tech-demo {
+
+  }
+
+  &.tech-feature {
+    border-top: 1px solid fadeOut(@black, 95%);
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    .feature-item {
+      width: 280px;
+      float: left;
+      display: inline-block;
+      padding: 10px 20px;
+      min-height: 205px;
+
+      .feature-icon {
+        display: block;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+      }
+
+      .feature-desc {
+        cursor: default;
+
+        h3 {
+          font-size: 18px;
+          color: #333;
+          line-height: 18px;
+          margin: 20px 0 15px;
+          text-align: center;
+        }
+
+        p {
+          color: #666;
+          line-height: @font-size-2 + 10px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &.tech-scene{
+    border-top: 1px solid fadeOut(@black, 95%);
+
+    h2 {
+      margin-bottom: 50px;
+    }
+    .scene-item {
+      width: 320px;
+      float: left;
+      display: inline-block;
+      padding: 15px 20px 5px;
+      min-height: 130px;
+
+      .scene-icon {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        float: left;
+      }
+
+      .scene-desc {
+        width: 260px;
+        float: right;
+        overflow: hidden;
+        cursor: default;
+
+        h3 {
+          font-size: 18px;
+          color: #333;
+          line-height: 18px;
+          margin-bottom: 15px;
+        }
+        p {
+          color: #666;
+          line-height: @font-size-2 + 10px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &.tech-product{
+
+  }
+
+  &.get-started{
+    background-color: #f6f6f6;
+    text-align: center;
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: @font-size-3;
+      line-height: @font-size-3;
+      margin: 0 0 30px;
+      color: #666;
+    }
+  }
+
+  &.tech-guide{
+    h2 {
+      font-size: 24px;
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      float: left;
+      font-size: @font-size-3;
+      line-height: @font-size-3;
+      margin-right: 30px;
+      color: #333;
+    }
+
+    ul {
+      float: left;
+
+      & > li {
+        float: left;
+        display: inline-block;
+
+        & > a {
+          display: inline-block;
+          color: @blue;
+        }
+      }
+    }
+
+    .guide-link {
+      margin-bottom: 20px;
+
+      ul > li + li {
+        margin-left: 40px;
+      }
+    }
+
+    .question-link {
+      ul > li + li {
+        margin-left: 60px;
+      }
+    }
+  }
+}
