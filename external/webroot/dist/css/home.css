@@ -72,9 +72,33 @@
   background-color: #fff;
   color: #666 !important;
 }
+.ai-platform button.btn-other,
+.ai-platform a[role="button"].btn-other {
+  border: 1px solid #333;
+  background-color: #333;
+  color: #fff !important;
+}
+.ai-platform button.btn-other:hover,
+.ai-platform a[role="button"].btn-other:hover {
+  border: 1px solid #333;
+  background-color: #0073eb;
+}
+.ai-platform button.media,
+.ai-platform a[role="button"].media {
+  width: 110px;
+  height: 38px;
+  line-height: 36px;
+}
+.ai-platform button.large,
+.ai-platform a[role="button"].large {
+  width: 150px;
+  height: 44px;
+  line-height: 42px;
+  font-size: 18px;
+}
 .ai-platform .container {
   display: block;
-  width: 1160px;
+  width: 1180px;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -119,7 +143,7 @@
 }
 .ai-platform.page-content .banner ul.banner-content > li {
   padding: 100px 0;
-  width: 1160px;
+  width: 1180px;
   margin: 0 auto;
 }
 .ai-platform.page-content .banner ul.banner-content > li h1 {
@@ -190,10 +214,10 @@
 }
 .ai-platform.page-content .home-section.tech-service {
   background-color: #f6f6f6;
+  padding-bottom: 30px;
 }
 .ai-platform.page-content .home-section.tech-service .service-container {
   border: 1px solid rgba(0, 0, 0, 0.05);
-  margin-bottom: 30px;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-item {
   width: 33.33333%;
@@ -498,8 +522,8 @@
   z-index: -1;
   background-image: url('../../images/home-solution.png');
   background-repeat: no-repeat;
-  background-position: -220px -10px;
-  background-position-x: -220px;
+  background-position: -200px -10px;
+  background-position-x: -200px;
   background-position-y: -10px;
 }
 .ai-platform.page-content .home-section.solution .solution-container .solution-detail > div {
@@ -622,23 +646,20 @@
 .ai-platform.page-content .home-section.solution .solution-container .solution-detail .solution-desc .btn-primary {
   margin-top: 15px;
 }
-.ai-platform.page-content .home-section.tech-video .container {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+.ai-platform.page-content .home-section.tech-video ul.video-list {
+  margin: 10px 0 0;
 }
-.ai-platform.page-content .home-section.tech-video .container ul.video-list {
-  margin: 10px -10px 0;
-}
-.ai-platform.page-content .home-section.tech-video .container ul.video-list > li {
+.ai-platform.page-content .home-section.tech-video ul.video-list > li {
   width: 260px;
   padding: 10px 10px 20px;
   text-align: center;
   float: left;
   position: relative;
 }
-.ai-platform.page-content .home-section.tech-video .container ul.video-list > li + li {
+.ai-platform.page-content .home-section.tech-video ul.video-list > li + li {
   margin-left: 20px;
 }
-.ai-platform.page-content .home-section.tech-video .container ul.video-list > li::after {
+.ai-platform.page-content .home-section.tech-video ul.video-list > li::after {
   content: "";
   display: inline-block;
   height: 100%;
@@ -652,23 +673,23 @@
   -o-transition: all .1s linear;
   transition: all .1s linear;
 }
-.ai-platform.page-content .home-section.tech-video .container ul.video-list > li:hover::after {
+.ai-platform.page-content .home-section.tech-video ul.video-list > li:hover::after {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
-.ai-platform.page-content .home-section.tech-video .container ul.video-list > li h5 {
+.ai-platform.page-content .home-section.tech-video ul.video-list > li h5 {
   font-size: 12px;
   margin-top: 20px;
   color: #666;
 }
-.ai-platform.page-content .home-section.tech-video .container .more-videos {
+.ai-platform.page-content .home-section.tech-video .more-videos {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 50px;
 }
-.ai-platform.page-content .home-section.tech-video .container .more-videos > a {
+.ai-platform.page-content .home-section.tech-video .more-videos > a {
   box-shadow: none;
 }
-.ai-platform.page-content .home-section.tech-video .container .more-videos > a:hover {
+.ai-platform.page-content .home-section.tech-video .more-videos > a:hover {
   background-color: #0073eb;
   color: #fff !important;
   border-color: #0073eb;
@@ -725,4 +746,38 @@
 }
 .ai-platform.page-content .home-section.user-case ul.user-brand-list > li:hover::after {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.ai-platform.page-content .home-section.register-now {
+  padding: 50px 0 40px;
+  text-align: center;
+  background-image: url('../../images/home-register-now.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+}
+.ai-platform.page-content .home-section.register-now h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.ai-platform.page-content .home-section.register-now p {
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0 0 30px;
+  color: #fff;
+}
+.ai-platform.page-content .home-section.register-now .btn-normal {
+  width: 150px;
+  height: 42px;
+  line-height: 42px;
+  color: #fff !important;
+  background-color: transparent;
+  font-size: 18px;
+  box-shadow: none;
+}
+.ai-platform.page-content .home-section.register-now .btn-normal:hover {
+  color: #0073eb !important;
+  background-color: #fff;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
 }

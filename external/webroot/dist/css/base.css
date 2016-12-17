@@ -72,9 +72,33 @@
   background-color: #fff;
   color: #666 !important;
 }
+.ai-platform button.btn-other,
+.ai-platform a[role="button"].btn-other {
+  border: 1px solid #333;
+  background-color: #333;
+  color: #fff !important;
+}
+.ai-platform button.btn-other:hover,
+.ai-platform a[role="button"].btn-other:hover {
+  border: 1px solid #333;
+  background-color: #0073eb;
+}
+.ai-platform button.media,
+.ai-platform a[role="button"].media {
+  width: 110px;
+  height: 38px;
+  line-height: 36px;
+}
+.ai-platform button.large,
+.ai-platform a[role="button"].large {
+  width: 150px;
+  height: 44px;
+  line-height: 42px;
+  font-size: 18px;
+}
 .ai-platform .container {
   display: block;
-  width: 1160px;
+  width: 1180px;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -106,7 +130,7 @@
 html,
 body {
   font-family: "Microsoft YaHei Light", "Microsoft YaHei", "微软雅黑", "Arial Narrow", Arial, "sans-serif" !important;
-  min-width: 1180px;
+  min-width: 1200px;
   margin: 0;
 }
 header.header-nav {
@@ -213,7 +237,7 @@ header.header-nav .login > ul > li > a.free-demo {
   width: auto;
 }
 #tech-service {
-  width: 1160px;
+  width: 1180px;
   left: -254px;
 }
 #tech-service > li {
