@@ -8,7 +8,7 @@ import {MODAL_TMPL} from '../../partials/modal';
 import EJS from 'ejs';
 import $ from 'jquery';
 
-export class Modal {
+export default class Modal {
     constructor(container = 'body', id, title = '') {
         this.container = container;
         this.id = id || ('modal-' + new Date().getTime());

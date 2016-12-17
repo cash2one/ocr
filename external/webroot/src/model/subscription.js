@@ -6,7 +6,7 @@
 
 import $ from 'jquery';
 
-export const subscribe = function ({data, success = $.noop, fail = $.noop}) {
+export function subscribe({data, success = $.noop, fail = $.noop}) {
     $.post('/index/subscribe', data)
         .success(success).fail(fail);
 };
