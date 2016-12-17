@@ -14,7 +14,7 @@
 
       & > li {
         padding: 100px 0;
-        width: 1160px;
+        width: 1180px;
         margin: 0 auto;
 
         h1 {
@@ -101,10 +101,10 @@
 
     &.tech-service {
       background-color: #f6f6f6;
+      padding-bottom: 30px;
 
       .service-container {
         border: 1px solid fadeOut(@black, 95%);
-        margin-bottom: 30px;
 
         .service-item {
           width: 33.33333%;
@@ -176,7 +176,7 @@
           }
 
           &:hover::after {
-            border-top-color: #0073eb;
+            border-top-color: @blue;
             opacity: 1;
             box-shadow: 0 2px 8px fadeOut(@black, 80%);
           }
@@ -284,7 +284,6 @@
       }
     }
 
-
     &.solution {
       .solution-container {
         border: 1px solid fadeOut(@black, 95%);
@@ -309,12 +308,12 @@
 
               &.active,
               &:hover {
-                color: #0073eb;
+                color: @blue;
               }
 
               &.active::before,
               &:hover::before {
-                background-color: #0073eb !important;
+                background-color: @blue !important;
                 height: 2px !important;;
               }
 
@@ -398,7 +397,7 @@
             right: 0;
             top: 0;
             z-index: -1;
-            .icon (url('../../images/home-solution.png'), -220px, -10px);
+            .icon (url('../../images/home-solution.png'), -200px, -10px);
           }
 
 
@@ -505,63 +504,59 @@
     }
 
     &.tech-video {
-      .container {
-        border-bottom: 1px solid fadeOut(@black, 95%);
+      ul.video-list {
+        margin: 10px 0 0;
 
-        ul.video-list {
-          margin: 10px -10px 0;
+        & > li {
+          width: 260px;
+          padding: 10px 10px 20px;
+          text-align: center;
+          float: left;
+          position: relative;
 
-          & > li {
-            width: 260px;
-            padding: 10px 10px 20px;
-            text-align: center;
-            float: left;
-            position: relative;
+          & + li {
+            margin-left: 20px;
+          }
 
-            & + li {
-              margin-left: 20px;
-            }
+          &::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            box-shadow: 0 2px 8px fadeOut(@black, 100%);
+            -webkit-transition: all .1s linear;
+            -moz-transition: all .1s linear;
+            -o-transition: all .1s linear;
+            transition: all .1s linear;
+          }
 
-            &::after {
-              content: "";
-              display: inline-block;
-              height: 100%;
-              width: 100%;
-              position: absolute;
-              left: 0;
-              top: 0;
-              box-shadow: 0 2px 8px fadeOut(@black, 100%);
-              -webkit-transition: all .1s linear;
-                 -moz-transition: all .1s linear;
-                   -o-transition: all .1s linear;
-                      transition: all .1s linear;
-            }
+          &:hover::after {
+            box-shadow: 0 2px 8px fadeOut(@black, 80%);
+          }
 
-            &:hover::after {
-              box-shadow: 0 2px 8px fadeOut(@black, 80%);
-            }
-
-            h5 {
-              font-size: @font-size-1;
-              margin-top: 20px;
-              color: #666;
-            }
+          h5 {
+            font-size: @font-size-1;
+            margin-top: 20px;
+            color: #666;
           }
         }
-        .more-videos {
-          text-align: center;
-          margin-top: 10px;
-          margin-bottom: 50px;
+      }
+      .more-videos {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 50px;
 
-          & > a {
-            box-shadow: none;
+        & > a {
+          box-shadow: none;
 
-            &:hover {
-              background-color: #0073eb;
-              color: @white !important;
-              border-color: #0073eb;
-              box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
-            }
+          &:hover {
+            background-color: @blue;
+            color: @white !important;
+            border-color: @blue;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
           }
         }
       }
@@ -615,6 +610,41 @@
           &:hover::after {
             box-shadow: 0 2px 8px fadeOut(@black, 80%);
           }
+        }
+      }
+    }
+
+    &.register-now {
+      padding: 50px 0 40px;
+      text-align: center;
+      .icon (url('../../images/home-register-now.png'), center, center);
+      background-size: cover;
+
+      h2 {
+        color: @white;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: @font-size-3;
+        line-height: @font-size-3;
+        margin: 0 0 30px;
+        color: @white;
+      }
+
+      .btn-normal {
+        width: 150px;
+        height: 42px;
+        line-height: 42px;
+        color: @white !important;
+        background-color: transparent;
+        font-size: 18px;
+        box-shadow: none;
+
+        &:hover {
+          color: @blue !important;
+          background-color: @white;
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2)
         }
       }
     }
