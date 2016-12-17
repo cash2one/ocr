@@ -9,8 +9,8 @@ import $ from 'jquery';
 
 import Modal from '../common/modal';
 import {SUBSCRIPTION_TMPL} from '../../partials/subscription';
-import {checkQRCode} from '../../model/consultation';
 import {subscribe} from '../../model/subscription';
+import {checkQRCode} from '../../model/qrCode';
 
 
 export default class SubscriptionModal extends Modal {

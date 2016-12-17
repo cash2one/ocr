@@ -6,7 +6,7 @@
 
 import $ from 'jquery';
 
-export const getNews = function ({pageNum = 0, limit = 5, success = $.noop, fail = $.noop}) {
+export function getNews({pageNum = 0, limit = 5, success = $.noop, fail = $.noop}) {
     $.get(
         '/news',
         {

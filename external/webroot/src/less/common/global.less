@@ -1,0 +1,100 @@
+.ai-platform {
+  font-size: @font-size-2;
+
+  ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: @fonts;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  input, textarea, keygen, select, button {
+    font-family: @fonts;
+    outline: none !important;
+  }
+
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: #0073eb;
+    }
+  }
+
+  button,
+  a[role="button"]{
+    display: inline-block;
+    width: 90px;
+    height: 32px;
+    line-height: 30px;
+    border-radius: 2px;
+    font-size: @font-size-2;
+    cursor: pointer;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+    -webkit-transition: all .1s linear;
+       -moz-transition: all .1s linear;
+         -o-transition: all .1s linear;
+            transition: all .1s linear;
+    display: inline-block;
+    text-align: center;
+
+    &:hover {
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .4);
+    }
+
+    &.btn-primary {
+      border: 1px solid #0073eb;
+      background-color: #0073eb;
+      color: @white !important;
+
+      &:hover {
+        background-color: #1a81ed;
+      }
+    }
+
+    &.btn-normal {
+      border: 1px solid #ccc;
+      background-color: @white;
+      color: #666 !important;
+    }
+  }
+
+  .container {
+    display: block;
+    width: 1160px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+    position: relative;
+  }
+  .clear-float {
+    zoom: 1;
+    &:after {
+      display: block;
+      clear: both;
+      content: "";
+      visibility: hidden;
+      height: 0
+    }
+  }
+
+  ::-webkit-input-placeholder {
+    color: #ccc;
+  }
+  :-moz-placeholder {
+    color: #ccc;
+  }
+  ::-moz-placeholder {
+    color: #ccc;
+  }
+  :-ms-input-placeholder {
+    color: #ccc;
+  }
+}

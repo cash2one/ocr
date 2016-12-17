@@ -9,7 +9,8 @@ import $ from 'jquery';
 
 import Modal from '../common/modal';
 import {CONSULTATION_TMPL} from '../../partials/consultation';
-import {checkQRCode, sendConsultation} from '../../model/consultation';
+import {sendConsultation} from '../../model/consultation';
+import {checkQRCode} from '../../model/qrCode';
 
 
 export default class ConsultationModal extends Modal {
@@ -119,6 +120,5 @@ export default class ConsultationModal extends Modal {
             e.preventDefault();
             this.refreshQRCode();
         });
-
     }
 }
