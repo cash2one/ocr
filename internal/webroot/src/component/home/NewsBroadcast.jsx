@@ -58,7 +58,7 @@ class NewsBroadcast extends React.Component {
                     </a>
                 </li>
             })
-            : <li><a href="#">暂无新闻'</a></li>;
+            : <li><a href="#">暂无新闻</a></li>;
         var moreNews = this.state.content.length
             ? <div className="news-more">
                 <a href="/news" target="_self">更多 ></a>

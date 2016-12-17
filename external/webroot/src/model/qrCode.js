@@ -11,4 +11,4 @@ export function checkQRCode({code, success = $.noop, fail = $.noop}) {
         action: 'check',
         code: code
     }).success(success).fail(fail);
-};
+}

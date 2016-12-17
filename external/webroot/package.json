@@ -39,6 +39,7 @@
     "jquery": "^2.2.4"
   },
   "dependencies": {
-    "ejs": "^2.5.5"
+    "ejs": "^2.5.5",
+    "gulp-replace": "^0.5.4"
   }
 }
