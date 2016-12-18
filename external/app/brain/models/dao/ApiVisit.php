@@ -114,7 +114,7 @@ class Dao_ApiVisit extends Dao_Base {
         
         return array(
             'visitTime' => $visitTime, 
-            'visitCount' => $visitCount
+            'visitCount' => $visitCount,
         );
     } 
 

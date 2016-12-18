@@ -24,35 +24,35 @@ class Brain_AIApi {
     */
 
     public static $arrTypelist = array(
-            "commontext" => array(
-                'url' => 'https://openapi.baidu.com/rest/2.0/vis-ocr/v1/ocr/general',
-                'params' => array(
-                    'detect_direction' => 'true',
-                ),
+        "commontext" => array(
+            'url' => 'https://openapi.baidu.com/rest/2.0/vis-ocr/v1/ocr/general',
+            'params' => array(
+                'detect_direction' => 'true',
             ),
-            "idcard" => array(
-                'url' => 'https://openapi.baidu.com/rest/2.0/vis-ocr/v1/ocr/idcard',
-                'params' => array(
-                    'id_card_side' => 'front',
-                    'detect_direction' => 'true',
-                ),
+        ),
+        "idcard" => array(
+            'url' => 'https://openapi.baidu.com/rest/2.0/vis-ocr/v1/ocr/idcard',
+            'params' => array(
+                'id_card_side' => 'front',
+                'detect_direction' => 'true',
             ),
-            "bankcard" => array(
-                'url' => 'https://openapi.baidu.com/rest/2.0/vis-ocr/v1/ocr/bankcard',
-                'params' => array(),
+        ),
+        "bankcard" => array(
+            'url' => 'https://openapi.baidu.com/rest/2.0/vis-ocr/v1/ocr/bankcard',
+            'params' => array(),
+        ),
+        "face" => array(
+            'url' => 'https://openapi.baidu.com/rest/2.0/vis-faceattribute/v1/faceattribute',
+            'params' => array(
+                'max_face_num' => 5,
+                'face_fields' => 'age, beauty, expression, faceshape, gender, glasses, landmark, race, qualities',
             ),
-            "face" => array(
-                'url' => 'https://openapi.baidu.com/rest/2.0/vis-faceattribute/v1/faceattribute',
-                'params' => array(
-                    'max_face_num' => 5,
-                    'face_fields' => 'age, beauty, expression, faceshape, gender, glasses, landmark, race, qualities',
-                ),
-            ),
-            "pornography" => array(
-                'url' => 'https://openapi.baidu.com/rest/2.0/vis-antiporn/v1/antiporn',
-                'params' => array(),
-            ),
-        );
+        ),
+        "pornography" => array(
+            'url' => 'https://openapi.baidu.com/rest/2.0/vis-antiporn/v1/antiporn',
+            'params' => array(),
+        ),
+    );
 
     
     /**
@@ -148,7 +148,7 @@ class Brain_AIApi {
         
         $ret_data = Brain_AIApi::doCallApi($url, $postData);
         
-        if($ret_data == NULL)
+        if($ret_data == null)
         {
             return array(
                 'errno' => 1,
@@ -195,7 +195,7 @@ class Brain_AIApi {
         curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
         
         $header = array(
-            'Host: openapi.baidu.com'
+            'Host: openapi.baidu.com',
         );
         //curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
@@ -219,7 +219,7 @@ class Brain_AIApi {
      */ 
     public static function getImageByUrl($image_url) {
         $image_data = file_get_contents(
-            $image_url, false, NULL, 0, Brain_AIApi::MAX_IMAGE_LIMIT);
+            $image_url, false, null, 0, Brain_AIApi::MAX_IMAGE_LIMIT);
             
         $image_base64_data = base64_encode($image_data);
         
