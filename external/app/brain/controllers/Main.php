@@ -18,5 +18,6 @@ class Controller_Main extends Ap_Controller_Abstract {
         'case' => 'actions/page/Case.php',
         'seccode' => 'actions/page/Seccode.php',
         'subscribe' => 'actions/page/Subscribe.php',
+        'aidemo' => 'actions/page/AIDemo.php',
     );
 }

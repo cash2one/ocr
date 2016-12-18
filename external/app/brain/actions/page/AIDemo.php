@@ -1,0 +1,88 @@
+<?php
+/***************************************************************************
+ * 
+ * Copyright (c) 2016 Baidu.com, Inc. All Rights Reserved
+ * 
+ **************************************************************************/
+ 
+/**
+ * @file AIDemo.php
+ * @author xuyifei(xuyifei@baidu.com)
+ * @date 2016/12/13 14:33:00
+ * @brief 
+ *  
+ **/
+
+class Action_AIDemo extends Ap_Action_Abstract {
+
+    /**
+     * execute 
+     * 
+     * @access public
+     * @return void
+     */
+    public function execute() {
+        //print_r(Brain_AIApi::callApi('face', Brain_AIApi::getImageByUrl('http://153.37.234.17/kanimg.9ku.com/pic/mximg/3/03cf87174debaccd689c90c34577b82f.jpg')));
+        //print_r(Brain_AIApi::callApi('commontext', Brain_AIApi::getImageByUrl('http://www.bz55.com/uploads/allimg/150514/140-150514154428.jpg')));
+        //print_r(Brain_AIApi::callApi('idcard', Brain_AIApi::getImageByUrl('http://www.sznews.com/ent/images/attachement/jpg/site3/20141011/4437e629783815a2bce253.jpg')));
+        //print_r(Brain_AIApi::callApi('bankcard', Brain_AIApi::getImageByUrl('http://b.hiphotos.baidu.com/zhidao/pic/item/d058ccbf6c81800a187419d0b43533fa838b475e.jpg')));
+        //print_r(Brain_AIApi::callApi('pornography', Brain_AIApi::getImageByUrl('http://www.sznews.com/ent/images/attachement/jpg/site3/20140123/001e4f9d7bf9144b139712.jpg')));
+        //return
+
+        $arrRequest = Saf_SmartMain::getCgi();
+        $arrInput = $arrRequest['request_param'];
+        
+        $demoType = Brain_Util::getParamAsString($arrInput, 'type', '');
+        $imageUrl = Brain_Util::getParamAsString($arrInput, 'image_url', '');
+        $image = Brain_Util::getParamAsString($arrInput, 'image', '');
+
+        $demoType = 'idcard'; $imageUrl = 'http://www.sznews.com/ent/images/attachement/jpg/site3/20141011/4437e629783815a2bce253.jpg';
+        
+        /* 1. 参数检查 */
+        
+        if (!array_key_exists($demoType, Brain_AIApi::$arrTypelist)) {
+            Brain_Output::jsonOutput(1, '请求Demo类型错误');
+            return false;
+        }
+        
+        //访问频次检查
+        if(Brain_AIApi::checkVisit($demoType) == false)
+        {
+            Brain_Output::jsonOutput(1, '请求Demo过于频繁');
+            return;
+        }
+        
+        $filter_image = '';
+        if($imageUrl == '' && $image == ''){
+            Brain_Output::jsonOutput(1, '请上传图片或图片URL');
+            return;
+        }
+        else if($imageUrl != '')
+        {
+            if (!filter_var($imageUrl, FILTER_VALIDATE_URL)) {
+                Brain_Output::jsonOutput(1, '图片地址格式错误');
+                return;
+            } 
+            
+            $filter_image = Brain_AIApi::getImageByUrl($imageUrl);
+        }
+        else if($image != '')
+        {
+            //限制图片大小为2M，base64编码后大小为[n/3]*4, []代表上取整
+            $filter_image = substr($image, 0, ceil(2 * 1024 * 1024 / 3) * 4);
+        }
+        
+        if ($filter_image == '') {
+            Brain_Output::jsonOutput(1, '获取图片失败');
+            return;
+        } 
+        
+        /* 2. 逻辑处理 */
+        $ret_data = Brain_AIApi::callApi($demoType, $filter_image);
+        
+        Brain_Output::jsonOutput($ret_data['errno'], $ret_data['msg'], $ret_data['data']);
+
+    }
+}
+
+/* vim: set expandtab ts=4 sw=4 sts=4 tw=80: */
