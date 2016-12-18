@@ -92,7 +92,7 @@ export default class DemoCanvas {
         return dfd.promise();
     }
 
-    render () {
+    render() {
         let cWidth = this.container.width();
         let cHeight = this.container.height();
         let iWidth = this.image.width;
@@ -115,7 +115,7 @@ export default class DemoCanvas {
         for (let i = 0, len = this.options.length; i < len; i++) {
             let option = this.options[i];
             let location = option.location;
-            switch(option.shape) {
+            switch (option.shape) {
                 case 'rect':
                     ctx.beginPath();
                     ctx.lineWidth = '1';
