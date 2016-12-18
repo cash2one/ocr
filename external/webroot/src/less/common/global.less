@@ -1,5 +1,6 @@
 .ai-platform {
   font-size: @font-size-2;
+  -webkit-font-smoothing: antialiased;
 
   ul, ol {
     list-style: none;
@@ -70,7 +71,7 @@
       color: @white !important;
 
       &:hover {
-        border: 1px solid #333;
+        border: 1px solid @blue;
         background-color: @blue;
       }
     }
@@ -107,6 +108,11 @@
       visibility: hidden;
       height: 0
     }
+  }
+
+  .disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
   }
 
   ::-webkit-input-placeholder {

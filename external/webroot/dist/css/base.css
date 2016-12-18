@@ -3,6 +3,7 @@
 /*page styles*/
 .ai-platform {
   font-size: 14px;
+  -webkit-font-smoothing: antialiased;
 }
 .ai-platform ul,
 .ai-platform ol {
@@ -80,7 +81,7 @@
 }
 .ai-platform button.btn-other:hover,
 .ai-platform a[role="button"].btn-other:hover {
-  border: 1px solid #333;
+  border: 1px solid #0073eb;
   background-color: #0073eb;
 }
 .ai-platform button.media,
@@ -114,6 +115,10 @@
   content: "";
   visibility: hidden;
   height: 0;
+}
+.ai-platform .disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 .ai-platform ::-webkit-input-placeholder {
   color: #ccc;
@@ -163,11 +168,13 @@ header.header-nav .top-nav > ul {
 header.header-nav .top-nav > ul > li {
   display: inline-block;
   float: left;
-  line-height: 48px;
+  line-height: 50px;
   padding: 0 4px;
   margin: 0 16px;
   border-bottom: 3px solid transparent;
   position: relative;
+  box-sizing: border-box;
+  height: 50px;
 }
 header.header-nav .top-nav > ul > li > a {
   display: inline-block;
@@ -224,7 +231,7 @@ header.header-nav .login > ul > li {
   display: inline-block;
   float: left;
   margin-left: 20px;
-  line-height: 48px;
+  line-height: 50px;
 }
 header.header-nav .login > ul > li > a {
   display: inline-block;
@@ -497,14 +504,14 @@ aside.aside-action ul > li > a:hover::before {
   background-color: #0073eb;
   position: absolute;
   display: inline-block;
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   left: 0;
   top: 0;
   color: #fff;
-  line-height: 13px;
+  line-height: 14px;
   font-size: 12px;
-  padding: 5px;
+  padding: 4px;
   text-align: center;
 }
 aside.aside-action ul > li + li {

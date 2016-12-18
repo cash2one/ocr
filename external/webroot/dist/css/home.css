@@ -3,6 +3,7 @@
 /*page styles*/
 .ai-platform {
   font-size: 14px;
+  -webkit-font-smoothing: antialiased;
 }
 .ai-platform ul,
 .ai-platform ol {
@@ -80,7 +81,7 @@
 }
 .ai-platform button.btn-other:hover,
 .ai-platform a[role="button"].btn-other:hover {
-  border: 1px solid #333;
+  border: 1px solid #0073eb;
   background-color: #0073eb;
 }
 .ai-platform button.media,
@@ -114,6 +115,10 @@
   content: "";
   visibility: hidden;
   height: 0;
+}
+.ai-platform .disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 .ai-platform ::-webkit-input-placeholder {
   color: #ccc;

@@ -12,11 +12,53 @@
     <div class="container">
         <h2>功能介绍</h2>
         <p>支持二代身份证正反面识别，可识别所有字段，对倾斜、暗光、曝光、阴影等异常情况稳定性好、识别准确率高达98%以上<br>请尽量保证上传的图像80%以上是身份证区域</p>
+        <div class="tech-intro-detail">
+            <div class="original-card">
+
+            </div>
+            <div class="arrow"></div>
+            <div class="scan-result"></div>
+        </div>
     </div>
 </section>
 <section class="tech-section tech-demo">
     <div class="container">
         <h2>功能演示</h2>
+        <div class="demo-container clear-float">
+            <div class="data-view" data-label="原始图片" id="demo-origin"></div>
+            <div class="data-view" data-label="识别结果" id="demo-result"></div>
+            <div class="data-view">
+                <div class="demo-data">
+                    <input type="text" id="demo-photo-url">
+                    <button type="button" class="btn-primary" id="scan-photo">检测</button>
+                    <span>或</span>
+                    <label id="demo-photo-upload"><input type="file" >本地上传</label>
+                </div>
+
+                <p class="demo-desc">提示：可支持JPG、JPEG、BMP图片文件，不支持gif图片。图片大小不超过2M，长边不超过2048像素。为保证正常识别效果，请保持身份证正面向上，并为图片主体部分。</p>
+                <ul class="demo-card-list clear-float">
+                    <li>
+                        <img src="/images/ocr-idcard/demo-card-1.png">
+                    </li>
+                    <li>
+                        <img src="/images/ocr-idcard/demo-card-1.png">
+                    </li>
+                    <li>
+                        <img src="/images/ocr-idcard/demo-card-1.png">
+                    </li>
+                    <li>
+                        <img src="/images/ocr-idcard/demo-card-1.png">
+                    </li>
+                    <li>
+                        <img src="/images/ocr-idcard/demo-card-1.png">
+                    </li>
+                    <li>
+                        <img src="/images/ocr-idcard/demo-card-1.png">
+                    </li>
+                </ul>
+            </div>
+            <div class="data-view" data-label="RESPONSE JSON" id="demo-json"></div>
+        </div>
     </div>
 </section>
 
@@ -77,8 +119,27 @@
         </div>
     </div>
 </section>
-<section class="tech-section tech-product">
-
+<section class="tech-section tech-case">
+    <ul class="case-list">
+        <li class="case-item active">
+            <div class="container">
+                <div class="case-icon"></div>
+                <h2>百度钱包</h2>
+                <p>百度钱包是中国领先的在线支付应用和服务平台<br>调用百度身份证OCR接口进行用户身份证识别，识别速度快，准确率高<br>减少了用户的输入操作，有效的提高了用户的体验</p>
+            </div>
+        </li>
+        <li class="case-item">
+            <div class="container">
+                <div class="case-icon"></div>
+                <h2>百度钱包1</h2>
+                <p>百度钱包是中国领先的在线支付应用和服务平台<br>调用百度身份证OCR接口进行用户身份证识别，识别速度快，准确率高<br>减少了用户的输入操作，有效的提高了用户的体验</p>
+            </div>
+        </li>
+    </ul>
+    <ul class="case-indicator">
+        <li class="active"><a>百度钱包</a></li>
+        <li><a>百度钱包1</a></li>
+    </ul>
 </section>
 <section class="tech-section get-started">
     <div class="container">

@@ -10,4 +10,4 @@ export function sendConsultation({data, success = $.noop, fail = $.noop}) {
     data.action = 'add';
     $.post('/index/case', data)
         .success(success).fail(fail);
-};
+}

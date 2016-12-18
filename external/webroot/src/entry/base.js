@@ -13,7 +13,7 @@ import SubscriptionModal from '../component/widget/subscriptionModal';
 $(document).ready(function () {
     // 绑定视窗滚动事件
     let toggleBackTop = () => {
-        $('.back-top').toggle($('body').scrollTop() > $(window).height() / 2);
+        $('.back-top').toggle($(document).scrollTop() > $(window).height() / 2);
     };
     toggleBackTop();
     $(window).scroll(() => {
@@ -21,7 +21,7 @@ $(document).ready(function () {
     });
 
     $('.back-top > a').click(() => {
-        $('body').scrollTop(0);
+        $(document).scrollTop(0);
     });
 
     // 渲染底部新闻
