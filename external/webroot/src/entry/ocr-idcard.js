@@ -4,18 +4,18 @@
  */
 'use strict';
 
-import $ from "jquery";
-import DemoCanvas from "../component/widget/demoCanvas";
-import {scanIDCard} from "../model/demoAPI";
+import $ from 'jquery';
+import DemoCanvas from '../component/widget/demoCanvas';
+import {scanIDCard} from '../model/demoAPI';
 
 $(document).ready(function () {
     // case点击效果
     $('.case-indicator > li').click(function (){
         $('.case-indicator > li').each((i, e) => {
-            $(e).toggleClass('active', i == $(this).index());
+            $(e).toggleClass('active', i === $(this).index());
         });
         $('.case-item').each((i, e) => {
-            $(e).toggleClass('active', i == $(this).index());
+            $(e).toggleClass('active', i === $(this).index());
         });
     });
 
@@ -27,7 +27,7 @@ $(document).ready(function () {
     });
 
     // 绑定功能介绍动画
-    $('.tech-intro-detail').one('demo', function (){
+    $('.tech-intro-detail').one('demo', function () {
         $('.original-card').addClass('scanning');
         setTimeout(function () {
             $('.original-card').removeClass('scanning').addClass('scanned');
@@ -42,12 +42,12 @@ $(document).ready(function () {
     };
 
     let startScan = function (type, imgSrc) {
-        // var dfd = $.Deferred();
-        var options = {
+        // let dfd = $.Deferred();
+        let options = {
             success: function (res) {
                 $('#demo-photo-upload, #scan-photo').removeClass('disabled');
-                var canvasOpts = [];
-                for (var key in res.data.words_result) {
+                let canvasOpts = [];
+                for (let key in res.data.words_result) {
                     if (!res.data.words_result.hasOwnProperty(key)) {
                         continue;
                     }
@@ -64,7 +64,7 @@ $(document).ready(function () {
                     options: canvasOpts
                 });
             },
-            fail: function (xhr){
+            fail: function (xhr) {
                 console.error('接口出错：' + xhr.status + ' - ' + xhr.statusText);
                 resetDemo();
             }
@@ -88,7 +88,7 @@ $(document).ready(function () {
             selector: '#demo-origin',
             image: file,
             type: 'stream',
-            success: (imgSrc) => {
+            success: imgSrc => {
                 startScan('stream', imgSrc);
             },
             fail: resetDemo
@@ -110,7 +110,7 @@ $(document).ready(function () {
             selector: '#demo-origin',
             image: $('#demo-photo-url').val(),
             type: 'url',
-            success: (imgSrc) => {
+            success: imgSrc => {
                 startScan('url', imgSrc);
             },
             fail: resetDemo
@@ -118,14 +118,14 @@ $(document).ready(function () {
     });
 
     // 阻止多次上传
-    $('#demo-photo-upload').click(function (e) {
+    $('#demo-photo-upload').click(function () {
         if ($(this).hasClass('disabled')) {
             return false;
         }
     });
 
     // 绑定实例图点击事件
-    $('.demo-card-list > li').click(function (){
+    $('.demo-card-list > li').click(function () {
         $('.demo-card-list > li').removeClass('active');
         $(this).addClass('active');
         let imgSrc = $(this).find('img').attr('src');

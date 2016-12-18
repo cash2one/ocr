@@ -12,4 +12,4 @@ export function scanIDCard({image = null, imageUrl = null, success = $.noop, fai
         image: image,
         'image_url': imageUrl
     }).success(success).fail(fail);
-};
+}

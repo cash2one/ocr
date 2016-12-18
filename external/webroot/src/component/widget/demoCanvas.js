@@ -4,14 +4,14 @@
  */
 'use strict';
 
-import $ from "jquery";
+import $ from 'jquery';
 
 export default class DemoCanvas {
     constructor({selector, image, type, options = [], toCheck = true, success, fail}) {
         if (!$(selector).context) {
             throw 'DemoCanvas：未寻找到容器!';
         }
-        this.container = $(selector)
+        this.container = $(selector);
         this.options = options;
         this.type = type;
         this.image = new Image();
@@ -31,12 +31,8 @@ export default class DemoCanvas {
             }[this.type](image);
 
             $.when(promise).then(
-                (resultImg) => {
-                    this.image.src = resultImg;
-                },
-                (errorImg) => {
-                    this.image.src = errorImg;
-                }
+                resultImg => this.image.src = resultImg,
+                errorImg => this.image.src = errorImg
             );
         } else {
             this.image.src = image;
@@ -79,7 +75,7 @@ export default class DemoCanvas {
         let dfd = $.Deferred();
         let reader = new FileReader();
         reader.readAsDataURL(image);
-        reader.onload = (e) => {
+        reader.onload = e => {
             if (!/image\/(png|bmp|jpeg)/.test(image.type)) {
                 dfd.reject('/images/error-image-format.png');
                 return false;
@@ -115,19 +111,10 @@ export default class DemoCanvas {
                 ? (1 / (wRatio >= hRatio ? wRatio : hRatio))
                 : 1
             ) * 0.9;
-        console.log(this.options);
-        this.options[0] = {
-            shape: 'rect',
-            location: {
-                left: 30,
-                top: 30,
-                width: 50,
-                height: 50
-            }
-        }
-        for (var i = 0, len = this.options.length; i < len ; i++) {
-            var option = this.options[i];
-            var location = option.location;
+
+        for (let i = 0, len = this.options.length; i < len; i++) {
+            let option = this.options[i];
+            let location = option.location;
             switch(option.shape) {
                 case 'rect':
                     ctx.beginPath();
@@ -141,7 +128,6 @@ export default class DemoCanvas {
             }
 
         }
-        
 
         canvas.css({
             'position': 'relative',

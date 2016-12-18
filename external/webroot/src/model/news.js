@@ -15,4 +15,4 @@ export function getNews({pageNum = 0, limit = 5, success = $.noop, fail = $.noop
             rn: limit
         }
     ).success(success).fail(fail);
-};
+}

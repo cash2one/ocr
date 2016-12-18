@@ -9,4 +9,4 @@ import $ from 'jquery';
 export function subscribe({data, success = $.noop, fail = $.noop}) {
     $.post('/index/subscribe', data)
         .success(success).fail(fail);
-};
+}
