@@ -35,11 +35,13 @@ header.header-nav{
       & > li {
         display: inline-block;
         float: left;
-        line-height: @header-height - 2px;
+        line-height: @header-height;
         padding: 0 4px;
         margin: 0 16px;
         border-bottom: 3px solid transparent;
         position: relative;
+        box-sizing: border-box;
+        height: 50px;
 
         & > a {
           display: inline-block;
@@ -108,7 +110,7 @@ header.header-nav{
         display: inline-block;
         float: left;
         margin-left: 20px;
-        line-height: @header-height - 2px;
+        line-height: @header-height;
 
         & > a {
           display: inline-block;

@@ -1,13 +1,226 @@
 @import 'common/helper.less';
 @import 'common/global.less';
 
-@banner: url('../../images/ocr-idcard-banner.png');
-@icons: url('../../images/ocr-idcard-icons.png');
-@intro: url('../../images/ocr-idcard-intro.png');
+@banner: url('../../images/ocr-idcard/banner.png');
+@icons: url('../../images/ocr-idcard/icons.png');
+@intro-bg: url('../../images/ocr-idcard/intro-bg.png');
+@intro: url('../../images/ocr-idcard/intro.png');
+@case-icons: url('../../images/ocr-idcard/case-icons.png');
 
 @import './common/tech-page.less';
 
 .tech-section {
+  &.tech-intro{
+    .tech-intro-detail {
+      margin-top: 40px;
+
+      & > div {
+        float: left;
+        display: inline-block;
+      }
+    }
+
+    .original-card {
+      width: 400px;
+      height: 250px;
+      margin-left: 115px;
+      position: relative;
+      overflow: hidden;
+      .icon(@intro, -10px, -310px);
+
+      &::before {
+        content: "";
+        width: 400px;
+        height: 130px;
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        top: -130px;
+        .icon(@intro, -500px, -310px);
+      }
+
+      &.scanning::before {
+        top: 100%;
+        -webkit-transition: top 3s linear;
+        -moz-transition: top 3s linear;
+        -o-transition: top 3s linear;
+        transition: top 3s linear;
+      }
+
+      &.scanned {
+        .icon(@intro, -10px, -10px);
+      }
+    }
+
+    .arrow {
+      width: 50px;
+      height: 250px;
+      margin: 0 50px;
+      .icon(@intro, -430px, -290px);
+    }
+
+    .scan-result {
+      width: 400px;
+      height: 250px;
+      opacity: 0;
+      -webkit-transition: opacity 1.5s ease-out;
+      -moz-transition: opacity 1.5s ease-out;
+      -o-transition: opacity 1.5s ease-out;
+      transition: opacity 1.5s ease-out;
+
+      &.scanned {
+        opacity: 1;
+        .icon(@intro, -530px, -10px);
+      }
+    }
+  }
+
+  &.tech-demo {
+    .demo-container {
+      .data-view {
+        height: 350px;
+        width: 50%;
+        float: left;
+        position: relative;
+        box-sizing: border-box;
+        padding-right: 10px;
+
+        &:nth-child(n+3){
+          margin-top: 10px;
+        }
+
+        &[data-label] {
+          color: #666;
+          background-color: #fafafa;
+          border: 1px solid #ebebeb;
+          overflow: hidden;
+
+          & + .data-view[data-label]{
+            border-left: none;
+          }
+
+          &::after {
+            content: attr(data-label);
+            display: inline-block;
+            border: 1px solid #cce3fb;
+            background-color: #e6fafd;
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            padding: 0 15px;
+            line-height: 30px;
+          }
+        }
+      }
+
+      .demo-desc {
+        font-size: @font-size-1;
+        line-height: @font-size-1 + 8px;
+        margin-top: 14px;
+        color: #999;
+      }
+
+      .demo-data {
+        height: 38px;
+
+        & > * {
+          float: left;
+        }
+
+        #demo-photo-url {
+          height: 36px;
+          line-height: 36px;
+          border: 1px solid #ebebeb;
+          padding: 0 11px;
+          width: 320px;
+          color: #333;
+        }
+
+        span {
+          margin: 0 10px;
+          display: inline-block;
+          line-height: 38px;
+          color: #999;
+        }
+
+        .btn-primary {
+          line-height: 38px;
+          width: 100px;
+          height: 38px;
+          box-shadow: none;
+        }
+
+        input[type="file"]{
+          width: 0;
+          height: 0;
+        }
+
+        label {
+          border: 1px solid @blue;
+          background-color: @blue;
+          color: @white;
+          width: 100px;
+          height: 36px;
+          line-height: 36px;
+          text-align: center;
+          border-radius: 2px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #1a81ed;
+          }
+        }
+      }
+
+      .demo-card-list {
+        margin-top: 16px;
+        border: 1px solid #ebebeb;
+
+        & > li {
+          box-sizing: border-box;
+          display: inline-block;
+          width: 33.333333%;
+          height: 120px;
+          text-align: center;
+          vertical-align: middle;
+          float: left;
+          background-color: #fafafa;
+          padding: 10px;
+          position: relative;
+          cursor: pointer;
+
+          &:nth-child(3n+1),
+          &:nth-child(3n+2) {
+            border-right: 1px solid fadeOut(@black, 95%);
+          }
+
+          &:nth-child(n+4) {
+            border-top: 1px solid fadeOut(@black, 95%);
+          }
+
+
+          &.active::after,
+          &:hover::after {
+            content: "";
+            display: inline-block;
+            border: 2px solid #7fb9f5;
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            right: -1px;
+            bottom: -1px;
+            box-sizing: border-box;
+            z-index: 9;
+          }
+
+          & > img {
+            max-height: 100%;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
   &.tech-feature{
     .feature-item + .feature-item{
       margin-left: 110px;
@@ -36,6 +249,19 @@
     }
     .scene-item:nth-child(3) .scene-icon{
       .icon(@icons, -110px, -110px);
+    }
+  }
+
+  &.tech-case {
+    .case-item:nth-child(1) {
+      .icon(url('../../images/ocr-idcard/case-1.png'), center, center);
+
+      .case-icon {
+        .icon(@case-icons, -10px, -10px);
+      }
+    }
+    .case-indicator {
+      display: none;
     }
   }
 }
