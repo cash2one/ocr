@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="/dist/css/ocr-idcard.css"></head>
+<link rel="stylesheet" href="/dist/css/ocr-bankcard.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -170,7 +170,7 @@
 <div class="ai-platform page-content">
 <section class="tech-section tech-banner">
     <div class="container">
-        <h1>身份证识别</h1>
+        <h1>银行卡识别</h1>
         <p>文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
         <div>
             <a role="button" class="btn-primary media">获取API Key</a>
@@ -181,7 +181,7 @@
 <section class="tech-section tech-intro">
     <div class="container">
         <h2>功能介绍</h2>
-        <p>支持二代身份证正反面识别，可识别所有字段，对倾斜、暗光、曝光、阴影等异常情况稳定性好、识别准确率高达98%以上<br>请尽量保证上传的图像80%以上是身份证区域</p>
+        <p>支持银行卡卡号识别。可准确识别所有主流银行卡卡号，识别率高达98%以上。该服务主要应用于扫描场景，在扫描过程中提交图片进行识别</p>
         <div class="tech-intro-detail">
             <div class="original-card"></div>
             <div class="arrow"></div>
@@ -219,19 +219,19 @@
                         <img src="/images/ocr-idcard/demo-card-1.png">
                     </li>
                     <li>
-                        <img src="/images/ocr-idcard/demo-card-2.png">
+                        <img src="/images/ocr-idcard/demo-card-1.png">
                     </li>
                     <li>
-                        <img src="/images/ocr-idcard/demo-card-3.png">
+                        <img src="/images/ocr-idcard/demo-card-1.png">
                     </li>
                     <li>
-                        <img src="/images/ocr-idcard/demo-card-4.png">
+                        <img src="/images/ocr-idcard/demo-card-1.png">
                     </li>
                     <li>
-                        <img src="/images/ocr-idcard/demo-card-5.png">
+                        <img src="/images/ocr-idcard/demo-card-1.png">
                     </li>
                     <li>
-                        <img src="/images/ocr-idcard/demo-card-6.png">
+                        <img src="/images/ocr-idcard/demo-card-1.png">
                     </li>
                 </ul>
             </div>
@@ -279,21 +279,14 @@
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
                     <h3>金融场景</h3>
-                    <p>银行保险券商等行业用于客户身份识别，身份信息绑定，个人信息核实等场景，减少身份证输入操作，提高工作效率和用户的体验</p>
+                    <p>提供银行卡扫描识别的功能，减少用户的输入，提高用户的体验</p>
                 </div>
             </div>
             <div class="scene-item shadow">
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
-                    <h3>视频场景</h3>
-                    <p>用户客户身份认证，直播实名认证等场景，减少用户身份证输入操作，提高用户体验</p>
-                </div>
-            </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>电商场景</h3>
-                    <p>用户电商用户身份绑定，电商用户实名认证，电商商家身份认证等场景，减少身份证输入操作，提高用户体验</p>
+                    <h3>电子商务场景</h3>
+                    <p>提供银行卡扫描识别的功能，减少用户的输入，提高用户的体验</p>
                 </div>
             </div>
         </div>
@@ -305,12 +298,41 @@
             <div class="container">
                 <div class="case-icon"></div>
                 <h2>百度钱包</h2>
-                <p>百度钱包是中国领先的在线支付应用和服务平台<br>调用百度身份证OCR接口进行用户身份证识别，识别速度快，准确率高<br>减少了用户的输入操作，有效的提高了用户的体验</p>
+                <p>百度钱包是中国领先的在线支付应用和服务平台<br>
+                    调用百度身份证OCR接口进行用户身份证识别，识别速度快，准确率高<br>
+                    减少了用户的输入操作，有效的提高了用户的体验</p>
+            </div>
+        </li>
+        <li class="case-item">
+            <div class="container">
+                <div class="case-icon"></div>
+                <h2>手机百度</h2>
+                <p>手机百度是百度推出的一款方便手机用户随时随地使用百度搜索服务的应用<br>
+                    调用百度银行卡OCR接口进行用户银行卡的识别与绑定，减少了用户操作，提高了用户体验</p>
+            </div>
+        </li>
+        <li class="case-item">
+            <div class="container">
+                <div class="case-icon"></div>
+                <h2>百度糯米</h2>
+                <p>百度糯米是百度出品的一款移动团购软件，集合了一系列本地生活服务<br>
+                    调用百度银行卡OCR接口进行用户、商户的银行卡的识别绑定，减少了用户操作，提高了用户体验/p>
+            </div>
+        </li>
+        <li class="case-item">
+            <div class="container">
+                <div class="case-icon"></div>
+                <h2>百度地图</h2>
+                <p>百度地图是百度提供的一项网络地图搜索服务<br>
+                    调用百度银行卡OCR接口进行用户银行卡的识别与绑定，减少了用户操作，提高了用户体验</p>
             </div>
         </li>
     </ul>
     <ul class="case-indicator">
         <li class="active"><a>百度钱包</a></li>
+        <li><a>手机百度</a></li>
+        <li><a>百度糯米</a></li>
+        <li><a>百度地图</a></li>
     </ul>
 </section>
 <section class="tech-section get-started">
@@ -415,5 +437,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="/dist/js/ocr-idcard.bundle.js"></script></body>
+<script src="/dist/js/ocr-bankcard.bundle.js"></script></body>
 </html>

@@ -6,7 +6,7 @@
 
 import $ from 'jquery';
 import DemoCanvas from '../component/widget/demoCanvas';
-import {scanIDCard} from '../model/demoAPI';
+import {scanBankCard} from '../model/demoAPI';
 
 $(document).ready(function () {
     // case点击效果
@@ -95,7 +95,7 @@ $(document).ready(function () {
             options.image = imgSrc;
         }
 
-        scanIDCard(options);
+        scanBankCard(options);
     };
 
     // 上传图片

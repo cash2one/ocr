@@ -13,3 +13,11 @@ export function scanIDCard({image = null, imageUrl = null, success = $.noop, fai
         'image_url': imageUrl
     }).success(success).fail(fail);
 }
+
+export function scanBankCard({image = null, imageUrl = null, success = $.noop, fail = $.noop}) {
+    $.post('/aidemo', {
+        type: 'bankcard',
+        image: image,
+        'image_url': imageUrl
+    }).success(success).fail(fail);
+}
