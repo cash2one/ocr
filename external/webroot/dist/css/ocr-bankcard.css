@@ -727,6 +727,7 @@
   margin: 0;
   overflow: auto;
   height: 100%;
+  box-sizing: border-box;
 }
 .tech-section.tech-demo .demo-container .demo-desc {
   font-size: 12px;
