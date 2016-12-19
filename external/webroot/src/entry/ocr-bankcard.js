@@ -62,7 +62,7 @@ $(document).ready(function () {
                 $('#demo-json > p').html(JSON.stringify(res, null, '\t'));
                 $('#demo-result .result-background').removeClass('loading');
 
-                if (res.errno !== 0){
+                if (res.errno !== 0) {
                     $('#demo-result .result-background').toggleClass('has-result man female', false)
                         .toggleClass('error-upload-fail', res.errno === 1)
                         .toggleClass('error-timeout', res.errno === 28)
