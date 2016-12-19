@@ -140,7 +140,7 @@
 }
 .ai-platform.page-content .banner ul.banner-content {
   height: 100%;
-  background-image: url('../../images/home-banner.png');
+  background-image: url('../../images/home/banner.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
@@ -239,39 +239,39 @@
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-item:nth-child(1) .service-icon {
-  background-image: url('../../images/home-service.png');
+  background-image: url('../../images/home/service.png');
   background-repeat: no-repeat;
-  background-position: -10px -10px;
+  background-position: -10px -15px;
   background-position-x: -10px;
-  background-position-y: -10px;
+  background-position-y: -15px;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-item:nth-child(2) .service-icon {
-  background-image: url('../../images/home-service.png');
+  background-image: url('../../images/home/service.png');
   background-repeat: no-repeat;
-  background-position: -90px -10px;
+  background-position: -90px -15px;
   background-position-x: -90px;
-  background-position-y: -10px;
+  background-position-y: -15px;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-item:nth-child(3) .service-icon {
-  background-image: url('../../images/home-service.png');
+  background-image: url('../../images/home/service.png');
   background-repeat: no-repeat;
-  background-position: -170px -10px;
+  background-position: -170px -15px;
   background-position-x: -170px;
-  background-position-y: -10px;
+  background-position-y: -15px;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-item:nth-child(4) .service-icon {
-  background-image: url('../../images/home-service.png');
+  background-image: url('../../images/home/service.png');
   background-repeat: no-repeat;
-  background-position: -10px -90px;
+  background-position: -10px -95px;
   background-position-x: -10px;
-  background-position-y: -90px;
+  background-position-y: -95px;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-item:nth-child(5) .service-icon {
-  background-image: url('../../images/home-service.png');
+  background-image: url('../../images/home/service.png');
   background-repeat: no-repeat;
-  background-position: -90px -90px;
-  background-position-x: -90px;
-  background-position-y: -90px;
+  background-position: -89px -95px;
+  background-position-x: -89px;
+  background-position-y: -95px;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-detail {
   padding: 30px 20px 15px;
@@ -313,6 +313,7 @@
   display: inline-block;
   width: 70px;
   height: 70px;
+  background-size: 250px 170px;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-detail .service-desc {
   float: left;
@@ -439,9 +440,10 @@
 }
 .ai-platform.page-content .home-section.solution .solution-container .solution-tab > li .solution-icon {
   width: 30px;
+  background-size: 1200px 620px;
 }
 .ai-platform.page-content .home-section.solution .solution-container .solution-tab > li:nth-child(1) .solution-icon {
-  background-image: url('../../images/home-solution.png');
+  background-image: url('../../images/home/solution.png');
   background-repeat: no-repeat;
   background-position: -10px -10px;
   background-position-x: -10px;
@@ -449,14 +451,14 @@
 }
 .ai-platform.page-content .home-section.solution .solution-container .solution-tab > li:nth-child(1) a:hover .solution-icon,
 .ai-platform.page-content .home-section.solution .solution-container .solution-tab > li:nth-child(1) a.active .solution-icon {
-  background-image: url('../../images/home-solution.png');
+  background-image: url('../../images/home/solution.png');
   background-repeat: no-repeat;
   background-position: -10px -50px;
   background-position-x: -10px;
   background-position-y: -50px;
 }
 .ai-platform.page-content .home-section.solution .solution-container .solution-tab > li:nth-child(2) .solution-icon {
-  background-image: url('../../images/home-solution.png');
+  background-image: url('../../images/home/solution.png');
   background-repeat: no-repeat;
   background-position: -50px -10px;
   background-position-x: -50px;
@@ -464,14 +466,14 @@
 }
 .ai-platform.page-content .home-section.solution .solution-container .solution-tab > li:nth-child(2) a:hover .solution-icon,
 .ai-platform.page-content .home-section.solution .solution-container .solution-tab > li:nth-child(2) a.active .solution-icon {
-  background-image: url('../../images/home-solution.png');
+  background-image: url('../../images/home/solution.png');
   background-repeat: no-repeat;
   background-position: -50px -50px;
   background-position-x: -50px;
   background-position-y: -50px;
 }
 .ai-platform.page-content .home-section.solution .solution-container .solution-tab > li:nth-child(3) .solution-icon {
-  background-image: url('../../images/home-solution.png');
+  background-image: url('../../images/home/solution.png');
   background-repeat: no-repeat;
   background-position: -90px -10px;
   background-position-x: -90px;
@@ -479,14 +481,14 @@
 }
 .ai-platform.page-content .home-section.solution .solution-container .solution-tab > li:nth-child(3) a.hover .solution-icon,
 .ai-platform.page-content .home-section.solution .solution-container .solution-tab > li:nth-child(3) a.active .solution-icon {
-  background-image: url('../../images/home-solution.png');
+  background-image: url('../../images/home/solution.png');
   background-repeat: no-repeat;
   background-position: -90px -50px;
   background-position-x: -90px;
   background-position-y: -50px;
 }
 .ai-platform.page-content .home-section.solution .solution-container .solution-tab > li:nth-child(4) .solution-icon {
-  background-image: url('../../images/home-solution.png');
+  background-image: url('../../images/home/solution.png');
   background-repeat: no-repeat;
   background-position: -130px -10px;
   background-position-x: -130px;
@@ -494,7 +496,7 @@
 }
 .ai-platform.page-content .home-section.solution .solution-container .solution-tab > li:nth-child(4) a:hover .solution-icon,
 .ai-platform.page-content .home-section.solution .solution-container .solution-tab > li:nth-child(4) a.active .solution-icon {
-  background-image: url('../../images/home-solution.png');
+  background-image: url('../../images/home/solution.png');
   background-repeat: no-repeat;
   background-position: -130px -50px;
   background-position-x: -130px;
@@ -525,7 +527,8 @@
   right: 0;
   top: 0;
   z-index: -1;
-  background-image: url('../../images/home-solution.png');
+  background-size: 1200px 620px;
+  background-image: url('../../images/home/solution.png');
   background-repeat: no-repeat;
   background-position: -200px -10px;
   background-position-x: -200px;
@@ -549,6 +552,7 @@
   top: 20px;
   z-index: 1;
   right: 20px;
+  background-size: 1200px 620px;
   animation-name: rollInRight;
   animation-duration: 0.2s;
   animation-delay: 0;
@@ -577,28 +581,28 @@
   display: block;
 }
 .ai-platform.page-content .home-section.solution .solution-container .solution-detail > div:nth-child(1)::after {
-  background-image: url('../../images/home-solution.png');
+  background-image: url('../../images/home/solution.png');
   background-repeat: no-repeat;
   background-position: 10px -330px;
   background-position-x: 10px;
   background-position-y: -330px;
 }
 .ai-platform.page-content .home-section.solution .solution-container .solution-detail > div:nth-child(2)::after {
-  background-image: url('../../images/home-solution.png');
+  background-image: url('../../images/home/solution.png');
   background-repeat: no-repeat;
   background-position: -290px -330px;
   background-position-x: -290px;
   background-position-y: -330px;
 }
 .ai-platform.page-content .home-section.solution .solution-container .solution-detail > div:nth-child(3)::after {
-  background-image: url('../../images/home-solution.png');
+  background-image: url('../../images/home/solution.png');
   background-repeat: no-repeat;
   background-position: -590px -330px;
   background-position-x: -590px;
   background-position-y: -330px;
 }
 .ai-platform.page-content .home-section.solution .solution-container .solution-detail > div:nth-child(4)::after {
-  background-image: url('../../images/home-solution.png');
+  background-image: url('../../images/home/solution.png');
   background-repeat: no-repeat;
   background-position: -890px -330px;
   background-position-x: -890px;
@@ -712,14 +716,14 @@
   text-align: center;
   height: 90px;
   position: relative;
-  background-image: url('../../images/home-user-brand.png');
+  background-image: url('../../images/home/user-brand.png');
   background-repeat: no-repeat;
   background-position: 0 -90px;
   background-position-x: 0;
   background-position-y: -90px;
 }
 .ai-platform.page-content .home-section.user-case ul.user-brand-list > li:hover {
-  background-image: url('../../images/home-user-brand.png');
+  background-image: url('../../images/home/user-brand.png');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-position-x: 0;
@@ -755,7 +759,7 @@
 .ai-platform.page-content .home-section.register-now {
   padding: 50px 0 40px;
   text-align: center;
-  background-image: url('../../images/home-register-now.png');
+  background-image: url('../../images/home/register-now.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;

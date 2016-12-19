@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="/dist/css/ocr-idcard.css"></head>
+<link rel="stylesheet" href="/dist/css/bfb-compare.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -170,7 +170,7 @@
 <div class="ai-platform page-content">
 <section class="tech-section tech-banner">
     <div class="container">
-        <h1>身份证识别</h1>
+        <h1>人脸对比</h1>
         <p>文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
         <div>
             <a role="button" class="btn-primary media">获取API Key</a>
@@ -181,67 +181,11 @@
 <section class="tech-section tech-intro">
     <div class="container">
         <h2>功能介绍</h2>
-        <p>支持二代身份证正反面识别，可识别所有字段，对倾斜、暗光、曝光、阴影等异常情况稳定性好、识别准确率高达98%以上<br>请尽量保证上传的图像80%以上是身份证区域</p>
+        <p>通过提取人脸的特征，计算两张人脸的相似度，从而判断是否同一个人，并给出相似度评分<br>已知用户ID的情况下帮助确认是否为用户本人的检测，即1：1身份验证</p>
         <div class="tech-intro-detail">
-            <div class="original-card"></div>
-            <div class="arrow"></div>
-            <div class="scan-result"></div>
         </div>
     </div>
 </section>
-<section class="tech-section tech-demo">
-    <div class="container">
-        <h2>功能演示</h2>
-        <div class="demo-container clear-float">
-            <div class="data-view" data-label="原始图片" id="demo-origin"></div>
-            <div class="data-view" data-label="识别结果" id="demo-result">
-                <div class="result-background">
-                    <span class="name"></span>
-                    <span class="gender"></span>
-                    <span class="folk"></span>
-                    <span class="birthday"></span>
-                    <span class="address"></span>
-                    <span class="card-no"></span>
-
-                </div>
-            </div>
-            <div class="data-view">
-                <div class="demo-data">
-                    <input type="text" id="demo-photo-url">
-                    <button type="button" class="btn-primary" id="scan-photo">检测</button>
-                    <span>或</span>
-                    <label id="demo-photo-upload"><input type="file" >本地上传</label>
-                </div>
-
-                <p class="demo-desc">提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片。图片大小不超过2M，长边不超过2048像素。为保证正常识别效果，请保持身份证正面向上，并为图片主体部分。</p>
-                <ul class="demo-card-list clear-float">
-                    <li>
-                        <img src="/images/ocr-idcard/demo-card-1.png">
-                    </li>
-                    <li>
-                        <img src="/images/ocr-idcard/demo-card-2.png">
-                    </li>
-                    <li>
-                        <img src="/images/ocr-idcard/demo-card-3.png">
-                    </li>
-                    <li>
-                        <img src="/images/ocr-idcard/demo-card-4.png">
-                    </li>
-                    <li>
-                        <img src="/images/ocr-idcard/demo-card-5.png">
-                    </li>
-                    <li>
-                        <img src="/images/ocr-idcard/demo-card-6.png">
-                    </li>
-                </ul>
-            </div>
-            <div class="data-view" data-label="RESPONSE JSON" id="demo-json">
-                <p></p>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="tech-section tech-feature">
     <div class="container">
         <h2>技术特色</h2>
@@ -249,22 +193,22 @@
             <div class="feature-item shadow">
                 <div class="feature-icon"></div>
                 <div class="feature-desc">
-                    <h3>准确性高</h3>
-                    <p>国内首个公有云OCR产品，基于百度深度学习研究院（IDL）强大的深度学习算法和中文检测识别技术，身份证识别率98%以上</p>
+                    <h3>稳定可靠</h3>
+                    <p>依托百度深度学习实验室的技术实力，提供稳定、精确的大流量服务</p>
                 </div>
             </div>
             <div class="feature-item shadow">
                 <div class="feature-icon"></div>
                 <div class="feature-desc">
-                    <h3>成熟稳定</h3>
-                    <p>经过百度钱包等重量级产品实践检验，产品成熟稳定。支持实时文字识别能力、弹性灵活的高并发承载及99.95%的可用性保证</p>
+                    <h3>识别精度高</h3>
+                    <p>人脸识别技术国际领先，识别准确率超过百分之九十九</p>
                 </div>
             </div>
             <div class="feature-item shadow">
                 <div class="feature-icon"></div>
                 <div class="feature-desc">
-                    <h3>简单易用</h3>
-                    <p>提供符合RESTful规范的API访问接口，兼容性强，使用方便</p>
+                    <h3>活体检测技术</h3>
+                    <p>可抵御照片、视频等各类攻击，精确区分活体，安全可靠</p>
                 </div>
             </div>
         </div>
@@ -278,22 +222,15 @@
             <div class="scene-item shadow">
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
-                    <h3>金融场景</h3>
-                    <p>银行保险券商等行业用于客户身份识别，身份信息绑定，个人信息核实等场景，减少身份证输入操作，提高工作效率和用户的体验</p>
+                    <h3>金融在线身份认证</h3>
+                    <p>为解决金融等高风险行业复杂的身份验证流程，通过自拍照和身份证照之间的人脸识别确认用户身份是否本人</p>
                 </div>
             </div>
             <div class="scene-item shadow">
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
-                    <h3>视频场景</h3>
-                    <p>用户客户身份认证，直播实名认证等场景，减少用户身份证输入操作，提高用户体验</p>
-                </div>
-            </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>电商场景</h3>
-                    <p>用户电商用户身份绑定，电商用户实名认证，电商商家身份认证等场景，减少身份证输入操作，提高用户体验</p>
+                    <h3>酒店登入验证</h3>
+                    <p>入住酒店时，判断入住者是否为身份证持有人</p>
                 </div>
             </div>
         </div>
@@ -304,13 +241,21 @@
         <li class="case-item active">
             <div class="container">
                 <div class="case-icon"></div>
+                <h2>泰康人寿</h2>
+                <p>百度钱包是中国领先的在线支付应用和服务平台<br>调用百度身份证OCR接口进行用户身份证识别，识别速度快，准确率高<br>减少了用户的输入操作，有效的提高了用户的体验</p>
+            </div>
+        </li>
+        <li class="case-item">
+            <div class="container">
+                <div class="case-icon"></div>
                 <h2>百度钱包</h2>
                 <p>百度钱包是中国领先的在线支付应用和服务平台<br>调用百度身份证OCR接口进行用户身份证识别，识别速度快，准确率高<br>减少了用户的输入操作，有效的提高了用户的体验</p>
             </div>
         </li>
     </ul>
     <ul class="case-indicator">
-        <li class="active"><a>百度钱包</a></li>
+        <li class="active"><a>泰康人寿</a></li>
+        <li><a>百度钱包</a></li>
     </ul>
 </section>
 <section class="tech-section get-started">
@@ -336,10 +281,10 @@
         <div class="question-link clear-float">
             <h3>常见问题</h3>
             <ul>
-                <li><a>图片格式和分辨率有限制吗？</a></li>
-                <li><a>支持身份证等垂直类的文字识别吗？</a></li>
-                <li><a>支持文档扫描图片的文字识别码？</a></li>
-                <li><a>怎么提高文字识别的准确率和识别速度？</a></li>
+                <li><a>图片分辨率有什么要求？</a></li>
+                <li><a>图片大小是否有限制？</a></li>
+                <li><a>请求qps是否有限制？</a></li>
+                <li><a>低质量的色情图片能否正常识别？</a></li>
             </ul>
         </div>
     </div>
@@ -415,5 +360,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="/dist/js/ocr-idcard.bundle.js"></script></body>
+<script src="/dist/js/bfb-compare.bundle.js"></script></body>
 </html>

@@ -10,7 +10,7 @@
 
     ul.banner-content {
       height: 100%;
-      .icon (url('../../images/home-banner.png'), center, center);
+      .icon (url('../../images/home/banner.png'), center, center);
 
       & > li {
         padding: 100px 0;
@@ -123,23 +123,23 @@
           }
 
           &:nth-child(1) .service-icon {
-            .icon (url('../../images/home-service.png'), -10px, -10px);
+            .icon (url('../../images/home/service.png'), -10px, -15px);
           }
 
           &:nth-child(2) .service-icon {
-            .icon (url('../../images/home-service.png'), -90px, -10px);
+            .icon (url('../../images/home/service.png'), -90px, -15px);
           }
 
           &:nth-child(3) .service-icon {
-            .icon (url('../../images/home-service.png'), -170px, -10px);
+            .icon (url('../../images/home/service.png'), -170px, -15px);
           }
 
           &:nth-child(4) .service-icon {
-            .icon (url('../../images/home-service.png'), -10px, -90px);
+            .icon (url('../../images/home/service.png'), -10px, -95px);
           }
 
           &:nth-child(5) .service-icon {
-            .icon (url('../../images/home-service.png'), -90px, -90px);
+            .icon (url('../../images/home/service.png'), -89px, -95px);
           }
 
         }
@@ -187,6 +187,7 @@
             display: inline-block;
             width: 70px;
             height: 70px;
+            background-size: 250px 170px;
           }
 
           .service-desc {
@@ -338,35 +339,36 @@
 
             .solution-icon {
               width: 30px;
+              background-size: 2400px/2 1240px/2;
             }
 
             &:nth-child(1) .solution-icon {
-              .icon (url('../../images/home-solution.png'), -10px, -10px);
+              .icon (url('../../images/home/solution.png'), -10px, -10px);
             }
             &:nth-child(1) a:hover .solution-icon,
             &:nth-child(1) a.active .solution-icon{
-              .icon (url('../../images/home-solution.png'), -10px, -50px);
+              .icon (url('../../images/home/solution.png'), -10px, -50px);
             }
             &:nth-child(2) .solution-icon {
-              .icon (url('../../images/home-solution.png'), -50px, -10px);
+              .icon (url('../../images/home/solution.png'), -50px, -10px);
             }
             &:nth-child(2) a:hover .solution-icon,
             &:nth-child(2) a.active .solution-icon{
-              .icon (url('../../images/home-solution.png'), -50px, -50px);
+              .icon (url('../../images/home/solution.png'), -50px, -50px);
             }
             &:nth-child(3) .solution-icon {
-              .icon (url('../../images/home-solution.png'), -90px, -10px);
+              .icon (url('../../images/home/solution.png'), -90px, -10px);
             }
             &:nth-child(3) a.hover .solution-icon,
             &:nth-child(3) a.active .solution-icon{
-              .icon (url('../../images/home-solution.png'), -90px, -50px);
+              .icon (url('../../images/home/solution.png'), -90px, -50px);
             }
             &:nth-child(4) .solution-icon {
-              .icon (url('../../images/home-solution.png'), -130px, -10px);
+              .icon (url('../../images/home/solution.png'), -130px, -10px);
             }
             &:nth-child(4) a:hover .solution-icon,
             &:nth-child(4) a.active .solution-icon{
-              .icon (url('../../images/home-solution.png'), -130px, -50px);
+              .icon (url('../../images/home/solution.png'), -130px, -50px);
             }
           }
 
@@ -397,7 +399,8 @@
             right: 0;
             top: 0;
             z-index: -1;
-            .icon (url('../../images/home-solution.png'), -200px, -10px);
+            background-size: 2400px/2 1240px/2;
+            .icon (url('../../images/home/solution.png'), -200px, -10px);
           }
 
 
@@ -419,6 +422,7 @@
               top: 20px;
               z-index: 1;
               right: 20px;
+              background-size: 2400px/2 1240px/2;
               .animate(rollInRight, .2s, 0, 1, linear);
             }
           }
@@ -427,22 +431,22 @@
           & > div:nth-child(1){
             display: block;
             &::after {
-              .icon (url('../../images/home-solution.png'), 10px, -330px);
+              .icon (url('../../images/home/solution.png'), 10px, -330px);
             }
           }
           & > div:nth-child(2){
             &::after {
-              .icon (url('../../images/home-solution.png'), -290px, -330px);
+              .icon (url('../../images/home/solution.png'), -290px, -330px);
             }
           }
           & > div:nth-child(3){
             &::after {
-              .icon (url('../../images/home-solution.png'), -590px, -330px);
+              .icon (url('../../images/home/solution.png'), -590px, -330px);
             }
           }
           & > div:nth-child(4){
             &::after {
-              .icon (url('../../images/home-solution.png'), -890px, -330px);
+              .icon (url('../../images/home/solution.png'), -890px, -330px);
             }
           }
 
@@ -575,10 +579,10 @@
           text-align: center;
           height: 90px;
           position: relative;
-          .icon (url('../../images/home-user-brand.png'), 0, -90px);
+          .icon (url('../../images/home/user-brand.png'), 0, -90px);
 
           &:hover {
-            .icon (url('../../images/home-user-brand.png'), 0, 0);
+            .icon (url('../../images/home/user-brand.png'), 0, 0);
           }
 
           &::before {
@@ -617,7 +621,7 @@
     &.register-now {
       padding: 50px 0 40px;
       text-align: center;
-      .icon (url('../../images/home-register-now.png'), center, center);
+      .icon (url('../../images/home/register-now.png'), center, center);
       background-size: cover;
 
       h2 {

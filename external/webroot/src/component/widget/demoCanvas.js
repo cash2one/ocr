@@ -21,6 +21,7 @@ export default class DemoCanvas {
         this.image.onload = () => this.render();
 
         this.image.onerror = () => {
+            this.fail();
             console.error('图片加载失败，请重试');
         };
 
@@ -31,11 +32,18 @@ export default class DemoCanvas {
             }[this.type](image);
 
             $.when(promise).then(
-                resultImg => this.image.src = resultImg,
-                errorImg => this.image.src = errorImg
+                resultImg => {
+                    this.image.src = resultImg;
+                    this.success(this.image.src);
+                },
+                errorImg => {
+                    this.image.src = errorImg;
+                    this.fail();
+                }
             );
         } else {
             this.image.src = image;
+            this.success(this.image.src);
         }
 
     }
@@ -50,21 +58,21 @@ export default class DemoCanvas {
                 let contentSize = xhr.getResponseHeader('Content-Length');
                 if (!contentType && !contentSize) {
                     console.error('此错误可能是由于图片的同源策略造成的!');
-                    dfd.reject('/images/error-not-found.png');
+                    dfd.reject('/images/error/not-found.png');
                     return;
                 }
-                if (!/image\/(png|bmp|jpg)/.test(contentType)) {
-                    dfd.reject('/images/error-image-format.png');
+                if (!/image\/(png|bmp|jpg|jpeg)/.test(contentType)) {
+                    dfd.reject('/images/error/image-format.png');
                     return;
                 }
                 if (contentSize > 2000 * 1024) {
-                    dfd.reject('/images/error-too-large.png');
+                    dfd.reject('/images/error/too-large.png');
                     return;
                 }
                 dfd.resolve(image);
             },
             fail: function () {
-                dfd.reject('/images/error-not-found.png');
+                dfd.reject('/images/error/not-found.png');
                 return;
             }
         });
@@ -77,17 +85,17 @@ export default class DemoCanvas {
         reader.readAsDataURL(image);
         reader.onload = e => {
             if (!/image\/(png|bmp|jpeg)/.test(image.type)) {
-                dfd.reject('/images/error-image-format.png');
+                dfd.reject('/images/error/image-format.png');
                 return false;
             }
             if (image.size > 2000 * 1024) {
-                dfd.reject('/images/error-too-large.png');
+                dfd.reject('/images/error/too-large.png');
                 return false;
             }
             dfd.resolve(e.target.result);
         };
         reader.onerror = () => {
-            dfd.reject('/images/error-not-found.png');
+            dfd.reject('/images/error/not-found.png');
         };
         return dfd.promise();
     }
@@ -139,6 +147,5 @@ export default class DemoCanvas {
             'transform': 'translate(-50%, -50%) scale(' + scaleRatio + ')'
         });
         this.container.empty().append(canvas);
-        this.success(this.image.src);
     }
 }
