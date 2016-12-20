@@ -488,8 +488,8 @@
   margin: 0 50px;
   background-image: url('../../images/ocr-bankcard/intro.png');
   background-repeat: no-repeat;
-  background-position: -450px -10px;
-  background-position-x: -450px;
+  background-position: -440px -10px;
+  background-position-x: -440px;
   background-position-y: -10px;
 }
 .tech-section.tech-intro .scan-result {
@@ -505,8 +505,8 @@
   opacity: 1;
   background-image: url('../../images/ocr-bankcard/intro.png');
   background-repeat: no-repeat;
-  background-position: -530px -10px;
-  background-position-x: -530px;
+  background-position: -510px -10px;
+  background-position-x: -510px;
   background-position-y: -10px;
 }
 .tech-section.tech-demo .demo-container .data-view {
@@ -570,7 +570,7 @@
   background-position-y: center;
 }
 .tech-section.tech-demo .demo-container #demo-result .result-background.error-no-result::after {
-  background-image: url('../../images/error/no-result.png');
+  background-image: url('../../images/error/no-bankcard-result.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
@@ -590,7 +590,8 @@
   text-align: center;
 }
 .tech-section.tech-demo .demo-container #demo-result .result-background.has-result::after {
-  background-image: url('../../images/ocr-bankcard/id-card.png');
+  background-size: 381px 245px;
+  background-image: url('../../images/ocr-bankcard/bankcard.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
@@ -672,51 +673,16 @@
     transform: rotate(360deg);
   }
 }
-.tech-section.tech-demo .demo-container #demo-result .result-background.has-result.male::before {
-  background-image: url('../../images/ocr-bankcard/id-card-male.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-position-x: center;
-  background-position-y: center;
-}
-.tech-section.tech-demo .demo-container #demo-result .result-background.has-result.female::before {
-  background-image: url('../../images/ocr-bankcard/id-card-female.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-position-x: center;
-  background-position-y: center;
-}
 .tech-section.tech-demo .demo-container #demo-result .result-background > span {
   display: none;
   position: absolute;
-  font-size: 16px;
-  color: #333;
+  font-size: 24px;
+  color: #fff;
   z-index: 9;
 }
-.tech-section.tech-demo .demo-container #demo-result .result-background > span.name {
-  left: 170px;
-  top: 85px;
-}
-.tech-section.tech-demo .demo-container #demo-result .result-background > span.gender {
-  left: 170px;
-  top: 113px;
-}
-.tech-section.tech-demo .demo-container #demo-result .result-background > span.folk {
-  left: 260px;
-  top: 113px;
-}
-.tech-section.tech-demo .demo-container #demo-result .result-background > span.card-no {
-  left: 250px;
-  top: 2px;
-}
-.tech-section.tech-demo .demo-container #demo-result .result-background > span.address {
-  left: 170px;
-  top: 170px;
-  width: 165px;
-}
-.tech-section.tech-demo .demo-container #demo-result .result-background > span.birthday {
-  left: 170px;
-  top: 142px;
+.tech-section.tech-demo .demo-container #demo-result .result-background > span.bank-card-num {
+  left: 155px;
+  top: 185px;
 }
 .tech-section.tech-demo .demo-container #demo-result .result-background.has-result > span {
   display: inline-block;
@@ -872,6 +838,9 @@
   background-position-x: -50px;
   background-position-y: -90px;
 }
+.tech-section.tech-case .case-item .case-icon {
+  background-size: 400px 130px;
+}
 .tech-section.tech-case .case-item:nth-child(1) {
   background-image: url('../../images/ocr-bankcard/case-1.png');
   background-repeat: no-repeat;
@@ -882,9 +851,9 @@
 .tech-section.tech-case .case-item:nth-child(1) .case-icon {
   background-image: url('../../images/ocr-bankcard/case-icons.png');
   background-repeat: no-repeat;
-  background-position: -10px -10px;
-  background-position-x: -10px;
-  background-position-y: -10px;
+  background-position: -5px -5px;
+  background-position-x: -5px;
+  background-position-y: -5px;
 }
 .tech-section.tech-case .case-item:nth-child(2) {
   background-image: url('../../images/ocr-bankcard/case-2.png');
@@ -896,9 +865,9 @@
 .tech-section.tech-case .case-item:nth-child(2) .case-icon {
   background-image: url('../../images/ocr-bankcard/case-icons.png');
   background-repeat: no-repeat;
-  background-position: -10px -10px;
-  background-position-x: -10px;
-  background-position-y: -10px;
+  background-position: -105px -5px;
+  background-position-x: -105px;
+  background-position-y: -5px;
 }
 .tech-section.tech-case .case-item:nth-child(3) {
   background-image: url('../../images/ocr-bankcard/case-3.png');
@@ -910,9 +879,9 @@
 .tech-section.tech-case .case-item:nth-child(3) .case-icon {
   background-image: url('../../images/ocr-bankcard/case-icons.png');
   background-repeat: no-repeat;
-  background-position: -10px -10px;
-  background-position-x: -10px;
-  background-position-y: -10px;
+  background-position: -205px -5px;
+  background-position-x: -205px;
+  background-position-y: -5px;
 }
 .tech-section.tech-case .case-item:nth-child(4) {
   background-image: url('../../images/ocr-bankcard/case-4.png');
@@ -924,35 +893,35 @@
 .tech-section.tech-case .case-item:nth-child(4) .case-icon {
   background-image: url('../../images/ocr-bankcard/case-icons.png');
   background-repeat: no-repeat;
-  background-position: -10px -10px;
-  background-position-x: -10px;
-  background-position-y: -10px;
+  background-position: -305px -5px;
+  background-position-x: -305px;
+  background-position-y: -5px;
 }
 .tech-section.tech-case .case-indicator > li:nth-child(1) {
   background-image: url('../../images/ocr-bankcard/case-icons.png');
   background-repeat: no-repeat;
-  background-position: -10px -110px;
+  background-position: -10px -200px;
   background-position-x: -10px;
-  background-position-y: -110px;
+  background-position-y: -200px;
 }
 .tech-section.tech-case .case-indicator > li:nth-child(2) {
   background-image: url('../../images/ocr-bankcard/case-icons.png');
   background-repeat: no-repeat;
-  background-position: -10px -110px;
-  background-position-x: -10px;
-  background-position-y: -110px;
+  background-position: -210px -200px;
+  background-position-x: -210px;
+  background-position-y: -200px;
 }
 .tech-section.tech-case .case-indicator > li:nth-child(3) {
   background-image: url('../../images/ocr-bankcard/case-icons.png');
   background-repeat: no-repeat;
-  background-position: -10px -110px;
-  background-position-x: -10px;
-  background-position-y: -110px;
+  background-position: -410px -200px;
+  background-position-x: -410px;
+  background-position-y: -200px;
 }
 .tech-section.tech-case .case-indicator > li:nth-child(4) {
   background-image: url('../../images/ocr-bankcard/case-icons.png');
   background-repeat: no-repeat;
-  background-position: -10px -110px;
-  background-position-x: -10px;
-  background-position-y: -110px;
+  background-position: -610px -200px;
+  background-position-x: -610px;
+  background-position-y: -200px;
 }

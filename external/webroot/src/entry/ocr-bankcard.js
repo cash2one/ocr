@@ -42,17 +42,6 @@ $(document).ready(function () {
         $('#demo-photo-upload, #scan-photo').removeClass('disabled');
     };
 
-    const ID_CARD_KEY_MAP = {
-        '住址': 'address',
-        '公民身份号码': 'card-no',
-        '出生': 'birthday',
-        '民族': 'folk',
-        '性别': 'gender',
-        '姓名': 'name',
-        '女': 'female',
-        '男': 'male'
-    };
-
     let startScan = function (type, imgSrc) {
         $('#demo-json > p').empty();
         $('#demo-result .result-background').attr('class', 'result-background loading');
@@ -66,21 +55,13 @@ $(document).ready(function () {
                     $('#demo-result .result-background').toggleClass('has-result man female', false)
                         .toggleClass('error-upload-fail', res.errno === 1)
                         .toggleClass('error-timeout', res.errno === 28)
+                        .toggleClass('error-no-result', res.errno === 216630)
                         .toggleClass('error-image-format', res.errno === 216201);
                     return false;
                 }
-                let hasNoResult = true;
-                for (let key in res.data.words_result) {
-                    if (!res.data.words_result.hasOwnProperty(key)) {
-                        continue;
-                    }
-                    let words = res.data.words_result[key].words;
-                    hasNoResult = hasNoResult && !words;
-                    $('#demo-result .result-background').find('.' + ID_CARD_KEY_MAP[key]).html(words);
-                    if (key === '性别') {
-                        $('#demo-result .result-background').toggleClass(ID_CARD_KEY_MAP[words] || '', true);
-                    }
-                }
+
+                let hasNoResult = !res.data.result.bank_card_number;
+                $('#demo-result .result-background').find('.bank-card-num').html(res.data.result.bank_card_number);
                 $('#demo-result .result-background').toggleClass('has-result', !hasNoResult)
                     .toggleClass('error-no-result', hasNoResult);
             },
