@@ -61,7 +61,7 @@ $(document).ready(function () {
                 let hasNoResult = !res.data.words_result_num;
 
                 for (let i = 0, len = res.data.words_result_num; i < len; i ++) {
-                    var record = res.data.words_result[i];
+                    let record = res.data.words_result[i];
                     $('#demo-result tbody').append([
                         '<tr>',
                             '<td>' + (i + 1) + '</td>',
