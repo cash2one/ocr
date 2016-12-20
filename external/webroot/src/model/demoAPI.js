@@ -21,3 +21,11 @@ export function scanBankCard({image = null, imageUrl = null, success = $.noop, f
         'image_url': imageUrl
     }).success(success).fail(fail);
 }
+
+export function scanGeneralText({image = null, imageUrl = null, success = $.noop, fail = $.noop}) {
+    $.post('/aidemo', {
+        type: 'commontext',
+        image: image,
+        'image_url': imageUrl
+    }).success(success).fail(fail);
+}
