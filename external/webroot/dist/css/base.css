@@ -785,3 +785,6 @@ aside.aside-action ul > li.back-top > a {
   background-position-x: -10px;
   background-position-y: -50px;
 }
+.subscription-modal form {
+  padding-bottom: 1px;
+}
