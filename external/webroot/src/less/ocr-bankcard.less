@@ -56,7 +56,7 @@
       width: 50px;
       height: 250px;
       margin: 0 50px;
-      .icon(@intro, -450px, -10px);
+      .icon(@intro, -440px, -10px);
     }
 
     .scan-result {
@@ -70,7 +70,7 @@
 
       &.scanned {
         opacity: 1;
-        .icon(@intro, -530px, -10px);
+        .icon(@intro, -510px, -10px);
       }
     }
   }
@@ -137,7 +137,7 @@
             .icon(url('../../images/error/upload-fail.png'), center, center);
           }
           &.error-no-result::after {
-            .icon(url('../../images/error/no-result.png'), center, center);
+            .icon(url('../../images/error/no-bankcard-result.png'), center, center);
           }
           &.error-timeout::after {
             .icon(url('../../images/error/timeout.png'), center, center);
@@ -149,7 +149,8 @@
             text-align: center;
           }
           &.has-result::after {
-            .icon(url('../../images/ocr-bankcard/id-card.png'), center, center);
+            background-size: 762px/2 490px/2;
+            .icon(url('../../images/ocr-bankcard/bankcard.png'), center, center);
           }
 
           &::before {
@@ -205,49 +206,17 @@
             }
 
           }
-          &.has-result.male::before {
-            .icon(url('../../images/ocr-bankcard/id-card-male.png'), center, center);
-          }
-          &.has-result.female::before {
-            .icon(url('../../images/ocr-bankcard/id-card-female.png'), center, center);
-          }
 
           & > span {
             display: none;
             position: absolute;
-            font-size: @font-size-3;
-            color: #333;
+            font-size: 24px;
+            color: @white;
             z-index: 9;
 
-            &.name {
-              left: 170px;
-              top: 85px;
-            }
-
-            &.gender {
-              left: 170px;
-              top: 113px;
-            }
-
-            &.folk {
-              left: 260px;
-              top: 113px;
-            }
-
-            &.card-no {
-              left: 250px;
-              top: 2px;
-            }
-
-            &.address {
-              left: 170px;
-              top: 170px;
-              width: 165px;
-            }
-
-            &.birthday {
-              left: 170px;
-              top: 142px;
+            &.bank-card-num {
+              left: 155px;
+              top: 185px;
             }
           }
 
@@ -417,11 +386,15 @@
   }
 
   &.tech-case {
+    .case-item .case-icon {
+      background-size: 800px/2 260px/2;
+    }
+
     .case-item:nth-child(1) {
       .icon(url('../../images/ocr-bankcard/case-1.png'), center, center);
 
       .case-icon {
-        .icon(@case-icons, -10px, -10px);
+        .icon(@case-icons, -5px, -5px);
       }
     }
 
@@ -429,7 +402,7 @@
       .icon(url('../../images/ocr-bankcard/case-2.png'), center, center);
 
       .case-icon {
-        .icon(@case-icons, -10px, -10px);
+        .icon(@case-icons, -105px, -5px);
       }
     }
 
@@ -437,7 +410,7 @@
       .icon(url('../../images/ocr-bankcard/case-3.png'), center, center);
 
       .case-icon {
-        .icon(@case-icons, -10px, -10px);
+        .icon(@case-icons, -205px, -5px);
       }
     }
 
@@ -445,22 +418,22 @@
       .icon(url('../../images/ocr-bankcard/case-4.png'), center, center);
 
       .case-icon {
-        .icon(@case-icons, -10px, -10px);
+        .icon(@case-icons, -305px, -5px);
       }
     }
 
     .case-indicator {
       & > li:nth-child(1) {
-        .icon(@case-icons, -10px, -110px);
+        .icon(@case-icons, -10px, -200px);
       }
       & > li:nth-child(2) {
-        .icon(@case-icons, -10px, -110px);
+        .icon(@case-icons, -210px, -200px);
       }
       & > li:nth-child(3) {
-        .icon(@case-icons, -10px, -110px);
+        .icon(@case-icons, -410px, -200px);
       }
       & > li:nth-child(4) {
-        .icon(@case-icons, -10px, -110px);
+        .icon(@case-icons, -610px, -200px);
       }
     }
   }
