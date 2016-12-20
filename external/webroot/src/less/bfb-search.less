@@ -1,63 +1,114 @@
 @import 'common/helper.less';
 @import 'common/global.less';
 
-@banner: url('../../images/ocr-idcard/banner.png');
-@icons: url('../../images/ocr-idcard/icons.png');
-@intro-bg: url('../../images/ocr-idcard/intro-bg.png');
-@intro: url('../../images/ocr-idcard/intro.png');
-@case-icons: url('../../images/ocr-idcard/case-icons.png');
+@banner: url('../../images/bfb-search/banner.png');
+@icons: url('../../images/bfb-search/icons.png');
+@intro-bg: url('../../images/bfb-search/intro-bg.png');
+@intro: url('../../images/bfb-search/intro.png');
+@case-icons: url('../../images/bfb-search/case-icons.png');
 
 @import './common/tech-page.less';
 
 .tech-section {
   &.tech-intro{
+    height: 645px;
 
+    .tech-intro-detail{
+      margin-top: 40px;
+      height: 500px;
+      position: relative;
+      .icon(@intro, center, center);
+    }
+
+    .face-list {
+      width: 751px;
+      position: absolute;
+      top: 37px;
+      left: 67px;
+
+      & > li {
+        display: inline-block;
+        width: 181px;
+        height: 208px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        float: left;
+
+        &.right.scanning {
+          border: 2px solid @blue;
+          background-color: fadeOut(@blue, 80%);
+        }
+
+        &.wrong.scanning {
+          border: 2px solid red;
+          background-color: fadeOut(red, 80%);
+        }
+
+        &.right.scanned {
+          border: 2px solid @blue;
+          background-color: transparent;
+        }
+
+        &.wrong.scanned {
+          border: 2px solid fadeOut(@black, 15%);
+          background-color: fadeOut(@black, 15%);
+        }
+      }
+    }
   }
 
   &.tech-feature{
     .feature-item + .feature-item{
       margin-left: 110px;
     }
+    .feature-item .feature-icon {
+      background-size: 520px/2 270px/2;
+    }
 
     .feature-item:nth-child(1) .feature-icon{
-      .icon(@icons, -10px, -10px);
+      .icon(@icons, -5px, -5px);
     }
     .feature-item:nth-child(2) .feature-icon{
-      .icon(@icons, -100px, -10px);
+      .icon(@icons, -90px, -5px);
     }
     .feature-item:nth-child(3) .feature-icon{
-      .icon(@icons, -190px, -10px);
+      .icon(@icons, -175px, -5px);
     }
   }
   &.tech-scene{
     .scene-item + .scene-item{
       margin-left: 50px;
     }
+    .scene-item .scene-icon{
+      background-size: 520px/2 270px/2;
+    }
 
     .scene-item:nth-child(1) .scene-icon{
-      .icon(@icons, -10px, -110px);
+      .icon(@icons, -5px, -90px);
     }
     .scene-item:nth-child(2) .scene-icon{
-      .icon(@icons, -60px, -110px);
+      .icon(@icons, -50px, -90px);
     }
     .scene-item:nth-child(3) .scene-icon{
-      .icon(@icons, -110px, -110px);
+      .icon(@icons, -95px, -90px);
     }
   }
 
   &.tech-case {
     .case-item:nth-child(1) {
-      .icon(url('../../images/ocr-idcard/case-1.png'), center, center);
+      .icon(url('../../images/bfb-search/case-1.png'), center, center);
 
-      .case-icon {
-        .icon(@case-icons, -10px, -10px);
-      }
     }
     .case-item:nth-child(2) {
-      .icon(url('../../images/ocr-idcard/case-1.png'), center, center);
+      .icon(url('../../images/bfb-search/case-2.png'), center, center);
+    }
 
-      .case-icon {
+    .case-indicator {
+      & > li:nth-child(1) {
         .icon(@case-icons, -10px, -10px);
+      }
+      & > li:nth-child(2) {
+        .icon(@case-icons, -210px, -10px);
       }
     }
   }

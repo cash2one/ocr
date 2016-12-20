@@ -29,9 +29,15 @@ $(document).ready(function () {
     // 绑定功能介绍动画
     // $('.tech-intro-detail').one('demo', function () {
     //     $('.original-card').addClass('scanning');
-    //     setTimeout(function () {
-    //         $('.original-card').removeClass('scanning').addClass('scanned');
-    //         $('.scan-result').addClass('scanned');
-    //     }, 3000);
+    //     let counter = 0;
+    //     let interval = setInterval(function () {
+    //         let faces = $('.face-list > li');
+    //         faces.toggleClass(i => {
+    //             return i === counter ? 'scanning' : '';
+    //         });
+    //         if (counter++ === faces.length) {
+    //             clearInterval(interval);
+    //         }
+    //     }, 300);
     // });
 });

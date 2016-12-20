@@ -171,7 +171,7 @@
   box-sizing: border-box;
   background-color: #f0f7fc;
   background-size: 1600px 400px;
-  background-image: url('../../images/ocr-idcard/banner.png');
+  background-image: url('../../images/bfb-compare/banner.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
@@ -196,7 +196,7 @@
 }
 .tech-section.tech-intro {
   height: 400px;
-  background-image: url('../../images/ocr-idcard/intro-bg.png');
+  background-image: url('../../images/bfb-compare/intro-bg.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
@@ -435,77 +435,104 @@
 .tech-section.tech-guide .question-link ul > li + li {
   margin-left: 60px;
 }
+.tech-section.tech-intro {
+  height: 645px;
+}
 .tech-section.tech-feature .feature-item + .feature-item {
   margin-left: 110px;
 }
+.tech-section.tech-feature .feature-item .feature-icon {
+  background-size: 260px 135px;
+}
 .tech-section.tech-feature .feature-item:nth-child(1) .feature-icon {
-  background-image: url('../../images/ocr-idcard/icons.png');
+  background-image: url('../../images/bfb-compare/icons.png');
   background-repeat: no-repeat;
-  background-position: -10px -10px;
-  background-position-x: -10px;
-  background-position-y: -10px;
+  background-position: -5px -5px;
+  background-position-x: -5px;
+  background-position-y: -5px;
 }
 .tech-section.tech-feature .feature-item:nth-child(2) .feature-icon {
-  background-image: url('../../images/ocr-idcard/icons.png');
+  background-image: url('../../images/bfb-compare/icons.png');
   background-repeat: no-repeat;
-  background-position: -100px -10px;
-  background-position-x: -100px;
-  background-position-y: -10px;
+  background-position: -90px -5px;
+  background-position-x: -90px;
+  background-position-y: -5px;
 }
 .tech-section.tech-feature .feature-item:nth-child(3) .feature-icon {
-  background-image: url('../../images/ocr-idcard/icons.png');
+  background-image: url('../../images/bfb-compare/icons.png');
   background-repeat: no-repeat;
-  background-position: -190px -10px;
-  background-position-x: -190px;
-  background-position-y: -10px;
+  background-position: -175px -5px;
+  background-position-x: -175px;
+  background-position-y: -5px;
+}
+.tech-section.tech-scene .scene-item .scene-icon {
+  background-size: 260px 135px;
 }
 .tech-section.tech-scene .scene-item:nth-child(1) {
   margin-left: 150px;
   margin-right: 80px;
 }
 .tech-section.tech-scene .scene-item:nth-child(1) .scene-icon {
-  background-image: url('../../images/ocr-idcard/icons.png');
+  background-image: url('../../images/bfb-compare/icons.png');
   background-repeat: no-repeat;
-  background-position: -10px -110px;
-  background-position-x: -10px;
-  background-position-y: -110px;
+  background-position: -5px -90px;
+  background-position-x: -5px;
+  background-position-y: -90px;
 }
 .tech-section.tech-scene .scene-item:nth-child(2) {
   margin-left: 80px;
   margin-right: 150px;
 }
 .tech-section.tech-scene .scene-item:nth-child(2) .scene-icon {
-  background-image: url('../../images/ocr-idcard/icons.png');
+  background-image: url('../../images/bfb-compare/icons.png');
   background-repeat: no-repeat;
-  background-position: -60px -110px;
-  background-position-x: -60px;
-  background-position-y: -110px;
+  background-position: -50px -90px;
+  background-position-x: -50px;
+  background-position-y: -90px;
+}
+.tech-section.tech-case .case-item .case-icon {
+  background-size: 281px 135px;
 }
 .tech-section.tech-case .case-item:nth-child(1) {
-  background-image: url('../../images/ocr-idcard/case-1.png');
+  background-image: url('../../images/bfb-compare/case-1.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
   background-position-y: center;
 }
 .tech-section.tech-case .case-item:nth-child(1) .case-icon {
-  background-image: url('../../images/ocr-idcard/case-icons.png');
+  width: 165px;
+  background-image: url('../../images/bfb-compare/case-icons.png');
   background-repeat: no-repeat;
-  background-position: -10px -10px;
-  background-position-x: -10px;
+  background-position: -5px -10px;
+  background-position-x: -5px;
   background-position-y: -10px;
 }
 .tech-section.tech-case .case-item:nth-child(2) {
-  background-image: url('../../images/ocr-idcard/case-1.png');
+  background-image: url('../../images/bfb-compare/case-2.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
   background-position-y: center;
 }
 .tech-section.tech-case .case-item:nth-child(2) .case-icon {
-  background-image: url('../../images/ocr-idcard/case-icons.png');
+  background-image: url('../../images/bfb-compare/case-icons.png');
   background-repeat: no-repeat;
-  background-position: -10px -10px;
+  background-position: -180px -5px;
+  background-position-x: -180px;
+  background-position-y: -5px;
+}
+.tech-section.tech-case .case-indicator > li:nth-child(1) {
+  background-image: url('../../images/bfb-compare/case-icons.png');
+  background-repeat: no-repeat;
+  background-position: -10px -210px;
   background-position-x: -10px;
-  background-position-y: -10px;
+  background-position-y: -210px;
+}
+.tech-section.tech-case .case-indicator > li:nth-child(2) {
+  background-image: url('../../images/bfb-compare/case-icons.png');
+  background-repeat: no-repeat;
+  background-position: -360px -210px;
+  background-position-x: -360px;
+  background-position-y: -210px;
 }
