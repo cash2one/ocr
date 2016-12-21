@@ -31,7 +31,7 @@ $(document).ready(function () {
         let counter = 0;
         let interval = setInterval(function () {
             let faces = $('.face-list > li');
-            faces.each((i,e) => {
+            faces.each((i, e) => {
                 $(e).toggleClass('scanning', i === counter);
             });
             if (counter === faces.length) {

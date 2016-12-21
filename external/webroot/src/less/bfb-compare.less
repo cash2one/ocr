@@ -5,6 +5,7 @@
 @icons: url('../../images/bfb-compare/icons.png');
 @intro-bg: url('../../images/bfb-compare/intro-bg.png');
 @intro: url('../../images/bfb-compare/intro.png');
+@intro-scan-icons: url('../../images/bfb-compare/intro-scan-icons.png');
 @case-icons: url('../../images/bfb-compare/case-icons.png');
 
 @import './common/tech-page.less';
@@ -12,6 +13,122 @@
 .tech-section {
   &.tech-intro{
     height: 645px;
+
+    .tech-intro-detail{
+      margin-top: 40px;
+      height: 500px;
+
+      .icon(@intro, center, center);
+
+      & > .compare-group {
+        position: relative;
+        height: 50%;
+
+        .scan-line {
+          position: absolute;
+          width: 0;
+          height: 110px;
+          overflow: hidden;
+
+          &.left {
+            .icon(@intro-scan-icons, left, 10px);
+          }
+
+          &.right {
+            .icon(@intro-scan-icons, right, 10px);
+          }
+        }
+
+        .scan-result {
+          opacity: 0;
+          position: absolute;
+          width: 135px;
+          height: 136px;
+          left: 526px;
+          top: 56px;
+
+          &.good {
+            .icon(@intro-scan-icons, left, bottom);
+          }
+
+          &.bad {
+            .icon(@intro-scan-icons, right, bottom);
+          }
+        }
+
+        &.scanned {
+          .scan-line {
+            -webkit-transition: width 1s ease-out;
+               -moz-transition: width 1s ease-out;
+                 -o-transition: width 1s ease-out;
+                    transition: width 1s ease-out;
+          }
+
+          .scan-result {
+            -webkit-transition: opacity .5s ease-in;
+               -moz-transition: opacity .5s ease-in;
+                 -o-transition: opacity .5s ease-in;
+                    transition: opacity .5s ease-in;
+            opacity: 1;
+          }
+        }
+
+        &:nth-child(1) {
+          &.scanned {
+            .scan-line {
+              -webkit-transition-delay: 0s;
+                 -moz-transition-delay: 0s;
+                   -o-transition-delay: 0s;
+                      transition-delay: 0s;
+              width: 270px;
+            }
+
+            .scan-result {
+              -webkit-transition-delay: 1s;
+                 -moz-transition-delay: 1s;
+                   -o-transition-delay: 1s;
+                      transition-delay: 1s;
+            }
+          }
+
+          .scan-line.left {
+            top: 65px;
+            left: 255px;
+          }
+          .scan-line.right {
+            top: 65px;
+            right: 250px;
+          }
+        }
+
+        &:nth-child(2) {
+          &.scanned {
+            .scan-line {
+              -webkit-transition-delay: 1.5s;
+                 -moz-transition-delay: 1.5s;
+                   -o-transition-delay: 1.5s;
+                      transition-delay: 1.5s;
+              width: 285px;
+            }
+            .scan-result {
+              -webkit-transition-delay: 2.5s;
+                 -moz-transition-delay: 2.5s;
+                   -o-transition-delay: 2.5s;
+                      transition-delay: 2.5s;
+            }
+          }
+
+          .scan-line.left {
+            top: 70px;
+            left: 245px;
+          }
+          .scan-line.right {
+            top: 75px;
+            right: 235px;
+          }
+        }
+      }
+    }
   }
 
   &.tech-feature{
