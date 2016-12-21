@@ -39,7 +39,9 @@ class Action_AIDemo extends Ap_Action_Abstract {
         
         if($strAction == 'api')
         {
-            /* 1. 参数检查 */
+            /* 
+             * 1. 参数检查 
+             * */
             
             if (!array_key_exists($demoType, Brain_AIApi::$arrTypelist)) {
                 Brain_Output::jsonOutput(1, '请求Demo类型错误');
@@ -78,7 +80,9 @@ class Action_AIDemo extends Ap_Action_Abstract {
                 return;
             } 
             
-            /* 2. 逻辑处理 */
+            /* 
+             * 2. 逻辑处理 
+             * */
             $ret_data = Brain_AIApi::callApi($demoType, $filter_image);
             
             Brain_Output::jsonOutput($ret_data['errno'], $ret_data['msg'], $ret_data['data']);
