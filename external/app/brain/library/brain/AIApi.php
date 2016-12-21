@@ -11,7 +11,7 @@ class Brain_AIApi {
     
     //访问限制
     const SEC_VISIT_LIMIT = 1;
-    const MINUTE_VISIT_LIMIT = 50;
+    const MINUTE_VISIT_LIMIT = 500;
     const MAX_IMAGE_LIMIT = 2097152; //2 * 1014 * 1024
     
     //api list
@@ -170,7 +170,7 @@ class Brain_AIApi {
             'msg' => Brain_Util::getParamAsString($ret_data, 'error_msg', 'success'),
             'data' => '',
         );
-        if(!array_key_exists('error_code'))
+        if(!array_key_exists('error_code', $ret_data))
         {
             unset($ret_data['log_id']);
             $result['data'] = $ret_data;
@@ -190,6 +190,7 @@ class Brain_AIApi {
     public static function doCallApi($url, $postData) {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 20);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
@@ -202,10 +203,19 @@ class Brain_AIApi {
         
         $output = curl_exec($ch);
 
+        $curl_errno = curl_errno($ch); 
+        $curl_error = curl_error($ch);
         //$content_type = curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
         //$code = curl_getinfo($ch, CURLINFO_HTTP_CODE); 
 
         curl_close($ch);
+
+        if($curl_errno > 0){ 
+            return array(
+                'error_code' => $curl_errno,
+                'error_msg' => $curl_error,
+            );
+        }
 
         return json_decode($output, true);
     } 
@@ -224,6 +234,19 @@ class Brain_AIApi {
         $image_base64_data = base64_encode($image_data);
         
         return $image_base64_data;
+    }
+
+    /**
+     * getHeaderByUrl 
+     * 
+     * @param mixed $url 
+     * @access public
+     * @return void
+     */ 
+    public static function getHeaderByUrl($url) {
+        $header_data = get_headers($url, 1);
+        
+        return $header_data;
     } 
 }
 /* vim: set expandtab ts=4 sw=4 sts=4 tw=120: */

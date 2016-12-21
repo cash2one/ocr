@@ -190,7 +190,8 @@ def gen_mail_content(xls_prefix, email, token):
                        % (email, token)
 
     header = """
-<table style=" width: 800px; background-color:#fff;font-family:'Microsoft Yahei';  " border="0" cellspacing="0"
+<div align="center">
+<table style="margin:0 auto; width: 800px; background-color:#fff;font-family:'Microsoft Yahei';" border="0" cellspacing="0"
        cellpadding="0">
     <tbody>
     <tr>
@@ -236,12 +237,23 @@ def gen_mail_content(xls_prefix, email, token):
 
     footer = """
     <tr>
-        <td colspan="2" style="padding-top: 15px">
-            <img style="width:100%; height:100%;" src="data/common/footer.png">
+        <td colspan="2" style="padding-top: 15px; border-top: 1px solid #aaa;" align="center">
+            <img width="200" height="200" src="data/common/gongzhonghao.png">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding-top: 15px; color:#aaa; font-size: 12px;" align="center">
+            更多内容，请关注【百度大脑】微信公众号
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding: 15px 0; color:#aaa; font-size: 12px; border-bottom: 2px solid #00a;" align="center">
+            请勿直接回复此邮件，如有问题，欢迎发送邮件到 ai@baidu.com 咨询
         </td>
     </tr>
     </tbody>
 </table>
+</div>
     """
     
     ret_data = header
@@ -256,7 +268,7 @@ def gen_mail_content(xls_prefix, email, token):
         title = table.row_values(i)[0]
         link = table.row_values(i)[1]
         abstract = table.row_values(i)[2]
-        image = '%s/image%03d.png' % (xls_prefix, 2 * i - 1)
+        image = '%s.files/image%03d.png' % (xls_prefix, 2 * i - 1)
 
         tmp = content % (image, link, title, abstract)
         ret_data += tmp.encode('utf8')
