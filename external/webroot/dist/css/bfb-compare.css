@@ -438,6 +438,116 @@
 .tech-section.tech-intro {
   height: 645px;
 }
+.tech-section.tech-intro .tech-intro-detail {
+  margin-top: 40px;
+  height: 500px;
+  background-image: url('../../images/bfb-compare/intro.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position-x: center;
+  background-position-y: center;
+}
+.tech-section.tech-intro .tech-intro-detail > .compare-group {
+  position: relative;
+  height: 50%;
+}
+.tech-section.tech-intro .tech-intro-detail > .compare-group .scan-line {
+  position: absolute;
+  width: 0;
+  height: 110px;
+  overflow: hidden;
+}
+.tech-section.tech-intro .tech-intro-detail > .compare-group .scan-line.left {
+  background-image: url('../../images/bfb-compare/intro-scan-icons.png');
+  background-repeat: no-repeat;
+  background-position: left 10px;
+  background-position-x: left;
+  background-position-y: 10px;
+}
+.tech-section.tech-intro .tech-intro-detail > .compare-group .scan-line.right {
+  background-image: url('../../images/bfb-compare/intro-scan-icons.png');
+  background-repeat: no-repeat;
+  background-position: right 10px;
+  background-position-x: right;
+  background-position-y: 10px;
+}
+.tech-section.tech-intro .tech-intro-detail > .compare-group .scan-result {
+  opacity: 0;
+  position: absolute;
+  width: 135px;
+  height: 136px;
+  left: 526px;
+  top: 56px;
+}
+.tech-section.tech-intro .tech-intro-detail > .compare-group .scan-result.good {
+  background-image: url('../../images/bfb-compare/intro-scan-icons.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-position-x: left;
+  background-position-y: bottom;
+}
+.tech-section.tech-intro .tech-intro-detail > .compare-group .scan-result.bad {
+  background-image: url('../../images/bfb-compare/intro-scan-icons.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+.tech-section.tech-intro .tech-intro-detail > .compare-group.scanned .scan-line {
+  -webkit-transition: width 1s ease-out;
+  -moz-transition: width 1s ease-out;
+  -o-transition: width 1s ease-out;
+  transition: width 1s ease-out;
+}
+.tech-section.tech-intro .tech-intro-detail > .compare-group.scanned .scan-result {
+  -webkit-transition: opacity 0.5s ease-in;
+  -moz-transition: opacity 0.5s ease-in;
+  -o-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+  opacity: 1;
+}
+.tech-section.tech-intro .tech-intro-detail > .compare-group:nth-child(1).scanned .scan-line {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+  width: 270px;
+}
+.tech-section.tech-intro .tech-intro-detail > .compare-group:nth-child(1).scanned .scan-result {
+  -webkit-transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  transition-delay: 1s;
+}
+.tech-section.tech-intro .tech-intro-detail > .compare-group:nth-child(1) .scan-line.left {
+  top: 65px;
+  left: 255px;
+}
+.tech-section.tech-intro .tech-intro-detail > .compare-group:nth-child(1) .scan-line.right {
+  top: 65px;
+  right: 250px;
+}
+.tech-section.tech-intro .tech-intro-detail > .compare-group:nth-child(2).scanned .scan-line {
+  -webkit-transition-delay: 1.5s;
+  -moz-transition-delay: 1.5s;
+  -o-transition-delay: 1.5s;
+  transition-delay: 1.5s;
+  width: 285px;
+}
+.tech-section.tech-intro .tech-intro-detail > .compare-group:nth-child(2).scanned .scan-result {
+  -webkit-transition-delay: 2.5s;
+  -moz-transition-delay: 2.5s;
+  -o-transition-delay: 2.5s;
+  transition-delay: 2.5s;
+}
+.tech-section.tech-intro .tech-intro-detail > .compare-group:nth-child(2) .scan-line.left {
+  top: 70px;
+  left: 245px;
+}
+.tech-section.tech-intro .tech-intro-detail > .compare-group:nth-child(2) .scan-line.right {
+  top: 75px;
+  right: 235px;
+}
 .tech-section.tech-feature .feature-item + .feature-item {
   margin-left: 110px;
 }

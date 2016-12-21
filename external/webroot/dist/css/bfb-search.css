@@ -451,31 +451,31 @@
 .tech-section.tech-intro .face-list {
   width: 751px;
   position: absolute;
-  top: 37px;
+  top: 36px;
   left: 67px;
 }
 .tech-section.tech-intro .face-list > li {
   display: inline-block;
-  width: 181px;
+  width: 179px;
   height: 208px;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
   float: left;
 }
 .tech-section.tech-intro .face-list > li.right.scanning {
-  border: 2px solid #0073eb;
+  border-color: #0073eb;
   background-color: rgba(0, 115, 235, 0.2);
 }
 .tech-section.tech-intro .face-list > li.wrong.scanning {
-  border: 2px solid red;
+  border-color: red;
   background-color: rgba(255, 0, 0, 0.2);
 }
 .tech-section.tech-intro .face-list > li.right.scanned {
-  border: 2px solid #0073eb;
+  border-color: #0073eb;
   background-color: transparent;
 }
 .tech-section.tech-intro .face-list > li.wrong.scanned {
-  border: 2px solid rgba(0, 0, 0, 0.85);
+  border-color: rgba(0, 0, 0, 0.85);
   background-color: rgba(0, 0, 0, 0.85);
 }
 .tech-section.tech-feature .feature-item + .feature-item {

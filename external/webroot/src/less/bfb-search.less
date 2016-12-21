@@ -23,34 +23,34 @@
     .face-list {
       width: 751px;
       position: absolute;
-      top: 37px;
+      top: 36px;
       left: 67px;
 
       & > li {
         display: inline-block;
-        width: 181px;
+        width: 179px;
         height: 208px;
         transition: all 0.3s ease;
-        border: 2px solid transparent;
+        border: 3px solid transparent;
         float: left;
 
         &.right.scanning {
-          border: 2px solid @blue;
+          border-color: @blue;
           background-color: fadeOut(@blue, 80%);
         }
 
         &.wrong.scanning {
-          border: 2px solid red;
+          border-color: red;
           background-color: fadeOut(red, 80%);
         }
 
         &.right.scanned {
-          border: 2px solid @blue;
+          border-color: @blue;
           background-color: transparent;
         }
 
         &.wrong.scanned {
-          border: 2px solid fadeOut(@black, 15%);
+          border-color: fadeOut(@black, 15%);
           background-color: fadeOut(@black, 15%);
         }
       }
