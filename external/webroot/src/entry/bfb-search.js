@@ -1,5 +1,5 @@
 /**
- * @file ocr-身份证识别脚本入口
+ * @file bfb-人脸查找脚本入口
  * @author shiliang@baidu.com
  */
 'use strict';

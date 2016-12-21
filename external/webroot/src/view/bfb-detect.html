@@ -1,7 +1,7 @@
 <section class="tech-section tech-banner">
     <div class="container">
-        <h1>人脸查找</h1>
-        <p>文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
+        <h1>人脸检测</h1>
+        <p>文案内容文案内容文案内容文案内容文案内容文案内容文案容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
         <div>
             <a role="button" class="btn-primary media">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
@@ -11,13 +11,75 @@
 <section class="tech-section tech-intro">
     <div class="container">
         <h2>功能介绍</h2>
-        <p>给定一张照片，和数据库中N个人脸进行比对，找出最相似的一张脸或多张人脸<br>
-            用于用户不需要声明身份的场景，跟据识别人脸与已经注册库中的人脸匹配程度，返回用户信息和匹配度，即1：N人脸检索</p>
+        <p>检测图中的人脸，并为人脸标记出边框。检测出人脸后，可对人脸进行分析，获得眼、口、鼻轮廓等72个关键点定位<br>
+            准确识别多种人脸属性，如性别，年龄，表情等信息。该技术可适应大角度侧脸，遮挡，模糊，表情变化等各种实际环境</p>
         <div class="tech-intro-detail">
+            <div class="left">
+                <div class="scan-box"></div>
+                <div class="scan-result"></div>
+            </div>
+            <div class="right">
+                <div class="scan-box"></div>
+                <div class="scan-result"></div>
+            </div>
         </div>
     </div>
 </section>
-
+<section class="tech-section tech-demo">
+    <div class="container">
+        <h2>功能演示</h2>
+        <div class="demo-container clear-float">
+            <div class="clear-float">
+                <div class="data-view-container">
+                    <div class="data-view" data-label="识别结果" id="demo-result">
+                        <div class="result-background"></div>
+                    </div>
+                    <div class="demo-data">
+                        <input type="text" id="demo-photo-url">
+                        <button type="button" class="btn-primary" id="scan-photo">检测</button>
+                        <span>或</span>
+                        <label id="demo-photo-upload"><input type="file">本地上传</label>
+                    </div>
+                    <p class="demo-desc">
+                        提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片。图片大小不超过2M，长边不超过2048像素。为保证正常识别效果，请保证需要识别部分为图片主体部分。</p>
+                </div>
+                <div class="data-view-container">
+                    <div class="data-view" data-label="RESPONSE JSON" id="demo-json">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <ul class="demo-card-list clear-float">
+                    <li>
+                        <img src="/images/bfb-detect/demo-card-1.png">
+                    </li>
+                    <li>
+                        <img src="/images/bfb-detect/demo-card-2.png">
+                    </li>
+                    <li>
+                        <img src="/images/bfb-detect/demo-card-3.png">
+                    </li>
+                    <li>
+                        <img src="/images/bfb-detect/demo-card-4.png">
+                    </li>
+                    <li>
+                        <img src="/images/bfb-detect/demo-card-5.png">
+                    </li>
+                    <li>
+                        <img src="/images/bfb-detect/demo-card-6.png">
+                    </li>
+                    <li>
+                        <img src="/images/bfb-detect/demo-card-7.png">
+                    </li>
+                    <li>
+                        <img src="/images/bfb-detect/demo-card-8.png">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="tech-section tech-feature">
     <div class="container">
         <h2>技术特色</h2>
@@ -25,22 +87,22 @@
             <div class="feature-item shadow">
                 <div class="feature-icon"></div>
                 <div class="feature-desc">
-                    <h3>强大的人脸训练模型</h3>
-                    <p>通过海量人脸训练集，成功标注千万人脸数据</p>
+                    <h3>算法领先</h3>
+                    <p>基于百度专业的深度学习算法和海量数据训练，人脸检测和人脸识别算法在最权威的公开评测比赛中排名世界领先</p>
                 </div>
             </div>
             <div class="feature-item shadow">
                 <div class="feature-icon"></div>
                 <div class="feature-desc">
-                    <h3>比对速度快</h3>
-                    <p>算法识别速度小于300ms，误识率低</p>
+                    <h3>稳定高效</h3>
+                    <p>依托百度深度学习实验室的技术实力，提供企业级稳定、精确的大流量服务。支持毫秒级的识别响应能力、弹性灵活的高并发承载及99.99%的可靠性保障</p>
                 </div>
             </div>
             <div class="feature-item shadow">
                 <div class="feature-icon"></div>
                 <div class="feature-desc">
-                    <h3>处理能力强</h3>
-                    <p>系统可支持高库容比对任务，算法识别性能高，返回时间迅速</p>
+                    <h3>简单易用</h3>
+                    <p>可通过API参数自由组合各个人脸技术模块，实现不同的功能</p>
                 </div>
             </div>
         </div>
@@ -54,22 +116,22 @@
             <div class="scene-item shadow">
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
-                    <h3>门禁系统</h3>
-                    <p>受安全保护的地区可以通过人脸识别辨识试图进入者的身份，比如小区，学校、企业等。敏感地点也可以使用人脸识别门禁，对于未登记人员访问将触发报警</p>
+                    <h3>相册管理</h3>
+                    <p>在众多照片中，进行人脸识别并归类，用于图片管理类应用中，以人物脸庞进行自动化的人脸相册整理</p>
                 </div>
             </div>
             <div class="scene-item shadow">
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
-                    <h3>明星图库</h3>
-                    <p>娱乐场景使用。用户上传一张照片，比对出库中相似度最高的明星，达到娱乐效果</p>
+                    <h3>人脸贴图</h3>
+                    <p>基于关键点识别，对人脸特定位置进行修饰加工，可用于人脸的美化和娱乐化处理</p>
                 </div>
             </div>
             <div class="scene-item shadow">
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
-                    <h3>逃犯追缉</h3>
-                    <p>在银行、机场、商场、市场等人流密集的公共场所对人群进行监视，已达到身份识别的目的，并在获得疑犯识别后，触发报警</p>
+                    <h3>美妆修饰</h3>
+                    <p>基于关键点识别，进行滤镜修饰，人脸再加工等娱乐场景</p>
                 </div>
             </div>
         </div>
@@ -80,23 +142,24 @@
         <li class="case-item active">
             <div class="container">
                 <div class="case-icon"></div>
-                <h2>乌镇人脸闸机</h2>
-                <p>用户在购买门票时进行人像采集，就可以在景区通过人脸识别多次进出景区<br>
-                    在互联网大会前落地上线，期间电视台播出2期节目，品牌露出11次，为后续和景区闸机厂商合作提供了良好的基础调</p>
+                <h2>百度魔图</h2>
+                <p>百度魔图（原魔图精灵），是一款好玩易用的掌上美图工具<br>
+                    基于BFR人脸位置和边界的像素级解析能力，实现人脸自动美化功能，已成为时下最流行的图片美化工具，每天处理上亿图片
+                </p>
             </div>
         </li>
         <li class="case-item">
             <div class="container">
                 <div class="case-icon"></div>
-                <h2>百度识图</h2>
-                <p>全球第一个全网人脸搜索功能<br>
-                    可以自动检测用户上传图片中出现的人脸，并将其余数据库中索引的全网数亿人脸比对并按照人脸相似度排序展示，帮你找到更多相似的TA</p>
+                <h2>百度网盘</h2>
+                <p>百度网盘，通过BFR实现了对网盘中的图片进行分类搜索<br>
+                    从而方便用户从大量图片中快速找到自己想要的照片，同时方便按人脸归类管理</p>
             </div>
         </li>
     </ul>
     <ul class="case-indicator">
-        <li class="active"><a>乌镇人脸闸机</a></li>
-        <li><a>百度识图</a></li>
+        <li class="active"><a>百度魔图</a></li>
+        <li><a>百度网盘</a></li>
     </ul>
 </section>
 <section class="tech-section get-started">

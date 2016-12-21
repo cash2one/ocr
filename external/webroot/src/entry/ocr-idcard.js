@@ -120,7 +120,7 @@ $(document).ready(function () {
 
     // 检测按钮事件
     $('#scan-photo').click(function () {
-        if ($(this).hasClass('disabled')) {
+        if ($(this).hasClass('disabled') || !$('#demo-photo-url').val()) {
             return false;
         }
         $('#demo-photo-upload, #scan-photo').addClass('disabled');
@@ -146,11 +146,19 @@ $(document).ready(function () {
     $('.demo-card-list > li').click(function () {
         $('.demo-card-list > li').removeClass('active');
         $(this).addClass('active');
-        let imgSrc = $(this).find('img').attr('src');
-        $('#demo-photo-url').val(window.location.origin + imgSrc);
+        let imgSrc = window.location.origin +  $(this).find('img').attr('src');
+        $('#demo-photo-upload, #scan-photo').addClass('disabled');
+        new DemoCanvas({
+            selector: '#demo-origin',
+            image: imgSrc,
+            type: 'url',
+            success: imgSrc => {
+                startScan('url', imgSrc);
+            },
+            fail: resetDemo
+        });
     });
 
     // 触发初始化效果
     $('.demo-card-list > li')[0].click();
-    $('#scan-photo').click();
 });

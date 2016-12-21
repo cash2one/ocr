@@ -5,19 +5,18 @@
 'use strict';
 
 import $ from 'jquery';
+import {getHeader} from '../../model/demoAPI';
 
 export default class DemoCanvas {
-    constructor({selector, image, type, options = [], toCheck = true, success, fail}) {
+    constructor({selector, image, type, toCheck = true, success, fail}) {
         if (!$(selector).context) {
             throw 'DemoCanvas：未寻找到容器!';
         }
         this.container = $(selector);
-        this.options = options;
         this.type = type;
         this.image = new Image();
         this.success = success || $.noop;
         this.fail = fail || $.noop;
-        this.image = new Image();
         this.image.onload = () => this.render();
 
         this.image.onerror = () => {
@@ -50,13 +49,12 @@ export default class DemoCanvas {
 
     checkByUrl(image) {
         let dfd = $.Deferred();
-        $.ajax({
-            url: image,
-            type: 'head',
-            complete: function (xhr) {
-                let contentType = xhr.getResponseHeader('Content-Type');
-                let contentSize = xhr.getResponseHeader('Content-Length');
-                if (!contentType && !contentSize) {
+        getHeader({
+            imageUrl: image,
+            success: function (res) {
+                let contentType = res.data['Content-Type'];
+                let contentSize = res.data['Content-Length'];
+                if ((!contentType && !contentSize) || res.errno !== 0) {
                     console.error('此错误可能是由于图片的同源策略造成的!');
                     dfd.reject('/images/error/not-found.png');
                     return;
@@ -65,7 +63,7 @@ export default class DemoCanvas {
                     dfd.reject('/images/error/image-format.png');
                     return;
                 }
-                if (contentSize > 2000 * 1024) {
+                if (contentSize > 2 * 1024 * 1024) {
                     dfd.reject('/images/error/too-large.png');
                     return;
                 }
@@ -88,7 +86,7 @@ export default class DemoCanvas {
                 dfd.reject('/images/error/image-format.png');
                 return false;
             }
-            if (image.size > 2000 * 1024) {
+            if (image.size > 2 * 1024 * 1024) {
                 dfd.reject('/images/error/too-large.png');
                 return false;
             }
@@ -114,28 +112,9 @@ export default class DemoCanvas {
         let wRatio = iWidth / cWidth;
         let hRatio = iHeight / cHeight;
 
-        let scaleRatio = (
-            (wRatio > 1 || hRatio > 1)
+        let scaleRatio = (wRatio > 1 || hRatio > 1)
                 ? (1 / (wRatio >= hRatio ? wRatio : hRatio))
-                : 1
-            ) * 0.9;
-
-        for (let i = 0, len = this.options.length; i < len; i++) {
-            let option = this.options[i];
-            let location = option.location;
-            switch (option.shape) {
-                case 'rect':
-                    ctx.beginPath();
-                    ctx.lineWidth = '1';
-                    ctx.strokeStyle = 'rgba(0, 115, 235, 0.8)';
-                    ctx.fillStyle = 'rgba(0, 115, 235, 0.5)';
-                    ctx.rect(location.left, location.top, location.width, location.height);
-                    ctx.fill();
-                    ctx.stroke();
-                    break;
-            }
-
-        }
+                : 1;
 
         canvas.css({
             'position': 'relative',
@@ -146,6 +125,7 @@ export default class DemoCanvas {
             '-o-transform': 'translate(-50%, -50%) scale(' + scaleRatio + ')',
             'transform': 'translate(-50%, -50%) scale(' + scaleRatio + ')'
         });
+        canvas.attr('data-scale', scaleRatio);
         this.container.empty().append(canvas);
     }
 }

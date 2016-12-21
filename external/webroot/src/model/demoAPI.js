@@ -29,3 +29,19 @@ export function scanGeneralText({image = null, imageUrl = null, success = $.noop
         'image_url': imageUrl
     }).success(success).fail(fail);
 }
+
+
+export function scanFace({image = null, imageUrl = null, success = $.noop, fail = $.noop}) {
+    $.post('/aidemo', {
+        type: 'face',
+        image: image,
+        'image_url': imageUrl
+    }).success(success).fail(fail);
+}
+
+export function getHeader({imageUrl = null, success = $.noop, fail = $.noop}) {
+    $.post('/aidemo', {
+        action: 'getHeader',
+        'image_url': imageUrl
+    }).success(success).fail(fail);
+}
