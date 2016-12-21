@@ -4,9 +4,9 @@
  */
 'use strict';
 
-import $ from "jquery";
-import DemoCanvas from "../component/widget/demoCanvas";
-import {scanFace} from "../model/demoAPI";
+import $ from 'jquery';
+import DemoCanvas from '../component/widget/demoCanvas';
+import {scanFace} from '../model/demoAPI';
 
 $(document).ready(function () {
     // case点击效果
