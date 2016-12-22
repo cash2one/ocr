@@ -557,11 +557,11 @@
   margin-bottom: 10px;
   border-right: none;
 }
-.tech-section.tech-demo .demo-container #demo-result .result-background {
+.tech-section.tech-demo .demo-container #demo-result .canvas-container {
   height: 100%;
   width: 100%;
 }
-.tech-section.tech-demo .demo-container #demo-result .result-background::after {
+.tech-section.tech-demo .demo-container #demo-result .canvas-container::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -571,49 +571,46 @@
   height: 100%;
   z-index: 1;
 }
-.tech-section.tech-demo .demo-container #demo-result .result-background.error-image-format::after {
+.tech-section.tech-demo .demo-container #demo-result .canvas-container.error-upload-fail canvas,
+.tech-section.tech-demo .demo-container #demo-result .canvas-container.error-no-result canvas,
+.tech-section.tech-demo .demo-container #demo-result .canvas-container.error-timeout canvas {
+  display: none;
+}
+.tech-section.tech-demo .demo-container #demo-result .canvas-container.error-image-format::after {
   background-image: url('../../images/error/image-format.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
   background-position-y: center;
 }
-.tech-section.tech-demo .demo-container #demo-result .result-background.error-upload-fail::after {
+.tech-section.tech-demo .demo-container #demo-result .canvas-container.error-upload-fail::after {
   background-image: url('../../images/error/upload-fail.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
   background-position-y: center;
 }
-.tech-section.tech-demo .demo-container #demo-result .result-background.error-no-result::after {
+.tech-section.tech-demo .demo-container #demo-result .canvas-container.error-no-result::after {
   background-image: url('../../images/error/no-idcard-result.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
   background-position-y: center;
 }
-.tech-section.tech-demo .demo-container #demo-result .result-background.error-timeout::after {
+.tech-section.tech-demo .demo-container #demo-result .canvas-container.error-timeout::after {
   background-image: url('../../images/error/timeout.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
   background-position-y: center;
 }
-.tech-section.tech-demo .demo-container #demo-result .result-background.loading::after {
+.tech-section.tech-demo .demo-container #demo-result .canvas-container.loading::after {
   color: #666;
   content: "图片上传中";
   line-height: 398px;
   text-align: center;
 }
-.tech-section.tech-demo .demo-container #demo-result .result-background.has-result::after {
-  background-size: 381px 245px;
-  background-image: url('../../images/bfr-detect/id-card.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-position-x: center;
-  background-position-y: center;
-}
-.tech-section.tech-demo .demo-container #demo-result .result-background::before {
+.tech-section.tech-demo .demo-container #demo-result .canvas-container::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -623,7 +620,7 @@
   height: 120px;
   z-index: 2;
 }
-.tech-section.tech-demo .demo-container #demo-result .result-background.loading::before {
+.tech-section.tech-demo .demo-container #demo-result .canvas-container.loading::before {
   background-image: url('../../images/loading.png');
   background-repeat: no-repeat;
   background-position: center center;
@@ -689,19 +686,63 @@
     transform: rotate(360deg);
   }
 }
-.tech-section.tech-demo .demo-container #demo-result .result-background.has-result.male::before {
-  background-image: url('../../images/bfr-detect/id-card-male.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-position-x: center;
-  background-position-y: center;
+.tech-section.tech-demo .demo-container #demo-result #face-details {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #1a7dde;
+  color: #fff;
+  top: 0;
+  padding: 10px;
+  line-height: 30px;
+  font-size: 12px;
 }
-.tech-section.tech-demo .demo-container #demo-result .result-background.has-result.female::before {
-  background-image: url('../../images/bfr-detect/id-card-female.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-position-x: center;
-  background-position-y: center;
+.tech-section.tech-demo .demo-container #demo-result #face-details li + li {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.tech-section.tech-demo .demo-container #demo-result #result-gallery {
+  width: 90%;
+  position: absolute;
+  bottom: 3%;
+  left: 5%;
+  background: rgba(255, 255, 255, 0.25);
+  height: 80px;
+  z-index: 9;
+}
+.tech-section.tech-demo .demo-container #demo-result #result-gallery > ul {
+  height: 100%;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+.tech-section.tech-demo .demo-container #demo-result #result-gallery > ul > li {
+  width: 15.5%;
+  height: 100%;
+  padding: 0 1%;
+  text-align: center;
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+  position: relative;
+}
+.tech-section.tech-demo .demo-container #demo-result #result-gallery > ul > li + li {
+  padding-left: 0;
+}
+.tech-section.tech-demo .demo-container #demo-result #result-gallery > ul > li.active::after,
+.tech-section.tech-demo .demo-container #demo-result #result-gallery > ul > li:hover::after {
+  content: "";
+  display: inline-block;
+  border: 2px solid #7fb9f5;
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  box-sizing: border-box;
+  z-index: 9;
+}
+.tech-section.tech-demo .demo-container #demo-result #result-gallery > ul > li > img {
+  height: 100%;
+  max-width: 100%;
 }
 .tech-section.tech-demo .demo-container #demo-json {
   height: 100%;

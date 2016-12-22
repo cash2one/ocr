@@ -138,7 +138,7 @@
         margin-bottom: 10px;
         border-right: none;
 
-        .result-background {
+        .canvas-container {
           height: 100%;
           width: 100%;
 
@@ -153,6 +153,11 @@
             z-index: 1;
           }
 
+          &.error-upload-fail canvas,
+          &.error-no-result canvas,
+          &.error-timeout canvas{
+            display: none;
+          }
           &.error-image-format::after {
             .icon(url('../../images/error/image-format.png'), center, center);
           }
@@ -170,10 +175,6 @@
             content: "图片上传中";
             line-height: 398px;
             text-align: center;
-          }
-          &.has-result::after {
-            background-size: 762px/2 490px/2;
-            .icon(url('../../images/bfr-detect/id-card.png'), center, center);
           }
 
           &::before {
@@ -229,11 +230,70 @@
             }
 
           }
-          &.has-result.male::before {
-            .icon(url('../../images/bfr-detect/id-card-male.png'), center, center);
+        }
+        #face-details {
+          display: none;
+          position: absolute;
+          right: 0;
+          background-color: #1a7dde;
+          color: @white;
+          top: 0;
+          padding: 10px;
+          line-height: 30px;
+          font-size: 12px;
+
+          li + li {
+            border-top: 1px solid fadeOut(@white, 95%);
           }
-          &.has-result.female::before {
-            .icon(url('../../images/bfr-detect/id-card-female.png'), center, center);
+        }
+
+        #result-gallery {
+          width: 90%;
+          position: absolute;
+          bottom: 3%;
+          left: 5%;
+          background: rgba(255,255,255, .25);
+          height: 80px;
+          z-index: 9;
+
+          & > ul {
+            height: 100%;
+            padding: 10px 0;
+            box-sizing: border-box;
+
+            & > li {
+              width: 15.5%;
+              height: 100%;
+              padding: 0 1%;
+              text-align: center;
+              display: inline-block;
+              float: left;
+              cursor: pointer;
+              position: relative;
+
+              & + li {
+                padding-left: 0;
+              }
+
+              &.active::after,
+              &:hover::after {
+                content: "";
+                display: inline-block;
+                border: 2px solid #7fb9f5;
+                position: absolute;
+                left: -1px;
+                top: -1px;
+                right: -1px;
+                bottom: -1px;
+                box-sizing: border-box;
+                z-index: 9;
+              }
+
+              & > img {
+                height: 100%;
+                max-width: 100%;
+              }
+            }
           }
         }
       }
