@@ -35,11 +35,14 @@ $(document).ready(function () {
         }, 3000);
     });
 
+    let isScanning = false;
+
     // 线上demo开始
     let resetDemo = () => {
         $('#demo-json > p').empty();
         $('#demo-result .result-background').attr('class', 'result-background');
         $('#demo-photo-upload, #scan-photo').removeClass('disabled');
+        isScanning = false;
     };
 
     let startScan = function (type, imgSrc) {
@@ -64,6 +67,7 @@ $(document).ready(function () {
                 $('#demo-result .result-background').find('.bank-card-num').html(res.data.result.bank_card_number);
                 $('#demo-result .result-background').toggleClass('has-result', !hasNoResult)
                     .toggleClass('error-no-result', hasNoResult);
+                isScanning = false;
             },
             fail: function (xhr) {
                 console.error('接口出错：' + xhr.status + ' - ' + xhr.statusText);
@@ -77,10 +81,16 @@ $(document).ready(function () {
         }
 
         scanBankCard(options);
+
     };
 
     // 上传图片
     $('#demo-photo-upload  > input').change(function (e) {
+        if (isScanning) {
+            alert ('操作正在进行中，请稍候再试！');
+            return;
+        }
+        isScanning = true;
         $('#demo-photo-upload, #scan-photo').addClass('disabled');
         let file = $(this)[0].files[0];
         new DemoCanvas({
@@ -101,6 +111,11 @@ $(document).ready(function () {
 
     // 检测按钮事件
     $('#scan-photo').click(function () {
+        if (isScanning) {
+            alert ('操作正在进行中，请稍候再试！');
+            return;
+        }
+        isScanning = true;
         if ($(this).hasClass('disabled') || !$('#demo-photo-url').val()) {
             return false;
         }
@@ -125,6 +140,11 @@ $(document).ready(function () {
 
     // 绑定实例图点击事件
     $('.demo-card-list > li').click(function () {
+        if (isScanning) {
+            alert ('操作正在进行中，请稍候再试！');
+            return;
+        }
+        isScanning = true;
         $('.demo-card-list > li').removeClass('active');
         $(this).addClass('active');
         let imgSrc = window.location.origin + $(this).find('img').attr('src');
