@@ -5,8 +5,6 @@
 'use strict';
 
 import $ from 'jquery';
-import DemoCanvas from '../component/widget/demoCanvas';
-import {scanIDCard} from '../model/demoAPI';
 
 $(document).ready(function () {
     // case点击效果
