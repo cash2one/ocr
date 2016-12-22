@@ -11,8 +11,18 @@ class Brain_AIApi {
     
     //访问限制
     const SEC_VISIT_LIMIT = 1;
-    const MINUTE_VISIT_LIMIT = 500;
+    const MINUTE_VISIT_LIMIT = 100;
+    const MINUTE_TIME_LIMIT = 600;
     const MAX_IMAGE_LIMIT = 2097152; //2 * 1014 * 1024
+    
+    public static $arrImageType = array(
+        'image/jpeg',
+        'image/jpe',
+        'image/jpg',
+        'image/png',
+        'application/x-bmp',
+        'image/bmp',
+    );
     
     //api list
     /*
@@ -45,7 +55,7 @@ class Brain_AIApi {
             'url' => 'https://openapi.baidu.com/rest/2.0/vis-faceattribute/v1/faceattribute',
             'params' => array(
                 'max_face_num' => 5,
-                'face_fields' => 'age, beauty, expression, faceshape, gender, glasses, landmark, race, qualities',
+                'face_fields' => 'age,beauty,gender,expression,glasses,landmark',
             ),
         ),
         "pornography" => array(
@@ -78,6 +88,7 @@ class Brain_AIApi {
         }
         
         //十分钟访问频次检查
+        /*
         $kNum = $clientIp . '_AIDemo_Visit_Num';
         $minuteVisitNum = max(0, intval(Brain_Memcache::get($kNum)));
         
@@ -88,11 +99,11 @@ class Brain_AIApi {
             $minuteVisitTime = '0000-00-00 00:00:00';
         }
         
-        $beginTime = date("Y-m-d H:i:s", time() - 10 * 60);
+        $beginTime = date("Y-m-d H:i:s", time() - Brain_AIApi::MINUTE_TIME_LIMIT);
         
         if($minuteVisitNum < Brain_AIApi::MINUTE_VISIT_LIMIT)
         {
-            Brain_Memcache::set($kNum, $minuteVisitNum + 1, 10 * 60);
+            Brain_Memcache::set($kNum, $minuteVisitNum + 1, Brain_AIApi::MINUTE_TIME_LIMIT);
         } 
         else{
             //时间窗口过期，需更新数据
@@ -109,22 +120,41 @@ class Brain_AIApi {
                     $minuteVisitTime = date("Y-m-d H:i:s", time());
                 }
                 
-                Brain_Memcache::set($kNum, $minuteVisitNum, 10 * 60);
-                Brain_Memcache::set($kTime, $minuteVisitTime, 10 * 60);
+                Brain_Memcache::set($kNum, $minuteVisitNum, Brain_AIApi::MINUTE_TIME_LIMIT);
+                Brain_Memcache::set($kTime, $minuteVisitTime, Brain_AIApi::MINUTE_TIME_LIMIT);
             }
             
             //此时$minuteVisitTime>=$beginTime
             if($minuteVisitNum >= Brain_AIApi::MINUTE_VISIT_LIMIT)
             {
-                Brain_Memcache::set($kNum, $minuteVisitNum + 1, 10 * 60);
+                Brain_Memcache::set($kNum, $minuteVisitNum + 1, Brain_AIApi::MINUTE_TIME_LIMIT);
                 return false;
             }
             else{
-                Brain_Memcache::set($kNum, $minuteVisitNum + 1, 10 * 60);
+                Brain_Memcache::set($kNum, $minuteVisitNum + 1, Brain_AIApi::MINUTE_TIME_LIMIT);
             } 
         }
+        */
+        $kVisit = $clientIp . '_AIDemo_Visit_Info';
+        $visitList = explode(",", Brain_Memcache::get($kVisit));
         
-        return true;
+        $beginTime = date("Y-m-d H:i:s", time() - Brain_AIApi::MINUTE_TIME_LIMIT);
+        
+        while (count($visitList) > 0 && end($visitList) > $beginTime)
+        {
+            array_pop($visitList);
+        }
+        
+        array_unshift($visitList, date("Y-m-d H:i:s", time()));
+        
+        Brain_Memcache::set($kVisit, implode(",", $visitList), Brain_AIApi::MINUTE_TIME_LIMIT);
+        if(count($visitList) > Brain_AIApi::MINUTE_VISIT_LIMIT)
+        {
+            return false;
+        }
+        else{
+            return true;
+        }
     } 
             
     /**
@@ -190,7 +220,7 @@ class Brain_AIApi {
     public static function doCallApi($url, $postData) {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 20);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
@@ -228,7 +258,7 @@ class Brain_AIApi {
      * @return void
      */ 
     public static function getImageByUrl($image_url) {
-        $image_data = file_get_contents(
+        @$image_data = file_get_contents(
             $image_url, false, null, 0, Brain_AIApi::MAX_IMAGE_LIMIT);
             
         $image_base64_data = base64_encode($image_data);
@@ -245,6 +275,7 @@ class Brain_AIApi {
      */ 
     public static function getHeaderByUrl($url) {
         $header_data = get_headers($url, 1);
+        $header_data['Content-Length'] = max(0, intval($header_data['Content-Length']));
         
         return $header_data;
     } 

@@ -67,12 +67,43 @@ class Action_AIDemo extends Ap_Action_Abstract {
                     return;
                 } 
                 
+                $image_header = Brain_AIApi::getHeaderByUrl($imageUrl);
+                if($image_header['Content-Length'] > Brain_AIApi::MAX_IMAGE_LIMIT)
+                {
+                    Brain_Output::jsonOutput(1, '图片超过大小限制');
+                    return;
+                }
+                
+                if(!in_array($image_header['Content-Type'], Brain_AIApi::$arrImageType))
+                {
+                    Brain_Output::jsonOutput(1, '图片类型错误（支持jpg、png、bmp格式）');
+                    return;
+                }
+                
                 $filter_image = Brain_AIApi::getImageByUrl($imageUrl);
             }
             else if($image != '')
             {
+                $image_type = substr(
+                    $image, stripos($image, ':') + 1, stripos($image, ';') - stripos($image, ':') - 1
+                );
+                
+                if(!in_array($image_type, Brain_AIApi::$arrImageType))
+                {
+                    Brain_Output::jsonOutput(1, '图片类型错误（支持jpg、png、bmp格式）');
+                    return;
+                }
+                
+                if(strlen($image) > ceil(Brain_AIApi::MAX_IMAGE_LIMIT / 3) * 4)
+                {
+                    Brain_Output::jsonOutput(1, '图片超过大小限制');
+                    return;
+                }
                 //限制图片大小为2M，base64编码后大小为[n/3]*4, []代表上取整
-                $filter_image = substr($image, 0, ceil(2 * 1024 * 1024 / 3) * 4);
+                $filter_image = substr(
+                    $image, stripos($image, ',') + 1, 
+                    ceil(Brain_AIApi::MAX_IMAGE_LIMIT / 3) * 4
+                );
             }
             
             if ($filter_image == '') {
