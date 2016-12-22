@@ -34,21 +34,20 @@ export default class DemoCanvas {
                 resultImg => {
                     this.image.onload = () => {
                         this.render(true);
-                    }
+                    };
                     this.image.src = resultImg;
                 },
                 errorImg => {
                     this.image.onload = () => {
                         this.render(false);
-                    }
+                    };
                     this.image.src = errorImg;
-
                 }
             );
         } else {
             this.image.onload = () => {
                 this.render(true);
-            }
+            };
             this.image.src = image;
         }
 
@@ -62,7 +61,7 @@ export default class DemoCanvas {
                 let contentType = res.data['Content-Type'];
                 let contentSize = res.data['Content-Length'];
                 if ((!contentType && !contentSize) || res.errno !== 0) {
-                    console.error('此错误可能是由于图片的同源策略造成的!');
+                    // console.error('此错误可能是由于图片的同源策略造成的!');
                     dfd.reject('/images/error/not-found.png');
                     return;
                 }
@@ -78,7 +77,6 @@ export default class DemoCanvas {
             },
             fail: function () {
                 dfd.reject('/images/error/not-found.png');
-                return;
             }
         });
         return dfd.promise();

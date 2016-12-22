@@ -110,7 +110,7 @@ $(document).ready(function () {
                 ctx.rotate(record.rotation_angle * Math.PI / 180);
                 ctx.translate(-record.location.left, -record.location.top);
                 ctx.drawImage(originalImage, 0, 0);
-                let galleryItem = $('<li> <img src="' + canvas[0].toDataURL() +'"></li>');
+                let galleryItem = $('<li><img src="' + canvas[0].toDataURL() + '"></li>');
                 galleryItem.data('face', record).data('isAll', false);
                 galleryList.append(galleryItem);
             }
@@ -121,7 +121,7 @@ $(document).ready(function () {
     // 初始画廊
     let initGallery = function (imgSrc, data) {
         let galleryList = $('#result-gallery > ul');
-        let galleryItem = $('<li class="active"><img src="' + imgSrc +'"></li>');
+        let galleryItem = $('<li class="active"><img src="' + imgSrc + '"></li>');
         galleryItem.data('face', data).data('isAll', true);
         galleryList.empty().append(galleryItem);
     };
@@ -158,7 +158,7 @@ $(document).ready(function () {
                 }[value];
             }
         },
-        glasses:  {
+        glasses: {
             name: '表情',
             transform: value => {
                 return {
@@ -179,12 +179,12 @@ $(document).ready(function () {
             return false;
         }
         details.show();
-        for (var i in FACE_PROPERTY_DICT) {
+        for (let i in FACE_PROPERTY_DICT) {
             if (data.hasOwnProperty(i)) {
                 let label = FACE_PROPERTY_DICT[i].name;
                 let value = FACE_PROPERTY_DICT[i].transform(data[i]);
                 details.append(
-                    $('<li></li>').html( label + ' : ' + value)
+                    $('<li></li>').html(label + ' : ' + value)
                 );
             }
         }
