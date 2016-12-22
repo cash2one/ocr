@@ -211,6 +211,7 @@ $(document).ready(function () {
                         .toggleClass('error-image-format', res.errno === 216201)
                         .toggleClass('error-no-result', !res.data.result_num);
                     $('#demo-result .canvas-container').empty();
+                    isScanning = false;
                     return false;
                 }
                 $('#demo-result .canvas-container').toggleClass('has-result', res.data.result_num >= 1);
