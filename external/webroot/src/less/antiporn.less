@@ -1,94 +1,113 @@
 @import 'common/helper.less';
 @import 'common/global.less';
 
-@banner: url('../../images/bfr-detect/banner.png');
-@icons: url('../../images/bfr-detect/icons.png');
-@intro-bg: url('../../images/bfr-detect/intro-bg.png');
-@intro: url('../../images/bfr-detect/intro.png');
-@intro-icons: url('../../images/bfr-detect/intro-icons.png');
-@case-icons: url('../../images/bfr-detect/case-icons.png');
+@banner: url('../../images/antiporn/banner.png');
+@icons: url('../../images/antiporn/icons.png');
+@intro-bg: url('../../images/antiporn/intro-bg.png');
+@case-icons: url('../../images/antiporn/case-icons.png');
 
 @import './common/tech-page.less';
 
 .tech-section {
   &.tech-intro{
     .tech-intro-detail {
-      .icon(@intro, center, bottom);
-      position: absolute;
-      height: 500px;
-      background-size: 55%;
-      width: 100%;
-      top: -60px;
-      left: 0;
+      margin: 30px auto 0;
+      display: inline-block;
 
-
-      &.scanned {
-        .scan-result {
-          opacity: 1;
-          -webkit-transition-delay: 1s;
-             -moz-transition-delay: 1s;
-               -o-transition-delay: 1s;
-                  transition-delay: 1s;
-        }
-        .scan-box {
-          opacity: 1;
-        }
-      }
-
-      & > div {
-        position: absolute;
-
-        &.left {
-          left: 215px;
-          top: 230px;
-
-          & > div {
-            float: right;
-          }
-
-          .scan-box {
-            .icon(@intro-icons, -140px, 0);
-          }
-
-          .scan-result {
-            width: 140px;
-            height: 175px;
-            .icon(@intro-icons, 1px, 1px);
-          }
-        }
-
-        &.right {
-          left: 665px;
-          top: 230px;
-
-          & > div {
-            float: left;
-          }
-
-          .scan-box {
-            .icon(@intro-icons, -347px, -1px);
-          }
-
-          .scan-result {
-            width: 140px;
-            height: 180px;
-            .icon(@intro-icons, -520px, -1px);
-          }
-        }
-      }
-
-      .scan-box,
-      .scan-result {
-        width: 170px;
-        height: 160px;
-        background-size: 1316px/2 350px/2;
-        opacity: 0;
+      .scan-box {
+        width: 350px;
+        height: 250px;
         float: left;
-        -webkit-transition: opacity 1.5s ease-out;
-           -moz-transition: opacity 1.5s ease-out;
-             -o-transition: opacity 1.5s ease-out;
-                transition: opacity 1.5s ease-out;
+        overflow: hidden;
+        position: relative;
+        opacity: 0.7;
+
+        &:nth-child(1) {
+          .icon(url('../../images/antiporn/intro-case-1.png'), -14px, -293px);
+        }
+        &:nth-child(2) {
+          margin-left: 30px;
+          .icon(url('../../images/antiporn/intro-case-2.png'), -12px, -294px);
+        }
+        &:nth-child(3) {
+          margin-left: 30px;
+          .icon(url('../../images/antiporn/intro-case-3.png'), -13px, -293px);
+        }
+
+        &.scanned {
+          opacity: 1;
+          -webkit-transition: opacity 0.3s ease-out;
+             -moz-transition: opacity 0.3s ease-out;
+               -o-transition: opacity 0.3s ease-out;
+                  transition: opacity 0.3s ease-out;
+          &:nth-child(1) {
+            .icon(url('../../images/antiporn/intro-case-1.png'), -10px, -11px);
+          }
+          &:nth-child(2) {
+            .icon(url('../../images/antiporn/intro-case-2.png'), -10px, -10px);
+          }
+          &:nth-child(3) {
+            .icon(url('../../images/antiporn/intro-case-3.png'), -10px, -11px);
+          }
+        }
+
+        &::before {
+          content: "";
+          width: 350px;
+          height: 130px;
+          position: absolute;
+          display: inline-block;
+          left: 0;
+          top: -130px;
+          .icon(url('../../images/antiporn/intro-case-1.png'), -602px, -310px);
+          -webkit-transition: top 3s ease-out;
+             -moz-transition: top 3s ease-out;
+               -o-transition: top 3s ease-out;
+                  transition: top 3s ease-out;
+        }
+
+        &.scanned::before {
+          top: 100%;
+          -webkit-transition-delay: 0.3s;
+             -moz-transition-delay: 0.3s;
+               -o-transition-delay: 0.3s;
+                  transition-delay: 0.3s;
+        }
+
+        &::after {
+          content: "";
+          width: 350px;
+          height: 250px;
+          position: absolute;
+          display: inline-block;
+          left: 0;
+          top: 0;
+          opacity: 0;
+          -webkit-transition: opacity 0.3s ease-out;
+             -moz-transition: opacity 0.3s ease-out;
+               -o-transition: opacity 0.3s ease-out;
+                  transition: opacity 0.3s ease-out;
+        }
+
+        &:nth-child(1)::after {
+          .icon(url('../../images/antiporn/intro-case-1.png'), -740px, -10px);
+        }
+        &:nth-child(2)::after {
+          .icon(url('../../images/antiporn/intro-case-2.png'), -740px, -10px);
+        }
+        &:nth-child(3)::after {
+          .icon(url('../../images/antiporn/intro-case-3.png'), -740px, -10px);
+        }
+
+        &.scanned::after {
+          opacity: 1;
+          -webkit-transition-delay: 3.3s;
+             -moz-transition-delay: 3.3s;
+               -o-transition-delay: 3.3s;
+                  transition-delay: 3.3s;
+        }
       }
+
     }
   }
 
@@ -170,6 +189,8 @@
           &.error-timeout::after {
             .icon(url('../../images/error/timeout.png'), center, center);
           }
+
+
           &.loading::after {
             color: #666;
             content: "图片上传中";
@@ -229,71 +250,6 @@
               }
             }
 
-          }
-        }
-        #face-details {
-          display: none;
-          position: absolute;
-          right: 0;
-          background-color: #1a7dde;
-          color: @white;
-          top: 0;
-          padding: 10px;
-          line-height: 30px;
-          font-size: 12px;
-
-          li + li {
-            border-top: 1px solid fadeOut(@white, 95%);
-          }
-        }
-
-        #result-gallery {
-          width: 90%;
-          position: absolute;
-          bottom: 3%;
-          left: 5%;
-          background: rgba(255,255,255, .25);
-          height: 80px;
-          z-index: 9;
-
-          & > ul {
-            height: 100%;
-            padding: 10px 0;
-            box-sizing: border-box;
-
-            & > li {
-              width: 15.5%;
-              height: 100%;
-              padding: 0 1%;
-              text-align: center;
-              display: inline-block;
-              float: left;
-              cursor: pointer;
-              position: relative;
-
-              & + li {
-                padding-left: 0;
-              }
-
-              &.active::after,
-              &:hover::after {
-                content: "";
-                display: inline-block;
-                border: 2px solid #7fb9f5;
-                position: absolute;
-                left: -1px;
-                top: -1px;
-                right: -1px;
-                bottom: -1px;
-                box-sizing: border-box;
-                z-index: 9;
-              }
-
-              & > img {
-                height: 100%;
-                max-width: 100%;
-              }
-            }
           }
         }
       }
@@ -435,50 +391,72 @@
   }
 
   &.tech-scene{
-    .scene-item + .scene-item{
-      margin-left: 50px;
-    }
-
     .scene-item .scene-icon {
       background-size: 520px/2 270px/2;
     }
 
-    .scene-item:nth-child(1) .scene-icon{
-      .icon(@icons, -5px, -90px);
+    .scene-item:nth-child(1) {
+      margin-left: 150px;
+      margin-right: 80px;
+      .scene-icon {
+        .icon(@icons, -5px, -90px);
+      }
     }
-    .scene-item:nth-child(2) .scene-icon{
-      .icon(@icons, -50px, -90px);
-    }
-    .scene-item:nth-child(3) .scene-icon{
-      .icon(@icons, -95px, -90px);
+    .scene-item:nth-child(2) {
+      margin-left: 80px;
+      margin-right: 150px;
+
+      .scene-icon {
+        .icon(@icons, -50px, -90px);
+      }
     }
   }
 
   &.tech-case {
     .case-item .case-icon {
-      background-size: 390px/2 260px/2;
+      background-size: 800px/2 270px/2;
     }
     .case-item:nth-child(1) {
-      .icon(url('../../images/bfr-detect/case-1.png'), center, center);
+      .icon(url('../../images/antiporn/case-1.png'), center, center);
 
       .case-icon {
         .icon(@case-icons, -5px, -5px);
       }
     }
     .case-item:nth-child(2) {
-      .icon(url('../../images/bfr-detect/case-2.png'), center, center);
+      .icon(url('../../images/antiporn/case-2.png'), center, center);
 
       .case-icon {
-        .icon(@case-icons, -100px, -5px);
+        .icon(@case-icons, -105px, -5px);
+      }
+    }
+    .case-item:nth-child(3) {
+      .icon(url('../../images/antiporn/case-3.png'), center, center);
+
+      .case-icon {
+        .icon(@case-icons, -205px, -5px);
+      }
+    }
+    .case-item:nth-child(4) {
+      .icon(url('../../images/antiporn/case-4.png'), center, center);
+
+      .case-icon {
+        .icon(@case-icons, -305px, -5px);
       }
     }
 
     .case-indicator {
       & > li:nth-child(1) {
-        .icon(@case-icons, -10px, -200px);
+        .icon(@case-icons, -10px, -210px);
       }
       & > li:nth-child(2) {
-        .icon(@case-icons, -200px, -200px);
+        .icon(@case-icons, -210px, -210px);
+      }
+      & > li:nth-child(3) {
+        .icon(@case-icons, -410px, -210px);
+      }
+      & > li:nth-child(4) {
+        .icon(@case-icons, -610px, -210px);
       }
     }
   }
