@@ -69,6 +69,7 @@ $(document).ready(function () {
                         .toggleClass('error-upload-fail', res.errno === 1)
                         .toggleClass('error-timeout', res.errno === 28)
                         .toggleClass('error-image-format', res.errno === 216201);
+                    isScanning = false;
                     return false;
                 }
                 let hasNoResult = true;

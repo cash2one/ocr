@@ -60,6 +60,7 @@ $(document).ready(function () {
                         .toggleClass('error-timeout', res.errno === 28)
                         .toggleClass('error-no-result', res.errno === 216630)
                         .toggleClass('error-image-format', res.errno === 216201);
+                    isScanning = false;
                     return false;
                 }
 
