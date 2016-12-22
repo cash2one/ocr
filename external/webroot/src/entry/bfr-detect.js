@@ -204,7 +204,7 @@ $(document).ready(function () {
                 $('#demo-json > p').html(JSON.stringify(res, null, '\t'));
                 $('#demo-result .canvas-container').removeClass('loading');
 
-                if (res.errno !== 0) {
+                if (res.errno !== 0 || !res.data.result_num) {
                     $('#demo-result .canvas-container')
                         .toggleClass('error-upload-fail', res.errno === 1)
                         .toggleClass('error-timeout', res.errno === 28)
@@ -248,7 +248,7 @@ $(document).ready(function () {
     // 上传图片
     $('#demo-photo-upload  > input').change(function (e) {
         if (isScanning) {
-            alert ('操作正在进行中，请稍候再试！');
+            alert('操作正在进行中，请稍候再试！');
             return;
         }
         isScanning = true;
@@ -274,7 +274,7 @@ $(document).ready(function () {
     // 检测按钮事件
     $('#scan-photo').click(function () {
         if (isScanning) {
-            alert ('操作正在进行中，请稍候再试！');
+            alert('操作正在进行中，请稍候再试！');
             return;
         }
         isScanning = true;
@@ -303,7 +303,7 @@ $(document).ready(function () {
     // 绑定实例图点击事件
     $('.demo-card-list > li').click(function () {
         if (isScanning) {
-            alert ('操作正在进行中，请稍候再试！');
+            alert('操作正在进行中，请稍候再试！');
             return;
         }
         isScanning = true;

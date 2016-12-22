@@ -87,7 +87,7 @@ $(document).ready(function () {
     // 上传图片
     $('#demo-photo-upload  > input').change(function (e) {
         if (isScanning) {
-            alert ('操作正在进行中，请稍候再试！');
+            alert('操作正在进行中，请稍候再试！');
             return;
         }
         isScanning = true;
@@ -112,7 +112,7 @@ $(document).ready(function () {
     // 检测按钮事件
     $('#scan-photo').click(function () {
         if (isScanning) {
-            alert ('操作正在进行中，请稍候再试！');
+            alert('操作正在进行中，请稍候再试！');
             return;
         }
         isScanning = true;
@@ -141,7 +141,7 @@ $(document).ready(function () {
     // 绑定实例图点击事件
     $('.demo-card-list > li').click(function () {
         if (isScanning) {
-            alert ('操作正在进行中，请稍候再试！');
+            alert('操作正在进行中，请稍候再试！');
             return;
         }
         isScanning = true;
