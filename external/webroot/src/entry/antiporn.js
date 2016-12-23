@@ -67,7 +67,6 @@ $(document).ready(function () {
 
                 $('#demo-result .canvas-container').toggleClass('has-result', res.data.result_num >= 1);
 
-                //todo: 输出结果
                 let normalProbability = 0;
                 let pornProbability = 0;
                 for (let i = 0, len = res.data.result.length; i < len; i++) {
@@ -78,7 +77,7 @@ $(document).ready(function () {
                             pornProbability += record.probability;
                             break;
                         default:
-                            normalProbability += record.probability
+                            normalProbability += record.probability;
                     }
                 }
 
