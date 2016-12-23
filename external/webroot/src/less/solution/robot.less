@@ -1,0 +1,59 @@
+@import '../common/helper.less';
+@import '../common/global.less';
+
+@banner: url('../../../images/solution/robot/banner.png');
+@icons: url('../../../images/solution/robot/icons.png');
+@intro-bg: none;
+
+@import '../common/tech-page.less';
+
+.tech-section {
+  &.tech-intro.solution{
+    .solution-case {
+      width: 530px;
+      height: 240px;
+      margin-left: 40px;
+    }
+  }
+
+  &.tech-feature{
+    .feature-item + .feature-item{
+      margin-left: 110px;
+    }
+    .feature-item .feature-icon {
+      background-size: 520px/2 270px/2;
+    }
+
+    .feature-item:nth-child(1) .feature-icon{
+      .icon(@icons, -5px, -5px);
+    }
+    .feature-item:nth-child(2) .feature-icon{
+      .icon(@icons, -90px, -5px);
+    }
+    .feature-item:nth-child(3) .feature-icon{
+      .icon(@icons, -175px, -5px);
+    }
+  }
+  &.tech-scene{
+    .scene-item .scene-icon{
+      background-size: 520px/2 270px/2;
+    }
+
+    .scene-item:nth-child(1) {
+      margin-left: 150px;
+      margin-right: 80px;
+      .scene-icon {
+        .icon(@icons, -5px, -90px);
+      }
+    }
+    .scene-item:nth-child(2) {
+      margin-left: 80px;
+      margin-right: 150px;
+
+      .scene-icon {
+        .icon(@icons, -50px, -90px);
+      }
+    }
+  }
+
+}

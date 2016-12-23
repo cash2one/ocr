@@ -147,7 +147,7 @@ header.header-nav {
 header.header-nav .logo {
   height: 100%;
   width: 100px;
-  background: url('../../images/template.png') no-repeat -10px 0;
+  background: url('../../../images/template.png') no-repeat -10px 0;
   margin-right: 60px;
   display: inline-block;
   float: left;
@@ -354,35 +354,35 @@ header.header-nav .login > ul > li > a.free-demo {
   margin-top: -19px;
 }
 #tech-service #tech-speech .tech-title-icon {
-  background-image: url('../../images/template.png');
+  background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
   background-position: -130px -10px;
   background-position-x: -130px;
   background-position-y: -10px;
 }
 #tech-service #tech-image .tech-title-icon {
-  background-image: url('../../images/template.png');
+  background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
   background-position: -190px -10px;
   background-position-x: -190px;
   background-position-y: -10px;
 }
 #tech-service #tech-nlp .tech-title-icon {
-  background-image: url('../../images/template.png');
+  background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
   background-position: -160px -10px;
   background-position-x: -160px;
   background-position-y: -10px;
 }
 #tech-service #tech-user-profile .tech-title-icon {
-  background-image: url('../../images/template.png');
+  background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
   background-position: -220px -10px;
   background-position-x: -220px;
   background-position-y: -10px;
 }
 #tech-service #tech-machine-learning .tech-title-icon {
-  background-image: url('../../images/template.png');
+  background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
   background-position: -250px -10px;
   background-position-x: -250px;
@@ -449,7 +449,7 @@ footer.footer-nav .footer-links ul > li + li {
 footer.footer-nav .footer-links .qr-code {
   height: 100px;
   width: 100px;
-  background-image: url('../../images/template.png');
+  background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
   background-position: -10px -50px;
   background-position-x: -10px;
@@ -518,14 +518,14 @@ aside.aside-action ul > li + li {
   border-top: 1px solid #005fc2;
 }
 aside.aside-action ul > li.consult > a {
-  background-image: url('../../images/template.png');
+  background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
   background-position: -120px -40px;
   background-position-x: -120px;
   background-position-y: -40px;
 }
 aside.aside-action ul > li.feedback > a {
-  background-image: url('../../images/template.png');
+  background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
   background-position: -150px -40px;
   background-position-x: -150px;
@@ -535,7 +535,7 @@ aside.aside-action ul > li.back-top {
   display: none;
 }
 aside.aside-action ul > li.back-top > a {
-  background-image: url('../../images/template.png');
+  background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
   background-position: -180px -40px;
   background-position-x: -180px;
@@ -585,7 +585,7 @@ aside.aside-action ul > li.back-top > a {
   font-weight: 500;
 }
 .modal .modal-header .modal-x {
-  background-image: url('../../images/template.png');
+  background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
   background-position: -210px -40px;
   background-position-x: -210px;
@@ -598,7 +598,7 @@ aside.aside-action ul > li.back-top > a {
   top: 0;
 }
 .modal .modal-header .modal-x:hover {
-  background-image: url('../../images/template.png');
+  background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
   background-position: -240px -40px;
   background-position-x: -240px;
@@ -715,7 +715,7 @@ aside.aside-action ul > li.back-top > a {
   margin: 10px auto;
   width: 60px;
   height: 60px;
-  background-image: url('../../images/template.png');
+  background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
   background-position: -200px -80px;
   background-position-x: -200px;
@@ -730,7 +730,7 @@ aside.aside-action ul > li.back-top > a {
   margin: 10px auto;
   width: 60px;
   height: 60px;
-  background-image: url('../../images/template.png');
+  background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
   background-position: -130px -80px;
   background-position-x: -130px;
@@ -779,7 +779,7 @@ aside.aside-action ul > li.back-top > a {
   margin: 0 auto;
   width: 100px;
   height: 100px;
-  background-image: url('../../images/template.png');
+  background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
   background-position: -10px -50px;
   background-position-x: -10px;
