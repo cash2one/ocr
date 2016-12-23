@@ -5,6 +5,7 @@
 @icons: url('../../images/antiporn/icons.png');
 @intro-bg: url('../../images/antiporn/intro-bg.png');
 @case-icons: url('../../images/antiporn/case-icons.png');
+@scan-result-icons: url('../../images/antiporn/scan-result-iconss.png');
 
 @import './common/tech-page.less';
 
@@ -189,7 +190,9 @@
           &.error-timeout::after {
             .icon(url('../../images/error/timeout.png'), center, center);
           }
-
+          &.has-result::after {
+            background-color: fadeOut(@black, 50%);
+          }
 
           &.loading::after {
             color: #666;
@@ -208,7 +211,36 @@
             height: 120px;
             z-index: 2;
           }
+          &.has-result::before {
+            content: attr(data-probability);
+            opacity: 0;
+            width: 204px;
+            height: 270px;
+            line-height: 580px;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            left: 50%;
+            top: 50%;
+            -webkit-transition: opacity 0.3s ease-out;
+               -moz-transition: opacity 0.3s ease-out;
+                 -o-transition: opacity 0.3s ease-out;
+                    transition: opacity 0.3s ease-out;
+            -webkit-transform: translate(-50%, -50%);
+               -moz-transform: translate(-50%, -50%);
+                 -o-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+          }
 
+          &.has-result.normal::before {
+            opacity: 1;
+            .icon(@scan-result-icons, -21px, center);
+
+          }
+          &.has-result.pornography::before {
+            opacity: 1;
+            .icon(@scan-result-icons, -447px, center);
+          }
           &.loading::before {
             .icon(url('../../images/loading.png'), center, center);
             left: 277px;
@@ -249,7 +281,6 @@
                 transform: rotate(360deg);
               }
             }
-
           }
         }
       }

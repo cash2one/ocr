@@ -68,6 +68,29 @@ $(document).ready(function () {
                 $('#demo-result .canvas-container').toggleClass('has-result', res.data.result_num >= 1);
 
                 //todo: 输出结果
+                let normalProbability = 0;
+                let pornProbability = 0;
+                for (let i = 0, len = res.data.result.length; i < len; i++) {
+                    let record = res.data.result[i];
+                    switch (record.class_name) {
+                        case '一般色情':
+                        case '卡通色情':
+                            pornProbability += record.probability;
+                            break;
+                        default:
+                            normalProbability += record.probability
+                    }
+                }
+
+                $('#demo-result .canvas-container')
+                    .attr('data-probability',
+                        Math.round(
+                            (normalProbability > pornProbability ? normalProbability : pornProbability) * 10000
+                        ) / 100
+                    )
+                    .toggleClass('normal', normalProbability > pornProbability)
+                    .toggleClass('pornography', normalProbability <= pornProbability);
+
                 isScanning = false;
             },
             fail: function (xhr) {

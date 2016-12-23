@@ -650,6 +650,9 @@
   background-position-x: center;
   background-position-y: center;
 }
+.tech-section.tech-demo .demo-container #demo-result .canvas-container.has-result::after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 .tech-section.tech-demo .demo-container #demo-result .canvas-container.loading::after {
   color: #666;
   content: "图片上传中";
@@ -665,6 +668,42 @@
   width: 110px;
   height: 120px;
   z-index: 2;
+}
+.tech-section.tech-demo .demo-container #demo-result .canvas-container.has-result::before {
+  content: attr(data-probability);
+  opacity: 0;
+  width: 204px;
+  height: 270px;
+  line-height: 580px;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.tech-section.tech-demo .demo-container #demo-result .canvas-container.has-result.normal::before {
+  opacity: 1;
+  background-image: url('../../images/antiporn/scan-result-iconss.png');
+  background-repeat: no-repeat;
+  background-position: -21px center;
+  background-position-x: -21px;
+  background-position-y: center;
+}
+.tech-section.tech-demo .demo-container #demo-result .canvas-container.has-result.pornography::before {
+  opacity: 1;
+  background-image: url('../../images/antiporn/scan-result-iconss.png');
+  background-repeat: no-repeat;
+  background-position: -447px center;
+  background-position-x: -447px;
+  background-position-y: center;
 }
 .tech-section.tech-demo .demo-container #demo-result .canvas-container.loading::before {
   background-image: url('../../images/loading.png');
