@@ -30,10 +30,17 @@ export function scanGeneralText({image = null, imageUrl = null, success = $.noop
     }).success(success).fail(fail);
 }
 
-
 export function scanFace({image = null, imageUrl = null, success = $.noop, fail = $.noop}) {
     $.post('/aidemo', {
         type: 'face',
+        image: image,
+        'image_url': imageUrl
+    }).success(success).fail(fail);
+}
+
+export function scanPornography({image = null, imageUrl = null, success = $.noop, fail = $.noop}) {
+    $.post('/aidemo', {
+        type: 'pornography',
         image: image,
         'image_url': imageUrl
     }).success(success).fail(fail);

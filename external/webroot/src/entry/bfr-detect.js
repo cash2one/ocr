@@ -38,7 +38,7 @@ $(document).ready(function () {
     let resetDemo = () => {
         isScanning = false;
         $('#demo-json > p').empty();
-        $('#demo-result .result-background').attr('class', 'result-background');
+        $('#demo-result .canvas-container').attr('class', 'canvas-container');
         $('#demo-photo-upload, #scan-photo').removeClass('disabled');
         $('#demo-photo-upload').val('');
         $('#result-gallery').toggle(false).find('ul').empty();

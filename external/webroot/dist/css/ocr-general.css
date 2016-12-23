@@ -231,7 +231,7 @@
   float: left;
   display: inline-block;
   padding: 10px 20px;
-  min-height: 205px;
+  margin-bottom: 15px;
 }
 .tech-section.tech-feature .feature-item .feature-icon {
   display: block;
@@ -264,8 +264,8 @@
   width: 320px;
   float: left;
   display: inline-block;
-  padding: 15px 20px 5px;
-  min-height: 130px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
 }
 .tech-section.tech-scene .scene-item .scene-icon {
   display: inline-block;
@@ -540,6 +540,7 @@
   top: -1px;
   padding: 0 15px;
   line-height: 30px;
+  z-index: 9;
 }
 .tech-section.tech-demo .demo-container #demo-result .result-background {
   height: 100%;
@@ -730,7 +731,7 @@
   color: #999;
 }
 .tech-section.tech-demo .demo-container .demo-data .btn-primary {
-  line-height: 38px;
+  line-height: 34px;
   width: 100px;
   height: 38px;
   box-shadow: none;
