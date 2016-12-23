@@ -21,7 +21,8 @@ var replace = require('gulp-replace');
 var fs = require('fs');
 
 gulp.task('jsCompile', function () {
-    glob('./src/entry/**.js', function (err, files) {
+    glob('./src/entry/**/*.js', function (err, files) {
+        console.log(files);
         if (err) {
             gutil.log(err);
         }
@@ -35,9 +36,9 @@ gulp.task('jsCompile', function () {
             return b.bundle()
                 .pipe(source(entry))
                 .pipe(
-                    rename({
-                        dirname: '',
-                        extname: '.bundle.js'
+                    rename(function (path) {
+                        path.dirname = path.dirname.replace(/src\\entry/g, '');
+                        path.extname = ".bundle.js"
                     })
                 )
                 .pipe(buffer())
@@ -78,11 +79,10 @@ gulp.task('jsCompile', function () {
 });
 
 gulp.task('less', function () {
-    return gulp.src('./src/less/*.less')
+    return gulp.src(['./src/less/**/*.less', '!./src/less/common/*.less', '!./src/less/widget/*.less'])
         .pipe(less())
         .pipe(
             rename({
-                dirname: '',
                 extname: '.css'
             })
         )
@@ -92,7 +92,7 @@ gulp.task('less', function () {
 gulp.task('jsCompile_watch', function () {
     return watch('./src/**/*.js', function () {
         gutil.log('Task jsCompile: started!');
-        glob('./src/entry/**.js', function (err, files) {
+        glob('./src/entry/**/*.js', function (err, files) {
             if (err) {
                 gutil.log(err);
             }
@@ -108,9 +108,9 @@ gulp.task('jsCompile_watch', function () {
                 return b.bundle()
                     .pipe(source(entry))
                     .pipe(
-                        rename({
-                            dirname: '',
-                            extname: '.bundle.js'
+                        rename(function (path) {
+                            path.dirname = path.dirname.replace(/src\\entry/g, '');
+                            path.extname = ".bundle.js"
                         })
                     )
                     .pipe(buffer())
@@ -128,12 +128,11 @@ gulp.task('jsCompile_watch', function () {
 gulp.task('less_watch', function () {
     return watch('./src/less/**/*.less', function () {
         gutil.log('Task Less: started!');
-        gulp.src('./src/less/*.less')
+        gulp.src(['./src/less/**/*.less', '!./src/less/common/*.less', '!./src/less/widget/*.less'])
             .pipe(less())
             .pipe(
-                rename({
-                    dirname: '',
-                    extname: '.css'
+                rename(function (path) {
+                    path.extname = ".css"
                 })
             )
             .pipe(gulp.dest('./dist/css'));
@@ -146,22 +145,24 @@ gulp.task('html_watch', function () {
     return watch('./src/view/**/*.html', function () {
         gutil.log('Task Html: started!');
 
-        glob('./src/view/*.html', function (err, files) {
+        glob('./src/view/**/!(*template).html', function (err, files) {
             if (err) {
                 gutil.log(err);
             }
-
             var tasks = files.map(function (entry) {
                 var data = fs.readFileSync(entry, 'utf-8');
                 var basename = entry.match(/\/([\w-]+)\.html/)[1];
+                var dirname = entry.match(/(\w+)\/([\w-]+)\.html/)[1].replace('view', '');
+                var cssPath = '/dist/css/' + (dirname ? (dirname + '/') : '') + basename + '.css';
+                var jsPath = '/dist/js/' + (dirname ? (dirname + '/') : '') + basename + '.bundle.js';
                 return gulp.src('./src/view/common/template.html')
                     .pipe(replace(/{{body}}/g, data))
-                    .pipe(replace(/<\/head>/g, '<link rel="stylesheet" href="/dist/css/' + basename + '.css"></head>'))
-                    .pipe(replace(/<\/body>/g, '<script src="/dist/js/' + basename + '.bundle.js"></script></body>'))
+                    .pipe(replace(/<\/head>/g, '<link rel="stylesheet" href="' + cssPath + '"></head>'))
+                    .pipe(replace(/<\/body>/g, '<script src="' + jsPath + '"></script></body>'))
                     .pipe(
                         rename({
-                            basename: basename,
-                            dirname: ''
+                            dirname: dirname,
+                            basename: basename
                         })
                     )
                     .pipe(gulp.dest('./dist/html'));
@@ -171,7 +172,6 @@ gulp.task('html_watch', function () {
                 gutil.log('Task Html: finished!');
             });
         });
-        gutil.log('Task Html: finished!');
     });
 });
 

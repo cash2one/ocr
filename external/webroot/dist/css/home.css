@@ -690,6 +690,11 @@
   margin-top: 20px;
   color: #666;
 }
+.ai-platform.page-content .home-section.tech-video ul.video-list > li iframe {
+  border: none;
+  width: 100%;
+  height: 130px;
+}
 .ai-platform.page-content .home-section.tech-video .more-videos {
   text-align: center;
   margin-top: 10px;
