@@ -597,6 +597,7 @@
   top: -1px;
   padding: 0 15px;
   line-height: 30px;
+  z-index: 9;
 }
 .tech-section.tech-demo .demo-container #demo-result {
   height: 400px;
