@@ -16,6 +16,7 @@ import {checkQRCode} from '../../model/qrCode';
 export default class SubscriptionModal extends Modal {
     constructor(container = 'body', id = 'subscription-modal', title = '订阅百度大脑最新消息') {
         super(container, id, title);
+        this.init();
     }
 
     init() {

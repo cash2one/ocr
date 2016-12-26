@@ -165,7 +165,7 @@ $(document).ready(function () {
         isScanning = true;
         $('.demo-card-list > li').removeClass('active');
         $(this).addClass('active');
-        let imgSrc = window.location.origin +  $(this).find('img').attr('src');
+        let imgSrc = window.location.origin + $(this).find('img').attr('src');
         $('#demo-photo-upload, #scan-photo').addClass('disabled');
         new DemoCanvas({
             selector: '#demo-origin',

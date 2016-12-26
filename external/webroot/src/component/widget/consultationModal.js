@@ -16,6 +16,7 @@ import {checkQRCode} from '../../model/qrCode';
 export default class ConsultationModal extends Modal {
     constructor(container = 'body', id = 'consultation-modal', title = '合作咨询') {
         super(container, id, title);
+        this.init();
     }
 
     init() {

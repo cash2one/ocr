@@ -1,0 +1,138 @@
+@import '../common/helper.less';
+@import '../common/global.less';
+
+@banner: url('../../../images/technology/speech-tts/banner.png');
+@icons: url('../../../images/technology/speech-tts/icons.png');
+@intro-bg: url('../../../images/technology/speech-tts/intro-bg.png');
+@intro: none;
+@case-icons: url('../../../images/technology/speech-tts/case-icons.png');
+
+@import '../common/tech-page.less';
+
+.tech-section {
+  &.tech-intro{
+    height: 400px;
+
+    .tech-intro-detail{
+      margin-top: 40px;
+      height: 500px;
+      position: relative;
+      .icon(@intro, center, center);
+    }
+
+    .face-list {
+      width: 751px;
+      position: absolute;
+      top: 36px;
+      left: 67px;
+
+      & > li {
+        display: inline-block;
+        width: 179px;
+        height: 208px;
+        transition: all 0.3s ease;
+        border: 3px solid transparent;
+        float: left;
+
+        &.right.scanning {
+          border-color: @blue;
+          background-color: fadeOut(@blue, 80%);
+        }
+
+        &.wrong.scanning {
+          border-color: red;
+          background-color: fadeOut(red, 80%);
+        }
+
+        &.right.scanned {
+          border-color: @blue;
+          background-color: transparent;
+        }
+
+        &.wrong.scanned {
+          border-color: fadeOut(@black, 15%);
+          background-color: fadeOut(@black, 15%);
+        }
+      }
+    }
+  }
+
+  &.tech-feature{
+    .feature-item + .feature-item{
+      margin-left: 110px;
+    }
+    .feature-item:nth-child(3n+1){
+      margin-left: 0;
+    }
+    .feature-item:nth-child(n+4){
+      margin-top: 15px;
+    }
+    .feature-item .feature-icon {
+      background-size: 690px/2 270px/2;
+    }
+
+    .feature-item:nth-child(1) .feature-icon{
+      .icon(@icons, -5px, -5px);
+    }
+    .feature-item:nth-child(2) .feature-icon{
+      .icon(@icons, -90px, -5px);
+    }
+    .feature-item:nth-child(3) .feature-icon{
+      .icon(@icons, -175px, -5px);
+    }
+    .feature-item:nth-child(4) .feature-icon{
+      .icon(@icons, -260px, -5px);
+    }
+  }
+  &.tech-scene{
+    .scene-item .scene-icon {
+      background-size: 690px/2 270px/2;
+    }
+
+    .scene-item:nth-child(1) {
+      margin-left: 150px;
+      margin-right: 80px;
+      & .scene-icon {
+        .icon(@icons, -5px, -90px);
+      }
+    }
+    .scene-item:nth-child(2) {
+      margin-left: 80px;
+      margin-right: 150px;
+      & .scene-icon {
+        .icon(@icons, -50px, -90px);
+      }
+    }
+  }
+
+  &.tech-case {
+    .case-item .case-icon{
+      background-size: 402px/2 270px/2;
+    }
+
+    .case-item:nth-child(1) {
+      .icon(url('../../../images/technology/speech-tts/case-1.png'), center, center);
+
+      .case-icon {
+        .icon(@case-icons, -5px, -5px);
+      }
+    }
+
+    .case-item:nth-child(2) {
+      .icon(url('../../../images/technology/speech-tts/case-2.png'), center, center);
+
+      .case-icon {
+        .icon(@case-icons, -105px, -5px);
+      }
+    }
+
+    .case-indicator {
+      & > li:nth-child(1) {
+        .icon(@case-icons, -10px, -210px);
+      }
+      & > li:nth-child(2) {
+        .icon(@case-icons, -210px, -210px);
+      }
+    }
+  }
+}

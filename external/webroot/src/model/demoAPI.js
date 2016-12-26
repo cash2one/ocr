@@ -52,3 +52,15 @@ export function getHeader({imageUrl = null, success = $.noop, fail = $.noop}) {
         'image_url': imageUrl
     }).success(success).fail(fail);
 }
+
+export function evaluateWakeWords({words = null, success = $.noop, fail = $.noop}) {
+    $.post('/aidemo', {
+        type: 'wakescore',
+        kw: words
+    }).success(success).fail(fail);
+}
+
+export function exportWakeWords({words = null, success = $.noop}) {
+    window.open('/aidemo?type=wakedownload&kw=' + words, '_blank');
+    success();
+}

@@ -22,7 +22,6 @@ var fs = require('fs');
 
 gulp.task('jsCompile', function () {
     glob('./src/entry/**/*.js', function (err, files) {
-        console.log(files);
         if (err) {
             gutil.log(err);
         }

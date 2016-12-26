@@ -14,3 +14,36 @@ export const MODAL_TMPL = [
         '</section>',
     '</div>'
 ].join('');
+
+export const ALERT_MODAL_TMPL = [
+    '<div class="modal alert" id="<%= id %>">',
+    '<header class="modal-header">',
+    '<h3><%= title %></h3>',
+    '<a class="modal-x"></a>',
+    '</header>',
+    '<section class="modal-content">',
+        '<div style="text-align: center; color: #666;font-size: 14px;margin-bottom: 20px;"><%=content%></div>',
+        '<div style="text-align: center;">',
+            '<button type="button" class="btn-normal cancel">确定</button>',
+        '</div>',
+    '</section>',
+    '</div>'
+].join('');
+
+
+
+export const CONFIRM_MODAL_TMPL = [
+    '<div class="modal alert" id="<%= id %>">',
+        '<header class="modal-header">',
+            '<h3><%= title %></h3>',
+            '<a class="modal-x"></a>',
+        '</header>',
+        '<section class="modal-content">',
+            '<div style="text-align: center; color: #666;font-size: 14px;margin-bottom: 20px;"><%=content%></div>',
+            '<div style="text-align: center;">',
+                '<button type="button" class="btn-primary submit">确定</button>',
+                '<button type="button" class="btn-normal cancel" style="margin-left: 15px;">取消</button>',
+            '</div>',
+        '</section>',
+    '</div>'
+].join('');

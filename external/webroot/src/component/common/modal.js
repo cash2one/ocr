@@ -13,8 +13,7 @@ export default class Modal {
         this.container = container;
         this.id = id || ('modal-' + new Date().getTime());
         this.title = title;
-
-        this.init();
+        this.isOpen = false;
     }
 
     init() {
@@ -28,11 +27,13 @@ export default class Modal {
     }
 
     show() {
+        this.isOpen = true;
         this.getModal().show();
         $('body').addClass('modal-show');
     }
 
     hide() {
+        this.isOpen = false;
         this.getModal().hide();
         $('body').removeClass('modal-show');
     }
@@ -56,13 +57,15 @@ export default class Modal {
         });
 
         this.getModal().on('close', () => {
-            this.hide();
-        });
-
-        $('body').on('click', function () {
-            if ($('body').hasClass('modal-show')) {
-                $('.modal').trigger('close');
+            if (this.isOpen) {
+                this.hide();
             }
         });
+
+        function close () {
+            $('.modal').trigger('close');
+        }
+
+        $('body').off('close', close).on('click', close);
     }
 }
