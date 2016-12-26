@@ -81,13 +81,22 @@ $(document).ready(function () {
             ? {x: data.location.left, y: data.location.top}
             : {x: 0, y: 0};
 
+        let getAngle = function (x, y) {
+            return 360 * Math.atan(y / x) / (2 * Math.PI);
+        };
+        let getRadius = function (x, y) {
+            return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+        };
+
         for (let i = 0, len = data.landmark72.length; i < len; i++) {
             let record = data.landmark72[i];
             ctx.beginPath();
             ctx.lineWidth = 1;
             ctx.fillStyle = 'rgba(0, 115, 235, 0.8)';
             ctx.strokeStyle = 'transparent';
-            ctx.arc(record.x - offset.x, record.y - offset.y, 2 / scale, 0, 2 * Math.PI);
+            let angle = (getAngle(record.x - offset.x, record.y - offset.y) - data.rotation_angle)  / 180 * Math.PI;
+            let radius = getRadius (record.x - offset.x, record.y - offset.y);
+            ctx.arc(radius * Math.cos(angle) , radius * Math.sin(angle) , 2 / scale, 0, 2 * Math.PI);
             ctx.fill();
             ctx.stroke();
             ctx.closePath();
@@ -109,7 +118,7 @@ $(document).ready(function () {
                 let canvas = $('<canvas>').attr('width', record.location.width)
                     .attr('height', record.location.height);
                 let ctx = canvas[0].getContext('2d');
-                ctx.rotate(record.rotation_angle * Math.PI / 180);
+                ctx.rotate(-record.rotation_angle * Math.PI / 180);
                 ctx.translate(-record.location.left, -record.location.top);
                 ctx.drawImage(originalImage, 0, 0);
                 let galleryItem = $('<li><img src="' + canvas[0].toDataURL() + '"></li>');
@@ -335,7 +344,7 @@ $(document).ready(function () {
             selector: '#demo-result .canvas-container',
             image: $(this).find('img').attr('src'),
             toCheck: false,
-            scale: isAll ? 1 : 2,
+            // scale: isAll ? 1 : 2,
             success: function () {
                 if (isAll) {
                     drawRect(faceData);
