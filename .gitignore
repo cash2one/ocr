@@ -1,3 +1,6 @@
 *.pyc
 *.log
 *~
+*/node_modules
+/external/webroot/node_modules/
+/internal/webroot/node_modules/
