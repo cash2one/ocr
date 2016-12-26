@@ -10,7 +10,7 @@ import Modal from '../common/modal';
 import {CONFIRM_MODAL_TMPL} from '../../partials/modal';
 
 
-export default class ConfirmModal extends Modal{
+export default class ConfirmModal extends Modal {
     constructor(title, content, confirm = $.noop) {
         super();
         this.title = title || '确认信息';

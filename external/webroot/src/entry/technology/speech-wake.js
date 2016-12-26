@@ -25,32 +25,37 @@ $(document).ready(function () {
     // 收缩规则内容
     $('.rule-toggle').click(function () {
         let isCollapsed = $('.demo-rule').hasClass('collapsed');
-        $('.demo-rule').toggleClass('collapsed', !isCollapsed)
+        $('.demo-rule').toggleClass('collapsed', !isCollapsed);
         $(this).html(isCollapsed ? '收起内容' : '展开内容');
     });
 
     // copy from yuyin.baidu.com  wakeTry.js
-    let test = function(e, t) {
+    let test = function (e, t) {
         let n = {
             star: 0,
             desc: '',
             length: 0,
             zl: 0
+        };
+        let r = 0;
+        let i = '得分低于60, 不可用作唤醒词';
+        let s = '';
+        let o = [
+            '拍照', '茄子', '增大音量', '减小音量', '播放',
+            '停止', '暂停', '上一首', '下一首', '打开电灯',
+            '关闭电灯', '增大亮度', '减小亮度', '打开手电筒', '关闭手电筒'
+        ];
+        if ($.inArray(e, o) >= 0) {
+            n.zl = 1;
+            r = 5;
         }
-            , r = 0
-            , i = '得分低于60, 不可用作唤醒词'
-            , s = ''
-            , o = ['拍照', '茄子', '增大音量', '减小音量', '播放', '停止', '暂停', '上一首', '下一首', '打开电灯', '关闭电灯', '增大亮度', '减小亮度', '打开手电筒', '关闭手电筒'];
-        if ($.inArray(e, o) >= 0)
-            n.zl = 1,
-                r = 5;
-        else if (/\d+/.test(e))
+        else if (/\d+/.test(e)) {
             r = 1;
-
+        }
         else {
-            let u = !1
-                , a = 0
-                , f = 0;
+            let u = !1;
+            let a = 0;
+            let f = 0;
             for (let l = 0; l < e.length; l++)
                 e.charAt(l).match(/^[a-zA-Z]$/) !== null && a++,
                 e.charAt(l).match(/^[\u4e00-\u9fa5a-zA-Z]$/) === null && f++;
@@ -64,7 +69,7 @@ $(document).ready(function () {
                 if (e.length === 4)
                     t < 500 ? r = 5 : t >= 500 && t < 1e3 ? r = 4 : t >= 1e3 < 1500 && (r = 3);
                 else if (e.length === 3 || e.length === 5)
-                    t < 500 ? r = 3 : t >= 500 && t < 1e3 ? r = 2 : r = 1
+                    t < 500 ? r = 3 : t >= 500 && t < 1e3 ? r = 2 : r = 1;
         }
         switch (r) {
             case 5:
@@ -77,13 +82,13 @@ $(document).ready(function () {
                 i = '不建议用作唤醒词，唤醒词只允许3-5个字, 并且推荐4个字。';
                 break;
             default:
-                i = '不可用作唤醒词，唤醒词只允许3-5个字, 并且推荐4个字。'
+                i = '不可用作唤醒词，唤醒词只允许3-5个字, 并且推荐4个字。';
         }
         return s !== '' && (i = s),
             n.star = r,
             n.desc = i,
             n.length = e.length,
-            n
+            n;
     };
 
     let downloadChanceCount = 0;
@@ -166,7 +171,7 @@ $(document).ready(function () {
                 twoWordCounter += (word.length === 2 ? 1 : 0);
                 customizedWordCounter += (existedWord.indexOf(word) === -1 ? 1 : 0);
             });
-            if (twoWordCounter > 3 ) {
+            if (twoWordCounter > 3) {
                 new AlertModal('对不起，您最多可以设置3个两字指令唤醒词!');
                 return false;
             }

@@ -62,7 +62,7 @@ export default class Modal {
             }
         });
 
-        function close () {
+        function close() {
             $('.modal').trigger('close');
         }
 

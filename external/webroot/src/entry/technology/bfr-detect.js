@@ -95,8 +95,8 @@ $(document).ready(function () {
             ctx.fillStyle = 'rgba(0, 115, 235, 0.8)';
             ctx.strokeStyle = 'transparent';
             let angle = (getAngle(record.x - offset.x, record.y - offset.y) - data.rotation_angle)  / 180 * Math.PI;
-            let radius = getRadius (record.x - offset.x, record.y - offset.y);
-            ctx.arc(radius * Math.cos(angle) , radius * Math.sin(angle) , 2 / scale, 0, 2 * Math.PI);
+            let radius = getRadius(record.x - offset.x, record.y - offset.y);
+            ctx.arc(radius * Math.cos(angle), radius * Math.sin(angle), 2 / scale, 0, 2 * Math.PI);
             ctx.fill();
             ctx.stroke();
             ctx.closePath();

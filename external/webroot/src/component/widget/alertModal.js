@@ -10,7 +10,7 @@ import Modal from '../common/modal';
 import {ALERT_MODAL_TMPL} from '../../partials/modal';
 
 
-export default class AlertModal extends Modal{
+export default class AlertModal extends Modal {
     constructor(content) {
         super();
         this.title = '提示';
