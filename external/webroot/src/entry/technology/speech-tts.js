@@ -47,7 +47,7 @@ $(document).ready(function () {
         volumeSlider,
         {
             start: 5,
-            connect: "lower",
+            connect: 'lower',
             step: 1,
             range: {
                 min: 1,
@@ -56,7 +56,7 @@ $(document).ready(function () {
         }
     );
 
-    volumeSlider.noUiSlider.on('update', function(values) {
+    volumeSlider.noUiSlider.on('update', function (values) {
         $(volumeSlider).attr('data-volume', parseInt(values, 10));
     });
 
@@ -80,25 +80,25 @@ $(document).ready(function () {
                 person: person,
                 text: text
             },
-            success: function (res){
+            success: function (res) {
                 if (res.errno !== 0) {
-                    throw(res.msg);
+                    throw res.msg;
                     return false;
                 }
                 player.removeClass('play').addClass('pause');
                 sound = new Howl({
-                    src: [res.data],
+                    src: [res.data]
                 });
 
-                sound.once('load', function(){
+                sound.once('load', function () {
                     sound.play();
                 });
 
-                sound.on('end', function(){
+                sound.on('end', function () {
                     player.removeClass('pause').addClass('play');
                 });
             }
-        })
+        });
     });
     $('.demo-control').on('click', '.player.pause', function () {
         if (sound) {
