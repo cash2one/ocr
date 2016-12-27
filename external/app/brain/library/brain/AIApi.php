@@ -62,6 +62,30 @@ class Brain_AIApi {
             'url' => 'https://openapi.baidu.com/rest/2.0/vis-antiporn/v1/antiporn',
             'params' => array(),
         ),
+        "tts" => array(
+            'url' => 'http://tts.baidu.com/text2audio',
+            'params' => array(
+                'idx' => 1,
+                'cuid' => 'baidu_speech_demo',
+                'cod' => 2,
+                'lan' => 'zh',
+                'ctp' => 1,
+                'pdt' => 1,
+                'pit' => 5,
+            ),
+        ),
+        "wakescore" => array(
+            'url' => 'http://yuyin.baidu.com/wake/score',
+            'params' => array(),
+        ),
+        "wakedownload" => array(
+            'url' => 'http://yuyin.baidu.com/wake/Download',
+            'params' => array(),
+        ),
+    );
+    
+    public static $arrYuyinlist = array(
+        "tts", "wakescore", "wakedownload"
     );
 
     
@@ -156,16 +180,130 @@ class Brain_AIApi {
             return true;
         }
     } 
-            
+    
+                
     /**
-     * callApi 
+     * callYuyinApi 
      * 
      * @param mixed $type 
      * @param mixed $image_data 
      * @access public
      * @return void
      */ 
-    public static function callApi($type, $image_data) {
+    public static function callYuyinApi($type, $input_data) {
+
+        $url = Brain_AIApi::$arrTypelist[$type]['url'];
+        
+        $getData = array_merge($input_data, Brain_AIApi::$arrTypelist[$type]['params']);
+        //print_r($getData);
+        $url .= "?" . http_build_query($getData);
+        
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_COOKIE, 'BDUSS='.$_COOKIE['BDUSS']);
+        $ret_data = curl_exec($ch);
+        $curl_errno = curl_errno($ch); 
+        $curl_error = curl_error($ch);
+        $content_type = curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
+        curl_close($ch);
+        
+        $dbApiVisit = new Dao_ApiVisit();
+        
+        //正确返回
+        if($type == 'tts')
+        {
+            if($content_type == 'audio/mp3')
+            {
+                $dbApiVisit->insertApiVisit(
+                    Bd_Ip::getClientIp(), $type, 0, ''
+                );
+                header('Content-Type: audio/mp3');
+                echo $ret_data;
+                
+                return true;
+            }
+        }
+        else if($type == 'wakedownload')
+        {
+            if($content_type == 'application/octet-stream')
+            {
+                $dbApiVisit->insertApiVisit(
+                    Bd_Ip::getClientIp(), $type, 0, ''
+                );
+                header('Content-Type: application/octet-stream');
+                echo $ret_data;
+                
+                return true;
+            }
+        }
+        else if($type == 'wakescore')
+        {
+            $result_data = json_decode($ret_data, true);
+            if($result_data['result'] == 'success')
+            {
+                $dbApiVisit->insertApiVisit(
+                    Bd_Ip::getClientIp(), $type, 0, ''
+                );
+                Brain_Output::jsonOutput(
+                    0, 'success', $result_data['data']
+                );
+                
+                return true;
+            }
+        }
+        
+        //异常返回
+        if($ret_data != '')
+        {
+            //接口错误
+            $dbApiVisit->insertApiVisit(
+                Bd_Ip::getClientIp(), $type, $curl_errno, $curl_error
+            );
+            Brain_Output::jsonOutput(
+                Brain_Util::getParamAsInt($ret_data, 'err_no', 1), 
+                Brain_Util::getParamAsString($ret_data, 'err_msg', 'fail')
+            );
+        }
+        else
+        {
+            if($type == 'wakedownload' && $curl_errno == CURLE_OK)
+            {
+                $dbApiVisit->insertApiVisit(
+                    Bd_Ip::getClientIp(), $type, 1, 'download count exceeds'
+                );
+
+                Brain_Output::jsonOutput(
+                    1, 'download count exceeds'
+                );
+            }
+            else
+            {
+                //http错误
+                $dbApiVisit->insertApiVisit(
+                    Bd_Ip::getClientIp(), $type, $curl_errno, $curl_error
+                );
+
+                Brain_Output::jsonOutput(
+                    $curl_errno, $curl_error
+                );
+            }
+        }
+  
+        return true;
+    } 
+            
+            
+    /**
+     * callImageApi 
+     * 
+     * @param mixed $type 
+     * @param mixed $image_data 
+     * @access public
+     * @return void
+     */ 
+    public static function callImageApi($type, $image_data) {
 
         $url = Brain_AIApi::$arrTypelist[$type]['url'];
         
@@ -224,6 +362,7 @@ class Brain_AIApi {
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+        curl_setopt($ch, CURLOPT_COOKIE, 'BDUSS='.$_COOKIE['BDUSS']);
         
         $header = array(
             'Host: openapi.baidu.com',

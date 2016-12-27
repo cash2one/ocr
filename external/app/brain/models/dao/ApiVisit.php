@@ -46,7 +46,7 @@ class Dao_ApiVisit extends Dao_Base {
      * @access public
      * @return void
      */
-    public function insertApiVisit($ip, $api, $error_code, $error_msg, $log_id) {
+    public function insertApiVisit($ip, $api, $error_code, $error_msg, $log_id=0) {
         $arrRow = array(
             'ip' => $ip,
             'api' => $api,
