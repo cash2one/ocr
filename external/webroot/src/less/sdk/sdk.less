@@ -1,0 +1,267 @@
+@import '../common/helper.less';
+@import '../common/global.less';
+
+@light-gray: #fcfcfc;
+@gray: #ebebeb;
+
+// class前缀
+@prefix: sdk;
+
+/**
+ * 左侧导航部分变量
+ */
+// 左侧导航左右留白
+@nav-padding: 25px;
+// 左侧导航title高度
+@nav-header-height: 45px;
+// 左侧导航条目高度
+@nav-item-height: 35px;
+
+/**
+ * 下载条目部分变量
+ */
+// 下载条目左侧栏比例
+@item-aside-radio: 35%;
+
+// 命名空间，防止冲突
+.@{prefix}-download-container {
+    padding-right: 0;
+    // inline-block 3px
+    font-size: 0;
+    border-left: 1px solid @gray;
+    background-color: @light-gray;
+}
+
+.@{prefix}-aside,
+.@{prefix}-main {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+// 左侧导航
+.@{prefix}-aside {
+    width: 25%;
+}
+
+// 左侧导航栏title
+.@{prefix}-aside-header {
+    height: @nav-header-height;
+    line-height: @nav-header-height;
+    padding: 0 @nav-padding;
+    font-size: @font-size-3;
+}
+
+// 左侧列表的一个选项
+.@{prefix}-nav-item {
+    height: @nav-item-height;
+    line-height: @nav-item-height;
+    padding: 0 @nav-padding;
+    font-size: @font-size-1;
+
+    &:hover {
+        color: @blue;
+        cursor: pointer;
+    }
+}
+
+// 右侧主体
+.@{prefix}-main {
+    width: 75%;
+    box-sizing: border-box;
+    padding-left: 20px;
+    border-left: 1px solid @gray;
+    background-color: @white;
+}
+
+.@{prefix}-item-aside,
+.@{prefix}-info {
+    display: inline-block;
+}
+
+// 一个sdk项的下载侧部分
+.@{prefix}-item-aside {
+    width: 35%;
+}
+
+// sdk的图标
+.@{prefix}-item-icon {
+    position: absolute;
+    top: 0;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+}
+
+// 下载按键
+.@{prefix}-download-button {
+    position: absolute;
+    // 下padding + 偏移
+    bottom: 10px + 5px;
+    left: 10px;
+    // 按键占侧栏宽度的80%
+    width: 0.8 * @item-aside-radio;
+    line-height: 30px;
+    background-color: @blue;
+    font-size: @font-size-1;
+    color: @white;
+    text-align: center;
+    cursor: pointer;
+}
+
+// 一个sdk介绍部分
+.@{prefix}-info {
+    width: 100% - @item-aside-radio;
+}
+
+// sdk类组
+.@{prefix}-category {
+}
+
+// sdk分组名
+.@{prefix}-category-name {
+    padding: 10px 0;
+    font-size: @font-size-3;
+    font-weight: bold;
+}
+
+// sdk分组内容容器
+.@{prefix}-collection {
+    margin: 0 -5px;
+}
+
+// 一个sdk介绍
+.@{prefix}-item-container {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 33.333%;
+    padding: 5px;
+}
+
+// 一个sdk项
+.@{prefix}-item {
+    position: relative;
+    padding: 30px 0 10px;
+    background-color: @light-gray;
+    border: 1px solid @gray;
+}
+
+// sdk名称
+.@{prefix}-item-name {
+    font-size: @font-size-2;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+// sdk介绍
+.@{prefix}-description {
+    font-size: @font-size-1;
+    // 支持多行介绍
+    height: 55px;
+    padding: 3px 0;
+}
+
+// sdk版本
+.@{prefix}-version {
+    font-size: @font-size-1;
+    padding: 3px 0;
+}
+
+// sdk更新日期
+.@{prefix}-update-date {
+    font-size: @font-size-1;
+    padding: 3px 0;
+}
+
+// 底部试用区块
+.@{prefix}-trial-block {
+    padding: 50px 0;
+    text-align: center;
+    background-color: @gray;
+}
+
+// 试用信息title
+.@{prefix}-trial-title {
+    font-size: 35px;
+    padding: 5px 0;
+}
+
+// 试用信息内容
+.@{prefix}-trial-info {
+    font-size: @font-size-3;
+    padding: 15px 0;
+}
+
+.@{prefix}-trial-accept {
+    width: 150px;
+    padding: 15px 0;
+    margin: 10px auto 0;
+    background-color: @blue;
+    font-size: @font-size-3;
+    color: @white;
+}
+
+// mixin
+.language-stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    width: @width;
+    height: @height;
+    background-position: @x @y;
+}
+
+.@{prefix}-language-sprite {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: url(../../../images/sdk/language.png) no-repeat;
+
+    &.@{prefix}-android {
+        .language-stitches-sprite(-5px, -5px, 12px, 14px);
+    }
+
+    &.@{prefix}-apple {
+        .language-stitches-sprite(-27px, -5px, 11px, 14px);
+    }
+
+    &.@{prefix}-cpp {
+        .language-stitches-sprite(-5px, -29px, 23px, 14px);
+    }
+
+    &.@{prefix}-java {
+        .language-stitches-sprite(-48px, -5px, 16px, 19px);
+    }
+}
+
+.category-stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+}
+
+.@{prefix}-category-icon {
+    display: block;
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    background: url(../../../images/sdk/category-icon.png) no-repeat;
+
+    &.@{prefix}-ocr {
+        .category-stitches-sprite(-5px, -5px, 72px, 70px);
+    }
+
+    &.@{prefix}-nlp {
+        .category-stitches-sprite(-87px, -5px, 72px, 70px);
+    }
+
+    &.@{prefix}-anti {
+        .category-stitches-sprite(-5px, -85px, 72px, 70px);
+    }
+
+    &.@{prefix}-bfr {
+        .category-stitches-sprite(-87px, -85px, 72px, 70px);
+    }
+
+    &.@{prefix}-bs {
+        .category-stitches-sprite(-169px, -5px, 60px, 59px);
+    }
+}
