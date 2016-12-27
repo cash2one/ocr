@@ -4,3 +4,4 @@
 */node_modules
 /external/webroot/node_modules/
 /internal/webroot/node_modules/
+service.log.*

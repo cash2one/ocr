@@ -221,8 +221,12 @@ class Brain_AIApi {
                 $dbApiVisit->insertApiVisit(
                     Bd_Ip::getClientIp(), $type, 0, ''
                 );
-                header('Content-Type: audio/mp3');
-                echo $ret_data;
+                //header('Content-Type: audio/mp3');
+                //echo $ret_data;
+
+                Brain_Output::jsonOutput(
+                    0, 'success', 'data:audio/x-mpeg;base64,'.base64_encode($ret_data)
+                );
                 
                 return true;
             }
