@@ -64,3 +64,13 @@ export function exportWakeWords({words = null, success = $.noop}) {
     window.open('/aidemo?type=wakedownload&kw=' + words, '_blank');
     success();
 }
+
+export function synthesizeSpeech({data = {}, success = $.noop, fail = $.noop}) {
+    $.post('/aidemo', {
+        type: 'tts',
+        speed: data.speed,
+        vol: data.vol,
+        person: data.person,
+        text: data.text
+    }).success(success).fail(fail);
+}

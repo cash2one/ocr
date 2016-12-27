@@ -84,6 +84,12 @@
   border: 1px solid #0073eb;
   background-color: #0073eb;
 }
+.ai-platform button.small,
+.ai-platform a[role="button"].small {
+  width: 80px;
+  height: 26px;
+  line-height: 24px;
+}
 .ai-platform button.media,
 .ai-platform a[role="button"].media {
   width: 110px;
