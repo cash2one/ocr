@@ -85,7 +85,9 @@ class Brain_AIApi {
     );
     
     public static $arrYuyinlist = array(
-        "tts", "wakescore", "wakedownload"
+        "tts", 
+        "wakescore", 
+        "wakedownload",
     );
 
     
