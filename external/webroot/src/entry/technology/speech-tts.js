@@ -85,26 +85,26 @@ $(document).ready(function () {
                     throw res.msg;
                     return false;
                 }
-                player.removeClass('play').addClass('pause');
                 sound = new Howl({
                     src: [res.data]
                 });
+                player.removeClass('play').addClass('pause');
+                sound.play();
 
-                sound.once('load', function () {
-                    sound.play();
+                sound.once('stop', function () {
+                    player.removeClass('pause').addClass('play');
                 });
-
-                sound.on('end', function () {
+                sound.once('end', function () {
                     player.removeClass('pause').addClass('play');
                 });
             }
         });
     });
+
     $('.demo-control').on('click', '.player.pause', function () {
         if (sound) {
-            sound.pause();
+            sound.stop();
         }
-        $(this).removeClass('pause').addClass('play');
     });
 
 });
