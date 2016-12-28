@@ -1,0 +1,93 @@
+@import '../common/helper.less';
+@import '../common/global.less';
+
+@prefix: video;
+@gray: #ebebeb;
+
+.ai-platform {
+    background-color: @gray;
+    .@{prefix}-container {
+        padding-bottom: 40px;
+    }
+}
+
+// banner区域
+// 顶部宣传图
+.@{prefix}-banner {
+    height: 200px;
+    color: @white;
+    background: #0e1b56 url(../../../images/document/video/video-banner.png) center;
+
+    &-title,
+    &-intro {
+        text-align: center;
+    }
+
+    &-title {
+        padding: 50px 0 20px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    &-intro {
+        padding: 10px 0;
+        font-size: 20px;
+    }
+}
+
+// 一个视频分类
+.@{prefix}-category {
+    margin: 0 -5px;
+
+    // 视频分类title
+    &-title {
+        padding: 30px 0 5px;
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+// 视频结合
+.@{prefix}-collection {
+    font-size: 0;
+}
+
+// 视频项容器
+.@{prefix}-item-container {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 33.333%;
+    margin-top: 10px;
+    padding: 0 8px;
+    vertical-align: top;
+}
+
+// 一个视频项目
+.@{prefix}-item {
+}
+
+// 视频宣传图
+.@{prefix}-poster {
+    height: 150px;
+    background-color: green;
+}
+
+// 一个视频介绍的容器
+.@{prefix}-intro-container {
+    padding: 12px 8px;
+    background-color: @white;
+}
+
+// 视频介绍文字
+.@{prefix}-intro {
+    height: 40px;
+    padding: 5px;
+    font-size: @font-size-2;
+}
+
+// 视频发布时间
+.@{prefix}-release-date {
+    padding-right: 5px;
+    font-size: @font-size-1;
+    text-align: right;
+}
