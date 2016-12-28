@@ -147,6 +147,7 @@ class Action_AIDemo extends Ap_Action_Abstract {
         }
         else if($strAction == 'getHeader')
         {
+            $imageUrl = Brain_Util::getParamAsString($arrInput, 'image_url', '');
             if($imageUrl != '' && filter_var($imageUrl, FILTER_VALIDATE_URL)){
                 
                 $result = Brain_AIApi::getHeaderByUrl($imageUrl);

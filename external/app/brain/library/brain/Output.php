@@ -28,6 +28,7 @@ class Brain_Output {
     public function htmlOutput($arrPageInfo, $strTpl) {
         header('Content-Type: text/html; charset=UTF-8');
         $tpl = Bd_TplFactory::getInstance();
+        $arrPageInfo['userInfo'] = Brain_User::getUserInfo();
         $tpl->assign($arrPageInfo);
         $strEcho = $tpl->fetch($strTpl);
         echo $strEcho;

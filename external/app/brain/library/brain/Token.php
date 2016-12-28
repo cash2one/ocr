@@ -26,8 +26,8 @@ class Brain_Token {
         if($token == '')
         {
             $token = Brain_Token::getTokenFromOpenapi();
-            var_dump($token);
-            echo 'xxxxxxxxxx';
+            //var_dump($token);
+            //echo 'xxxxxxxxxx';
             
             if($token != '')
             {

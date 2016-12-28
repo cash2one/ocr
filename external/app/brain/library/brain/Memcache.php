@@ -23,7 +23,7 @@ class Brain_Memcache {
  
         if($mc == null) {
             Bd_Init::init();
-            $pid = 'ksarch_demo';
+            $pid = 'aip_cache';
             
             $mc = Ak_Service_Memcached::create(
                 array(
