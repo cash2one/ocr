@@ -1,0 +1,284 @@
+@import '../common/helper.less';
+@import '../common/global.less';
+
+@banner: url('../../../images/technology/nlp-simnet/banner.png');
+@icons: url('../../../images/technology/nlp-simnet/icons.png');
+@intro-bg: url('../../../images/technology/nlp-simnet/intro-bg.png');
+@intro: none;
+@case-icons: url('../../../images/technology/nlp-simnet/case-icons.png');
+@demo-icons: url('../../../images/technology/nlp-simnet/demo-icons.png');
+
+@import '../common/tech-page.less';
+
+.tech-section {
+  &.tech-intro{
+    height: 400px;
+
+    .intro-demo {
+      color: white;
+      font-size: 18px;
+      margin-top: 20px;
+
+      & > li {
+        width: 750px;
+        margin: 20px auto;
+        border: 1px solid transparent;
+        position: relative;
+
+        & > span {
+          display: inline-block;
+          float: left;
+          height: 40px;
+          line-height: 36px;
+        }
+
+        &.demo-content.good::before {
+          opacity: 0;
+          content: "";
+          position: absolute;
+          display: inline-block;
+          width: 100%;
+          padding: 10px 30px;
+          height: 100%;
+          left: -37px;
+          top: -12px;
+          border: 2px dashed #47d301;
+          .icon(@demo-icons, 770px, 15px);
+        }
+
+        .demo-title {
+          width: 300px;
+
+          &:nth-child(3) {
+            width: 150px;
+          }
+        }
+
+        &.demo-content > span:not(:nth-child(2))　{
+          border: 2px solid fadeOut(@white, 50%);
+          background-color: fadeOut(@white, 80%);
+          padding: 0 15px;
+          box-sizing: border-box;
+        }
+
+        .demo-text {
+          width: 200px;
+          opacity: 0;
+        }
+        .demo-arrow {
+          width: 100px;
+          opacity: 0;
+          background-size: 114px/2 110px/2;
+          .icon(@demo-icons, center, -17px);
+        }
+        .demo-compare {
+          width: 200px;
+          opacity: 0;
+        }
+        .demo-score {
+          text-align: center;
+          margin-left: 100px;
+          width: 150px;
+          opacity: 0;
+        }
+      }
+
+      &.scanned > li {
+        .demo-text {
+          opacity: 1;
+          .basic-transition(opacity, .5s, ease, 0s);
+        }
+        .demo-arrow {
+          opacity: 1;
+          .basic-transition(opacity, .5s, ease, 1s);
+        }
+        .demo-compare {
+          opacity: 1;
+          .basic-transition(opacity, .5s, ease, 0.5s);
+        }
+        .demo-score {
+          opacity: 1;
+          .basic-transition(opacity, .5s, ease, 1.5s);
+        }
+
+        &.good {
+          .demo-score > span{
+            color: #47d301;
+            .basic-transition(color, .5s, ease, 2s);
+          }
+        }
+        &.demo-content.good::before {
+          opacity: 1;
+          .basic-transition(opacity, .5s, ease, 2.5s);
+        }
+      }
+    }
+  }
+
+  &.tech-demo {
+    .demo-container {
+      width: 900px;
+      margin: 0 auto;
+
+      .refresh-demo {
+        color: @blue;
+        display: inline;
+        line-height: 20px;
+        margin-left: 5px;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          float: left;
+          .icon(@demo-icons, top, right);
+        }
+      }
+    }
+    .demo-content {
+      height: 180px;
+      margin-top: 10px;
+
+      & > div {
+        float: left;
+        height: 100%;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 20px;
+      }
+    }
+    .demo-input {
+      border: 1px solid fadeOut(@black, 80%);
+      color: #333;
+      font-size: 20px;
+      width: 350px;
+      margin-right: 20px;
+
+      span {
+        color: @white;
+        background-color: #7db6f2;
+        padding: 0 3px;
+        margin: 0 3px;
+      }
+
+    }
+    .demo-result {
+      border: 1px solid fadeOut(@black, 80%);
+      background-color: #fafafa;
+      width: 530px;
+
+      & > * {
+        display: inline-block;
+        float: left;
+      }
+
+      #demo-options {
+        width: 250px;
+        height: 110px;
+
+        & > li {
+          width: 100%;
+
+          & + li {
+            margin-top: 21px;
+          }
+
+          .btn-normal {
+            width: 100%;
+            border-color: #7db6f2;
+            box-shadow: none;
+            box-sizing: border-box;
+
+            &.selected {
+              color: @white !important;
+              background-color: #7db6f2;
+            }
+          }
+        }
+      }
+
+      .demo-score {
+        width: 218px;
+        margin-left: 20px;
+
+        .demo-score-desc {
+          font-size: @font-size-1;
+          color: #999;
+        }
+
+        .demo-score-detail {
+          background-color: #ebebeb;
+          height: 90px;
+          margin-top: 10px;
+          line-height: 90px;
+          text-align: center;
+          font-size: 40px;
+
+          &.good {
+            color: #339900;
+          }
+
+          &.bad {
+            color: #cc3333;
+          }
+        }
+      }
+    }
+  }
+  &.tech-feature{
+    .feature-item + .feature-item{
+      margin-left: 110px;
+    }
+
+    .feature-item .feature-icon {
+      background-size: 520px/2 270px/2;
+    }
+
+    .feature-item:nth-child(1) .feature-icon{
+      .icon(@icons, -5px, -5px);
+    }
+    .feature-item:nth-child(2) .feature-icon{
+      .icon(@icons, -90px, -5px);
+    }
+    .feature-item:nth-child(3) .feature-icon{
+      .icon(@icons, -175px, -5px);
+    }
+  }
+  &.tech-scene{
+    .scene-item + .scene-item{
+      margin-left: 50px;
+    }
+    .scene-item .scene-icon{
+      background-size: 520px/2 270px/2;
+    }
+
+    .scene-item:nth-child(1) .scene-icon{
+      .icon(@icons, -5px, -90px);
+    }
+    .scene-item:nth-child(2) .scene-icon{
+      .icon(@icons, -50px, -90px);
+    }
+    .scene-item:nth-child(3) .scene-icon{
+      .icon(@icons, -95px, -90px);
+    }
+  }
+
+  &.tech-case {
+    .case-item:nth-child(1) {
+      .icon(url('../../../images/technology/nlp-simnet/case-1.png'), center, center);
+    }
+    .case-item:nth-child(2) {
+      .icon(url('../../../images/technology/nlp-simnet/case-2.png'), center, center);
+    }
+
+    .case-indicator {
+      & > li:nth-child(1) {
+        .icon(@case-icons, -10px, -10px);
+      }
+      & > li:nth-child(2) {
+        .icon(@case-icons, -210px, -10px);
+      }
+    }
+  }
+}
