@@ -7,6 +7,7 @@
 import $ from 'jquery';
 import DemoCanvas from '../../component/widget/demoCanvas';
 import {scanFace} from '../../model/demoAPI';
+import AlertModal from '../../component/widget/alertModal';
 
 $(document).ready(function () {
     // case点击效果
@@ -80,6 +81,8 @@ $(document).ready(function () {
         let offset = hasOffset
             ? {x: data.location.left, y: data.location.top}
             : {x: 0, y: 0};
+        let rotatedAngel = hasOffset ? data.rotation_angle : 0;
+
 
         let getAngle = function (x, y) {
             return 360 * Math.atan(y / x) / (2 * Math.PI);
@@ -94,7 +97,7 @@ $(document).ready(function () {
             ctx.lineWidth = 1;
             ctx.fillStyle = 'rgba(0, 115, 235, 0.8)';
             ctx.strokeStyle = 'transparent';
-            let angle = (getAngle(record.x - offset.x, record.y - offset.y) - data.rotation_angle)  / 180 * Math.PI;
+            let angle = (getAngle(record.x - offset.x, record.y - offset.y) - rotatedAngel)  / 180 * Math.PI;
             let radius = getRadius(record.x - offset.x, record.y - offset.y);
             ctx.arc(radius * Math.cos(angle), radius * Math.sin(angle), 2 / scale, 0, 2 * Math.PI);
             ctx.fill();
@@ -240,7 +243,7 @@ $(document).ready(function () {
                 isScanning = false;
             },
             fail: function (xhr) {
-                console.error('接口出错：' + xhr.status + ' - ' + xhr.statusText);
+                new AlertModal('接口出错：' + xhr.status + ' - ' + xhr.statusText);
                 resetDemo();
             }
         };
@@ -258,7 +261,7 @@ $(document).ready(function () {
     // 上传图片
     $('#demo-photo-upload  > input').change(function (e) {
         if (isScanning) {
-            alert('操作正在进行中，请稍候再试！');
+            new AlertModal('操作正在进行中，请稍候再试！');
             return;
         }
         isScanning = true;
@@ -284,13 +287,13 @@ $(document).ready(function () {
     // 检测按钮事件
     $('#scan-photo').click(function () {
         if (isScanning) {
-            alert('操作正在进行中，请稍候再试！');
+            new AlertModal('操作正在进行中，请稍候再试！');
             return;
         }
-        isScanning = true;
         if ($(this).hasClass('disabled') || !$('#demo-photo-url').val()) {
             return false;
         }
+        isScanning = true;
         $('#demo-photo-upload, #scan-photo').addClass('disabled');
         new DemoCanvas({
             selector: '#demo-result .canvas-container',
@@ -313,7 +316,7 @@ $(document).ready(function () {
     // 绑定实例图点击事件
     $('.demo-card-list > li').click(function () {
         if (isScanning) {
-            alert('操作正在进行中，请稍候再试！');
+            new AlertModal('操作正在进行中，请稍候再试！');
             return;
         }
         isScanning = true;

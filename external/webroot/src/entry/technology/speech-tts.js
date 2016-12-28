@@ -8,6 +8,7 @@ import $ from 'jquery';
 import {Howl} from 'howler';
 import noUiSlider from 'nouislider';
 import {synthesizeSpeech} from '../../model/demoAPI';
+import AlertModal from '../../component/widget/alertModal';
 
 $(document).ready(function () {
     // case点击效果
@@ -61,7 +62,7 @@ $(document).ready(function () {
     });
 
     // 监听输入框，并对字数进行限制
-    $('#demo-text-content').keydown(function () {
+    $('#demo-text-content').on('keydown keyup change', function () {
         $('.demo-text').attr('data-counter', 200 - $(this).val().length);
     });
 
@@ -82,9 +83,10 @@ $(document).ready(function () {
             },
             success: function (res) {
                 if (res.errno !== 0) {
-                    throw res.msg;
+                    new AlertModal(res.msg);
                     return false;
                 }
+
                 sound = new Howl({
                     src: [res.data]
                 });

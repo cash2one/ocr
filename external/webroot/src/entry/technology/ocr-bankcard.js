@@ -7,6 +7,7 @@
 import $ from 'jquery';
 import DemoCanvas from '../../component/widget/demoCanvas';
 import {scanBankCard} from '../../model/demoAPI';
+import AlertModal from '../../component/widget/alertModal';
 
 $(document).ready(function () {
     // case点击效果
@@ -71,7 +72,7 @@ $(document).ready(function () {
                 isScanning = false;
             },
             fail: function (xhr) {
-                console.error('接口出错：' + xhr.status + ' - ' + xhr.statusText);
+                new AlertModal('接口出错：' + xhr.status + ' - ' + xhr.statusText);
                 resetDemo();
             }
         };
@@ -88,7 +89,7 @@ $(document).ready(function () {
     // 上传图片
     $('#demo-photo-upload  > input').change(function (e) {
         if (isScanning) {
-            alert('操作正在进行中，请稍候再试！');
+            new AlertModal('操作正在进行中，请稍候再试！');
             return;
         }
         isScanning = true;
@@ -113,13 +114,13 @@ $(document).ready(function () {
     // 检测按钮事件
     $('#scan-photo').click(function () {
         if (isScanning) {
-            alert('操作正在进行中，请稍候再试！');
+            new AlertModal('操作正在进行中，请稍候再试！');
             return;
         }
-        isScanning = true;
         if ($(this).hasClass('disabled') || !$('#demo-photo-url').val()) {
             return false;
         }
+        isScanning = true;
         $('#demo-photo-upload, #scan-photo').addClass('disabled');
         new DemoCanvas({
             selector: '#demo-origin',
@@ -142,7 +143,7 @@ $(document).ready(function () {
     // 绑定实例图点击事件
     $('.demo-card-list > li').click(function () {
         if (isScanning) {
-            alert('操作正在进行中，请稍候再试！');
+            new AlertModal('操作正在进行中，请稍候再试！');
             return;
         }
         isScanning = true;
