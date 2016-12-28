@@ -1,0 +1,27 @@
+{
+  "name": "ai_platform",
+  "description": "AI platform is a website which includes the introductions of ai technologies opened by Baidu",
+  "main": "index.js",
+  "authors": [
+    "Shi-Liang <shiliang@baidu.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Baidu",
+    "AI",
+    "technology",
+    "introduction",
+    "usercase"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "code-prettify": "*"
+  }
+}
