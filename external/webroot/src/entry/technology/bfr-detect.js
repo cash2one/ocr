@@ -300,6 +300,7 @@ $(document).ready(function () {
             selector: '#demo-result .canvas-container',
             image: url,
             type: 'url',
+            apiType: 'face',
             success: imgSrc => {
                 startScan('url', imgSrc, url);
             },
@@ -329,6 +330,7 @@ $(document).ready(function () {
             selector: '#demo-result .canvas-container',
             image: url,
             type: 'url',
+            toCheck: false,
             success: imgSrc => {
                 startScan('url', imgSrc, url);
             },

@@ -138,6 +138,7 @@ $(document).ready(function () {
             selector: '#demo-origin',
             image: url,
             type: 'url',
+            apiType: 'commontext',
             success: imgSrc => {
                 startScan('url', imgSrc, url);
             },
@@ -167,6 +168,7 @@ $(document).ready(function () {
             selector: '#demo-origin',
             image: url,
             type: 'url',
+            toCheck: false,
             success: imgSrc => {
                 startScan('url', imgSrc, url);
             },

@@ -8,13 +8,14 @@ import $ from 'jquery';
 import {getHeader} from '../../model/demoAPI';
 
 export default class DemoCanvas {
-    constructor({selector, image, type, toCheck = true, scale = 1, success, fail}) {
+    constructor({selector, image, type, apiType, toCheck = true, scale = 1, success, fail}) {
         if (!$(selector).context) {
             throw 'DemoCanvas：未寻找到容器!';
         }
         this.container = $(selector);
         this.type = type;
         this.scale = scale;
+        this.apiType = apiType;
         this.image = new Image();
         this.success = success || $.noop;
         this.fail = fail || $.noop;
@@ -28,7 +29,7 @@ export default class DemoCanvas {
             let promise = {
                 'url': this.checkByUrl,
                 'stream': this.checkByStream
-            }[this.type](image);
+            }[this.type](image, apiType);
 
             $.when(promise).then(
                 resultImg => {
@@ -53,10 +54,11 @@ export default class DemoCanvas {
 
     }
 
-    checkByUrl(image) {
+    checkByUrl(image, apiType) {
         let dfd = $.Deferred();
         getHeader({
             imageUrl: image,
+            type: apiType,
             success: function (res) {
                 let contentType = res.data['Content-Type'];
                 let contentSize = res.data['Content-Length'];

@@ -186,17 +186,23 @@ header.header-nav{
 #tech-service {
   width: 1180px;
   left: -254px;
+  height: 415px;
+  box-shadow: none;
 
   &:after {
     content: '';
-    position: fixed;
-    width: 100%;
-    height: 470px;
-    background: rgb(20, 25, 30);
-    left: 0px;
+    position: absolute;
+    width: 4000px;
+    height: 100%;
+    background: #14191e;
     z-index: 0;
-    top: 50px;
+    top: 0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    left: 0;
+    -webkit-transform: translate(-50%, 0);
+       -moz-transform: translate(-50%, 0);
+         -o-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
   }
 
   & > li {
