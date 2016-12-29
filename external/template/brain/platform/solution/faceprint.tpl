@@ -133,10 +133,10 @@
                 <li>
                     <a>解决方案</a>
                     <ul class="sub-top-nav">
-                        <li><a>机器人</a></li>
-                        <li><a>人脸核身</a></li>
-                        <li><a>人脸闸机</a></li>
-                        <li><a>拨测服务</a></li>
+                        <li><a href="/solution/robot">机器人</a></li>
+                        <li><a href="/solution/faceprint">人脸核身</a></li>
+                        <li><a href="/solution/facegate">人脸闸机</a></li>
+                        <li><a href="/solution/dialog">拨测服务</a></li>
                     </ul>
                 </li>
                 <li>
@@ -160,12 +160,19 @@
             <ul>
                 {%if $userInfo eq Null%}
                 <li><a href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
-                <li><a href="https://console.bce.baidu.com/ai/">{%$userInfo.uname%}</a></li>
+                <li>
+                    <a class="console" href="https://console.bce.baidu.com/ai/">控制台</a>
+                </li>
+                <li>
+                    <a href="https://console.bce.baidu.com/ai/">{%$userInfo.uname%}</a>
+                    <ul class="sub-top-nav">
+                        <li><a href="https://passport.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">登出</a></li>
+                    </ul>
+                </li>
                 {%/if%}
-                <li><a href="https://console.bce.baidu.com/ai/">控制台</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">免费试用</a></li>
             </ul>
         </div>
     </div>
