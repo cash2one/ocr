@@ -46,7 +46,7 @@ $(document).ready(function () {
         isScanning = false;
     };
 
-    let startScan = function (type, imgSrc) {
+    let startScan = function (type, imgSrc, url) {
         $('#demo-json > p').empty();
         $('#demo-result .result-background').attr('class', 'result-background loading');
         let options = {
@@ -57,10 +57,10 @@ $(document).ready(function () {
 
                 if (res.errno !== 0) {
                     $('#demo-result .result-background').toggleClass('has-result man female', false)
-                        .toggleClass('error-upload-fail', res.errno === 1)
+                        .toggleClass('error-upload-fail', res.errno === 107)
                         .toggleClass('error-timeout', res.errno === 28)
                         .toggleClass('error-no-result', res.errno === 216630)
-                        .toggleClass('error-image-format', res.errno === 216201);
+                        .toggleClass('error-image-format', res.errno === 106);
                     isScanning = false;
                     return false;
                 }
@@ -77,7 +77,7 @@ $(document).ready(function () {
             }
         };
         if (type === 'url') {
-            options.imageUrl = imgSrc;
+            options.imageUrl = url;
         } else if (type === 'stream') {
             options.image = imgSrc;
         }
@@ -122,12 +122,13 @@ $(document).ready(function () {
         }
         isScanning = true;
         $('#demo-photo-upload, #scan-photo').addClass('disabled');
+        let url = $('#demo-photo-url').val();
         new DemoCanvas({
             selector: '#demo-origin',
-            image: $('#demo-photo-url').val(),
+            image: url,
             type: 'url',
             success: imgSrc => {
-                startScan('url', imgSrc);
+                startScan('url', imgSrc, url);
             },
             fail: resetDemo
         });
@@ -149,14 +150,14 @@ $(document).ready(function () {
         isScanning = true;
         $('.demo-card-list > li').removeClass('active');
         $(this).addClass('active');
-        let imgSrc = window.location.origin + $(this).find('img').attr('src');
+        let url = window.location.origin + $(this).find('img').attr('src');
         $('#demo-photo-upload, #scan-photo').addClass('disabled');
         new DemoCanvas({
             selector: '#demo-origin',
-            image: imgSrc,
+            image: url,
             type: 'url',
             success: imgSrc => {
-                startScan('url', imgSrc);
+                startScan('url', imgSrc, url);
             },
             fail: resetDemo
         });
