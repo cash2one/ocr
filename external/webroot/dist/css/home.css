@@ -254,12 +254,18 @@
   background-position-x: -10px;
   background-position-y: -15px;
 }
+.ai-platform.page-content .home-section.tech-service .service-container .service-item:nth-child(2) {
+  height: 250px;
+}
 .ai-platform.page-content .home-section.tech-service .service-container .service-item:nth-child(2) .service-icon {
   background-image: url('../../images/home/service.png');
   background-repeat: no-repeat;
   background-position: -90px -15px;
   background-position-x: -90px;
   background-position-y: -15px;
+}
+.ai-platform.page-content .home-section.tech-service .service-container .service-item:nth-child(3) {
+  height: 250px;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-item:nth-child(3) .service-icon {
   background-image: url('../../images/home/service.png');

@@ -305,12 +305,13 @@
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
                     <h3>应用助手</h3>
-                    <p>基于关键点识别，对人脸特定位置进行修饰加工，可用于人脸的美化和娱乐化处理</p>
+                    <p>通过语音与应用交互，来搜索内容，播放歌曲</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <section class="tech-section tech-case">
     <ul class="case-list">
         <li class="case-item active">

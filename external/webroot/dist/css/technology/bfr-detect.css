@@ -996,14 +996,14 @@
 .tech-section.tech-case .case-indicator > li:nth-child(1) {
   background-image: url('../../../images/technology/bfr-detect/case-icons.png');
   background-repeat: no-repeat;
-  background-position: -10px -200px;
+  background-position: -10px -210px;
   background-position-x: -10px;
-  background-position-y: -200px;
+  background-position-y: -210px;
 }
 .tech-section.tech-case .case-indicator > li:nth-child(2) {
   background-image: url('../../../images/technology/bfr-detect/case-icons.png');
   background-repeat: no-repeat;
-  background-position: -200px -200px;
+  background-position: -200px -210px;
   background-position-x: -200px;
-  background-position-y: -200px;
+  background-position-y: -210px;
 }

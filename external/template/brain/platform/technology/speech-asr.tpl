@@ -258,7 +258,6 @@
             </div>
         </div>
     </div>
-
 </section>
 <section class="tech-section tech-scene">
     <div class="container">

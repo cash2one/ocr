@@ -514,9 +514,9 @@
   overflow: hidden;
   background-image: url('../../../images/technology/ocr-bankcard/intro.png');
   background-repeat: no-repeat;
-  background-position: -10px -310px;
+  background-position: -10px -311px;
   background-position-x: -10px;
-  background-position-y: -310px;
+  background-position-y: -311px;
 }
 .tech-section.tech-intro .original-card::before {
   content: "";
