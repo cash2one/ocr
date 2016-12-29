@@ -41,7 +41,7 @@
                                 <span>语音合成</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/speech_tts">情感合成</a></li>
+                                <li><a href="/tech/speech_tts">语音合成</a></li>
                             </ul>
                         </li>
                         <li id="tech-image">
