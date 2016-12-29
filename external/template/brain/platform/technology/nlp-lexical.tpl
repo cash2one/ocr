@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="/dist/css/technology/nlp-lexer.css"></head>
+<link rel="stylesheet" href="/dist/css/technology/nlp-lexical.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -381,5 +381,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="/dist/js/technology/nlp-lexer.bundle.js"></script></body>
+<script src="/dist/js/technology/nlp-lexical.bundle.js"></script></body>
 </html>
