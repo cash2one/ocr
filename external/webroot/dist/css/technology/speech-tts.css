@@ -502,6 +502,14 @@
 .tech-section.tech-intro {
   height: 400px;
 }
+.tech-section.tech-intro .tech-intro-detail {
+  height: 340px;
+  background-image: url('../../../images/technology/speech-tts/intro.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position-x: center;
+  background-position-y: center;
+}
 .tech-section.tech-demo .demo-container {
   width: 1000px;
   margin: 0 auto;

@@ -502,6 +502,14 @@
 .tech-section.tech-intro {
   height: 400px;
 }
+.tech-section.tech-intro .tech-intro-detail {
+  height: 340px;
+  background-image: url('../../../images/technology/speech-asr/intro.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position-x: center;
+  background-position-y: center;
+}
 .tech-section.tech-feature .feature-item + .feature-item {
   margin-left: 110px;
 }

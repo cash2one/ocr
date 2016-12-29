@@ -207,6 +207,7 @@
         <h2>功能介绍</h2>
         <p>百度语音合成技术能将用户制定的文字，输出成流畅自然的语音，甚至支持在合成的语音中加入语音和语调<br>
             打破传统文字式人机交互的方式，让人机沟通更自然，方便</p>
+        <div class="tech-intro-detail"></div>
     </div>
 </section>
 <section class="tech-section tech-demo">
