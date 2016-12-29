@@ -34,14 +34,14 @@
                                 <span>语音识别</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/speech-asr">语音识别</a></li>
-                                <li><a href="/tech/speech-wake">语音唤醒</a></li>
+                                <li><a href="/tech/speech_asr">语音识别</a></li>
+                                <li><a href="/tech/speech_wake">语音唤醒</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>语音合成</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/speech-tts">情感合成</a></li>
+                                <li><a href="/tech/speech_tts">情感合成</a></li>
                             </ul>
                         </li>
                         <li id="tech-image">
@@ -52,17 +52,17 @@
                                 <span>OCR文字识别</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/ocr-idcard">身份证识别</a></li>
-                                <li><a href="/tech/ocr-bankcard">银行卡识别</a></li>
-                                <li><a href="/tech/ocr-general">通用印刷文字识别</a></li>
+                                <li><a href="/tech/ocr_idcard">身份证识别</a></li>
+                                <li><a href="/tech/ocr_bankcard">银行卡识别</a></li>
+                                <li><a href="/tech/ocr_general">通用印刷文字识别</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>人脸识别</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/bfr-detect">人脸检测</a></li>
-                                <li><a href="/tech/bfr-compare">人脸对比</a></li>
-                                <li><a href="/tech/bfr-search">人脸查找</a></li>
+                                <li><a href="/tech/bfr_detect">人脸检测</a></li>
+                                <li><a href="/tech/bfr_compare">人脸对比</a></li>
+                                <li><a href="/tech/bfr_search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>色情识别</span>
@@ -86,8 +86,8 @@
                                 <span>短文本级</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/nlp-dnn">中文DNN模型</a></li>
-                                <li><a href="/tech/nlp-simnet">短文本相似度</a></li>
+                                <li><a href="/tech/nlp_dnn">中文DNN模型</a></li>
+                                <li><a href="/tech/nlp_simnet">短文本相似度</a></li>
                                 <li><a>情感观点挖掘</a></li>
                             </ul>
                             <div class="sub-tech-title">
@@ -154,7 +154,7 @@
             </ul>
         </nav>
         <div class="login">
-            <ul>
+            <!--<ul>
                 {%if $userInfo eq Null%}
                 <li><a href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">登录</a></li>
                 <li><a class="btn-primary free-demo" role="button" href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">免费试用</a></li>
@@ -164,9 +164,26 @@
                     <a class="console" href="https://console.bce.baidu.com/ai/">控制台</a>
                 </li>
                 <li>
-                    <a href="https://console.bce.baidu.com/ai/">{%$userInfo.uname%}</a>
+                    <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
                         <li><a href="https://passport.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">登出</a></li>
+                    </ul>
+                </li>
+                {%/if%}
+            </ul>-->
+            <ul>
+                {%if $userInfo eq Null%}
+                <li><a href="https://login.bcetest.baidu.com?redirect=encodeURIComponent(https://qasandbox.bcetest.baidu.com/ai/)">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://login.bcetest.baidu.com?redirect=encodeURIComponent(https://qasandbox.bcetest.baidu.com/ai/)">免费试用</a></li>
+                {%/if%}
+                {%if $userInfo != Null%}
+                <li>
+                    <a class="console" href="https://qasandbox.bcetest.baidu.com/ai/">控制台</a>
+                </li>
+                <li>
+                    <a>{%$userInfo.uname%}</a>
+                    <ul class="sub-top-nav">
+                        <li><a href="https://login.bcetest.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">登出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -212,14 +229,14 @@
                             <li>
                                 <h4>语音识别</h4>
                                 <ul>
-                                    <li><a href="/tech/speech-asr">语音识别</a></li>
-                                    <li><a href="/tech/speech-wake">语音唤醒</a></li>
+                                    <li><a href="/tech/speech_asr">语音识别</a></li>
+                                    <li><a href="/tech/speech_wake">语音唤醒</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <h4>语音合成</h4>
                                 <ul>
-                                    <li><a href="/tech/speech-tts">情感合成</a></li>
+                                    <li><a href="/tech/speech_tts">情感合成</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -241,17 +258,17 @@
                             <li>
                                 <h4>OCR文字识别</h4>
                                 <ul>
-                                    <li><a href="/tech/ocr-idcard">身份证识别</a></li>
-                                    <li><a href="/tech/ocr-bankcard">银行卡识别</a></li>
-                                    <li><a href="/tech/ocr-general">通用印刷文字识别</a></li>
+                                    <li><a href="/tech/ocr_idcard">身份证识别</a></li>
+                                    <li><a href="/tech/ocr_bankcard">银行卡识别</a></li>
+                                    <li><a href="/tech/ocr_general">通用印刷文字识别</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <h4>人脸识别</h4>
                                 <ul>
-                                    <li><a href="/tech/bfr-detect">人脸检测</a></li>
-                                    <li><a href="/tech/bfr-compare">人脸对比</a></li>
-                                    <li><a href="/tech/bfr-search">人脸查找</a></li>
+                                    <li><a href="/tech/bfr_detect">人脸检测</a></li>
+                                    <li><a href="/tech/bfr_compare">人脸对比</a></li>
+                                    <li><a href="/tech/bfr_search">人脸查找</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -286,8 +303,8 @@
                             <li>
                                 <h4>短文本级</h4>
                                 <ul>
-                                    <li><a href="/tech/nlp-dnn">中文DNN模型</a></li>
-                                    <li><a href="/tech/nlp-simnet">短文本相似度</a></li>
+                                    <li><a href="/tech/nlp_dnn">中文DNN模型</a></li>
+                                    <li><a href="/tech/nlp_simnet">短文本相似度</a></li>
                                     <li><a>情感观点挖掘</a></li>
                                 </ul>
                             </li>
