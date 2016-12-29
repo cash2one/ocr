@@ -7,7 +7,6 @@
 import $ from 'jquery';
 import News from '../component/widget/news';
 
-
 $(document).ready(function () {
     // 渲染底部新闻
     new News({
