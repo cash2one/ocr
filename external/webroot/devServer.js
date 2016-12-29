@@ -4,16 +4,12 @@
  */
 
 var path = require('path');
+var fs = require('fs');
 
 var express = require('express');
 var app = express();
 
 var port = 8088;
-
-app.use(
-    '/html',
-    express.static(path.join(__dirname, 'dist', 'html'))
-);
 
 app.use(
     '/images',
@@ -29,6 +25,24 @@ app.use(
     '/dist/js',
     express.static(path.join(__dirname, 'dist', 'js'))
 );
+
+app.get('/html/*', function (req, res, next) {
+    var relativePath = path.relative('/html', req.path);
+
+    fs.readFile(
+        path.join(__dirname, '..', 'template', 'brain', 'platform', relativePath),
+        function (err, data) {
+            if (err) {
+                next();
+                return;
+            }
+
+            res
+                .type('html')
+                .end(data);
+        }
+    );
+});
 
 app.listen(port, function () {
     console.log('访问本地' + port + ',即可即时查看效果，enjoy it');

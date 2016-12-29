@@ -1,0 +1,73 @@
+@import '../common/helper.less';
+@import '../common/global.less';
+@import '../common/tech-page.less';
+
+@banner: url('../../../images/support/about-us/about-banner.png');
+@icons: none;
+@intro-bg: none;
+@case-icons: none;
+
+// 前缀
+@prefix: about;
+
+// 颜色
+@dark-block: #333333;
+@light-block: #666666;
+
+// 段落间距
+
+.@{prefix}-banner{
+    background: url(../../../images/support/about-us/about-banner.png) no-repeat center;
+
+    h1{
+        color: #fff;
+        font-size: 42px;
+        line-height: 54px;
+        padding: 100px 0;
+        text-align: center;
+    }
+}
+
+.@{prefix}-introduction{
+    padding: 50px 0;
+
+    .@{prefix}-content{
+        width: 1180px;
+        padding: 0 10px;
+        margin: 0 auto;
+
+        // 文字
+        h2{
+            font-size: @font-size-4;
+            color: @dark-block;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f7f7f7;
+        }
+
+        h3{
+            font-size: @font-size-3;
+            color: @dark-block;
+            margin-top: 20px;
+        }
+
+        p{
+            font-size: @font-size-1;
+            line-height: 25px;
+            color: @light-block;
+            padding: 14px 0;
+            margin: 0;
+        }
+
+        & > li{
+            margin-bottom: 30px;
+
+            ul{
+                & > li{
+                    p{
+                        padding-top: 6px;
+                    }
+                }
+            }
+        }
+    }
+}

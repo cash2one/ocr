@@ -177,7 +177,7 @@
   box-sizing: border-box;
   background-color: #f0f7fc;
   background-size: 1600px 400px;
-  background-image: url('../../../images/solution/dialog/banner.png');
+  background-image: url('../../../images/technology/nlp-comment/comment-banner.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
@@ -499,6 +499,26 @@
     padding-left: 100px !important;
   }
 }
+.nlp-function {
+  height: 440px;
+  background: url(../../../images/technology/nlp-dr/function-bg.png) center;
+  text-align: center;
+  color: #fff;
+  font-size: 0;
+}
+.nlp-function-title {
+  padding: 30px 0 20px;
+  font-size: 30px;
+}
+.nlp-function-intro {
+  width: 870px;
+  font-size: 14px;
+  line-height: 25px;
+  margin: 0 auto;
+}
+.nlp-function-pic {
+  margin: 5px auto;
+}
 .nlp-feature-title {
   padding: 30px 0;
   font-size: 25px;
@@ -507,6 +527,7 @@
 .nlp-feature-container {
   margin: 0 -50px;
   font-size: 0;
+  text-align: center;
 }
 .nlp-feature-item {
   display: inline-block;
@@ -517,23 +538,14 @@
 }
 .nlp-feature-icon {
   display: block;
-  background: url(../../../images/technology/nlp-lexer/feature.png) no-repeat center;
+  background: url("../../../images/technology/nlp-dr/icon.png") no-repeat center;
+  background-size: 95px 134px;
   margin: 0 auto;
 }
 .nlp-feature-icon.feature-1 {
-  width: 69px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   background-position: -5px -5px;
-}
-.nlp-feature-icon.feature-2 {
-  width: 67px;
-  height: 73px;
-  background-position: -84px -5px;
-}
-.nlp-feature-icon.feature-3 {
-  width: 69px;
-  height: 74px;
-  background-position: -5px -88px;
 }
 .nlp-feature-name {
   padding: 15px 0;
@@ -546,12 +558,14 @@
   font-size: 14px;
   line-height: 25px;
   color: #828281;
+  text-align: left;
 }
 .nlp-section-border {
   border: 1px solid #efefef;
 }
 .nlp-scenario {
   font-size: 0;
+  text-align: center;
 }
 .nlp-scenario-title {
   padding: 30px 0;
@@ -578,32 +592,18 @@
 .nlp-scenario-icon {
   width: 25%;
   display: inline-block;
-  background: url(../../../images/technology/nlp-lexer/scenario.png) no-repeat;
+  background: url("../../../images/technology/nlp-dr/icon.png") no-repeat;
+  background-size: 95px 134px;
 }
 .nlp-scenario-icon.scenario-1 {
   width: 40px;
   height: 40px;
-  background-position: -5px -5px;
+  background-position: -5px -89px;
 }
 .nlp-scenario-icon.scenario-2 {
   width: 40px;
   height: 40px;
-  background-position: -55px -5px;
-}
-.nlp-scenario-icon.scenario-3 {
-  width: 40px;
-  height: 40px;
-  background-position: -5px -55px;
-}
-.nlp-scenario-icon.scenario-4 {
-  width: 40px;
-  height: 40px;
-  background-position: -55px -55px;
-}
-.nlp-scenario-icon.scenario-5 {
-  width: 40px;
-  height: 40px;
-  background-position: -105px -5px;
+  background-position: -50px -89px;
 }
 .nlp-scenario-intro {
   width: 85%;
@@ -613,172 +613,25 @@
 .nlp-scenario-header {
   padding: 10px 0;
   font-size: 18px;
+  text-align: left;
 }
 .nlp-scenario-detail {
   height: 120px;
   font-size: 14px;
   line-height: 25px;
   color: #828281;
+  text-align: left;
 }
-.nlp-function {
-  height: 490px;
-  background: url(../../../images/technology/nlp-lexer/function-bg.png) center;
-  text-align: center;
-  color: #fff;
-  font-size: 0;
+.tech-section.tech-case .case-item .case-icon {
+  background-size: 400px 135px;
 }
-.nlp-function-title {
-  padding: 30px 0 20px;
-  font-size: 30px;
+.tech-section.tech-case .case-item:nth-child(1) {
+  background-image: url('../../../images/technology/nlp-dr/case-1.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position-x: center;
+  background-position-y: center;
 }
-.nlp-function-item-container {
-  width: 1180px;
-  padding: 0 10px;
-  margin: 0 auto;
-}
-.nlp-function-item {
-  display: inline-block;
-  box-sizing: border-box;
-  padding: 0 40px;
-  width: 33.333%;
-  vertical-align: top;
-}
-.nlp-function-name {
-  font-size: 18px;
-  padding: 12px 0;
-}
-.nlp-function-icon {
-  display: block;
-  margin: 10px auto;
-  background: url(../../../images/technology/nlp-lexer/function-sprite.png) no-repeat;
-}
-.nlp-function-icon.function-1 {
-  background-position: -5px -5px;
-  width: 131px;
-  height: 130px;
-}
-.nlp-function-icon.function-2 {
-  background-position: -146px -5px;
-  width: 132px;
-  height: 131px;
-}
-.nlp-function-icon.function-3 {
-  background-position: -5px -146px;
-  width: 131px;
-  height: 130px;
-}
-.nlp-function-intro {
-  height: 110px;
-  font-size: 14px;
-  line-height: 25px;
-}
-.nlp-function-info {
-  font-size: 14px;
-  line-height: 20px;
-}
-.lexer-demo {
-  width: 900px;
-  margin: 0 auto;
-}
-.lexer-demo-case {
-  min-height: 50px;
-  padding: 20px;
-  border: 1px solid gray;
-}
-.lexer-demo-result {
-  padding: 0 20px;
-  border: 1px solid gray;
-  background-color: #dcdcdc;
-}
-.lexer-demo-segmentation,
-.lexer-demo-word-type {
-  box-sizing: border-box;
-}
-.lexer-demo-block {
-  display: inline-block;
-  padding: 8px;
-  margin: 8px 5px;
-  vertical-align: top;
-  border: 1px solid blue;
-  font-size: 14px;
-}
-.lexer-demo-block.selected {
-  background-color: blue;
-  color: #fff;
-}
-.lexer-demo-split {
-  margin: 0;
-}
-.lexer-demo-tab {
-  margin: 25px 0;
-  font-size: 0;
-  text-align: center;
-}
-.lexer-demo-tab-label {
-  display: inline-block;
-  padding: 10px 0;
-  width: 100px;
-  border: 1px solid blue;
-  vertical-align: top;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-}
-.lexer-demo-tab-label.label-selected {
-  background-color: blue;
-  color: #fff;
-}
-.lexer-demo-tab-content {
-  display: none;
-  font-size: 0;
-}
-.lexer-demo-tab-content.tab-show {
-  display: block;
-}
-.lexer-demo-term-tab {
-  margin: 0 -15px;
-}
-.lexer-demo-term {
-  display: inline-block;
-  width: 50%;
-  padding: 10px;
-  height: 120px;
-  box-sizing: border-box;
-  vertical-align: top;
-  font-size: 0;
-}
-.lexer-demo-term-name,
-.lexer-demo-term-name-eng {
-  padding: 5px 0;
-  text-align: center;
-}
-.lexer-demo-term-name {
-  margin-top: 25px;
-}
-.lexer-demo-left-side,
-.lexer-demo-term-box {
-  display: inline-block;
-  box-sizing: border-box;
-  height: 100%;
-  vertical-align: top;
-}
-.lexer-demo-left-side {
-  width: 30%;
-  font-size: 14px;
-  border: 1px solid blue;
-  background-color: cornflowerblue;
-}
-.lexer-demo-term-box {
-  width: 70%;
-  border: 1px solid blue;
-  border-left: 0;
-  overflow: auto;
-}
-.lexer-demo-switch {
-  padding: 10px 0;
-  color: blue;
-  cursor: pointer;
-}
-.word-type {
-  cursor: pointer;
+.tech-section.tech-case .case-list > li {
+  padding-top: 145px;
 }
