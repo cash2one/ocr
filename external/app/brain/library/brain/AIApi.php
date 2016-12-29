@@ -11,7 +11,7 @@ class Brain_AIApi {
     
     //访问限制
     const SEC_VISIT_LIMIT = 1;
-    const MINUTE_VISIT_LIMIT = 100;
+    const MINUTE_VISIT_LIMIT = 1000;
     const MINUTE_TIME_LIMIT = 600;
     const MAX_IMAGE_LIMIT = 2097152; //2 * 1014 * 1024
     
@@ -94,11 +94,11 @@ class Brain_AIApi {
     /**
      * checkVisit 
      * 
-     * @param mixed $demoType 
+     * @param mixed $type 
      * @access public
      * @return void
      */ 
-    public static function checkVisit($demoType) {
+    public static function checkVisit($type) {
         $clientIp = Bd_Ip::getClientIp();
         
         //单秒访问频次检查
@@ -403,14 +403,34 @@ class Brain_AIApi {
      * @return void
      */ 
     public static function getImageByUrl($image_url) {
+
         @$image_data = file_get_contents(
-            $image_url, false, null, 0, Brain_AIApi::MAX_IMAGE_LIMIT);
-            
-        $image_base64_data = base64_encode($image_data);
-        
-        return $image_base64_data;
+            $image_url, false, null, 0, Brain_AIApi::MAX_IMAGE_LIMIT
+        );
+        return base64_encode($image_data);
     }
 
+    /**
+     * checkUrlAvailable
+     * 
+     * @param mixed $url 
+     * @access public
+     * @return void
+     */ 
+    public static function checkUrlAvailable($url, $timeout=10) {
+        
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_HEADER, false ); 
+        curl_setopt($ch, CURLOPT_NOBODY, true ); 
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true ); 
+        curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
+        curl_exec($ch);
+        $status = curl_errno($ch);
+        curl_close($ch);
+        
+        return $status == 0 ? true : false;
+    } 
+ 
     /**
      * getHeaderByUrl 
      * 
@@ -420,9 +440,69 @@ class Brain_AIApi {
      */ 
     public static function getHeaderByUrl($url) {
         $header_data = get_headers($url, 1);
-        $header_data['Content-Length'] = max(0, intval($header_data['Content-Length']));
-        
         return $header_data;
     } 
+    
+   
+    /**
+     * getDataRetryByUrl 
+     * 
+     * @param mixed $url 
+     * @access public
+     * @return void
+     */ 
+    public static function getDataRetryByUrl($url) {
+
+        $orignal_url = $url;
+
+        $k = md5('image_info_'.$orignal_url);
+        $ret_data = Brain_Memcache::get($k);
+
+        //命中缓存
+        if(!empty($ret_data))
+        {
+            return json_decode($ret_data, true);
+        }
+
+        $isUrlAvailable = Brain_AIApi::checkUrlAvailable($url, 1);
+
+        if(!$isUrlAvailable && strpos($url, 'https') === 0)
+        {   
+            $url = 'http'.substr($url, 5); 
+            $isUrlAvailable = Brain_AIApi::checkUrlAvailable($url, 3);
+        }   
+
+        $ret_data = array(
+            'Content-Type' => null, 
+            'Content-Length' => 0,
+            'image_data' => '', 
+        );  
+
+        if(!$isUrlAvailable)
+        {
+            //Brain_Memcache::set($k, json_encode($ret_data, JSON_UNESCAPED_UNICODE), 60);
+            return $ret_data;
+        }
+
+        $image_header = Brain_AIApi::getHeaderByUrl($url);
+    
+        if(!empty($image_header))  
+        {
+            $ret_data['Content-Type'] = $image_header['Content-Type']; 
+            $ret_data['Content-Length'] = max(0, intval($image_header['Content-Length']));
+
+            if( $image_header['Content-Length'] <= Brain_AIApi::MAX_IMAGE_LIMIT &&
+                in_array($image_header['Content-Type'], Brain_AIApi::$arrImageType))
+            {
+                $image_data = Brain_AIApi::getImageByUrl($url);
+    
+                $ret_data['image_data'] = 'data:'.$image_header['Content-Type'].';base64,'.$image_data;
+            }
+
+        }   
+    
+        Brain_Memcache::set($k, json_encode($ret_data, JSON_UNESCAPED_UNICODE), 60);
+        return $ret_data;
+    }
 }
 /* vim: set expandtab ts=4 sw=4 sts=4 tw=120: */

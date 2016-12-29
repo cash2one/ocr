@@ -32,9 +32,16 @@ class Action_AIDemo extends Ap_Action_Abstract {
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
         
-        $demoType = strtolower(Brain_Util::getParamAsString($arrInput, 'type', ''));
+        $demoType = strtolower(Brain_Util::getParamAsString($arrInput, 'type', 'other'));
         $strAction = Brain_Util::getParamAsString($arrInput, 'action', 'api');
-        
+            
+        //访问频次检查
+        if(Brain_AIApi::checkVisit($demoType) == false)
+        {
+            Brain_Output::jsonOutput(102, '请求Demo过于频繁');
+            return;
+        }
+            
         if($strAction == 'api')
         {
             /* 
@@ -42,15 +49,8 @@ class Action_AIDemo extends Ap_Action_Abstract {
              * */
             
             if (!array_key_exists($demoType, Brain_AIApi::$arrTypelist)) {
-                Brain_Output::jsonOutput(1, '请求Demo类型错误');
+                Brain_Output::jsonOutput(101, '请求Demo类型错误');
                 return false;
-            }
-            
-            //访问频次检查
-            if(Brain_AIApi::checkVisit($demoType) == false)
-            {
-                Brain_Output::jsonOutput(1, '请求Demo过于频繁');
-                return;
             }
             
             if(in_array($demoType, Brain_AIApi::$arrYuyinlist))
@@ -82,30 +82,31 @@ class Action_AIDemo extends Ap_Action_Abstract {
                 
                 $filter_image = '';
                 if($imageUrl == '' && $image == ''){
-                    Brain_Output::jsonOutput(1, '请上传图片或图片URL');
+                    Brain_Output::jsonOutput(103, '请上传图片或图片URL');
                     return;
                 }
                 else if($imageUrl != '')
                 {
                     if (!filter_var($imageUrl, FILTER_VALIDATE_URL)) {
-                        Brain_Output::jsonOutput(1, '图片地址格式错误');
+                        Brain_Output::jsonOutput(104, '图片地址格式错误');
                         return;
                     } 
+
+                    $ret_data = Brain_AIApi::getDataRetryByUrl($imageUrl);
                     
-                    $image_header = Brain_AIApi::getHeaderByUrl($imageUrl);
-                    if($image_header['Content-Length'] > Brain_AIApi::MAX_IMAGE_LIMIT)
+                    if($ret_data['Content-Length'] > Brain_AIApi::MAX_IMAGE_LIMIT)
                     {
-                        Brain_Output::jsonOutput(1, '图片超过大小限制');
+                        Brain_Output::jsonOutput(105, '图片超过大小限制');
                         return;
                     }
                     
-                    if(!in_array($image_header['Content-Type'], Brain_AIApi::$arrImageType))
+                    if(!in_array($ret_data['Content-Type'], Brain_AIApi::$arrImageType))
                     {
-                        Brain_Output::jsonOutput(1, '图片类型错误（支持jpg、png、bmp格式）');
+                        Brain_Output::jsonOutput(106, '图片类型错误（支持jpg、png、bmp格式）');
                         return;
                     }
                     
-                    $filter_image = Brain_AIApi::getImageByUrl($imageUrl);
+                    $filter_image = substr($ret_data['image_data'], stripos($ret_data['image_data'], ',') + 1);
                 }
                 else if($image != '')
                 {
@@ -115,13 +116,13 @@ class Action_AIDemo extends Ap_Action_Abstract {
                     
                     if(!in_array($image_type, Brain_AIApi::$arrImageType))
                     {
-                        Brain_Output::jsonOutput(1, '图片类型错误（支持jpg、png、bmp格式）');
+                        Brain_Output::jsonOutput(106, '图片类型错误（支持jpg、png、bmp格式）');
                         return;
                     }
                     
                     if(strlen($image) > ceil(Brain_AIApi::MAX_IMAGE_LIMIT / 3) * 4)
                     {
-                        Brain_Output::jsonOutput(1, '图片超过大小限制');
+                        Brain_Output::jsonOutput(105, '图片超过大小限制');
                         return;
                     }
                     //限制图片大小为2M，base64编码后大小为[n/3]*4, []代表上取整
@@ -132,7 +133,7 @@ class Action_AIDemo extends Ap_Action_Abstract {
                 }
                 
                 if ($filter_image == '') {
-                    Brain_Output::jsonOutput(1, '获取图片失败');
+                    Brain_Output::jsonOutput(107, '获取图片失败');
                     return;
                 } 
                 
@@ -150,19 +151,14 @@ class Action_AIDemo extends Ap_Action_Abstract {
             $imageUrl = Brain_Util::getParamAsString($arrInput, 'image_url', '');
             if($imageUrl != '' && filter_var($imageUrl, FILTER_VALIDATE_URL)){
                 
-                $result = Brain_AIApi::getHeaderByUrl($imageUrl);
-                
-                $ret_data = array(
-                    'Content-Type' => $result['Content-Type'],
-                    'Content-Length' => $result['Content-Length'],
-                );
-                
+                $ret_data = Brain_AIApi::getDataRetryByUrl($imageUrl);
+
                 Brain_Output::jsonOutput(0, 'success', $ret_data);
                 return;
             }
             else
             {
-                Brain_Output::jsonOutput(1, '图片url格式错误');
+                Brain_Output::jsonOutput(104, '图片地址格式错误');
                 return;
             }
         }
