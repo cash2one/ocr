@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="/dist/css/technology/bfr-search.css"></head>
+<link rel="stylesheet" href="/dist/css/technology/nlp-comment_tag.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -194,116 +194,104 @@
 <div class="ai-platform page-content">
 <section class="tech-section tech-banner">
     <div class="container">
-        <h1>人脸查找</h1>
-        <p>文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
+        <h1>评论观点抽取</h1>
+        <p>文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容文案内容</p>
         <div>
             <a role="button" class="btn-primary media">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
         </div>
     </div>
 </section>
-<section class="tech-section tech-intro">
+<div class="nlp-function">
     <div class="container">
-        <h2>功能介绍</h2>
-        <p>给定一张照片，和数据库中N个人脸进行比对，找出最相似的一张脸或多张人脸<br>
-            用于用户不需要声明身份的场景，跟据识别人脸与已经注册库中的人脸匹配程度，返回用户信息和匹配度，即1：N人脸检索</p>
-        <div class="tech-intro-detail">
-            <ul class="face-list">
-                <li class="wrong"></li>
-                <li class="wrong"></li>
-                <li class="right"></li>
-                <li class="wrong"></li>
-                <li class="wrong"></li>
-                <li class="right"></li>
-                <li class="wrong"></li>
-                <li class="wrong"></li>
-            </ul>
+        <div class="nlp-function-title">功能介绍</div>
+        <div class="nlp-function-intro">
+            评论观点抽服务能够对给定产品（包括商品或服务）的用户评论文本，自动分析评论关注点和评论观点，并输出评论观点标签及评论观点极性<br>
+            目前支持12类产品用户评论的观点抽取，包括美食、酒店、汽车、景点等<br>
+            实现特定产品全部评论的评论观点挖掘，帮助商家进行产品分析，辅助用户进行消费决策
+        </div>
+        <div class="nlp-function-list">
+            <h2>单条评论观点抽取</h2>
+            <p class="list-title">输入单条用户评论</p>
+            <img src="../../../images/technology/nlp-comment/list-1.png" >
+            <p class="list-intro">该形式需要用户或者准备demo中一次提供单条评论，评论观点挖掘工具通过对其中的情感观点抽取进行单独的标签展示</p>
+            <p class="list-intro">评论观点标签极性包含好评和差评两个极性，不同极性的标签展示可适当通过颜色或其他形式进行区分</p>
+        </div>
+        <div class="nlp-function-list">
+            <h2>产品评论观点挖掘</h2>
+            <p class="list-title">输入实体评论集</p>
+            <img src="../../../images/technology/nlp-comment/list-2.png" >
+            <p class="list-intro">该形式需要用户或者准备demo中一次提供单个实体的若干条评论，通过评论观点抽取工具对每一条评论进行抽取，并最终进行汇总得到实体的总体标签结果进行展示</p>
+            <p class="list-intro">评论观点标签极性包含好评和差评两个极性，不同极性的标签展示可适当通过颜色或其他形式进行区分</p>
         </div>
     </div>
-</section>
+</div>
+<div class="container">
+    <div class="nlp-feature-container">
+        <div class="nlp-feature-title">技术特色</div>
+        <div class="nlp-feature-item">
+            <div class="nlp-feature-icon feature-1"></div>
+            <div class="nlp-feature-name">粒度更灵活</div>
+            <div class="nlp-feature-info">分词输出混排和基本词两种粒度，用户可以根据具体应用场景选择对应粒度；词性标注结合了字模型与词模型的优势，能够进一步优化分词粒度，从而既保证了基本词汇的原子性，又保证了大粒度词汇，对领域新词、专有名词的识别尤其有效</div>
+        </div>
+        <div class="nlp-feature-item">
+            <div class="nlp-feature-icon feature-2"></div>
+            <div class="nlp-feature-name">海量数据建模</div>
+            <div class="nlp-feature-info">词性标注通过互联网用户行为挖掘海量训练样本，提高了算法在复杂多变的应用场景下的效果稳定性和适配性命名实体识别引入了百亿级的远距离监督学习与点击反馈，在上下文较少时仍能基于先验得到较好处理效果</div>
+        </div>
+        <div class="nlp-feature-item">
+            <div class="nlp-feature-icon feature-3"></div>
+            <div class="nlp-feature-name">用户定制</div>
+            <div class="nlp-feature-info">可根据用户需求，自主干预和定制分词效果，自由定制专名实体类目，打造个性化的分词和专名识别系统（暂未开放）</div>
+        </div>
+    </div>
+</div>
+<hr class="nlp-section-border">
+<div class="container nlp-scenario">
+    <div class="nlp-scenario-title">应用场景</div>
+    <div class="nlp-scenario-item">
+        <div class="nlp-scenario-icon scenario-1"></div>
+        <div class="nlp-scenario-intro">
+            <div class="nlp-scenario-header">情感分析</div>
+            <div class="nlp-scenario-detail">输入的文本内容首先进行分词处理，然后通过词性标注识别带有感情色彩的关键词、辅助情感分析算法用户评论的极性，最终得到用户对事物的观点和褒贬分类</div>
+        </div>
+    </div>
+    <div class="nlp-scenario-item">
+        <div class="nlp-scenario-icon scenario-2"></div>
+        <div class="nlp-scenario-intro">
+            <div class="nlp-scenario-header">语音助手</div>
+            <div class="nlp-scenario-detail">用户客户身份认证，直播实名认证等场景，通过分词和词性标注，分析语音命令中的关键名词、动词、数量、时间，准确理解命令的含义，提高用户体验</div>
+        </div>
+    </div>
+    <div class="nlp-scenario-item">
+        <div class="nlp-scenario-icon scenario-3"></div>
+        <div class="nlp-scenario-intro">
+            <div class="nlp-scenario-header">多轮交互式搜索</div>
+            <div class="nlp-scenario-detail">通过专名识别识别多轮对话中的核心实体，自动判断后续对话中对该实体的进一步信息需求</div>
+        </div>
+    </div>
+</div>
 
-<section class="tech-section tech-feature">
-    <div class="container">
-        <h2>技术特色</h2>
-        <div class="feature-list clear-float">
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>强大的人脸训练模型</h3>
-                    <p>通过海量人脸训练集，成功标注千万人脸数据</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>比对速度快</h3>
-                    <p>算法识别速度小于300ms，误识率低</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>处理能力强</h3>
-                    <p>系统可支持高库容比对任务，算法识别性能高，返回时间迅速</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section>
-<section class="tech-section tech-scene">
-    <div class="container">
-        <h2>应用场景</h2>
-        <div class="scene-list clear-float">
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>门禁系统</h3>
-                    <p>受安全保护的地区可以通过人脸识别辨识试图进入者的身份，比如小区，学校、企业等。敏感地点也可以使用人脸识别门禁，对于未登记人员访问将触发报警</p>
-                </div>
-            </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>明星图库</h3>
-                    <p>娱乐场景使用。用户上传一张照片，比对出库中相似度最高的明星，达到娱乐效果</p>
-                </div>
-            </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>逃犯追缉</h3>
-                    <p>在银行、机场、商场、市场等人流密集的公共场所对人群进行监视，已达到身份识别的目的，并在获得疑犯识别后，触发报警</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <section class="tech-section tech-case">
     <ul class="case-list">
         <li class="case-item active">
             <div class="container">
                 <div class="case-icon"></div>
-                <h2>乌镇人脸闸机</h2>
-                <p>用户在购买门票时进行人像采集，就可以在景区通过人脸识别多次进出景区<br>
-                    在互联网大会前落地上线，期间电视台播出2期节目，品牌露出11次，为后续和景区闸机厂商合作提供了良好的基础调</p>
+                <h2>糯米用户评论观点挖掘</h2>
             </div>
         </li>
         <li class="case-item">
             <div class="container">
                 <div class="case-icon"></div>
-                <h2>百度识图</h2>
-                <p>全球第一个全网人脸搜索功能<br>
-                    可以自动检测用户上传图片中出现的人脸，并将其余数据库中索引的全网数亿人脸比对并按照人脸相似度排序展示，帮你找到更多相似的TA</p>
+                <h2>百度搜索评论观点聚合</h2>
             </div>
         </li>
     </ul>
     <ul class="case-indicator">
-        <li class="active"><a>乌镇人脸闸机</a></li>
-        <li><a>百度识图</a></li>
+        <li class="active"><a>糯米评论挖掘</a></li>
+        <li><a>搜索评论聚合</a></li>
     </ul>
 </section>
-{%if $userInfo eq Null%}
 <section class="tech-section get-started">
     <div class="container">
         <h2>现在注册，即享免费试用</h2>
@@ -313,7 +301,6 @@
         </div>
     </div>
 </section>
-{%/if%}
 <section class="tech-section tech-guide">
     <div class="container">
         <h2>使用指南</h2>
@@ -328,14 +315,15 @@
         <div class="question-link clear-float">
             <h3>常见问题</h3>
             <ul>
-                <li><a>图片分辨率有什么要求？</a></li>
-                <li><a>图片大小是否有限制？</a></li>
-                <li><a>请求qps是否有限制？</a></li>
-                <li><a>低质量的色情图片能否正常识别？</a></li>
+                <li><a>图片格式和分辨率有限制吗？</a></li>
+                <li><a>支持身份证等垂直类的文字识别吗？</a></li>
+                <li><a>支持文档扫描图片的文字识别码？</a></li>
+                <li><a>怎么提高文字识别的准确率和识别速度？</a></li>
             </ul>
         </div>
     </div>
 </section>
+
 </div>
 <aside class="aside-action">
     <ul>
@@ -405,5 +393,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="/dist/js/technology/bfr-search.bundle.js"></script></body>
+<script src="/dist/js/technology/nlp-comment_tag.bundle.js"></script></body>
 </html>

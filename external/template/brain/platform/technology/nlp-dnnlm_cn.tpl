@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="/dist/css/technology/nlp-dr.css"></head>
+<link rel="stylesheet" href="/dist/css/technology/nlp-dnnlm_cn.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -194,65 +194,138 @@
 <div class="ai-platform page-content">
 <section class="tech-section tech-banner">
     <div class="container">
-        <h1>词向量计算</h1>
-        <p>文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容文案内容</p>
+        <h1>中文DNN模型</h1>
+        <p>文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
         <div>
             <a role="button" class="btn-primary media">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
         </div>
     </div>
 </section>
-<div class="nlp-function">
+<section class="tech-section tech-intro">
     <div class="container">
-        <div class="nlp-function-title">功能介绍</div>
-        <div class="nlp-function-intro">
-            词向量计算是通过训练的方法，将语言词表中的词映射成一个长度固定的向量<br>
-            词表中所有的词向量构成一个向量空间，每一个词都是这个词向量空间中的一个点，利用这种方法，实现文本的可计算
-        </div>
-        <div class="nlp-function-pic">
-            <img src="../../../images/technology/nlp-dr/function-pic.png" >
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="nlp-feature-container">
-        <div class="nlp-feature-title">技术特色</div>
-        <div class="nlp-feature-item">
-            <div class="nlp-feature-icon feature-1"></div>
-            <div class="nlp-feature-name">粒度更灵活</div>
-            <div class="nlp-feature-info">分词输出混排和基本词两种粒度，用户可以根据具体应用场景选择对应粒度；词性标注结合了字模型与词模型的优势，能够进一步优化分词粒度，从而既保证了基本词汇的原子性，又保证了大粒度词汇，对领域新词、专有名词的识别尤其有效</div>
-        </div>
-    </div>
-</div>
-<hr class="nlp-section-border">
-<div class="container nlp-scenario">
-    <div class="nlp-scenario-title">应用场景</div>
-    <div class="nlp-scenario-item">
-        <div class="nlp-scenario-icon scenario-1"></div>
-        <div class="nlp-scenario-intro">
-            <div class="nlp-scenario-header">情感分析</div>
-            <div class="nlp-scenario-detail">输入的文本内容首先进行分词处理，然后通过词性标注识别带有感情色彩的关键词、辅助情感分析算法用户评论的极性，最终得到用户对事物的观点和褒贬分类</div>
+        <h2>功能介绍</h2>
+        <p>语言模型是通过计算给定词组成的句子的概率，从而判断所组成的句子是否符合客观语言表达习惯<br>
+            计算一个句子的概率对于自然语言处理任务而言意义重大，语言模型通常用于机器翻译、拼写纠错、语音识别、问答系统、词性标注、句法分析和信息检索等</p>
+        <div class="tech-intro-detail">
+            <ul class="intro-demo">
+                <li class="bad">
+                    <span class="demo-text">新能源汽车动力电池项目正式<span class="demo-text-option">展开</span></span>
+                    <span class="demo-score bad"><span>59.01</span></span>
+                </li>
+                <li class="good">
+                    <span class="demo-text">新能源汽车动力电池项目正式<span class="demo-text-option">启动</span></span>
+                    <span class="demo-score"><span>34.59</span></span>
+                </li>
+                <li class="bad">
+                    <span class="demo-text">新能源汽车动力电池项目正式<span class="demo-text-option">起飞</span></span>
+                    <span class="demo-score"><span>121.29</span></span>
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="nlp-scenario-item">
-        <div class="nlp-scenario-icon scenario-2"></div>
-        <div class="nlp-scenario-intro">
-            <div class="nlp-scenario-header">语音助手</div>
-            <div class="nlp-scenario-detail">用户客户身份认证，直播实名认证等场景，通过分词和词性标注，分析语音命令中的关键名词、动词、数量、时间，准确理解命令的含义，提高用户体验</div>
+</section>
+<section class="tech-section tech-demo">
+    <div class="container">
+        <h2>功能演示</h2>
+        <div class="demo-container">
+            <div>
+                <a class="refresh-demo">换一个实例</a>
+            </div>
+            <div class="clear-float demo-content">
+                <div class="demo-input"></div>
+                <div class="demo-result">
+                    <ul id="demo-options"></ul>
+                    <div class="demo-score">
+                        <small class="demo-score-desc">说明：该分值表明选项内容与文字的契合度数值接近于0，则契合度越好。</small>
+                        <div class="demo-score-detail"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>
+<section class="tech-section tech-feature">
+    <div class="container">
+        <h2>技术特色</h2>
+        <div class="feature-list clear-float">
+            <div class="feature-item shadow">
+                <div class="feature-icon"></div>
+                <div class="feature-desc">
+                    <h3>精准度高</h3>
+                    <p>基于超大规模的网页数据进行训练，使得模型具备较高的准确度</p>
+                </div>
+            </div>
+            <div class="feature-item shadow">
+                <div class="feature-icon"></div>
+                <div class="feature-desc">
+                    <h3>泛化能力强</h3>
+                    <p>基于词向量技术和深度学习技术，可以解决传统方法中的数据稀疏问题和维度灾难问题，模型泛化能力强，效果优于传统的基于统计的语言模型</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+</section>
+<section class="tech-section tech-scene">
+    <div class="container">
+        <h2>应用场景</h2>
+        <div class="scene-list clear-float">
+            <div class="scene-item shadow">
+                <div class="scene-icon"></div>
+                <div class="scene-desc">
+                    <h3>拼写纠错</h3>
+                    <p>在用户输入的query中经常出现拼写错误的情况，语言模型可以给出一个基于句子上下文概率最高的词对用户的输入进行纠错</p>
+                </div>
+            </div>
+            <div class="scene-item shadow">
+                <div class="scene-icon"></div>
+                <div class="scene-desc">
+                    <h3>对话系统</h3>
+                    <p>用于识别用户输入的句子是否符合语言表达习惯，便于后续用户需求识别</p>
+                </div>
+            </div>
+            <div class="scene-item shadow">
+                <div class="scene-icon"></div>
+                <div class="scene-desc">
+                    <h3>机器翻译</h3>
+                    <p>语言模型对翻译候选的打分可以作为一个重要的衡量指标</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="tech-section tech-case">
     <ul class="case-list">
         <li class="case-item active">
             <div class="container">
-                <h2>作为模型初始化参数应用于其他的模型中</h2>
-                <p>例如序列标注、标题党识别、图文匹配搜索等，用词向量作为模型的初始化参数，效果优于随机初始化参数</p>
+                <div class="case-icon"></div>
+                <h2>度秘聊天系统</h2>
+                <p>语言模型用于度秘聊天系统，识别用户输入的句子是否符合语言表达习惯，并引导输入错误的用户是否需要澄清自己的需求</p>
+            </div>
+        </li>
+        <li class="case-item">
+            <div class="container">
+                <div class="case-icon"></div>
+                <h2>百度知道</h2>
+                <p>语言模型应用于百度知道中识别用户的无意义问句</p>
+            </div>
+        </li>
+        <li class="case-item">
+            <div class="container">
+                <div class="case-icon"></div>
+                <h2>多模搜索</h2>
+                <p>语言模型应用于多模搜索中的语言长query主干改写，去除长query中冗余term</p>
             </div>
         </li>
     </ul>
+    <ul class="case-indicator">
+        <li class="active"><a>度秘聊天系统</a></li>
+        <li><a>百度知道</a></li>
+        <li><a>多模搜索</a></li>
+    </ul>
 </section>
+{%if $userInfo eq Null%}
 <section class="tech-section get-started">
     <div class="container">
         <h2>现在注册，即享免费试用</h2>
@@ -262,6 +335,7 @@
         </div>
     </div>
 </section>
+{%/if%}
 <section class="tech-section tech-guide">
     <div class="container">
         <h2>使用指南</h2>
@@ -276,10 +350,10 @@
         <div class="question-link clear-float">
             <h3>常见问题</h3>
             <ul>
-                <li><a>图片格式和分辨率有限制吗？</a></li>
-                <li><a>支持身份证等垂直类的文字识别吗？</a></li>
-                <li><a>支持文档扫描图片的文字识别码？</a></li>
-                <li><a>怎么提高文字识别的准确率和识别速度？</a></li>
+                <li><a>图片分辨率有什么要求？</a></li>
+                <li><a>图片大小是否有限制？</a></li>
+                <li><a>请求qps是否有限制？</a></li>
+                <li><a>低质量的色情图片能否正常识别？</a></li>
             </ul>
         </div>
     </div>
@@ -353,5 +427,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="/dist/js/technology/nlp-dr.bundle.js"></script></body>
+<script src="/dist/js/technology/nlp-dnnlm_cn.bundle.js"></script></body>
 </html>

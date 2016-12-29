@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="/dist/css/technology/bfr-compare.css"></head>
+<link rel="stylesheet" href="/dist/css/technology/nlp-word_embedding.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -194,105 +194,65 @@
 <div class="ai-platform page-content">
 <section class="tech-section tech-banner">
     <div class="container">
-        <h1>人脸对比</h1>
-        <p>文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
+        <h1>词向量计算</h1>
+        <p>文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容文案内容</p>
         <div>
             <a role="button" class="btn-primary media">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
         </div>
     </div>
 </section>
-<section class="tech-section tech-intro">
+<div class="nlp-function">
     <div class="container">
-        <h2>功能介绍</h2>
-        <p>通过提取人脸的特征，计算两张人脸的相似度，从而判断是否同一个人，并给出相似度评分<br>已知用户ID的情况下帮助确认是否为用户本人的检测，即1：1身份验证</p>
-        <div class="tech-intro-detail">
-            <div class="compare-group">
-                <div class="scan-line left"></div>
-                <div class="scan-line right"></div>
-                <div class="scan-result good"></div>
-            </div>
-            <div class="compare-group">
-                <div class="scan-line left"></div>
-                <div class="scan-line right"></div>
-                <div class="scan-result bad"></div>
-            </div>
+        <div class="nlp-function-title">功能介绍</div>
+        <div class="nlp-function-intro">
+            词向量计算是通过训练的方法，将语言词表中的词映射成一个长度固定的向量<br>
+            词表中所有的词向量构成一个向量空间，每一个词都是这个词向量空间中的一个点，利用这种方法，实现文本的可计算
+        </div>
+        <div class="nlp-function-pic">
+            <img src="../../../images/technology/nlp-dr/function-pic.png" >
         </div>
     </div>
-</section>
-<section class="tech-section tech-feature">
-    <div class="container">
-        <h2>技术特色</h2>
-        <div class="feature-list clear-float">
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>稳定可靠</h3>
-                    <p>依托百度深度学习实验室的技术实力，提供稳定、精确的大流量服务</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>识别精度高</h3>
-                    <p>人脸识别技术国际领先，识别准确率超过百分之九十九</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>活体检测技术</h3>
-                    <p>可抵御照片、视频等各类攻击，精确区分活体，安全可靠</p>
-                </div>
-            </div>
+</div>
+<div class="container">
+    <div class="nlp-feature-container">
+        <div class="nlp-feature-title">技术特色</div>
+        <div class="nlp-feature-item">
+            <div class="nlp-feature-icon feature-1"></div>
+            <div class="nlp-feature-name">粒度更灵活</div>
+            <div class="nlp-feature-info">分词输出混排和基本词两种粒度，用户可以根据具体应用场景选择对应粒度；词性标注结合了字模型与词模型的优势，能够进一步优化分词粒度，从而既保证了基本词汇的原子性，又保证了大粒度词汇，对领域新词、专有名词的识别尤其有效</div>
         </div>
     </div>
+</div>
+<hr class="nlp-section-border">
+<div class="container nlp-scenario">
+    <div class="nlp-scenario-title">应用场景</div>
+    <div class="nlp-scenario-item">
+        <div class="nlp-scenario-icon scenario-1"></div>
+        <div class="nlp-scenario-intro">
+            <div class="nlp-scenario-header">情感分析</div>
+            <div class="nlp-scenario-detail">输入的文本内容首先进行分词处理，然后通过词性标注识别带有感情色彩的关键词、辅助情感分析算法用户评论的极性，最终得到用户对事物的观点和褒贬分类</div>
+        </div>
+    </div>
+    <div class="nlp-scenario-item">
+        <div class="nlp-scenario-icon scenario-2"></div>
+        <div class="nlp-scenario-intro">
+            <div class="nlp-scenario-header">语音助手</div>
+            <div class="nlp-scenario-detail">用户客户身份认证，直播实名认证等场景，通过分词和词性标注，分析语音命令中的关键名词、动词、数量、时间，准确理解命令的含义，提高用户体验</div>
+        </div>
+    </div>
+</div>
 
-</section>
-<section class="tech-section tech-scene">
-    <div class="container">
-        <h2>应用场景</h2>
-        <div class="scene-list clear-float">
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>金融在线身份认证</h3>
-                    <p>为解决金融等高风险行业复杂的身份验证流程，通过自拍照和身份证照之间的人脸识别确认用户身份是否本人</p>
-                </div>
-            </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>酒店登入验证</h3>
-                    <p>入住酒店时，判断入住者是否为身份证持有人</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <section class="tech-section tech-case">
     <ul class="case-list">
         <li class="case-item active">
             <div class="container">
-                <div class="case-icon"></div>
-                <h2>泰康人寿</h2>
-                <p>百度钱包是中国领先的在线支付应用和服务平台<br>调用百度身份证OCR接口进行用户身份证识别，识别速度快，准确率高<br>减少了用户的输入操作，有效的提高了用户的体验</p>
+                <h2>作为模型初始化参数应用于其他的模型中</h2>
+                <p>例如序列标注、标题党识别、图文匹配搜索等，用词向量作为模型的初始化参数，效果优于随机初始化参数</p>
             </div>
         </li>
-        <li class="case-item">
-            <div class="container">
-                <div class="case-icon"></div>
-                <h2>百度钱包</h2>
-                <p>百度钱包是中国领先的在线支付应用和服务平台<br>调用百度身份证OCR接口进行用户身份证识别，识别速度快，准确率高<br>减少了用户的输入操作，有效的提高了用户的体验</p>
-            </div>
-        </li>
-    </ul>
-    <ul class="case-indicator">
-        <li class="active"><a>泰康人寿</a></li>
-        <li><a>百度钱包</a></li>
     </ul>
 </section>
-{%if $userInfo eq Null%}
 <section class="tech-section get-started">
     <div class="container">
         <h2>现在注册，即享免费试用</h2>
@@ -302,7 +262,6 @@
         </div>
     </div>
 </section>
-{%/if%}
 <section class="tech-section tech-guide">
     <div class="container">
         <h2>使用指南</h2>
@@ -317,10 +276,10 @@
         <div class="question-link clear-float">
             <h3>常见问题</h3>
             <ul>
-                <li><a>图片分辨率有什么要求？</a></li>
-                <li><a>图片大小是否有限制？</a></li>
-                <li><a>请求qps是否有限制？</a></li>
-                <li><a>低质量的色情图片能否正常识别？</a></li>
+                <li><a>图片格式和分辨率有限制吗？</a></li>
+                <li><a>支持身份证等垂直类的文字识别吗？</a></li>
+                <li><a>支持文档扫描图片的文字识别码？</a></li>
+                <li><a>怎么提高文字识别的准确率和识别速度？</a></li>
             </ul>
         </div>
     </div>
@@ -394,5 +353,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="/dist/js/technology/bfr-compare.bundle.js"></script></body>
+<script src="/dist/js/technology/nlp-word_embedding.bundle.js"></script></body>
 </html>

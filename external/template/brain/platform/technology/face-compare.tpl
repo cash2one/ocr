@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="/dist/css/technology/nlp-dnn.css"></head>
+<link rel="stylesheet" href="/dist/css/technology/face-compare.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -194,7 +194,7 @@
 <div class="ai-platform page-content">
 <section class="tech-section tech-banner">
     <div class="container">
-        <h1>中文DNN模型</h1>
+        <h1>人脸对比</h1>
         <p>文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
         <div>
             <a role="button" class="btn-primary media">获取API Key</a>
@@ -205,42 +205,17 @@
 <section class="tech-section tech-intro">
     <div class="container">
         <h2>功能介绍</h2>
-        <p>语言模型是通过计算给定词组成的句子的概率，从而判断所组成的句子是否符合客观语言表达习惯<br>
-            计算一个句子的概率对于自然语言处理任务而言意义重大，语言模型通常用于机器翻译、拼写纠错、语音识别、问答系统、词性标注、句法分析和信息检索等</p>
+        <p>通过提取人脸的特征，计算两张人脸的相似度，从而判断是否同一个人，并给出相似度评分<br>已知用户ID的情况下帮助确认是否为用户本人的检测，即1：1身份验证</p>
         <div class="tech-intro-detail">
-            <ul class="intro-demo">
-                <li class="bad">
-                    <span class="demo-text">新能源汽车动力电池项目正式<span class="demo-text-option">展开</span></span>
-                    <span class="demo-score bad"><span>59.01</span></span>
-                </li>
-                <li class="good">
-                    <span class="demo-text">新能源汽车动力电池项目正式<span class="demo-text-option">启动</span></span>
-                    <span class="demo-score"><span>34.59</span></span>
-                </li>
-                <li class="bad">
-                    <span class="demo-text">新能源汽车动力电池项目正式<span class="demo-text-option">起飞</span></span>
-                    <span class="demo-score"><span>121.29</span></span>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-demo">
-    <div class="container">
-        <h2>功能演示</h2>
-        <div class="demo-container">
-            <div>
-                <a class="refresh-demo">换一个实例</a>
+            <div class="compare-group">
+                <div class="scan-line left"></div>
+                <div class="scan-line right"></div>
+                <div class="scan-result good"></div>
             </div>
-            <div class="clear-float demo-content">
-                <div class="demo-input"></div>
-                <div class="demo-result">
-                    <ul id="demo-options"></ul>
-                    <div class="demo-score">
-                        <small class="demo-score-desc">说明：该分值表明选项内容与文字的契合度数值接近于0，则契合度越好。</small>
-                        <div class="demo-score-detail"></div>
-                    </div>
-                </div>
+            <div class="compare-group">
+                <div class="scan-line left"></div>
+                <div class="scan-line right"></div>
+                <div class="scan-result bad"></div>
             </div>
         </div>
     </div>
@@ -252,15 +227,22 @@
             <div class="feature-item shadow">
                 <div class="feature-icon"></div>
                 <div class="feature-desc">
-                    <h3>精准度高</h3>
-                    <p>基于超大规模的网页数据进行训练，使得模型具备较高的准确度</p>
+                    <h3>稳定可靠</h3>
+                    <p>依托百度深度学习实验室的技术实力，提供稳定、精确的大流量服务</p>
                 </div>
             </div>
             <div class="feature-item shadow">
                 <div class="feature-icon"></div>
                 <div class="feature-desc">
-                    <h3>泛化能力强</h3>
-                    <p>基于词向量技术和深度学习技术，可以解决传统方法中的数据稀疏问题和维度灾难问题，模型泛化能力强，效果优于传统的基于统计的语言模型</p>
+                    <h3>识别精度高</h3>
+                    <p>人脸识别技术国际领先，识别准确率超过百分之九十九</p>
+                </div>
+            </div>
+            <div class="feature-item shadow">
+                <div class="feature-icon"></div>
+                <div class="feature-desc">
+                    <h3>活体检测技术</h3>
+                    <p>可抵御照片、视频等各类攻击，精确区分活体，安全可靠</p>
                 </div>
             </div>
         </div>
@@ -274,22 +256,15 @@
             <div class="scene-item shadow">
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
-                    <h3>拼写纠错</h3>
-                    <p>在用户输入的query中经常出现拼写错误的情况，语言模型可以给出一个基于句子上下文概率最高的词对用户的输入进行纠错</p>
+                    <h3>金融在线身份认证</h3>
+                    <p>为解决金融等高风险行业复杂的身份验证流程，通过自拍照和身份证照之间的人脸识别确认用户身份是否本人</p>
                 </div>
             </div>
             <div class="scene-item shadow">
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
-                    <h3>对话系统</h3>
-                    <p>用于识别用户输入的句子是否符合语言表达习惯，便于后续用户需求识别</p>
-                </div>
-            </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>机器翻译</h3>
-                    <p>语言模型对翻译候选的打分可以作为一个重要的衡量指标</p>
+                    <h3>酒店登入验证</h3>
+                    <p>入住酒店时，判断入住者是否为身份证持有人</p>
                 </div>
             </div>
         </div>
@@ -300,29 +275,21 @@
         <li class="case-item active">
             <div class="container">
                 <div class="case-icon"></div>
-                <h2>度秘聊天系统</h2>
-                <p>语言模型用于度秘聊天系统，识别用户输入的句子是否符合语言表达习惯，并引导输入错误的用户是否需要澄清自己的需求</p>
+                <h2>泰康人寿</h2>
+                <p>百度钱包是中国领先的在线支付应用和服务平台<br>调用百度身份证OCR接口进行用户身份证识别，识别速度快，准确率高<br>减少了用户的输入操作，有效的提高了用户的体验</p>
             </div>
         </li>
         <li class="case-item">
             <div class="container">
                 <div class="case-icon"></div>
-                <h2>百度知道</h2>
-                <p>语言模型应用于百度知道中识别用户的无意义问句</p>
-            </div>
-        </li>
-        <li class="case-item">
-            <div class="container">
-                <div class="case-icon"></div>
-                <h2>多模搜索</h2>
-                <p>语言模型应用于多模搜索中的语言长query主干改写，去除长query中冗余term</p>
+                <h2>百度钱包</h2>
+                <p>百度钱包是中国领先的在线支付应用和服务平台<br>调用百度身份证OCR接口进行用户身份证识别，识别速度快，准确率高<br>减少了用户的输入操作，有效的提高了用户的体验</p>
             </div>
         </li>
     </ul>
     <ul class="case-indicator">
-        <li class="active"><a>度秘聊天系统</a></li>
-        <li><a>百度知道</a></li>
-        <li><a>多模搜索</a></li>
+        <li class="active"><a>泰康人寿</a></li>
+        <li><a>百度钱包</a></li>
     </ul>
 </section>
 {%if $userInfo eq Null%}
@@ -427,5 +394,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="/dist/js/technology/nlp-dnn.bundle.js"></script></body>
+<script src="/dist/js/technology/face-compare.bundle.js"></script></body>
 </html>
