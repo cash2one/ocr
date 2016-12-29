@@ -73,7 +73,7 @@ export default class DemoCanvas {
                     dfd.reject('/images/error/too-large.png');
                     return;
                 }
-                dfd.resolve(image);
+                dfd.resolve(res.data.image_data);
             },
             fail: function () {
                 dfd.reject('/images/error/not-found.png');
