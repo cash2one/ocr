@@ -243,7 +243,7 @@ header.header-nav .login > ul > li {
 header.header-nav .login > ul > li .sub-top-nav {
   display: none;
   position: absolute;
-  top: 51px;
+  top: 50px;
   left: 0;
   background-color: #14191e;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
@@ -404,7 +404,7 @@ header.header-nav .login > ul > li > a.console:hover {
   margin-top: 10px;
 }
 #tech-service #tech-nlp {
-  margin-top: -19px;
+  margin-top: -60px;
 }
 #tech-service #tech-speech .tech-title-icon {
   background-image: url('../../../images/template.png');

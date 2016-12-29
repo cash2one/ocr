@@ -22,7 +22,7 @@
         </div>
         <nav class="top-nav">
             <ul>
-                <li><a>首页</a></li>
+                <li><a href="/">首页</a></li>
                 <li>
                     <a>技术服务</a>
                     <ul class="sub-top-nav" id="tech-service">
