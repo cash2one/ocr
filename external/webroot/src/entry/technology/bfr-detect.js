@@ -173,7 +173,7 @@ $(document).ready(function () {
             }
         },
         glasses: {
-            name: '表情',
+            name: '眼镜',
             transform: value => {
                 return {
                     0: '无眼镜',
@@ -224,7 +224,7 @@ $(document).ready(function () {
                         .toggleClass('error-no-result', !res.data.result_num);
                     $('#demo-result .canvas-container').empty();
                     isScanning = false;
-                    return false;
+                    return isScanning;
                 }
                 $('#demo-result .canvas-container').toggleClass('has-result', res.data.result_num >= 1);
 

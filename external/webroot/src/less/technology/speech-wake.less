@@ -4,7 +4,7 @@
 @banner: url('../../../images/technology/speech-wake/banner.png');
 @icons: url('../../../images/technology/speech-wake/icons.png');
 @intro-bg: url('../../../images/technology/speech-wake/intro-bg.png');
-@intro: none;
+@intro: url('../../../images/technology/speech-wake/intro.png');
 @case-icons: url('../../../images/technology/speech-wake/case-icons.png');
 @demo-icons: url('../../../images/technology/speech-wake/demo-icons.png');
 
@@ -13,6 +13,11 @@
 .tech-section {
   &.tech-intro{
     height: 400px;
+
+    .tech-intro-detail {
+      height: 350px;
+      .icon(@intro, center, center);
+    }
   }
 
   &.tech-demo{

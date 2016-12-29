@@ -502,6 +502,14 @@
 .tech-section.tech-intro {
   height: 400px;
 }
+.tech-section.tech-intro .tech-intro-detail {
+  height: 350px;
+  background-image: url('../../../images/technology/speech-wake/intro.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position-x: center;
+  background-position-y: center;
+}
 .tech-section.tech-demo h3 {
   color: #333;
   font-size: 18px;

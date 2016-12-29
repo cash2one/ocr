@@ -123,7 +123,7 @@ $(document).ready(function () {
             words: words,
             success: function (res) {
                 if (res.errno === 1 && res.msg === 'fail') {
-                    console.error('接口出错，请稍候再试！');
+                    new AlertModal('接口出错，请稍候再试！');
                     return false;
                 }
                 $('#demo-wake-word').val('');

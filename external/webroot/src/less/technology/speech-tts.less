@@ -4,7 +4,7 @@
 @banner: url('../../../images/technology/speech-tts/banner.png');
 @icons: url('../../../images/technology/speech-tts/icons.png');
 @intro-bg: url('../../../images/technology/speech-tts/intro-bg.png');
-@intro: none;
+@intro: url('../../../images/technology/speech-tts/intro.png');
 @case-icons: url('../../../images/technology/speech-tts/case-icons.png');
 @demo-icons: url('../../../images/technology/speech-tts/demo-icons.png');
 
@@ -13,6 +13,11 @@
 .tech-section {
   &.tech-intro{
     height: 400px;
+
+    .tech-intro-detail {
+      height: 340px;
+      .icon(@intro, center, center);
+    }
   }
 
   &.tech-demo{
