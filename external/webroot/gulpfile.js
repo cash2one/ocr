@@ -163,10 +163,11 @@ gulp.task('html_watch', function () {
                     .pipe(
                         rename({
                             dirname: dirname,
-                            basename: basename
+                            basename: basename,
+                            extname: ".tpl"
                         })
                     )
-                    .pipe(gulp.dest('./dist/html'));
+                    .pipe(gulp.dest('../template/brain/platform'));
             });
 
             eventStream.merge(tasks).on('end', function () {
