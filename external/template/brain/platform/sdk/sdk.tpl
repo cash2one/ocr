@@ -34,17 +34,14 @@
                                 <span>语音识别</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a>离在线融合识别</a></li>
-                                <li><a>长语音识别</a></li>
-                                <li><a>远场语音识别</a></li>
-                                <li><a>语音唤醒</a></li>
-                                <li><a>语义指令解析</a></li>
+                                <li><a href="/tech/speech-asr">语音识别</a></li>
+                                <li><a href="/tech/speech-wake">语音唤醒</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>语音合成</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a>情感合成</a></li>
+                                <li><a href="/tech/speech-tts">情感合成</a></li>
                             </ul>
                         </li>
                         <li id="tech-image">
@@ -55,23 +52,23 @@
                                 <span>OCR文字识别</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a>身份证识别</a></li>
-                                <li><a>银行卡识别</a></li>
-                                <li><a>通用印刷文字识别</a></li>
+                                <li><a href="/tech/ocr-idcard">身份证识别</a></li>
+                                <li><a href="/tech/ocr-bankcard">银行卡识别</a></li>
+                                <li><a href="/tech/ocr-general">通用印刷文字识别</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>人脸识别</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a>人脸识别</a></li>
-                                <li><a>人脸对比验证</a></li>
-                                <li><a>人脸查找验证</a></li>
+                                <li><a href="/tech/bfr-detect">人脸检测</a></li>
+                                <li><a href="/tech/bfr-compare">人脸对比</a></li>
+                                <li><a href="/tech/bfr-search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>色情识别</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a>色情识别</a></li>
+                                <li><a href="/tech/antiporn">色情识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -89,15 +86,15 @@
                                 <span>短文本级</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a>DNN语言模型</a></li>
-                                <li><a>短文本相似度</a></li>
+                                <li><a href="/tech/nlp-dnn">中文DNN模型</a></li>
+                                <li><a href="/tech/nlp-simnet">短文本相似度</a></li>
                                 <li><a>情感观点挖掘</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>机器翻译</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a>机器翻译平台</a></li>
+                                <li><a href="http://api.fanyi.baidu.com/api/trans/product/index">机器翻译平台</a></li>
                             </ul>
                         </li>
                         <li id="tech-user-profile">
@@ -140,18 +137,18 @@
                     </ul>
                 </li>
                 <li>
-                    <a>文档中心</a>
+                    <a href="/docs">文档中心</a>
                 </li>
                 <li>
-                    <a>SDK下载</a>
+                    <a href="/sdk">SDK下载</a>
                 </li>
                 <li>
                     <a>帮助与支持</a>
                     <ul class="sub-top-nav">
-                        <li><a>教学视频</a></li>
-                        <li><a>常见问题</a></li>
-                        <li><a>新闻中心</a></li>
-                        <li><a>关于我们</a></li>
+                        <li><a href="/support/video">教学视频</a></li>
+                        <li><a href="/support/faq">常见问题</a></li>
+                        <li><a href="/support/news">新闻中心</a></li>
+                        <li><a href="/support/about">关于我们</a></li>
                     </ul>
                 </li>
             </ul>
@@ -420,19 +417,17 @@
             <nav class="resource">
                 <h3>资源</h3>
                 <ul>
-                    <li><a>技术支持</a></li>
-                    <li><a>SDK下载</a></li>
-                    <li><a>新手指南</a></li>
-                    <li><a>教学视频</a></li>
+                    <li><a href="/docs">技术支持</a></li>
+                    <li><a href="/sdk">SDK下载</a></li>
                 </ul>
             </nav>
             <nav class="support">
-                <h3>支持</h3>
+                <h3>支持与帮助</h3>
                 <ul>
-                    <li><a>常见问题</a></li>
-                    <li><a>新闻中心</a></li>
-                    <li><a>关于我们</a></li>
-                    <li><a>联系我们</a></li>
+                    <li><a href="/support/video">教学视频</a></li>
+                    <li><a href="/support/faq">常见问题</a></li>
+                    <li><a href="/support/news">新闻中心</a></li>
+                    <li><a href="/support/about">关于我们</a></li>
                 </ul>
             </nav>
             <nav class="focus">
