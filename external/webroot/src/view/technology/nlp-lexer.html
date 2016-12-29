@@ -16,7 +16,7 @@
         该服务能够识别出文本串中的基本词汇（分词），对这些词汇进行重组、标注组合后词汇的词性，并进一步识别出命名实体<br>
         百度词法分析的算法效果大幅领先已公开的主流中文词法分析模型<br>
     </div>
-    <div class="container nlp-function-item-container">
+    <div class="nlp-function-item-container">
         <div class="nlp-function-item">
             <div class="nlp-function-icon function-1"></div>
             <div class="nlp-function-name">中文分词</div>
@@ -31,6 +31,29 @@
             <div class="nlp-function-icon function-3"></div>
             <div class="nlp-function-name">专有名词</div>
             <div class="nlp-function-info">命名实体识别（Named Entity Recognition，简称NER），又称作“专名识别”，是指识别自然语言文本中具有特定意义的实体，主要包括人名、地名、机构名、时间日期，等等</div>
+        </div>
+    </div>
+</div>
+
+<div class="lexer-demo">
+    <div class="lexer-demo-switch" id="demo-switch">
+        <div class="lexer-demo-switch-icon"></div>
+        <div class="lexer-demo-switch-txt">换一个实例</div>
+    </div>
+    <div class="lexer-demo-case" id="demo-case"></div>
+    <div class="lexer-demo-tab" id="lexer-demo-tab">
+        <div class="lexer-demo-tab-label label-selected" data-tab-for="word-type">词性识别</div>
+        <div class="lexer-demo-tab-label" data-tab-for="term">专业名词</div>
+    </div>
+    <div class="lexer-demo-result">
+        <div class="lexer-demo-tab-content tab-show" data-tab-id="word-type">
+            <div class="lexer-demo-segmentation" id="segmentation">
+            </div>
+            <hr class="lexer-demo-split">
+            <div class="lexer-demo-word-type" id="word-type">
+            </div>
+        </div>
+        <div class="lexer-demo-tab-content lexer-demo-term-tab" data-tab-id="term">
         </div>
     </div>
 </div>

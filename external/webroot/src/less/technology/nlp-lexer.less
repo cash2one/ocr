@@ -197,7 +197,9 @@
     }
 
     &-item-container {
-        margin: -@function-padding;
+        width: 1180px;
+        padding: 0 10px;
+        margin: 0 auto;
     }
 
     // 功能介绍项
@@ -234,7 +236,7 @@
 
     // 功能
     &-intro {
-        height: 140px;
+        height: 110px;
         font-size: @font-size-2;
         line-height: 25px;
     }
@@ -242,6 +244,144 @@
     // 介绍
     &-info {
         font-size: @font-size-2;
-        line-height: 22px;
+        line-height: 20px;
     }
+}
+
+.lexer-demo {
+    width: 900px;
+    margin: 0 auto;
+
+    // 样例文本
+    &-case {
+        min-height: 50px;
+        padding: 20px;
+        border: 1px solid gray;
+    }
+
+    // 分析结果
+    &-result {
+        padding: 0 20px;
+        border: 1px solid gray;
+        background-color: #dcdcdc;
+    }
+
+    // 分结果
+    &-segmentation,
+    &-word-type {
+        box-sizing: border-box;
+    }
+
+    // 词块
+    &-block {
+        display: inline-block;
+        padding: 8px;
+        margin: 8px 5px;
+        vertical-align: top;
+        border: 1px solid blue;
+        font-size: 14px;
+
+        &.selected {
+            background-color: blue;
+            color: #fff;
+        }
+    }
+
+    // 分割线
+    &-split {
+        margin: 0;
+    }
+
+    &-tab {
+        margin: 25px 0;
+        font-size: 0;
+        text-align: center;
+
+        &-label {
+            display: inline-block;
+            padding: 10px 0;
+            width: 100px;
+            border: 1px solid blue;
+            vertical-align: top;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+
+            &.label-selected {
+                background-color: blue;
+                color: #fff;
+            }
+        }
+
+        &-content {
+            display: none;
+            font-size: 0;
+
+            &.tab-show {
+                display: block;
+            }
+        }
+    }
+
+    // 专业名词tab，两侧补偿内padding
+    &-term-tab {
+        margin: 0 -15px;
+    }
+
+    // 术语容器
+    &-term {
+        display: inline-block;
+        width: 50%;
+        padding: 10px;
+        height: 120px;
+        box-sizing: border-box;
+        vertical-align: top;
+        font-size: 0;
+
+        &-name,
+        &-name-eng {
+            padding: 5px 0;
+            text-align: center;
+        }
+
+        &-name {
+            margin-top: 25px;
+        }
+    }
+
+    &-left-side,
+    &-term-box {
+        display: inline-block;
+        box-sizing: border-box;
+        height: 100%;
+        vertical-align: top;
+    }
+
+    // 术语容器左侧
+    &-left-side {
+        width: 30%;
+        font-size: 14px;
+        border: 1px solid blue;
+        background-color: cornflowerblue;
+    }
+
+    // 属于block容器
+    &-term-box {
+        width: 70%;
+        border: 1px solid blue;
+        border-left: 0;
+        overflow: auto;
+    }
+
+    // demo切换按键
+    &-switch {
+        padding: 10px 0;
+        color: blue;
+        cursor: pointer;
+    }
+}
+
+// 词型
+.word-type {
+    cursor: pointer;
 }

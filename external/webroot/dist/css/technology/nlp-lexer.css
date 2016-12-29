@@ -632,7 +632,9 @@
   font-size: 30px;
 }
 .nlp-function-item-container {
-  margin: -40px;
+  width: 1180px;
+  padding: 0 10px;
+  margin: 0 auto;
 }
 .nlp-function-item {
   display: inline-block;
@@ -666,11 +668,117 @@
   height: 130px;
 }
 .nlp-function-intro {
-  height: 140px;
+  height: 110px;
   font-size: 14px;
   line-height: 25px;
 }
 .nlp-function-info {
   font-size: 14px;
-  line-height: 22px;
+  line-height: 20px;
+}
+.lexer-demo {
+  width: 900px;
+  margin: 0 auto;
+}
+.lexer-demo-case {
+  min-height: 50px;
+  padding: 20px;
+  border: 1px solid gray;
+}
+.lexer-demo-result {
+  padding: 0 20px;
+  border: 1px solid gray;
+  background-color: #dcdcdc;
+}
+.lexer-demo-segmentation,
+.lexer-demo-word-type {
+  box-sizing: border-box;
+}
+.lexer-demo-block {
+  display: inline-block;
+  padding: 8px;
+  margin: 8px 5px;
+  vertical-align: top;
+  border: 1px solid blue;
+  font-size: 14px;
+}
+.lexer-demo-block.selected {
+  background-color: blue;
+  color: #fff;
+}
+.lexer-demo-split {
+  margin: 0;
+}
+.lexer-demo-tab {
+  margin: 25px 0;
+  font-size: 0;
+  text-align: center;
+}
+.lexer-demo-tab-label {
+  display: inline-block;
+  padding: 10px 0;
+  width: 100px;
+  border: 1px solid blue;
+  vertical-align: top;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+.lexer-demo-tab-label.label-selected {
+  background-color: blue;
+  color: #fff;
+}
+.lexer-demo-tab-content {
+  display: none;
+  font-size: 0;
+}
+.lexer-demo-tab-content.tab-show {
+  display: block;
+}
+.lexer-demo-term-tab {
+  margin: 0 -15px;
+}
+.lexer-demo-term {
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
+  height: 120px;
+  box-sizing: border-box;
+  vertical-align: top;
+  font-size: 0;
+}
+.lexer-demo-term-name,
+.lexer-demo-term-name-eng {
+  padding: 5px 0;
+  text-align: center;
+}
+.lexer-demo-term-name {
+  margin-top: 25px;
+}
+.lexer-demo-left-side,
+.lexer-demo-term-box {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 100%;
+  vertical-align: top;
+}
+.lexer-demo-left-side {
+  width: 30%;
+  font-size: 14px;
+  border: 1px solid blue;
+  background-color: cornflowerblue;
+}
+.lexer-demo-term-box {
+  width: 70%;
+  border: 1px solid blue;
+  border-left: 0;
+  overflow: auto;
+}
+.lexer-demo-switch {
+  padding: 10px 0;
+  color: blue;
+  cursor: pointer;
+}
+.word-type {
+  cursor: pointer;
 }

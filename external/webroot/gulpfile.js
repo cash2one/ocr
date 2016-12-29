@@ -36,13 +36,14 @@ gulp.task('jsCompile', function () {
                 .pipe(source(entry))
                 .pipe(
                     rename(function (path) {
-                        path.dirname = path.dirname.replace(/src\\entry/g, '');
+                        path.dirname = path.dirname.replace(/src(\\|\/)entry/g, '');
                         path.extname = '.bundle.js';
                     })
                 )
                 .pipe(buffer())
                 .pipe(uglify({
                     preserveComments: 'license',
+                    /* eslint-disable */
                     compress: {
                         sequences: true,  // join consecutive statemets with the “comma operator”
                         properties: true,  // optimize property access: a["foo"] → a.foo
@@ -63,6 +64,7 @@ gulp.task('jsCompile', function () {
                         side_effects: true,  // drop side-effect-free statements
                         warnings: false   // warn about potentially dangerous optimizations/code
                     }
+                    /* eslint-enable */
                 }))
                 .on('error', gutil.log)
                 .on('end', function () {
@@ -108,7 +110,7 @@ gulp.task('jsCompile_watch', function () {
                     .pipe(source(entry))
                     .pipe(
                         rename(function (path) {
-                            path.dirname = path.dirname.replace(/src\\entry/g, '');
+                            path.dirname = path.dirname.replace(/src(\\|\/)entry/g, '');
                             path.extname = '.bundle.js';
                         })
                     )
