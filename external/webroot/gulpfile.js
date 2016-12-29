@@ -37,7 +37,7 @@ gulp.task('jsCompile', function () {
                 .pipe(
                     rename(function (path) {
                         path.dirname = path.dirname.replace(/src\\entry/g, '');
-                        path.extname = ".bundle.js"
+                        path.extname = '.bundle.js';
                     })
                 )
                 .pipe(buffer())
@@ -109,7 +109,7 @@ gulp.task('jsCompile_watch', function () {
                     .pipe(
                         rename(function (path) {
                             path.dirname = path.dirname.replace(/src\\entry/g, '');
-                            path.extname = ".bundle.js"
+                            path.extname = '.bundle.js';
                         })
                     )
                     .pipe(buffer())
@@ -131,7 +131,7 @@ gulp.task('less_watch', function () {
             .pipe(less())
             .pipe(
                 rename(function (path) {
-                    path.extname = '.css'
+                    path.extname = '.css';
                 })
             )
             .pipe(gulp.dest('./dist/css'));
