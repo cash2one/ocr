@@ -122,8 +122,11 @@
             border-top: 1px solid fadeOut(@black, 95%);
           }
 
-          &:nth-child(1) .service-icon {
-            .icon (url('../../images/home/service.png'), -10px, -15px);
+          &:nth-child(1) {
+            height: 250px;
+            .service-icon {
+              .icon (url('../../images/home/service.png'), -10px, -15px);
+            }
           }
 
           &:nth-child(2) .service-icon {
@@ -151,6 +154,7 @@
           position: relative;
           background-color: @white;
           z-index: 0;
+          height: 100%;
 
           &:hover {
             z-index: 9;
