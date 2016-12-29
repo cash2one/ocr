@@ -34,14 +34,14 @@
                                 <span>语音识别</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/speech_asr">语音识别</a></li>
-                                <li><a href="/tech/speech_wake">语音唤醒</a></li>
+                                <li><a href="/tech/speech/asr">语音识别</a></li>
+                                <li><a href="/tech/speech/wake">语音唤醒</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>语音合成</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/speech_tts">语音合成</a></li>
+                                <li><a href="/tech/speech/tts">语音合成</a></li>
                             </ul>
                         </li>
                         <li id="tech-image">
@@ -52,17 +52,17 @@
                                 <span>OCR文字识别</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/ocr_idcard">身份证识别</a></li>
-                                <li><a href="/tech/ocr_bankcard">银行卡识别</a></li>
-                                <li><a href="/tech/ocr_general">通用印刷文字识别</a></li>
+                                <li><a href="/tech/ocr/idcard">身份证识别</a></li>
+                                <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
+                                <li><a href="/tech/ocr/general">通用印刷文字识别</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>人脸识别</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/bfr_detect">人脸检测</a></li>
-                                <li><a href="/tech/bfr_compare">人脸对比</a></li>
-                                <li><a href="/tech/bfr_search">人脸查找</a></li>
+                                <li><a href="/tech/face/detect">人脸检测</a></li>
+                                <li><a href="/tech/face/compare">人脸对比</a></li>
+                                <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>色情识别</span>
@@ -79,16 +79,16 @@
                                 <span>词汇级</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a>词汇级服务</a></li>
-                                <li><a>词向量分析</a></li>
+                                <li><a href="/tech/nlp/lexical">词法分析</a></li>
+                                <li><a href="/tech/nlp/word_embedding">中文词向量表示</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>短文本级</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/nlp_dnn">中文DNN模型</a></li>
-                                <li><a href="/tech/nlp_simnet">短文本相似度</a></li>
-                                <li><a>情感观点挖掘</a></li>
+                                <li><a href="/tech/nlp/dnnlm_cn">中文DNN模型</a></li>
+                                <li><a href="/tech/nlp/simnet">短文本相似度</a></li>
+                                <li><a href="/tech/nlp/comment_tag">评论观点抽取</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>机器翻译</span>
