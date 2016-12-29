@@ -131,7 +131,7 @@ gulp.task('less_watch', function () {
             .pipe(less())
             .pipe(
                 rename(function (path) {
-                    path.extname = ".css"
+                    path.extname = '.css'
                 })
             )
             .pipe(gulp.dest('./dist/css'));
@@ -161,10 +161,11 @@ gulp.task('html_watch', function () {
                     .pipe(
                         rename({
                             dirname: dirname,
-                            basename: basename
+                            basename: basename,
+                            extname: '.tpl'
                         })
                     )
-                    .pipe(gulp.dest('./dist/html'));
+                    .pipe(gulp.dest('../template/brain/platform'));
             });
 
             eventStream.merge(tasks).on('end', function () {
