@@ -1,0 +1,214 @@
+@import '../common/helper.less';
+@import '../common/global.less';
+@import '../common/tech-page.less';
+
+@banner: url('../../../images/technology/nlp-comment/comment-banner.png');
+@icons: url('../../../images/technology/nlp-comment/icon.png');
+@intro-bg: none;
+@case-icons: url('../../../images/technology/nlp-comment/case-icons.png');
+
+// 前缀
+@prefix: nlp;
+
+//颜色
+@dark-gray: #828281;
+
+// 功能介绍部分
+.@{prefix}-function {
+    height: 440px;
+    background: url(../../../images/technology/nlp-dr/function-bg.png) center;
+    text-align: center;
+    color: @white;
+    font-size: 0;
+
+    // 功能介绍4个字
+    &-title {
+        padding: 30px 0 20px;
+        font-size: 30px;
+    }
+
+    &-intro{
+        width: 870px;
+        font-size: @font-size-2;
+        line-height: 25px;
+        margin: 0 auto;
+    }
+
+    &-pic{
+        margin: 5px auto;
+    }
+}
+// 每个特色介绍间的距离
+@feature-padding: 100px;
+@scenario-padding: 30px;
+@function-padding: 40px;
+
+.@{prefix}-feature {
+    &-title {
+        padding: 30px 0;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    // 容器
+    &-container {
+        margin: 0 -@feature-padding / 2;
+        font-size: 0;
+        text-align: center;
+    }
+
+    // 特色条目
+    &-item {
+        display: inline-block;
+        width: 33.333%;
+        box-sizing: border-box;
+        vertical-align: top;
+        padding: 0 @feature-padding / 2;
+    }
+
+    // 特色图标
+    &-icon {
+        display: block;
+        background: url("../../../images/technology/nlp-dr/icon.png") no-repeat center;
+        background-size: 95px 134px;
+        margin: 0 auto;
+
+        &.feature-1 {
+            .feature-sprite(-5px, -5px, 80px, 80px);
+        }
+    }
+
+    // 特色名称
+    &-name {
+        padding: 15px 0;
+        text-align: center;
+        font-size: @font-size-4;
+    }
+
+    // 特色信息
+    &-info {
+        height: 150px;
+        padding: 0 5px;
+        font-size: @font-size-2;
+        line-height: 25px;
+        color: @dark-gray;
+        text-align: left;
+    }
+}
+
+// 分割线
+.@{prefix}-section-border {
+    border: 1px solid #efefef;
+}
+
+
+// 特色图标sprite
+.feature-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    width: @width;
+    height: @height;
+    background-position: @x @y;
+}
+
+// 使用场景图标sprite mixin
+.scenario-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    width: @width;
+    height: @height;
+    background-position: @x @y;
+}
+
+.function-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+}
+// 使用场景
+.@{prefix}-scenario {
+    font-size: 0;
+    text-align: center;
+
+    // 使用场景title
+    &-title {
+        padding: 30px 0;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    // 使用场景条目
+    &-item {
+        display: inline-block;
+        width: 33.333%;
+        padding: 0 @scenario-padding / 2;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        vertical-align: top;
+        font-size: 0;
+    }
+
+    // 使用场景标题
+    &-header {
+        font-size: @font-size-4;
+    }
+
+    &-icon,
+    &-intro {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    // 使用场景图标
+    &-icon {
+        width: 25%;
+        display: inline-block;
+        background: url("../../../images/technology/nlp-dr/icon.png") no-repeat;
+        background-size: 95px 134px;
+
+        &.scenario-1 {
+            .scenario-sprite(-5px, -89px, 40px, 40px);
+        }
+
+        &.scenario-2 {
+            .scenario-sprite(-50px, -89px, 40px, 40px);
+        }
+
+    }
+
+    // 使用场景介绍信息容器
+    &-intro {
+        width: 85%;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+
+    &-header {
+        padding: 10px 0;
+        font-size: @font-size-4;
+        text-align: left;
+    }
+
+    // 使用场景介绍信息详情
+    &-detail {
+        height: 120px;
+        font-size: @font-size-2;
+        line-height: 25px;
+        color: @dark-gray;
+        text-align: left;
+    }
+}
+
+.tech-section{
+    &.tech-case {
+        .case-item .case-icon {
+            background-size: 800px/2 270px/2;
+        }
+        .case-item:nth-child(1) {
+            .icon(url('../../../images/technology/nlp-dr/case-1.png'), center, center);
+
+        }
+
+        .case-list{
+            & > li{
+                padding-top: 145px;
+            }
+        }
+    }
+}

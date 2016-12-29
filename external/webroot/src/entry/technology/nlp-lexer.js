@@ -2,7 +2,6 @@
  * @file 词法分析demo
  * @author Franck Chen(chenfan02@baidu.com)
  */
-
 import $ from 'jquery';
 
 /* eslint-disable */
@@ -296,3 +295,13 @@ $demoSwitch.on('click', () => {
 
 // 首屏
 paintDemo(currentCaseNum);
+
+// case点击效果
+$('.case-indicator > li').click(function () {
+    $('.case-indicator > li').each((i, e) => {
+        $(e).toggleClass('active', i === $(this).index());
+    });
+    $('.case-item').each((i, e) => {
+        $(e).toggleClass('active', i === $(this).index());
+    });
+});
