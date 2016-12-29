@@ -183,7 +183,7 @@
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li><a href="https://login.bcetest.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">登出</a></li>
+                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">登出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -236,7 +236,7 @@
                             <li>
                                 <h4>语音合成</h4>
                                 <ul>
-                                    <li><a href="/tech/speech_tts">情感合成</a></li>
+                                    <li><a href="/tech/speech_tts">语音合成</a></li>
                                 </ul>
                             </li>
                         </ul>
