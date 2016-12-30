@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "人机大战再升级，百度大脑要参加《最强大脑》和人类正面对决",
+    "content": "第四季将兑现这一承诺，与百度达成深入合作，第四季将兑现这一承诺，与百度达成深入合作",
+    "poster": "/static/images/news-top.png",
+    "link": "http://tech.huanqiu.com/news/2016-12/9828799.html",
+    "active": true,
+    "source": "环球网"
+  },
+  {
+    "id": 2,
+    "title": "百度掀“人机大战”背后：人工智能提速，应构建研发应用闭环",
+    "content": "第四季将兑现这一承诺，与百度达成深入合作，第四季将兑现这一承诺，与百度达成深入合作",
+    "poster": "",
+    "link": "http://finance.sina.com.cn/roll/2016-12-18/doc-ifxytkcf7999032.shtml",
+    "active": false,
+    "source": "新浪财经"
+  },
+  {
+    "id": 3,
+    "title": "《最强大脑4》南京启动中国版“人机对战”引期待",
+    "content": "第四季将兑现这一承诺，与百度达成深入合作，第四季将兑现这一承诺，与百度达成深入合作",
+    "poster": "",
+    "link": "http://tj.people.com.cn/n2/2016/1219/c375366-29482438.html",
+    "active": false,
+    "source": "人民网"
+  },
+  {
+    "id": 4,
+    "title": "百度出战最强大脑，最强AI挑战最强人类智能",
+    "content": "第四季将兑现这一承诺，与百度达成深入合作，第四季将兑现这一承诺，与百度达成深入合作",
+    "poster": "/static/images/gallery/400x175.png",
+    "link": "http://news.ynet.com/3.1/1612/17/12147281.html",
+    "active": false,
+    "source": "北青网"
+  },
+  {
+    "id": 5,
+    "title": "《最强大脑4》人工智能“小度”曝光",
+    "content": "第四季将兑现这一承诺，与百度达成深入合作，第四季将兑现这一承诺，与百度达成深入合作",
+    "poster": "",
+    "link": "http://ent.ifeng.com/a/20161219/42786958_0.shtml",
+    "active": false,
+    "source": "凤凰网"
+  },
+  {
+    "id": 6,
+    "title": "百度携小度出战最强大脑，人工智能对战人类智慧",
+    "content": "第四季将兑现这一承诺，与百度达成深入合作，第四季将兑现这一承诺，与百度达成深入合作",
+    "poster": "",
+    "link": "http://it.gmw.cn/2016-12/17/content_23283571.htm",
+    "active": false,
+    "source": "光明网"
+  }
+]

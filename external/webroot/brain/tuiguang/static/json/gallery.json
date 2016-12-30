@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "url": "/static/images/cartoon/1.png"
+  },
+  {
+    "id": 2,
+    "url": "/static/images/cartoon/2.jpg"
+  },
+  {
+    "id": 3,
+    "url": "/static/images/cartoon/3.jpg"
+  },
+  {
+    "id": 4,
+    "url": "/static/images/cartoon/4.jpg"
+  },
+  {
+    "id": 5,
+    "url": "/static/images/cartoon/5.jpg"
+  },
+  {
+    "id": 6,
+    "url": "/static/images/cartoon/6.jpg"
+  }
+]
