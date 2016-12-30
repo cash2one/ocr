@@ -6,20 +6,18 @@
  **************************************************************************/
  
 /**
- * @file Home.php
+ * @file BigData.php
  * @author huanglinhao(huanglinhao@baidu.com)
- * @date 2016/06/13 16:06:59
+ * @date 2016/06/21 18:57:37
  * @brief 
  *  
  **/
-
-class Action_Home extends Ap_Action_Abstract {
+class Action_Video extends Ap_Action_Abstract {
 
     public function execute() {
-        $arrPageInfo['messagelist'] = Bd_Conf::getAppConf('messagelist');
         Brain_Output::htmlOutput(
             $arrPageInfo, 
-            'brain/platform/home.tpl'
+            'brain/platform/support/video.tpl'
         );
     }
 }
