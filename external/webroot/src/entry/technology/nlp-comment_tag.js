@@ -11,6 +11,7 @@ const ATTITUDE = {
     NONE: 2
 };
 
+/* eslint-disable */
 // 原始物料
 const sentencesGroup = [
     [
@@ -26,7 +27,40 @@ const sentencesGroup = [
         '服务态度不好，交通不是太方便，其他还好'
     ],
     [
-
+        '真的非常好，是冲着评论去的，味道非常好，态度也好',
+        '不错哦#烧春鸡# 很不错，环境也不错啊！服务也很好，小妹也漂亮',
+        '价格实惠 口感不错 品质出众',
+        '当地的朋友带去玩的 环境不太好 但是烧烤很好吃 非常入味 虾也很新鲜',
+        '味道很不错，很喜欢吃。服务也很好感觉很亲切，吃的很舒服，谢谢',
+        '奶茶很好喝，炸鸡也很好吃，下次还会买',
+        '团购划算 优惠活动多 店面不错',
+        '菜量很足，味道很辣，也很美味，环境一般了。服务态度很好。',
+        '性价比非常高，东西也好吃，环境非常好',
+        '位置很好找，正好修地铁，车很少，还比较安静，周围的吃饭的地方很多，下楼就要，环境不错，卫生'
+    ],
+    [
+        '服务很好环境很好，全身肥肉也得到了锻炼，没白来',
+        '环境和服务都不错，挺赞的',
+        '环境不错，进去就有暖气，公共浴室，房间是日式风格，叫的11号技师，服务确实不错，95后妹子，能说会道，人美技术好，挺不错的体验',
+        '从网上看到我还不太相信，就抱着试试态度，因为腰和脖子疼实在受不了了就去这家店看看，做过以后真心的不错，医生的手法特别好，力度到位，按的特别舒服，现在好多了，身上轻松多了，舒服多了。疼痛也缓解了，所以有身体疼痛的一定去这家店看看，真心不错，所有大家要来看看试试，嘿嘿嘿嘿',
+        '还没学完呢，教练的水平还可以，就是太难预约了，其他的评价我会继续更新的。',
+        '娇娇服务真好！环境一般',
+        '服务不错！环境不错！感觉棒棒哒！真心给力啊！一百个赞啊！',
+        '20号技师精油推背力道很足，手法专业。套餐里的整脊时间很短，十来分钟',
+        '小美女服务不错，卫生干净，温馨，手法消魂，狼友们值得得一去的好去处………………………………',
+        '技师91服务很好！认真按摩'
+    ],
+    [
+        '如果要提油耗日系车当然低，这是他们的优势。车身轻安全性能低是他们的死穴！牧马人的内饰谈不上精致，但是相对给男人来开显得粗狂大气，动力足！户外撒野绝对给力！普拉高速不稳定，属于城市SUV如果越野就坑爹了。。综合性能比较，牧马人性价比高。',
+        '个人觉得福克斯好，外观漂亮年轻，动力和操控性都不错',
+        '空间挺大的   油耗也很低   我磨合期7.4L/KM  相信过了磨合期会更低',
+        '个人感觉骊威不如POLO，对车了解的不多，买车的话可以推荐你参加石家庄乐 购汽车网的团购，价格比较实惠，比自己买省不少。',
+        '外观不错，流线做得很好，看起来比较大方。车内空间算比较大，就是价格有点高。中国第一百货办的“三子抽奖”，车子免费送，免费的，谁不想要啊！',
+        '建议5000公里，更换机油和三滤，桑塔纳的配件很便宜，汽油滤清器和空气滤清器加一起也不超过50元，一年下来也多花不了多少，但是对车一定是有好处的。',
+        '性能挺好的啊，性价比也还可以，你是做什么用途啊？',
+        'MG7本身的车身行车稳定已经做的很好了,开过你就知道。装ESP就相当于给会游泳的人塞上个救生圈。',
+        '北斗星更好些，油耗低，皮实，保养维修费用低。',
+        '客观的说同为日本车，FIT无论从品牌保值，油耗，空间，操控等等都是马2不能比的，马2小气，空间狭小，飞度实用性强，后备箱同级卓越，再看看保有量，飞度满街飞，马2机会看不到，所以飞度完胜！'
     ]
 ];
 
@@ -213,8 +247,598 @@ const scopes = [
             }
         ]
     ],
-    []
+    [
+        [
+            {
+                // 内容块
+                scope: '味道非常好',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '味道'
+            },
+            {
+                scope: '态度也好',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '态度'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '环境也不错',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '环境'
+            },
+            {
+                scope: '服务也很好',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '服务'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '价格实惠',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '价格'
+            },
+            {
+                scope: '口感不错',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '口感'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '环境不太好',
+                // 态度
+                attitude: ATTITUDE.NEGATIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '环境'
+            },
+            {
+                scope: '烧烤很好吃',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '烧烤'
+            },
+            {
+                scope: '虾也很新鲜',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '虾'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '味道很不错',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '味道'
+            },
+            {
+                scope: '服务也很好',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '服务'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '奶茶很好',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '奶茶'
+            },
+            {
+                scope: '炸鸡也很好吃',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '炸鸡'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '团购划算',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '团购价格'
+            },
+            {
+                scope: '活动多',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '优惠活动'
+            },
+            {
+                scope: '优惠活动多',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '优惠活动'
+            },
+            {
+                scope: '店面不错',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '店面'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '菜量很足',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '份量'
+            },
+            {
+                scope: '量很足',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '份量'
+            },
+            {
+                scope: '味道很辣',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '味道'
+            },
+            {
+                scope: '环境一般',
+                attitude: ATTITUDE.NEGATIVE,
+                weight: 2,
+                tag: '环境'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '性价比非常高',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '性价比'
+            },
+            {
+                scope: '东西也好吃',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '东西'
+            },
+            {
+                scope: '环境非常好',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '环境'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '位置很好',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '位置'
+            },
+            {
+                scope: '环境不错',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '环境'
+            }
+        ]
+    ],
+    [
+        [
+            {
+                // 内容块
+                scope: '服务很好',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '服务'
+            },
+            {
+                scope: '环境很好',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '环境'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '环境和服务都不错',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '服务'
+            },
+            {
+                scope: '环境和服务都不错',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '环境'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '环境不错',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '环境'
+            },
+            {
+                scope: '服务确实不错',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '服务'
+            },
+            {
+                scope: '技术好',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '技术'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '手法特别好',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '手法'
+            },
+            {
+                scope: '按的特别舒服',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '按的'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '水平还可以',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '水平'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '服务真好',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '服务'
+            },
+            {
+                scope: '环境一般',
+                attitude: ATTITUDE.NEGATIVE,
+                weight: 2,
+                tag: '环境'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '服务不错',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '服务'
+            },
+            {
+                scope: '环境不错',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '环境'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '力道很足',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '力道'
+            },
+            {
+                scope: '手法专业',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '手法'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '服务不错',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '服务'
+            },
+            {
+                scope: '卫生干净',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '干净'
+            },
+            {
+                scope: '卫生干净',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '卫生'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '服务很好',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '服务'
+            },
+            {
+                scope: '认真按摩',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '按摩'
+            }
+        ]
+    ],
+    [
+        [
+            {
+                // 内容块
+                scope: '内饰谈不上精致',
+                // 态度
+                attitude: ATTITUDE.NEGATIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '内饰'
+            },
+            {
+                scope: '动力足',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '动力'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '外观漂亮',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '外形'
+            },
+            {
+                scope: '动力和操控性都不错',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '操控性'
+            },
+            {
+                scope: '动力和操控性都不错',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '动力'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '空间挺大',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '空间'
+            },
+            {
+                scope: '油耗也很低',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '耗油量'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '价格比较实惠',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '价钱'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '外观不错',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '外观'
+            },
+            {
+                // 内容块
+                scope: '车内空间算比较大',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '空间'
+            },
+            {
+                // 内容块
+                scope: '价格有点高',
+                // 态度
+                attitude: ATTITUDE.NEGATIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '价格'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '配件很便宜',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '配件'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '性能挺好',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '性能'
+            },
+            {
+                scope: '性价比也还可以',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '性价比'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '车身行车稳定',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '车身'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '油耗低',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '耗油量'
+            },
+            {
+                scope: '费用低',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '费用'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '空间狭小',
+                // 态度
+                attitude: ATTITUDE.NEGATIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '空间'
+            },
+            {
+                scope: '实用性强',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '实用性'
+            }
+        ]
+    ]
 ];
+/* eslint-enable */
 
 // 评论列表容器
 const $demoCaseContainer = $('#demo-case-container');
