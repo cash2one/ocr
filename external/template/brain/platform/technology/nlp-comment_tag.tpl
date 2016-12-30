@@ -230,6 +230,10 @@
     </div>
 </div>
 <div class="comment-demo">
+    <div class="demo-switch" id="demo-switch">
+        <div class="demo-switch-icon"></div>
+        <div class="demo-switch-txt">换一个实例</div>
+    </div>
     <div class="comment-demo-left" id="demo-case-container">
     </div>
     <div class="comment-demo-contrast"></div>

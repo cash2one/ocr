@@ -961,6 +961,21 @@ const paintDemo = demoNum => {
 // 渲染首个demo case
 paintDemo(currentDemoNum);
 
+const $demoSwitch = $('#demo-switch');
+const caseCount = sentencesGroup.length;
+// 切换demo
+$demoSwitch.on('click', () => {
+    let nextCaseNum = currentDemoNum + 1;
+
+    if (nextCaseNum >= caseCount) {
+        nextCaseNum = 0;
+    }
+
+    paintDemo(nextCaseNum);
+
+    currentDemoNum = nextCaseNum;
+});
+
 // case点击效果
 $('.case-indicator > li').click(function () {
     $('.case-indicator > li').each((i, e) => {

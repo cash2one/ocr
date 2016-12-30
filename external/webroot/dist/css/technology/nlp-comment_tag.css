@@ -823,3 +823,8 @@
   font-size: 16px;
   background-color: gray;
 }
+.demo-switch {
+  padding: 10px 0;
+  color: blue;
+  cursor: pointer;
+}
