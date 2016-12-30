@@ -19,6 +19,7 @@ var babelify = require('babelify');
 var uglify = require('gulp-uglify');
 var replace = require('gulp-replace');
 var fs = require('fs');
+var nodePath = require('path');
 
 gulp.task('jsCompile', function () {
     glob('./src/entry/**/*.js', function (err, files) {
@@ -159,10 +160,13 @@ gulp.task('html_watch', function () {
             }
             var tasks = files.map(function (entry) {
                 var data = fs.readFileSync(entry, 'utf-8');
-                var basename = entry.match(/\/([\w-]+)\.html/)[1];
-                var dirname = entry.match(/(\w+)\/([\w-]+)\.html/)[1].replace('view', '');
-                var cssPath = '/dist/css/' + (dirname ? (dirname + '/') : '') + basename + '.css';
-                var jsPath = '/dist/js/' + (dirname ? (dirname + '/') : '') + basename + '.bundle.js';
+                var basename = nodePath.basename(entry, '.html');
+                var relativePath = nodePath.relative('src/view', entry);
+                var dirname = nodePath.dirname(relativePath);
+                dirname = dirname === '.' ? '' : dirname;
+
+                var cssPath = nodePath.join('/dist/css/', dirname, basename + '.css');
+                var jsPath = nodePath.join('/dist/css/', dirname, basename + '.bundle.js');
                 return gulp.src('./src/view/common/template.html')
                     .pipe(replace(/\{\{body}}/g, data))
                     .pipe(replace(/<\/head>/g, '<link rel="stylesheet" href="' + cssPath + '"></head>'))
