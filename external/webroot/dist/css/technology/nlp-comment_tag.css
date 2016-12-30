@@ -724,3 +724,102 @@
 .tech-section.tech-case .case-list > li:nth-child(2) .case-icon {
   background: url("../../../images/technology/nlp-comment/case-logo-2.png") no-repeat center center;
 }
+.comment-demo {
+  width: 960px;
+  margin: 0 auto;
+  font-size: 0;
+}
+.comment-demo-left,
+.comment-demo-right,
+.comment-demo-contrast {
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+.comment-demo-left,
+.comment-demo-right {
+  width: 40%;
+  border: 1px solid #000;
+  padding: 15px;
+  font-size: 0;
+}
+.comment-demo-contrast {
+  width: 20%;
+}
+.comment-demo-case {
+  padding: 5px 0;
+  font-size: 14px;
+}
+.attitude-0 {
+  color: red;
+}
+.attitude-1 {
+  color: green;
+}
+.attitude-2 {
+  color: black;
+}
+.comment-title {
+  font-size: 0;
+}
+.comment-positive,
+.comment-negative,
+.comment-tag-title {
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+.comment-positive,
+.comment-negative {
+  width: 35%;
+  padding-bottom: 8px;
+  font-size: 16px;
+  border-bottom: 1px solid black;
+}
+.comment-positive {
+  text-align: left;
+}
+.comment-negative {
+  text-align: right;
+}
+.comment-tag-title {
+  width: 30%;
+}
+.comment-tag-item {
+  height: 30px;
+  margin: 5px 0;
+  font-size: 0;
+  text-align: center;
+}
+.comment-positive-bar,
+.comment-negative-bar {
+  position: relative;
+  display: inline-block;
+  width: 35%;
+  height: 100%;
+  vertical-align: top;
+}
+.comment-positive-value,
+.comment-negative-value {
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  height: 10px;
+  width: 100%;
+}
+.comment-positive-value {
+  left: 0;
+  background-color: green;
+}
+.comment-negative-value {
+  right: 0;
+  background-color: red;
+}
+.comment-tag-name {
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  line-height: 30px;
+  font-size: 16px;
+  background-color: gray;
+}

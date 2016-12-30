@@ -255,6 +255,7 @@
         color: @dark-gray;
     }
 }
+
 .tech-section{
     &.tech-case {
         .case-item .case-icon {
@@ -297,5 +298,142 @@
                 }
             }
         }
+    }
+}
+
+@bar-height: 10px;
+@tag-item-height: 30px;
+
+.comment-demo {
+    width: 960px;
+    margin: 0 auto;
+    font-size: 0;
+
+    &-left,
+    &-right,
+    &-contrast {
+        display: inline-block;
+        box-sizing: border-box;
+        vertical-align: middle;
+    }
+
+    // 左右侧对比栏
+    &-left,
+    &-right {
+        width: 40%;
+        border: 1px solid #000;
+        padding: 15px;
+        font-size: 0;
+    }
+
+    // 中间对比项
+    &-contrast {
+        width: 20%;
+    }
+
+    // 一个评论句子
+    &-case {
+        padding: 5px 0;
+        font-size: 14px;
+    }
+}
+
+.attitude {
+    // 负面情绪文字
+    &-0 {
+        color: red;
+    }
+
+    // 正面情绪文字
+    &-1 {
+        color: green;
+    }
+
+    // 无情绪文字
+    &-2 {
+        color: black;
+    }
+}
+
+.comment {
+    // 右侧列表头部行
+    &-title {
+        font-size: 0;
+    }
+
+    &-positive,
+    &-negative,
+    &-tag-title {
+        display: inline-block;
+        box-sizing: border-box;
+        vertical-align: top;
+    }
+
+    &-positive,
+    &-negative {
+        width: 35%;
+        padding-bottom: 8px;
+        font-size: 16px;
+        border-bottom: 1px solid black;
+    }
+
+    &-positive {
+        text-align: left;
+    }
+
+    &-negative {
+        text-align: right;
+    }
+
+    // 顶部中间占位
+    &-tag-title {
+        width: 30%;
+    }
+
+    // 一个评论项
+    &-tag-item {
+        height: @tag-item-height;
+        margin: 5px 0;
+        font-size: 0;
+        text-align: center;
+    }
+
+    // 正负向条
+    &-positive-bar,
+    &-negative-bar {
+        position: relative;
+        display: inline-block;
+        width: 35%;
+        height: 100%;
+        vertical-align: top;
+    }
+
+    &-positive-value,
+    &-negative-value {
+        position: absolute;
+        top: 50%;
+        margin-top: -@bar-height / 2;
+        height: @bar-height;
+        width: 100%;
+    }
+
+    &-positive-value {
+        left: 0;
+        background-color: green;
+    }
+
+    &-negative-value {
+        right: 0;
+        background-color: red;
+    }
+
+    // 关键词
+    &-tag-name {
+        display: inline-block;
+        width: 30%;
+        height: 100%;
+        line-height: @tag-item-height;
+        font-size: 16px;
+        background-color: gray;
     }
 }
