@@ -1,11 +1,11 @@
 <div class="doc-wrap">
 	<div class="sidebar sidebar-fixed">
-		<h1 style="width: 260px; ">新手指南<i class="nav-plus1 pm-button"></i></h1>
+		<h1 style="width: 260px;">新手指南<i class="nav-plus1 pm-button"></i></h1>
 		<div class="toc jquery-accordion-menu" style="width: 260px;">
-			<ul class="level1 submenu" style="border-bottom:1px solid #ebebeb">
+			<ul class="level1 submenu beginner" style="border-bottom:1px solid #ebebeb">
 				<li class="node root"><a href="javascript:void(0)"><span class="icon icon-jieru"></span>接入流程</a>
 				</li>
-				<li class="node root"><a href="javascript:void(0)"><span class="icon icon-jianquan"></span>鉴权认证机制</a>
+				<li class="click-node" tag="Beginner-Access" class="node root"><a href="javascript:void(0)"><span class="icon icon-jianquan"></span>鉴权认证机制</a>
 				</li>
 				<li class="node root"><a href="javascript:void(0)"><span class="icon icon-fuwu"></span>服务协议</a>
 				</li>
@@ -151,7 +151,19 @@
 								<li class="leaf"><a href="javascript:void(0)"><i></i>识别接口</a></li>
 							</ul>
 						</li>
-						<li class="leaf"><a href="javascript:void(0)"><i></i>SDK 文档</a></li>
+						<li class="non-leaf">
+							<a href="javascript:void(0)"><span class="icon-arrow-down"></span>SDK 文档</a>
+							<ul class="level3 submenu">
+								<li class="non-leaf">
+									<a class="click-node" tag="OCR-SDK-Javacode" href="javascript:void(0)"><i></i>Java 语言</a>
+									<ul class="level4 submenu"></ul>
+								</li>
+								<li class="non-leaf">
+									<a class="click-node" tag="OCR-SDK-Phpcode" href="javascript:void(0)"><i></i>PHP 语言</a>
+									<ul class="level4 submenu"></ul>
+								</li>
+							</ul>
+						</li>
 						<li class="leaf"><a href="javascript:void(0)"><i></i>常见问题</a></li>
 					</ul>
 				</li>
@@ -167,31 +179,50 @@
 								<li class="leaf"><a href="javascript:void(0)"><i></i>识别接口</a></li>
 							</ul>
 						</li>
-						<li class="leaf"><a href="javascript:void(0)"><i></i>SDK 文档</a></li>
+						<li class="non-leaf">
+							<a href="javascript:void(0)"><span class="icon-arrow-down"></span>SDK 文档</a>
+							<ul class="level3 submenu">
+								<li class="non-leaf">
+									<a class="click-node" tag="BFR-SDK-Javacode" href="javascript:void(0)"><i></i>Java 语言</a>
+									<ul class="level4 submenu"></ul>
+								</li>
+								<li class="non-leaf">
+									<a class="click-node" tag="BFR-SDK-Phpcode" href="javascript:void(0)"><i></i>PHP 语言</a>
+									<ul class="level4 submenu"></ul>
+								</li>
+							</ul>
+						</li>
 						<li class="leaf"><a href="javascript:void(0)"><i></i>常见问题</a></li>
 					</ul>
-					<!--<ul class="level3 submenu">
-						<li class="leaf"><a href="javascript:void(0)"><i></i>使用须知</a></li>
-						<li class="leaf"><a href="#faceRecognition-2"><i></i>接口规范</a></li>
-						<li class="leaf"><a href="#faceRecognition-3"><i></i>错误信息格式</a></li>
-						<li class="leaf"><a href="#faceRecognition-4"><i></i>人脸识别接口</a></li>
-						<li class="leaf"><a href="#faceRecognition-5"><i></i>APP用户组信息接口</a></li>
-						<li class="leaf"><a href="#faceRecognition-6"><i></i>人脸属性</a></li>
-					</ul>-->
 				</li>
 				<li class="node root"><a href="javascript:void(0)"><span class="icon icon-yuyan"></span>自然语言处理 NLP</a>
 					<ul class="level2 submenu">
 						<li class="leaf"><a href="javascript:void(0)"><i></i>产品描述</a></li>
 						<li class="non-leaf">
-							<a href="javascript:void(0)"><span class="icon-arrow-down"></span>API 文档</a>
+							<a class="click-node" tag="NLP-API" href="javascript:void(0)"><span class="icon-arrow-down"></span>API 文档</a>
 							<ul class="level3 submenu">
-								<li class="leaf"><a href="javascript:void(0)"><i></i>使用须知</a></li>
-								<li class="leaf"><a href="javascript:void(0)"><i></i>接口规范</a></li>
-								<li class="leaf"><a href="javascript:void(0)"><i></i>错误信息格式</a></li>
-								<li class="leaf"><a href="javascript:void(0)"><i></i>识别接口</a></li>
+								<li class="leaf"><a href="javascript:void(0)"><i></i>API总述</a></li>
+								<li class="leaf"><a href="javascript:void(0)"><i></i>DeepSeg分词接口</a></li>
+								<li class="leaf"><a href="javascript:void(0)"><i></i>词性标注接口</a></li>
+								<li class="leaf"><a href="javascript:void(0)"><i></i>词向量接口</a></li>
+								<li class="leaf"><a href="javascript:void(0)"><i></i>中文DNN语言模型</a></li>
+								<li class="leaf"><a href="javascript:void(0)"><i></i>短文本相似度接口</a></li>
+								<li class="leaf"><a href="javascript:void(0)"><i></i>评论观点抽取接口</a></li>
 							</ul>
 						</li>
-						<li class="leaf"><a href="javascript:void(0)"><i></i>SDK 文档</a></li>
+						<li class="non-leaf">
+							<a href="javascript:void(0)"><span class="icon-arrow-down"></span>SDK 文档</a>
+							<ul class="level3 submenu">
+								<li class="non-leaf">
+									<a class="click-node" tag="NLP-SDK-Javacode" href="javascript:void(0)"><i></i>Java 语言</a>
+									<ul class="level4 submenu"></ul>
+								</li>
+								<li class="non-leaf">
+									<a class="click-node" tag="NLP-SDK-Phpcode" href="javascript:void(0)"><i></i>PHP 语言</a>
+									<ul class="level4 submenu"></ul>
+								</li>
+							</ul>
+						</li>
 						<li class="leaf"><a href="javascript:void(0)"><i></i>常见问题</a></li>
 					</ul>
 				</li>
@@ -207,7 +238,19 @@
 								<li class="leaf"><a href="javascript:void(0)"><i></i>识别接口</a></li>
 							</ul>
 						</li>
-						<li class="leaf"><a href="javascript:void(0)"><i></i>SDK 文档</a></li>
+						<li class="non-leaf">
+							<a href="javascript:void(0)"><span class="icon-arrow-down"></span>SDK 文档</a>
+							<ul class="level3 submenu">
+								<li class="non-leaf">
+									<a class="click-node" tag="Antiporn-SDK-Javacode" href="javascript:void(0)"><i></i>Java 语言</a>
+									<ul class="level4 submenu"></ul>
+								</li>
+								<li class="non-leaf">
+									<a class="click-node" tag="Antiporn-SDK-Phpcode" href="javascript:void(0)"><i></i>PHP 语言</a>
+									<ul class="level4 submenu"></ul>
+								</li>
+							</ul>
+						</li>
 						<li class="leaf"><a href="javascript:void(0)"><i></i>常见问题</a></li>
 					</ul>
 				</li>
@@ -218,11 +261,7 @@
 	<div class="doc-main">
 		<nav class="doc-breadcrumb">
 			<ul class="crumb" >
-				<li><span>帮助文档</span></li>
-				<li><span class="divider">&gt;</span></li>
-				<li><span>人脸识别 BFR</span></li>
-				<li><span class="divider">&gt;</span></li>
-				<li><span class="">人脸识别 API</span></li>
+				<li><span>文档中心</span></li>
 			</ul>
 			<div class="more">
 				<i class="iconfont icon-sdktool"></i>
