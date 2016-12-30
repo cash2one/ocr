@@ -387,5 +387,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="/dist/js/solution/faceprint.bundle.js"></script></body>
+</body>
 </html>

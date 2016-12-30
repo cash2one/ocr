@@ -381,5 +381,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="/dist/js/solution/robot.bundle.js"></script></body>
+</body>
 </html>

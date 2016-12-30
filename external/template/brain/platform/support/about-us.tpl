@@ -296,5 +296,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="/dist/js/support/about-us.bundle.js"></script></body>
+</body>
 </html>
