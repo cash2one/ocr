@@ -33,7 +33,7 @@ class Brain_User {
         
             return array(
                 'uid' => $userInfo['uid'],
-                'uname' => $userInfo['uname'],
+                'uname' => iconv('gb2312', 'utf-8', $userInfo['uname']),
             );
         }
     }
