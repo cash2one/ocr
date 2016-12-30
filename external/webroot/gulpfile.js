@@ -141,6 +141,13 @@ gulp.task('less_watch', function () {
     });
 });
 
+var js_excludes = [
+    '/dist/js/solution/robot.bundle.js',
+    '/dist/js/solution/faceprint.bundle.js',
+    '/dist/js/support/video.bundle.js',
+    '/dist/js/support/about-us.bundle.js',
+    '/dist/js/sdk/sdk.bundle.js',
+];
 
 gulp.task('html_watch', function () {
     return watch('./src/view/**/*.html', function () {
@@ -157,9 +164,14 @@ gulp.task('html_watch', function () {
                 var cssPath = '/dist/css/' + (dirname ? (dirname + '/') : '') + basename + '.css';
                 var jsPath = '/dist/js/' + (dirname ? (dirname + '/') : '') + basename + '.bundle.js';
                 return gulp.src('./src/view/common/template.html')
-                    .pipe(replace(/{{body}}/g, data))
+                    .pipe(replace(/\{\{body}}/g, data))
                     .pipe(replace(/<\/head>/g, '<link rel="stylesheet" href="' + cssPath + '"></head>'))
-                    .pipe(replace(/<\/body>/g, '<script src="' + jsPath + '"></script></body>'))
+                    .pipe(replace(/<\/body>/g,
+                        js_excludes.indexOf(jsPath) === -1
+                            ? ('<script src="' + jsPath + '"></script></body>')
+                            : '</body>'
+                        )
+                    )
                     .pipe(
                         rename({
                             dirname: dirname,
