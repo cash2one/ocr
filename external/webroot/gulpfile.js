@@ -141,12 +141,12 @@ gulp.task('less_watch', function () {
     });
 });
 
-var js_excludes = [
+var jsExcludes = [
     '/dist/js/solution/robot.bundle.js',
     '/dist/js/solution/faceprint.bundle.js',
     '/dist/js/support/video.bundle.js',
     '/dist/js/support/about-us.bundle.js',
-    '/dist/js/sdk/sdk.bundle.js',
+    '/dist/js/sdk/sdk.bundle.js'
 ];
 
 gulp.task('html_watch', function () {
@@ -167,7 +167,7 @@ gulp.task('html_watch', function () {
                     .pipe(replace(/\{\{body}}/g, data))
                     .pipe(replace(/<\/head>/g, '<link rel="stylesheet" href="' + cssPath + '"></head>'))
                     .pipe(replace(/<\/body>/g,
-                        js_excludes.indexOf(jsPath) === -1
+                        jsExcludes.indexOf(jsPath) === -1
                             ? ('<script src="' + jsPath + '"></script></body>')
                             : '</body>'
                         )
