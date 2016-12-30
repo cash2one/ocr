@@ -8,7 +8,9 @@ import $ from 'jquery';
 import docAccordionMenu from '../../component/widget/docAccordionMenu';
 import marked from 'marked';
 import  '../../../bower_components/code-prettify/src/prettify';
+
 window.$ = $;
+window.marked = marked;
 
 let lastMdTag = '';
 let anchorMap = {
