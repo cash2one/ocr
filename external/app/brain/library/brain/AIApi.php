@@ -10,7 +10,7 @@
 class Brain_AIApi {
     
     //访问限制
-    const SEC_VISIT_LIMIT = 1;
+    const SEC_VISIT_LIMIT = 2;
     const MINUTE_VISIT_LIMIT = 1000;
     const MINUTE_TIME_LIMIT = 600;
     const MAX_IMAGE_LIMIT = 2097152; //2 * 1014 * 1024
