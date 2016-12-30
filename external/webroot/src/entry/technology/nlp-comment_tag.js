@@ -39,16 +39,16 @@ const sentencesGroup = [
         '位置很好找，正好修地铁，车很少，还比较安静，周围的吃饭的地方很多，下楼就要，环境不错，卫生'
     ],
     [
-        '服务很好环境很好，全身肥肉也得到了锻炼，没白来',
-        '环境和服务都不错，挺赞的',
-        '环境不错，进去就有暖气，公共浴室，房间是日式风格，叫的11号技师，服务确实不错，95后妹子，能说会道，人美技术好，挺不错的体验',
-        '从网上看到我还不太相信，就抱着试试态度，因为腰和脖子疼实在受不了了就去这家店看看，做过以后真心的不错，医生的手法特别好，力度到位，按的特别舒服，现在好多了，身上轻松多了，舒服多了。疼痛也缓解了，所以有身体疼痛的一定去这家店看看，真心不错，所有大家要来看看试试，嘿嘿嘿嘿',
-        '还没学完呢，教练的水平还可以，就是太难预约了，其他的评价我会继续更新的。',
-        '娇娇服务真好！环境一般',
-        '服务不错！环境不错！感觉棒棒哒！真心给力啊！一百个赞啊！',
-        '20号技师精油推背力道很足，手法专业。套餐里的整脊时间很短，十来分钟',
-        '小美女服务不错，卫生干净，温馨，手法消魂，狼友们值得得一去的好去处………………………………',
-        '技师91服务很好！认真按摩'
+        '服务态度不好，让调个温度等了好长时间，以后再也不来了',
+        '环境不错，新歌很多！音响也好',
+        '音质很好，非常不错哦，环境也很好',
+        '还不错，比较实惠。不过里面的环境不是很好！音响还可以！',
+        '环境非常好，服务非常好，音效非常好',
+        '音乐效果很好，新装修的环境不错，服务也好！！！',
+        '里面环境很好，服务态度也好，音响效果也不错，送的蓝莓李很好吃',
+        '5分，环境还不错，服务态度有待提高',
+        '麦克风不错 音效出色 团购价划算',
+        '好好好好，服务好，设备好，环境好'
     ],
     [
         '如果要提油耗日系车当然低，这是他们的优势。车身轻安全性能低是他们的死穴！牧马人的内饰谈不上精致，但是相对给男人来开显得粗狂大气，动力足！户外撒野绝对给力！普拉高速不稳定，属于城市SUV如果越野就坑爹了。。综合性能比较，牧马人性价比高。',
@@ -469,37 +469,19 @@ const scopes = [
         [
             {
                 // 内容块
-                scope: '服务很好',
+                scope: '服务态度不好',
                 // 态度
-                attitude: ATTITUDE.POSITIVE,
+                attitude: ATTITUDE.NEGATIVE,
                 // 情绪权重
                 weight: 2,
                 // 评论维度
-                tag: '服务'
+                tag: '服务态度'
             },
             {
-                scope: '环境很好',
-                attitude: ATTITUDE.POSITIVE,
+                scope: '态度不好',
+                attitude: ATTITUDE.NEGATIVE,
                 weight: 2,
-                tag: '环境'
-            }
-        ],
-        [
-            {
-                // 内容块
-                scope: '环境和服务都不错',
-                // 态度
-                attitude: ATTITUDE.POSITIVE,
-                // 情绪权重
-                weight: 2,
-                // 评论维度
-                tag: '服务'
-            },
-            {
-                scope: '环境和服务都不错',
-                attitude: ATTITUDE.POSITIVE,
-                weight: 2,
-                tag: '环境'
+                tag: '服务态度'
             }
         ],
         [
@@ -514,70 +496,186 @@ const scopes = [
                 tag: '环境'
             },
             {
-                scope: '服务确实不错',
+                scope: '音响也好',
                 attitude: ATTITUDE.POSITIVE,
                 weight: 2,
+                tag: '音响'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '音质很好',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '音质'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '环境不是很好',
+                // 态度
+                attitude: ATTITUDE.NEGATIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '环境'
+            },
+            {
+                scope: '音响还可以',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '音效'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '环境非常好',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '环境'
+            },
+            {
+                // 内容块
+                scope: '服务非常好',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
                 tag: '服务'
             },
             {
-                scope: '技术好',
-                attitude: ATTITUDE.POSITIVE,
-                weight: 2,
-                tag: '技术'
-            }
-        ],
-        [
-            {
                 // 内容块
-                scope: '手法特别好',
+                scope: '音效非常好',
                 // 态度
                 attitude: ATTITUDE.POSITIVE,
                 // 情绪权重
                 weight: 2,
                 // 评论维度
-                tag: '手法'
+                tag: '音效'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '音乐效果很好',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '音乐效果'
             },
             {
-                scope: '按的特别舒服',
-                attitude: ATTITUDE.POSITIVE,
-                weight: 2,
-                tag: '按的'
-            }
-        ],
-        [
-            {
-                // 内容块
-                scope: '水平还可以',
-                // 态度
-                attitude: ATTITUDE.POSITIVE,
-                // 情绪权重
-                weight: 2,
-                // 评论维度
-                tag: '水平'
-            }
-        ],
-        [
-            {
-                // 内容块
-                scope: '服务真好',
-                // 态度
-                attitude: ATTITUDE.POSITIVE,
-                // 情绪权重
-                weight: 2,
-                // 评论维度
-                tag: '服务'
-            },
-            {
-                scope: '环境一般',
+                scope: '环境不错',
                 attitude: ATTITUDE.NEGATIVE,
                 weight: 2,
                 tag: '环境'
+            },
+            {
+                scope: '新装修',
+                attitude: ATTITUDE.NEGATIVE,
+                weight: 2,
+                tag: '装修'
+            },
+            {
+                scope: '服务也好',
+                attitude: ATTITUDE.NEGATIVE,
+                weight: 2,
+                tag: '服务'
             }
         ],
         [
             {
                 // 内容块
-                scope: '服务不错',
+                scope: '环境很好',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '环境'
+            },
+            {
+                scope: '服务态度也好',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '服务态度'
+            },
+            {
+                scope: '效果也不错',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '效果'
+            },
+            {
+                scope: '音响效果也不错',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '音效'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '环境还不错',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '环境'
+            },
+            {
+                scope: '服务态度有待提高',
+                attitude: ATTITUDE.NEGATIVE,
+                weight: 2,
+                tag: '服务态度'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '麦克风不错',
+                // 态度
+                attitude: ATTITUDE.POSITIVE,
+                // 情绪权重
+                weight: 2,
+                // 评论维度
+                tag: '麦克风'
+            },
+            {
+                scope: '音效出色',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '音效'
+            },
+            {
+                scope: '团购价划算',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '团购'
+            },
+            {
+                scope: '团购价划算',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '团购'
+            }
+        ],
+        [
+            {
+                // 内容块
+                scope: '服务好',
                 // 态度
                 attitude: ATTITUDE.POSITIVE,
                 // 情绪权重
@@ -586,70 +684,16 @@ const scopes = [
                 tag: '服务'
             },
             {
-                scope: '环境不错',
+                scope: '设备好',
+                attitude: ATTITUDE.POSITIVE,
+                weight: 2,
+                tag: '印象'
+            },
+            {
+                scope: '环境好',
                 attitude: ATTITUDE.POSITIVE,
                 weight: 2,
                 tag: '环境'
-            }
-        ],
-        [
-            {
-                // 内容块
-                scope: '力道很足',
-                // 态度
-                attitude: ATTITUDE.POSITIVE,
-                // 情绪权重
-                weight: 2,
-                // 评论维度
-                tag: '力道'
-            },
-            {
-                scope: '手法专业',
-                attitude: ATTITUDE.POSITIVE,
-                weight: 2,
-                tag: '手法'
-            }
-        ],
-        [
-            {
-                // 内容块
-                scope: '服务不错',
-                // 态度
-                attitude: ATTITUDE.POSITIVE,
-                // 情绪权重
-                weight: 2,
-                // 评论维度
-                tag: '服务'
-            },
-            {
-                scope: '卫生干净',
-                attitude: ATTITUDE.POSITIVE,
-                weight: 2,
-                tag: '干净'
-            },
-            {
-                scope: '卫生干净',
-                attitude: ATTITUDE.POSITIVE,
-                weight: 2,
-                tag: '卫生'
-            }
-        ],
-        [
-            {
-                // 内容块
-                scope: '服务很好',
-                // 态度
-                attitude: ATTITUDE.POSITIVE,
-                // 情绪权重
-                weight: 2,
-                // 评论维度
-                tag: '服务'
-            },
-            {
-                scope: '认真按摩',
-                attitude: ATTITUDE.POSITIVE,
-                weight: 2,
-                tag: '按摩'
             }
         ]
     ],
