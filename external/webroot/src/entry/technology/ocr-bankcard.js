@@ -59,6 +59,7 @@ $(document).ready(function () {
                     $('#demo-result .result-background').toggleClass('has-result man female', false)
                         .toggleClass('error-upload-fail', res.errno === 107)
                         .toggleClass('error-timeout', res.errno === 28)
+                        .toggleClass('error-no-result', res.errno === 216631)
                         .toggleClass('error-no-result', res.errno === 216630)
                         .toggleClass('error-image-format', res.errno === 106);
                     isScanning = false;
