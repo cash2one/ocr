@@ -7,14 +7,16 @@ import $ from 'jquery';
 /* eslint-disable */
 const sentences = [
     '2003年10月15日，杨利伟乘由长征二号F火箭运载的神舟五号飞船首次进入太空，象征着中国太空事业向前迈进一大步，起到了里程碑的作用。',
-    '1996年，曾经是微软员工的加布·纽维尔和麦克·哈灵顿一同创建了Valve软件公司。他们在1996年下半年从id software取得了雷神之锤引擎的使用许可，用来开发半条命系列。'
+    '1996年，曾经是微软员工的加布·纽维尔和麦克·哈灵顿一同创建了Valve软件公司。他们在1996年下半年从id software取得了雷神之锤引擎的使用许可，用来开发半条命系列。',
+    '谢尔盖·科罗廖夫（1907年1月12日－1966年1月14日），原苏联宇航事业的伟大设计师与组织者 ，第一枚射程超过8000公里的洲际火箭（弹道导弹）的设计者，第一颗人造地球卫星的运载火箭的设计者、第一艘载人航天飞船的总设计师。',
+    '现在，慕尼黑再保险公司不仅是此类行动的倡议者，更是将其大量气候数据整合进保险产品中，并与公众共享大量天气信息，参与到新能源领域的保障中。'
 ];
 /* eslint-enable */
 
 const segments = [
     [
         {
-            block: '2013',
+            block: '2003年10月15日',
             type: 't'
         },
         {
@@ -40,6 +42,102 @@ const segments = [
         {
             block: '运载',
             type: 'v'
+        },
+        {
+            block: '的',
+            type: 'u'
+        },
+        {
+            block: '神舟五号',
+            type: 'nz'
+        },
+        {
+            block: '飞船',
+            type: 'n'
+        },
+        {
+            block: '首次',
+            type: 'm'
+        },
+        {
+            block: '进入',
+            type: 'v'
+        },
+        {
+            block: '太空',
+            type: 's'
+        },
+        {
+            block: ',',
+            type: 'w'
+        },
+        {
+            block: '象征',
+            type: 'v'
+        },
+        {
+            block: '太空',
+            type: 's'
+        },
+        {
+            block: '着',
+            type: 'u'
+        },
+        {
+            block: '中国',
+            type: 'ns'
+        },
+        {
+            block: '太空',
+            type: 'n'
+        },
+        {
+            block: '事业',
+            type: 'n'
+        },
+        {
+            block: '向前',
+            type: 'vd'
+        },
+        {
+            block: '迈进',
+            type: 'v'
+        },
+        {
+            block: '一大步',
+            type: 'm'
+        },
+        {
+            block: ',',
+            type: 'w'
+        },
+        {
+            block: '起',
+            type: 'v'
+        },
+        {
+            block: '到',
+            type: 'v'
+        },
+        {
+            block: '了',
+            type: 'u'
+        },
+        {
+            block: '里程碑',
+            type: 'n'
+        },
+        {
+            block: '的',
+            type: 'u'
+        },
+        {
+            block: '作用',
+            type: 'n'
+        },
+        {
+            block: '。',
+            type: 'w'
         }
     ],
     [
@@ -62,6 +160,474 @@ const segments = [
         {
             block: '微软',
             type: 'nt'
+        },
+        {
+            block: '员工',
+            type: 'n'
+        },
+        {
+            block: '的',
+            type: 'u'
+        },
+        {
+            block: '加布',
+            type: 'nr'
+        },
+        {
+            block: '·',
+            type: 'w'
+        },
+        {
+            block: '纽维尔',
+            type: 'nr'
+        },
+        {
+            block: '和',
+            type: 'c'
+        },
+        {
+            block: '麦克',
+            type: 'nr'
+        },
+        {
+            block: '·',
+            type: 'w'
+        },
+        {
+            block: '哈灵顿',
+            type: 'nr'
+        },
+        {
+            block: '一同',
+            type: 'd'
+        },
+        {
+            block: '创建',
+            type: 'v'
+        },
+        {
+            block: '了',
+            type: 'u'
+        },
+        {
+            block: 'Valve软件公司',
+            type: 'nt'
+        },
+        {
+            block: '。',
+            type: 'w'
+        },
+        {
+            block: '他们',
+            type: 'r'
+        },
+        {
+            block: '在',
+            type: 'p'
+        },
+        {
+            block: '1996年',
+            type: 't'
+        },
+        {
+            block: '下半年',
+            type: 't'
+        },
+        {
+            block: '从',
+            type: 'p'
+        },
+        {
+            block: 'id software',
+            type: 'nt'
+        },
+        {
+            block: '取得',
+            type: 'v'
+        },
+        {
+            block: '了',
+            type: 'u'
+        },
+        {
+            block: '雷神之锤引擎',
+            type: 'nz'
+        },
+        {
+            block: '的',
+            type: 'u'
+        },
+        {
+            block: '使用',
+            type: 'vn'
+        },
+        {
+            block: '许可',
+            type: 'vn'
+        },
+        {
+            block: '，',
+            type: 'w'
+        },
+        {
+            block: '用来',
+            type: 'v'
+        },
+        {
+            block: '开发',
+            type: 'v'
+        },
+        {
+            block: '半条命',
+            type: 'nz'
+        },
+        {
+            block: '系列',
+            type: 'n'
+        },
+        {
+            block: '。',
+            type: 'w'
+        }
+    ],
+    [
+        {
+            block: '谢尔盖',
+            type: 'nr'
+        },
+        {
+            block: '·',
+            type: 'w'
+        },
+        {
+            block: '科罗廖夫',
+            type: 'nr'
+        },
+        {
+            block: '（',
+            type: 'w'
+        },
+        {
+            block: '1907年1月12日',
+            type: 't'
+        },
+        {
+            block: '－',
+            type: 'w'
+        },
+        {
+            block: '1966年1月14日',
+            type: 't'
+        },
+        {
+            block: '）',
+            type: 'w'
+        },
+        {
+            block: ',',
+            type: 'w'
+        },
+        {
+            block: '原',
+            type: 'a'
+        },
+        {
+            block: '苏联',
+            type: 'ns'
+        },
+        {
+            block: '宇航',
+            type: 'n'
+        },
+        {
+            block: '事业',
+            type: 'n'
+        },
+        {
+            block: '的',
+            type: 'u'
+        },
+        {
+            block: '伟大',
+            type: 'a'
+        },
+        {
+            block: '设计师',
+            type: 'n'
+        },
+        {
+            block: '与',
+            type: 'c'
+        },
+        {
+            block: '组织者',
+            type: 'n'
+        },
+        {
+            block: ',',
+            type: 'w'
+        },
+        {
+            block: '第一枚',
+            type: 'm'
+        },
+        {
+            block: '射程',
+            type: 'n'
+        },
+        {
+            block: '超过',
+            type: 'v'
+        },
+        {
+            block: '8000公里',
+            type: 'm'
+        },
+        {
+            block: '的',
+            type: 'u'
+        },
+        {
+            block: '洲际',
+            type: 'a'
+        },
+        {
+            block: '火箭',
+            type: 'n'
+        },
+        {
+            block: '（',
+            type: 'w'
+        },
+        {
+            block: '弹道导弹',
+            type: 'nz'
+        },
+        {
+            block: '）',
+            type: 'w'
+        },
+        {
+            block: '的',
+            type: 'u'
+        },
+        {
+            block: '设计者',
+            type: 'n'
+        },
+        {
+            block: ',',
+            type: 'w'
+        },
+        {
+            block: '第一颗',
+            type: 'm'
+        },
+        {
+            block: '人造地球卫星',
+            type: 'nz'
+        },
+        {
+            block: '的',
+            type: 'u'
+        },
+        {
+            block: '运载火箭',
+            type: 'n'
+        },
+        {
+            block: '的',
+            type: 'u'
+        },
+        {
+            block: '设计者',
+            type: 'n'
+        },
+        {
+            block: '、',
+            type: 'w'
+        },
+        {
+            block: '第一艘',
+            type: 'm'
+        },
+        {
+            block: '载人航天',
+            type: 'vn'
+        },
+        {
+            block: '飞船',
+            type: 'n'
+        },
+        {
+            block: '的',
+            type: 'u'
+        },
+        {
+            block: '总设计师',
+            type: 'n'
+        },
+        {
+            block: '。',
+            type: 'w'
+        }
+    ],
+    [
+        {
+            block: '现在',
+            type: 't'
+        },
+        {
+            block: ',',
+            type: 'w'
+        },
+        {
+            block: '慕尼黑再保险公司',
+            type: 'nt'
+        },
+        {
+            block: '不仅',
+            type: 'c'
+        },
+        {
+            block: '是',
+            type: 'v'
+        },
+        {
+            block: '此类',
+            type: 'r'
+        },
+        {
+            block: '行动',
+            type: 'n'
+        },
+        {
+            block: '的',
+            type: 'u'
+        },
+        {
+            block: '倡议者',
+            type: 'n'
+        },
+        {
+            block: ',',
+            type: 'w'
+        },
+        {
+            block: '更',
+            type: 'd'
+        },
+        {
+            block: '是',
+            type: 'd'
+        },
+        {
+            block: '将',
+            type: 'p'
+        },
+        {
+            block: '其',
+            type: 'r'
+        },
+        {
+            block: '大量',
+            type: 'a'
+        },
+        {
+            block: '气候',
+            type: 'n'
+        },
+        {
+            block: '数据',
+            type: 'n'
+        },
+        {
+            block: '整合',
+            type: 'v'
+        },
+        {
+            block: '进',
+            type: 'v'
+        },
+        {
+            block: '保险',
+            type: 'n'
+        },
+        {
+            block: '产品',
+            type: 'n'
+        },
+        {
+            block: '中',
+            type: 'f'
+        },
+        {
+            block: ',',
+            type: 'w'
+        },
+        {
+            block: '并',
+            type: 'c'
+        },
+        {
+            block: '与',
+            type: 'p'
+        },
+        {
+            block: '公众',
+            type: 'n'
+        },
+        {
+            block: '共享',
+            type: 'v'
+        },
+        {
+            block: '大量',
+            type: 'm'
+        },
+        {
+            block: '天气',
+            type: 'n'
+        },
+        {
+            block: '信息',
+            type: 'n'
+        },
+        {
+            block: ',',
+            type: 'w'
+        },
+        {
+            block: '参与',
+            type: 'v'
+        },
+        {
+            block: '到',
+            type: 'v'
+        },
+        {
+            block: '新能源',
+            type: 'n'
+        },
+        {
+            block: '领域',
+            type: 'n'
+        },
+        {
+            block: '的',
+            type: 'u'
+        },
+        {
+            block: '保障',
+            type: 'vn'
+        },
+        {
+            block: '中',
+            type: 'f'
+        },
+        {
+            block: '。',
+            type: 'w'
         }
     ]
 ];
@@ -110,6 +676,34 @@ const termsData = [
             block: 'id software',
             type: 'ORG'
         }
+    ],
+    [
+        {
+            block: '谢尔盖·科罗廖夫',
+            type: 'PER'
+        },
+        {
+            block: '1907年1月12日',
+            type: 'TIME'
+        },
+        {
+            block: '1966年1月14日',
+            type: 'TIME'
+        },
+        {
+            block: '苏联',
+            type: 'LOC'
+        }
+    ],
+    [
+        {
+            block: '现在',
+            type: 'TIME'
+        },
+        {
+            block: '慕尼黑再保险公司',
+            type: 'ORG'
+        }
     ]
 ];
 
@@ -122,7 +716,18 @@ const typeNameRef = {
     p: '介词',
     nz: '其他专名',
     nt: '机构团体',
-    d: '副词'
+    d: '副词',
+    n: '名词',
+    u: '助词',
+    m: '数词',
+    s: '处所词',
+    ns: '地名',
+    vd: '副动词',
+    c: '连词',
+    r: '代词',
+    vn: '名动词',
+    a: '形容词',
+    f: '方位词'
 };
 
 // 专名对应表

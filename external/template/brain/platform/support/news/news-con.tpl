@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="/dist/css/support/about-us.css"></head>
+<link rel="stylesheet" href="/dist/css/support/news/news-con.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -195,39 +195,9 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<section class="about-banner">
+<section class="news-banner">
     <div class="container">
-        <h1>关于我们</h1>
-    </div>
-</section>
-<section class="about-introduction">
-    <ul class="about-content">
-        <li>
-            <h2>一级标题</h2>
-            <p>正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正</p>
-        </li>
-        <li>
-            <h2>一级标题</h2>
-            <ul>
-                <li>
-                    <h3>二级标题</h3>
-                    <p>正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正</p>
-                </li>
-                <li>
-                    <h3>二级标题</h3>
-                    <p>正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正文内容正</p>
-                </li>
-            </ul>
-        </li>
-    </ul>
-</section>
-<section class="tech-section get-started">
-    <div class="container">
-        <h2>现在注册，即享免费试用</h2>
-        <p>结合百度人工智能技术为您提供免费的技术应用，结合百度人工智能技术为您提供免费的技术应用</p>
-        <div>
-            <a role="button" class="btn-primary large" href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">免费试用</a>
-        </div>
+        <h1>新闻动态</h1>
     </div>
 </section>
 </div>
@@ -299,5 +269,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-</body>
+<script src="/dist/js/support/news/news-con.bundle.js"></script></body>
 </html>
