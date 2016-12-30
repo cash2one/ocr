@@ -68,6 +68,7 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
+            font-size: @font-size-1;
           }
         }
       }
@@ -220,12 +221,14 @@
               color: #999;
               margin-top: 0;
               margin-bottom: 0;
+              font-size: @font-size-1;
             }
           }
 
           hr {
             margin: 20px 0;
             border-color: fadeOut(@black, 97%);
+            border-bottom: 0;
           }
 
           .service-tech-list {
@@ -322,10 +325,9 @@
                 color: @blue;
               }
 
-              &.active::before,
-              &:hover::before {
+              &.active::before {
                 background-color: @blue !important;
-                height: 2px !important;;
+                right: 20px;
               }
 
               span {
@@ -336,7 +338,19 @@
               }
             }
 
-            &:not(:last-child) > a::before {
+            & > a::before {
+              content: "";
+              left: 20px;
+              right: 100%;
+              height: 2px;
+              background-color: transparent;
+              position: absolute;
+              display: inline-block;
+              bottom: 0;
+              .basic-transition(right, 0.5s, ease);
+            }
+
+            &:not(:last-child) > a::after {
               content: "";
               left: 20px;
               right: 20px;
@@ -369,7 +383,7 @@
             &:nth-child(3) .solution-icon {
               .icon (url('../../images/home/solution.png'), -90px, -10px);
             }
-            &:nth-child(3) a.hover .solution-icon,
+            &:nth-child(3) a:hover .solution-icon,
             &:nth-child(3) a.active .solution-icon{
               .icon (url('../../images/home/solution.png'), -90px, -50px);
             }

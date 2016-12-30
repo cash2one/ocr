@@ -200,6 +200,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  font-size: 12px;
 }
 .ai-platform.page-content .news > .container > a {
   float: left;
@@ -349,10 +350,12 @@
   color: #999;
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 12px;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-detail hr {
   margin: 20px 0;
   border-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 0;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-detail .service-tech-list {
   font-size: 12px;
@@ -433,10 +436,9 @@
 .ai-platform.page-content .home-section.solution .solution-container .solution-tab > li > a:hover {
   color: #0073eb;
 }
-.ai-platform.page-content .home-section.solution .solution-container .solution-tab > li > a.active::before,
-.ai-platform.page-content .home-section.solution .solution-container .solution-tab > li > a:hover::before {
+.ai-platform.page-content .home-section.solution .solution-container .solution-tab > li > a.active::before {
   background-color: #0073eb !important;
-  height: 2px !important;
+  right: 20px;
 }
 .ai-platform.page-content .home-section.solution .solution-container .solution-tab > li > a span {
   display: inline-block;
@@ -444,7 +446,21 @@
   line-height: 30px;
   height: 30px;
 }
-.ai-platform.page-content .home-section.solution .solution-container .solution-tab > li:not(:last-child) > a::before {
+.ai-platform.page-content .home-section.solution .solution-container .solution-tab > li > a::before {
+  content: "";
+  left: 20px;
+  right: 100%;
+  height: 2px;
+  background-color: transparent;
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  -webkit-transition: right 0.5s ease 0s;
+  -moz-transition: right 0.5s ease 0s;
+  -o-transition: right 0.5s ease 0s;
+  transition: right 0.5s ease 0s;
+}
+.ai-platform.page-content .home-section.solution .solution-container .solution-tab > li:not(:last-child) > a::after {
   content: "";
   left: 20px;
   right: 20px;
@@ -495,7 +511,7 @@
   background-position-x: -90px;
   background-position-y: -10px;
 }
-.ai-platform.page-content .home-section.solution .solution-container .solution-tab > li:nth-child(3) a.hover .solution-icon,
+.ai-platform.page-content .home-section.solution .solution-container .solution-tab > li:nth-child(3) a:hover .solution-icon,
 .ai-platform.page-content .home-section.solution .solution-container .solution-tab > li:nth-child(3) a.active .solution-icon {
   background-image: url('../../images/home/solution.png');
   background-repeat: no-repeat;

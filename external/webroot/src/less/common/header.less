@@ -7,12 +7,10 @@ header.header-nav{
   height: @header-height;
   background-color: @header-background-color;
   color: @white;
-  border-bottom: 1px solid fadeOut(@white, 95%);
 
   .logo {
     height: 100%;
     width: 100px;
-    background: @template-png no-repeat -10px 0;
     margin-right: 60px;
     display: inline-block;
     float: left;
@@ -21,6 +19,11 @@ header.header-nav{
       display: inline-block;
       height: 100%;
       width: 100%;
+
+      & > img {
+        width: 100%;
+        margin-top: 10px;
+      }
     }
   }
 
@@ -38,10 +41,20 @@ header.header-nav{
         line-height: @header-height;
         padding: 0 4px;
         margin: 0 16px;
-        border-bottom: 3px solid transparent;
         position: relative;
         box-sizing: border-box;
         height: 50px;
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 100%;
+          display: inline-block;
+          height: 3px;
+          background-color: @white;
+          bottom: 0;
+        }
 
         & > a {
           display: inline-block;
@@ -53,6 +66,7 @@ header.header-nav{
 
         .sub-top-nav{
           display: none;
+          opacity: 0;
           position: absolute;
           top: 50px;
           left: -16px;
@@ -89,10 +103,15 @@ header.header-nav{
       }
 
       & > li:hover {
-        border-bottom: 3px solid @white;
+        &::before {
+          right: 0;
+          .basic-transition(right, 0.3s, ease);
+        }
 
         & > .sub-top-nav{
           display: inline-block;
+          opacity: 1;
+          .basic-transition(opacity, 0.5s, ease);
         }
       }
     }
@@ -163,6 +182,7 @@ header.header-nav{
             margin-top: 10px;
             padding: 0 15px;
             width: auto;
+            font-size: @font-size-1;
           }
 
           &.console {
@@ -172,6 +192,7 @@ header.header-nav{
             padding: 0 15px;
             width: auto;
             border: 1px solid @white;
+            font-size: @font-size-1;
 
             &:hover {
               background-color: @blue;
