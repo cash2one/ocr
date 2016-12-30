@@ -68,28 +68,26 @@ $(document).ready(function () {
 
                 $('#demo-result .canvas-container').toggleClass('has-result', res.data.result_num >= 1);
 
-                let normalProbability = 0;
-                let pornProbability = 0;
+                let activeResult = null;
                 for (let i = 0, len = res.data.result.length; i < len; i++) {
                     let record = res.data.result[i];
-                    switch (record.class_name) {
-                        case '一般色情':
-                        case '卡通色情':
-                            pornProbability += record.probability;
-                            break;
-                        default:
-                            normalProbability += record.probability;
+                    if (!activeResult || record.probability > activeResult.probability) {
+                        activeResult = record;
                     }
                 }
 
                 $('#demo-result .canvas-container')
                     .attr('data-probability',
-                        Math.round(
-                            (normalProbability > pornProbability ? normalProbability : pornProbability) * 10000
-                        ) / 100
+                        Math.round(activeResult.probability * 10000) / 100
                     )
-                    .toggleClass('normal', normalProbability > pornProbability)
-                    .toggleClass('pornography', normalProbability <= pornProbability);
+                    .toggleClass(
+                        'normal',
+                        ['一般正常', '卡通正常', '亲子'].indexOf(activeResult.class_name) !== -1
+                    )
+                    .toggleClass(
+                        'pornography',
+                        ['一般色情', '卡通色情'].indexOf(activeResult.class_name) !== -1
+                    );
 
                 isScanning = false;
             },
