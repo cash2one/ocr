@@ -443,19 +443,19 @@
         <h2>视频教程</h2>
         <ul class="video-list clear-float">
             <li>
-                <iframe src="http://www.chuanke.com/?mod=video&act=play&do=share&sf=bd&id=0&key1=3f5e094db42ab367a2de8e351a4f916d&pv=0&ts=1473755503&auth=6dd7f2be63d93444c3d568c35452608c&courseid=185888&sid=5062908"></iframe>
+                <iframe src="http://www.chuanke.com/?mod=video&act=play&do=share&sf=bd&id=0&key1=3f5e094db42ab367a2de8e351a4f916d&pv=0&ts=1473755503&auth=6dd7f2be63d93444c3d568c35452608c&courseid=185888&sid=5062908&auto=1"></iframe>
                 <h5>这里是标题这里是标题</h5>
             </li>
             <li>
-                <iframe src="http://www.chuanke.com/?mod=video&act=play&do=share&sf=bd&id=0&key1=3f5e094db42ab367a2de8e351a4f916d&pv=0&ts=1473755503&auth=6dd7f2be63d93444c3d568c35452608c&courseid=185888&sid=5062908"></iframe>
+                <iframe src="http://www.chuanke.com/?mod=video&act=play&do=share&sf=bd&id=0&key1=3f5e094db42ab367a2de8e351a4f916d&pv=0&ts=1473755503&auth=6dd7f2be63d93444c3d568c35452608c&courseid=185888&sid=5062908&auto=1"></iframe>
                 <h5>这里是标题这里是标题</h5>
             </li>
             <li>
-                <iframe src="http://www.chuanke.com/?mod=video&act=play&do=share&sf=bd&id=0&key1=3f5e094db42ab367a2de8e351a4f916d&pv=0&ts=1473755503&auth=6dd7f2be63d93444c3d568c35452608c&courseid=185888&sid=5062908"></iframe>
+                <iframe src="http://www.chuanke.com/?mod=video&act=play&do=share&sf=bd&id=0&key1=3f5e094db42ab367a2de8e351a4f916d&pv=0&ts=1473755503&auth=6dd7f2be63d93444c3d568c35452608c&courseid=185888&sid=5062908&auto=1"></iframe>
                 <h5>这里是标题这里是标题</h5>
             </li>
             <li>
-                <iframe src="http://www.chuanke.com/?mod=video&act=play&do=share&sf=bd&id=0&key1=3f5e094db42ab367a2de8e351a4f916d&pv=0&ts=1473755503&auth=6dd7f2be63d93444c3d568c35452608c&courseid=185888&sid=5062908"></iframe>
+                <iframe src="http://www.chuanke.com/?mod=video&act=play&do=share&sf=bd&id=0&key1=3f5e094db42ab367a2de8e351a4f916d&pv=0&ts=1473755503&auth=6dd7f2be63d93444c3d568c35452608c&courseid=185888&sid=5062908&auto=1"></iframe>
                 <h5>这里是标题这里是标题</h5>
             </li>
         </ul>
