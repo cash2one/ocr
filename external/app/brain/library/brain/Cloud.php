@@ -17,6 +17,7 @@ class Brain_Cloud {
      * genCloudTemplate 生成百度云模板页面
      * 
      * @static
+     * @param mixed $tech
      * @access public
      * @return void
      */
