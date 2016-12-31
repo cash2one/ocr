@@ -726,8 +726,15 @@
 }
 .comment-demo {
   width: 960px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   font-size: 0;
+}
+.comment-demo-title {
+  font-size: 30px;
+  color: #333333;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 40px;
 }
 .comment-demo-left,
 .comment-demo-right,
@@ -739,7 +746,7 @@
 .comment-demo-left,
 .comment-demo-right {
   width: 40%;
-  border: 1px solid #000;
+  border: 1px solid #c5c5c5;
   padding: 15px;
   font-size: 0;
 }
@@ -751,13 +758,13 @@
   font-size: 14px;
 }
 .attitude-0 {
-  color: red;
+  color: #bd403a;
 }
 .attitude-1 {
-  color: green;
+  color: #51972a;
 }
 .attitude-2 {
-  color: black;
+  color: #828281;
 }
 .comment-title {
   font-size: 0;
@@ -774,13 +781,15 @@
   width: 35%;
   padding-bottom: 8px;
   font-size: 16px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #c5c5c5;
 }
 .comment-positive {
   text-align: left;
+  color: #51972a;
 }
 .comment-negative {
   text-align: right;
+  color: #bd403a;
 }
 .comment-tag-title {
   width: 30%;
@@ -803,29 +812,34 @@
 .comment-negative-value {
   position: absolute;
   top: 50%;
-  margin-top: -5px;
-  height: 10px;
+  margin-top: -4px;
+  height: 8px;
   width: 100%;
 }
 .comment-positive-value {
   left: 0;
-  background-color: green;
+  background-color: #51972a;
 }
 .comment-negative-value {
   right: 0;
-  background-color: red;
+  background-color: #bd403a;
 }
 .comment-tag-name {
+  background-color: #ebebeb;
+}
+.comment-tag-name-container {
   display: inline-block;
+  box-sizing: border-box;
+  padding: 0 8px;
   width: 30%;
   height: 100%;
   line-height: 30px;
-  font-size: 16px;
-  background-color: gray;
+  font-size: 15px;
+  color: #828281;
 }
 .demo-switch {
   padding: 10px 0;
-  color: blue;
+  color: #4d4dff;
   font-size: 14px;
   cursor: pointer;
 }

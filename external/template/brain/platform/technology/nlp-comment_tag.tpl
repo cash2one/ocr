@@ -230,6 +230,7 @@
     </div>
 </div>
 <div class="comment-demo">
+    <div class="comment-demo-title">功能演示</div>
     <div class="demo-switch" id="demo-switch">
         <div class="demo-switch-icon"></div>
         <div class="demo-switch-txt">换一个实例</div>
@@ -247,6 +248,7 @@
         </div>
     </div>
 </div>
+<hr class="nlp-section-border">
 <div class="container">
     <div class="nlp-feature-container">
         <div class="nlp-feature-title">技术特色</div>
@@ -346,6 +348,7 @@
         </div>
     </div>
 </section>
+
 </div>
 <aside class="aside-action">
     <ul>

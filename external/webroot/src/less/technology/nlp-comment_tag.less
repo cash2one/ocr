@@ -13,6 +13,11 @@
 //颜色
 @light-white: #fefefe;
 @dark-gray: #828281;
+@positive: #51972a;
+@negative: #bd403a;
+@light-gray: #ebebeb;
+@gray: darken(@light-gray, 15%);
+@light-blue: lighten(#0000ff, 15%);
 
 // 功能介绍部分
 .@{prefix}-function {
@@ -301,13 +306,21 @@
     }
 }
 
-@bar-height: 10px;
+@bar-height: 8px;
 @tag-item-height: 30px;
 
 .comment-demo {
     width: 960px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     font-size: 0;
+
+    &-title{
+        font-size: 30px;
+        color: #333333;
+        text-align: center;
+        line-height: 50px;
+        margin-top: 40px;
+    }
 
     &-left,
     &-right,
@@ -321,7 +334,7 @@
     &-left,
     &-right {
         width: 40%;
-        border: 1px solid #000;
+        border: 1px solid @gray;
         padding: 15px;
         font-size: 0;
     }
@@ -341,17 +354,17 @@
 .attitude {
     // 负面情绪文字
     &-0 {
-        color: red;
+        color: @negative;
     }
 
     // 正面情绪文字
     &-1 {
-        color: green;
+        color: @positive;
     }
 
     // 无情绪文字
     &-2 {
-        color: black;
+        color: @dark-gray;
     }
 }
 
@@ -374,15 +387,17 @@
         width: 35%;
         padding-bottom: 8px;
         font-size: 16px;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid @gray;
     }
 
     &-positive {
         text-align: left;
+        color: @positive;
     }
 
     &-negative {
         text-align: right;
+        color: @negative;
     }
 
     // 顶部中间占位
@@ -419,28 +434,34 @@
 
     &-positive-value {
         left: 0;
-        background-color: green;
+        background-color: @positive;
     }
 
     &-negative-value {
         right: 0;
-        background-color: red;
+        background-color: @negative;
+    }
+
+    &-tag-name {
+        background-color: @light-gray;
     }
 
     // 关键词
-    &-tag-name {
+    &-tag-name-container {
         display: inline-block;
+        box-sizing: border-box;
+        padding: 0 8px;
         width: 30%;
         height: 100%;
         line-height: @tag-item-height;
-        font-size: 16px;
-        background-color: gray;
+        font-size: 15px;
+        color: @dark-gray;
     }
 }
 
 .demo-switch {
     padding: 10px 0;
-    color: blue;
+    color: @light-blue;
     font-size: 14px;
     cursor: pointer;
 }
