@@ -19,7 +19,7 @@ class Action_Antiporn extends Ap_Action_Abstract {
         $templateFile = Brain_Cloud::genCloudTemplate($tech);
 
         $arrPageInfo = array(
-            'title' => 'xxxxxxx',
+            'title' => '色情识别-百度云',
         );  
 
         Brain_Output::htmlOutput(

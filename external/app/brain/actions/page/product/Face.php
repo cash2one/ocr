@@ -25,9 +25,25 @@ class Action_Face extends Ap_Action_Abstract {
         $tech = $inputKeys[0];
         $templateName = "$class_name-$tech";
 
-
+        $titleList = array(
+            'detect' => '人脸检测-百度云',
+            'search' => '人脸查找-百度云',
+            'compare' => '人脸比较-百度云',
+            'comment_tag' => '评论观点抽取-百度云',
+            'dnnlm_cn' => '中文DNN语言模型-百度云',
+            'lexical' => '词法分析-百度云',
+            'simnet' => '短文本相似度-百度云',
+            'word_embedding' => '中文词向量表示-百度云',
+            'bankcard' => '银行卡识别-百度云',
+            'general' => '通用文字识别-百度云',
+            'idcard' => '身份证识别-百度云',
+            'asr' => '语音识别-百度云',
+            'tts' => '语音合成-百度云',
+            'wake' => '语音唤醒-百度云',
+        );
+        
         $arrPageInfo = array(
-            'title' => 'xxxxxxx',
+            'title' => $titleList[$tech],
         );  
 
         if (in_array($tech, $techList)){
