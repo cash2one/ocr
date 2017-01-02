@@ -32,7 +32,7 @@ $(document).ready(function () {
 
     // 绑定合作咨询模态框
     let consultationModal = new ConsultationModal();
-    $('.consult > a').click(e => {
+    $('body').on('click', '.consult > a', e => {
         e.stopPropagation();
         consultationModal.show();
     });

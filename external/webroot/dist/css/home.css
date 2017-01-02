@@ -143,19 +143,56 @@
   overflow: hidden;
   background-color: #14191e;
   color: #fff;
+  position: relative;
 }
 .ai-platform.page-content .banner ul.banner-content {
   height: 100%;
+  position: relative;
+  width: 1180px;
+  margin: 0 auto;
+}
+.ai-platform.page-content .banner ul.banner-content > li {
+  padding: 100px 0;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  box-sizing: border-box;
+  opacity: 0;
+  z-index: 0;
+  background-color: #14191e;
+}
+.ai-platform.page-content .banner ul.banner-content > li.video-bg video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.ai-platform.page-content .banner ul.banner-content > li.active {
+  opacity: 1;
+  z-index: 9;
+  -webkit-transition: opacity 1.5s ease-in-out 0s;
+  -moz-transition: opacity 1.5s ease-in-out 0s;
+  -o-transition: opacity 1.5s ease-in-out 0s;
+  transition: opacity 1.5s ease-in-out 0s;
+}
+.ai-platform.page-content .banner ul.banner-content > li:nth-child(2) {
   background-image: url('../../images/home/banner.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
   background-position-y: center;
 }
-.ai-platform.page-content .banner ul.banner-content > li {
-  padding: 100px 0;
-  width: 1180px;
-  margin: 0 auto;
+.ai-platform.page-content .banner ul.banner-content > li:nth-child(3) {
+  background-image: url('../../images/home/banner.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position-x: center;
+  background-position-y: center;
 }
 .ai-platform.page-content .banner ul.banner-content > li h1 {
   font-size: 42px;
@@ -175,6 +212,30 @@
   font-size: 18px;
 }
 .ai-platform.page-content .banner ul.banner-content > li .get-started:hover {
+  background-color: #fff;
+}
+.ai-platform.page-content .banner ul.banner-indicator {
+  position: absolute;
+  bottom: 20px;
+  width: 150px;
+  height: 4px;
+  text-align: center;
+  left: 50%;
+  z-index: 99;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.ai-platform.page-content .banner ul.banner-indicator > li {
+  width: 20px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  cursor: pointer;
+}
+.ai-platform.page-content .banner ul.banner-indicator > li.active {
+  width: 30px;
   background-color: #fff;
 }
 .ai-platform.page-content .news {

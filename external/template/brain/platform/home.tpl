@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="shortcut icon" href="/images/favicon-32.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="\dist\css\home.css"></head>
+<link rel="stylesheet" href="/dist/css/home.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -208,22 +208,23 @@
 <div class="ai-platform page-content">
 <section class="banner">
     <ul class="banner-content">
-        <li>
+        <li class="active">
             <h1>人工智能技术 增益您的产品</h1>
             <p>内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案<br>内容文案内容文案内容文案内容</p>
             <div>
                 <a role="button" class="get-started">免费试用</a>
             </div>
+            <video src="/images/home/banner-1.mp4" autoplay></video>
         </li>
         <li>
-            <h1>人工智能技术 增益您的产品</h1>
+            <h1>人工智能技术 增益您的产品222</h1>
             <p>内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案<br>内容文案内容文案内容文案内容</p>
             <div>
                 <a role="button" class="get-started">免费试用1</a>
             </div>
         </li>
         <li>
-            <h1>人工智能技术 增益您的产品</h1>
+            <h1>人工智能技术 增益您的产品1</h1>
             <p>内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案<br>内容文案内容文案内容文案内容</p>
             <div>
                 <a role="button" class="get-started">免费试用2</a>
@@ -419,7 +420,7 @@
                         <p>提供多种服务接驳或答案回复、基于行业场景的私有知识图谱建设</p>
                     </div>
                     <div>
-                        <a role="button" href="#" class="btn-primary">免费试用</a>
+                        <a role="button" href="#" class="btn-primary" href="/solution/robot">了解详情</a>
                     </div>
                 </div>
                 <div id="face-mobile-detect" class="solution-desc">
@@ -430,7 +431,7 @@
                         <p>极大缩短业务办理时间，提升业务的便捷性和安全性</p>
                     </div>
                     <div>
-                        <a role="button" href="#" class="btn-primary">免费试用</a>
+                        <a role="button" href="#" class="btn-primary" href="/solution/faceprint">了解详情</a>
                     </div>
                 </div>
                 <div id="face-gate" class="solution-desc">
@@ -440,7 +441,7 @@
                         <p>实现企业人脸门禁管理，打造便捷、安全、可靠的企业环境与品牌形象</p>
                     </div>
                     <div>
-                        <a role="button" href="#" class="btn-primary">免费试用</a>
+                        <a role="button" href="#" class="btn-primary" href="/solution/facegate">了解详情</a>
                     </div>
                 </div>
                 <div id="phone-dialing-test" class="solution-desc">
@@ -450,7 +451,7 @@
                         <p>可广泛用于营销补贴业务的反作弊、反欺诈领域</p>
                     </div>
                     <div>
-                        <a role="button" href="#" class="btn-primary">免费试用</a>
+                        <a role="button" href="#" class="btn-primary" href="/solution/dialog">了解详情</a>
                     </div>
                 </div>
             </div>
@@ -608,5 +609,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="\dist\js\home.bundle.js"></script></body>
+<script src="/dist/js/home.bundle.js"></script></body>
 </html>
