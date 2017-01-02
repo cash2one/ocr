@@ -61,6 +61,8 @@ class Action_Subscribe extends Ap_Action_Abstract {
                 try {
                     $arrSub = $dbSubscribe->insertSubscribe($strName, $sex, $strEmail);
                 } catch (Exception $e) {
+                    Bd_Log::warning('Db operate fail: '.$e->getMessage());
+                    Brain_Output::jsonOutput(1, 'Db operate fail');
                 }
                 Brain_Output::jsonOutput(0, 'success');
             }
@@ -68,6 +70,8 @@ class Action_Subscribe extends Ap_Action_Abstract {
                 try {
                     $dbSubscribe->subscribe($strEmail, 'all', $strReason); 
                 } catch (Exception $e) {
+                    Bd_Log::warning('Db operate fail: '.$e->getMessage());
+                    Brain_Output::jsonOutput(1, 'Db operate fail');
                 }
                 Brain_Output::jsonOutput(0, 'success');
             }
@@ -102,6 +106,8 @@ class Action_Subscribe extends Ap_Action_Abstract {
                 try {
                     $dbSubscribe->subscribe($strEmail, 'important', $strReason);
                 } catch (Exception $e) {
+                    Bd_Log::warning('Db operate fail: '.$e->getMessage());
+                    Brain_Output::jsonOutput(1, 'Db operate fail');
                 }
                 //Brain_Output::jsonOutput(0, 'subscribe important info success!');
             }
@@ -110,6 +116,8 @@ class Action_Subscribe extends Ap_Action_Abstract {
                 try {
                     $dbSubscribe->subscribe($strEmail, 'none', $strReason);
                 } catch (Exception $e) {
+                    Bd_Log::warning('Db operate fail: '.$e->getMessage());
+                    Brain_Output::jsonOutput(1, 'Db operate fail');
                 }
                 //Brain_Output::jsonOutput(0, 'cancel subscribe success!');
             } else {
