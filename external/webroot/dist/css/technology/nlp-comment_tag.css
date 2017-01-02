@@ -537,7 +537,7 @@
   margin-top: 25px;
 }
 .nlp-function-list .list-title {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 25px;
   padding-left: 13px;
   margin: 0;
@@ -560,7 +560,7 @@
   font-size: 12px;
   line-height: 15px;
   margin: 0;
-  padding-left: 6px;
+  padding: 3px 0 3px 6px;
   position: relative;
 }
 .nlp-function-list .list-intro:before {
@@ -570,7 +570,7 @@
   height: 2px;
   background: #fff;
   position: absolute;
-  top: 7px;
+  top: 10px;
   left: 0;
 }
 .nlp-feature-title {
@@ -587,7 +587,10 @@
   width: 33.333%;
   box-sizing: border-box;
   vertical-align: top;
-  padding: 0 50px;
+  padding: 10px 50px 0;
+}
+.nlp-feature-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 .nlp-feature-icon {
   display: block;
@@ -623,7 +626,9 @@
   color: #828281;
 }
 .nlp-section-border {
-  border: 1px solid #efefef;
+  border: 0;
+  height: 1px;
+  background-color: #efefef;
 }
 .nlp-scenario {
   font-size: 0;
@@ -636,11 +641,14 @@
 .nlp-scenario-item {
   display: inline-block;
   width: 33.333%;
-  padding: 0 15px;
+  padding: 5px 15px 0;
   margin-bottom: 20px;
   box-sizing: border-box;
   vertical-align: top;
   font-size: 0;
+}
+.nlp-scenario-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 .nlp-scenario-header {
   font-size: 18px;
@@ -653,7 +661,7 @@
 .nlp-scenario-icon {
   width: 25%;
   display: inline-block;
-  background: url("../../../images/technology/nlp-comment/icon.png") no-repeat;
+  background: url("/images/technology/nlp-comment/icon.png") no-repeat;
   background-size: 260px 134px;
 }
 .nlp-scenario-icon.scenario-1 {
@@ -843,8 +851,19 @@
   color: #828281;
 }
 .demo-switch {
-  padding: 10px 0;
-  color: #4d4dff;
+  position: relative;
+  padding: 10px 0 10px 25px;
+  color: #0073eb;
   font-size: 14px;
   cursor: pointer;
+}
+.demo-switch:before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 0;
+  display: block;
+  width: 17px;
+  height: 17px;
+  background: url("/images/technology/nlp-lexer/change-icon.png") no-repeat;
 }

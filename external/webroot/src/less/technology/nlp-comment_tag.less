@@ -17,7 +17,7 @@
 @negative: #bd403a;
 @light-gray: #ebebeb;
 @gray: darken(@light-gray, 15%);
-@light-blue: lighten(#0000ff, 15%);
+@light-blue: #0073eb;
 
 // 功能介绍部分
 .@{prefix}-function {
@@ -55,7 +55,7 @@
         }
 
         .list-title{
-            font-size: @font-size-3;
+            font-size: @font-size-2;
             line-height: 25px;
             padding-left: 13px;
             margin: 0;
@@ -81,7 +81,7 @@
             font-size: @font-size-1;
             line-height: 15px;
             margin: 0;
-            padding-left: 6px;
+            padding: 3px 0 3px 6px;
             position: relative;
 
             &:before{
@@ -91,7 +91,7 @@
                 height: 2px;
                 background: @white;
                 position: absolute;
-                top: 7px;
+                top: 10px;
                 left: 0;
             }
         }
@@ -122,7 +122,11 @@
         width: 33.333%;
         box-sizing: border-box;
         vertical-align: top;
-        padding: 0 @feature-padding / 2;
+        padding: 10px @feature-padding / 2 0;
+
+        &:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
     }
 
     // 特色图标
@@ -164,7 +168,9 @@
 
 // 分割线
 .@{prefix}-section-border {
-    border: 1px solid #efefef;
+    border: 0;
+    height: 1px;
+    background-color: #efefef;
 }
 
 
@@ -202,11 +208,15 @@
     &-item {
         display: inline-block;
         width: 33.333%;
-        padding: 0 @scenario-padding / 2;
+        padding: 5px @scenario-padding / 2 0;
         margin-bottom: 20px;
         box-sizing: border-box;
         vertical-align: top;
         font-size: 0;
+
+        &:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
     }
 
     // 使用场景标题
@@ -224,7 +234,7 @@
     &-icon {
         width: 25%;
         display: inline-block;
-        background: url("../../../images/technology/nlp-comment/icon.png") no-repeat;
+        background: url("/images/technology/nlp-comment/icon.png") no-repeat;
         background-size: 260px 134px;
 
         &.scenario-1 {
@@ -460,8 +470,20 @@
 }
 
 .demo-switch {
-    padding: 10px 0;
+    position: relative;
+    padding: 10px 0 10px 25px;
     color: @light-blue;
     font-size: 14px;
     cursor: pointer;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 12px;
+        left: 0;
+        display: block;
+        width: 17px;
+        height: 17px;
+        background: url("/images/technology/nlp-lexer/change-icon.png") no-repeat;
+    }
 }

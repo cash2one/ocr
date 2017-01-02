@@ -520,7 +520,11 @@
   width: 33.333%;
   box-sizing: border-box;
   vertical-align: top;
-  padding: 0 50px;
+  padding: 10px 50px 0;
+}
+.nlp-feature-item:hover {
+  opacity: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 .nlp-feature-icon {
   display: block;
@@ -550,12 +554,14 @@
 .nlp-feature-info {
   height: 150px;
   padding: 0 5px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 25px;
   color: #828281;
 }
 .nlp-section-border {
-  border: 1px solid #efefef;
+  border: 0;
+  height: 1px;
+  background-color: #efefef;
 }
 .nlp-scenario {
   font-size: 0;
@@ -568,11 +574,15 @@
 .nlp-scenario-item {
   display: inline-block;
   width: 33.333%;
-  padding: 0 15px;
+  padding: 5px 15px 0;
   margin-bottom: 20px;
   box-sizing: border-box;
   vertical-align: top;
   font-size: 0;
+}
+.nlp-scenario-item:hover {
+  opacity: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 .nlp-scenario-header {
   font-size: 18px;
@@ -652,7 +662,7 @@
 }
 .nlp-function-name {
   font-size: 18px;
-  padding: 12px 0;
+  padding: 12px 0 10px;
 }
 .nlp-function-icon {
   display: block;
@@ -680,7 +690,7 @@
   line-height: 25px;
 }
 .nlp-function-info {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
 }
 .lexer-demo {
@@ -689,7 +699,7 @@
 }
 .lexer-demo-title {
   font-size: 30px;
-  color: #333333;
+  color: #333;
   text-align: center;
   line-height: 50px;
   margin-top: 40px;
@@ -697,8 +707,8 @@
 .lexer-demo-case {
   min-height: 50px;
   padding: 20px;
-  border: 1px solid #cccccc;
-  color: #666666;
+  border: 1px solid #ccc;
+  color: #666;
 }
 .lexer-demo-result {
   padding: 0 20px;
