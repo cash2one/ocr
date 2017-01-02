@@ -148,7 +148,6 @@
   padding-right: 0;
   font-size: 0;
   border-left: 1px solid #ebebeb;
-  background-color: #fcfcfc;
 }
 .sdk-aside,
 .sdk-main {
@@ -157,12 +156,14 @@
   box-sizing: border-box;
 }
 .sdk-aside {
-  width: 25%;
+  width: 20%;
 }
 .sdk-aside-header {
+  margin: 0 -10px;
   height: 45px;
   line-height: 45px;
   padding: 0 25px;
+  border-bottom: 1px solid #efefef;
   font-size: 16px;
 }
 .sdk-nav-item {
@@ -176,7 +177,7 @@
   cursor: pointer;
 }
 .sdk-main {
-  width: 75%;
+  width: 80%;
   box-sizing: border-box;
   padding-left: 20px;
   border-left: 1px solid #ebebeb;
@@ -198,7 +199,7 @@
 }
 .sdk-download-button {
   position: absolute;
-  bottom: 15px;
+  bottom: 25px;
   left: 10px;
   width: 28%;
   line-height: 30px;
@@ -223,7 +224,7 @@
   display: inline-block;
   box-sizing: border-box;
   width: 33.333%;
-  padding: 5px;
+  padding: 10px;
 }
 .sdk-item {
   position: relative;
@@ -243,7 +244,7 @@
 }
 .sdk-version {
   font-size: 12px;
-  padding: 3px 0;
+  padding: 3px 0 10px;
 }
 .sdk-update-date {
   font-size: 12px;

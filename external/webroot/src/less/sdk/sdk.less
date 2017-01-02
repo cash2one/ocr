@@ -29,7 +29,7 @@
     // inline-block 3px
     font-size: 0;
     border-left: 1px solid @gray;
-    background-color: @light-gray;
+    // background-color: @light-gray;
 }
 
 .@{prefix}-aside,
@@ -41,14 +41,16 @@
 
 // 左侧导航
 .@{prefix}-aside {
-    width: 25%;
+    width: 20%;
 }
 
 // 左侧导航栏title
 .@{prefix}-aside-header {
+    margin: 0 -10px;
     height: @nav-header-height;
     line-height: @nav-header-height;
     padding: 0 @nav-padding;
+    border-bottom: 1px solid #efefef;
     font-size: @font-size-3;
 }
 
@@ -67,7 +69,7 @@
 
 // 右侧主体
 .@{prefix}-main {
-    width: 75%;
+    width: 80%;
     box-sizing: border-box;
     padding-left: 20px;
     border-left: 1px solid @gray;
@@ -97,7 +99,7 @@
 .@{prefix}-download-button {
     position: absolute;
     // 下padding + 偏移
-    bottom: 10px + 5px;
+    bottom: 20px + 5px;
     left: 10px;
     // 按键占侧栏宽度的80%
     width: 0.8 * @item-aside-radio;
@@ -135,7 +137,7 @@
     display: inline-block;
     box-sizing: border-box;
     width: 33.333%;
-    padding: 5px;
+    padding: 10px;
 }
 
 // 一个sdk项
@@ -164,7 +166,7 @@
 // sdk版本
 .@{prefix}-version {
     font-size: @font-size-1;
-    padding: 3px 0;
+    padding: 3px 0 10px;
 }
 
 // sdk更新日期
