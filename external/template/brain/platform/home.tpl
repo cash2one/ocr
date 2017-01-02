@@ -208,7 +208,7 @@
 <div class="ai-platform page-content">
 <section class="banner">
     <ul class="banner-content">
-        <li class="active">
+        <li class="active video-bg">
             <h1>人工智能技术 增益您的产品</h1>
             <p>内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案<br>内容文案内容文案内容文案内容</p>
             <div>
