@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="shortcut icon" href="/images/favicon-32.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="\dist\css\technology\nlp-word_embedding.css"></head>
+<link rel="stylesheet" href="/dist/css/technology/nlp-word_embedding.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -208,8 +208,8 @@
 <div class="ai-platform page-content">
 <section class="tech-section tech-banner">
     <div class="container">
-        <h1>词向量计算</h1>
-        <p>文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容文案内容</p>
+        <h1>中文DNN词向量</h1>
+        <p>依托全网海量优质数据和深度神经网络技术<br>对词表中的词语向量化，实现文本的可计算</p>
         <div>
             <a role="button" class="btn-primary media">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
@@ -298,6 +298,7 @@
         </div>
     </div>
 </section>
+
 </div>
 <aside class="aside-action">
     <ul>
@@ -369,5 +370,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="\dist\js\technology\nlp-word_embedding.bundle.js"></script></body>
+<script src="/dist/js/technology/nlp-word_embedding.bundle.js"></script></body>
 </html>

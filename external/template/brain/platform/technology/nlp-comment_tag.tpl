@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="shortcut icon" href="/images/favicon-32.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="\dist\css\technology\nlp-comment_tag.css"></head>
+<link rel="stylesheet" href="/dist/css/technology/nlp-comment_tag.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -209,7 +209,7 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>评论观点抽取</h1>
-        <p>文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容文案内容</p>
+        <p>自动抽取和分析消费者评论观点<br>助力商家产品优化，指导用户消费决策</p>
         <div>
             <a role="button" class="btn-primary media">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
@@ -431,5 +431,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="\dist\js\technology\nlp-comment_tag.bundle.js"></script></body>
+<script src="/dist/js/technology/nlp-comment_tag.bundle.js"></script></body>
 </html>

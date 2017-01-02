@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="shortcut icon" href="/images/favicon-32.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="\dist\css\technology\nlp-lexical.css"></head>
+<link rel="stylesheet" href="/dist/css/technology/nlp-lexical.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -209,7 +209,7 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>词法分析</h1>
-        <p>文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
+        <p>基于大数据和用户行为的分词、词性标注、命名实体识别<br>定位基本语言元素，消除歧义，支撑自然语言的准确理解</p>
         <div>
             <a role="button" class="btn-primary media">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
@@ -398,5 +398,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="\dist\js\technology\nlp-lexical.bundle.js"></script></body>
+<script src="/dist/js/technology/nlp-lexical.bundle.js"></script></body>
 </html>
