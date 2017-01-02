@@ -818,6 +818,31 @@ const paintDemo = demoNum => {
                 .addClass('selected');
         });
 
+    $segmentation
+        .find('.lexer-demo-block')
+        .on('click', ({target}) => {
+            const $target = $(target);
+
+            // 已经选中的点击无效
+            if ($target.hasClass('selected')) {
+                return;
+            }
+
+            const wordType = $target.attr('data-word-type');
+            $target
+                .siblings()
+                .removeClass('selected')
+                .end()
+                .addClass('selected');
+
+            $wordType
+                .children()
+                .removeClass('selected')
+                .end()
+                .find(`[data-word-type="${wordType}"]`)
+                .addClass('selected');
+        });
+
     let termTmp = {};
     // 填充专业名词
     termsData[demoNum].forEach(({type, block}) => {
