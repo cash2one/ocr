@@ -64,6 +64,36 @@
     &:hover {
         color: @blue;
         cursor: pointer;
+
+        .sdk-nav-icon {
+            background-image: url(../../../images/sdk/icon-sprite-active.png);
+        }
+    }
+}
+
+.@{prefix}-nav-icon {
+    display: inline-block;
+    background: url(../../../images/sdk/icon-sprite.png) no-repeat;
+    vertical-align: middle;
+
+    &-bs {
+        .nav-icon-sprite(-5px, -5px, 32px, 32px);
+    }
+
+    &-ocr {
+        .nav-icon-sprite(-47px, -5px, 32px, 32px);
+    }
+
+    &-bfr {
+        .nav-icon-sprite(-89px, -5px, 32px, 32px);
+    }
+
+    &-nlp {
+        .nav-icon-sprite(-131px, -5px, 32px, 32px);
+    }
+
+    &-anti-porn {
+        .nav-icon-sprite(-173px, -5px, 32px, 32px);
     }
 }
 
@@ -266,4 +296,10 @@
     &.@{prefix}-bs {
         .category-stitches-sprite(-169px, -5px, 60px, 59px);
     }
+}
+
+.nav-icon-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
 }

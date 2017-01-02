@@ -176,6 +176,39 @@
   color: #0073eb;
   cursor: pointer;
 }
+.sdk-nav-item:hover .sdk-nav-icon {
+  background-image: url(../../../images/sdk/icon-sprite-active.png);
+}
+.sdk-nav-icon {
+  display: inline-block;
+  background: url(../../../images/sdk/icon-sprite.png) no-repeat;
+  vertical-align: middle;
+}
+.sdk-nav-icon-bs {
+  background-position: -5px -5px;
+  width: 32px;
+  height: 32px;
+}
+.sdk-nav-icon-ocr {
+  background-position: -47px -5px;
+  width: 32px;
+  height: 32px;
+}
+.sdk-nav-icon-bfr {
+  background-position: -89px -5px;
+  width: 32px;
+  height: 32px;
+}
+.sdk-nav-icon-nlp {
+  background-position: -131px -5px;
+  width: 32px;
+  height: 32px;
+}
+.sdk-nav-icon-anti-porn {
+  background-position: -173px -5px;
+  width: 32px;
+  height: 32px;
+}
 .sdk-main {
   width: 80%;
   box-sizing: border-box;
