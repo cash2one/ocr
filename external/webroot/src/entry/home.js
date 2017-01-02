@@ -35,8 +35,8 @@ $(document).ready(function () {
                 if (i === (currentBannerNum % banners.length)) {
                     video.play();
                 } else {
-                    video.pause();
                     video.currentTime = 0;
+                    video.pause();
                 }
             }
         });
