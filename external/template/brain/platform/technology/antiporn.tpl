@@ -209,7 +209,7 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>黄反识别</h1>
-        <p>文案内容文案内容文案内容文案内容文案内容文案内容文案容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
+        <p>智能鉴别色情图片内容<br>保驾产品内容健康运行</p>
         <div>
             <a role="button" class="btn-primary media">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
@@ -252,7 +252,7 @@
                         <label id="demo-photo-upload"><input type="file">本地上传</label>
                     </div>
                     <p class="demo-desc">
-                        提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片。图片大小不超过2M，长边不超过2048像素。为保证正常识别效果，请保证需要识别部分为图片主体部分。</p>
+                        提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片，图片大小不超过2M。为保证正常识别效果，请保证需要识别部分为图片主体部分。</p>
                 </div>
                 <div class="data-view-container">
                     <div class="data-view" data-label="RESPONSE JSON" id="demo-json">
@@ -362,8 +362,7 @@
             <div class="container">
                 <div class="case-icon"></div>
                 <h2>百度糯米</h2>
-                <p>百度糯米是百度出品的一款移动团购软件，集合了一系列本地生活服务<br>
-                    调用百度银行卡OCR接口进行用户、商户的银行卡的识别绑定，减少了用户操作，提高了用户体验</p>
+                <p>使用黄反服务，避免糯米用户上传色情图片</p>
             </div>
         </li>
         <li class="case-item">
@@ -471,7 +470,7 @@
         </nav>
     </div>
     <div class="container">
-        <p class="copyright">©2016 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
+        <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>

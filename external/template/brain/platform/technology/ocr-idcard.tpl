@@ -209,7 +209,7 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>身份证识别</h1>
-        <p>文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
+        <p>基于业界领先的深度学习技术<br>为用户提供二代身份证正反面识别服务</p>
         <div>
             <a role="button" class="btn-primary media">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
@@ -252,7 +252,7 @@
                     <label id="demo-photo-upload"><input type="file" >本地上传</label>
                 </div>
 
-                <p class="demo-desc">提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片。图片大小不超过2M，长边不超过2048像素。为保证正常识别效果，请保持身份证正面向上，并为图片主体部分此演示暂只支持正面识别。</p>
+                <p class="demo-desc">提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片，图片大小不超过2M。为保证正常识别效果，请保持身份证正面向上，并为图片主体部分此演示暂只支持正面识别。</p>
                 <ul class="demo-card-list clear-float">
                     <li>
                         <img src="/images/technology/ocr-idcard/demo-card-1.png">
@@ -450,7 +450,7 @@
         </nav>
     </div>
     <div class="container">
-        <p class="copyright">©2016 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
+        <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
