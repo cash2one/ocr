@@ -7,12 +7,14 @@
 class Controller_Main extends Ap_Controller_Abstract {
     public $actions = array(
         'home' => 'actions/page/Home.php',
-        //'speech' => 'actions/page/Speech.php',
+        'speech' => 'actions/page/Speech.php',
         'image' => 'actions/page/Image.php',
-        //'ml' => 'actions/page/Ml.php',
-        //'bigdata' => 'actions/page/BigData.php',
-        //'nlp' => 'actions/page/Nlp.php',
-        //'userprofile' => 'actions/page/UserProfile.php',
+        'ml' => 'actions/page/Ml.php',
+        'bigdata' => 'actions/page/BigData.php',
+        'nlp' => 'actions/page/Nlp.php',
+        'userprofile' => 'actions/page/UserProfile.php',
+
+        'passport' => 'actions/page/Passport.php',
 
         'news' => 'actions/page/News.php',
         'case' => 'actions/page/Case.php',
