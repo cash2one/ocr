@@ -299,16 +299,16 @@ header.header-nav .login > ul > li > a {
   display: inline-block;
 }
 header.header-nav .login > ul > li > a.free-demo {
-  height: 26px;
-  line-height: 26px;
+  height: 28px;
+  line-height: 28px;
   margin-top: 10px;
   padding: 0 15px;
   width: auto;
   font-size: 12px;
 }
 header.header-nav .login > ul > li > a.console {
-  height: 26px;
-  line-height: 26px;
+  height: 28px;
+  line-height: 28px;
   margin-top: 10px;
   padding: 0 15px;
   width: auto;
@@ -360,6 +360,7 @@ header.header-nav .login > ul > li > a.console:hover {
   float: left;
   margin-top: 2px;
   margin-right: 10px;
+  background-size: 145px 78px;
 }
 #tech-service .sub-tech-title {
   position: relative;
@@ -452,6 +453,9 @@ header.header-nav .login > ul > li > a.console:hover {
   margin-top: 10px;
   margin-right: 1%;
 }
+#tech-service #tech-nlp {
+  margin-top: -55px;
+}
 #tech-service #tech-ar {
   width: 16%;
   margin-top: 10px;
@@ -459,44 +463,44 @@ header.header-nav .login > ul > li > a.console:hover {
 #tech-service #tech-speech .tech-title-icon {
   background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
-  background-position: -130px -10px;
-  background-position-x: -130px;
-  background-position-y: -10px;
+  background-position: -5px -2px;
+  background-position-x: -5px;
+  background-position-y: -2px;
 }
 #tech-service #tech-image .tech-title-icon {
   background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
-  background-position: -190px -10px;
-  background-position-x: -190px;
-  background-position-y: -10px;
+  background-position: -25px -2px;
+  background-position-x: -25px;
+  background-position-y: -2px;
 }
 #tech-service #tech-nlp .tech-title-icon {
   background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
-  background-position: -160px -10px;
-  background-position-x: -160px;
-  background-position-y: -10px;
+  background-position: -45px -2px;
+  background-position-x: -45px;
+  background-position-y: -2px;
 }
 #tech-service #tech-user-profile .tech-title-icon {
   background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
-  background-position: -220px -10px;
-  background-position-x: -220px;
-  background-position-y: -10px;
+  background-position: -65px -2px;
+  background-position-x: -65px;
+  background-position-y: -2px;
 }
 #tech-service #tech-machine-learning .tech-title-icon {
   background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
-  background-position: -250px -10px;
-  background-position-x: -250px;
-  background-position-y: -10px;
+  background-position: -85px -2px;
+  background-position-x: -85px;
+  background-position-y: -2px;
 }
 #tech-service #tech-ar .tech-title-icon {
   background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
-  background-position: -100px -10px;
-  background-position-x: -100px;
-  background-position-y: -10px;
+  background-position: -105px -2px;
+  background-position-x: -105px;
+  background-position-y: -2px;
 }
 footer.footer-nav {
   background-color: #333;
@@ -612,6 +616,20 @@ aside.aside-action ul > li > a {
   height: 36px;
   position: relative;
 }
+aside.aside-action ul > li > a:after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  left: 8px;
+  top: 8px;
+  text-align: center;
+  background-size: 145px 78px;
+}
+aside.aside-action ul > li > a:hover::after {
+  display: none;
+}
 aside.aside-action ul > li > a:hover::before {
   content: attr(data-spec);
   background-color: #0073eb;
@@ -630,29 +648,29 @@ aside.aside-action ul > li > a:hover::before {
 aside.aside-action ul > li + li {
   border-top: 1px solid #005fc2;
 }
-aside.aside-action ul > li.consult > a {
+aside.aside-action ul > li.consult > a:after {
   background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
-  background-position: -120px -40px;
-  background-position-x: -120px;
-  background-position-y: -40px;
+  background-position: -65px -22px;
+  background-position-x: -65px;
+  background-position-y: -22px;
 }
-aside.aside-action ul > li.feedback > a {
+aside.aside-action ul > li.feedback > a:after {
   background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
-  background-position: -150px -40px;
-  background-position-x: -150px;
-  background-position-y: -40px;
+  background-position: -85px -22px;
+  background-position-x: -85px;
+  background-position-y: -22px;
 }
 aside.aside-action ul > li.back-top {
   display: none;
 }
-aside.aside-action ul > li.back-top > a {
+aside.aside-action ul > li.back-top > a:after {
   background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
-  background-position: -180px -40px;
-  background-position-x: -180px;
-  background-position-y: -40px;
+  background-position: -125px -2px;
+  background-position-x: -125px;
+  background-position-y: -2px;
 }
 .modal-show {
   overflow: hidden;
@@ -829,9 +847,9 @@ aside.aside-action ul > li.back-top > a {
   height: 60px;
   background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
-  background-position: -200px -80px;
+  background-position: -200px -85px;
   background-position-x: -200px;
-  background-position-y: -80px;
+  background-position-y: -85px;
 }
 .modal .modal-content .consult-success > p {
   text-align: center;
@@ -844,9 +862,9 @@ aside.aside-action ul > li.back-top > a {
   height: 60px;
   background-image: url('../../../images/template.png');
   background-repeat: no-repeat;
-  background-position: -130px -80px;
+  background-position: -130px -85px;
   background-position-x: -130px;
-  background-position-y: -80px;
+  background-position-y: -85px;
 }
 .modal .modal-content .consult-fail > p {
   text-align: center;

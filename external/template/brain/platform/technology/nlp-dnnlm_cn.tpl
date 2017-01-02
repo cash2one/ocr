@@ -11,7 +11,7 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="icon" href="/images/favicon.ico">
+    <link rel="shortcut icon" href="/images/favicon-32.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
 <link rel="stylesheet" href="\dist\css\technology\nlp-dnnlm_cn.css"></head>
 <body class="ai-platform">
@@ -55,9 +55,9 @@
                                 <span>OCR文字识别</span>
                             </div>
                             <ul class="tech-list">
+                                <li><a href="/tech/ocr/general">通用文字识别</a></li>
                                 <li><a href="/tech/ocr/idcard">身份证识别</a></li>
                                 <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
-                                <li><a href="/tech/ocr/general">通用印刷文字识别</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>人脸识别</span>
@@ -89,7 +89,7 @@
                                 <span>短文本级</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/nlp/dnnlm_cn">中文DNN模型</a></li>
+                                <li><a href="/tech/nlp/dnnlm_cn">中文DNN语言模型</a></li>
                                 <li><a href="/tech/nlp/simnet">短文本相似度</a></li>
                                 <li><a href="/tech/nlp/comment_tag">评论观点抽取</a></li>
                             </ul>
@@ -130,13 +130,13 @@
                         </li>
                         <li id="tech-ar">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>增强现实
+                                <span class="tech-title-icon"></span>AR增强现实
                             </div>
                             <div class="sub-tech-title">
-                                <span>AR</span>
+                                <span>AR增强现实</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/ar">AR</a></li>
+                                <li><a href="/tech/ar">AR增强现实</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -147,7 +147,7 @@
                         <li><a href="/solution/robot">机器人</a></li>
                         <li><a href="/solution/faceprint">人脸核身</a></li>
                         <li><a href="/solution/facegate">人脸闸机</a></li>
-                        <li><a href="/solution/dialog">拨测服务</a></li>
+                        <li><a href="/solution/dialog">号码风险识别</a></li>
                     </ul>
                 </li>
                 <li>
@@ -170,7 +170,7 @@
         <div class="login">
             <!--<ul>
                 {%if $userInfo eq Null%}
-                <li><a href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">登录</a></li>
+                <li><a href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://ai.baidu.com)">登录</a></li>
                 <li><a class="btn-primary free-demo" role="button" href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
@@ -187,7 +187,7 @@
             </ul>-->
             <ul>
                 {%if $userInfo eq Null%}
-                <li><a href="https://login.bcetest.baidu.com?redirect=encodeURIComponent(https://qasandbox.bcetest.baidu.com/ai/)">登录</a></li>
+                <li><a href="https://login.bcetest.baidu.com?redirect=encodeURIComponent(https://cp01-yf-db-02.epc.baidu.com:8030/)">登录</a></li>
                 <li><a class="btn-primary free-demo" role="button" href="https://login.bcetest.baidu.com?redirect=encodeURIComponent(https://qasandbox.bcetest.baidu.com/ai/)">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
@@ -208,7 +208,7 @@
 <div class="ai-platform page-content">
 <section class="tech-section tech-banner">
     <div class="container">
-        <h1>中文DNN模型</h1>
+        <h1>中文DNN语言模型</h1>
         <p>文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
         <div>
             <a role="button" class="btn-primary media">获取API Key</a>
@@ -220,7 +220,7 @@
     <div class="container">
         <h2>功能介绍</h2>
         <p>语言模型是通过计算给定词组成的句子的概率，从而判断所组成的句子是否符合客观语言表达习惯<br>
-            计算一个句子的概率对于自然语言处理任务而言意义重大，语言模型通常用于机器翻译、拼写纠错、语音识别、问答系统、词性标注、句法分析和信息检索等</p>
+            通常用于机器翻译、拼写纠错、语音识别、问答系统、词性标注、句法分析和信息检索等</p>
         <div class="tech-intro-detail">
             <ul class="intro-demo">
                 <li class="bad">
@@ -251,7 +251,7 @@
                 <div class="demo-result">
                     <ul id="demo-options"></ul>
                     <div class="demo-score">
-                        <small class="demo-score-desc">说明：该分值表明选项内容与文字的契合度数值接近于0，则契合度越好。</small>
+                        <small class="demo-score-desc">说明：该分值表明选项内容与文字的契合度，数值越接近于0，则契合度越好。</small>
                         <div class="demo-score-detail"></div>
                     </div>
                 </div>
@@ -289,21 +289,21 @@
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
                     <h3>拼写纠错</h3>
-                    <p>在用户输入的query中经常出现拼写错误的情况，语言模型可以给出一个基于句子上下文概率最高的词对用户的输入进行纠错</p>
+                    <p>针对用户输入的query中经常出现拼写错误的情况，语言模型可以给出一个基于句子上下文概率最高的词对用户的输入进行纠错</p>
                 </div>
             </div>
             <div class="scene-item shadow">
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
                     <h3>对话系统</h3>
-                    <p>用于识别用户输入的句子是否符合语言表达习惯，便于后续用户需求识别</p>
+                    <p>用于识别用户输入的句子是否符合语言表达习惯，便于识别用户后续需求</p>
                 </div>
             </div>
             <div class="scene-item shadow">
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
                     <h3>机器翻译</h3>
-                    <p>语言模型对翻译候选的打分可以作为一个重要的衡量指标</p>
+                    <p>语言模型对翻译候选内容的打分可以作为一个重要的衡量指标</p>
                 </div>
             </div>
         </div>
@@ -315,14 +315,14 @@
             <div class="container">
                 <div class="case-icon"></div>
                 <h2>度秘聊天系统</h2>
-                <p>语言模型用于度秘聊天系统，识别用户输入的句子是否符合语言表达习惯，并引导输入错误的用户是否需要澄清自己的需求</p>
+                <p>语言模型用于度秘聊天系统，识别用户输入的句子是否符合语言表达习惯<br>并引导输入错误的用户判断是否需要澄清自己的需求</p>
             </div>
         </li>
         <li class="case-item">
             <div class="container">
                 <div class="case-icon"></div>
                 <h2>百度知道</h2>
-                <p>语言模型应用于百度知道中识别用户的无意义问句</p>
+                <p>语言模型应用于识别百度知道中用户的无意义问句</p>
             </div>
         </li>
         <li class="case-item">
@@ -342,8 +342,8 @@
 {%if $userInfo eq Null%}
 <section class="tech-section get-started">
     <div class="container">
-        <h2>现在注册，即享免费试用</h2>
-        <p>结合百度人工智能技术为您提供免费的技术应用，结合百度人工智能技术为您提供免费的技术应用</p>
+        <h2>立即获取免费API Key</h2>
+        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
         <div>
             <a role="button" class="btn-primary large" href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">免费试用</a>
         </div>
@@ -356,18 +356,17 @@
         <div class="guide-link clear-float">
             <h3>开发指南</h3>
             <ul>
-                <li><a>技术文档 ></a></li>
-                <li><a>SDK下载 ></a></li>
-                <li><a>教学视频 ></a></li>
+                <li><a href="/docs">技术文档 ></a></li>
+                <li><a href="/sdk">SDK下载 ></a></li>
             </ul>
         </div>
         <div class="question-link clear-float">
             <h3>常见问题</h3>
             <ul>
-                <li><a>图片分辨率有什么要求？</a></li>
-                <li><a>图片大小是否有限制？</a></li>
-                <li><a>请求qps是否有限制？</a></li>
-                <li><a>低质量的色情图片能否正常识别？</a></li>
+                <li><a>输入编码是什么?</a></li>
+                <li><a>结果中的词性标注都是什么含义?</a></li>
+                <li><a>短文本相似度对文字字数有什么限制?</a></li>
+                <li><a>中文DNN语言模型对文本个数有什么限制？</a></li>
             </ul>
         </div>
     </div>
@@ -384,19 +383,20 @@
     <div class="container clear-float">
         <div class="footer-links">
             <nav class="quick-path">
-                <h3>快速入口</h3>
+                <h3>控制台入口</h3>
                 <ul>
-                    <li><a>管理控制台</a></li>
-                    <li><a>应用列表</a></li>
-                    <li><a>创建应用</a></li>
-                    <li><a>账户信息</a></li>
-                    <li><a>个人资料</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech /overview/index">百度语音</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
                 </ul>
             </nav>
             <nav class="resource">
                 <h3>资源</h3>
                 <ul>
-                    <li><a href="/docs">技术支持</a></li>
+                    <li><a href="/docs">新手指南</a></li>
+                    <li><a href="/docs">技术文档</a></li>
                     <li><a href="/sdk">SDK下载</a></li>
                 </ul>
             </nav>
@@ -433,6 +433,7 @@
                 <li><a href="http://datamart.baidu.com/">百度大数据+数据开放平台</a></li>
                 <li><a href="http://recsys.baidu.com/">Recsys推荐云平台</a></li>
                 <li><a href="https://cloud.baidu.com/?t=cp:online-media%7Cci:%7Ccn:ai">百度云</a></li>
+                <li><a href="http://www.chuanke.com/">百度传课</a></li>
             </ul>
         </nav>
     </div>
