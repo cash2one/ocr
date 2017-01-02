@@ -532,7 +532,7 @@
         <h2>立即获取免费API Key</h2>
         <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
         <div>
-            <a role="button" class="btn-primary large" href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">免费试用</a>
+            <a role="button" class="btn-normal large" href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">免费试用</a>
         </div>
     </div>
 </section>
@@ -604,7 +604,7 @@
         </nav>
     </div>
     <div class="container">
-        <p class="copyright">©2016 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
+        <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
