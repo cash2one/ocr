@@ -759,6 +759,9 @@
 .tech-section.tech-demo .demo-container #demo-result .result-background > table tbody > tr > td:nth-child(2) {
   text-align: left;
 }
+.tech-section.tech-demo .demo-container #demo-result .result-background.has-result::after {
+  display: none;
+}
 .tech-section.tech-demo .demo-container #demo-result .result-background.has-result > table {
   display: table;
 }
