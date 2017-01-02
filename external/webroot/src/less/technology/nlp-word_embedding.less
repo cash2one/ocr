@@ -62,7 +62,11 @@
         width: 33.333%;
         box-sizing: border-box;
         vertical-align: top;
-        padding: 0 @feature-padding / 2;
+        padding: 10px @feature-padding / 2 0;
+
+        &:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
     }
 
     // 特色图标
@@ -97,7 +101,9 @@
 
 // 分割线
 .@{prefix}-section-border {
-    border: 1px solid #efefef;
+    border: 0;
+    height: 1px;
+    background-color: #efefef;
 }
 
 
@@ -136,11 +142,15 @@
     &-item {
         display: inline-block;
         width: 33.333%;
-        padding: 0 @scenario-padding / 2;
+        padding: 5px @scenario-padding / 2 0;
         margin-bottom: 20px;
         box-sizing: border-box;
         vertical-align: top;
         font-size: 0;
+
+        &:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
     }
 
     // 使用场景标题
