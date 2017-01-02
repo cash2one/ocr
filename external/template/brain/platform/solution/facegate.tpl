@@ -11,7 +11,7 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="icon" href="/images/favicon.ico">
+    <link rel="shortcut icon" href="/images/favicon-32.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
 <link rel="stylesheet" href="\dist\css\solution\facegate.css"></head>
 <body class="ai-platform">
@@ -55,9 +55,9 @@
                                 <span>OCR文字识别</span>
                             </div>
                             <ul class="tech-list">
+                                <li><a href="/tech/ocr/general">通用文字识别</a></li>
                                 <li><a href="/tech/ocr/idcard">身份证识别</a></li>
                                 <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
-                                <li><a href="/tech/ocr/general">通用印刷文字识别</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>人脸识别</span>
@@ -89,7 +89,7 @@
                                 <span>短文本级</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/nlp/dnnlm_cn">中文DNN模型</a></li>
+                                <li><a href="/tech/nlp/dnnlm_cn">中文DNN语言模型</a></li>
                                 <li><a href="/tech/nlp/simnet">短文本相似度</a></li>
                                 <li><a href="/tech/nlp/comment_tag">评论观点抽取</a></li>
                             </ul>
@@ -130,13 +130,13 @@
                         </li>
                         <li id="tech-ar">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>增强现实
+                                <span class="tech-title-icon"></span>AR增强现实
                             </div>
                             <div class="sub-tech-title">
-                                <span>AR</span>
+                                <span>AR增强现实</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/ar">AR</a></li>
+                                <li><a href="/tech/ar">AR增强现实</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -147,7 +147,7 @@
                         <li><a href="/solution/robot">机器人</a></li>
                         <li><a href="/solution/faceprint">人脸核身</a></li>
                         <li><a href="/solution/facegate">人脸闸机</a></li>
-                        <li><a href="/solution/dialog">拨测服务</a></li>
+                        <li><a href="/solution/dialog">号码风险识别</a></li>
                     </ul>
                 </li>
                 <li>
@@ -170,7 +170,7 @@
         <div class="login">
             <!--<ul>
                 {%if $userInfo eq Null%}
-                <li><a href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">登录</a></li>
+                <li><a href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://ai.baidu.com)">登录</a></li>
                 <li><a class="btn-primary free-demo" role="button" href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
@@ -187,7 +187,7 @@
             </ul>-->
             <ul>
                 {%if $userInfo eq Null%}
-                <li><a href="https://login.bcetest.baidu.com?redirect=encodeURIComponent(https://qasandbox.bcetest.baidu.com/ai/)">登录</a></li>
+                <li><a href="https://login.bcetest.baidu.com?redirect=encodeURIComponent(https://cp01-yf-db-02.epc.baidu.com:8030/)">登录</a></li>
                 <li><a class="btn-primary free-demo" role="button" href="https://login.bcetest.baidu.com?redirect=encodeURIComponent(https://qasandbox.bcetest.baidu.com/ai/)">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
@@ -210,9 +210,8 @@
     <div class="container">
         <h1>人脸闸机解决方案</h1>
         <p>文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
-        <div>
+        <div class="consult">
             <a role="button" class="btn-primary media">获取API Key</a>
-            <a role="button" class="btn-other media">技术文档</a>
         </div>
     </div>
 </section>
@@ -315,32 +314,10 @@
 </section>
 <section class="tech-section get-started">
     <div class="container">
-        <h2>快速与我们取得联系</h2>
-        <p>结合百度人工智能技术为您提供免费的技术应用，结合百度人工智能技术为您提供免费的技术应用</p>
+        <h2>快速提交您的需求</h2>
+        <p>您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</p>
         <div class="consult">
             <a role="button" class="btn-primary large">商务合作</a>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-guide">
-    <div class="container">
-        <h2>使用指南</h2>
-        <div class="guide-link clear-float">
-            <h3>开发指南</h3>
-            <ul>
-                <li><a>技术文档 ></a></li>
-                <li><a>SDK下载 ></a></li>
-                <li><a>教学视频 ></a></li>
-            </ul>
-        </div>
-        <div class="question-link clear-float">
-            <h3>常见问题</h3>
-            <ul>
-                <li><a>图片格式和分辨率有限制吗？</a></li>
-                <li><a>支持身份证等垂直类的文字识别吗？</a></li>
-                <li><a>支持文档扫描图片的文字识别码？</a></li>
-                <li><a>怎么提高文字识别的准确率和识别速度？</a></li>
-            </ul>
         </div>
     </div>
 </section>
@@ -356,19 +333,20 @@
     <div class="container clear-float">
         <div class="footer-links">
             <nav class="quick-path">
-                <h3>快速入口</h3>
+                <h3>控制台入口</h3>
                 <ul>
-                    <li><a>管理控制台</a></li>
-                    <li><a>应用列表</a></li>
-                    <li><a>创建应用</a></li>
-                    <li><a>账户信息</a></li>
-                    <li><a>个人资料</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech /overview/index">百度语音</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
                 </ul>
             </nav>
             <nav class="resource">
                 <h3>资源</h3>
                 <ul>
-                    <li><a href="/docs">技术支持</a></li>
+                    <li><a href="/docs">新手指南</a></li>
+                    <li><a href="/docs">技术文档</a></li>
                     <li><a href="/sdk">SDK下载</a></li>
                 </ul>
             </nav>
@@ -405,6 +383,7 @@
                 <li><a href="http://datamart.baidu.com/">百度大数据+数据开放平台</a></li>
                 <li><a href="http://recsys.baidu.com/">Recsys推荐云平台</a></li>
                 <li><a href="https://cloud.baidu.com/?t=cp:online-media%7Cci:%7Ccn:ai">百度云</a></li>
+                <li><a href="http://www.chuanke.com/">百度传课</a></li>
             </ul>
         </nav>
     </div>

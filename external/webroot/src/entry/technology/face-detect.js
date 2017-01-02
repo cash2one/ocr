@@ -147,10 +147,15 @@ $(document).ready(function () {
                 return Math.round(value);
             }
         },
-        beauty: {
-            name: '容貌评分',
+        race: {
+            name: '人种',
             transform: value => {
-                return parseFloat(value).toFixed(2);
+                return {
+                    yellow: '黄种人',
+                    white: '白种人',
+                    black: '黑种人',
+                    arabs: '阿拉伯人'
+                }[value];
             }
         },
         gender: {
