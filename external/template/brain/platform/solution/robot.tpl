@@ -211,33 +211,32 @@
         <h1>机器人解决方案</h1>
         <p>文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
         <div class="consult">
-            <a role="button" class="btn-primary media">获取API Key</a>
+            <a role="button" class="btn-primary media">商务合作</a>
         </div>
     </div>
 </section>
 <section class="tech-section tech-intro solution clear-float">
     <div class="container">
         <h2>功能介绍</h2>
-        <p>服务型机器人行业解决方案，支持机器人场景适用的语音会话交互、支持多领域的语义解析及智能问答对话、提供多类服务能力或内容的返回<br>
-            支持SDK及Rest API多种接入形式，满足家庭陪护及早教、医疗、教育、政务机关、酒店、餐饮、旅游景区等各行业家用机商用机器人场景需求</p>
+        <p>服务型机器人提供语音交互及智能会话方案，支持多领域的语义解析及问答对话<br>
+            满足家庭陪护、医疗、教育、政务机关、酒店、餐饮、旅游景区等行业场景需求</p>
         <div class="solution-container">
             <div class="solution-case shadow">
                 <div class="solution-icon">
-                    <img src="/images/solution/robot/solution-case-1.png">
+                    <img src="/images/solution/robot/solution-case-1.jpg">
                 </div>
                 <div class="solution-desc">
-                    <h3>儿童陪护机器人</h3>
-                    <p>家里的新成员，孩子的好伙伴。整合百度语音、语义理解、及丰富的知识内容及服务，和孩子轻松的语音对话，支持智能对话闲聊、生活信息查询、儿歌、故事、音乐、还可扩展对接更多第三方服务，满足孩子对世界的好奇心，寓教于乐。</p>
+                    <h3>家庭场景方案</h3>
+                    <p>轻松搭建家庭陪护机器人产品，语音闲聊、个性对话、还可扩展对接更多第三方内容及服务。家里的新成员，孩子和老人的好伙伴。</p>
                 </div>
             </div>
             <div class="solution-case shadow">
                 <div class="solution-icon">
-                    <img src="/images/solution/robot/solution-case-2.png">
+                    <img src="/images/solution/robot/solution-case-2.jpg">
                 </div>
                 <div class="solution-desc">
-                    <h3>商场迎宾机器人</h3>
-                    <p>商场的明星向导，通过对商场的业务信息、常见问询的自动学习，建立私有的语义理解能力及知识库，通过语音、图像交互，轻松接待顾客的咨询，包括迎宾互动、问询回复、导购信息、投诉受理等完整的接待客服工作。
-                    </p>
+                    <h3>商用场景方案</h3>
+                    <p>通过对业务知识、客服话术的自动学习，建立场景化的语义理解能力及知识库，以语音及图像的形式轻松高效服务顾客。</p>
                 </div>
             </div>
         </div>
@@ -252,21 +251,21 @@
                 <div class="feature-icon"></div>
                 <div class="feature-desc">
                     <h3>流程的语音会话交互</h3>
-                    <p>支持完整远场语音会话交互，包括离线唤醒、离在线语音识别、离在线语音合成；识别精度高，合成效果流畅自然；充分支持自定义，如唤醒词，按垂类场景识别，自有语料训练，多语言多音色合成</p>
+                    <p>识别精度高，合成效果流畅自然，支持自定义唤醒词，多音色情感合成</p>
                 </div>
             </div>
             <div class="feature-item shadow">
                 <div class="feature-icon"></div>
                 <div class="feature-desc">
                     <h3>先进的语义分析引擎</h3>
-                    <p>基于百度搜索积累的NLP技术搭建，支持35个垂直领域意图分析，并支持扩展私有指令集和问答对。快速帮机器人获得用户意图理解能力，并搭建垂直化的对话引擎</p>
+                    <p>支持多个垂直领域意图分析，可自由扩展私有指令集和问答对</p>
                 </div>
             </div>
             <div class="feature-item shadow">
                 <div class="feature-icon"></div>
                 <div class="feature-desc">
-                    <h3>丰富的信息及服务</h3>
-                    <p>整合丰富的通用类别的信息、内容，可直接返回明确答案或对接相关服务。支持自有内容服务对接，可以基于行业知识，搭建自有知识库及知识图谱</p>
+                    <h3>灵活可定制的知识库</h3>
+                    <p>支持自有内容服务对接，可以基于行业知识，搭建自有知识库及知识图谱</p>
                 </div>
             </div>
         </div>
@@ -281,14 +280,14 @@
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
                     <h3>家庭服务机器人</h3>
-                    <p>支持语音唤醒，语音识别及播报，和孩子、老人轻松对话，实现寓教于乐及情感陪护，可支持多种生活信息查询及知识查询，成为实用生活助手</p>
+                    <p>和孩子、老人轻松对话，实现寓教于乐及情感陪护，可对接多种生活信息查询及知识查询，成为实用生活助手</p>
                 </div>
             </div>
             <div class="scene-item shadow">
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
                     <h3>商用机器人</h3>
-                    <p>通过行业语义及知识的学习训练，形成行业服务能力，可用于酒店、商超、餐饮、景区、医疗、教育、金融等各个行业</p>
+                    <p>通过行业领域知识的学习训练，形成行业服务能力，可用迎宾互动、导购指引、问询回复、快捷查询、投诉受理等</p>
                 </div>
             </div>
         </div>
@@ -317,7 +316,7 @@
             <nav class="quick-path">
                 <h3>控制台入口</h3>
                 <ul>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech /overview/index">百度语音</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
                     <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
                     <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
                     <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>

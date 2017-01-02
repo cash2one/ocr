@@ -208,10 +208,10 @@
 <div class="ai-platform page-content">
 <section class="tech-section tech-banner">
     <div class="container">
-        <h1>拨测服务解决方案</h1>
+        <h1>百御-手机号风险识别</h1>
         <p>文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
         <div class="consult">
-            <a role="button" class="btn-primary media">获取API Key</a>
+            <a role="button" class="btn-primary media">商务合作</a>
         </div>
     </div>
 </section>
@@ -226,7 +226,11 @@
                     <img src="/images/solution/dialog/solution-case-1.png">
                 </div>
                 <div class="solution-desc">
-                    <p>通过百度系多年与黑产动态对抗经验，沉淀海量交易黑产数据与技术积累，能够针对用户手机号，通过大数据与语音识别技术，识别出对应的风险等级。接入方可跟进风险等级配置不同的应用措施，以用于事前防止或事后挽回营销补贴损失，提升营销效率与安全。</p>
+                    <ul>
+                        <li>经过百度系业务多年与黑产动态对抗的经验，沉淀出海量黑产交易数据以及技术积累</li>
+                        <li>结合百度大数据能力与语音识别技术，识别出号码对应的风险等级</li>
+                        <li>接入方可根据风险等级配置不同的业务措施，用于事前防止或事后挽回营销补贴损失，提升营销效率与安全</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -341,7 +345,7 @@
             <nav class="quick-path">
                 <h3>控制台入口</h3>
                 <ul>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech /overview/index">百度语音</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
                     <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
                     <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
                     <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>

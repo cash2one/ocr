@@ -17,21 +17,26 @@
   }
 
   &.tech-feature{
-    .feature-item + .feature-item{
-      margin-left: 110px;
-    }
     .feature-item .feature-icon {
       background-size: 520px/2 270px/2;
     }
 
-    .feature-item:nth-child(1) .feature-icon{
-      .icon(@icons, -5px, -5px);
+    .feature-item:nth-child(1){
+      margin-left: 150px;
+      margin-right: 80px;
+
+      .feature-icon {
+        .icon(@icons, -5px, -5px);
+      }
     }
-    .feature-item:nth-child(2) .feature-icon{
-      .icon(@icons, -90px, -5px);
-    }
-    .feature-item:nth-child(3) .feature-icon{
-      .icon(@icons, -175px, -5px);
+    .feature-item:nth-child(2){
+      margin-left: 80px;
+      margin-right: 150px;
+
+      .feature-icon {
+        .icon(@icons, -90px, -5px);
+      }
+
     }
   }
   &.tech-scene{

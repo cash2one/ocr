@@ -251,6 +251,7 @@
   z-index: 9;
 }
 .tech-section.tech-intro.solution .solution-container .solution-case .solution-desc {
+  width: 100%;
   padding: 15px 45% 15px 15px;
   float: right;
   box-sizing: border-box;

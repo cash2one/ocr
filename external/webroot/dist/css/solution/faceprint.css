@@ -251,6 +251,7 @@
   z-index: 9;
 }
 .tech-section.tech-intro.solution .solution-container .solution-case .solution-desc {
+  width: 100%;
   padding: 15px 45% 15px 15px;
   float: right;
   box-sizing: border-box;
@@ -506,11 +507,12 @@
   height: 180px;
   margin-left: 40px;
 }
-.tech-section.tech-feature .feature-item + .feature-item {
-  margin-left: 110px;
-}
 .tech-section.tech-feature .feature-item .feature-icon {
   background-size: 260px 135px;
+}
+.tech-section.tech-feature .feature-item:nth-child(1) {
+  margin-left: 150px;
+  margin-right: 80px;
 }
 .tech-section.tech-feature .feature-item:nth-child(1) .feature-icon {
   background-image: url('../../../images/solution/faceprint/icons.png');
@@ -519,18 +521,15 @@
   background-position-x: -5px;
   background-position-y: -5px;
 }
+.tech-section.tech-feature .feature-item:nth-child(2) {
+  margin-left: 80px;
+  margin-right: 150px;
+}
 .tech-section.tech-feature .feature-item:nth-child(2) .feature-icon {
   background-image: url('../../../images/solution/faceprint/icons.png');
   background-repeat: no-repeat;
   background-position: -90px -5px;
   background-position-x: -90px;
-  background-position-y: -5px;
-}
-.tech-section.tech-feature .feature-item:nth-child(3) .feature-icon {
-  background-image: url('../../../images/solution/faceprint/icons.png');
-  background-repeat: no-repeat;
-  background-position: -175px -5px;
-  background-position-x: -175px;
   background-position-y: -5px;
 }
 .tech-section.tech-scene .scene-item .scene-icon {
