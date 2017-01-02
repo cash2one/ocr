@@ -823,3 +823,53 @@
 .word-type {
   cursor: pointer;
 }
+.tech-section.tech-case .case-item .case-icon {
+  background-size: 400px 135px;
+}
+.tech-section.tech-case .case-item:nth-child(1) {
+  background-image: url('../../../images/technology/nlp-lexer/case-1.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position-x: center;
+  background-position-y: center;
+}
+.tech-section.tech-case .case-item:nth-child(2) {
+  background-image: url('../../../images/technology/nlp-lexer/case-2.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position-x: center;
+  background-position-y: center;
+}
+.tech-section.tech-case .case-item:nth-child(3) {
+  background-image: url('../../../images/technology/nlp-lexer/case-3.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position-x: center;
+  background-position-y: center;
+}
+.tech-section.tech-case .case-indicator > li:nth-child(1) {
+  background-image: url('../../../images/solution/dialog/case-icons.png');
+  background-repeat: no-repeat;
+  background-position: -10px -10px;
+  background-position-x: -10px;
+  background-position-y: -10px;
+}
+.tech-section.tech-case .case-indicator > li:nth-child(2) {
+  background-image: url('../../../images/solution/dialog/case-icons.png');
+  background-repeat: no-repeat;
+  background-position: -210px -10px;
+  background-position-x: -210px;
+  background-position-y: -10px;
+}
+.tech-section.tech-case .case-list > li {
+  padding-top: 88px;
+}
+.tech-section.tech-case .case-list > li .case-icon {
+  width: auto;
+}
+.tech-section.tech-case .case-list > li:nth-child(1) .case-icon {
+  background: url("../../../images/technology/nlp-comment/case-logo-1.png") no-repeat center center;
+}
+.tech-section.tech-case .case-list > li:nth-child(2) .case-icon {
+  background: url("../../../images/technology/nlp-comment/case-logo-2.png") no-repeat center center;
+}

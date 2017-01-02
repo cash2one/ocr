@@ -424,3 +424,51 @@
 .word-type {
     cursor: pointer;
 }
+
+.tech-section{
+    &.tech-case {
+        .case-item .case-icon {
+            background-size: 800px/2 270px/2;
+        }
+        .case-item:nth-child(1) {
+            .icon(url('../../../images/technology/nlp-lexer/case-1.png'), center, center);
+
+        }
+        .case-item:nth-child(2) {
+            .icon(url('../../../images/technology/nlp-lexer/case-2.png'), center, center);
+        }
+        .case-item:nth-child(3) {
+            .icon(url('../../../images/technology/nlp-lexer/case-3.png'), center, center);
+        }
+
+        .case-indicator {
+            & > li:nth-child(1) {
+                .icon(@case-icons, -10px, -10px);
+            }
+            & > li:nth-child(2) {
+                .icon(@case-icons, -210px, -10px);
+            }
+        }
+        .case-list{
+            & > li{
+                padding-top: 88px;
+
+                .case-icon{
+                    width: auto;
+                }
+
+                &:nth-child(1){
+                    .case-icon{
+                        background: url("../../../images/technology/nlp-comment/case-logo-1.png") no-repeat center center;
+                    }
+                }
+
+                &:nth-child(2){
+                    .case-icon{
+                        background: url("../../../images/technology/nlp-comment/case-logo-2.png") no-repeat center center;
+                    }
+                }
+            }
+        }
+    }
+}
