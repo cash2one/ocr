@@ -50,6 +50,8 @@ class Action_Case extends Ap_Action_Abstract {
                     $caseId = $dbCase->insertCase($strUsername, $strCompany, $strPhone,
                         $strContent, $strContactway, $strTech);
                 } catch (Exception $e) {
+                    Bd_Log::warning('Db operate fail: '.$e->getMessage());
+                    Brain_Output::jsonOutput(1, 'Db operate fail');
                 }   
 
                 //发送邮件
