@@ -21,14 +21,21 @@ $(document).ready(function () {
         });
     });
 
+    let sound = null;
     // 修改语音的标准或情感设定
     $('.demo-settings .btn-normal').click(function () {
+        if (sound) {
+            sound.stop();
+        }
         $('.demo-settings .btn-normal').removeClass('selected');
         $(this).addClass('selected');
     });
 
     // 修改语音的速度设定
     $('.demo-speed > a').click(function () {
+        if (sound) {
+            sound.stop();
+        }
         let currentSpeed = parseInt($('.demo-current-speed').attr('data-speed'), 10);
 
         if ($(this).hasClass('decrease')) {
@@ -58,15 +65,18 @@ $(document).ready(function () {
     );
 
     volumeSlider.noUiSlider.on('update', function (values) {
+        if (sound) {
+            sound.stop();
+        }
         $(volumeSlider).attr('data-volume', parseInt(values, 10));
     });
 
     // 监听输入框，并对字数进行限制
     $('#demo-text-content').on('keydown keyup change', function () {
+
         $('.demo-text').attr('data-counter', 200 - $(this).val().length);
     });
 
-    let sound = null;
 
     $('.demo-control').on('click', '.player.play', function () {
         let speed = parseInt($('.demo-current-speed').attr('data-speed'), 10);
@@ -99,6 +109,12 @@ $(document).ready(function () {
                 sound.once('end', function () {
                     player.removeClass('pause').addClass('play');
                 });
+            },
+            fail: function (xhr) {
+                if (sound) {
+                    sound.stop();
+                }
+                new AlertModal('接口发生错误：' + xhr.status + ' - ' + xhr.statusText);
             }
         });
     });

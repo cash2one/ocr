@@ -843,15 +843,15 @@
 .ai-platform.page-content .home-section.user-case ul.user-brand-list > li:nth-child(4) {
   background-image: url('../../images/home/user-brand.png');
   background-repeat: no-repeat;
-  background-position: -720xp -12px;
-  background-position-x: -720xp;
+  background-position: -720px -12px;
+  background-position-x: -720px;
   background-position-y: -12px;
 }
 .ai-platform.page-content .home-section.user-case ul.user-brand-list > li:nth-child(4):hover {
   background-image: url('../../images/home/user-brand.png');
   background-repeat: no-repeat;
-  background-position: -720xp -312px;
-  background-position-x: -720xp;
+  background-position: -720px -312px;
+  background-position-x: -720px;
   background-position-y: -312px;
 }
 .ai-platform.page-content .home-section.user-case ul.user-brand-list > li:nth-child(5) {
@@ -913,15 +913,15 @@
 .ai-platform.page-content .home-section.user-case ul.user-brand-list > li:nth-child(9) {
   background-image: url('../../images/home/user-brand.png');
   background-repeat: no-repeat;
-  background-position: -720xp -162px;
-  background-position-x: -720xp;
+  background-position: -720px -162px;
+  background-position-x: -720px;
   background-position-y: -162px;
 }
 .ai-platform.page-content .home-section.user-case ul.user-brand-list > li:nth-child(9):hover {
   background-image: url('../../images/home/user-brand.png');
   background-repeat: no-repeat;
-  background-position: -720xp -462px;
-  background-position-x: -720xp;
+  background-position: -720px -462px;
+  background-position-x: -720px;
   background-position-y: -462px;
 }
 .ai-platform.page-content .home-section.user-case ul.user-brand-list > li:nth-child(10) {

@@ -219,7 +219,7 @@
 .tech-section.tech-intro .container > p {
   color: #fff;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 26px;
   margin: 0 auto;
 }
@@ -232,6 +232,7 @@
 }
 .tech-section.tech-intro.solution .container > p {
   color: #333;
+  font-size: 12px;
 }
 .tech-section.tech-intro.solution .solution-container {
   margin-top: 30px;
@@ -415,7 +416,7 @@
   vertical-align: bottom;
   text-align: center;
   margin-top: 10px;
-  margin-left: -4px;
+  margin-left: -3px;
 }
 .tech-section.tech-case .case-indicator > li.active,
 .tech-section.tech-case .case-indicator > li:hover {
@@ -487,6 +488,9 @@
 .tech-section.tech-guide ul > li > a {
   display: inline-block;
   color: #0073eb;
+}
+.tech-section.tech-guide ul > li > a:hover {
+  color: #1a81ed;
 }
 .tech-section.tech-guide .guide-link {
   margin-bottom: 20px;
@@ -780,7 +784,7 @@
 .tech-section.tech-demo .demo-input {
   border: 1px solid rgba(0, 0, 0, 0.2);
   color: #333;
-  font-size: 20px;
+  font-size: 16px;
   width: 350px;
   margin-right: 20px;
 }
