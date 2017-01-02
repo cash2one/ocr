@@ -541,7 +541,10 @@
   width: 33.333%;
   box-sizing: border-box;
   vertical-align: top;
-  padding: 0 50px;
+  padding: 10px 50px 0;
+}
+.nlp-feature-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 .nlp-feature-icon {
   display: block;
@@ -568,7 +571,9 @@
   text-align: left;
 }
 .nlp-section-border {
-  border: 1px solid #efefef;
+  border: 0;
+  height: 1px;
+  background-color: #efefef;
 }
 .nlp-scenario {
   font-size: 0;
@@ -582,11 +587,14 @@
 .nlp-scenario-item {
   display: inline-block;
   width: 33.333%;
-  padding: 0 15px;
+  padding: 5px 15px 0;
   margin-bottom: 20px;
   box-sizing: border-box;
   vertical-align: top;
   font-size: 0;
+}
+.nlp-scenario-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 .nlp-scenario-header {
   font-size: 18px;
