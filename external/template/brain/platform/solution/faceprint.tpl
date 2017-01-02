@@ -209,7 +209,7 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>人脸核身解决方案</h1>
-        <p>文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
+        <p>智能比对客户提供的照片、身份证内容<br>高效安全地核实用户真实性</p>
         <div class="consult">
             <a role="button" class="btn-primary media">商务合作</a>
         </div>
@@ -370,7 +370,7 @@
         </nav>
     </div>
     <div class="container">
-        <p class="copyright">©2016 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
+        <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>

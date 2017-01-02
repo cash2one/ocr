@@ -209,7 +209,7 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>语音唤醒</h1>
-        <p>文案内容文案内容文案内容文案内容文案内容文案内容文案容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
+        <p>支持指定词的指令唤醒，唤醒的同时执行指令操作<br>轻量级，低功耗，可自定义设置多个唤醒词</p>
         <div>
             <a role="button" class="btn-primary media">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
@@ -276,7 +276,7 @@
                         <p>7、请以唤醒词评分结果为参考，合理选择您的唤醒词；</p>
                     </li>
                     <li>
-                        <p>8、如果您强烈需要某个自定义唤醒词或者指令唤醒词，但是该唤醒词暂不支持，请发送邮件至voice_feedback  @  baidu.com联系我们。</p>
+                        <p>8、如果您强烈需要某个自定义唤醒词或者指令唤醒词，但是该唤醒词暂不支持，请发送邮件至voice_feedback@baidu.com联系我们。</p>
                     </li>
                 </ol>
             </div>
@@ -449,7 +449,7 @@
         </nav>
     </div>
     <div class="container">
-        <p class="copyright">©2016 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
+        <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>

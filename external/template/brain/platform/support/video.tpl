@@ -362,7 +362,7 @@
         </nav>
     </div>
     <div class="container">
-        <p class="copyright">©2016 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
+        <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>

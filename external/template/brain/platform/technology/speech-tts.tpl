@@ -209,7 +209,7 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>语音合成</h1>
-        <p>文案内容文案内容文案内容文案内容文案内容文案内容文案容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
+        <p>基于百度大脑的业界顶级声学模型和语音模型<br>提供流畅自然的语音合成效果，让您的应用开口说话</p>
         <div>
             <a role="button" class="btn-primary media">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
@@ -297,7 +297,7 @@
             <div class="feature-item shadow">
                 <div class="feature-icon"></div>
                 <div class="feature-desc">
-                    <h3>流畅自然多合成效果</h3>
+                    <h3>流畅自然的合成效果</h3>
                     <p>语音合成技术业界领先，合成效果接近真人发声，流畅自然，且极具表现力，给你最舒适的听觉体验</p>
                 </div>
             </div>
@@ -449,7 +449,7 @@
         </nav>
     </div>
     <div class="container">
-        <p class="copyright">©2016 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
+        <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
