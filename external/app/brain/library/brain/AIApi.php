@@ -55,7 +55,7 @@ class Brain_AIApi {
             'url' => 'https://openapi.baidu.com/rest/2.0/vis-faceattribute/v1/faceattribute',
             'params' => array(
                 'max_face_num' => 5,
-                'face_fields' => 'age,beauty,gender,expression,glasses,landmark',
+                'face_fields' => 'age,beauty,expression,faceshape,gender,glasses,landmark,race',
             ),
         ),
         "pornography" => array(
