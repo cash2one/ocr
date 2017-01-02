@@ -167,7 +167,6 @@ gulp.task('html_watch', function () {
 
                 var cssPath = nodePath.join('/dist/css/', dirname, basename + '.css').replace(/\\/g, '/');
                 var jsPath = nodePath.join('/dist/js/', dirname, basename + '.bundle.js').replace(/\\/g, '/');
-                console.log(cssPath, jsPath);
                 return gulp.src('./src/view/common/template.html')
                     .pipe(replace(/\{\{body}}/g, data))
                     .pipe(replace(/<\/head>/g, '<link rel="stylesheet" href="' + cssPath + '"></head>'))

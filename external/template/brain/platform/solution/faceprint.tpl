@@ -19,7 +19,6 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-
                 <img src="/images/logo.png" alt="百度大脑">
             </a>
         </div>

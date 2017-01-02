@@ -15,7 +15,7 @@ export const CONSULTATION_TMPL = {
                     '<li><label><input type="radio" name="tech" value="图像技术">图像技术</label></li>',
                     '<li><label><input type="radio" name="tech" value="自然语言">自然语言</label></li>',
                     '<li><label><input type="radio" name="tech" value="用户画像">用户画像</label></li>',
-                    '<li><label><input type="radio" name="tech" value="我不确定">我不确定</label></li>',
+                    '<li><label><input type="radio" name="tech" value="增强现实">增强现实</label></li>',
                 '</ul>',
             '</div>',
             '<div>',

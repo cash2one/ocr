@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="shortcut icon" href="/images/favicon-32.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="/dist/css/solution/dialog.css"></head>
+<link rel="stylesheet" href="/dist/css/technology/ar.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -207,85 +207,103 @@
 <div class="ai-platform page-content">
 <section class="tech-section tech-banner">
     <div class="container">
-        <h1>百御-手机号风险识别</h1>
-        <p>基于百度大数据能力和语音识别技术<br>提供行业领先的手机号风险识别服务</p>
+        <h1>AR增强现实</h1>
+        <p>增强现实(Augmented Reality，简称AR)技术，包含了多媒体、三维建模、<br>
+            实时视频显示及控制、多传感器融合、实时跟踪及注册、场景融合等新技<br>
+            术与新手段，从而提供了一般情况下不同于人类可感知的信息。</p>
         <div class="consult">
             <a role="button" class="btn-primary media">商务合作</a>
         </div>
     </div>
 </section>
-
-<section class="tech-section tech-intro solution clear-float">
+<section class="tech-section tech-intro">
     <div class="container">
-        <h2>功能介绍</h2>
-        <p>基于大数据+语音识别技术，能够自动精准识别用户（手机号）对应的风险等级，可有效的应用在营销反作弊、反欺诈等黑产领域</p>
-        <div class="solution-container">
-            <div class="solution-case shadow">
-                <div class="solution-icon">
-                    <img src="/images/solution/dialog/solution-case-1.png">
-                </div>
-                <div class="solution-desc">
-                    <ul>
-                        <li>经过百度系业务多年与黑产动态对抗的经验，沉淀出海量黑产交易数据以及技术积累</li>
-                        <li>结合百度大数据能力与语音识别技术，识别出号码对应的风险等级</li>
-                        <li>接入方可根据风险等级配置不同的业务措施，用于事前防止或事后挽回营销补贴损失，提升营销效率与安全</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="intro-item">
+            <div class="intro-icon"></div>
+            <h3>触发机制</h3>
+            <p>界领先的识图技术，支持2d图像ar、3d物体ar、手部ar、脸部ar、平面特性ar、lbs-ar等丰富触发机制</p>
         </div>
-    </div>
-</section>
-<section class="tech-section tech-feature">
-    <div class="container">
-        <h2>技术特色</h2>
-        <div class="feature-list clear-float">
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>准确率高</h3>
-                    <p>通过DNN语音识别技术，识别异常手机号准确率高达99%，业内领先</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>免打扰</h3>
-                    <p>通过百度大数据与风险信息库，能够确保大部分用户无感知，免打扰</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>快速便捷</h3>
-                    <p>提供API服务接口，无需额外开发，能够快速接入</p>
-                </div>
-            </div>
+        <div class="intro-item">
+            <div class="intro-icon"></div>
+            <h3>三维感知</h3>
+            <p>实现2D/3D物体跟踪, SLAM/VO，大规模三维重建等。10毫秒级跟踪速度，抗遮挡、快速重定位、抗运动模糊</p>
+        </div>
+        <div class="intro-item">
+            <div class="intro-icon"></div>
+            <h3>渲染引擎</h3>
+            <p>自主研发的跨平台渲染引擎，引擎算法侧重于虚拟物体和现实环境的融合</p>
+        </div>
+        <div class="intro-item">
+            <div class="intro-icon"></div>
+            <h3>人机交互</h3>
+            <p>核心技术有语音识别和手势识别与交互跟踪，其中语音识别可以达到很高的准确率</p>
         </div>
     </div>
 </section>
 <section class="tech-section tech-scene">
     <div class="container">
-        <h2>应用场景</h2>
+        <h2>AR+应用场景</h2>
         <div class="scene-list clear-float">
             <div class="scene-item shadow">
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
-                    <h3>电商营销反作弊</h3>
-                    <p>获取注册用户的手机号风险，避免作弊用户刷取营销补贴</p>
+                    <h3>营销</h3>
+                    <p>AR新广告形式，借助百度强大的渠道资源，使营销不再是难事</p>
                 </div>
             </div>
             <div class="scene-item shadow">
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
-                    <h3>虚假恶意注册</h3>
-                    <p>获取注册用户的手机号风险等级，提前避免黑产发生</p>
+                    <h3>娱乐</h3>
+                    <p>基于人脸识别等技术制作的趣味小应用，满足更多商家与用户的娱乐需求</p>
                 </div>
             </div>
             <div class="scene-item shadow">
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
-                    <h3>渠道激活反作弊</h3>
-                    <p>获取渠道注册用户的手机号风险等级，来判断渠道激活用户的有效性，避免渠道佣金损失</p>
+                    <h3>游戏</h3>
+                    <p>基于AR虚拟现实技术开发制作的大型游戏，可满足玩家更强的互动性和游戏真实性体验</p>
+                </div>
+            </div>
+            <div class="scene-item shadow">
+                <div class="scene-icon"></div>
+                <div class="scene-desc">
+                    <h3>LBS生活服务</h3>
+                    <p>结合百度AR与百度LBS技术实现的，满足用户更快捷、更方便的找到生活服务类的需求</p>
+                </div>
+            </div>
+            <div class="scene-item shadow">
+                <div class="scene-icon"></div>
+                <div class="scene-desc">
+                    <h3>教育</h3>
+                    <p>结合AR增强现实技术，使原本枯燥的文字、语音或视频灵动起来，寓教于乐，让学习变得更加轻松有趣</p>
+                </div>
+            </div>
+            <div class="scene-item shadow">
+                <div class="scene-icon"></div>
+                <div class="scene-desc">
+                    <h3>更多场景探索</h3>
+                    <p>更多业务场景，期待您的加入……</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tech-section tech-product">
+    <div class="container">
+        <h2>产品与服务</h2>
+        <div class="clear-float">
+            <div class="flow-chart">
+                <img src="/images/technology/ar/process-flow.png">
+            </div>
+            <div class="product-desc-list">
+                <div class="product-desc">
+                    <h3>百度AR业务流程</h3>
+                    <p>百度AR平台提供高效灵活的一站式的AR行业解决方案，贯穿各行业AR的内容创作、内容管理全流程服务</p>
+                </div>
+                <div class="product-desc">
+                    <h3>AR体验指南</h3>
+                    <p>带『M』标识的图片均可以触发百度AR神奇效果</p>
                 </div>
             </div>
         </div>
@@ -296,29 +314,29 @@
         <li class="case-item active">
             <div class="container">
                 <div class="case-icon"></div>
-                <h2>某P2P金融网站</h2>
-                <p>基于手机号风险识别，过滤高达32%的作弊用户，防止巨额营销费用损失</p>
+                <h2>品牌营销</h2>
+                <p>在品牌营销场景，百度AR已联手欧莱雅、兰蔻等多家大型商家，共同实践AR营销方式，并取得明显效果</p>
             </div>
         </li>
         <li class="case-item">
             <div class="container">
                 <div class="case-icon"></div>
-                <h2>某促销电商网站</h2>
-                <p>通过手机号风险识别，能够甄别44%虚假作弊下单用户，对其订单进行取消，挽回补贴损失</p>
+                <h2>互动游戏</h2>
+                <p>百度AR在互动游戏场景不断扩展，现已实现通过AR游戏发放商家优惠券的方式，实现商家更高营销收益</p>
             </div>
         </li>
         <li class="case-item">
             <div class="container">
                 <div class="case-icon"></div>
-                <h2>某知名视频网站</h2>
-                <p>上线营销活动，但是事后发现作弊情况，之后使用手机号风险等级，识别并挽回了14%的作弊号码及营销费用损失</p>
+                <h2>更多场景应用</h2>
+                <p>百度AR正在探索教育、娱乐、LBS生活服务等更多业务场景，敬请期待！</p>
             </div>
         </li>
     </ul>
     <ul class="case-indicator">
-        <li class="active"><a>某P2P金融网站</a></li>
-        <li><a>某促销电商网站</a></li>
-        <li><a>某知名视频网站</a></li>
+        <li class="active"><a>品牌营销</a></li>
+        <li><a>互动游戏</a></li>
+        <li><a>更多场景应用</a></li>
     </ul>
 </section>
 <section class="tech-section get-started">
@@ -401,5 +419,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="/dist/js/solution/dialog.bundle.js"></script></body>
+<script src="/dist/js/technology/ar.bundle.js"></script></body>
 </html>
