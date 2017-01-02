@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="\dist\css\sdk\sdk.css"></head>
+<link rel="stylesheet" href="\dist\css\technology\nlp-word_embedding.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -206,224 +206,98 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<div class="container sdk-download-container">
-    <div class="sdk-aside">
-        <div class="sdk-aside-header">SDK下载</div>
-        <a href="#sdk-category-bs"><div class="sdk-nav-item">百度语音BS</div></a>
-        <a href="#sdk-category-ocr"><div class="sdk-nav-item">文字识别OCR</div></a>
-        <a href="#sdk-category-bfr"><div class="sdk-nav-item">人脸识别BFR</div></a>
-        <a href="#sdk-category-nlp"><div class="sdk-nav-item">自然语言处理NLP</div></a>
-        <a href="#sdk-category-anti"><div class="sdk-nav-item">黄反识别</div></a>
+<section class="tech-section tech-banner">
+    <div class="container">
+        <h1>词向量计算</h1>
+        <p>文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容文案内容</p>
+        <div>
+            <a role="button" class="btn-primary media">获取API Key</a>
+            <a role="button" class="btn-other media">技术文档</a>
+        </div>
     </div>
-    <div class="sdk-main">
-        <div class="sdk-category">
-            <a name="sdk-category-bs"><div class="sdk-category-name">百度语音BS</div></a>
-            <div class="sdk-collection">
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bs"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bs"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-android"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bs"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-cpp"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bs"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+</section>
+<div class="nlp-function">
+    <div class="container">
+        <div class="nlp-function-title">功能介绍</div>
+        <div class="nlp-function-intro">
+            词向量计算是通过训练的方法，将语言词表中的词映射成一个长度固定的向量<br>
+            词表中所有的词向量构成一个向量空间，每一个词都是这个词向量空间中的一个点，利用这种方法，实现文本的可计算
         </div>
-        <div class="sdk-category">
-            <a name="sdk-category-ocr"><div class="sdk-category-name">文字识别OCR</div></a>
-            <div class="sdk-collection">
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-ocr"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-ocr"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="nlp-function-pic">
+            <img src="../../../images/technology/nlp-dr/function-pic.png" >
         </div>
-        <div class="sdk-category">
-            <a name="sdk-category-bfr"><div class="sdk-category-name">人脸识别BFR</div></a>
-            <div class="sdk-collection">
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bfr"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bfr"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    </div>
+</div>
+<div class="container">
+    <div class="nlp-feature-container">
+        <div class="nlp-feature-title">技术特色</div>
+        <div class="nlp-feature-item">
+            <div class="nlp-feature-icon feature-1"></div>
+            <div class="nlp-feature-name">粒度更灵活</div>
+            <div class="nlp-feature-info">分词输出混排和基本词两种粒度，用户可以根据具体应用场景选择对应粒度；词性标注结合了字模型与词模型的优势，能够进一步优化分词粒度，从而既保证了基本词汇的原子性，又保证了大粒度词汇，对领域新词、专有名词的识别尤其有效</div>
         </div>
-        <div class="sdk-category">
-            <a name="sdk-category-nlp"><div class="sdk-category-name">自然语言处理NLP</div></a>
-            <div class="sdk-collection">
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-nlp"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-nlp"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    </div>
+</div>
+<hr class="nlp-section-border">
+<div class="container nlp-scenario">
+    <div class="nlp-scenario-title">应用场景</div>
+    <div class="nlp-scenario-item">
+        <div class="nlp-scenario-icon scenario-1"></div>
+        <div class="nlp-scenario-intro">
+            <div class="nlp-scenario-header">情感分析</div>
+            <div class="nlp-scenario-detail">输入的文本内容首先进行分词处理，然后通过词性标注识别带有感情色彩的关键词、辅助情感分析算法用户评论的极性，最终得到用户对事物的观点和褒贬分类</div>
         </div>
-        <div class="sdk-category">
-            <a name="sdk-category-anti"><div class="sdk-category-name">反黄识别</div></a>
-            <div class="sdk-collection">
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-anti"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-anti"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    </div>
+    <div class="nlp-scenario-item">
+        <div class="nlp-scenario-icon scenario-2"></div>
+        <div class="nlp-scenario-intro">
+            <div class="nlp-scenario-header">语音助手</div>
+            <div class="nlp-scenario-detail">用户客户身份认证，直播实名认证等场景，通过分词和词性标注，分析语音命令中的关键名词、动词、数量、时间，准确理解命令的含义，提高用户体验</div>
         </div>
     </div>
 </div>
 
+<section class="tech-section tech-case">
+    <ul class="case-list">
+        <li class="case-item active">
+            <div class="container">
+                <h2>作为模型初始化参数应用于其他的模型中</h2>
+                <p>例如序列标注、标题党识别、图文匹配搜索等，用词向量作为模型的初始化参数，效果优于随机初始化参数</p>
+            </div>
+        </li>
+    </ul>
+</section>
+<section class="tech-section get-started">
+    <div class="container">
+        <h2>现在注册，即享免费试用</h2>
+        <p>结合百度人工智能技术为您提供免费的技术应用，结合百度人工智能技术为您提供免费的技术应用</p>
+        <div>
+            <a role="button" class="btn-primary large">免费试用</a>
+        </div>
+    </div>
+</section>
+<section class="tech-section tech-guide">
+    <div class="container">
+        <h2>使用指南</h2>
+        <div class="guide-link clear-float">
+            <h3>开发指南</h3>
+            <ul>
+                <li><a>技术文档 ></a></li>
+                <li><a>SDK下载 ></a></li>
+                <li><a>教学视频 ></a></li>
+            </ul>
+        </div>
+        <div class="question-link clear-float">
+            <h3>常见问题</h3>
+            <ul>
+                <li><a>图片格式和分辨率有限制吗？</a></li>
+                <li><a>支持身份证等垂直类的文字识别吗？</a></li>
+                <li><a>支持文档扫描图片的文字识别码？</a></li>
+                <li><a>怎么提高文字识别的准确率和识别速度？</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
 </div>
 <aside class="aside-action">
     <ul>
@@ -493,5 +367,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="\dist\js\sdk\sdk.bundle.js"></script></body>
+<script src="\dist\js\technology\nlp-word_embedding.bundle.js"></script></body>
 </html>

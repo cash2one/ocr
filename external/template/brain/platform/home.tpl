@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="/dist/css/home.css"></head>
+<link rel="stylesheet" href="\dist\css\home.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -128,6 +128,17 @@
                                 <li><a href="http://www.paddlepaddle.org/">PaddlePaddle</a></li>
                             </ul>
                         </li>
+                        <li id="tech-ar">
+                            <div class="tech-title">
+                                <span class="tech-title-icon"></span>增强现实
+                            </div>
+                            <div class="sub-tech-title">
+                                <span>AR</span>
+                            </div>
+                            <ul class="tech-list">
+                                <li><a href="/tech/ar">AR</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li>
@@ -204,6 +215,25 @@
                 <a role="button" class="get-started">免费试用</a>
             </div>
         </li>
+        <li>
+            <h1>人工智能技术 增益您的产品</h1>
+            <p>内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案<br>内容文案内容文案内容文案内容</p>
+            <div>
+                <a role="button" class="get-started">免费试用1</a>
+            </div>
+        </li>
+        <li>
+            <h1>人工智能技术 增益您的产品</h1>
+            <p>内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案<br>内容文案内容文案内容文案内容</p>
+            <div>
+                <a role="button" class="get-started">免费试用2</a>
+            </div>
+        </li>
+    </ul>
+    <ul class="banner-indicator">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
     </ul>
 </section>
 <section class="news">
@@ -564,5 +594,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="/dist/js/home.bundle.js"></script></body>
+<script src="\dist\js\home.bundle.js"></script></body>
 </html>

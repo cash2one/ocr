@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="\dist\css\sdk\sdk.css"></head>
+<link rel="stylesheet" href="\dist\css\technology\speech-wake.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -206,224 +206,204 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<div class="container sdk-download-container">
-    <div class="sdk-aside">
-        <div class="sdk-aside-header">SDK下载</div>
-        <a href="#sdk-category-bs"><div class="sdk-nav-item">百度语音BS</div></a>
-        <a href="#sdk-category-ocr"><div class="sdk-nav-item">文字识别OCR</div></a>
-        <a href="#sdk-category-bfr"><div class="sdk-nav-item">人脸识别BFR</div></a>
-        <a href="#sdk-category-nlp"><div class="sdk-nav-item">自然语言处理NLP</div></a>
-        <a href="#sdk-category-anti"><div class="sdk-nav-item">黄反识别</div></a>
-    </div>
-    <div class="sdk-main">
-        <div class="sdk-category">
-            <a name="sdk-category-bs"><div class="sdk-category-name">百度语音BS</div></a>
-            <div class="sdk-collection">
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bs"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bs"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-android"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bs"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-cpp"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bs"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sdk-category">
-            <a name="sdk-category-ocr"><div class="sdk-category-name">文字识别OCR</div></a>
-            <div class="sdk-collection">
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-ocr"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-ocr"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sdk-category">
-            <a name="sdk-category-bfr"><div class="sdk-category-name">人脸识别BFR</div></a>
-            <div class="sdk-collection">
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bfr"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bfr"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sdk-category">
-            <a name="sdk-category-nlp"><div class="sdk-category-name">自然语言处理NLP</div></a>
-            <div class="sdk-collection">
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-nlp"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-nlp"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sdk-category">
-            <a name="sdk-category-anti"><div class="sdk-category-name">反黄识别</div></a>
-            <div class="sdk-collection">
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-anti"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-anti"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section class="tech-section tech-banner">
+    <div class="container">
+        <h1>语音唤醒</h1>
+        <p>文案内容文案内容文案内容文案内容文案内容文案内容文案容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
+        <div>
+            <a role="button" class="btn-primary media">获取API Key</a>
+            <a role="button" class="btn-other media">技术文档</a>
         </div>
     </div>
-</div>
+</section>
+<section class="tech-section tech-intro">
+    <div class="container">
+        <h2>功能介绍</h2>
+        <p>百度语音唤醒技术通过在设备或软件中预置唤醒词，当用户发出该语音指令时，设备便从休眠状态中被唤醒，并作出指定响应</p>
+        <div class="tech-intro-detail"></div>
+    </div>
+</section>
 
+<section class="tech-section tech-demo">
+    <div class="container">
+        <h2>功能演示</h2>
+        <div class="demo-input">
+            <h3>唤醒词评估<small>告诉你哪些词适合作唤醒词</small></h3>
+            <div>
+                <label for="demo-wake-word" style="display:none"></label>
+                <input type="text" id="demo-wake-word">
+                <button type="button" class="btn-primary" id="evaluate">评估</button>
+            </div>
+            <p>输入要评估的唤醒词, 点击评估开始. 支持同时输入多个,如"小度你好,百度一下"</p>
+            <p class="warning">唤醒词评估不限次数；每次导出最多10个唤醒词，其中包含最多3个自定义唤醒词；每月导出最多3次。</p>
+            <div class="evaluated-result">
+                <ul id="evaluated-words"></ul>
+                <div>
+                    <button type="button" class="btn-primary" id="export-evaluated-words">导出</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-rule collapsed">
+            <h3>唤醒词规则</h3>
+            <div class="rule-wrapper">
+                <ol>
+                    <li>
+                        <p>1、支持设置10个唤醒词，包含指令唤醒词和自定义唤醒词，指令唤醒词不支持自定义；10个唤醒词中，最多可以设置3个自定义唤醒词，最多可以包含3个两字指令唤醒词（如播放、暂停、拍照等）</p>
+                    </li>
+                    <li>
+                        <p>2、已经支持的指令唤醒词有：</p>
+                        <ul>
+                            <li>相机类：拍照、茄子</li>
+                            <li>音乐类：增大音量、减小音量、播放、停止、暂停、上一首、下一首</li>
+                            <li>电灯类：打开电灯、关闭电灯、增大亮度、减小亮度</li>
+                            <li>手电筒类：打开手电筒、关闭手电筒</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>3、自定义唤醒词可根据应用的个性化需求来免费定制，例如您的应用希望通过“你好百度”启动应用，则就可以设置“你好百度”为唤醒词；</p>
+                    </li>
+                    <li>
+                        <p>4、建议每个自定义唤醒词在3至5个字之间（这里的1个字是指1个汉字、或1个英文字母），4个字最佳；一个唤醒词可以包含最多2个（含）英文字母；唤醒词中暂时不支持纯英文单词，如california；</p>
+                    </li>
+                    <li>
+                        <p>5、唤醒词定制的温馨提示：请勿选择太常用的词作为唤醒词，例如”吃饭吧”，在生活中经常会用到，容易误唤醒；为保证唤醒效果，不同意义的唤醒词，请考虑唤醒词之间的差异，尽量保证唤醒词之间不易混淆；唤醒词过短会导致唤醒错误率较高，请不要选择太多短唤醒词（包括指令唤醒词）；</p>
+                    </li>
+                    <li>
+                        <p>6、唤醒词的音节覆盖尽量多，长度最少为4个音节；相邻音节请尽可能规避，字要发音清晰响度大；生僻字请尽量规避；零声母字请尽量规避；请避免使用叠词；例如：质量较高的唤醒词：“百度外卖”，音节覆盖多差异大；质量较差的唤醒词：“语音识别”，“语音”两个字均为零声母字，不是一个质量高的唤醒词；</p>
+                    </li>
+                    <li>
+                        <p>7、请以唤醒词评分结果为参考，合理选择您的唤醒词；</p>
+                    </li>
+                    <li>
+                        <p>8、如果您强烈需要某个自定义唤醒词或者指令唤醒词，但是该唤醒词暂不支持，请发送邮件至voice_feedback  @  baidu.com联系我们。</p>
+                    </li>
+                </ol>
+            </div>
+            <div><a class="rule-toggle">展开内容</a></div>
+        </div>
+    </div>
+</section>
+<section class="tech-section tech-feature">
+    <div class="container">
+        <h2>技术特色</h2>
+        <div class="feature-list clear-float">
+            <div class="feature-item shadow">
+                <div class="feature-icon"></div>
+                <div class="feature-desc">
+                    <h3>基础服务永久免费</h3>
+                    <p>为开发者提供基于百度大脑的业界顶级声学模型和语音模型。基础服务免费</p>
+                </div>
+            </div>
+            <div class="feature-item shadow">
+                <div class="feature-icon"></div>
+                <div class="feature-desc">
+                    <h3>个性化定制</h3>
+                    <p>支持自定义设置多个唤醒词，给你最大的自由度</p>
+                </div>
+            </div>
+            <div class="feature-item shadow">
+                <div class="feature-icon"></div>
+                <div class="feature-desc">
+                    <h3>唤醒识别连续说</h3>
+                    <p>支持唤醒和识别需求的连续表达，例如：你好小度，请帮我找一间咖啡厅</p>
+                </div>
+            </div>
+            <div class="feature-item shadow">
+                <div class="feature-icon"></div>
+                <div class="feature-desc">
+                    <h3>易于集成</h3>
+                    <p>轻量级，功耗低</p>
+                </div>
+            </div>
+            <div class="feature-item shadow">
+                <div class="feature-icon"></div>
+                <div class="feature-desc">
+                    <h3>支持指令唤醒</h3>
+                    <p>支持指定词的指令唤醒，唤醒的同时执行指令操作，如：拍照，茄子等，缩短您的操作路径，更方便更快捷</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="tech-section tech-scene">
+    <div class="container">
+        <h2>应用场景</h2>
+        <div class="scene-list clear-float">
+            <div class="scene-item shadow">
+                <div class="scene-icon"></div>
+                <div class="scene-desc">
+                    <h3>唤醒制定动作</h3>
+                    <p>在支持的音乐应用中，用户通过直接说出“增大／减小音量”，“上／下一首”即可无需进行点按操作，直接利用指令进行相应动作，方便快捷</p>
+                </div>
+            </div>
+            <div class="scene-item shadow">
+                <div class="scene-icon"></div>
+                <div class="scene-desc">
+                    <h3>智能助手</h3>
+                    <p>用户通过念出预设的关键词即可将智能助手从休眠状态唤醒，从而进行接下来的动作，降低用户操作成本</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tech-section tech-case">
+    <ul class="case-list">
+        <li class="case-item active">
+            <div class="container">
+                <div class="case-icon"></div>
+                <h2>度秘</h2>
+                <p>度秘是百度的口语化对话的人工智能助理，通过百度语音唤醒技术可以唤醒度秘，满足用户真人化的交流需求</p>
+            </div>
+        </li>
+        <li class="case-item">
+            <div class="container">
+                <div class="case-icon"></div>
+                <h2>百度Carlife</h2>
+                <p>百度Carlife通过百度语音唤醒技术，可以让驾驶者在驾驶过程中双手无需离开方向盘<br>
+                    即可实现拨打电话，播放音乐，设置导航等操作，让驾驶更轻松，行车更安全</p>
+            </div>
+        </li>
+    </ul>
+    <ul class="case-indicator">
+        <li class="active"><a>度秘</a></li>
+        <li><a>百度Carlife</a></li>
+    </ul>
+</section>
+{%if $userInfo eq Null%}
+<section class="tech-section get-started">
+    <div class="container">
+        <h2>现在注册，即享免费试用</h2>
+        <p>结合百度人工智能技术为您提供免费的技术应用，结合百度人工智能技术为您提供免费的技术应用</p>
+        <div>
+            <a role="button" class="btn-primary large" href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">免费试用</a>
+        </div>
+    </div>
+</section>
+{%/if%}
+<section class="tech-section tech-guide">
+    <div class="container">
+        <h2>使用指南</h2>
+        <div class="guide-link clear-float">
+            <h3>开发指南</h3>
+            <ul>
+                <li><a>技术文档 ></a></li>
+                <li><a>SDK下载 ></a></li>
+                <li><a>教学视频 ></a></li>
+            </ul>
+        </div>
+        <div class="question-link clear-float">
+            <h3>常见问题</h3>
+            <ul>
+                <li><a>语音输入是否支持方言？</a></li>
+                <li><a>语音输入在嘈杂环境中的效果？</a></li>
+                <li><a>语音输入针对生僻词能否识别？</a></li>
+                <li><a>语音识别是否有最长句限制？</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
 </div>
 <aside class="aside-action">
     <ul>
@@ -493,5 +473,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="\dist\js\sdk\sdk.bundle.js"></script></body>
+<script src="\dist\js\technology\speech-wake.bundle.js"></script></body>
 </html>

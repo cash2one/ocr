@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="\dist\css\sdk\sdk.css"></head>
+<link rel="stylesheet" href="\dist\css\technology\face-search.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -206,224 +206,150 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<div class="container sdk-download-container">
-    <div class="sdk-aside">
-        <div class="sdk-aside-header">SDK下载</div>
-        <a href="#sdk-category-bs"><div class="sdk-nav-item">百度语音BS</div></a>
-        <a href="#sdk-category-ocr"><div class="sdk-nav-item">文字识别OCR</div></a>
-        <a href="#sdk-category-bfr"><div class="sdk-nav-item">人脸识别BFR</div></a>
-        <a href="#sdk-category-nlp"><div class="sdk-nav-item">自然语言处理NLP</div></a>
-        <a href="#sdk-category-anti"><div class="sdk-nav-item">黄反识别</div></a>
-    </div>
-    <div class="sdk-main">
-        <div class="sdk-category">
-            <a name="sdk-category-bs"><div class="sdk-category-name">百度语音BS</div></a>
-            <div class="sdk-collection">
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bs"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bs"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-android"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bs"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-cpp"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bs"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sdk-category">
-            <a name="sdk-category-ocr"><div class="sdk-category-name">文字识别OCR</div></a>
-            <div class="sdk-collection">
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-ocr"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-ocr"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sdk-category">
-            <a name="sdk-category-bfr"><div class="sdk-category-name">人脸识别BFR</div></a>
-            <div class="sdk-collection">
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bfr"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bfr"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sdk-category">
-            <a name="sdk-category-nlp"><div class="sdk-category-name">自然语言处理NLP</div></a>
-            <div class="sdk-collection">
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-nlp"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-nlp"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sdk-category">
-            <a name="sdk-category-anti"><div class="sdk-category-name">反黄识别</div></a>
-            <div class="sdk-collection">
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-anti"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-anti"></i>
-                            <div class="sdk-download-button">下载</div>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section class="tech-section tech-banner">
+    <div class="container">
+        <h1>人脸查找</h1>
+        <p>文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容<br>文案内容文案内容文案内容文案内容</p>
+        <div>
+            <a role="button" class="btn-primary media">获取API Key</a>
+            <a role="button" class="btn-other media">技术文档</a>
         </div>
     </div>
-</div>
+</section>
+<section class="tech-section tech-intro">
+    <div class="container">
+        <h2>功能介绍</h2>
+        <p>给定一张照片，和数据库中N个人脸进行比对，找出最相似的一张脸或多张人脸<br>
+            用于用户不需要声明身份的场景，跟据识别人脸与已经注册库中的人脸匹配程度，返回用户信息和匹配度，即1：N人脸检索</p>
+        <div class="tech-intro-detail">
+            <ul class="face-list">
+                <li class="wrong"></li>
+                <li class="wrong"></li>
+                <li class="right"></li>
+                <li class="wrong"></li>
+                <li class="wrong"></li>
+                <li class="right"></li>
+                <li class="wrong"></li>
+                <li class="wrong"></li>
+            </ul>
+        </div>
+    </div>
+</section>
 
+<section class="tech-section tech-feature">
+    <div class="container">
+        <h2>技术特色</h2>
+        <div class="feature-list clear-float">
+            <div class="feature-item shadow">
+                <div class="feature-icon"></div>
+                <div class="feature-desc">
+                    <h3>强大的人脸训练模型</h3>
+                    <p>通过海量人脸训练集，成功标注千万人脸数据</p>
+                </div>
+            </div>
+            <div class="feature-item shadow">
+                <div class="feature-icon"></div>
+                <div class="feature-desc">
+                    <h3>比对速度快</h3>
+                    <p>算法识别速度小于300ms，误识率低</p>
+                </div>
+            </div>
+            <div class="feature-item shadow">
+                <div class="feature-icon"></div>
+                <div class="feature-desc">
+                    <h3>处理能力强</h3>
+                    <p>系统可支持高库容比对任务，算法识别性能高，返回时间迅速</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="tech-section tech-scene">
+    <div class="container">
+        <h2>应用场景</h2>
+        <div class="scene-list clear-float">
+            <div class="scene-item shadow">
+                <div class="scene-icon"></div>
+                <div class="scene-desc">
+                    <h3>门禁系统</h3>
+                    <p>受安全保护的地区可以通过人脸识别辨识试图进入者的身份，比如小区，学校、企业等。敏感地点也可以使用人脸识别门禁，对于未登记人员访问将触发报警</p>
+                </div>
+            </div>
+            <div class="scene-item shadow">
+                <div class="scene-icon"></div>
+                <div class="scene-desc">
+                    <h3>明星图库</h3>
+                    <p>娱乐场景使用。用户上传一张照片，比对出库中相似度最高的明星，达到娱乐效果</p>
+                </div>
+            </div>
+            <div class="scene-item shadow">
+                <div class="scene-icon"></div>
+                <div class="scene-desc">
+                    <h3>逃犯追缉</h3>
+                    <p>在银行、机场、商场、市场等人流密集的公共场所对人群进行监视，已达到身份识别的目的，并在获得疑犯识别后，触发报警</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tech-section tech-case">
+    <ul class="case-list">
+        <li class="case-item active">
+            <div class="container">
+                <div class="case-icon"></div>
+                <h2>乌镇人脸闸机</h2>
+                <p>用户在购买门票时进行人像采集，就可以在景区通过人脸识别多次进出景区<br>
+                    在互联网大会前落地上线，期间电视台播出2期节目，品牌露出11次，为后续和景区闸机厂商合作提供了良好的基础调</p>
+            </div>
+        </li>
+        <li class="case-item">
+            <div class="container">
+                <div class="case-icon"></div>
+                <h2>百度识图</h2>
+                <p>全球第一个全网人脸搜索功能<br>
+                    可以自动检测用户上传图片中出现的人脸，并将其余数据库中索引的全网数亿人脸比对并按照人脸相似度排序展示，帮你找到更多相似的TA</p>
+            </div>
+        </li>
+    </ul>
+    <ul class="case-indicator">
+        <li class="active"><a>乌镇人脸闸机</a></li>
+        <li><a>百度识图</a></li>
+    </ul>
+</section>
+{%if $userInfo eq Null%}
+<section class="tech-section get-started">
+    <div class="container">
+        <h2>现在注册，即享免费试用</h2>
+        <p>结合百度人工智能技术为您提供免费的技术应用，结合百度人工智能技术为您提供免费的技术应用</p>
+        <div>
+            <a role="button" class="btn-primary large" href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">免费试用</a>
+        </div>
+    </div>
+</section>
+{%/if%}
+<section class="tech-section tech-guide">
+    <div class="container">
+        <h2>使用指南</h2>
+        <div class="guide-link clear-float">
+            <h3>开发指南</h3>
+            <ul>
+                <li><a>技术文档 ></a></li>
+                <li><a>SDK下载 ></a></li>
+                <li><a>教学视频 ></a></li>
+            </ul>
+        </div>
+        <div class="question-link clear-float">
+            <h3>常见问题</h3>
+            <ul>
+                <li><a>图片分辨率有什么要求？</a></li>
+                <li><a>图片大小是否有限制？</a></li>
+                <li><a>请求qps是否有限制？</a></li>
+                <li><a>低质量的色情图片能否正常识别？</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
 </div>
 <aside class="aside-action">
     <ul>
@@ -493,5 +419,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="\dist\js\sdk\sdk.bundle.js"></script></body>
+<script src="\dist\js\technology\face-search.bundle.js"></script></body>
 </html>

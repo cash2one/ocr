@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="/dist/css/solution/facegate.css"></head>
+<link rel="stylesheet" href="\dist\css\solution\facegate.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -126,6 +126,17 @@
                             </div>
                             <ul class="tech-list">
                                 <li><a href="http://www.paddlepaddle.org/">PaddlePaddle</a></li>
+                            </ul>
+                        </li>
+                        <li id="tech-ar">
+                            <div class="tech-title">
+                                <span class="tech-title-icon"></span>增强现实
+                            </div>
+                            <div class="sub-tech-title">
+                                <span>AR</span>
+                            </div>
+                            <ul class="tech-list">
+                                <li><a href="/tech/ar">AR</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -402,5 +413,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="/dist/js/solution/facegate.bundle.js"></script></body>
+<script src="\dist\js\solution\facegate.bundle.js"></script></body>
 </html>
