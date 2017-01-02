@@ -1,2 +1,2 @@
-cd ../webroot/deployPackages
+cd ../webroot/deploy_packages
 sh deploy.sh

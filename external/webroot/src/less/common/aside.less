@@ -26,6 +26,22 @@ aside.aside-action {
         height: 36px;
         position: relative;
 
+        &:after {
+          content: '';
+          position: absolute;
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          left: 8px;
+          top: 8px;
+          text-align: center;
+          background-size: 290px/2 156px/2;
+
+        }
+        &:hover::after{
+          display: none;
+        }
+
         &:hover::before{
           content: attr(data-spec);
           background-color: @blue;
@@ -47,20 +63,20 @@ aside.aside-action {
         border-top: 1px solid #005fc2;
       }
 
-      &.consult > a {
-        .icon(@template-png, -120px, -40px);
+      &.consult > a:after {
+        .icon(@template-png, -65px, -22px);
       }
 
-      &.feedback > a {
-        .icon(@template-png, -150px, -40px);
+      &.feedback > a:after {
+        .icon(@template-png, -85px, -22px);
       }
 
       &.back-top {
         display: none;
       }
 
-      &.back-top > a {
-        .icon(@template-png, -180px, -40px);
+      &.back-top > a:after {
+        .icon(@template-png, -125px, -2px);
       }
     }
   }
