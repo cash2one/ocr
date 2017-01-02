@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="shortcut icon" href="/images/favicon-32.ico">
     <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="\dist\css\technology\speech-tts.css"></head>
+<link rel="stylesheet" href="/dist/css/technology/speech-tts.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -453,5 +453,5 @@
     </div>
 </footer>
 <script src="/dist/js/base.bundle.js"></script>
-<script src="\dist\js\technology\speech-tts.bundle.js"></script></body>
+<script src="/dist/js/technology/speech-tts.bundle.js"></script></body>
 </html>
