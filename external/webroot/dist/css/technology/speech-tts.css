@@ -219,7 +219,7 @@
 .tech-section.tech-intro .container > p {
   color: #fff;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 26px;
   margin: 0 auto;
 }
@@ -232,6 +232,7 @@
 }
 .tech-section.tech-intro.solution .container > p {
   color: #333;
+  font-size: 12px;
 }
 .tech-section.tech-intro.solution .solution-container {
   margin-top: 30px;
@@ -415,7 +416,7 @@
   vertical-align: bottom;
   text-align: center;
   margin-top: 10px;
-  margin-left: -4px;
+  margin-left: -3px;
 }
 .tech-section.tech-case .case-indicator > li.active,
 .tech-section.tech-case .case-indicator > li:hover {
@@ -488,6 +489,9 @@
   display: inline-block;
   color: #0073eb;
 }
+.tech-section.tech-guide ul > li > a:hover {
+  color: #1a81ed;
+}
 .tech-section.tech-guide .guide-link {
   margin-bottom: 20px;
 }
@@ -507,6 +511,7 @@
 }
 .tech-section.tech-intro .tech-intro-detail {
   height: 340px;
+  background-size: 720px 300px;
   background-image: url('../../../images/technology/speech-tts/intro.png');
   background-repeat: no-repeat;
   background-position: center center;
@@ -655,6 +660,9 @@
 }
 .tech-section.tech-demo .demo-container .demo-input .demo-control .demo-speed .demo-current-speed {
   margin: 0 5px;
+  width: 20px;
+  text-align: center;
+  display: inline-block;
 }
 .tech-section.tech-demo .demo-container .demo-input .demo-control .demo-speed .demo-current-speed::after {
   content: attr(data-speed) 'X';
@@ -674,12 +682,12 @@
 .tech-section.tech-demo .demo-container .demo-input .demo-control .demo-volume .volume-slider {
   display: inline-block;
   width: 100px;
-  height: 6px;
+  height: 2px;
   background: #fafafa;
   border-radius: 3px;
-  border: 1px solid #D3D3D3;
+  border: 1px solid transparent;
   position: relative;
-  top: -20px;
+  top: -21px;
 }
 .tech-section.tech-demo .demo-container .demo-input .demo-control .demo-volume .volume-slider.noUi-target,
 .tech-section.tech-demo .demo-container .demo-input .demo-control .demo-volume .volume-slider.noUi-target * {
@@ -717,8 +725,8 @@
 .tech-section.tech-demo .demo-container .demo-input .demo-control .demo-volume .volume-slider .noUi-base .noUi-handle {
   position: relative;
   border-radius: 6px;
-  height: 12px;
-  width: 12px;
+  height: 9px;
+  width: 9px;
   background: #0073eb;
   left: -6px;
   top: -3px;

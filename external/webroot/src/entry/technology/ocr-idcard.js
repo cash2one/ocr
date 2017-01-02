@@ -71,6 +71,9 @@ $(document).ready(function () {
                         .toggleClass('error-timeout', res.errno === 28)
                         .toggleClass('error-image-format', res.errno === 106);
                     isScanning = false;
+                    if ([106, 107, 28].indexOf(res.errno) === -1) {
+                        new AlertModal(res.msg);
+                    }
                     return false;
                 }
                 let hasNoResult = true;
@@ -90,7 +93,7 @@ $(document).ready(function () {
                 isScanning = false;
             },
             fail: function (xhr) {
-                new AlertModal('接口出错：' + xhr.status + ' - ' + xhr.statusText);
+                new AlertModal('接口发生错误：' + xhr.status + ' - ' + xhr.statusText);
                 resetDemo();
             }
         };

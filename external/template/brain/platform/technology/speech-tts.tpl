@@ -249,7 +249,7 @@
                             </div>
                         </div>
                         <div class="demo-control">
-                            <a class="player play"></a>
+                            <a class="player play btn-normal" role="button"></a>
                             <span class="demo-speed">
                                 <a class="decrease"><</a>
                                 <span data-speed="3" class="demo-current-speed"></span>

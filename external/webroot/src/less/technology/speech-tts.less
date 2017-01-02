@@ -16,6 +16,7 @@
 
     .tech-intro-detail {
       height: 340px;
+      background-size: 1440px/2 600px/2;
       .icon(@intro, center, center);
     }
   }
@@ -170,6 +171,9 @@
 
             .demo-current-speed {
               margin: 0 5px;
+              width: 20px;
+              text-align: center;
+              display: inline-block;
 
               &::after {
                 content: attr(data-speed)'X';
@@ -190,12 +194,12 @@
             .volume-slider {
               display: inline-block;
               width: 100px;
-              height: 6px;
+              height: 2px;
               background: #fafafa;
               border-radius: 3px;
-              border: 1px solid #D3D3D3;
+              border: 1px solid transparent;
               position: relative;
-              top: -20px;
+              top: -21px;
 
               &.noUi-target,
               &.noUi-target * {
@@ -234,8 +238,8 @@
                 .noUi-handle {
                   position: relative;
                   border-radius: 6px;
-                  height: 12px;
-                  width: 12px;
+                  height: 9px;
+                  width: 9px;
                   background: @blue;
                   left: -6px;
                   top: -3px;
