@@ -193,6 +193,10 @@ header.header-nav .top-nav > ul > li:before {
   height: 3px;
   background-color: #fff;
   bottom: 0;
+  -webkit-transition: right 0.3s ease 0s;
+  -moz-transition: right 0.3s ease 0s;
+  -o-transition: right 0.3s ease 0s;
+  transition: right 0.3s ease 0s;
 }
 header.header-nav .top-nav > ul > li > a {
   display: inline-block;
@@ -234,10 +238,6 @@ header.header-nav .top-nav > ul > li .sub-top-nav > li > a:hover {
 }
 header.header-nav .top-nav > ul > li:hover::before {
   right: 0;
-  -webkit-transition: right 0.3s ease 0s;
-  -moz-transition: right 0.3s ease 0s;
-  -o-transition: right 0.3s ease 0s;
-  transition: right 0.3s ease 0s;
 }
 header.header-nav .top-nav > ul > li:hover > .sub-top-nav {
   display: inline-block;
@@ -444,9 +444,17 @@ header.header-nav .login > ul > li > a.console:hover {
 #tech-service #tech-machine-learning {
   width: 25%;
   margin-top: 10px;
+  margin-right: 10%;
 }
-#tech-service #tech-nlp {
-  margin-top: -60px;
+#tech-service #tech-user-profile,
+#tech-service #tech-machine-learning {
+  width: 16%;
+  margin-top: 10px;
+  margin-right: 1%;
+}
+#tech-service #tech-ar {
+  width: 16%;
+  margin-top: 10px;
 }
 #tech-service #tech-speech .tech-title-icon {
   background-image: url('../../../images/template.png');
@@ -481,6 +489,13 @@ header.header-nav .login > ul > li > a.console:hover {
   background-repeat: no-repeat;
   background-position: -250px -10px;
   background-position-x: -250px;
+  background-position-y: -10px;
+}
+#tech-service #tech-ar .tech-title-icon {
+  background-image: url('../../../images/template.png');
+  background-repeat: no-repeat;
+  background-position: -100px -10px;
+  background-position-x: -100px;
   background-position-y: -10px;
 }
 footer.footer-nav {
@@ -523,12 +538,13 @@ footer.footer-nav .news .news-container ul > li {
   font-size: 12px;
 }
 footer.footer-nav .news .news-container ul > li + li {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 footer.footer-nav .footer-links {
   text-align: right;
   float: left;
   width: 100%;
+  font-size: 12px;
 }
 footer.footer-nav .footer-links > nav {
   text-align: left;
@@ -540,7 +556,7 @@ footer.footer-nav .footer-links > nav:first-child {
   margin-left: 400px;
 }
 footer.footer-nav .footer-links ul > li + li {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 footer.footer-nav .footer-links .qr-code {
   height: 100px;

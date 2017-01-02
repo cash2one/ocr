@@ -244,6 +244,7 @@
 </div>
 
 <div class="lexer-demo">
+    <div class="lexer-demo-title">功能演示</div>
     <div class="lexer-demo-switch" id="demo-switch">
         <div class="lexer-demo-switch-icon"></div>
         <div class="lexer-demo-switch-txt">换一个实例</div>

@@ -237,8 +237,13 @@
             }
           }
 
-          &.has-result > table {
-            display: table;
+          &.has-result {
+            &::after {
+              display: none;
+            }
+            &> table {
+              display: table;
+            }
           }
         }
       }

@@ -682,34 +682,46 @@
   width: 900px;
   margin: 0 auto;
 }
+.lexer-demo-title {
+  font-size: 30px;
+  color: #333333;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 40px;
+}
 .lexer-demo-case {
   min-height: 50px;
   padding: 20px;
-  border: 1px solid gray;
+  border: 1px solid #cccccc;
+  color: #666666;
 }
 .lexer-demo-result {
   padding: 0 20px;
-  border: 1px solid gray;
-  background-color: #dcdcdc;
+  border: 1px solid #ebebeb;
+  background-color: #fafafa;
 }
 .lexer-demo-segmentation,
 .lexer-demo-word-type {
   box-sizing: border-box;
+  padding: 10px 0;
 }
 .lexer-demo-block {
   display: inline-block;
-  padding: 8px;
-  margin: 8px 5px;
+  padding: 5px;
+  margin: 10px 5px;
   vertical-align: top;
-  border: 1px solid blue;
-  font-size: 14px;
+  border: 1px solid #7db6f2;
+  font-size: 16px;
+  border-radius: 2px;
+  color: #666666;
 }
 .lexer-demo-block.selected {
-  background-color: blue;
+  background-color: #7db6f2;
   color: #fff;
 }
 .lexer-demo-split {
   margin: 0;
+  border: 1px solid #ededed;
 }
 .lexer-demo-tab {
   margin: 25px 0;
@@ -720,14 +732,14 @@
   display: inline-block;
   padding: 10px 0;
   width: 100px;
-  border: 1px solid blue;
+  border: 1px solid #0073eb;
   vertical-align: top;
   text-align: center;
   font-size: 16px;
   cursor: pointer;
 }
 .lexer-demo-tab-label.label-selected {
-  background-color: blue;
+  background-color: #0073eb;
   color: #fff;
 }
 .lexer-demo-tab-content {
@@ -751,7 +763,6 @@
 }
 .lexer-demo-term-name,
 .lexer-demo-term-name-eng {
-  padding: 5px 0;
   text-align: center;
 }
 .lexer-demo-term-name {
@@ -766,20 +777,32 @@
 }
 .lexer-demo-left-side {
   width: 30%;
-  font-size: 14px;
-  border: 1px solid blue;
-  background-color: cornflowerblue;
+  font-size: 16px;
+  border: 1px solid #7db6f2;
+  background-color: #e6f1fd;
+  color: #666666;
 }
 .lexer-demo-term-box {
   width: 70%;
-  border: 1px solid blue;
+  border: 1px solid #7db6f2;
   border-left: 0;
   overflow: auto;
 }
 .lexer-demo-switch {
-  padding: 10px 0;
-  color: blue;
+  padding: 10px 0 10px 25px;
+  color: #0073eb;
   cursor: pointer;
+  position: relative;
+}
+.lexer-demo-switch:before {
+  content: '';
+  display: block;
+  width: 17px;
+  height: 17px;
+  background: url("../../../images/technology/nlp-lexer/change-icon.png") no-repeat;
+  position: absolute;
+  top: 12px;
+  left: 0;
 }
 .word-type {
   cursor: pointer;

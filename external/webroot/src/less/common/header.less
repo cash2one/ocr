@@ -54,6 +54,7 @@ header.header-nav{
           height: 3px;
           background-color: @white;
           bottom: 0;
+          .basic-transition(right, 0.3s, ease);
         }
 
         & > a {
@@ -105,7 +106,6 @@ header.header-nav{
       & > li:hover {
         &::before {
           right: 0;
-          .basic-transition(right, 0.3s, ease);
         }
 
         & > .sub-top-nav{
@@ -346,10 +346,18 @@ header.header-nav{
   #tech-machine-learning {
     width: 25%;
     margin-top: 10px;
+    margin-right: 10%
+  }
+  #tech-user-profile,
+  #tech-machine-learning {
+    width: 16%;
+    margin-top: 10px;
+    margin-right: 1%
   }
 
-  #tech-nlp {
-    margin-top: -60px;
+  #tech-ar {
+    width: 16%;
+    margin-top: 10px;
   }
 
   #tech-speech .tech-title-icon {
@@ -370,5 +378,9 @@ header.header-nav{
 
   #tech-machine-learning .tech-title-icon {
     .icon(@template-png, -250px, -10px);
+  }
+
+  #tech-ar .tech-title-icon {
+    .icon(@template-png, -100px, -10px);
   }
 }

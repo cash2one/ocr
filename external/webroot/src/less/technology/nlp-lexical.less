@@ -253,37 +253,49 @@
     width: 900px;
     margin: 0 auto;
 
+    &-title{
+        font-size: 30px;
+        color: #333333;
+        text-align: center;
+        line-height: 50px;
+        margin-top: 40px;
+    }
+
     // 样例文本
     &-case {
         min-height: 50px;
         padding: 20px;
-        border: 1px solid gray;
+        border: 1px solid #cccccc;
+        color: #666666;
     }
 
     // 分析结果
     &-result {
         padding: 0 20px;
-        border: 1px solid gray;
-        background-color: #dcdcdc;
+        border: 1px solid #ebebeb;
+        background-color: #fafafa;
     }
 
     // 分结果
     &-segmentation,
     &-word-type {
         box-sizing: border-box;
+        padding: 10px 0;
     }
 
     // 词块
     &-block {
         display: inline-block;
-        padding: 8px;
-        margin: 8px 5px;
+        padding: 5px;
+        margin: 10px 5px;
         vertical-align: top;
-        border: 1px solid blue;
-        font-size: 14px;
+        border: 1px solid #7db6f2;
+        font-size: 16px;
+        border-radius: 2px;
+        color: #666666;
 
         &.selected {
-            background-color: blue;
+            background-color: #7db6f2;
             color: #fff;
         }
     }
@@ -291,6 +303,7 @@
     // 分割线
     &-split {
         margin: 0;
+        border: 1px solid #ededed;
     }
 
     &-tab {
@@ -302,14 +315,14 @@
             display: inline-block;
             padding: 10px 0;
             width: 100px;
-            border: 1px solid blue;
+            border: 1px solid #0073eb;
             vertical-align: top;
             text-align: center;
             font-size: 16px;
             cursor: pointer;
 
             &.label-selected {
-                background-color: blue;
+                background-color: #0073eb;
                 color: #fff;
             }
         }
@@ -341,7 +354,6 @@
 
         &-name,
         &-name-eng {
-            padding: 5px 0;
             text-align: center;
         }
 
@@ -361,24 +373,37 @@
     // 术语容器左侧
     &-left-side {
         width: 30%;
-        font-size: 14px;
-        border: 1px solid blue;
-        background-color: cornflowerblue;
+        font-size: 16px;
+        border: 1px solid #7db6f2;
+        background-color: #e6f1fd;
+        color: #666666;
     }
 
     // 属于block容器
     &-term-box {
         width: 70%;
-        border: 1px solid blue;
+        border: 1px solid #7db6f2;
         border-left: 0;
         overflow: auto;
     }
 
     // demo切换按键
     &-switch {
-        padding: 10px 0;
-        color: blue;
+        padding: 10px 0 10px 25px;
+        color: #0073eb;
         cursor: pointer;
+        position: relative;
+
+        &:before{
+            content: '';
+            display: block;
+            width: 17px;
+            height: 17px;
+            background: url("../../../images/technology/nlp-lexer/change-icon.png") no-repeat;
+            position: absolute;
+            top: 12px;
+            left: 0;
+        }
     }
 }
 

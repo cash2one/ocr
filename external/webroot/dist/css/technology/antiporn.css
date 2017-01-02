@@ -705,7 +705,7 @@
   background-position-y: center;
 }
 .tech-section.tech-demo .demo-container #demo-result .canvas-container.error-no-result::after {
-  background-image: url('../../../images/error/no-face-result.png');
+  background-image: url('../../../images/error/no-result.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;

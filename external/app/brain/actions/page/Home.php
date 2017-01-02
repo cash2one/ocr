@@ -19,7 +19,7 @@ class Action_Home extends Ap_Action_Abstract {
         $arrPageInfo['messagelist'] = Bd_Conf::getAppConf('messagelist');
         Brain_Output::htmlOutput(
             $arrPageInfo, 
-            'brain/page/home/home.tpl'
+            'brain/platform/home.tpl'
         );
     }
 }
