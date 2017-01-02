@@ -53,6 +53,8 @@ $(document).ready(function () {
         setBannerNum(newBannerNum + 1);
     });
 
+    setBannerNum(currentBannerNum + 1);
+
     // 渲染底部新闻
     new News({
         selector: '.page-content .news-container',
