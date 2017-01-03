@@ -13,6 +13,7 @@ class Dao_ApiVisit extends Dao_Base {
     private $arrDefaultFields = array(
         'id',
         'ip',
+        'uname',
         'api',
         'error_code',
         'error_msg',
@@ -47,8 +48,11 @@ class Dao_ApiVisit extends Dao_Base {
      * @return void
      */
     public function insertApiVisit($ip, $api, $error_code, $error_msg, $log_id=0) {
+        
+        $userInfo = Brain_User::getUserInfo();
         $arrRow = array(
             'ip' => $ip,
+            'uname' => strval($userInfo['uname']),
             'api' => $api,
             'error_code' => $error_code,
             'error_msg' => $error_msg,

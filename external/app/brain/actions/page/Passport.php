@@ -15,6 +15,7 @@
 class Action_Passport extends Ap_Action_Abstract {
     public function execute() {
         var_dump(Bd_Passport::checkUserLogin());
+        var_dump($_SERVER);
     }
 }
 /* vim: set expandtab ts=4 sw=4 sts=4 tw=80: */
