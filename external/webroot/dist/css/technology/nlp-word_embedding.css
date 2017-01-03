@@ -532,7 +532,7 @@
   text-align: center;
 }
 .nlp-feature-container {
-  margin: 0 -50px;
+  margin: 0 -50px 40px;
   font-size: 0;
   text-align: center;
 }
@@ -575,6 +575,9 @@
   height: 1px;
   background-color: #efefef;
 }
+.ai-platform .nlp-scenario {
+  padding-bottom: 40px;
+}
 .nlp-scenario {
   font-size: 0;
   text-align: center;
@@ -588,7 +591,6 @@
   display: inline-block;
   width: 33.333%;
   padding: 5px 15px 0;
-  margin-bottom: 20px;
   box-sizing: border-box;
   vertical-align: top;
   font-size: 0;

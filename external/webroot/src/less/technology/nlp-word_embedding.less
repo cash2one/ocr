@@ -51,7 +51,7 @@
 
     // 容器
     &-container {
-        margin: 0 -@feature-padding / 2;
+        margin: 0 -@feature-padding / 2 40px;
         font-size: 0;
         text-align: center;
     }
@@ -126,6 +126,13 @@
     width: @width;
     height: @height;
 }
+
+.ai-platform {
+    .@{prefix}-scenario {
+        padding-bottom: 40px;
+    }
+}
+
 // 使用场景
 .@{prefix}-scenario {
     font-size: 0;
@@ -143,7 +150,6 @@
         display: inline-block;
         width: 33.333%;
         padding: 5px @scenario-padding / 2 0;
-        margin-bottom: 20px;
         box-sizing: border-box;
         vertical-align: top;
         font-size: 0;

@@ -28,7 +28,7 @@
 
     // 容器
     &-container {
-        margin: 0 -@feature-padding / 2;
+        margin: 0 -@feature-padding / 2 40px;
         font-size: 0;
     }
 
@@ -109,9 +109,16 @@
     height: @height;
 }
 
+.ai-platform {
+    .@{prefix}-scenario {
+        padding-bottom: 40px;
+    }
+}
+
 // 使用场景
 .@{prefix}-scenario {
     font-size: 0;
+    padding-bottom: 40px;
 
     // 使用场景title
     &-title {
@@ -125,7 +132,6 @@
         display: inline-block;
         width: 33.333%;
         padding: 5px @scenario-padding / 2 0;
-        margin-bottom: 20px;
         box-sizing: border-box;
         vertical-align: top;
         font-size: 0;
@@ -420,6 +426,12 @@
     }
 }
 
+.stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+}
+
 // 词型
 .word-type {
     cursor: pointer;
@@ -459,10 +471,13 @@
 
         .case-indicator {
             & > li:nth-child(1) {
-                .icon(@case-icons, -10px, -10px);
+                .icon(@case-icons, -5px, -10px);
             }
             & > li:nth-child(2) {
-                .icon(@case-icons, -210px, -10px);
+                .icon(@case-icons, -160px, -10px);
+            }
+            & > li:nth-child(3) {
+                .icon(@case-icons, -310px, -10px);
             }
         }
         .case-list{

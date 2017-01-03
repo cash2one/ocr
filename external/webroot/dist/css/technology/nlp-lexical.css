@@ -512,7 +512,7 @@
   text-align: center;
 }
 .nlp-feature-container {
-  margin: 0 -50px;
+  margin: 0 -50px 40px;
   font-size: 0;
 }
 .nlp-feature-item {
@@ -563,8 +563,12 @@
   height: 1px;
   background-color: #efefef;
 }
+.ai-platform .nlp-scenario {
+  padding-bottom: 40px;
+}
 .nlp-scenario {
   font-size: 0;
+  padding-bottom: 40px;
 }
 .nlp-scenario-title {
   padding: 30px 0;
@@ -575,7 +579,6 @@
   display: inline-block;
   width: 33.333%;
   padding: 5px 15px 0;
-  margin-bottom: 20px;
   box-sizing: border-box;
   vertical-align: top;
   font-size: 0;
@@ -857,15 +860,22 @@
 .tech-section.tech-case .case-indicator > li:nth-child(1) {
   background-image: url('../../../images/solution/dialog/case-icons.png');
   background-repeat: no-repeat;
-  background-position: -10px -10px;
-  background-position-x: -10px;
+  background-position: -5px -10px;
+  background-position-x: -5px;
   background-position-y: -10px;
 }
 .tech-section.tech-case .case-indicator > li:nth-child(2) {
   background-image: url('../../../images/solution/dialog/case-icons.png');
   background-repeat: no-repeat;
-  background-position: -210px -10px;
-  background-position-x: -210px;
+  background-position: -160px -10px;
+  background-position-x: -160px;
+  background-position-y: -10px;
+}
+.tech-section.tech-case .case-indicator > li:nth-child(3) {
+  background-image: url('../../../images/solution/dialog/case-icons.png');
+  background-repeat: no-repeat;
+  background-position: -310px -10px;
+  background-position-x: -310px;
   background-position-y: -10px;
 }
 .tech-section.tech-case .case-list > li {

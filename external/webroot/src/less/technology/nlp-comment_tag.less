@@ -112,7 +112,7 @@
 
     // 容器
     &-container {
-        margin: 0 -@feature-padding / 2;
+        margin: 0 -@feature-padding / 2 40px;
         font-size: 0;
     }
 
@@ -193,9 +193,17 @@
     width: @width;
     height: @height;
 }
+
+.ai-platform {
+    .@{prefix}-scenario {
+        padding-bottom: 40px;
+    }
+}
+
 // 使用场景
 .@{prefix}-scenario {
     font-size: 0;
+    padding-bottom: 40px;
 
     // 使用场景title
     &-title {
@@ -209,7 +217,6 @@
         display: inline-block;
         width: 33.333%;
         padding: 5px @scenario-padding / 2 0;
-        margin-bottom: 20px;
         box-sizing: border-box;
         vertical-align: top;
         font-size: 0;
@@ -352,6 +359,8 @@
     // 中间对比项
     &-contrast {
         width: 20%;
+        background: url(../../../images/technology/nlp-comment/contrast-icon.png) no-repeat center;
+        height: 100px;
     }
 
     // 一个评论句子
