@@ -11,15 +11,15 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/ai-images/favicon-32.ico">
-    <link rel="stylesheet" href="/ai-dist/css/base.css">
+    <link rel="shortcut icon" href="/ai_images/favicon-32.ico">
+    <link rel="stylesheet" href="/ai_dist/css/base.css">
 <link rel="stylesheet" href="/ai_dist/css/support/news/news-con.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="/ai-images/logo.png" alt="百度大脑">
+                <img src="/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -214,7 +214,7 @@
 <aside class="aside-action">
     <ul>
         <li class="consult"><a data-spec="合作咨询"></a></li>
-        <li class="feedback"><a data-spec="我要反馈"></a></li>
+        <li class="feedback"><a data-spec="我要反馈" id="feedback-btn"></a></li>
         <li class="back-top"><a data-spec="返回顶部"></a></li>
     </ul>
 </aside>
@@ -280,6 +280,63 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai-dist/js/base.bundle.js"></script>
+<script src="/ai_dist/js/base.bundle.js"></script>
+<script type="text/javascript">
+    (function () {
+        function init_feedback() {
+            if (bds && bds.qa && bds.qa.ShortCut && bds.qa.ShortCut.initRightBar) {
+                var fb_options = {
+                    appid: 215714
+                };
+                var pro_data = {
+                    appid: 215714
+                };
+                bds.qa.ShortCut.initRightBar(fb_options);
+            }
+        }
+
+        function loadRightBar() {
+            if (window.bds&&window.bds.qa&&window.bds.qa.ShortCut) {
+                init_feedback();
+            } else {
+                loadScript('https://ufosdk.baidu.com/Public/feedback/js/feedback_plugin_1.0.js', function () {
+                    init_feedback();
+                }, {
+                    charset: 'utf-8',
+                    id: 'feedback_script'
+                });
+            }
+            return false;
+        }
+        document.getElementById('feedback-btn').onclick = loadRightBar;
+    })();
+
+    function loadScript(url, callback, opt) {
+        var script = document.createElement('script');
+        var opt = opt || {};
+        script.type = 'text/javascript';
+        if (opt.charset) {
+            script.charset = opt.charset;
+        }
+        if (opt.id) {
+            script.id = opt.id;
+        }
+
+        if (script.readyState) {
+            script.onreadystatechange = function () {
+                if (script.readyState === 'loaded' || script.readyState === 'complete') {
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else {
+            script.onload = function () {
+                callback();
+            };
+        }
+        script.src = url;
+        document.body.appendChild(script);
+    }
+</script>
 <script src="/ai_dist/js/support/news/news-con.bundle.js"></script></body>
 </html>
