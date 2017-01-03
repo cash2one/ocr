@@ -12,7 +12,7 @@
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
     <link rel="shortcut icon" href="/ai_images/favicon-32.ico">
-    <link rel="stylesheet" href="/ai_distt/css/base.css">
+    <link rel="stylesheet" href="/ai_dist/css/base.css">
 <link rel="stylesheet" href="/ai_dist/css/home.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
@@ -607,6 +607,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_distt/js/base.bundle.js"></script>
+<script src="/ai_dist/js/base.bundle.js"></script>
 <script src="/ai_dist/js/home.bundle.js"></script></body>
 </html>
