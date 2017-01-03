@@ -182,21 +182,39 @@
   transition: opacity 1.5s ease-in-out 0s;
 }
 .ai-platform.page-content .banner ul.banner-content > li:nth-child(1) {
-  background-image: url('../../ai_images/home/banner.png');
+  background-image: url('../../ai_images/home/banner-1.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
   background-position-y: center;
 }
 .ai-platform.page-content .banner ul.banner-content > li:nth-child(2) {
-  background-image: url('../../ai_images/home/banner.png');
+  background-size: cover;
+  background-image: url('../../ai_images/home/banner-2.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
   background-position-y: center;
 }
 .ai-platform.page-content .banner ul.banner-content > li:nth-child(3) {
-  background-image: url('../../ai_images/home/banner.png');
+  background-size: cover;
+  background-image: url('../../ai_images/home/banner-3.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position-x: center;
+  background-position-y: center;
+}
+.ai-platform.page-content .banner ul.banner-content > li:nth-child(4) {
+  background-size: cover;
+  background-image: url('../../ai_images/home/banner-4.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position-x: center;
+  background-position-y: center;
+}
+.ai-platform.page-content .banner ul.banner-content > li:nth-child(5) {
+  background-size: cover;
+  background-image: url('../../ai_images/home/banner-5.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;

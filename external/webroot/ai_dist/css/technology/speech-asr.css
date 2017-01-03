@@ -664,20 +664,6 @@
   background-position-x: -205px;
   background-position-y: -5px;
 }
-.tech-section.tech-case .case-item:nth-child(4) {
-  background-image: url('../../../ai_images/technology/speech-asr/case-4.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-position-x: center;
-  background-position-y: center;
-}
-.tech-section.tech-case .case-item:nth-child(4) .case-icon {
-  background-image: url('../../../ai_images/technology/speech-asr/case-icons.png');
-  background-repeat: no-repeat;
-  background-position: -305px -5px;
-  background-position-x: -305px;
-  background-position-y: -5px;
-}
 .tech-section.tech-case .case-indicator > li:nth-child(1) {
   background-image: url('../../../ai_images/technology/speech-asr/case-icons.png');
   background-repeat: no-repeat;
@@ -697,12 +683,5 @@
   background-repeat: no-repeat;
   background-position: -410px -210px;
   background-position-x: -410px;
-  background-position-y: -210px;
-}
-.tech-section.tech-case .case-indicator > li:nth-child(4) {
-  background-image: url('../../../ai_images/technology/speech-asr/case-icons.png');
-  background-repeat: no-repeat;
-  background-position: -610px -210px;
-  background-position-x: -610px;
   background-position-y: -210px;
 }

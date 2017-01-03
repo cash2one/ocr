@@ -633,6 +633,10 @@
   border-radius: 27px;
   border: 2px solid #0073eb;
   background-size: 130px 100px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+}
+.tech-section.tech-demo .demo-container .demo-input .demo-control .player:hover {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
 }
 .tech-section.tech-demo .demo-container .demo-input .demo-control .player.play {
   background-image: url('../../../ai_images/technology/speech-tts/demo-icons.png');

@@ -15,195 +15,6 @@
     <link rel="stylesheet" href="/ai_dist/css/base.css">
 <link rel="stylesheet" href="/ai_dist/css/home.css"></head>
 <body class="ai-platform">
-<header class="header-nav">
-    <div class="container">
-        <div class="logo">
-            <a href="https://ai.baidu.com" href="_self">
-                <img src="/ai_images/logo.png" alt="百度大脑">
-            </a>
-        </div>
-        <nav class="top-nav">
-            <ul>
-                <li><a href="/">首页</a></li>
-                <li>
-                    <a>技术服务</a>
-                    <ul class="sub-top-nav" id="tech-service">
-                        <li id="tech-speech">
-                            <div class="tech-title">
-                                <span class="tech-title-icon"></span>语音技术
-                            </div>
-                            <div class="sub-tech-title">
-                                <span>语音识别</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="/tech/speech/asr">语音识别</a></li>
-                                <li><a href="/tech/speech/wake">语音唤醒</a></li>
-                            </ul>
-                            <div class="sub-tech-title">
-                                <span>语音合成</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="/tech/speech/tts">语音合成</a></li>
-                            </ul>
-                        </li>
-                        <li id="tech-image">
-                            <div class="tech-title">
-                                <span class="tech-title-icon"></span>图像技术
-                            </div>
-                            <div class="sub-tech-title">
-                                <span>OCR文字识别</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="/tech/ocr/general">通用文字识别</a></li>
-                                <li><a href="/tech/ocr/idcard">身份证识别</a></li>
-                                <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
-                            </ul>
-                            <div class="sub-tech-title">
-                                <span>人脸识别</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="/tech/face/detect">人脸检测</a></li>
-                                <li><a href="/tech/face/compare">人脸对比</a></li>
-                                <li><a href="/tech/face/search">人脸查找</a></li>
-                            </ul>
-                            <div class="sub-tech-title">
-                                <span>色情识别</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="/tech/antiporn">色情识别</a></li>
-                            </ul>
-                        </li>
-                        <li id="tech-nlp">
-                            <div class="tech-title">
-                                <span class="tech-title-icon"></span>自然语言
-                            </div>
-                            <div class="sub-tech-title">
-                                <span>词汇级</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="/tech/nlp/lexical">词法分析</a></li>
-                                <li><a href="/tech/nlp/word_embedding">中文词向量表示</a></li>
-                            </ul>
-                            <div class="sub-tech-title">
-                                <span>短文本级</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="/tech/nlp/dnnlm_cn">中文DNN语言模型</a></li>
-                                <li><a href="/tech/nlp/simnet">短文本相似度</a></li>
-                                <li><a href="/tech/nlp/comment_tag">评论观点抽取</a></li>
-                            </ul>
-                            <div class="sub-tech-title">
-                                <span>机器翻译</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="http://api.fanyi.baidu.com/api/trans/product/index">机器翻译平台</a></li>
-                            </ul>
-                        </li>
-                        <li id="tech-user-profile">
-                            <div class="tech-title">
-                                <span class="tech-title-icon"></span>用户画像
-                            </div>
-                            <div class="sub-tech-title">
-                                <span>用户画像</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="http://erised.baidu.com/">用户画像平台</a></li>
-                            </ul>
-                            <div class="sub-tech-title">
-                                <span>推荐云平台</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="http://recsys.baidu.com/">推荐云平台</a></li>
-                            </ul>
-                        </li>
-                        <li id="tech-machine-learning">
-                            <div class="tech-title">
-                                <span class="tech-title-icon"></span>机器学习
-                            </div>
-                            <div class="sub-tech-title">
-                                <span>PaddlePaddle</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="http://www.paddlepaddle.org/">PaddlePaddle</a></li>
-                            </ul>
-                        </li>
-                        <li id="tech-ar">
-                            <div class="tech-title">
-                                <span class="tech-title-icon"></span>AR增强现实
-                            </div>
-                            <div class="sub-tech-title">
-                                <span>AR增强现实</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="/tech/ar">AR增强现实</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a>解决方案</a>
-                    <ul class="sub-top-nav">
-                        <li><a href="/solution/robot">机器人</a></li>
-                        <li><a href="/solution/faceprint">人脸核身</a></li>
-                        <li><a href="/solution/facegate">人脸闸机</a></li>
-                        <li><a href="/solution/dialog">号码风险识别</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/docs">文档中心</a>
-                </li>
-                <li>
-                    <a href="/sdk">SDK下载</a>
-                </li>
-                <li>
-                    <a>帮助与支持</a>
-                    <ul class="sub-top-nav">
-                        <li><a href="/support/video">教学视频</a></li>
-                        <li><a href="/support/faq">常见问题</a></li>
-                        <li><a href="/support/news">新闻中心</a></li>
-                        <li><a href="/support/about">关于我们</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <div class="login">
-            <!--<ul>
-                {%if $userInfo eq Null%}
-                <li><a href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://ai.baidu.com)">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">免费试用</a></li>
-                {%/if%}
-                {%if $userInfo != Null%}
-                <li>
-                    <a class="console" href="https://console.bce.baidu.com/ai/">控制台</a>
-                </li>
-                <li>
-                    <a>{%$userInfo.uname%}</a>
-                    <ul class="sub-top-nav">
-                        <li><a href="https://passport.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">登出</a></li>
-                    </ul>
-                </li>
-                {%/if%}
-            </ul>-->
-            <ul>
-                {%if $userInfo eq Null%}
-                <li><a href="https://login.bcetest.baidu.com?redirect=encodeURIComponent(https://cp01-yf-db-02.epc.baidu.com:8030/)">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://login.bcetest.baidu.com?redirect=encodeURIComponent(https://qasandbox.bcetest.baidu.com/ai/)">免费试用</a></li>
-                {%/if%}
-                {%if $userInfo != Null%}
-                <li>
-                    <a class="console" href="https://qasandbox.bcetest.baidu.com/ai/">控制台</a>
-                </li>
-                <li>
-                    <a>{%$userInfo.uname%}</a>
-                    <ul class="sub-top-nav">
-                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">登出</a></li>
-                    </ul>
-                </li>
-                {%/if%}
-            </ul>
-        </div>
-    </div>
-</header>
 <div class="ai-platform page-content">
 <section class="banner">
     <ul class="banner-content">
@@ -216,14 +27,28 @@
             <video src="/ai_images/home/banner-1.mp4" autoplay></video>
         </li>
         <li>
-            <h1>人工智能技术 增益您的产品222</h1>
+            <h1>人脸</h1>
             <p>内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案<br>内容文案内容文案内容文案内容</p>
             <div>
                 <a role="button" class="get-started">免费试用1</a>
             </div>
         </li>
         <li>
-            <h1>人工智能技术 增益您的产品1</h1>
+            <h1>OCR</h1>
+            <p>内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案<br>内容文案内容文案内容文案内容</p>
+            <div>
+                <a role="button" class="get-started">免费试用2</a>
+            </div>
+        </li>
+        <li>
+            <h1>NLP</h1>
+            <p>内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案<br>内容文案内容文案内容文案内容</p>
+            <div>
+                <a role="button" class="get-started">免费试用2</a>
+            </div>
+        </li>
+        <li>
+            <h1>AR</h1>
             <p>内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案<br>内容文案内容文案内容文案内容</p>
             <div>
                 <a role="button" class="get-started">免费试用2</a>
@@ -234,13 +59,15 @@
         <li class="active"></li>
         <li></li>
         <li></li>
+        <li></li>
+        <li></li>
     </ul>
 </section>
 <section class="news">
     <div class="container">
         <div class="news-container"></div>
         <h4>新闻动态</h4>
-        <a href="/news">more ></a>
+        <a href="/support/news">more ></a>
     </div>
 </section>
 <section class="tech-service home-section">
@@ -541,7 +368,7 @@
 <aside class="aside-action">
     <ul>
         <li class="consult"><a data-spec="合作咨询"></a></li>
-        <li class="feedback"><a data-spec="我要反馈"></a></li>
+        <li class="feedback"><a data-spec="我要反馈" id="feedback-btn"></a></li>
         <li class="back-top"><a data-spec="返回顶部"></a></li>
     </ul>
 </aside>
@@ -608,5 +435,78 @@
     </div>
 </footer>
 <script src="/ai_dist/js/base.bundle.js"></script>
+<script type="text/javascript">
+    /**
+     * @function :  插件的调用。
+     * @how2use  :  使用过程，可以复制过去，仅需修改调用id即可。同时可以配置相关样式参数和数据参数
+     */
+    (function () {
+        /**
+         * @function :第一次加载插件，之后调用插件
+         */
+        function init_feedback() {
+            if (bds && bds.qa && bds.qa.ShortCut && bds.qa.ShortCut.initRightBar) {
+                //初始化反馈插件的样式参数（可以参考样式定制的api）
+                var fb_options = {
+                    appid: 215714                            //产品线id需要反馈想反馈平台管理员申请（必填）
+                };
+                var pro_data = {
+                    appid: 215714
+                };
+
+                bds.qa.ShortCut.initRightBar(fb_options);
+            }
+        }
+
+        /**
+         * @function :校验js加载完成
+         * @returns :{boolean}
+         */
+        function loadRightBar() {
+            if (window.bds&&window.bds.qa&&window.bds.qa.ShortCut) {
+                init_feedback();
+            } else {
+                //注意：如果页面编码是gbk ，调用插件的地址为http://f3.baidu.com/feedback/js/feedback/feedback-gbk.js
+                loadScript("https://ufosdk.baidu.com/Public/feedback/js/feedback_plugin_1.0.js", function () {
+                    init_feedback();
+                }, {
+                    charset: "utf-8",                     //根据自己的编码做出相应的变化
+                    id: "feedback_script"
+                });
+            }
+            return false;
+        }
+
+        document.getElementById("feedback-btn").onclick = loadRightBar;
+    })();
+
+    //页面加载脚本判定函数，如果自身有则不用加载
+    function loadScript(url, callback, opt) {
+        var script = document.createElement("script");
+        var opt = opt || {};
+        script.type = "text/javascript";
+        if (opt.charset) {
+            script.charset = opt.charset;
+        }
+        if (opt.id) {
+            script.id = opt.id;
+        }
+
+        if (script.readyState) {
+            script.onreadystatechange = function () {
+                if (script.readyState == "loaded" || script.readyState == "complete") {
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else {
+            script.onload = function () {
+                callback();
+            };
+        }
+        script.src = url;
+        document.body.appendChild(script);
+    }
+</script>
 <script src="/ai_dist/js/home.bundle.js"></script></body>
 </html>

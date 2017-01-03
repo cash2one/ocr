@@ -11,7 +11,7 @@ export const NEWS_TMPL = [
         '<% } else {%>',
         '<% for (var i = 0, len = news.length; i < len; i++) {%>',
         '<li>',
-            '<a href="/news?action=detail&id=<%= news[i].id %>" target="_blank" title="<%= news[i].title %>">',
+            '<a href="/support/news?action=detail&id=<%= news[i].id %>" target="_blank" title="<%= news[i].title %>">',
                 '<%= "[" + news[i].time + "] " + news[i].title %>',
             '</a>',
         '</li>',
