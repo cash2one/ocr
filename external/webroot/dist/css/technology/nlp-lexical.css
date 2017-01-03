@@ -823,6 +823,13 @@
 .word-type {
   cursor: pointer;
 }
+.tech-section h2 {
+  padding-top: 30px;
+}
+.tech-section.tech-case .case-list > li p {
+  width: 800px;
+  margin: 0 auto;
+}
 .tech-section.tech-case .case-item .case-icon {
   background-size: 400px 135px;
 }

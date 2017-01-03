@@ -330,21 +330,18 @@
     <ul class="case-list">
         <li class="case-item active">
             <div class="container">
-                <div class="case-icon"></div>
                 <h2>百度搜索</h2>
                 <p>支持酒店、KTV等多个服务领域的时间、地址解析，准确、召回均大于90% 支持地址解析，尤其是冷门地址的解析，保持准确率95%的情况下，地址解析召回率从40%提高到了80%</p>
             </div>
         </li>
         <li class="case-item">
             <div class="container">
-                <div class="case-icon"></div>
                 <h2>百度语音搜索</h2>
                 <p>语音搜索区别于传统搜索的一种全新搜索形式是多轮交互式搜索 命名实体识别算法引入百度语音搜索后，多轮交互搜索的目标集合召回提升2%，实现了典型多轮句式的稳定召回</p>
             </div>
         </li>
         <li class="case-item">
             <div class="container">
-                <div class="case-icon"></div>
                 <h2>度秘服务</h2>
                 <p>建库端：每篇文档进行分词，生成倒排索引拉链 检索端：每个query进行分词，得到词序列，然后根据相应的词拉取对应的倒排索引，得到初步召回结果，同时根据query的词性标注和专名识别结果，来辅助排序系统对召回结果进行排序</p>
             </div>
