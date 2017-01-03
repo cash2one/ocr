@@ -103,8 +103,8 @@ class Action_News extends Ap_Action_Abstract {
                 curl_setopt($ch, CURLOPT_VERBOSE, 0);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/4.0 (compatible;)');
-                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-                curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
                 curl_setopt($ch, CURLOPT_URL, 'https://yl.baidu.com/rp/api/world');
                 // curl_setopt($ch, CURLOPT_URL, 'http://cq01-piaohongji-m1.epc.baidu.com:8090/rp/api/world');
                 curl_setopt($ch, CURLOPT_POST, true);
