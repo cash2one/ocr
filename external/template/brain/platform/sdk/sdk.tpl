@@ -245,31 +245,35 @@
             <div class="sdk-collection">
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
+                        <i class="sdk-language-sprite sdk-android"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bs"></i>
-                            <div class="sdk-download-button">下载</div>
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/bd_speech_sdk_asr_v2.1.20.20160623_e3e63ce_beta.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
                         </div>
                         <div class="sdk-info">
                             <div class="sdk-item-name">离在线融合SDK</div>
                             <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
+                            <div class="sdk-version">版本: 2.1.20</div>
                             <div class="sdk-update-date">发布时间: 2016-06-24</div>
                         </div>
                     </div>
                 </div>
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
+                        <i class="sdk-language-sprite sdk-apple"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bs"></i>
-                            <div class="sdk-download-button">下载</div>
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu_Voice_Combine_SDK_iOS.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
                         </div>
                         <div class="sdk-info">
                             <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
+                            <div class="sdk-description"></div>
+                            <div class="sdk-version">版本: 2.0.1</div>
+                            <div class="sdk-update-date">发布时间: 2015-10-22</div>
                         </div>
                     </div>
                 </div>
@@ -278,28 +282,224 @@
                         <i class="sdk-language-sprite sdk-android"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bs"></i>
-                            <div class="sdk-download-button">下载</div>
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu_Voice_RestApi_SampleCode.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
                         </div>
                         <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
+                            <div class="sdk-item-name">语音识别REST API 开发文档、示例代码</div>
+                            <div class="sdk-description"></div>
+                            <div class="sdk-version">版本: 1.2</div>
+                            <div class="sdk-update-date">发布时间: 2015-02-12</div>
                         </div>
                     </div>
                 </div>
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-cpp"></i>
+                        <i class="sdk-language-sprite"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bs"></i>
-                            <div class="sdk-download-button">下载</div>
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/DEMO-VoiceRecognition-2.0.1.apk">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">语音识别Demo应用</div>
+                            <div class="sdk-description"></div>
+                            <div class="sdk-version">版本: 1.0</div>
+                            <div class="sdk-update-date">发布时间: 2015-07-28</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-bs"></i>
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu-Voice-SDK-iOS-1.6.4.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">在线识别SDK</div>
+                            <div class="sdk-description"></div>
+                            <div class="sdk-version">版本: 1.6.4</div>
+                            <div class="sdk-update-date">发布时间: 2016-06-21</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-bs"></i>
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu-Voice-SDK-Android-1.6.2.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">在线识别SDK</div>
+                            <div class="sdk-description"></div>
+                            <div class="sdk-version">版本: 1.6.2</div>
+                            <div class="sdk-update-date">发布时间: 2015-01-15</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-bs"></i>
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/s_1">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">常用离线指令数据包</div>
+                            <div class="sdk-description">基础数据资源包，适用于常用指令识别</div>
+                            <div class="sdk-version"></div>
+                            <div class="sdk-update-date">发布时间: 2015-05-08</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-bs"></i>
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/s_2_InputMethod">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">离线输入法数据包</div>
+                        <div class="sdk-description">适用于输入法垂类的数据资源包，支持随意输入</div>
+                            <div class="sdk-version"></div>
+                            <div class="sdk-update-date">发布时间: 2015-05-08</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-bs"></i>
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/s_2_InputMethod">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">离线导航数据包</div>
+                        <div class="sdk-description">适用于地图导航数据资源包</div>
+                            <div class="sdk-version"></div>
+                            <div class="sdk-update-date">发布时间: 2015-05-08</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sdk-category">
+            <div class="sdk-category-name">百度语音BS - 语音合成</div>
+            <div class="sdk-collection">
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite sdk-android"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-ocr"></i>
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/bd_speech_sdk_tts_v2.2.9.20161020_154fa02_release.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
                         </div>
                         <div class="sdk-info">
                             <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
-                            <div class="sdk-version">版本: 2.0</div>
-                            <div class="sdk-update-date">发布时间: 2016-06-24</div>
+                            <div class="sdk-description"></div>
+                            <div class="sdk-version">版本: 2.2.9</div>
+                            <div class="sdk-update-date">发布时间: 2016-10-20</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite sdk-apple"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-ocr"></i>
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu_TTS_Combine_SDK_iOS.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">离在线融合SDK</div>
+                            <div class="sdk-description"></div>
+                            <div class="sdk-version">版本: 2.2.2</div>
+                            <div class="sdk-update-date">发布时间: 2016-07-01</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-ocr"></i>
+                            <a href="http://yuyin.baidu.com/file/download/1181">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">语音合成REST API 开发文档、示例代码</div>
+                            <div class="sdk-description"></div>
+                            <div class="sdk-version">版本: 1.0.0</div>
+                            <div class="sdk-update-date">发布时间: 2015-05-08</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-ocr"></i>
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu_TTS_Demo_1.1.2.apk">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                        <div class="sdk-item-name">语音合成Demo应用</div>
+                            <div class="sdk-description"></div>
+                            <div class="sdk-version">版本: 1.1.2</div>
+                            <div class="sdk-update-date">发布时间: 2015-04-22</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite sdk-apple"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-ocr"></i>
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu_TTS_Demo_1.1.2.apk">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">在线合成SDK</div>
+                            <div class="sdk-description"></div>
+                            <div class="sdk-version">版本: 2.0.3</div>
+                            <div class="sdk-update-date">发布时间: 2016-01-05</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite sdk-android"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-ocr"></i>
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu-TTS-SDK-Android-1.1.3.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">在线合成SDK</div>
+                            <div class="sdk-description"></div>
+                            <div class="sdk-version">版本: 1.1.3</div>
+                            <div class="sdk-update-date">发布时间: 2015-08-03</div>
                         </div>
                     </div>
                 </div>

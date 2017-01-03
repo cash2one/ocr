@@ -12,17 +12,17 @@ var app = express();
 var port = 8088;
 
 app.use(
-    '/images',
-    express.static(path.join(__dirname, 'images'))
+    '/ai_images',
+    express.static(path.join(__dirname, 'ai_images'))
 );
 
 app.use(
-    '/dist/css',
+    '/ai_dist/css',
     express.static(path.join(__dirname, 'dist', 'css'))
 );
 
 app.use(
-    '/dist/js',
+    '/ai_dist/js',
     express.static(path.join(__dirname, 'dist', 'js'))
 );
 
