@@ -11,15 +11,15 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/images/favicon-32.ico">
-    <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="/dist/css/technology/ar.css"></head>
+    <link rel="shortcut icon" href="/ai-images/favicon-32.ico">
+    <link rel="stylesheet" href="/ai-dist/css/base.css">
+<link rel="stylesheet" href="/ai_dist/css/technology/ar.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="/images/logo.png" alt="百度大脑">
+                <img src="/ai-images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -294,7 +294,7 @@
         <h2>产品与服务</h2>
         <div class="clear-float">
             <div class="flow-chart">
-                <img src="/images/technology/ar/process-flow.png">
+                <img src="/ai-images/technology/ar/process-flow.png">
             </div>
             <div class="product-desc-list">
                 <div class="product-desc">
@@ -415,6 +415,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/dist/js/base.bundle.js"></script>
-<script src="/dist/js/technology/ar.bundle.js"></script></body>
+<script src="/ai-dist/js/base.bundle.js"></script>
+<script src="/ai_dist/js/technology/ar.bundle.js"></script></body>
 </html>

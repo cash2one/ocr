@@ -11,15 +11,15 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/images/favicon-32.ico">
-    <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="/dist/css/support/about-us.css"></head>
+    <link rel="shortcut icon" href="/ai-images/favicon-32.ico">
+    <link rel="stylesheet" href="/ai-dist/css/base.css">
+<link rel="stylesheet" href="/ai_dist/css/support/about-us.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="/images/logo.png" alt="百度大脑">
+                <img src="/ai-images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -310,6 +310,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/dist/js/base.bundle.js"></script>
+<script src="/ai-dist/js/base.bundle.js"></script>
 </body>
 </html>
