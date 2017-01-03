@@ -208,7 +208,17 @@
 <section class="news-banner">
     <div class="container">
         <h1>新闻动态</h1>
-        {%$arrRet['data']%}
+    </div>
+</section>
+<section class="container news-main">
+    <div class="news-title">{%$data.title%}</div>
+    <div class="news-info-container">
+        <div class="news-date">{%$data.time%}</div>
+        <div class="news-author">{%$data.author%}</div>
+        <div class="news-view-count">{%$data.pv%}次浏览</div>
+    </div>
+    <hr class="news-info-split">
+    <div class="news-content">
     </div>
 </section>
 
