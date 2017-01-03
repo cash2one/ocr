@@ -17,7 +17,7 @@
 // 左侧导航title高度
 @nav-header-height: 45px;
 // 左侧导航条目高度
-@nav-item-height: 35px;
+@nav-item-height: 45px;
 
 /**
  * 下载条目部分变量
@@ -60,7 +60,7 @@
 .@{prefix}-nav-item {
     height: @nav-item-height;
     line-height: @nav-item-height;
-    padding: 0 @nav-padding;
+    padding: 0 @nav-padding 0 0;
     font-size: @font-size-1;
 
     &:hover {
@@ -142,6 +142,11 @@
     color: @white;
     text-align: center;
     cursor: pointer;
+
+    &:hover {
+        background-color: #1a81ed;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+    }
 }
 
 // 一个sdk介绍部分
