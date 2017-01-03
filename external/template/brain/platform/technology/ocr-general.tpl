@@ -196,7 +196,7 @@
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">登出</a></li>
+                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -208,9 +208,9 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>通用文字识别</h1>
-        <p>基于业界领先的深度学习技术<br>为用户提供多场景下整体文字检测识别服务</p>
+        <p>基于业界领先的深度学习技术<br>为您提供多场景、多语种、高精度的整体文字检测和识别服务</p>
         <div>
-            <a role="button" class="btn-primary media">获取API Key</a>
+            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
         </div>
     </div>

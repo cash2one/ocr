@@ -308,6 +308,7 @@ header.header-nav .login > ul > li > a.free-demo {
   padding: 0 15px;
   width: auto;
   font-size: 12px;
+  border-radius: 2px;
 }
 header.header-nav .login > ul > li > a.console {
   height: 28px;
@@ -317,8 +318,10 @@ header.header-nav .login > ul > li > a.console {
   width: auto;
   border: 1px solid #fff;
   font-size: 12px;
+  border-radius: 2px;
 }
 header.header-nav .login > ul > li > a.console:hover {
+  border-color: #0073eb;
   background-color: #0073eb;
   color: #fff;
 }

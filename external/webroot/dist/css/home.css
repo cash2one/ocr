@@ -362,6 +362,9 @@
   background-position-x: -170px;
   background-position-y: -15px;
 }
+.ai-platform.page-content .home-section.tech-service .service-container .service-item:nth-child(3) ul > li > ul > li + li {
+  margin-left: 5px;
+}
 .ai-platform.page-content .home-section.tech-service .service-container .service-item:nth-child(4) .service-icon {
   background-image: url('../../ai_images/home/service.png');
   background-repeat: no-repeat;
@@ -481,7 +484,7 @@
   margin-bottom: 15px;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-detail .service-tech-list ul > li li + li {
-  margin-left: 5px;
+  margin-left: 10px;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-detail .service-tech-list ul > li li:nth-child(3n+1) {
   margin-left: 0;

@@ -196,7 +196,7 @@
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">登出</a></li>
+                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -216,29 +216,32 @@
             <video src="/ai_images/home/banner-1.mp4" autoplay></video>
         </li>
         <li>
-            <h1>人脸</h1>
-            <p>内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案<br>内容文案内容文案内容文案内容</p>
+            <h1>人脸识别</h1>
+            <p>快速检测人脸、定位五官关键点，准确识别多种人脸属性，为您提供多场景高精度的人脸识别服务。</p>
             <div>
                 <a role="button" class="get-started">免费试用1</a>
             </div>
         </li>
         <li>
-            <h1>OCR</h1>
-            <p>内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案<br>内容文案内容文案内容文案内容</p>
+            <h1>文字识别</h1>
+            <p>基于业界领先的深度学习技术<br>为您提供多场景、多语种、高精度的整体文字检测和识别服务</p>
             <div>
                 <a role="button" class="get-started">免费试用2</a>
             </div>
         </li>
         <li>
-            <h1>NLP</h1>
-            <p>内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案<br>内容文案内容文案内容文案内容</p>
+            <h1>自然语言处理</h1>
+            <p>基于大数据和用户行为的分词、词性标注、命名实体识别<br>
+                定位基本语言元素，消除歧义，支撑自然语言的准确理解</p>
             <div>
                 <a role="button" class="get-started">免费试用2</a>
             </div>
         </li>
         <li>
-            <h1>AR</h1>
-            <p>内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案<br>内容文案内容文案内容文案内容</p>
+            <h1>增强现实</h1>
+            <p>增强现实(Augmented Reality，简称AR)技术，包含了多媒体、三维建模、<br>
+                实时视频显示及控制、多传感器融合、实时跟踪及注册、场景融合等新技<br>
+                术与新手段，从而提供了一般情况下不同于人类可感知的信息。</p>
             <div>
                 <a role="button" class="get-started">免费试用2</a>
             </div>

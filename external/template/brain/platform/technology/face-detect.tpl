@@ -196,7 +196,7 @@
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">登出</a></li>
+                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -208,9 +208,9 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>人脸检测</h1>
-        <p>快速检测人脸，高精度识别多种人脸属性<br>分析结果可灵活应用于各种场景</p>
+        <p>快速检测人脸、定位五官关键点，准确识别多种人脸属性，为您提供多场景高精度的人脸识别服务。</p>
         <div>
-            <a role="button" class="btn-primary media">获取API Key</a>
+            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
         </div>
     </div>

@@ -196,7 +196,7 @@
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">登出</a></li>
+                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -208,9 +208,9 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>黄反识别</h1>
-        <p>智能鉴别色情图片内容<br>保驾产品内容健康运行</p>
+        <p>依托全网海量优质数据和深度神经网络技术，智能鉴别色情图片内容，为您的产品保驾护航。</p>
         <div>
-            <a role="button" class="btn-primary media">获取API Key</a>
+            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
         </div>
     </div>

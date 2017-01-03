@@ -225,8 +225,10 @@ $(document).ready(function () {
                     $('#demo-result .canvas-container')
                         .toggleClass('error-upload-fail', res.errno === 107)
                         .toggleClass('error-timeout', res.errno === 28)
-                        .toggleClass('error-image-format', res.errno === 106)
-                        .toggleClass('error-no-result', !res.data.result_num);
+                        .toggleClass('error-image-format', res.errno === 106);
+                    $('#demo-result .canvas-container').toggleClass(
+                        'error-no-result', !res.data || !res.data.result_num
+                    );
                     $('#demo-result .canvas-container').empty();
                     isScanning = false;
                     if ([106, 107, 28, 0].indexOf(res.errno) === -1) {
@@ -281,6 +283,7 @@ $(document).ready(function () {
             type: 'stream',
             lazyRender: true,
             success: imgSrc => {
+                $('#demo-photo-upload  > input').val('');
                 startScan('stream', imgSrc);
             },
             fail: resetDemo

@@ -196,7 +196,7 @@
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">登出</a></li>
+                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -208,7 +208,7 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>人脸核身解决方案</h1>
-        <p>智能比对客户提供的照片、身份证内容<br>高效安全地核实用户真实性</p>
+        <p>提供软硬件结合的人脸验证闸机解决方案，提供高精度、快速、海量人脸库的刷脸通行方案，帮助您打造更智能、更安全、更可靠的安防管理。</p>
         <div class="consult">
             <a role="button" class="btn-primary media">商务合作</a>
         </div>
