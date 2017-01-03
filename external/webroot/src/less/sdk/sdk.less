@@ -60,7 +60,6 @@
 .@{prefix}-nav-item {
     height: @nav-item-height;
     line-height: @nav-item-height;
-    padding: 0 @nav-padding 0 0;
     font-size: @font-size-1;
 
     &:hover {
@@ -68,14 +67,14 @@
         cursor: pointer;
 
         .sdk-nav-icon {
-            background-image: url(../../../ai_images/sdk/icon-sprite-active.png);
+            background-image: url(/ai_images/sdk/icon-sprite-active.png);
         }
     }
 }
 
 .@{prefix}-nav-icon {
     display: inline-block;
-    background: url(../../../ai_images/sdk/icon-sprite.png) no-repeat;
+    background: url(/ai_images/sdk/icon-sprite.png) no-repeat;
     vertical-align: middle;
     transform: scale(0.7);
 
@@ -131,11 +130,10 @@
 // 下载按键
 .@{prefix}-download-button {
     position: absolute;
-    // 下padding + 偏移
-    bottom: 20px + 5px;
-    left: 10px;
+    bottom: 20px;
+    left: 15px;
     // 按键占侧栏宽度的80%
-    width: 0.8 * @item-aside-radio;
+    width: 25%;
     line-height: 30px;
     background-color: @blue;
     border-radius: 2px;
@@ -153,10 +151,6 @@
 // 一个sdk介绍部分
 .@{prefix}-info {
     width: 100% - @item-aside-radio;
-}
-
-// sdk类组
-.@{prefix}-category {
 }
 
 // sdk分组名
@@ -177,12 +171,22 @@
     box-sizing: border-box;
     width: 33.333%;
     padding: 10px;
+    vertical-align: top;
+}
+
+// 版本和发布时间容器
+.@{prefix}-bottom-info {
+    position: absolute;
+    bottom: 20px;
+    left: 35%;
 }
 
 // 一个sdk项
 .@{prefix}-item {
     position: relative;
-    padding: 30px 0 10px;
+    box-sizing: border-box;
+    height: 165px;
+    padding: 25px 0 10px;
     background-color: @light-gray;
     border: 1px solid @gray;
 }
@@ -199,21 +203,20 @@
 .@{prefix}-description {
     font-size: @font-size-1;
     // 支持多行介绍
-    height: 55px;
+    //height: 55px;
     padding: 3px 0;
     color: @font-gray;
 }
 
 // sdk版本
 .@{prefix}-version {
-    padding: 3px 0 10px;
+    padding-bottom: 8px;
     font-size: @font-size-1;
     color: @font-gray;
 }
 
 // sdk更新日期
 .@{prefix}-update-date {
-    padding: 3px 0;
     font-size: @font-size-1;
     color: @font-gray;
 }
@@ -258,7 +261,7 @@
     position: absolute;
     right: 10px;
     top: 10px;
-    background: url(../../../ai_images/sdk/language.png) no-repeat;
+    background: url(/ai_images/sdk/language.png) no-repeat;
 
     &.@{prefix}-android {
         .language-stitches-sprite(-5px, -5px, 12px, 14px);
@@ -288,7 +291,7 @@
     position: absolute;
     top: 25px;
     left: 15px;
-    background: url(../../../ai_images/sdk/category-icon.png) no-repeat;
+    background: url(/ai_images/sdk/category-icon.png) no-repeat;
 
     &.@{prefix}-ocr {
         .category-stitches-sprite(-5px, -5px, 72px, 70px);
