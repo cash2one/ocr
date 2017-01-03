@@ -180,6 +180,13 @@
   -o-transition: opacity 1.5s ease-in-out 0s;
   transition: opacity 1.5s ease-in-out 0s;
 }
+.ai-platform.page-content .banner ul.banner-content > li:nth-child(1) {
+  background-image: url('../../images/home/banner.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position-x: center;
+  background-position-y: center;
+}
 .ai-platform.page-content .banner ul.banner-content > li:nth-child(2) {
   background-image: url('../../images/home/banner.png');
   background-repeat: no-repeat;
