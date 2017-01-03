@@ -210,7 +210,7 @@
         <h1>词法分析</h1>
         <p>基于大数据和用户行为的分词、词性标注、命名实体识别<br>定位基本语言元素，消除歧义，支撑自然语言的准确理解</p>
         <div>
-            <a role="button" class="btn-primary media">获取API Key</a>
+            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
         </div>
     </div>

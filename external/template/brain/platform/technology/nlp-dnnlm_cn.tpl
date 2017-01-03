@@ -208,9 +208,9 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>中文DNN语言模型</h1>
-        <p>依托全网海量优质数据和深度神经网络技术<br>精准判别文句是否符合客观语言表达习惯</p>
+        <p>依托全网海量优质数据和深度神经网络技术，判断一句话是否符合语言表达习惯，帮助您实现文本分析、纠错、对话等多种语义应用。</p>
         <div>
-            <a role="button" class="btn-primary media">获取API Key</a>
+            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
         </div>
     </div>

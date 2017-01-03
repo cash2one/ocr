@@ -210,7 +210,7 @@
         <h1>中文DNN词向量</h1>
         <p>依托全网海量优质数据和深度神经网络技术<br>对词表中的词语向量化，实现文本的可计算</p>
         <div>
-            <a role="button" class="btn-primary media">获取API Key</a>
+            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
         </div>
     </div>

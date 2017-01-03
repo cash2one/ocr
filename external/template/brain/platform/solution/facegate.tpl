@@ -208,7 +208,7 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>人脸闸机解决方案</h1>
-        <p>提供高精度、快速、精准的门禁方案<br>打造更安全可靠的企业环境</p>
+        <p>提供完整的人脸身份核查解决方案，实现活体检测、拍照人脸识别、身份证人脸比对验证等多个业务环节，帮您规避业务风险，提升产品智能体验。</p>
         <div class="consult">
             <a role="button" class="btn-primary media">商务合作</a>
         </div>

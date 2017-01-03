@@ -210,7 +210,7 @@
         <h1>评论观点抽取</h1>
         <p>自动抽取和分析消费者评论观点<br>助力商家产品优化，指导用户消费决策</p>
         <div>
-            <a role="button" class="btn-primary media">获取API Key</a>
+            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
         </div>
     </div>
