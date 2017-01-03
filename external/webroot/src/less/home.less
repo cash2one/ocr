@@ -329,6 +329,10 @@
             & > ul > li {
               display: block;
               overflow: hidden;
+
+              &:nth-child(3) li + li {
+                margin-left: 5px;
+              }
             }
 
             ul > li ul {
@@ -345,7 +349,7 @@
               margin-bottom: 15px;
 
               & + li {
-                margin-left: 5px;
+                margin-left: 10px;
               }
 
               &:nth-child(3n+1) {

@@ -208,9 +208,9 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>语音识别</h1>
-        <p>基于百度大脑的业界顶级声学模型和语音模型<br>提供业界领先的语音识别能力及解决方案</p>
+        <p>为您提供高精度的语音识别服务，融合百度领先的自然语言处理技术，支持多场景智能语音交互</p>
         <div>
-            <a role="button" class="btn-primary media">获取API Key</a>
+            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
         </div>
     </div>

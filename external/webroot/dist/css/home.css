@@ -468,6 +468,9 @@
   display: block;
   overflow: hidden;
 }
+.ai-platform.page-content .home-section.tech-service .service-container .service-detail .service-tech-list > ul > li:nth-child(3) li + li {
+  margin-left: 5px;
+}
 .ai-platform.page-content .home-section.tech-service .service-container .service-detail .service-tech-list ul > li ul {
   margin-left: 10px;
   display: inline-block;
@@ -481,7 +484,7 @@
   margin-bottom: 15px;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-detail .service-tech-list ul > li li + li {
-  margin-left: 5px;
+  margin-left: 10px;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-detail .service-tech-list ul > li li:nth-child(3n+1) {
   margin-left: 0;

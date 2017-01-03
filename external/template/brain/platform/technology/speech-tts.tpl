@@ -208,9 +208,9 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>语音合成</h1>
-        <p>基于百度大脑的业界顶级声学模型和语音模型<br>提供流畅自然的语音合成效果，让您的应用开口说话</p>
+        <p>基于业界领先的深度神经网络技术<br>提供流畅自然的语音合成服务，让您的应用开口说话</p>
         <div>
-            <a role="button" class="btn-primary media">获取API Key</a>
+            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">获取API Key</a>
             <a role="button" class="btn-other media">技术文档</a>
         </div>
     </div>

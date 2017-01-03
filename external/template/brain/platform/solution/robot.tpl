@@ -208,7 +208,7 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>机器人解决方案</h1>
-        <p>完整的语音交互，精确理解用户意图并进行智能对话<br>基于场景化训练学习，打造更聪明的服务机器人</p>
+        <p>为您提供完整的语音交互，精确理解用户意图并进行智能对话<br>基于场景化训练学习，打造更聪明的服务机器人</p>
         <div class="consult">
             <a role="button" class="btn-primary media">商务合作</a>
         </div>
