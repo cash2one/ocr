@@ -2,10 +2,10 @@
 @import '../common/global.less';
 @import '../common/tech-page';
 
-@banner: url('/ai_images/technology/nlp-lexer/banner.png');
-@icons: url('../../../ai_images/solution/dialog/icons.png');
+@banner: url(/ai_images/technology/nlp-lexer/banner.png);
+@icons: url(/ai_images/solution/dialog/icons.png);
 @intro-bg: none;
-@case-icons: url('../../../ai_images/solution/dialog/case-icons.png');
+@case-icons: url(/ai_images/technology/nlp-lexer/case-icons.png);
 
 // 前缀
 @prefix: nlp;
@@ -49,7 +49,7 @@
     // 特色图标
     &-icon {
         display: block;
-        background: url(../../../ai_images/technology/nlp-lexer/feature.png) no-repeat center;
+        background: url(/ai_images/technology/nlp-lexer/feature.png) no-repeat center;
         margin: 0 auto;
 
         &.feature-1 {
@@ -100,7 +100,9 @@
 .scenario-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
     width: @width;
     height: @height;
-    background-position: @x @y;
+    background: url(/ai_images/technology/nlp-lexer/scenario.png) no-repeat @x @y;
+    transform: scale(.5);
+    transform-origin: 0 0;
 }
 
 .function-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
@@ -147,44 +149,42 @@
         padding: 0 0 10px;
     }
 
-    &-icon,
     &-intro {
         display: inline-block;
         vertical-align: top;
     }
 
     // 使用场景图标
-    &-icon {
-        width: 25%;
+    &-icon-container {
+        width: 15%;
         display: inline-block;
-        background: url(../../../ai_images/technology/nlp-lexer/scenario.png) no-repeat;
+    }
 
-        &.scenario-1 {
-            .scenario-sprite(-5px, -5px, 40px, 40px);
-        }
+    &-icon-1 {
+        .scenario-sprite(-5px, -5px, 80px, 80px);
+    }
 
-        &.scenario-2 {
-            .scenario-sprite(-55px, -5px, 40px, 40px);
-        }
+    &-icon-2 {
+        .scenario-sprite(-95px, -5px, 80px, 80px);
+    }
 
-        &.scenario-3 {
-            .scenario-sprite(-5px, -55px, 40px, 40px);
-        }
+    &-icon-3 {
+        .scenario-sprite(-185px, -5px, 80px, 80px);
+    }
 
-        &.scenario-4 {
-            .scenario-sprite(-55px, -55px, 40px, 40px);
-        }
+    &-icon-4 {
+        .scenario-sprite(-275px, -5px, 80px, 80px);
+    }
 
-        &.scenario-5 {
-            .scenario-sprite(-105px, -5px, 40px, 40px);
-        }
+    &-icon-5 {
+        .scenario-sprite(-365px, -5px, 80px, 80px);
     }
 
     // 使用场景介绍信息容器
     &-intro {
         width: 85%;
         box-sizing: border-box;
-        padding: 0 0 0 20px;
+        padding: 0 0 0 5px;
     }
 
     // 使用场景介绍信息详情
@@ -233,7 +233,7 @@
     &-icon {
         display: block;
         margin: 10px auto;
-        background: url(../../../ai_images/technology/nlp-lexer/function-sprite.png) no-repeat;
+        background: url(/ai_images/technology/nlp-lexer/function-sprite.png) no-repeat;
 
         &.function-1 {
             .function-sprite(-5px, -5px, 131px, 130px);
@@ -430,7 +430,7 @@
             display: block;
             width: 17px;
             height: 17px;
-            background: url("../../../ai_images/technology/nlp-lexer/change-icon.png") no-repeat;
+            background: url(/ai_images/technology/nlp-lexer/change-icon.png) no-repeat;
             position: absolute;
             top: 12px;
             left: 0;
@@ -471,25 +471,25 @@
             background-size: 800px/2 270px/2;
         }
         .case-item:nth-child(1) {
-            .icon(url('../../../ai_images/technology/nlp-lexer/case-1.png'), center, center);
+            .icon(url(/ai_images/technology/nlp-lexer/case-1.png), center, center);
 
         }
         .case-item:nth-child(2) {
-            .icon(url('../../../ai_images/technology/nlp-lexer/case-2.png'), center, center);
+            .icon(url(/ai_images/technology/nlp-lexer/case-2.png), center, center);
         }
         .case-item:nth-child(3) {
-            .icon(url('../../../ai_images/technology/nlp-lexer/case-3.png'), center, center);
+            .icon(url(/ai_images/technology/nlp-lexer/case-3.png), center, center);
         }
 
         .case-indicator {
             & > li:nth-child(1) {
-                .icon(@case-icons, -5px, -10px);
+                .icon(@case-icons, -5px, -5px);
             }
             & > li:nth-child(2) {
-                .icon(@case-icons, -160px, -10px);
+                .icon(@case-icons, -155px, -5px);
             }
             & > li:nth-child(3) {
-                .icon(@case-icons, -310px, -10px);
+                .icon(@case-icons, -305px, -5px);
             }
         }
         .case-list{
@@ -502,13 +502,13 @@
 
                 &:nth-child(1){
                     .case-icon{
-                        background: url("../../../ai_images/technology/nlp-comment/case-logo-1.png") no-repeat center center;
+                        background: url(/ai_images/technology/nlp-comment/case-logo-1.png) no-repeat center center;
                     }
                 }
 
                 &:nth-child(2){
                     .case-icon{
-                        background: url("../../../ai_images/technology/nlp-comment/case-logo-2.png") no-repeat center center;
+                        background: url(/ai_images/technology/nlp-comment/case-logo-2.png) no-repeat center center;
                     }
                 }
             }
