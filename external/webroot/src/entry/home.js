@@ -11,7 +11,7 @@ $(document).ready(function () {
     // 首页轮播图
     let currentBannerNum = 0;
     let bannerInterval = null;
-    const refreshTime = 10000;
+    const refreshTime = 6000;
 
     function resetInterval(interval, callback) {
         if (interval) {
