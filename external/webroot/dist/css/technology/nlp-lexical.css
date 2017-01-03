@@ -530,22 +530,24 @@
 .nlp-feature-icon {
   display: block;
   background: url(/ai_images/technology/nlp-lexer/feature.png) no-repeat center;
-  margin: 0 auto;
+  margin: -25px auto;
+  transform: scale(0.5);
+  transform-origin: center;
 }
 .nlp-feature-icon.feature-1 {
-  width: 69px;
-  height: 70px;
+  width: 160px;
+  height: 160px;
   background-position: -5px -5px;
 }
 .nlp-feature-icon.feature-2 {
-  width: 67px;
-  height: 73px;
-  background-position: -84px -5px;
+  width: 160px;
+  height: 160px;
+  background-position: -175px -5px;
 }
 .nlp-feature-icon.feature-3 {
-  width: 69px;
-  height: 74px;
-  background-position: -5px -88px;
+  width: 160px;
+  height: 160px;
+  background-position: -345px -5px;
 }
 .nlp-feature-name {
   padding: 15px 0;
@@ -733,6 +735,7 @@
   padding: 5px;
   margin: 10px 5px;
   min-height: 23px;
+  line-height: 23px;
   vertical-align: top;
   border: 1px solid #7db6f2;
   font-size: 16px;
