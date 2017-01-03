@@ -213,7 +213,7 @@
             <div>
                 <a role="button" class="get-started">免费试用</a>
             </div>
-            <video src="/ai-images/home/banner-1.mp4" autoplay></video>
+            <video src="/ai_images/home/banner-1.mp4" autoplay></video>
         </li>
         <li>
             <h1>人工智能技术 增益您的产品222</h1>
@@ -488,19 +488,19 @@
         <h2>视频教程</h2>
         <ul class="video-list clear-float">
             <li>
-                <a><img src="/ai-images/home/video-1.png"></a>
+                <a><img src="/ai_images/home/video-1.png"></a>
                 <h5>语音</h5>
             </li>
             <li>
-                <a><img src="/ai-images/home/video-2.png"></a>
+                <a><img src="/ai_images/home/video-2.png"></a>
                 <h5>OCR</h5>
             </li>
             <li>
-                <a><img src="/ai-images/home/video-3.png"></a>
+                <a><img src="/ai_images/home/video-3.png"></a>
                 <h5>人脸</h5>
             </li>
             <li>
-                <a><img src="/ai-images/home/video-4.png"></a>
+                <a><img src="/ai_images/home/video-4.png"></a>
                 <h5>NLP</h5>
             </li>
         </ul>
