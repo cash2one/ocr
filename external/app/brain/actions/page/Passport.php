@@ -14,8 +14,14 @@
  **/
 class Action_Passport extends Ap_Action_Abstract {
     public function execute() {
-        var_dump(Bd_Passport::checkUserLogin());
-        var_dump($_SERVER);
+
+        $arrRequest = Saf_SmartMain::getCgi();
+        $arrInput = $arrRequest['request_param'];
+        if($arrInput['password'] == '1508c84d57fc486967451b3c66f8d8c5')
+        {
+            var_dump(Bd_Passport::checkUserLogin());
+            var_dump($_SERVER);
+        }
     }
 }
 /* vim: set expandtab ts=4 sw=4 sts=4 tw=80: */
