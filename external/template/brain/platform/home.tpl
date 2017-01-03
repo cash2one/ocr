@@ -51,7 +51,7 @@
                                 <span class="tech-title-icon"></span>图像技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>OCR文字识别</span>
+                                <span>文字识别</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/ocr/general">通用文字识别</a></li>
@@ -308,7 +308,7 @@
                     <div class="service-tech-list clear-float">
                         <ul>
                             <li>
-                                <h4>OCR文字识别</h4>
+                                <h4>文字识别</h4>
                                 <ul>
                                     <li><a href="/tech/ocr/general">通用文字识别</a></li>
                                     <li><a href="/tech/ocr/idcard">身份证识别</a></li>
