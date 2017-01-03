@@ -14,10 +14,12 @@ var rename = require('gulp-rename');
 var glob = require('glob');
 var eventStream = require('event-stream');
 var less = require('gulp-less');
+var nano = require('gulp-cssnano');
 var watch = require('gulp-watch');
 var babelify = require('babelify');
 var uglify = require('gulp-uglify');
 var replace = require('gulp-replace');
+var autoPrefixer = require('gulp-autoprefixer');
 var fs = require('fs');
 var nodePath = require('path');
 
@@ -88,6 +90,10 @@ gulp.task('less', function () {
                 extname: '.css'
             })
         )
+        .pipe(autoPrefixer({
+            browsers: ['IE >= 9', 'Firefox > 1', 'Chrome > 1']
+        }))
+        .pipe(nano())
         .pipe(gulp.dest('./dist/css'));
 });
 
