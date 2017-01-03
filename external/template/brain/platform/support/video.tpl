@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="shortcut icon" href="/ai_images/favicon-32.ico">
     <link rel="stylesheet" href="/ai_dist/css/base.css">
-<link rel="stylesheet" href="/ai_dist/css/support/video.css"></head>
+<link rel="stylesheet" href="/dist/css/support/video.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -366,54 +366,39 @@
 </footer>
 <script src="/ai_dist/js/base.bundle.js"></script>
 <script type="text/javascript">
-    /**
-     * @function :  插件的调用。
-     * @how2use  :  使用过程，可以复制过去，仅需修改调用id即可。同时可以配置相关样式参数和数据参数
-     */
     (function () {
-        /**
-         * @function :第一次加载插件，之后调用插件
-         */
         function init_feedback() {
             if (bds && bds.qa && bds.qa.ShortCut && bds.qa.ShortCut.initRightBar) {
-                //初始化反馈插件的样式参数（可以参考样式定制的api）
                 var fb_options = {
-                    appid: 215714                            //产品线id需要反馈想反馈平台管理员申请（必填）
+                    appid: 215714
                 };
                 var pro_data = {
                     appid: 215714
                 };
-
                 bds.qa.ShortCut.initRightBar(fb_options);
             }
         }
 
-        /**
-         * @function :校验js加载完成
-         * @returns :{boolean}
-         */
         function loadRightBar() {
             if (window.bds&&window.bds.qa&&window.bds.qa.ShortCut) {
                 init_feedback();
             } else {
-                //注意：如果页面编码是gbk ，调用插件的地址为http://f3.baidu.com/feedback/js/feedback/feedback-gbk.js
-                loadScript("https://ufosdk.baidu.com/Public/feedback/js/feedback_plugin_1.0.js", function () {
+                loadScript('https://ufosdk.baidu.com/Public/feedback/js/feedback_plugin_1.0.js', function () {
                     init_feedback();
                 }, {
-                    charset: "utf-8",                     //根据自己的编码做出相应的变化
-                    id: "feedback_script"
+                    charset: 'utf-8',
+                    id: 'feedback_script'
                 });
             }
             return false;
         }
-        document.getElementById("feedback-btn").onclick = loadRightBar;
+        document.getElementById('feedback-btn').onclick = loadRightBar;
     })();
 
-    //页面加载脚本判定函数，如果自身有则不用加载
     function loadScript(url, callback, opt) {
-        var script = document.createElement("script");
+        var script = document.createElement('script');
         var opt = opt || {};
-        script.type = "text/javascript";
+        script.type = 'text/javascript';
         if (opt.charset) {
             script.charset = opt.charset;
         }
@@ -423,7 +408,7 @@
 
         if (script.readyState) {
             script.onreadystatechange = function () {
-                if (script.readyState == "loaded" || script.readyState == "complete") {
+                if (script.readyState === 'loaded' || script.readyState === 'complete') {
                     script.onreadystatechange = null;
                     callback();
                 }

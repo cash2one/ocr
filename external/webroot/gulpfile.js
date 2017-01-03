@@ -73,7 +73,7 @@ gulp.task('jsCompile', function () {
                 .on('end', function () {
                     gutil.log('File: ' + entry + ', finished');
                 })
-                .pipe(gulp.dest('./ai_dist/js/'));
+                .pipe(gulp.dest('./dist/js/'));
         });
 
         eventStream.merge(tasks).on('end', function () {
@@ -94,7 +94,7 @@ gulp.task('less', function () {
         //     browsers: ['IE >= 9', 'Firefox > 1', 'Chrome > 1']
         // }))
         // .pipe(nano())
-        .pipe(gulp.dest('./ai_dist/css'));
+        .pipe(gulp.dest('./dist/css'));
 });
 
 gulp.task('jsCompile_watch', function () {
@@ -123,7 +123,7 @@ gulp.task('jsCompile_watch', function () {
                     )
                     .pipe(buffer())
                     .on('error', gutil.log)
-                    .pipe(gulp.dest('./ai_dist/js/'));
+                    .pipe(gulp.dest('./dist/js/'));
             });
 
             eventStream.merge(tasks).on('end', function () {
@@ -143,17 +143,17 @@ gulp.task('less_watch', function () {
                     path.extname = '.css';
                 })
             )
-            .pipe(gulp.dest('./ai_dist/css'));
+            .pipe(gulp.dest('./dist/css'));
         gutil.log('Task Less: finished!');
     });
 });
 
 var jsExcludes = [
-    '/ai_dist/js/solution/robot.bundle.js',
-    '/ai_dist/js/solution/faceprint.bundle.js',
-    '/ai_dist/js/support/video.bundle.js',
-    '/ai_dist/js/support/about-us.bundle.js',
-    '/ai_dist/js/sdk/sdk.bundle.js'
+    '/dist/js/solution/robot.bundle.js',
+    '/dist/js/solution/faceprint.bundle.js',
+    '/dist/js/support/video.bundle.js',
+    '/dist/js/support/about-us.bundle.js',
+    '/dist/js/sdk/sdk.bundle.js'
 ];
 
 gulp.task('html_watch', function () {
@@ -171,8 +171,8 @@ gulp.task('html_watch', function () {
                 var dirname = nodePath.dirname(relativePath);
                 dirname = dirname === '.' ? '' : dirname;
 
-                var cssPath = nodePath.join('/ai_dist/css/', dirname, basename + '.css').replace(/\\/g, '/');
-                var jsPath = nodePath.join('/ai_dist/js/', dirname, basename + '.bundle.js').replace(/\\/g, '/');
+                var cssPath = nodePath.join('/dist/css/', dirname, basename + '.css').replace(/\\/g, '/');
+                var jsPath = nodePath.join('/dist/js/', dirname, basename + '.bundle.js').replace(/\\/g, '/');
                 return gulp.src('./src/view/common/template.html')
                     .pipe(replace(/\{\{body}}/g, data))
                     .pipe(replace(/<\/head>/g, '<link rel="stylesheet" href="' + cssPath + '"></head>'))
