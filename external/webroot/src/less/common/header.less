@@ -78,6 +78,10 @@ header.header-nav{
           box-shadow: 0 2px 6px rgba(0,0,0,.4);
           padding: 20px 10px;
           min-width: 90px;
+          -webkit-transform-origin: center top;
+             -moz-transform-origin: center top;
+               -o-transform-origin: center top;
+                  transform-origin: center top;
           -webkit-transform: scaleY(0);
              -moz-transform: scaleY(0);
                -o-transform: scaleY(0);
@@ -120,10 +124,6 @@ header.header-nav{
              -moz-transform: scaleY(1);
                -o-transform: scaleY(1);
                   transform: scaleY(1);
-          -webkit-transform-origin: center top;
-             -moz-transform-origin: center top;
-               -o-transform-origin: center top;
-                  transform-origin: center top;
           .basic-transition(all, 0.5s, ease-in-out, 0s);
         }
       }
