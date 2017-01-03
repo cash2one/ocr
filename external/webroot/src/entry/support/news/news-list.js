@@ -44,7 +44,7 @@ function r(d) {
         const articleHTML = [
             '<div class="news-list">',
             `    <a href=${href}>`,
-            `        <h2 class="block-title>${title}<span class="time">${time}</span></h2>`,
+            `        <h2 class="block-title">${title}<span class="time">${time}</span></h2>`,
             '    </a>',
             `    <p>${desc}</p>`,
             '</div>'
