@@ -64,21 +64,21 @@ export default class DemoCanvas {
                 let contentSize = res.data['Content-Length'];
                 if ((!contentType && !contentSize) || res.errno !== 0) {
                     // console.error('此错误可能是由于图片的同源策略造成的!');
-                    dfd.reject('/images/error/not-found.png');
+                    dfd.reject('/ai_images/error/not-found.png');
                     return;
                 }
                 if (!/image\/(png|bmp|jpg|jpeg)/.test(contentType)) {
-                    dfd.reject('/images/error/image-format.png');
+                    dfd.reject('/ai_images/error/image-format.png');
                     return;
                 }
                 if (contentSize > 2 * 1024 * 1024) {
-                    dfd.reject('/images/error/too-large.png');
+                    dfd.reject('/ai_images/error/too-large.png');
                     return;
                 }
                 dfd.resolve(res.data.image_data);
             },
             fail: function () {
-                dfd.reject('/images/error/not-found.png');
+                dfd.reject('/ai_images/error/not-found.png');
             }
         });
         return dfd.promise();
@@ -88,23 +88,23 @@ export default class DemoCanvas {
         let dfd = $.Deferred();
         let reader = new FileReader();
         if (!image) {
-            dfd.reject('/images/error/not-found.png');
+            dfd.reject('/ai_images/error/not-found.png');
             return dfd.promise();
         }
         reader.readAsDataURL(image);
         reader.onload = e => {
             if (!/image\/(png|bmp|jpeg)/.test(image.type)) {
-                dfd.reject('/images/error/image-format.png');
+                dfd.reject('/ai_images/error/image-format.png');
                 return false;
             }
             if (image.size > 2 * 1024 * 1024) {
-                dfd.reject('/images/error/too-large.png');
+                dfd.reject('/ai_images/error/too-large.png');
                 return false;
             }
             dfd.resolve(e.target.result);
         };
         reader.onerror = () => {
-            dfd.reject('/images/error/not-found.png');
+            dfd.reject('/ai_images/error/not-found.png');
         };
         return dfd.promise();
     }

@@ -41,7 +41,7 @@
 .ai-platform a[role="button"] {
   width: 90px;
   height: 32px;
-  line-height: 30px;
+  line-height: 32px;
   border-radius: 2px;
   font-size: 14px;
   cursor: pointer;
@@ -88,19 +88,19 @@
 .ai-platform a[role="button"].small {
   width: 80px;
   height: 26px;
-  line-height: 24px;
+  line-height: 26px;
 }
 .ai-platform button.media,
 .ai-platform a[role="button"].media {
   width: 110px;
   height: 38px;
-  line-height: 36px;
+  line-height: 38px;
 }
 .ai-platform button.large,
 .ai-platform a[role="button"].large {
   width: 150px;
   height: 44px;
-  line-height: 42px;
+  line-height: 44px;
   font-size: 18px;
 }
 .ai-platform .container {
@@ -229,6 +229,7 @@
   font-size: 18px;
   line-height: 28px;
   margin-bottom: 35px;
+  max-width: 35em;
 }
 .ai-platform.page-content .banner ul.banner-content > li .get-started {
   border: 1px solid #fff;
@@ -362,9 +363,6 @@
   background-position-x: -170px;
   background-position-y: -15px;
 }
-.ai-platform.page-content .home-section.tech-service .service-container .service-item:nth-child(3) ul > li > ul > li + li {
-  margin-left: 5px;
-}
 .ai-platform.page-content .home-section.tech-service .service-container .service-item:nth-child(4) .service-icon {
   background-image: url('../../ai_images/home/service.png');
   background-repeat: no-repeat;
@@ -434,7 +432,7 @@
   width: 100%;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-detail .service-desc > * {
-  margin-left: 95px;
+  margin-left: 80px;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-detail .service-desc h3 {
   color: #333;
@@ -461,7 +459,7 @@
   display: inline-block;
   color: #999;
   border-right: 1px solid rgba(0, 0, 0, 0.05);
-  width: 75px;
+  width: 60px;
   padding-right: 10px;
   text-align: right;
   vertical-align: middle;
@@ -490,7 +488,7 @@
   margin-left: 0;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-detail .inline-list {
-  margin-left: 95px;
+  margin-left: 80px;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-detail .inline-list > li {
   margin-right: 10px;
@@ -1062,12 +1060,8 @@
   color: #fff;
 }
 .ai-platform.page-content .home-section.register-now .btn-normal {
-  width: 150px;
-  height: 42px;
-  line-height: 42px;
   color: #fff !important;
   background-color: transparent;
-  font-size: 18px;
   box-shadow: none;
 }
 .ai-platform.page-content .home-section.register-now .btn-normal:hover {

@@ -41,7 +41,7 @@ $(document).ready(function () {
         $('#demo-json > p').empty();
         $('#demo-result .canvas-container').attr('class', 'canvas-container');
         $('#demo-photo-upload, #scan-photo').removeClass('disabled');
-        $('#demo-photo-upload').val('');
+        $('#demo-photo-upload  > input').val('');
         $('#result-gallery').toggle(false).find('ul').empty();
         $('#face-details').hide().empty();
     };

@@ -39,9 +39,9 @@ $(document).ready(function () {
     let resetDemo = () => {
         isScanning = false;
         $('#demo-json > p').empty();
+        $('#demo-photo-upload  > input').val('');
         $('#demo-result .canvas-container').attr('class', 'canvas-container');
         $('#demo-photo-upload, #scan-photo').removeClass('disabled');
-        $('#demo-photo-upload').val('');
     };
 
     let startScan = function (type, imgSrc, url) {
