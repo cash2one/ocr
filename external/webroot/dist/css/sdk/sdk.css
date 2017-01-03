@@ -169,7 +169,6 @@
 .sdk-nav-item {
   height: 45px;
   line-height: 45px;
-  padding: 0 25px 0 0;
   font-size: 12px;
 }
 .sdk-nav-item:hover {
@@ -177,11 +176,11 @@
   cursor: pointer;
 }
 .sdk-nav-item:hover .sdk-nav-icon {
-  background-image: url(../../../ai_images/sdk/icon-sprite-active.png);
+  background-image: url(/ai_images/sdk/icon-sprite-active.png);
 }
 .sdk-nav-icon {
   display: inline-block;
-  background: url(../../../ai_images/sdk/icon-sprite.png) no-repeat;
+  background: url(/ai_images/sdk/icon-sprite.png) no-repeat;
   vertical-align: middle;
   transform: scale(0.7);
 }
@@ -233,9 +232,9 @@
 }
 .sdk-download-button {
   position: absolute;
-  bottom: 25px;
-  left: 10px;
-  width: 28%;
+  bottom: 20px;
+  left: 15px;
+  width: 25%;
   line-height: 30px;
   background-color: #0073eb;
   border-radius: 2px;
@@ -264,10 +263,18 @@
   box-sizing: border-box;
   width: 33.333%;
   padding: 10px;
+  vertical-align: top;
+}
+.sdk-bottom-info {
+  position: absolute;
+  bottom: 20px;
+  left: 35%;
 }
 .sdk-item {
   position: relative;
-  padding: 30px 0 10px;
+  box-sizing: border-box;
+  height: 165px;
+  padding: 25px 0 10px;
   background-color: #fcfcfc;
   border: 1px solid #f6f6f6;
 }
@@ -279,17 +286,15 @@
 }
 .sdk-description {
   font-size: 12px;
-  height: 55px;
   padding: 3px 0;
   color: #666;
 }
 .sdk-version {
-  padding: 3px 0 10px;
+  padding-bottom: 8px;
   font-size: 12px;
   color: #666;
 }
 .sdk-update-date {
-  padding: 3px 0;
   font-size: 12px;
   color: #666;
 }
@@ -319,7 +324,7 @@
   position: absolute;
   right: 10px;
   top: 10px;
-  background: url(../../../ai_images/sdk/language.png) no-repeat;
+  background: url(/ai_images/sdk/language.png) no-repeat;
 }
 .sdk-language-sprite.sdk-android {
   width: 12px;
@@ -346,7 +351,7 @@
   position: absolute;
   top: 25px;
   left: 15px;
-  background: url(../../../ai_images/sdk/category-icon.png) no-repeat;
+  background: url(/ai_images/sdk/category-icon.png) no-repeat;
 }
 .sdk-category-icon.sdk-ocr {
   background-position: -5px -5px;
