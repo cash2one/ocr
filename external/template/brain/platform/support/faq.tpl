@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="shortcut icon" href="/ai_images/favicon-32.ico">
     <link rel="stylesheet" href="/ai_dist/css/base.css">
-<link rel="stylesheet" href="/ai_dist/css/support/news/news-con.css"></head>
+<link rel="stylesheet" href="/ai_dist/css/support/faq.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -205,11 +205,34 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<section class="news-banner">
-    <div class="container">
-        <h1>新闻动态</h1>
+<div class="doc-wrap">
+    <div class="sidebar sidebar-fixed">
+        <h1 style="width: 260px;">常见问题</h1>
+        <div class="toc jquery-accordion-menu" style="height:800px;width: 260px;">
+            <ul class="level1 submenu faq-menu" style="border-bottom:1px solid #ebebeb">
+                <li tag="FAQ-Account" class="node root click-node"><a href="javascript:void(0)"><span class="icon"></span>账号问题</a>
+                </li>
+                <li tag="FAQ-ApiUsage" class="node root click-node"><a href="javascript:void(0)"><span class="icon"></span>接口调用</a>
+                </li>
+                <li tag="FAQ-Others" class="node root click-node"><a href="javascript:void(0)"><span class="icon"></span>其他</a>
+                </li>
+            </ul>
+        </div>
     </div>
-</section>
+    <div class="doc-main">
+        <nav class="doc-breadcrumb">
+            <ul class="crumb" >
+                <li><span>常见问题</span></li>
+            </ul>
+            <div class="more">
+                <i class="iconfont icon-sdktool"></i>
+            </div>
+        </nav>
+        <div id="md_container" class="markdown-body">
+        </div>
+    </div>
+</div>
+
 </div>
 <aside class="aside-action">
     <ul>
@@ -353,5 +376,5 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="/ai_dist/js/support/news/news-con.bundle.js"></script></body>
+<script src="/ai_dist/js/support/faq.bundle.js"></script></body>
 </html>

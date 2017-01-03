@@ -442,7 +442,6 @@
             }
             return false;
         }
-
         document.getElementById("feedback-btn").onclick = loadRightBar;
     })();
 
