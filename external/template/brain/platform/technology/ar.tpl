@@ -294,7 +294,7 @@
         <h2>产品与服务</h2>
         <div class="clear-float">
             <div class="flow-chart">
-                <img src="/ai-images/technology/ar/process-flow.png">
+                <img src="/ai_images/technology/ar/process-flow.png">
             </div>
             <div class="product-desc-list">
                 <div class="product-desc">
