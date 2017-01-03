@@ -131,7 +131,7 @@
     &-item {
         display: inline-block;
         width: 33.333%;
-        padding: 5px @scenario-padding / 2 0;
+        padding: 25px @scenario-padding / 2 0;
         box-sizing: border-box;
         vertical-align: top;
         font-size: 0;
@@ -145,6 +145,7 @@
     // 使用场景标题
     &-header {
         font-size: @font-size-4;
+        padding: 0 0 10px;
     }
 
     &-icon,
@@ -184,12 +185,7 @@
     &-intro {
         width: 85%;
         box-sizing: border-box;
-        padding: 0 20px;
-    }
-
-    &-header {
-        padding: 10px 0;
-        font-size: @font-size-4;
+        padding: 0 0 0 20px;
     }
 
     // 使用场景介绍信息详情
@@ -306,6 +302,7 @@
         display: inline-block;
         padding: 5px;
         margin: 10px 5px;
+        min-height: 23px;
         vertical-align: top;
         border: 1px solid #7db6f2;
         font-size: 16px;
@@ -330,6 +327,8 @@
         font-size: 0;
         text-align: center;
 
+
+
         &-label {
             display: inline-block;
             padding: 10px 0;
@@ -339,6 +338,16 @@
             text-align: center;
             font-size: 16px;
             cursor: pointer;
+
+            &:nth-child(1) {
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+            }
+
+            &:nth-child(2) {
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
 
             &.label-selected {
                 background-color: #0073eb;
@@ -394,6 +403,8 @@
         width: 30%;
         font-size: 16px;
         border: 1px solid #7db6f2;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
         background-color: #e6f1fd;
         color: #666666;
     }
@@ -402,6 +413,8 @@
     &-term-box {
         width: 70%;
         border: 1px solid #7db6f2;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
         border-left: 0;
         overflow: auto;
     }
