@@ -646,7 +646,7 @@
 .nlp-scenario-item {
   display: inline-block;
   width: 33.333%;
-  padding: 5px 15px 0;
+  padding: 25px 15px 0;
   box-sizing: border-box;
   vertical-align: top;
   font-size: 0;
@@ -656,6 +656,7 @@
 }
 .nlp-scenario-header {
   font-size: 18px;
+  padding: 0 0 10px;
 }
 .nlp-scenario-icon,
 .nlp-scenario-intro {
@@ -665,7 +666,7 @@
 .nlp-scenario-icon {
   width: 25%;
   display: inline-block;
-  background: url("/ai_images/technology/nlp-comment/icon.png") no-repeat;
+  background: url(/ai_images/technology/nlp-comment/icon.png) no-repeat;
   background-size: 260px 134px;
 }
 .nlp-scenario-icon.scenario-1 {
@@ -686,11 +687,7 @@
 .nlp-scenario-intro {
   width: 85%;
   box-sizing: border-box;
-  padding: 0 20px;
-}
-.nlp-scenario-header {
-  padding: 10px 0;
-  font-size: 18px;
+  padding: 0 0 0 20px;
 }
 .nlp-scenario-detail {
   height: 120px;
