@@ -33,9 +33,7 @@
 
 AipFace类是与Optical Character Recognition(BFR)交互的客户端，所有BFR操作都是通过AAipFace完成的。您可以参考[新建AipFace](#新建AipFace)，完成初始化AipFace对象。
 
-# AipFace
-
-## 新建AipFace
+# 新建AipFace
 
 AipFace类是Optical Character Recognition的PHP SDK客户端，为使用Optical Character Recognition的开发人员提供了一系列的交互方法。
 
@@ -101,7 +99,7 @@ $option = array('max_face_num' => 1, 'face_fields' => "expression");
 $response = $client->detect(file_get_contents('face.jpg'), $option);
 ```
 
-**人脸属性 请求参数详情**
+**人脸识别 请求参数详情**
 
 | 参数 | 类型 | 描述 | 是否必须 |
 | :---- | :---- | :---- | :---- |
@@ -109,7 +107,7 @@ $response = $client->detect(file_get_contents('face.jpg'), $option);
 |max_face_num|最多处理人脸数目，默认值1|是|
 |image|String|图像数据，仅支持图像文件流|是|
 
-**人脸属性 返回数据参数详情**
+**人脸识别 返回数据参数详情**
 
 | 参数 | 类型 | 描述 |
 | :---- | :---- | :---- |
@@ -162,7 +160,7 @@ $response = $client->detect(file_get_contents('face.jpg'), $option);
 
 ##
 
-* 第一版
+* 首次发布
 
 
 

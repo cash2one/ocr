@@ -20,7 +20,7 @@
 
 步骤如下：
 
-1.在[官方网站](https://api.baidu.com/doc/Developer/index.html)下载Java SDK压缩工具包。
+1.在[官方网站](https://ai.baidu.com/sdk)下载Java SDK压缩工具包。
 
 2.将下载的`aip-java-sdk-version.zip`解压后，复制到工程文件夹中。
 
@@ -33,13 +33,9 @@
 
 # 快速入门
 
-图片智能色情识别服务，依托百度业界领先的图像识别算法，基于大数据深度学习技术，提供一般色情识别和卡通色情识别，以及母婴类图片识别服务。
+图片智能色情识别服务依托百度业界领先的图像识别算法，基于大数据深度学习技术，提供一般色情识别、卡通色情识别、以及母婴类图片识别服务。
 
-1.初始化一个AipAntipornClient。
-
-# AipAntipornClient
-
-## 新建AipAntipornClient
+## 初始化AipAntipornClient。
 
 用户可以参考如下代码新建一AipAntipornClient：
 
@@ -59,7 +55,7 @@ public class Sample {
 ```
 在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`API_SECRET`是由系统分配给用户的，均为字符串，用于标识用户，为访问BFR做签名验证。其中`API_KEY`对应控制台中的“Access Key ID”，`SECRET_ACCESS_KEY`对应控制台中的“Access Key Secret”，获取方式请参考[获取AK/SK](../Reference/GetAKSK)。
 
-# 人脸识别
+# 色情识别
 
 图片接受类型支持本地图片路径字符串，图片文件二进制数组。
 
@@ -77,7 +73,7 @@ public void antiPorn(AipAntiporn client) {
 }
 ```
 
-*色情识别 请求参数详情**
+**色情识别 请求参数详情**
 
 | 参数 | 类型 | 描述 | 是否必须 |
 | :---- | :---- | :---- | :---- |

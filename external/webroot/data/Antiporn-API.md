@@ -1,32 +1,56 @@
-# 使用须知
+# 简介
 
-* [API认证机制](../Reference/AuthenticationMechanism)
-* [AK/SK](../Reference/GetAKSK)
-* 黄反识别服务域名“aip.baidubce.com”
+## 请求URL数据格式
 
-# 接口规范
+向API服务地址使用POST发送请求，必须在URL中带上参数：
 
-## 请求头域内容（HTTP Request Header）
+**access_token:** 必须参数，参考“[Access Token获取](https://aip.baidubce.com/doc/auth.html)”。
 
-API服务需要在请求的HTTP头域中包含以下信息：
+​POST中参数按照API接口说明调用即可。
 
-* host（必填）
-* x-bce-date （必填）
-* x-bce-request-id（选填）
-* authorization（必填）
-* content-type（必填） 
-* content-length（选填）
+例如黄反识别API，使用HTTPS POST发送：
 
-## 请求消息体格式（HTTP Request Body）
+```
+https://aip.bj.baidubce.com/rest/2.0/antiporn/v1/detect? access_token=24.f9ba9c5241b67688bb4adbed8bc91dec.2592000.1485570332.282335-8574074
+```
+
+**请求消息体格式**
 
 API服务要求使用JSON格式的结构体来描述一个请求的具体内容, 然后通过urlencode格式化请求体。
 
-## 请求返回格式（HTTP Response）
+**请求返回格式**
 
 API服务均采用JSON格式的消息体作为响应返回的格式。
 
 
 # 错误信息格式
+
+若请求错误，服务器将返回的JSON文本包含以下参数：
+
+* **error_code：**错误码；关于错误码的详细信息请参考“[通用错误码](#通用错误码)和[业务相关错误码](#业务相关错误码)”。
+
+* **error_msg：**错误描述信息，帮助理解和解决发生的错误。
+
+例如Access Token失效返回：
+
+```
+{
+  "error_code": 110,
+  "error_msg": "Access token invalid or no longer valid"
+}
+```
+
+
+需要重新获取新的Access Token再次请求即可。
+
+**Access Token错误码**
+
+| error_CODE | error_MSG                               | 解释               |
+| ---------- | --------------------------------------- | ---------------- |
+| 100        | Invalid parameter                       | 无效参数             |
+| 110        | Access token invalid or no longer valid | Access Token过期失效 |
+
+
 
 ## 通用错误码
 
@@ -50,73 +74,35 @@ API服务均采用JSON格式的消息体作为响应返回的格式。
 </table>
 
 
-
 # 黄反识别
 
 **接口描述**
 
 该请求用于鉴定图片的色情度。即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的色情度。目前支持5个维度：一般色情，一般正常，卡通色情，卡通正常和其他。
 
-**请求（Request）**
+**HTTP 方法**
 
-* 请求头域：
+   POST
 
-无特殊Header参数
+**请求URL**
 
-* 请求参数：
+https://aip.bj.baidubce.com/rest/2.0/antiporn/v1/detect
 
-参数 | 类型 | 是否必须 | 说明
---- | --- | --- | ---
-access_token | string | 是 | Oauth2.0授权所获token，详情描述参见[API认证机制](../Reference/AuthenticationMechanism)。
-image | string | 是 | 图像数据，base64编码。图片大小不超过2M。
+**请求示例**
 
-
-* 请求示例：
-
-```http
-
-POST /rest/2.0/antiporn/v1/detect HTTP/1.1
-x-bce-date: 2016-12-24T13:02:00Z
-connection: keep-alive
-accept: */*
-host: aip.baidubce.com
-content-type: application/x-www-form-urlencoded
-authorization: {bce-authorization-string}
+```
 {
-	"access_token": "21.21cda41bd9739ce5a083f3326f64b610.2592000.1469180474.1686270206-11101624",
-	"image": base64.b64encode(imagetostring)
+    image=图像base64编码
 }
 ```
+**请求参数**
 
-**响应（Response）**
-
-* 响应头域：无特殊Header参数
-
-* 错误返回
-
-字段  | 类型 | 是否必须 | 说明
---- | --- | --- | ---
-error_code | uint32 | 是 | 错误码，参考[错误码](#错误信息格式)，只在异常响应中出现。
-error_msg | string | 是 | 错误信息，参考[错误码](#错误信息格式)，只在异常响应中出现。
-log_id | uint64 | 是 | 请求标识码，随机数，唯一。
-
-* 正确返回
-
-字段  | 类型 | 是否必须 | 说明
---- | --- | --- | ---
-result_num | uint32 | 是 | 返回结果数目，即：result数组中元素个数。
-result | array(array(double)) | 是 | 结果数组，每项内容对应一个分类维度的结果。
-log_id | uint64 | 是 | 请求标识码，随机数，唯一。
-
-其中元素的每项内容包含以下字段：
-
-字段  | 类型 | 是否必须 | 说明 | 示例
---- | --- | --- | ---
-class_name | string | 是 | 分类结果名称 | 一般色情
-probability | double | 是 | 分类结果置信度 | 0.89471650123596
+| 参数    | 类型     | 是否必须 | 说明                       |
+| ----- | ------ | ---- | ------------------------ |
+| image | string | 是    | 图像数据，base64编码。图片大小不超过1M。 |
 
 
-* 响应示例：
+**返回示例**
 
 ```
 result: [
@@ -128,47 +114,20 @@ result: [
     ]
 ```
 
-**Python黄反识别示例**
+**返回参数**
 
-```
-import base64,json,urllib,urllib2
- 
-def test_antiporn(filename):
-    file = open(filename, 'rb')
-    image = file.read()
-    file.close()
-    postData = {
-        'image': base64.b64encode(image),
-    }
-    strUrl = 'http://aip.baidubce.com/rest/2.0/vis-antiporn/v1/antiporn?access_token=21.21cda41bd9739ce5a083f3326f64b610.2592000.1469180474.1686270206-11101624'
- 
-    postData = urllib.urlencode(postData)
- 
-    req = urllib2.Request(strUrl, postData)
-    response = urllib2.urlopen(req).read()
-    print response
- 
-test_antiporn('./1.jpg')
-```
+| 字段         | 类型                   | 是否必须 | 说明                      |
+| ---------- | -------------------- | ---- | ----------------------- |
+| result_num | uint32               | 是    | 返回结果数目，即：result数组中元素个数。 |
+| result     | array(array(double)) | 是    | 结果数组，每项内容对应一个分类维度的结果。   |
+| log_id     | uint64               | 是    | 请求标识码，随机数，唯一。           |
 
-**PHP黄反识别示例**
+其中元素的每项内容包含以下字段：
 
-```
-<?php
-//url for test only
-$url = 'http://aip.baidubce.com/rest/2.0/vis-antiporn/v1/antiporn?access_token=21.21cda41bd9739ce5a083f3326f64b610.2592000.1469180474.1686270206-11101624';
-$imageContent = file_get_contents('./1.jpg');
-$postParams = array(
-    'image' => base64_encode($imageContent),
-);
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-curl_setopt($ch, CURLOPT_POST, TRUE);
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $postParams);
-$response = curl_exec($ch);
-curl_close($ch);
-echo "$response\n";
-?>
-```
+| 字段          | 类型     | 是否必须 | 说明      | 示例               |
+| ----------- | ------ | ---- | ------- | ---------------- |
+| class_name  | string | 是    | 分类结果名称  | 一般色情             |
+| probability | double | 是    | 分类结果置信度 | 0.89471650123596 |
+
+
+

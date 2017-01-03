@@ -1,28 +1,39 @@
-#简介
+# 简介
 
-##概念解释
+## 概念解释
 
 对本文中将提到的名词约定如下：
+
 **语音识别（Automatic Speech Recognition，ASR）**：也被称为自动语音识别，其目标是将人类的语音中的词汇内容转换为计算机可读的输入，例如按键、二进制编码或者字符序列。
+
 **自然语言理解（Natural Language Understanding，NLU）**： 俗称人机对话，人工智能的分支学科。研究用电子计算机模拟人的语言交际过程，使计算机能理解和运用人类社会的自然语言如汉语、英语等，实现人机之间的自然语言通信，以代替人的部分脑力劳动，包括查询资料、解答问题、摘录文献、汇编资料以及一切有关自然语言信息的加工处理。
+
 **语音识别SDK离在线融合版（Baidu Voice Recognition Client V2， BDASRv2）**：文中简称为BDASRv2。BDASRv2是一个封装了语音采集、语音预处理、云端识别、离线识别等功能的语音识别解决方案。使用BDASRv2可以快速在应用程序中集成语音识别功能。
 
-##功能介绍
+## 功能介绍
+
 BDVRClient是运行在Android 平台的一体化语音识别解决方案，以JAR包 + SO库的形式发布，BDVRClient支持下列功能：
-语音识别控件：集成提示音、音量反馈动效整套交互的对话框控件，方便开发者快速集成；
-基本功能：录音，语音数据处理，端点检测、网络通讯和状态通知，返回识别结果；
-播放提示音：在录音前后播放提示音，优化用户体验；
-监听语音能量：实时反馈用户当前说话声音能量强度；
-语义理解：将语音识别成领域相关的语义结果。
 
-##兼容性
-系统：支持Android 2.3（API Level 9）及以上系统。需要开发者通过minSdkVersion来保证支持系统的检测。
-机型：手机和平板均可。
-构架：支持ARM平台（只提供armeabi架构的动态库，可以兼容其他架构）。
-硬件要求：要求设备上有麦克风。
-网络：支持WIFI及移动网络，支持2G、3G、4G移动网络。
+- 语音识别控件：集成提示音、音量反馈动效整套交互的对话框控件，方便开发者快速集成；
+- 基本功能：录音，语音数据处理，端点检测、网络通讯和状态通知，返回识别结果；
+- 播放提示音：在录音前后播放提示音，优化用户体验；
+- 监听语音能量：实时反馈用户当前说话声音能量强度；
+- 语义理解：将语音识别成领域相关的语义结果。
 
-##开发包说明
+## 兼容性
+
+**系统：**支持Android 2.3（API Level 9）及以上系统。需要开发者通过minSdkVersion来保证支持系统的检测。
+
+**机型：**手机和平板均可。
+
+**构架：**支持ARM平台（只提供armeabi架构的动态库，可以兼容其他架构）。
+
+**硬件要求：**要求设备上有麦克风。
+
+**网络：**支持WIFI及移动网络，支持2G、3G、4G移动网络。
+
+## 开发包说明
+
 | 文件/文件夹名                          | 说明                             |
 | -------------------------------- | ------------------------------ |
 | /demo/                           | 语音识别 SDK demo工程                |
@@ -30,22 +41,24 @@ BDVRClient是运行在Android 平台的一体化语音识别解决方案，以JA
 | /res                             | 语音识别对话框资源文件及音效文件，如果不使用对话框可以不集成 |
 | /DEMO-VoiceRecognition-2.0.1.apk | Android 示例应用                   |
 
-##总体框图
+## 总体框图
+
 ![BDVRClient总体使用框图](http://bos.nj.bpc.baidu.com/v1/audio/BDVRClientzongtishiyongkuangtu.png "BDVRClient总体使用框图")
 
-
-
-#集成指南
+# 集成指南
 
 本章将讲解如何快速地集成BDVRClient到现有应用中。一个完整的Demo请参考开发包中的示例程序VoiceRecognitionDemo。
 
-##创建应用
+## 创建应用
+
 请参考《百度语音开放平台使用指南》创建应用，开通服务并完成个性化设置。
 
-##添加BDVRClient到工程
+## 添加BDVRClient到工程
+
 将开发包中的libs和res目录分别合并到工程目录的libs和res目录。
 
-##配置AndroidManifest.xml
+## 配置AndroidManifest.xml
+
 AndroidManifest.xml配置主要内容为：增加权限，填写鉴权信息，注册语音服务，注册对话框。具体示例如下：
 
 
@@ -100,13 +113,16 @@ AndroidManifest.xml配置主要内容为：增加权限，填写鉴权信息，�
 
 
 
-#重要接口说明
+# 重要接口说明
 
-##语音识别器
+## 语音识别器
+
 语音识别器SpeechRecognizer，使用谷歌系统框架，函数与使用android自有框架基本相同。
 
-###创建实例
+### 创建实例
+
 - **方法**
+
 ```java
 SpeechRecognizer createSpeechRecognizer(Context context, ComponentName serviceComponent);
 ```
@@ -119,13 +135,17 @@ SpeechRecognizer createSpeechRecognizer(Context context, ComponentName serviceCo
 | serviceComponent | 用来提供语音识别的服务 |
 
 - **返回**
+
   语音识别器。
 
-- 说明
+- **说明**
+
   创建语音识别器。使用谷歌系统框架，使用百度语音识别只需将serviceComponent指定为百度语音提供的服务即可。
 
-###设置语音识别监听器
+### 设置语音识别监听器
+
 - **方法**
+
 ```java
 void setRecognitionListener(RecognitionListener listener)
 ```
@@ -137,13 +157,17 @@ void setRecognitionListener(RecognitionListener listener)
 | listener | 监听器  |
 
 - **返回**
+
   无。
 
-- 说明
+- **说明**
+
   设置语音识别监听器，语音识别监听器需要实现RecognitionListener中的接口对语音过程和结果做出处理。
 
-###开始识别
+### 开始识别
+
 - **方法**
+
 ```java
 void startListening(Intent recognizerIntent)
 ```
@@ -155,61 +179,81 @@ void startListening(Intent recognizerIntent)
 | recognizerIntent | 识别参数 |
 
 - **返回**
+
   无。
 
-- 说明
+- **说明**
+
   所有识别的参数都需要在recognizerIntent中设置。
 
-###停止录音
+### 停止录音
+
 - **方法**
+
 ```java
 void stopListening();
 ```
 
 - **参数**
+
   无。
 
 - **返回**
+
   无。
 
-- 说明
+- **说明**
+
   停止录音，但是识别将继续。
 
-###取消识别
+### 取消识别
+
 - **方法**
+
 ```java
 void cancel();
 ```
 
 - **参数**
+
   无。
 
 - **返回**
+
   无。
 
-- 说明
+- **说明**
+
   取消本次识别，已有录音也将不再识别。
 
-###销毁
+### 销毁
+
 - **方法**
+
 ```java
 void destroy();
 ```
 
 - **参数**
+
   无。
 
 - **返回**
+
   无。
 
-- 说明
+- **说明**
+
   销毁语音识别器，释放资源。
 
-##语音识别监听器
+## 语音识别监听器
+
 语音识别监听器RecognitionListener，该接口包含如下方法回调。
 
-###准备就绪
+### 准备就绪
+
 - **方法**
+
 ```java
 void onReadyForSpeech(Bundle params)
 ```
@@ -221,28 +265,37 @@ void onReadyForSpeech(Bundle params)
 | params | 识别参数 |
 
 - **返回**
+
   无。
 
-- 说明
+- **说明**
+
   只有当此方法回调之后才能开始说话，否则会影响识别结果。
 
-###开始说话
+### 开始说话
+
 - **方法**
+
 ```java
 void onBeginningOfSpeech()
 ```
 
 - **参数**
+
   无。
 
 - **返回**
+
   无。
 
-- 说明
+- **说明**
+
   当用户开始说话，会回调此方法。
 
-###音量变化
+### 音量变化
+
 - **方法**
+
 ```java
 void onRmsChanged(float rmsdB)
 ```
@@ -254,13 +307,17 @@ void onRmsChanged(float rmsdB)
 | rmsdB | 音量值  |
 
 - **返回**
+
   无。
 
-- 说明
+- **说明**
+
   引擎将对每一帧语音回调一次该方法返回音量值。
 
-###获取原始语音
+### 获取原始语音
+
 - **方法**
+
 ```java
 void onBufferReceived(byte[] buffer)
 ```
@@ -272,28 +329,37 @@ void onBufferReceived(byte[] buffer)
 | buffer | pcm语音数据 |
 
 - **返回**
+
   无。
 
-- 说明
+- **说明**
+
   此方法会被回调多次，buffer是当前帧对应的PCM语音数据，拼接后可得到完整的录音数据。
 
-###说话结束
+### 说话结束
+
 - **方法**
+
 ```java
 void onEndOfSpeech()
 ```
 
 - **参数**
+
   无
 
 - **返回**
+
   无。
 
-- 说明
+- **说明**
+
   当用户停止说话后，将会回调此方法。
 
-###识别出错
+### 识别出错
+
 - **方法**
+
 ```java
 void onError(int error)
 ```
@@ -305,13 +371,17 @@ void onError(int error)
 | error | 错误码  |
 
 - **返回**
+
   无。
 
-- 说明
+- **说明**
+
   识别出错，将会回调此方法，调用该方法之后将不再调用onResults方法。
 
-###识别最终结果
+### 识别最终结果
+
 - **方法**
+
 ```java
 void onResults(Bundle results)
 ```
@@ -323,13 +393,17 @@ void onResults(Bundle results)
 | results | 识别结果 |
 
 - **返回**
+
   无。
 
-- 说明
+- **说明**
+
   返回最终识别结果，将会回调此方法。
 
-###识别临时结果
+### 识别临时结果
+
 - **方法**
+
 ```java
 void onPartialResults(Bundle partialResults)
 ```
@@ -341,13 +415,17 @@ void onPartialResults(Bundle partialResults)
 | partialResults | 临时识别结果 |
 
 - **返回**
+
   无。
 
-- 说明
+- **说明**
+
   返回临时识别结果，将会回调此方法。
 
-###识别事件返回
+### 识别事件返回
+
 - **方法**
+
 ```java
 void onEvent(int eventType, Bundle params)
 ```
@@ -360,16 +438,19 @@ void onEvent(int eventType, Bundle params)
 | eventType | 参数   |
 
 - **返回**
+
   无。
 
-- 说明
+- **说明**
+
   返回识别事件，将会回调此方法。
 
 
 
-#参数和错误码说明
+# 参数和错误码说明
 
-##识别参数
+## 识别参数
+
 **支持的识别参数**
 
 | 参数名           | 类型     | 值               | 描述                                       |
@@ -385,7 +466,7 @@ void onEvent(int eventType, Bundle params)
 | sound_success | int    | 资源ID            | 识别成功的提示音                                 |
 | sound_error   | int    | 资源ID            | 识别出错的提示音                                 |
 | sound_cancel  | int    | 资源ID            | 识别取消的提示音                                 |
-| infile        | String | 音频源             | **该参数支持设置为：**<ol><li>文件系统路径，如："/sdcard/test/test.pcm"</li><li>java资源路径，如："res:///com/baidu.test/16k_test.pcm"</li><li>数据源方法全名，格式如："#com.test.Factory.create8kInputStream()"（解释：Factory类中存在一个返回InputStream的方法create8kInputStream()）<br/><br/>注意：必须以井号开始；方法原型必须为：public static InputStream your_method()，而且该方法和类一定不能混淆，否则无法获取音频源</li></ol> |
+| infile        | String | 音频源             | **该参数支持设置为：**<br>1. 文件系统路径，如："/sdcard/test/test.pcm"<br>2. java资源路径，如："res:///com/baidu.test/16k_test.pcm"<br>3. 数据源方法全名，格式如："#com.test.Factory.create8kInputStream()"（解释：Factory类中存在一个返回InputStream的方法create8kInputStream()）<br/><br/>注意：必须以#号开始；方法原型必须为：public static InputStream your_method()，而且该方法和类一定不能混淆，否则无法获取音频源。 |
 | outfile       | String | 文件路径            | 保存识别过程产生的录音文件                            |
 | language      | String | -               | 语种                                       |
 |               |        | cmn-Hans-CN     | 中文普通话                                    |
@@ -429,19 +510,16 @@ void onEvent(int eventType, Bundle params)
 |||100020|收音机指令（离线支持）|
 |||100021|命令词（离线支持）|
 
-##离线识别支持语法说明
+## 离线识别支持语法说明
 
-本文档列举了离在线融合语音识别离线部分支持的命令说法，并给出示例。说法是由槽组成的，每种命令首先列举出槽，然后说明由这些槽组成的哪些语法；
-
-关于槽内内容，如果数量较少，本文档会一一列举出来，如果数量较多，本文档会举出一些例子。具有“包括”字样的就是将所有的列举出来；
-
-本文档为了便于理解，同时是为了说明支持的说法，命名和识别出的json结果可能有些出入，请开发者注意。
+本文档列举了离在线融合语音识别离线部分支持的命令说法，并给出示例。说法是由槽组成的，每种命令首先列举出槽，然后说明由这些槽组成的哪些语法。关于槽内内容，如果数量较少，本文档会一一列举出来，如果数量较多，本文档会举出一些例子。具有“包括”字样的就是将所有的列举出来。本文档为了便于理解，同时是为了说明支持的说法，命名和识别出的json结果可能有些出入，请开发者注意。
 
 需要输入法资源文件支持，s_2_InputMethod[下载链接](http://yuyin.baidu.com/asr "下载链接")，支持随便说。
 
 需要地图资源文件支持，s_2_Navi[下载链接](http://yuyin.baidu.com/asr "下载链接")。
 
 ### 槽说明（导航）
+
 | 槽名         | 说明                                       |
 | ---------- | ---------------------------------------- |
 | Cmd_to     | 表示寻找目的地的动词（包括导航，导航到，导航去，出发，走起，我要去，带我去，走，去，上，到，我想去，带我到，现在去，改去） |
@@ -450,6 +528,7 @@ void onEvent(int eventType, Bundle params)
 | NearbyCore | 表示一类事物的名词，例如加油站，港口等；                     |
 
 ### 支持说法
+
 | 支持说法              | 说明举例           |
 | ----------------- | -------------- |
 | cmd_to Arrival    | 导航到百度大厦        |
@@ -458,6 +537,7 @@ void onEvent(int eventType, Bundle params)
 
 
 ### 槽说明（音乐）
+
 | 槽名      | 说明                                       |
 | ------- | ---------------------------------------- |
 | PlayCmd | 播放命令（包括播放音乐，放音乐，请播放歌曲，请播放音乐，来一首，我要听，给我来一首 ，播放） |
@@ -466,19 +546,23 @@ void onEvent(int eventType, Bundle params)
 | Tail    | 包括 的歌，的专辑                                |
 
 ### 支持说法
+
 | 支持说法           | 说明举例    |
 | -------------- | ------- |
 | PlayCmd Song   | 播放《小苹果》 |
 | PlayCmd Artist | 播放周杰伦的歌 |
 
 ### 槽说明（应用）
+
 | 槽名           | 说明               |
 | ------------ | ---------------- |
 | app          | 应用名称，**需要开发者传入** |
 | LaunchCmd    | 包括打开，开启，启动       |
 | UnInstallCmd | 包括 删除，卸掉，卸载，删掉；  |
 
+
 ### 支持说法
+
 | 支持说法             | 说明举例          |
 | ---------------- | ------------- |
 | App              | 直接说应用名称，例如，微信 |
@@ -486,9 +570,10 @@ void onEvent(int eventType, Bundle params)
 | UnInstallCmd App | 卸载 360手机助手    |
 
 ### 槽说明（打电话/发短信）
+
 | 槽名         | 说明                                       |
 | ---------- | ---------------------------------------- |
-| name       | 通讯录人名，**需要开发者传入**                        |
+| name       | 通讯录人名，需要开发者传入                        |
 | PhoneNum   | 电话号码                                     |
 | Call       | 表示打电话的命令（包括打电话，打个电话，我想打电话，我要打电话，帮我打电话，请打电话，拨号，请拨号，帮我拨号，请帮我拨号 ，我要拨号） |
 | CallTo     | 表示“打电话给XXX”的命令（例如，呼叫，拨打，拨号等）；            |
@@ -503,6 +588,7 @@ void onEvent(int eventType, Bundle params)
 | ObjectSms  | 包括 未读短信，已读短信，全部短信；                       |
 
 ### 支持说法
+
 | 支持说法                     | 说明举例                           |
 | ------------------------ | ------------------------------ |
 | Call                     | 表示用户打电话的意图，比如，打电话              |
@@ -519,6 +605,7 @@ void onEvent(int eventType, Bundle params)
 | View ObjectSms           | 例如，查看未读短信；                     |
 
 ### 槽说明（联系人）
+
 | 槽名        | 说明                                       |
 | --------- | ---------------------------------------- |
 | View      | 包括我要看，看一下，我想看，看看，查看；                     |
@@ -530,6 +617,7 @@ void onEvent(int eventType, Bundle params)
 | Contactor | 联系人                                      |
 
 ### 支持说法
+
 | 支持说法                | 说明举例       |
 | ------------------- | ---------- |
 | View Name PhoneType | 查看张三的移动号码  |
@@ -539,17 +627,20 @@ void onEvent(int eventType, Bundle params)
 
 
 ### 槽说明（手机设置）
+
 | 槽名           | 说明                                 |
 | ------------ | ---------------------------------- |
 | PhoneSetting | 电话设置，包括常用电话设置，包括设定时间，打开wifi等常用设置命令 |
 
 ### 支持说法
+
 | 支持说法         | 说明举例 |
 | ------------ | ---- |
 | PhoneSetting |      |
 
 
 ### 槽说明（电视指令）
+
 | 槽名        | 说明                                 |
 | --------- | ---------------------------------- |
 | Change    | 换台命令，包括调台，切换，换台，我要跳台，我要切换，我要换台，我要看 |
@@ -558,6 +649,7 @@ void onEvent(int eventType, Bundle params)
 | Channel   | 包括，频道，台；                           |
 
 ### 支持说法
+
 | 支持说法                  | 说明举例      |
 | --------------------- | --------- |
 | Change Number Channel | 我要看 74 频道 |
@@ -565,6 +657,7 @@ void onEvent(int eventType, Bundle params)
 
 
 ### 槽说明（播放器指令）
+
 | 槽名        | 说明                                       |
 | --------- | ---------------------------------------- |
 | Setplayer | 常用设置命令，包括退出播放，退出，继续播放，继续，暂停播放，暂停，上一首，下一首，设置 |
@@ -573,6 +666,7 @@ void onEvent(int eventType, Bundle params)
 | From      | 从                                        |
 
 ### 支持说法
+
 | 支持说法           | 说明举例        |
 | -------------- | ----------- |
 | Setplayer      | 继续播放        |
@@ -580,6 +674,7 @@ void onEvent(int eventType, Bundle params)
 
 
 ### 槽说明（收音机指令）
+
 | 槽名         | 说明                          |
 | ---------- | --------------------------- |
 | OpenCmd    | 常见打开命令，例如，收听电台，听FM，打开AM等    |
@@ -589,6 +684,7 @@ void onEvent(int eventType, Bundle params)
 | Channel    | 频道，电台                       |
 
 ### 支持说法
+
 | 支持说法                     | 说明举例       |
 | ------------------------ | ---------- |
 | OpenCmd                  | 打开电台       |
@@ -598,18 +694,20 @@ void onEvent(int eventType, Bundle params)
 
 
 ### 槽说明（用户命令）
+
 | 槽名          | 说明          |
 | ----------- | ----------- |
 | usercommand | **需要开发者传入** |
 
 ### 支持说法
+
 | 支持说法        | 说明举例 |
 | ----------- | ---- |
 | usercommand |      |
 
-##错误码说明
+## 错误码说明
 
-###错误码
+### 通用错误码
 
 | 错误码  | 常量名                            | 描述      |
 | ---- | ------------------------------ | ------- |
@@ -641,14 +739,14 @@ void onEvent(int eventType, Bundle params)
 
 借助该方法返回的错误信息，开发者可以更快的发现和调试问题。
 
-### 详细错误码
+### 业务错误码
 
 | 详细错误码          | 描述                                       |
 | -------------- | ---------------------------------------- |
-| -3002          | 服务器后端错误                                  |
-| -3003          | 没有识别结果                                   |
-| -3004          | apikey/secretkey无语音识别权限                  |
-| -3005          | 语音质量过低                                   |
+| 3002           | 服务器后端错误                                  |
+| 3003           | 没有识别结果                                   |
+| 3004           | apikey/secretkey无语音识别权限                  |
+| 3005           | 语音质量过低                                   |
 | 7051           | 没有在指定路径找到s_1（离线识别基础资源包）                  |
 | 7052           | 没有在指定路径找到s_2_xxx（prop=20000或10060时对应的附加包） |
 | 7055           | 命令词超过数量限制（10个）                           |
@@ -662,10 +760,12 @@ void onEvent(int eventType, Bundle params)
 
 
 
-#完整示例
+# 完整示例
 
-##API方式识别示例
+## API方式识别示例
+
 **完整的示例代码如下：**
+
 ```java
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -744,7 +844,7 @@ class DemoActivity extends Activity implements RecognitionListener {
 }
 ```
 
-##语音识别控件示例
+## 语音识别控件示例
 
 语音识别控件提供了整套语音交互、提示音、音量反馈、动效反馈。开发者可以像调起一个普通的Activity一样简单的使用语音识别。
 
@@ -770,7 +870,8 @@ public class DemoActivity extends Activity {
     }
 }
 ```
-##离线识别参数设置示例
+## 离线识别参数设置示例
+
 ### 注意事项
 
 由于离线识别仅支持部分识别参数，如果需要支持离线识别能力，需要确保当前的参数设置被离线所支持：
@@ -792,6 +893,7 @@ public class DemoActivity extends Activity {
 ```
 
 ### 资源文件设置
+
 ```java
     // value替换为资源文件实际路径
     intent.putExtra("asr-base-file-path", "/path/to/s_1");
@@ -828,47 +930,55 @@ public class DemoActivity extends Activity {
 ```
 
 
-#语音唤醒
+# 语音唤醒
 
 语音唤醒是指说出指定的语音指令（自定义的唤醒词），使程序激活某个功能的能力。百度语音唤醒支持自定义唤醒词。
 
-##接入唤醒功能
+## 接入唤醒功能
+
 唤醒功能属于**语音识别离在线融合SDK**（依赖2.1及以上版本）的一部分，开发者根据集成指南接入之后即可使用。
 
-##自定义唤醒词
+## 自定义唤醒词
+
 唤醒词是指用于激活程序某个功能的指令。开发者可以使用唤醒词评估工具评估和导出唤醒资源。[唤醒词评估工具](http://yuyin.baidu.com/wake#m4 "唤醒词评估工具")
 
-##接入示例
-####1. 创建唤醒事件管理器
-```
-		EventManager wakeup = EventManagerFactory.create(ActivityWakeUp.this, "wp");
-```
+## 接入示例
 
-####2. 注册唤醒事件监听器
-```
+1. 创建唤醒事件管理器
+
+	```
+		EventManager wakeup = EventManagerFactory.create(ActivityWakeUp.this, "wp");
+	```
+
+2. 注册唤醒事件监听器
+
+	```
         // 2) 注册唤醒事件监听器
         mWpEventManager.registerListener(new EventListener() {
             @Override
             public void onEvent(String name, String params, byte[] data, int offset, int length) {
             }
         });
-```
+	```
 
-####3. 启动唤醒功能
-```
+3. 启动唤醒功能
+
+	```
     // 3) 通知唤醒管理器, 启动唤醒功能
         HashMap params = new HashMap();
         params.put("kws-file", "assets:///WakeUp.bin"); // 设置唤醒资源, 唤醒资源请到 http://yuyin.baidu.com/wake#m4 来评估和导出
         mWpEventManager.send("wp.start", new JSONObject(params).toString(), null, 0, 0);
-```
+	```
 
-####4. 停止唤醒监听
-```
+4. 停止唤醒监听
+	
+	```
 		mWpEventManager.send("wp.stop", null, null, 0, 0);
-```
+	```
 
 
-##完整示例
+## 完整示例
+
 ```
 public class ActivityWakeUp extends Activity {
 
@@ -916,9 +1026,10 @@ public class ActivityWakeUp extends Activity {
 ```
 
 
-#其他说明
+# 其他说明
 
-##结果解析
+## 结果解析
+
 最终识别结果将通过onResults(Bundle results)方法返回，其中results支持以下字段：
 
 | 参数名                 | 类型                 | 描述                          |
@@ -926,8 +1037,9 @@ public class ActivityWakeUp extends Activity {
 | results_recognition | ArrayList<String>  | 识别结果                        |
 | origin_result       | String(JSONObject) | 字符串形式的JSON结构体，其中包含原始的识别结果信息 |
 
-##常见问题
-### Q1: DEMO工程无法使用离线识别？
+## 常见问题
+
+### DEMO工程无法使用离线识别？
 
 DEMO工程要使用离线识别，需要注意以下三点：
 1. 离线授权
@@ -961,8 +1073,10 @@ intent.putExtra("license-file-path", "/sdcard/temp_license_2015-05-19");
 
 请参考“[离线识别参数设置](http://yuyin.baidu.com/docs/asr/131 "离线语音识别参数设置")”-“[注意事项](http://yuyin.baidu.com/docs/asr/131#注意事项 "注意事项")”一节，确认当前设置的参数是否支持离线。
 
-### Q2: 如何获取录音数据
+### 如何获取录音数据
+
 设置outfile参数可以指定语音数据的保存路径，设置方式如：
+
 ```
 intent.putExtra("outfile", "/sdcard/your_audio.pcm");
 ```

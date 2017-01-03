@@ -2,7 +2,7 @@
 
 本文档主要介绍NLP Java SDK的安装和使用。在使用本文档前，您需要先了解自然语言处理（Natural Language Processing）的基础知识，并已经开通了服务。
 
-# 安装BFR Java SDK
+# 安装Java SDK
 
 **BFR Java SDK目录结构**
 
@@ -23,7 +23,7 @@
 
 步骤如下：
 
-1.在[官方网站](https://api.baidu.com/doc/Developer/index.html)下载Java SDK压缩工具包。
+1.在[官方网站](https://ai.baidu.com/sdk)下载Java SDK压缩工具包。
 
 2.将下载的`aip-java-sdk-version.zip`解压后，复制到工程文件夹中。
 
@@ -36,15 +36,9 @@
 
 # 快速入门
 
-1.初始化一个AipNlpClient。
+图片智能色情识别服务，依托百度业界领先的图像识别算法，基于大数据深度学习技术，提供一般色情识别和卡通色情识别，以及母婴类图片识别服务。
 
-AipNlpClient是与Natural Language Processing（NLP）交互的客户端，所有NLP操作都是通过AipNlpClient完成的。您可以参考[新建AipNlpClient](#新建AipNlpClient)，完成初始化客户端的操作。
-
-# AipNlpClient
-
-## 新建AipNlpClient
-
-新建AipNlpClient是Natural Language Processing的Java客户端，为使用Natural Language Processing的开发人员提供了一系列的交互方法。
+## 初始化一个AipAntiPorn对象
 
 用户可以参考如下代码新建一AipNlpClient：
 
@@ -232,7 +226,7 @@ public void simnet(AipNlp client) {
 |+error|Int||
 |+error-node|String||
 
-# 情感观点挖掘
+# 评论观点抽取
 
 举例，传入评论文本，获取情感属性：
 
@@ -249,14 +243,14 @@ public void NLPCommentTag(AipNlp client) {
 }
 ```
 
-**情感观点挖掘 请求参数详情**
+**评论观点抽取 请求参数详情**
 
 | 参数 | 类型 | 描述 | 是否必须 |
 | :---- | :---- | :---- | :---- |
 |comment|String|评论字符串，目前输入编码统一为GBK;|是|
 |type|ESimnetType|HOTEL,KTV,BEAUTY,FOOD,TRAVEL,HEALTH,EDU,BUSINESS,HOUSE,CAR,LIFE,SHOPPING|否|
 
-**情感观点挖掘 返回数据参数详情**
+**评论观点抽取 返回数据参数详情**
 
 | 参数 | 类型 | 描述 |
 | :---- | :---- | :---- |
@@ -281,10 +275,3 @@ public void NLPCommentTag(AipNlp client) {
 |+raw_adj_begin_pos|Int|词向量结果|
 |+degree_adv|String|原始副词|
 |+degree_adv_pos|Int|词向量结果|
-
-# 版本更新说明
-
-##
-
-* 第一版
-

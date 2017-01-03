@@ -1,24 +1,33 @@
-#简介
+# 简介
 
-##概念解释
+## 概念解释
+
 对本文中将提到的概念约定如下：
 
-- **语音识别（Automatic Speech Recognition，ASR）：**也被称为自动语音识别，其目标是将人类的语音中的词汇内容转换为计算机可读的输入，例如按键、二进制编码或者字符序列。
-- **自然语言理解Natural Language Understanding（NLU）：**俗称人机对话，人工智能的分支学科。研究用电子计算机模拟人的语言交际过程，使计算机能理解和运用人类社会的自然语言如汉语、英语等，实现人机之间的自然语言通信，以代替人的部分脑力劳动，包括查询资料、解答问题、摘录文献、汇编资料以及一切有关自然语言信息的加工处理。
-- **语音识别SDK（BDVRClient）：**即本开发包，文中简称为BDVRClient。BDVRClient是一个封装了语音采集、处理、网络收发等功能的语音识别解决方案。借助BDVRClient可以快速地在应用程序中集成语音识别功能。
-- **应用程序：**在开发中使用了BDVRClient，具有语音识别功能的产品线产品。
-- **开发者：**在应用程序中使用BDVRClient的开发人员。
+**语音识别（Automatic Speech Recognition，ASR）：**也被称为自动语音识别，其目标是将人类的语音中的词汇内容转换为计算机可读的输入，例如按键、二进制编码或者字符序列。
 
-##功能介绍
+**自然语言理解Natural Language Understanding（NLU）：**俗称人机对话，人工智能的分支学科。研究用电子计算机模拟人的语言交际过程，使计算机能理解和运用人类社会的自然语言如汉语、英语等，实现人机之间的自然语言通信，以代替人的部分脑力劳动，包括查询资料、解答问题、摘录文献、汇编资料以及一切有关自然语言信息的加工处理。
+
+**语音识别SDK（BDVRClient）：**即本开发包，文中简称为BDVRClient。BDVRClient是一个封装了语音采集、处理、网络收发等功能的语音识别解决方案。借助BDVRClient可以快速地在应用程序中集成语音识别功能。
+
+**应用程序：**在开发中使用了BDVRClient，具有语音识别功能的产品线产品。
+
+**开发者：**在应用程序中使用BDVRClient的开发人员。
+
+## 功能介绍
+
 百度语音识别IOS版本SDK（以下简称BDVRClient）是一种面向IOS移动设备的语音识别解决方案，以静态库方式提供。通过该方案，开发者可以轻松构建出功能丰富、交互性强的语音识别应用程序。BDVRClient支持下列功能：
+
 - **基本功能：**录音、语音数据处理、端点检测、网络通讯、状态通知、返回文字结果；
 - **语音识别控件：**集成提示音、音量反馈动效整套交互的对话框控件，方便开发者快速集成；
 - **播放提示音：**在录音前后播放提示音，优化用户体验；
 - **监听语音音量：**实时反馈用户当前说话声音能量强度；
 - **语义理解：**将语音识别成领域相关的语义结果。
+- 
   本文档适用于对IOS应用开发有基本了解的开发人员。
 
-##兼容性
+## 兼容性
+
 - **系统：**支持iOS 6.0及以上系统，支持Bitcode功能。
 - **架构：**armv7、armv7s、arm64、i386、x86_64。
 - **机型：**iPhone 4+，iPad 2+和iPod 5+。
@@ -26,6 +35,7 @@
 - **网络：**支持NET、Wifi网络环境。
 
 ##开发包说明
+
 | 一级目录                                     | 二级目录                           | 说明                                 |
 | :--------------------------------------- | :----------------------------- | :--------------------------------- |
 | Headers                                  | BDVoiceRecognitionClient.h     | BDVRClient无UI头文件                   |
@@ -42,19 +52,20 @@
 |                                          | Theme                          | 识别控件主题                             |
 | Doc（使用文档）                                | 百度语音识别iOS版开发手册                 | 开发者使用指南                            |
 
-##总体框图
+## 总体框图
+
 ![](http://bos.nj.bpc.baidu.com/v1/audio/yuyinshibiezhengtikuangtu.png)
 
-
-
-#集成指南
+# 集成指南
 
 从本章开始将进行Step-By-Step的讲解，介绍如何在应用工程中集成BDVRClient。一个完整的Demo请参考开发包中的示例程序BDVRClientSample。
 
-##创建应用
+## 创建应用
+
 请参考《百度语音开放平台使用指南》创建应用，开通服务并完成个性化设置。
 
-##引入编译需要的Framework
+## 引入编译需要的Framework
+
 BDVRClient包含的功能以及需要的Framework有：
 
 | 功能                   | framework名称                   |
@@ -74,47 +85,62 @@ BDVRClient包含的功能以及需要的Framework有：
 |                      | CoreText.framework            |
 
 添加方式：右键点击Xcode中的工程文件，在出现的界面中，选中TARGETS中应用，在出现的界面中选中Build Phase->Link Binary With Libraries，点击界面中的“+”图标，在弹出的界面中选择此7个Framework即可（libBDVoiceRecognitionClient.a将在随后添加），添加完成效果图如下所示。
+
 ![Framework添加完成效果图](http://bos.nj.bpc.baidu.com/v1/audio/Frameworktianjiawanchengxiaoguotu.png "Framework添加完成效果图")
 
-##引入BDVRClient的头文件
+## 引入BDVRClient的头文件
+
 首先将BDVRClient提供的头文件拷贝到工程目录下，在XCode中添加此文件，引入BDVRClient提供的头文件。
+
 如果使用识别UI，请添加如下头文件：
+
 ```objective-c
 #import "BDRecognizerViewController.h"
 #import "BDRecognizerViewDelegate.h"
 ```
+
 如果只使用识别接口，添加如下头文件：
+
 ```objective-c
 #import "BDVoiceRecognitionClient.h"
 ```
+
 如果要对音频数据或音频文件直接进行识别，请分别添加如下头文件：
+
 ```objective-c
 #import "BDVRRawDataRecognizer.h"
 #import "BDVRFileRecognizer.h"
 ```
 
-##引入静态库文件
+## 引入静态库文件
+
 BDVRClient提供了模拟器6.0及更新版本，真机armv7、armv7s和arm64四种环境所使用的静态库文件，分别存放在开发包的libBDVoiceRecognitionClient文件夹下，详细见“开发包说明”部分。
 
 引入前准备：静态库中采用Objective C++实现，因此需要保证工程中引用静态库头文件的实现文件的扩展名必须为.mm。
 
 引入静态库文件的具体方式是：将libBDVoiceRecognitionClient文件夹下的libBDVoiceRecognitionClient.a采用添加文件方式添加到工程的Framework目录下，添加完成效果如图所示。
-![静态库添加完成效果图](http://bos.nj.bpc.baidu.com/v1/audio/jingtaikutianjiawanchengxiaoguotu.png "静态库添加完成效果图")
-说明：libBDVoiceRecognitionClient.a是采用lipo命令将armv7，armv7s，arm64和模拟器Debug版的.a合并成的一个通用的.a文件，避免开发者在build不同target时频繁替换.a文件的问题。
 
-##添加第三方开源库
+![静态库添加完成效果图](http://bos.nj.bpc.baidu.com/v1/audio/jingtaikutianjiawanchengxiaoguotu.png "静态库添加完成效果图")
+
+>**说明：**libBDVoiceRecognitionClient.a是采用lipo命令将armv7，armv7s，arm64和模拟器Debug版的.a合并成的一个通用的.a文件，避免开发者在build不同target时频繁替换.a文件的问题。
+
+## 添加第三方开源库
+
 BDVRClient中使用了第三方开源库，包括TTTAttributedLabel和苹果非官方的录音API，如果产品项目中已经包含其中的部分库，请勿重复添加，否则，请添加这两种第三方开源库到项目中，第三方库文件可以在SDK开发包下的Third-party目录下找到。
 注意：由于SDK中使用了类别，应用需要在Build Settings的Other Linker Flags中添加-ObjC；第三方库TTTAttributedLabel需要设置为ARC方式编译。
 
-##引入库所需的资源文件
+## 引入库所需的资源文件
+
 将开发包中的BDVoiceRecognitionClientResources文件夹加入到工程中，具体的添加办法，将文件夹拷入工程文件中，以“create folder references for any adds”方式添加到工程的资源Group中，添加方式如下图所示。
+
 ![BDVoiceRecognitionClientResources添加方式](http://bos.nj.bpc.baidu.com/v1/audio/BDVoiceRecognitionClientResourcestianjiafangshi.png "BDVoiceRecognitionClientResources添加方式")
 
 
 
-#重要接口说明
+# 重要接口说明
 
 百度语音SDK提供中文普通话、中文粤语、中文四川话、英语识别，支持输入、热词、地图、音乐、应用、web、购物、健康、打电话和视频等不同的应用场景。其中搜索、地图、音乐等模式适合短Query的输入场景，在识别过程中会将语气词、标点等过滤，尾点检测会更灵敏。输入模式适合短信输入等长句场景，尾点检测会迟钝一些，可以进行连续多句识别。开发者可以通过调用语音识别控件快速集成，也可以使用底层API接口自行设计语音交互。
+
 SDK还支持语义理解能力，可以将用户的语音直接转换成需求意图。语义具有领域性特征，不属于任何领域的语义是不存在的。同样的语言，在不同的领域中所代表的含义可能截然不同。语义理解就是把语言在特定领域所代表语义通过计算机可处理的表示方式理解出来。具体支持的领域及数据格式请参考《百度语义理解协议》。
 
 如果开启了语义解析能力，结果将做为JSON字符串放至在候选数组的首个元素。JSON对象的结构如下：
@@ -132,12 +158,14 @@ json_res转换成Json对象结构如下，详细参考《百度语义理解协�
 | parsed_text | string    | 分词结果          |
 | results     | JSONArray | 语义理解意图数组，可能为空 |
 
-##语音识别控件
+## 语音识别控件
+
 BDVRClient提供了语音识别控件BDRecognizerDialogController，并提供了更换主题功能，方便开发者快速引入语音识别功能。
 
-###创建识别控件对象
+### 创建识别控件对象
 
 - **方法**
+
 ```objective-c
 (id)initWithOrigin:(CGPoint)origin withTheme:(BDTheme *)theme;
 ```
@@ -150,15 +178,19 @@ BDVRClient提供了语音识别控件BDRecognizerDialogController，并提供了
 | theme  | 控件的主题，如果为nil，则为默认主题 |
 
 - **返回**
+
   弹窗实例
 
 - **说明**
+
   第二个参数为识别控件的主题，如果参数为空，则为默认主题，主题可以从下面接口中任选其一，当选择为某一个主题，则将开发包中BDVoiceRecognitionClientResources/Theme中对应的主题Bundle添加到项目资源目录中。
   生成一个主题的方式如下：
+
 ```objective-c
 BDTheme *theme=[BDTheme defaultTheme]; // 获取默认皮肤
 ```
 目前BDVRClient的主题分为亮和暗两种系列，各分为红，橙，蓝，绿四种，开发者可以自行选用，具体选择的接口如下：
+
 ```objective-c
 (instancetype) defaultTheme；
 (instancetype) lightBlueTheme；
@@ -170,10 +202,13 @@ BDTheme *theme=[BDTheme defaultTheme]; // 获取默认皮肤
 (instancetype) lightRedTheme
 (instancetype) darkRedTheme
 ```
+
 因为程序一般只需要一套皮肤，因此开发者在使用中不用将Theme文件中的所有Bundle都拷入工程。
 
-###启动识别
+### 启动识别
+
 - **方法**
+
 ```objective-c
 (BOOL)startWithParams:(BDRecognizerViewParamsObject *)params;
 ```
@@ -185,28 +220,37 @@ BDTheme *theme=[BDTheme defaultTheme]; // 获取默认皮肤
 | params | 识别过程的参数 |
 
 - **返回**
+
   开始识别是否成功，成功为YES，否则为NO
 
 - **说明**
+
   识别过程的参数，具体项目参考BDRecognizerViewParamsObject类声明，注意参数不能为空，必须要设置apiKey和secretKey。
 
-###取消本次识别
+### 取消本次识别
+
 - **方法**
+
 ```objective-c
 (void)cancel;
 ```
 
 - **参数**
+
   无。
 
 - **返回**
+
   无。
 
 - **说明**
+
   取消本次识别，并移除View。
 
-###调整控件坐标
+### 调整控件坐标
+
 - **方法**
+
 ```objective-c
 (void)changeFrameAfterOriented:(CGPoint)origin;
 ```
@@ -218,16 +262,21 @@ BDTheme *theme=[BDTheme defaultTheme]; // 获取默认皮肤
 | origin | 控件左上角的坐标 |
 
 - **返回**
+
   无。
 
 - **说明**
+
   设置识别弹出窗位置，一般在屏幕旋转后调用。
 
-##语音识别控件回调对象
+## 语音识别控件回调对象
+
 BDVRClient提供了语音识别控件回调对象BDRecognizerViewDelegate，通过实现该对象的接口，可以接收识别结果。
 
-###语音识别最终结果返回回调
+### 语音识别最终结果返回回调
+
 - **方法**
+
 ```objective-c
 (void)onEndWithViews:(BDRecognizerViewController *)aBDRecognizerView withResults:(NSArray *)aResults;
 ```
@@ -240,13 +289,17 @@ BDVRClient提供了语音识别控件回调对象BDRecognizerViewDelegate，通�
 | aResults          | 返回结果 |
 
 - **返回**
+
   无。
 
 - **说明**
+
   语音识别完成会调用此函数。返回结果均为数组，搜索结果数组元素为整体识别结果，输入结果数组元素为字典。
 
-###录音数据返回
+### 录音数据返回
+
 - **方法**
+
 ```objective-c
 (void)onRecordDataArrived:(NSData *)recordData sampleRate:(int)sampleRate;
 ```
@@ -259,13 +312,17 @@ BDVRClient提供了语音识别控件回调对象BDRecognizerViewDelegate，通�
 | sampleRate | 采样率  |
 
 - **返回**
+
   无。
 
 - **说明**
+
   返回为原始录音数据，格式为pcm，累积拼接即可得到完整录音数据。
 
-###返回中间识别结果
+### 返回中间识别结果
+
 - **方法**
+
 ```objective-c
 (void)onPartialResults:(NSString *)results;
 ```
@@ -277,13 +334,17 @@ BDVRClient提供了语音识别控件回调对象BDRecognizerViewDelegate，通�
 | results | 中间识别结果 |
 
 - **返回**
+
   无。
 
 - **说明**
+
   返回中间识别结果。
 
-###发生错误
+### 发生错误
+
 - **方法**
+
 ```objective-c
 (void)onError:(int)errorCode;
 ```
@@ -295,60 +356,81 @@ BDVRClient提供了语音识别控件回调对象BDRecognizerViewDelegate，通�
 | errorCode | 错误码  |
 
 - **返回**
+
   无。
 
 - **说明**
+
   发生错误。
 
-##语音识别客户端
+## 语音识别客户端
+
 BDVRClient出了提供语音识别空间之外，还提供了API方式的调用接口：BDVoiceRecognitionClient。
-###创建语音识别客户对象
+
+### 创建语音识别客户对象
+
 - **方法**
+
 ```objective-c
 (BDVoiceRecognitionClient *)sharedInstance;
 ```
 
 - **参数**
+
   无。
 
 - **返回**
+
   语音识别客户对象。
 
 - **说明**
+
   创建的语音识别客户对象是个单例，不支持并发开启多次语音识别。
 
-###释放语音识别客户端对象
+### 释放语音识别客户端对象
+
 - **方法**
+
 ```objective-c
 (BDVoiceRecognitionClient *)sharedInstance;
 ```
 
 - **参数**
+
   无。
 
 - **返回**
+
   无。
 
 - **说明**
+
   释放语音识别客户端对象，完成资源释放。
 
-###判断是否可以录音
+### 判断是否可以录音
+
 - **方法**
+
 ```objective-c
 (BOOL)isCanRecorder;
 ```
 
 - **参数**
+ 
   无。
 
 - **返回**
+
   可以录音返回YES，不可以录音返回NO。
 
 - **说明**
+
   判断是否可以录音。
 
-###开始语音识别
+### 开始语音识别
+
 - **方法**
+
 ```objective-c
 (int)startVoiceRecognition:(id<MVoiceRecognitionClientDelegate>)aDelegate;
 ```
@@ -360,58 +442,77 @@ BDVRClient出了提供语音识别空间之外，还提供了API方式的调用�
 | aDelegate | 语音识别客户端回调对象 |
 
 - **返回**
+
   错误码。
 
 - **说明**
+
   开始语音识别。
 
-###主动说话结束
+### 主动说话结束
+
 - **方法**
+
 ```objective-c
 (void)speakFinish;
 ```
 
 - **参数**
+
   无。
 
 - **返回**
+
   无。
 
 - **说明**
+
   主动说话结束，调用该接口后将不再录音或者接收传入音频数据，但是已有音频数据将会继续识别完成。
 
-###结束语音识别
+### 结束语音识别
+
 - **方法**
+
 ```objective-c
 (void)stopVoiceRecognition;
 ```
 
 - **参数**
+
   无。
 
 - **返回**
+
   无。
 
 - **说明**
+
   结束语音识别，调用该接口后将不再录音或者接收传入音频数据，已经传入BDVRClient的音频数据也将被丢弃不再识别，返回当前已经识别的内容。
 
-###获取当前识别的采样率
+### 获取当前识别的采样率
+
 - **方法**
+
 ```objective-c
 (int)getCurrentSampleRate;
 ```
 
 - **参数**
+
   无。
 
 - **返回**
+
   采样率。
 
 - **说明**
+
   返回的采样率支持两种：16000和8000。
 
-###指定语音采样率
+### 指定语音采样率
+
 - **方法**
+
 ```objective-c
 (void)setRecordSampleRate:(int)aSampleRate;
 ```
@@ -423,13 +524,17 @@ BDVRClient出了提供语音识别空间之外，还提供了API方式的调用�
 | aSampleRate | 采样率  |
 
 - **返回**
+
   无。
 
 - **说明**
+ 
   指定本次语音识别的采样率，支持16000和8000。
 
-###设置识别类型列表
+### 设置识别类型列表
+
 - **方法**
+
 ```objective-c
 (void)setPropertyList: (NSArray*)prop_list;
 ```
@@ -441,28 +546,37 @@ BDVRClient出了提供语音识别空间之外，还提供了API方式的调用�
 | prop_list | 识别类型 |
 
 - **返回**
+
   无。
 
 - **说明**
+
   设置识别类型列表, 除EVoiceRecognitionPropertyInput和EVoiceRecognitionPropertySong外，其余类型可以复合。
 
-###获取当前识别类型列表
+### 获取当前识别类型列表
+
 - **方法**
+
 ```objective-c
 (NSArray*)getRecognitionPropertyList;
 ```
 
 - **参数**
+
   无。
 
 - **返回**
+
   当前识别类型列表。
 
 - **说明**
+
   获取当前识别类型列表。
 
-###设置播放提示音
+### 设置播放提示音
+
 - **方法**
+
 ```objective-c
 (BOOL)setPlayTone:(int)aTone isPlay:(BOOL)aIsPlay;
 ```
@@ -475,74 +589,98 @@ BDVRClient出了提供语音识别空间之外，还提供了API方式的调用�
 | aIsPlay | 是否播放    |
 
 - **返回**
+
   如果没有找到需要播放的资源文件，返回NO。
 
 - **说明**
+
   声音资源需要加到项目工程里，用户可替换资源文件，文件名不可以变，建音提示音不宜过长，0。5秒左右。资源文件放置在BDVoiceRecognitionClientResources/Tone，录音开始声音文件名为
   record_start.caf，录音结束声音文件名为record_end.caf。  
 
-###监听当前音量级别
+### 监听当前音量级别
+
 - **方法**
+
 ```objective-c
 (BOOL)listenCurrentDBLevelMeter;
 ```
 
 - **参数**
+
   无。
 
 - **返回**
+
   如果再工作状态设定，返回NO。
 
 - **说明**
+
   需要在开始识别前调用，如果在工作状态设定，返回结果为NO ，且本次调用无效。
 
-###获得当前音量级别
+### 获得当前音量级别
+
 - **方法**
+
 ```objective-c
 (int)getCurrentDBLevelMeter;
 ```
 
 - **参数**
+
   无。
 
 - **返回**
+
   当前音量值。
 
 - **说明**
+
   获取当前音量级别，取值需要考虑全平台。
 
-###取消监听音量级别
+### 取消监听音量级别
+
 - **方法**
+
 ```objective-c
 (void)cancelListenCurrentDBLevelMeter;
 ```
 
 - **参数**
+
   无。
 
 - **返回**
+
   无。
 
 - **说明**
+
   取消监听音量级别。
 
-###设置识别语言
+### 设置识别语言
+
 - **方法**
+
 ```objective-c
 (void)setLanguage:(int)language;
 ```
 
 - **参数**
+
   识别语言。
 
 - **返回**
+
   无。
 
 - **说明**
+
   识别语言有效值参见枚举类型TVoiceRecognitionLanguage。
 
-###设置开发者申请的api key和secret key
+### 设置开发者申请的api key和secret key
+
 - **方法**
+
 ```objective-c
 (void)setApiKey:(NSString *)apiKey withSecretKey:(NSString *)secretKey;
 ```
@@ -555,13 +693,17 @@ BDVRClient出了提供语音识别空间之外，还提供了API方式的调用�
 | secretKey | 开发者在语音官网申请的secretKey |
 
 - **返回**
+
   无。
 
 - **说明**
+
   本接口仅为设置鉴权所需的keys，真正鉴权验证在首次识别时发起，故首次识别时间可能较长。
 
-###验证apiKey和secretKey
+### 验证apiKey和secretKey
+
 - **方法**
+
 ```objective-c
 (int)verifyApiKey:(NSString *)apiKey withSecretKey:(NSString *)secretKey;
 ```
@@ -574,17 +716,22 @@ BDVRClient出了提供语音识别空间之外，还提供了API方式的调用�
 | secretKey | 开发者在语音官网申请的secretKey |
 
 - **返回**
+
   返回值0代表验证通过，EVoiceRecognitionStartWorkGetAccessTokenFailed代表验证失败。
 
 - **说明**
+
   调用此方法后，不再需要调用
+
 ```objective-c
 (void)setApiKey:(NSString *)apiKey withSecretKey:(NSString *)secretKey;
 ```
 此方法可以提前检查apikey、secretkey并获取验证数据，降低第一次识别需要等待的时间。
 
-###设置参数
+### 设置参数
+
 - **方法**
+
 ```objective-c
 (void)setParamForKey:(NSString *)key withValue:(NSString *)value;
 ```
@@ -597,13 +744,17 @@ BDVRClient出了提供语音识别空间之外，还提供了API方式的调用�
 | value | 参数值  |
 
 - **返回**
+
   无。
 
 - **说明**
+
   支持参数列表详见。
 
-###关闭标点
+### 关闭标点
+
 - **方法**
+
 ```objective-c
 (void)disablePuncs:(BOOL)flag;
 ```
@@ -615,13 +766,17 @@ BDVRClient出了提供语音识别空间之外，还提供了API方式的调用�
 | flag | 是否关闭标点 |
 
 - **返回**
+
   无。
 
 - **说明**
+
   关闭标点。
 
-###设置本地VAD开关
+### 设置本地VAD开关
+
 - **方法**
+
 ```objective-c
 (void)setLocalVAD:(BOOL)enable;
 ```
@@ -633,13 +788,17 @@ BDVRClient出了提供语音识别空间之外，还提供了API方式的调用�
 | enable | YES：打开；NO：不打开 |
 
 - **返回**
+
   无。
 
 - **说明**
+
   设置本地VAD开关。
 
-###设置服务器VAD开关
+### 设置服务器VAD开关
+
 - **方法**
+
 ```objective-c
 (void)setServerVAD:(BOOL)enable;
 ```
@@ -651,13 +810,17 @@ BDVRClient出了提供语音识别空间之外，还提供了API方式的调用�
 | enable | YES：打开；NO：不打开 |
 
 - **返回**
+
   无。
 
 - **说明**
+
   设置服务器VAD开关。
 
-###设置是否使用压缩开关
+### 设置是否使用压缩开关
+
 - **方法**
+
 ```objective-c
 (void)setNeedCompressFlag: (BOOL)flag;
 ```
@@ -669,13 +832,17 @@ BDVRClient出了提供语音识别空间之外，还提供了API方式的调用�
 | flag | YES：打开；NO：不打开 |
 
 - **返回**
+
   无。
 
 - **说明**
+
   设置是否使用压缩开关。
 
-###设置是否使用AMR压缩开关
+### 设置是否使用AMR压缩开关
+
 - **方法**
+
 ```objective-c
 (void)setUseAmrWhenWwanFlag: (BOOL)flag;
 ```
@@ -687,13 +854,17 @@ BDVRClient出了提供语音识别空间之外，还提供了API方式的调用�
 | flag | YES：打开；NO：不打开 |
 
 - **返回**
+
   无。
 
 - **说明**
+
   设置是否使用AMR压缩开关。在wwan网络下，如果使用16K采样率，可以设置此标志使用amr压缩。
 
-###是否进行车载环境下的噪声消除
+### 是否进行车载环境下的噪声消除
+
 - **方法**
+
 ```objective-c
 (void)setEnableDRCFlag:(BOOL)flag;
 ```
@@ -705,13 +876,17 @@ BDVRClient出了提供语音识别空间之外，还提供了API方式的调用�
 | flag | YES：打开；NO：不打开 |
 
 - **返回**
+
   无。
 
 - **说明**
+
   是否进行车载环境下的噪声消除。
 
-###设置是否获取原始json结果
+### 设置是否获取原始json结果
+
 - **方法**
+
 ```objective-c
 (void)setNeedOriginJsonResultFlag: (BOOL)flag;
 ```
@@ -723,31 +898,41 @@ BDVRClient出了提供语音识别空间之外，还提供了API方式的调用�
 | flag | YES：打开；NO：不打开 |
 
 - **返回**
+
   无。
 
 - **说明**
+
   设置是否获取原始json结果，默认不开启，设置后SDK不再进行解析（暂时只支持中间结果）。
 
-###判断是否开启获取原始json结果
+### 判断是否开启获取原始json结果
+
 - **方法**
+
 ```objective-c
 (BOOL)getNeedOriginJsonResultFlag;
 ```
 
 - **参数**
+
   无。
 
 - **返回**
+
   YES：开启获取原始JSON结果；NO：不开启获取原始JSON结果。
 
 - **说明**
+
   判断是否开启获取原始json结果。
 
-##语音识别客户端回调对象
+## 语音识别客户端回调对象
+
 BDVRClient提供了语音识别客户端回调对象MVoiceRecognitionClientDelegate，通过实现该对象的接口，可以接收识别结果。
 
-###识别状态变化回调
+### 识别状态变化回调
+
 - **方法**
+
 ```objective-c
 (void)VoiceRecognitionClientWorkStatus:(int) aStatus obj:(id)aObj;
 ```
@@ -760,13 +945,17 @@ BDVRClient提供了语音识别客户端回调对象MVoiceRecognitionClientDeleg
 | aObj    | 该状态码对应的对象 |
 
 - **返回**
+
   无。
 
 - **说明**
+
   在该接口中处理各种识别状态。
 
-###识别出错回调
+### 识别出错回调
+
 - **方法**
+
 ```objective-c
 (void)VoiceRecognitionClientErrorStatus:(int) aStatus subStatus:(int)aSubStatus;
 ```
@@ -779,13 +968,17 @@ BDVRClient提供了语音识别客户端回调对象MVoiceRecognitionClientDeleg
 | aSubStatus | 具体错误码 |
 
 - **返回**
+
   无。
 
 - **说明**
+
   识别出错回调。
 
-###识别网络状态变化回调
+### 识别网络状态变化回调
+
 - **方法**
+
 ```objective-c
 (void)VoiceRecognitionClientNetWorkStatus:(int) aStatus;
 ```
@@ -797,16 +990,17 @@ BDVRClient提供了语音识别客户端回调对象MVoiceRecognitionClientDeleg
 | aStatus | 网络状态类型 |
 
 - **返回**
+
   无。
 
 - **说明**
+
   识别网络状态变化回调，目前该接口处于预留状态，并未实际使用。
 
+# 参数和错误码说明
 
+## 语音识别控件参数
 
-#参数和错误码说明
-
-##语音识别控件参数
 语音识别控件参数列表详见类BDRecognizerViewParamsObject，此参数不能为空，否则将返回NO，即启动识别失败。其中apiKey和secretKey不能为非法值，否则将无法识别。
 
 | 参数名称                        | 参数类型                        | 默认值                                      | 描述                                       |
@@ -827,8 +1021,10 @@ BDVRClient提供了语音识别客户端回调对象MVoiceRecognitionClientDeleg
 | isNeedVad                   | BOOL                        | YES                                      | 是否需要进行语音端点检测                             |
 | isNeedCompress              | BOOL                        | YES                                      | 是否对上传音频进行压缩                              |
 
-##语音识别器参数
-###播放提示音
+## 语音识别器参数
+
+### 播放提示音
+
 类型TVoiceRecognitionPlayTones，支持的参数如下：
 
 | 参数                                 | 含义         |
@@ -837,7 +1033,8 @@ BDVRClient提供了语音识别客户端回调对象MVoiceRecognitionClientDeleg
 | EVoiceRecognitionPlayTonesRecEnd   | 录音结束提示音    |
 | EVoiceRecognitionPlayTonesAll      | 录音开始和结束提示音 |
 
-###语音识别类型
+### 语音识别类型
+
 语音识别类型用TBDVoiceRecognitionProperty类型表示，支持参数如下：
 
 | 参数                                       | 含义    |
@@ -863,7 +1060,8 @@ BDVRClient提供了语音识别客户端回调对象MVoiceRecognitionClientDeleg
 | EVoiceRecognitionPropertyMap             | 地图    |
 | EVoiceRecognitionPropertyInput           | 输入    |
 
-###采样率
+### 采样率
+
 采样率用TVoiceRecognitionRecordSampleRateFlags类型表示，支持参数如下：
 
 | 参数                                    | 含义                   |
@@ -872,7 +1070,8 @@ BDVRClient提供了语音识别客户端回调对象MVoiceRecognitionClientDeleg
 | EVoiceRecognitionRecordSampleRate8K   | 8000                 |
 | EVoiceRecognitionRecordSampleRate16K  | 16000                |
 
-###语言
+### 语言
+
 采样率用TVoiceRecognitionLanguage类型表示，支持参数如下：
 
 | 参数                                      | 含义    |
@@ -882,11 +1081,14 @@ BDVRClient提供了语音识别客户端回调对象MVoiceRecognitionClientDeleg
 | EVoiceRecognitionLanguageEnglish        | 英语    |
 | EVoiceRecognitionLanguageSichuanDialect | 四川话   |
 
-##语音识别状态
+## 语音识别状态
+
 语音识别状态用TVoiceRecognitionClientWorkStatus表示，主要用来在
+
 ```objective-c
 (void)VoiceRecognitionClientWorkStatus:(int) aStatus obj:(id)aObj; 
 ```
+
 中检测，支持的类型如下：
 
 | 参数                                       | 含义                       |
@@ -907,7 +1109,8 @@ BDVRClient提供了语音识别客户端回调对象MVoiceRecognitionClientDeleg
 | EVoiceRecognitionClientWorkStatusCancel  | 用户取消                     |
 | EVoiceRecognitionClientWorkStatusError   | 发生错误                     |
 
-##语音识别错误码
+## 语音识别错误码
+
 语音识别错误码用TVoiceRecognitionClientErrorStatus表示，支持的错误码如下：
 
 | 参数                                       | 含义        |
@@ -932,10 +1135,12 @@ BDVRClient提供了语音识别客户端回调对象MVoiceRecognitionClientDeleg
 
 
 
-#完整示例
+# 完整示例
 
-##语音识别控件完整示例
+## 语音识别控件完整示例
+
 语音识别控件完整示例如下：
+
 ```objective-c
 - (IBAction)startRecognitionAction
 {
@@ -994,8 +1199,10 @@ BDRecognizerViewController *tmpRecognizerViewController = [[BDRecognizerViewCont
 }
 ```
 
-##语音识别器完整示例
+## 语音识别器完整示例
+
 语音识别器完整示例如下：
+
 ```objective-c
 // 开始语音识别
 - (IBAction)startVoiceRecognitionAction
