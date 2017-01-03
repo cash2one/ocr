@@ -1,4 +1,4 @@
-#概念解释
+# 概念解释
 
 对本文中将提到的名词约定如下：
 
@@ -12,24 +12,26 @@
 
 
 
-#简介
+# 简介
 
 百度语音识别通过 REST API 的方式给开发者提供一个通用的 HTTP 接口，基于该接口，开发者可以轻松的获取语音识别能力，本文档描述了使用语音识别服务 REST API 的方法。
 
-##功能介绍
+## 功能介绍
+
 REST API 支持整段录音文件的识别，对录音格式有一定的要求，支持语音识别控件：集成提示音、音量反馈动效整套交互的对话框控件，方便开发者快速集成。
 
 本文档适用使用 HTTP 接口的开发人员。
 
-##支持的语音格式
+## 支持的语音格式
+
 原始 PCM 的录音参数必须符合 8k/16k 采样率、16bit 位深、单声道，支持的压缩格式有：pcm（不压缩）、wav、opus、amr、x-flac。
 
 
 
-#集成指南
+# 集成指南
 
 
-##获取 Access Token
+## 获取 Access Token
 
 使用语音识别 REST API 需要获取 Access Token。Access Token 是用户身份验证和授权的凭证，语音识别采用的是Client Credentials授权方式，即采用应用公钥、密钥获取Access Token，适用于任何带server类型应用，通过此授权方式获取Access Token仅可访问平台授权类的接口，详见百度 OAuth 授权“[Client Credentials授权](http://developer.baidu.com/wiki/index.php?title=docs/oauth/client "Client Credentials授权")”部分。
 
@@ -40,15 +42,18 @@ REST API 支持整段录音文件的识别，对录音格式有一定的要求�
 - client_secret：必须参数，应用的 Secret Key;
 
 **例如：**
+
 ```
     https://openapi.baidu.com/oauth/2.0/token?
     grant_type=client_credentials&
     client_id=Va5yQRHl********LT0vuXV4&
     client_secret= 0rDSjzQ20XUj5i********PQSzr5pVw2&
 ```
+
 响应数据包如下所示，其中 “access_token” 字段即为请求 REST API 所需的令牌,  默认情况下，Access Token 有效期为一个月，开发者需要对 Access Token的有效性进行判断，如果Access Token过期可以重新获取。
 
 **例如：**
+
 ```
     HTTP/1.1 200 OK
     Content-Type: application/json
@@ -64,7 +69,7 @@ REST API 支持整段录音文件的识别，对录音格式有一定的要求�
     }
 ```
 
-#API请求方式基本说明
+# API请求方式基本说明
 
 - 语音识别接口支持 POST 方式
 - 目前 API 仅支持整段语音识别的模式，即需要上传整段语音进行识别
@@ -74,7 +79,8 @@ REST API 支持整段录音文件的识别，对录音格式有一定的要求�
 - 系统支持语言种类：中文（zh）、粤语（ct）、英文（en）
 - 正式地址：http://vop.baidu.com/server_api
 
-##语音上传模式
+## 语音上传模式
+
 语音数据和其他参数通过标准 JSON 格式串行化 POST 上传， JSON 里包括的参数：
 
 | 字段名  | 数据类型  | 可需  |描述   |
@@ -92,6 +98,7 @@ REST API 支持整段录音文件的识别，对录音格式有一定的要求�
 |len| int |选填|原始语音长度，单位字节
 
 其中，开发者可以把语音数据放在 JSON 序列的“speech”字段中，需要将语音先进行 base64编码，并标明语音数据的原始长度，填写“len”字段；也可以直接提供语音下载地址放在“url”字段中，并且提供识别结果的回调地址，放在“callback”参数中。因此“speech”和“len”参数绑定，“url”和“callback”参数绑定，这两组参数二选一填写，如果都填，默认处理第一种。
+
 - 表单类型在 HTTP-HEADER 里的 content-type 表明，例：
 
 ```php
@@ -112,9 +119,10 @@ Content-length 请填写 JSON 串的长度。
 	"len":4096,
 	"speech":"xxx",
 }
-
 ```
-- 注意事项：
+
+>**注意事项：**
+>
 1. len 字段表示原始语音长度，不是 base64 编码之后的长度。
 2. speech 和 len 字段绑定验证，url 和 callback 绑定验证，两组参数二选一必填，如果都填，默认第一种方式。
 3. 如果采用 base64 编码语音数据，数据量会增大 1/3。
@@ -129,17 +137,21 @@ Content-length 请填写 JSON 串的长度。
 |ptc| int| 选填 |协议号，下行识别结果选择，默认 nbest 结果
 
 - 语音数据的采样率和压缩格式在 HTTP-HEADER 里的 content-type 表明，例：
+
 ```php
 Content-Type:audio/amr;rate=8000
 ```
+
 Content-length 请填写原始语音长度。
 
 - URL 示例：
+
 ```php
 http://vop.baidu.com/server_api?lan=zh&cuid=***&token=***
 ```
 
-##下行接口定义
+## 下行接口定义
+
 两种上传方式都返回统一的结果，采用 JSON 格式封装，如果识别成功，识别结果放在 JSON的“result”字段中，统一采用 utf-8 方式编码。
 
 | 字段名  | 数据类型  | 可需  | 描述  |
@@ -160,7 +172,7 @@ http://vop.baidu.com/server_api?lan=zh&cuid=***&token=***
 ```php
 {"err_no":2000,"err_msg":"data empty.","sn":null}
 ```
-##错误码解释
+## 错误码解释
 
 | 错误码  | 含义             |
 | ---- | -------------- |
@@ -173,7 +185,7 @@ http://vop.baidu.com/server_api?lan=zh&cuid=***&token=***
 
 
 
-#注意事项
+# 注意事项
 
 1. 请严格按照文档里描述的参数进行开发，特别请关注原始录音参数以及语音压缩格式的建议，否则会影响识别率，进而影响到产品的用户体验。
 

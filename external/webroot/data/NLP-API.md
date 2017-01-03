@@ -1,64 +1,60 @@
-# API总述
+# 简介
 
-## 调用方式
+本文档主要针对API开发者，调用AI服务相关的API接口有两种调用方式，两种不同的调用方式采用相同的接口URL，区别在于请求方式和鉴权方法不一样，请求参数和返回结果一致。
 
-### 通用约定
+## 请求URL数据格式
 
-- 所有编码都采用UTF-8
-- 日期格式采用yyyy-MM-dd方式，如2015-08-10
-- Content-type为application/json; charset=UTF-8
-    + object类型的key必须使用双引号（"）括起来
-    + object类型的key必须使用lowerCamelCase表示
+向API服务地址使用POST发送请求，必须在URL中带上参数：
 
-### 公共请求头
+​**access_token:** 必须参数，参考“[Access Token获取](https://aip.baidubce.com/doc/auth.html)”。
 
-<table>
-<tr><th>头域（Header） </th><th> 是否必须 </th><th> 说明</th></tr>
-<tr><td>Authorization </td><td> 必须 </td><td> 包含Access Key与请求签名</td></tr>
-<tr><td>Host </td><td> 必须 </td><td> 包含API的域名</td></tr>
-<tr><td>Content-Type </td><td> 可选</td><td>application/json; charset=utf-8</td></tr>
-</table>
+​POST中参数按照API接口说明调用即可。
 
-### 公共响应头
+例如自然语言处理API，使用HTTPS POST发送：
 
-<table>
-<tr><th>头域（Header） </th><th> 说明</th></tr>
-<tr><td>Content-Type </td><td> 只支持JSON格式，application/json; charset=utf-8</td></tr>
-<tr><td>x-bce-request-id </td><td> 服务后端生成，并自动设置到响应头域中</td></tr>
-</table>
+```
+https://aip.bj.baidubce.com/rpc/2.0/nlp/v1/wordseg? access_token=24.f9ba9c5241b67688bb4adbed8bc91dec.2592000.1485570332.282335-8574074
+```
 
-### 响应状态码
+**请求消息体格式**
 
-返回的响应状态码遵循[RFC 2616 section 6.1.1](http://tools.ietf.org/html/rfc2616#section-6.1.1)
+API服务要求使用JSON格式的结构体来描述一个请求的具体内容, 然后通过urlencode格式化请求体。
 
-- 1xx: Informational - Request received, continuing process.
-- 2xx: Success - The action was successfully received, understood, and accepted.
-- 3xx: Redirection - Further action must be taken in order to complete the request.
-- 4xx: Client Error - The request contains bad syntax or cannot be fulfilled.
-- 5xx: Server Error - The server failed to fulfill an apparently valid request.
+**请求返回格式**
 
-### 通用错误返回格式
+API服务均采用JSON格式的消息体作为响应返回的格式。
 
-当调用接口出错时，将返回通用的错误格式。HTTP的返回状态码为4xx或5xx，返回的消息体将包括全局唯一的请求、错误代码以及错误信息。调用方可根据错误码以及错误信息定位问题，当无法定位到错误原因时，可以发工单联系百度技术人员，并提供requestId以便于快速地帮助您解决问题。
 
-**消息体定义**
+# 错误信息格式
 
-<table>
-<tr><th>参数名 </th><th> 类型 </th><th> 说明</th></tr>
-<tr><td>requestId </td><td> String </td><td> 请求的唯一标识</td></tr>
-<tr><td>code </td><td> String </td><td> 错误类型代码</td></tr>
-<tr><td>message </td><td> String </td><td> 错误的信息说明</td></tr>
-</table>
+若请求错误，服务器将返回的JSON文本包含以下参数：
 
-**错误返回示例**
+* **error_code：**错误码；关于错误码的详细信息请参考“[通用错误码](#通用错误码)和[业务相关错误码](#业务相关错误码)”。
 
-    {
-        "requestId": "47e0ef1a-9bf2-11e1-9279-0100e8cf109a",
-        "code":"NoSuchKey",
-        "message":"The resource you requested does not exist"   
-    } 
+* **error_msg：**错误描述信息，帮助理解和解决发生的错误。
 
-### 公共错误码
+例如Access Token失效返回：
+
+```
+{
+  "error_code": 110,
+  "error_msg": "Access token invalid or no longer valid"
+}
+```
+
+
+需要重新获取新的Access Token再次请求即可。
+
+**Access Token错误码**
+
+| error_CODE | error_MSG                               | 解释               |
+| ---------- | --------------------------------------- | ---------------- |
+| 100        | Invalid parameter                       | 无效参数             |
+| 110        | Access token invalid or no longer valid | Access Token过期失效 |
+
+
+
+## 公共错误码
 
 <table>
 <tr><th>Code </th><th> Message </th><th> HTTP Status Code </th><th> 说明</th></tr>
@@ -67,35 +63,11 @@
 <tr><td>Unavailable </td><td> Service internal error occurred </td><td> 500 </td><td> 内部服务发生错误</td></tr>
 </table>
 
-### 签名认证
+# 分词接口
 
-NLP API会对每个访问的请求进行身份认证，以保障用户的安全。安全认证采用Access Key与请求签名机制。Access Key由Access Key ID和Secret Access Key组成，均为字符串，由百度开放云官方颁发给用户。其中Access Key ID用于标识用户身份，Access Key Secret 是用于加密签名字符串和服务器端验证签名字符串的密钥，必须严格保密。
+**接口描述**
 
-对于每个HTTP请求，用户需要使用下文所描述的方式生成一个签名字符串，并将认证字符串放在HTTP请求的Authorization头域里。
-
-**签名字符串格式**
-
-bce-auth-v{version}/{accessKeyId}/{timestamp}/{expireTime}/{signedHeaders}/{signature}
-
-其中：
-
-- version是正整数，目前取值为1。
-- timestamp是生成签名时的时间。时间格式符合[通用约定](#通用约定)。
-- expireTime表示签名有效期限，单位为秒，从timestamp所指定的时间开始计算。
-- signedHeaders是签名算法中涉及到的头域列表。头域名字之间用分号（;）分隔，如host;x-bce-date。列表按照字典序排列。当signedHeaders为空时表示取默认值。
-- signature是256位签名的十六进制表示，由64个小写字母组成，生成方式由如下[签名生成算法](../Reference/AuthenticationMechanism)给出。
-
-### 签名生成算法
-
-有关签名生成算法的具体介绍，请参看[鉴权认证机制](../Reference/AuthenticationMechanism)。
-
->**说明：**使用NLPC的http服务之前需要先为自己的项目申请NLPC APPKEY（app参数）。HTTP 服务现在支持GBK和utf8两种编码，默认为GBK编码！如果使用utf8编码，需要在url最后加上字段：&encoding=utf8。
-
-# DeepSeg分词接口
-
-**功能：**
-
-DeepSeg分词接口提供基本词和混排两种粒度的分词结果，基本词粒度较小，适用于搜索引擎等需要更多召回的任务，而混排粒度倾向于保留更多的短语。
+分词接口提供基本词和混排两种粒度的分词结果，基本词粒度较小，适用于搜索引擎等需要更多召回的任务，而混排粒度倾向于保留更多的短语。
 
 **HTTP方法** 
 
@@ -103,23 +75,23 @@ POST
 
 **请求URL**
 
-https://aip.baidubce.com/rest/2.0/nlp/v1/wordseg?query=xxxxx&lang_id=1
+https://aip.bj.baidubce.com/rpc/2.0/nlp/v1/wordseg
 
 **请求示例**
 
 ```
 {
-"query":"百度是一家高科技公司",
-"lang_id":1
+  "query":"百度是一家高科技公司",
+  "lang_id":1
 }
 ```
 
 **请求参数**
 
-参数名称 | 类型 | 详细说明
----|---|---
-query | String | 必须，待分词的文本，目前输入编码统一为GBK
-lang_id | Int | 非必须，默认为1，输入字符串的语言对应的id，简体中文设置为1（目前不支持其他语言）
+| 参数名称    | 类型     | 详细说明                                     |
+| ------- | ------ | ---------------------------------------- |
+| query   | String | 必须，待分词的文本，目前输入编码统一为GBK                   |
+| lang_id | Int    | 非必须，默认为1，输入字符串的语言对应的id，简体中文设置为1（目前不支持其他语言） |
 
 **返回示例**
 
@@ -241,22 +213,22 @@ lang_id | Int | 非必须，默认为1，输入字符串的语言对应的id，�
 
 **返回参数**
 
-参数名称 | 类型 | 详细说明
----|---|---
-wordsepbuf | String | 基本词粒度结果，以\t分割
-wsbtermcount | int | 基本词粒度输出的词个数
-wsbtermoffsets | List | 该参数为列表，元素个数为切分出来的词个数，每个元素值表示对应的基本词在被切分文本的起始位置（字节偏移）
-wpcompbuf | String | 混排粒度结果，以\t分割
-wpbtermcount | Int | 混排粒度输出的词个数
-wpbtermoffsets | List | 该参数为列表，元素个数为切分出来的词个数，每个元素值表示对应的词是从第几个基本词开始的（基本词偏移）
-subphrbuf | String | 所有识别出来的短语，以\t分割
-spbtermcount | Int | 识别出来的短语个数
-spbtermoffsets | List | 该参数为列表，元素个数为识别出来的短语个数，每个元素值表示对应短语是从第几个基本词开始的（基本词偏移）
+| 参数名称           | 类型     | 详细说明                                     |
+| -------------- | ------ | ---------------------------------------- |
+| wordsepbuf     | String | 基本词粒度结果，以\t分割                            |
+| wsbtermcount   | int    | 基本词粒度输出的词个数                              |
+| wsbtermoffsets | List   | 该参数为列表，元素个数为切分出来的词个数，每个元素值表示对应的基本词在被切分文本的起始位置（字节偏移） |
+| wpcompbuf      | String | 混排粒度结果，以\t分割                             |
+| wpbtermcount   | Int    | 混排粒度输出的词个数                               |
+| wpbtermoffsets | List   | 该参数为列表，元素个数为切分出来的词个数，每个元素值表示对应的词是从第几个基本词开始的（基本词偏移） |
+| subphrbuf      | String | 所有识别出来的短语，以\t分割                          |
+| spbtermcount   | Int    | 识别出来的短语个数                                |
+| spbtermoffsets | List   | 该参数为列表，元素个数为识别出来的短语个数，每个元素值表示对应短语是从第几个基本词开始的（基本词偏移） |
 
 
 # 词性标注接口
 
-**功能：**
+**接口描述**
 
 词性标注接口为分词结果中的每个单词标注一个正确的词性的程序，也标注每个词是名词、动词、形容词或其他词性。
 
@@ -266,21 +238,21 @@ POST
 
 **请求URL**
 
-https://aip.baidubce.com/rest/2.0/nlp/v1/wordpos?query=xxxxx
+https://aip.bj.baidubce.com/rpc/2.0/nlp/v1/wordpos?query=xxxxx
 
 **请求示例**
 
 ```
 {
-"query": "你好百度"
+  "query": "你好百度"
 }
 ```
 
 **请求参数**
 
-Key | 类型 | 含义及备注
-----|-----| ------
-query | string | 带标注的文本串。算法内部使用GBK编码，外部如果要求UTF8编码，则需进行编码转换。
+| Key   | 类型     | 含义及备注                                    |
+| ----- | ------ | ---------------------------------------- |
+| query | string | 带标注的文本串。算法内部使用GBK编码，外部如果要求UTF8编码，则需进行编码转换。 |
 
 **返回示例**
 
@@ -297,19 +269,19 @@ query | string | 带标注的文本串。算法内部使用GBK编码，外部如
 
 **返回参数**
 
-Key | 类型 | 含义及备注
-----|-----|------
-result_out | array | 词性标注结果数组，数组中每个元素对应一个词汇。每个词汇是一个dict
-+word | string | 词汇的字面
-+offset | int | 偏移量，以基本粒度词汇为单位
-+length | int | 长度，以基本粒度词汇为单位
-+type | string | 词性
-+confidence | float | 置信度分值，0~1
+| Key         | 类型     | 含义及备注                              |
+| ----------- | ------ | ---------------------------------- |
+| result_out  | array  | 词性标注结果数组，数组中每个元素对应一个词汇。每个词汇是一个dict |
+| +word       | string | 词汇的字面                              |
+| +offset     | int    | 偏移量，以基本粒度词汇为单位                     |
+| +length     | int    | 长度，以基本粒度词汇为单位                      |
+| +type       | string | 词性                                 |
+| +confidence | float  | 置信度分值，0~1                          |
 
 
-# 词向量接口
+# 词向量表示接口
 
-**功能：**
+**接口描述**
 
 词向量接口提供两种功能：输入两个词tid=1得到两个词的相似度结果，输入1个词tid=2得到词的词向量。
 
@@ -319,7 +291,7 @@ POST
 
 **请求URL**
 
-https://aip.baidubce.com/rest/2.0/nlp/v1/wordembedding
+https://aip.bj.baidubce.com/rpc/2.0/nlp/v1/wordembedding
 
 **请求示例**
 
@@ -344,11 +316,11 @@ https://aip.baidubce.com/rest/2.0/nlp/v1/wordembedding
 
 **请求参数**
 
-参数 | 说明
-----|----
-query1 | 输入的第一个词
-query2 | 输入的第二个词
-tid | 指定算法类型，tid=1，返回两个词的相似度；tid=2，返回词向量
+| 参数     | 说明                                 |
+| ------ | ---------------------------------- |
+| query1 | 输入的第一个词                            |
+| query2 | 输入的第二个词                            |
+| tid    | 指定算法类型，tid=1，返回两个词的相似度；tid=2，返回词向量 |
 
 
 **返回示例**
@@ -369,16 +341,18 @@ tid | 指定算法类型，tid=1，返回两个词的相似度；tid=2，返回�
 **返回参数**
 
 
-参数 | 说明
-----|----
-ret | 
-message | 
-sim | 两个词的相似度
-vec | 词向量结果
+| 参数      | 描述        |
+| :------ | :-------- |
+| ret     | 人脸属性对象的集合 |
+| message | 词汇的字面     |
+| data    | 返回数据      |
+| +vec    | 词向量结果     |
+| +sim    | 相似度对象     |
+| ++sim   | 相似度       |
 
 # 中文DNN语言模型
 
-**功能**
+**接口描述**
 
 中文DNN语言模型接口用于输出切词结果并给出每个词在句子中的概率值。
 
@@ -388,7 +362,7 @@ POST
 
 **请求URL**
 
-https://aip.baidubce.com/rest/2.0/nlp/v1/dnnlm_cn
+https://aip.bj.baidubce.com/rpc/2.0/nlp/v1/dnnlm_cn
 
 
 **请求示例**
@@ -401,9 +375,9 @@ https://aip.baidubce.com/rest/2.0/nlp/v1/dnnlm_cn
 
 **请求参数**
 
-参数 | 说明
-----|----
-Input_sequence | 输入的句子，不需要切词
+| 参数             | 说明          |
+| -------------- | ----------- |
+| Input_sequence | 输入的句子，不需要切词 |
 
 
 **返回示例**
@@ -417,10 +391,10 @@ Input_sequence | 输入的句子，不需要切词
 
 **返回参数**
 
-参数 | 说明
-----|----
-seq_seg | 句子的切词结果
-seq_prob | 切词后每个词在句子中的概率值
+| 参数       | 说明             |
+| -------- | -------------- |
+| seq_seg  | 句子的切词结果        |
+| seq_prob | 切词后每个词在句子中的概率值 |
 
 
 # 短文本相似度接口
@@ -436,7 +410,7 @@ POST
 
 **请求URL**
 
-https://aip.baidubce.com/rest/2.0/nlp/v1/simnet?username=xxx\&app=xxx
+https://aip.bj.baidubce.com/rest/2.0/nlp/v1/simnet?username=xxx\&app=xxx
 
 **请求示例**
 
@@ -453,12 +427,12 @@ https://aip.baidubce.com/rest/2.0/nlp/v1/simnet?username=xxx\&app=xxx
 
 **请求参数**
 
-参数 | 说明
------|-----
-qslots中的terms_sequence | 短文本1
-tslots中的terms_sequence | 短文本2
-items | 均设置为空列表
-type | 类别，均设置为0
+| 参数                     | 说明       |
+| ---------------------- | -------- |
+| qslots中的terms_sequence | 短文本1     |
+| tslots中的terms_sequence | 短文本2     |
+| items                  | 均设置为空列表  |
+| type                   | 类别，均设置为0 |
 
 **返回示例**
 
@@ -477,13 +451,13 @@ type | 类别，均设置为0
 
 **返回参数**
 
-参数 | 说明
------|-----
-score | 两个文本相似度得分
-error | 
-type | 
-error_note | 
-items |
+| 参数         | 说明        |
+| ---------- | --------- |
+| score      | 两个文本相似度得分 |
+| error      |           |
+| type       |           |
+| error_note |           |
+| items      |           |
 
 # 评论观点抽取接口
 
@@ -497,7 +471,7 @@ POST
 
 **请求URL**
 
-https://aip.baidubce.com/rest/2.0/nlp/v1/comment_tag
+https://aip.bj.baidubce.com/rpc/2.0/nlp/v1/comment_tag
 
 **请求示例**
 
@@ -511,28 +485,28 @@ https://aip.baidubce.com/rest/2.0/nlp/v1/comment_tag
 
 **请求参数**
 
-参数 | 说明
------|-----
-comment | 评论内容
-entity | 实体名，当前取值为NULL，暂时不生效
-type | 类别,默认类别为4（餐厅）
+| 参数      | 说明                  |
+| ------- | ------------------- |
+| comment | 评论内容                |
+| entity  | 实体名，当前取值为NULL，暂时不生效 |
+| type    | 类别,默认类别为4（餐厅）       |
 
 其中type包含12个类别，具体取值说明如下：
 
-参数 | 说明
------|-----
-1 | 酒店
-2 | KTV
-3 | 丽人
-4 | 美食（默认）
-5 | 旅游
-6 | 健康
-7 | 教育
-8 | 商业
-9 | 房产
-10 | 汽车
-11 | 生活
-12 | 购物
+| 参数   | 说明     |
+| ---- | ------ |
+| 1    | 酒店     |
+| 2    | KTV    |
+| 3    | 丽人     |
+| 4    | 美食（默认） |
+| 5    | 旅游     |
+| 6    | 健康     |
+| 7    | 教育     |
+| 8    | 商业     |
+| 9    | 房产     |
+| 10   | 汽车     |
+| 11   | 生活     |
+| 12   | 购物     |
 
 
 **返回示例**
@@ -550,10 +524,10 @@ type | 类别,默认类别为4（餐厅）
 
 **返回参数**
 
-参数 | 说明
------|-----
-abstract | 表示评论观点在评论文本中的位置。
-adj | 表示抽取结果中的评价词
-comment | 表示待抽取观点的评论文本。
-entity | 实体名，当前取值为NULL，暂时不生效
-type | 表示情感极性（其中2表示积极、1表示中性、0表示消极）。
+| 参数       | 说明                           |
+| -------- | ---------------------------- |
+| abstract | 表示评论观点在评论文本中的位置。             |
+| adj      | 表示抽取结果中的评价词                  |
+| comment  | 表示待抽取观点的评论文本。                |
+| entity   | 实体名，当前取值为NULL，暂时不生效          |
+| type     | 表示情感极性（其中2表示积极、1表示中性、0表示消极）。 |

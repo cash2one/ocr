@@ -13,45 +13,8 @@ window.$ = $;
 window.marked = marked;
 
 let lastMdTag = '';
-let currentMdName = '';
-let anchorMap = {
-    faceRecognition: {
-        '使用须知': 'faceRecognition-1',
-        '接口规范': 'faceRecognition-2',
-        '错误信息格式': 'faceRecognition-3',
-        '人脸识别接口': 'faceRecognition-4',
-        'APP用户组信息接口': 'faceRecognition-5',
-        '人脸属性': 'faceRecognition-6'
-    }
-};
 
-let matchAnchor = function (className, cnName) {
-    if (anchorMap[className]) {
-        return anchorMap[className][cnName];
-    }
-    else {
-        return '';
-    }
-};
-
-let setAnchorId = function (arr) {
-    if (!arr.length) {
-        return;
-    }
-    for (let i = 0; i < arr.length; i++) {
-        $(arr[i]).attr('id', matchAnchor('faceRecognition', $(arr[i]).text()));
-    }
-};
-
-let setFaqAnchorId = function (tagname) {
-    if (tagname.indexOf('FAQ') > 0) {
-        $('#md_container p').each(function (i, element) {
-            $(this).attr('id', tagname + '-Q' + (i + 1));
-        });
-    }
-};
-
-let bindLeafNodeScroll = function (clickNode, type) {
+let bindLeafNodeScroll = function (clickNode) {
     let scrollToLeafNodeH1 = function (index) {
         let offset = Math.abs($('#md_container>h1').eq(0).offset().top
             - $('#md_container>h1').eq(index).offset().top);
@@ -60,13 +23,7 @@ let bindLeafNodeScroll = function (clickNode, type) {
     let leafNodes = clickNode.parent().find('>ul>li');
     leafNodes.each(function (i, element) {
         $(element).click(function () {
-            let curTag = $(this).parent().parent().find('>a').attr('tag');
-            if (curTag === lastMdTag) {
-                scrollToLeafNodeH1(i);
-            }
-            else {
-                renderMdPage(curTag, $(this), type);
-            }
+            scrollToLeafNodeH1(i);
         });
     });
 };
@@ -83,9 +40,8 @@ let renderMdPage = function (tagName, clickNode, type) {
             $('#md_container').html(marked(res));
             $('code').addClass('prettyprint');
             window.PR.prettyPrint();
-            setFaqAnchorId(tagName);
             if (type === 'node') {
-                bindLeafNodeScroll(clickNode, type);
+                bindLeafNodeScroll(clickNode);
             }
         }
     });
@@ -115,6 +71,15 @@ let bindAllLeafClick = function () {
     });
 };
 
+$.ajax({
+    type: 'GET',
+    url: '/data/notice.md',
+    success: function (res) {
+        $('#md_container').html(marked(res));
+        $('code').addClass('prettyprint');
+        window.PR.prettyPrint();
+    }
+});
 $(function () {
     $('#jquery-accordion-menu').docAccordionMenu();
 });
@@ -167,66 +132,17 @@ let bindMinusPlus = function () {
             $('.toc.jquery-accordion-menu:eq(0)').hide(500);
         } else if (button.hasClass('nav-plus2') && button.hasClass('active')) {
             button.removeClass('active');
-            $('.toc.jquery-accordion-menu:eq(1) > ul').show(500);
+            $('.toc.jquery-accordion-menu:eq(1)').show(500);
         }
         else {
             button.addClass('active');
-            $('.toc.jquery-accordion-menu:eq(1) > ul').hide(500);
+            $('.toc.jquery-accordion-menu:eq(1)').hide(500);
         }
     });
 };
 
 let loadDefault = function () {
-    $('.doc-wrap .beginner > li:eq(0)').click();
-};
-
-let clickonce = true;
-let unfoldSidebar = function (id) {
-    let  element = $('#' + id);
-    let  parentUl = element.parent();
-    let  parentLi = parentUl.parent();
-    let clickElement = function () {
-        if (clickonce) {
-            element.find('>a').click();
-            clickonce = false;
-        }
-    };
-    clickElement();
-    console.log(parentUl, parentLi);
-    if (!parentUl.hasClass('submenu')) {
-        clickonce = true;
-        return;
-    }
-    if (!parentUl.hasClass('level1')) {
-        parentUl.show();
-    }
-    else {
-        parentUl.show();
-    }
-    unfoldSidebar(parentLi.attr('id'));
-};
-
-let loadHashLocation = function () {
-    let  hashId = window.location.hash;
-    if (!hashId) {
-        return;
-    }
-    hashId = hashId.split('#')[1];
-    if (hashId.split('_').length === 1) {
-        unfoldSidebar(hashId);
-    }
-    else {
-        let  hash = hashId.split('_')[0];
-        let  questionId = hashId.split('_')[1];
-        unfoldSidebar(hash);
-        setTimeout(function () {
-            let questionElement = $('#md_container>#' + questionId);
-            if (questionElement.length) {
-                let offset = questionElement.offset().top;
-                $('body').scrollTop(offset);
-            }
-        }, 500);
-    }
+    $(".doc-wrap .faq-menu > li:eq(0)").click();
 };
 
 $(function () {
@@ -234,5 +150,4 @@ $(function () {
     renderMenuActive();
     bindAllNodeClick();
     loadDefault();
-    loadHashLocation();
 });

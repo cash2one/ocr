@@ -20,7 +20,7 @@
 
 步骤如下：
 
-1.在[官方网站](https://api.baidu.com/doc/Developer/index.html)下载Java SDK压缩工具包。
+1.在[官方网站](https://ai.baidu.com/sdk)下载Java SDK压缩工具包。
 
 2.将下载的`aip-java-sdk-version.zip`解压后，复制到工程文件夹中。
 
@@ -33,15 +33,9 @@
 
 # 快速入门
 
-1.初始化一个AipFaceClient。
-
-AipFaceClient是与Optical Character Recognition(BFR)交互的客户端，所有BFR操作都是通过AipFaceClient完成的。您可以参考[新建AipFaceClient](#新建AipFaceClient)，完成初始化客户端的操作。
-
-# AipFaceClient
-
-## 新建AipFaceClient
-
 BFRClient是Optical Character Recognition的Java客户端，为使用Optical Character Recognition的开发人员提供了一系列的交互方法。
+
+## 初始化AipFaceClient
 
 用户可以参考如下代码新建一AipFaceClient：
 
@@ -165,5 +159,5 @@ public void faceRecognize(AipFace client) {
 
 ##
 
-* 第一版
+* 首次发布
 

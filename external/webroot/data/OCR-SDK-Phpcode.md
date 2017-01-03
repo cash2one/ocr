@@ -22,7 +22,7 @@
 
 步骤如下：
 
-1.在[官方网站](https://aip.baidu.com/doc/Developer/index.html)下载PHP SDK压缩工具包。
+1.在[官方网站](https://ai.baidu.com/sdk)下载PHP SDK压缩工具包。
 
 2.将下载的`ocr.zip`解压后，复制AipOrc.php以及lib/*到工程文件夹中。
 
@@ -31,13 +31,9 @@
 
 # 快速入门
 
-1.初始化一个AipOcr对象。
+AipOcr类是与Optical Character Recognition(OCR)交互的客户端，所有OCR操作都是通过AipOcr完成的。
 
-AipOcr类是与Optical Character Recognition(OCR)交互的客户端，所有OCR操作都是通过AipOcr完成的。您可以参考[新建AipOcr](#新建AipOcr)，完成初始化AipOcr对象。
-
-# AipOcr
-
-## 新建AipOcr
+## 初始化AipOcr
 
 AipOcr类是Optical Character Recognition的PHP SDK客户端，为使用Optical Character Recognition的开发人员提供了一系列的交互方法。
 

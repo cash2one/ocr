@@ -1,22 +1,32 @@
-#简介
+# 简介
 
-##概念解释
+## 概念解释
+
 语音合成是实现人机语音交互，建立一个有听和讲能力的交互系统所必需的关键技术。随着语音技术的发展，百度自主研发了语音合成系统（TTS），功能是接收用户发送的文本，生成语音发送给用户。
 对本文中将提到的名词约定如下：
+
 **语音合成（Text To Speech，TTS）**：将文本合成为语音，即声音文件。
+
 **合成引擎**：将文本合成为语音的核心模块。
+
 **百度语音合成SDK（BDTTSClient）**：本开发包。BDTTSClient是一个封装了网络首发、音频播放功能的语音合成解决方案。借助BDTTSClient可以在应用程序中快速集成语音合成功能。
 
-##功能介绍
+## 功能介绍
+
 百度语音合成客户端Android版SDK是一种面向Android移动设备的语音合成解决方案，以JAR包 + SO库的形式发布。目前版本已支持SDK内部直接播放合成语音和从SDK获取语音数据，并支持男女声、语速、音调、音量、音频码率设置，后续版本讲支持更多参数设置（最新信息请参见百度语音官网）。
 
-##兼容性
+## 兼容性
+
 系统：支持Android 2.3（API Level 9）及以上系统。需要开发者通过minSdkVersion来保证支持系统的检测。
+
 机型：手机和平板均可。
+
 构架：支持arm64-v8a，armeabi，armeabi-v7a，x86，x86_64。
+
 网络：支持WIFI及移动网络，支持2G、3G、4G移动网络。
 
-##开发包说明
+## 开发包说明
+
 | 文件（夹）名                        | 说明                          |
 | :---------------------------- | :-------------------------- |
 | doc/百度语音离在线合成Android版开发手册.pdf | 本文档                         |
@@ -26,32 +36,36 @@
 | data                          | 语音合成资源文件                    |
 | license                       | 授权文件                        |
 
-##总体框图
-![](http://bos.nj.bpc.baidu.com/v1/audio/yuyinhechengxitongjiagoutu.png)
 
-
-
-#集成指南
+# 集成指南
 
 本章将讲解如何快速地集成BDTTSClient到现有应用中。
 
-##创建应用
+## 创建应用
+
 请参考《百度语音开放平台使用指南》创建应用，开通服务并完成个性化设置。
 
-##添加BDTTSClient到工程
+## 添加BDTTSClient到工程
+
 将开发包中的libs目录整体拷贝到工程目录，libs目录包含了各平台的so库，开发者视应用需要可以进行删减。galaxy_lite.jar是百度Android公共基础库，如果项目中还集成了其它百度SDK，如Push.jar，在打包过程中出现类似如下的错误信息：
+
 ```java
 [2015-10-22 11:02:57 - Dex Loader] Unable to execute dex: Multiple dex files define Lcom/baidu/android/common/logging/Configuration;
 [2015-10-22 11:02:57 - BaiduTtsSample] Conversion to Dalvik format failed: Unable to execute dex: Multiple dex files define Lcom/baidu/android/common/logging/Configuration;
 ```
+
 请将此Jar包移除。
+
 如果Eclipse ADT版本插件低于17，需要手工添加依赖库，添加方法为：Project => Properties => Java Build Path => Libraries => Add JAR...。
 
-##添加语音合成资源文件
+## 添加语音合成资源文件
+
 将开发包中的data目录下的dat文件放到某一可读路径下，以便设置资源文件参数时使用。
 
-##添加权限
+## 添加权限
+
 在工程AndroidManifest.xml文件中添加如下权限：
+
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -77,36 +91,44 @@
 | android.permission. ACCESS_WIFI_STATE    | 允许应用程序获取WIFI状态         |
 | android.permission.CHANGE_WIFI_STATE     | 允许应用程序改变WI-FI网络链接状态的权限 |
 
-##Proguard配置
+## Proguard配置
+
 请不要混淆sdk的jar包。
 
+# 重要接口说明
 
+## 合成器
 
-#重要接口说明
-
-##合成器
 合成器，类名SpeechSynthesizer，主要用来控制合成进程：设置参数，开始，结束，取消等。
 
-###创建对象
+### 创建对象
+
 - **说明**
+
   获取语音合成引擎实例。
 
 - **方法**
+
 ```java
 public SpeechSynthesizer getInstance()
 ```
 
 - **参数**
+
   无。
 
 - **返回**
+
   语音合成引擎实例。
 
-###设置Context
+### 设置Context
+
 - **说明**
+
   设置语音合成实例的上下文环境。
 
 - **方法**
+
 ```java
 public void setContext(Context context)
 ```
@@ -119,13 +141,16 @@ public void setContext(Context context)
 
 
 - **返回**
+
   无。
 
-###设置监听器
+### 设置监听器
+
 - **说明**
   设置语音合成监听器，回调合成和播放进度以及错误信息。
 
 - **方法**
+
 ```java
 public void setSpeechSynthesizerListener(SpeechSynthesizerListener speechSynthesizerListener)
 ```
@@ -138,13 +163,17 @@ public void setSpeechSynthesizerListener(SpeechSynthesizerListener speechSynthes
 
 
 - **返回**
+
   无。
 
-###初始化TTS引擎
+### 初始化TTS引擎
+
 - **说明**
+
   初始化合成引擎，可以指定使用online在线，或者mix离在线混合引擎. mix混合引擎会在online在线不能用的情况下自动使用offline离线引擎。
 
 - **方法**
+
 ```java
 public int initTts(TtsMode ttsMode)
 ```
@@ -156,28 +185,37 @@ public int initTts(TtsMode ttsMode)
 | ttsMode | 引擎选择（online是纯在线合成引擎，Mix是离在线混合引擎） |
 
 - **返回**
-  错误码。
 
-###获取版本信息
+  [错误码](#错误码说明)。
+
+### 获取版本信息
+
 - **说明**
+
   获取当前的SDK版本信息。
 
 - **方法**
+
 ```java
 public String libVersion()
 ```
 
 - **参数**
+
   无。
 
 - **返回**
+
   版本信息。
 
-###设置在线授权
+### 设置在线授权
+
 - **说明**
+
   设置在线授权时需要用到的apiKey和secretKey，关系到在线合成是否可用。
 
 - **方法**
+
 ```java
 public int setApiKey(String apiKey, String secretKey)
 ```
@@ -190,13 +228,17 @@ public int setApiKey(String apiKey, String secretKey)
 | secretKey | 开放平台注册app的secretKey |
 
 - **返回**
-  错误码。
 
-###设置离线授权
+  [错误码](#错误码说明)。
+
+### 设置离线授权
+
 - **说明**
+
   设置离线授权所需要的AppId，关系到离线合成是否可用。
 
 - **方法**
+
 ```java
 public int setAppId(String appId)
 ```
@@ -208,13 +250,17 @@ public int setAppId(String appId)
 | appId | 开放平台注册app的appId |
 
 - **返回**
-  错误码。
 
-###设置参数
+  [错误码](#错误码说明)。
+
+### 设置参数
+
 - **说明**
+
   设置TTS参数。
 
 - **方法**
+
 ```java
 public int setParam(String key, String value)
 ```
@@ -227,13 +273,17 @@ public int setParam(String key, String value)
 | value | 参数的值 |
 
 - **返回**
+
   错误码。
 
-###设置播放器的音频流类型
+### 设置播放器的音频流类型
+
 - **说明**
+
   设置播放器的音频流类型。
 
 - **方法**
+
 ```java
 public int setAudioStreamType(int streamType)
 ```
@@ -245,73 +295,97 @@ public int setAudioStreamType(int streamType)
 | streamType | 音频流类型 |
 
 - **返回**
+
   错误码。
 
-###暂停任务
+### 暂停任务
+
 - **说明**
+
   暂停当前的TTS任务。
 
 - **方法**
+
 ```java
 public int pause()
 ```
 
 - **参数**
+
   无
 
 - **返回**
+
   错误码。
 
-###恢复任务
+### 恢复任务
+
 - **说明**
+
   恢复暂停的TTS任务。
 
 - **方法**
+
 ```java
 public int resume()
 ```
 
 - **参数**
+
   无
 
 - **返回**
+
   错误码。
 
-###停止任务
+### 停止任务
+
 - **说明**
+
   停止所有的TTS任务。
 
 - **方法**
+
 ```java
 public int stop()
 ```
 
 - **参数**
+
   无
 
 - **返回**
+ 
   错误码。
 
-###释放TTS资源
+### 释放TTS资源
+
 - **说明**
+
   释放TTS的资源。
 
 - **方法**
+
 ```java
 public int release()
 ```
 
 - **参数**
+
   无
 
 - **返回**
+
   错误码。
 
-###加载离线自定义模型文件
+### 加载离线自定义模型文件
+
 - **说明**
+
   加载离线自定义模型文件，仅离线引擎可用。
 
 - **方法**
+
 ```java
 public int loadCustomResource(String customModelPath)
 ```
@@ -323,28 +397,37 @@ public int loadCustomResource(String customModelPath)
 | customModelPath | 自定义模型文件路径 |
 
 - **返回**
+
   错误码。
 
-###释放离线自定义模型文件
+### 释放离线自定义模型文件
+
 - **说明**
+
   释放离线自定义模型文件，仅离线引擎可用。
 
 - **方法**
+
 ```java
 public int freeCustomResource()
 ```
 
 - **参数**
+
   无。
 
 - **返回**
+
   错误码。
 
-###切换离线发音人接口
+### 切换离线发音人接口
+
 - **说明**
+
   该接口用来切换离线的发音人（发音人模型文件）。传入对应的要切换的资源文件的绝对路径即可，如果speechModelPath不同，则传入对应的路径；如果textModePath不同，则传入对应的路径，如果相同，则传null即可。该方法必须在initTTS成功后才可调用。如果在调用initTTS之后，离线引擎没有被初始化，该接口会重新初始化离线引擎，并加载模型文件。
 
 - **方法**
+
 ```java
 public int loadModel(String speechModelPath, String textModelPath)
 ```
@@ -357,13 +440,17 @@ public int loadModel(String speechModelPath, String textModelPath)
 | textModelPath   | 前端模型文件路径 |
 
 - **返回**
+
   错误码。
 
-###加载英文模型文件
+### 加载英文模型文件
+
 - **说明**
+
   加载英文模型文件，仅离线引擎可用。
 
 - **方法**
+
 ```java
 public int loadEnglishModel(String englishTextModelPath, String englishSpeechModelPath)
 ```
@@ -376,16 +463,21 @@ public int loadEnglishModel(String englishTextModelPath, String englishSpeechMod
 | englishSpeechModelPath | 英文后端模型文件路径 |
 
 - **返回**
+
   错误码。
 
-###合成并播放文本
+### 合成并播放文本
+
 - **说明**
+
   合成并播放给定文本，合成并播放功能有多个重载函数，其参数不同，但是返回值相同。
 
 - **返回**
+
   错误码。
 
 - **方法1：合成并播放文本**
+
 ```java
 public int speak(String text)
 ```
@@ -397,6 +489,7 @@ public int speak(String text)
 | text | 要合成的文本（需要合成的文本text的长度不能超过1024个GBK字节） |
 
 - **方法2：可排队的合成并播放**
+
 ```java
 public int speak(SpeechSynthesizeBag speechSynthesizeBag)
 ```
@@ -408,6 +501,7 @@ public int speak(SpeechSynthesizeBag speechSynthesizeBag)
 | speechSynthesizeBag | 语音合成包 |
 
 - **方法3：可排队的合成并播放**
+
 ```java
 public int speak(String text, String utteranceId)
 ```
@@ -432,14 +526,18 @@ public int speak(String text, String utteranceId, Bundle params)
 | utteranceId | 合成文本的ID                              |
 | params      | 预留参数                                 |
 
-###合成文本
+### 合成文本
+
 - **说明**
+
   合成给定文本，合成文本功能有多个重载函数，其参数不同，但是返回值相同。
 
 - **返回**
+
   错误码。
 
 - **方法1：合成文本**
+
 ```java
 public int synthesize(String text)
 ```
@@ -451,6 +549,7 @@ public int synthesize(String text)
 | text | 要合成的文本（需要合成的文本text的长度不能超过1024个GBK字节） |
 
 - **方法2：可排队的合成**
+
 ```java
 public int synthesize (SpeechSynthesizeBag speechSynthesizeBag)
 ```
@@ -462,6 +561,7 @@ public int synthesize (SpeechSynthesizeBag speechSynthesizeBag)
 | speechSynthesizeBag | 语音合成包 |
 
 - **方法3：可排队的合成**
+
 ```java
 public int synthesize(String text, String utteranceId)
 ```
@@ -474,6 +574,7 @@ public int synthesize(String text, String utteranceId)
 | utteranceId | 合成文本的ID                              |
 
 - **方法4：可排队的合成，尚未使用**
+
 ```java
 public int synthesize(String text, String utteranceId, Bundle params)
 ```
@@ -486,11 +587,14 @@ public int synthesize(String text, String utteranceId, Bundle params)
 | utteranceId | 合成文本的ID                                |
 | params      | 预留参数                                   |
 
-###批量合成并播放
+### 批量合成并播放
+
 - **说明**
+
   批量合成并播放文本文件，一次可传入一个list，这个list会按顺序合成播放。
 
 - **方法**
+
 ```java
 public int batchSpeak(List<SpeechSynthesizeBag> speechSynthesizeBags)
 ```
@@ -502,13 +606,17 @@ public int batchSpeak(List<SpeechSynthesizeBag> speechSynthesizeBags)
 | speechSynthesizeBags | 语音合成包队列 |
 
 - **返回**
+
   错误码。
 
-###授权验证
+### 授权验证
+
 - **说明**
+
   授权验证接口。
 
 - **方法**
+
 ```java
 public int auth(TtsMode ttsMode)
 ```
@@ -520,15 +628,21 @@ public int auth(TtsMode ttsMode)
 | ttsMode | 语音合成模式 |
 
 - **返回**
+
   错误码。
 
-##合成状态监听器
+## 合成状态监听器
+
 SpeechSynthesizerListener是合成状态监听器接口，开发者可以通过实现此接口对识别状态做监听。
-###合成开始
+
+### 合成开始
+
 - **说明**
+
   合成开始时的回调方法。
 
 - **方法**
+
 ```java
 void onSynthesizeStart(String utteranceId)
 ```
@@ -542,11 +656,14 @@ void onSynthesizeStart(String utteranceId)
 - **返回**
   无。
 
-###获取合成数据
+### 获取合成数据
+
 - **说明**
+
   当获取合成数据时调用的方法，合成数据会分多次返回，需自行保存。
 
 - **方法**
+
 ```java
 void onSynthesizeDataArrived(String utteranceId, byte[] audioData, int progress)
 ```
@@ -560,13 +677,17 @@ void onSynthesizeDataArrived(String utteranceId, byte[] audioData, int progress)
 | progress    | 播放文字的进度 |
 
 - **返回**
+
   无。
 
-###合成完成状态
+### 合成完成状态
+
 - **说明**
+
   当合成完成时调用的方法。
 
 - **方法**
+
 ```java
 void onSynthesizeFinish(String utteranceId)
 ```
@@ -578,13 +699,17 @@ void onSynthesizeFinish(String utteranceId)
 | utteranceId | 该次表达的标识 |
 
 - **返回**
+
   无。
 
-###播放开始状态
+### 播放开始状态
+
 - **说明**
+
   当开始播放时调用的方法。
 
 - **方法**
+
 ```java
 void onSpeechStart(String utteranceId)
 ```
@@ -596,13 +721,17 @@ void onSpeechStart(String utteranceId)
 | utteranceId | 该次表达的标识 |
 
 - **返回**
+
   无。
 
-###播放进度状态
+### 播放进度状态
+
 - **说明**
+
   当进度进度改变时调用的方法。
 
 - **方法**
+
 ```java
 void onSpeechProgressChanged(String utteranceId, int progress)
 ```
@@ -615,13 +744,17 @@ void onSpeechProgressChanged(String utteranceId, int progress)
 | progress    | 播放文字的进度 |
 
 - **返回**
+
   无。
 
-###播放完成
+### 播放完成
+
 - **说明**
+
   播放完成时调用的方法。
 
 - **方法**
+
 ```java
 void onSpeechFinish(String utteranceId)
 ```
@@ -633,13 +766,17 @@ void onSpeechFinish(String utteranceId)
 | utteranceId | 该次表达的标识 |
 
 - **返回**
+
   无。
 
-###出错
+### 出错
+
 - **说明**
+
   出错时的回调函数。
 
 - **方法**
+
 ```java
 void onError(String utteranceId, SpeechError error)
 ```
@@ -656,9 +793,10 @@ void onError(String utteranceId, SpeechError error)
 
 
 
-#参数和错误码说明
+# 参数和错误码说明
 
-##合成器参数设置说明
+## 合成器参数设置说明
+
 在调用speak方法开始合成并朗读之前，可以对参数进行配置（未设置的参数将使用默认值），目前支持的类型如下：
 
 | 参数名                       | 默认值                     | 备注                                       |
@@ -696,7 +834,8 @@ void onError(String utteranceId, SpeechError error)
 |                           |                         | AUDIO_BITRATE_OPUS_32K                   |
 | PARAM_VOCODER_OPTIM_LEVEL | 0                       | 合成引擎速度优化等级，取值范围[0, 2]，值越大速度越快（离线引擎）      |
 
-##错误码说明
+## 错误码说明
+
 | 错误码值  | 错误码描述                    |
 | :---- | :----------------------- |
 | -1    | 在线引擎授权失败                 |
@@ -747,7 +886,7 @@ void onError(String utteranceId, SpeechError error)
 
 
 
-#完整示例
+# 完整示例
 
 一个简单的语音合成示例如下所示，请替换相关参数和操作：
 

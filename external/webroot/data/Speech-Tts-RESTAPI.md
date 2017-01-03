@@ -1,4 +1,4 @@
-#概念解释
+# 概念解释
 
 对本文中将提到的名词约定如下：
 
@@ -9,22 +9,19 @@
 **开发者：**想在应用程序中使用API、正在阅读本文档的开发人员。
 
 
-
-#简介
+# 简介
 
 百度语音合成通过REST API的方式给开发者提供一个通用的HTTP接口，基于该接口，开发者可以轻松的获取语音合成能力，本文档描述了使用语音合成服务REST API的方法。
 
-##功能介绍
+## 功能介绍
 
 REST API支持对一段文本的合成，其中对于文本格式以及参数有一定的要求。请按照文档中描述进行相应请求操作。
 
 本文档适用使用HTTP接口的开发人员。
 
+# 集成指南
 
-
-#集成指南
-
-##获取 Access Token
+## 获取 Access Token
 
 使用语音识别 REST API 需要获取 Access Token。Access Token 是用户身份验证和授权的凭证，语音识别采用的是Client Credentials授权方式，即采用应用公钥、密钥获取Access Token，适用于任何带server类型应用，通过此授权方式获取Access Token仅可访问平台授权类的接口，详见百度 OAuth 授权“[Client Credentials授权](http://developer.baidu.com/wiki/index.php?title=docs/oauth/client "Client Credentials授权")”部分。
 
@@ -41,9 +38,10 @@ REST API支持对一段文本的合成，其中对于文本格式以及参数有
     client_id=Va5yQRHl********LT0vuXV4&
     client_secret= 0rDSjzQ20XUj5i********PQSzr5pVw2&
 
-响应数据包如下所示，其中 “access_token” 字段即为请求 REST API 所需的令牌,  默认情况下，Access Token 有效期为一个月，开发者需要对 Access Token的有效性进行判断，如果Access Token过期可以重新获取。
+响应数据包如下所示，其中“access_token”字段即为请求REST API所需的令牌,  默认情况下，Access Token有效期为一个月，开发者需要对Access Token的有效性进行判断，如果Access Token过期可以重新获取。
 
 **例如：**
+
 ```json
     HTTP/1.1 200 OK
     Content-Type: application/json
@@ -68,11 +66,11 @@ REST API支持对一段文本的合成，其中对于文本格式以及参数有
 
 - 上传参数
 
-  |参数|可需|	描述
+  |参数|可需|描述
   | ------------ | ------------ | ------------ |
   |tex|必填	|合成的文本，使用UTF-8编码，请注意文本长度必须小于1024字节
   |lan|必填	|语言选择,填写zh
-  |tok|必填	|开放平台获取到的开发者[ access_token](http://yuyin.baidu.com/docs/tts/135#获取 Access Token "access_token")
+  |tok|必填	|开放平台获取到的开发者[access_token](http://yuyin.baidu.com/docs/tts/135#获取 Access Token "access_token")
   |ctp|必填	|客户端类型选择，web端填写1
   |cuid|必填	|用户唯一标识，用来区分用户，填写机器 MAC 地址或 IMEI 码，长度为60以内
   |spd|选填	|语速，取值0-9，默认为5中语速
@@ -118,8 +116,8 @@ REST API支持对一段文本的合成，其中对于文本格式以及参数有
 
 请严格按照文档里描述的参数进行开发。请注意以下几个问题：
 
-1.  合成文本长度必须小于1024字节，如果本文长度较长，可以采用多次请求的方式。切忌不可文本长度超过限制。
+1. 合成文本长度必须小于1024字节，如果本文长度较长，可以采用多次请求的方式。切忌不可文本长度超过限制。
 
-2.语音合成 rest api初次申请默认请求数配额 200000次/天，如果默认配额不能满足需求，请申请提高配额。
+2. 语音合成 rest api初次申请默认请求数配额 200000次/天，如果默认配额不能满足需求，请申请提高配额。
 
-3.必填字段中，严格按照文档描述中内容填写。
+3. 必填字段中，严格按照文档描述中内容填写。
