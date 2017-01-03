@@ -734,7 +734,7 @@
         }
 
         function loadRightBar() {
-            if (window.bds&&window.bds.qa&&window.bds.qa.ShortCut) {
+            if (window.bds && window.bds.qa && window.bds.qa.ShortCut) {
                 init_feedback();
             } else {
                 loadScript('https://ufosdk.baidu.com/Public/feedback/js/feedback_plugin_1.0.js', function () {
