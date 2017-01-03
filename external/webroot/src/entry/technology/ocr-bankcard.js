@@ -104,6 +104,7 @@ $(document).ready(function () {
             image: file,
             type: 'stream',
             success: imgSrc => {
+                $('#demo-photo-upload  > input').val('');
                 startScan('stream', imgSrc);
             },
             fail: resetDemo

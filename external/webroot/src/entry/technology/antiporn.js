@@ -127,6 +127,7 @@ $(document).ready(function () {
             type: 'stream',
             lazyRender: true,
             success: imgSrc => {
+                $('#demo-photo-upload  > input').val('');
                 startScan('stream', imgSrc);
             },
             fail: resetDemo
