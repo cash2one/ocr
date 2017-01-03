@@ -208,8 +208,10 @@
 <section class="news-banner">
     <div class="container">
         <h1>新闻动态</h1>
+        {%$arrRet['data']%}
     </div>
 </section>
+
 </div>
 <aside class="aside-action">
     <ul>
