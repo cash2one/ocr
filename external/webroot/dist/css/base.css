@@ -476,15 +476,15 @@ header.header-nav .login > ul > li > a.console:hover {
 #tech-service #tech-image .tech-title-icon {
   background-image: url('../../../ai_images/template.png');
   background-repeat: no-repeat;
-  background-position: -25px -2px;
-  background-position-x: -25px;
+  background-position: -45px -2px;
+  background-position-x: -45px;
   background-position-y: -2px;
 }
 #tech-service #tech-nlp .tech-title-icon {
   background-image: url('../../../ai_images/template.png');
   background-repeat: no-repeat;
-  background-position: -45px -2px;
-  background-position-x: -45px;
+  background-position: -25px -2px;
+  background-position-x: -25px;
   background-position-y: -2px;
 }
 #tech-service #tech-user-profile .tech-title-icon {
