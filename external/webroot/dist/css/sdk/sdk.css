@@ -167,9 +167,9 @@
   font-size: 16px;
 }
 .sdk-nav-item {
-  height: 35px;
-  line-height: 35px;
-  padding: 0 25px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 25px 0 0;
   font-size: 12px;
 }
 .sdk-nav-item:hover {
@@ -242,6 +242,10 @@
   color: #fff;
   text-align: center;
   cursor: pointer;
+}
+.sdk-download-button:hover {
+  background-color: #1a81ed;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
 }
 .sdk-info {
   width: 65%;
