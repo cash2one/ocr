@@ -149,11 +149,11 @@ gulp.task('less_watch', function () {
 });
 
 var jsExcludes = [
-    '/dist/js/solution/robot.bundle.js',
-    '/dist/js/solution/faceprint.bundle.js',
-    '/dist/js/support/video.bundle.js',
-    '/dist/js/support/about-us.bundle.js',
-    '/dist/js/sdk/sdk.bundle.js'
+    '/ai_dist/js/solution/robot.bundle.js',
+    '/ai_dist/js/solution/faceprint.bundle.js',
+    '/ai_dist/js/support/video.bundle.js',
+    '/ai_dist/js/support/about-us.bundle.js',
+    '/ai_dist/js/sdk/sdk.bundle.js'
 ];
 
 gulp.task('html_watch', function () {
@@ -171,8 +171,8 @@ gulp.task('html_watch', function () {
                 var dirname = nodePath.dirname(relativePath);
                 dirname = dirname === '.' ? '' : dirname;
 
-                var cssPath = nodePath.join('/dist/css/', dirname, basename + '.css').replace(/\\/g, '/');
-                var jsPath = nodePath.join('/dist/js/', dirname, basename + '.bundle.js').replace(/\\/g, '/');
+                var cssPath = nodePath.join('/ai_dist/css/', dirname, basename + '.css').replace(/\\/g, '/');
+                var jsPath = nodePath.join('/ai_dist/js/', dirname, basename + '.bundle.js').replace(/\\/g, '/');
                 return gulp.src('./src/view/common/template.html')
                     .pipe(replace(/\{\{body}}/g, data))
                     .pipe(replace(/<\/head>/g, '<link rel="stylesheet" href="' + cssPath + '"></head>'))

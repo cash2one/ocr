@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="shortcut icon" href="/ai_images/favicon-32.ico">
     <link rel="stylesheet" href="/ai_dist/css/base.css">
-<link rel="stylesheet" href="/dist/css/support/video.css"></head>
+<link rel="stylesheet" href="/ai_dist/css/support/video.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">

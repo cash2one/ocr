@@ -13,7 +13,7 @@
     <![endif]-->
     <link rel="shortcut icon" href="/ai_images/favicon-32.ico">
     <link rel="stylesheet" href="/ai_dist/css/base.css">
-<link rel="stylesheet" href="/dist/css/technology/face-detect.css"></head>
+<link rel="stylesheet" href="/ai_dist/css/technology/face-detect.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
@@ -532,5 +532,5 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="/dist/js/technology/face-detect.bundle.js"></script></body>
+<script src="/ai_dist/js/technology/face-detect.bundle.js"></script></body>
 </html>
