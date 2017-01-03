@@ -1,1 +1,366 @@
-.ai-platform{font-size:14px;-webkit-font-smoothing:antialiased}.ai-platform ol,.ai-platform ul{list-style:none;padding:0;margin:0}.ai-platform h1,.ai-platform h2,.ai-platform h3,.ai-platform h4,.ai-platform h5,.ai-platform h6{font-family:Microsoft YaHei Light,Microsoft YaHei,微软雅黑,Arial Narrow,Arial,"sans-serif"!important;margin:0;font-weight:500}.ai-platform button,.ai-platform input,.ai-platform keygen,.ai-platform select,.ai-platform textarea{font-family:Microsoft YaHei Light,Microsoft YaHei,微软雅黑,Arial Narrow,Arial,"sans-serif"!important;outline:none!important}.ai-platform a{cursor:pointer;text-decoration:none;color:inherit}.ai-platform a:hover{color:#0073eb}.ai-platform a[role=button],.ai-platform button{width:90px;height:32px;line-height:30px;border-radius:2px;font-size:14px;cursor:pointer;box-shadow:0 2px 3px 0 rgba(0,0,0,.2);-webkit-transition:all .1s linear;transition:all .1s linear;display:inline-block;text-align:center}.ai-platform a[role=button]:hover,.ai-platform button:hover{box-shadow:0 2px 5px 0 rgba(0,0,0,.4)}.ai-platform a[role=button].btn-primary,.ai-platform button.btn-primary{border:1px solid #0073eb;background-color:#0073eb;color:#fff!important}.ai-platform a[role=button].btn-primary:hover,.ai-platform button.btn-primary:hover{background-color:#1a81ed}.ai-platform a[role=button].btn-normal,.ai-platform button.btn-normal{border:1px solid #ccc;background-color:#fff;color:#666!important}.ai-platform a[role=button].btn-other,.ai-platform button.btn-other{border:1px solid #333;background-color:#333;color:#fff!important}.ai-platform a[role=button].btn-other:hover,.ai-platform button.btn-other:hover{border:1px solid #0073eb;background-color:#0073eb}.ai-platform a[role=button].small,.ai-platform button.small{width:80px;height:26px;line-height:24px}.ai-platform a[role=button].media,.ai-platform button.media{width:110px;height:38px;line-height:36px}.ai-platform a[role=button].large,.ai-platform button.large{width:150px;height:44px;line-height:42px;font-size:18px}.ai-platform .container{display:block;width:1180px;height:100%;margin-left:auto;margin-right:auto;padding:0 10px;position:relative}.ai-platform .clear-float{zoom:1}.ai-platform .clear-float:after{display:block;clear:both;content:"";visibility:hidden;height:0}.ai-platform .disabled{opacity:.7;cursor:not-allowed}.ai-platform ::-webkit-input-placeholder{color:#ccc}.ai-platform :-moz-placeholder,.ai-platform ::-moz-placeholder{color:#ccc}.ai-platform :-ms-input-placeholder{color:#ccc}.sdk-download-container{padding-right:0;font-size:0;border-left:1px solid #ebebeb}.sdk-aside,.sdk-main{display:inline-block;vertical-align:top;box-sizing:border-box}.sdk-aside{width:20%}.sdk-aside-header{margin:0 -10px;height:45px;line-height:45px;padding:0 25px;border-bottom:1px solid #efefef;font-size:16px}.sdk-nav-item{height:35px;line-height:35px;padding:0 25px;font-size:12px}.sdk-nav-item:hover{color:#0073eb;cursor:pointer}.sdk-nav-item:hover .sdk-nav-icon{background-image:url(../../../images/sdk/icon-sprite-active.png)}.sdk-nav-icon{display:inline-block;background:url(../../../images/sdk/icon-sprite.png) no-repeat;vertical-align:middle;-webkit-transform:scale(.7);transform:scale(.7)}.sdk-nav-icon-bs{background-position:-5px -5px;width:32px;height:32px}.sdk-nav-icon-ocr{background-position:-47px -5px;width:32px;height:32px}.sdk-nav-icon-bfr{background-position:-89px -5px;width:32px;height:32px}.sdk-nav-icon-nlp{background-position:-131px -5px;width:32px;height:32px}.sdk-nav-icon-anti-porn{background-position:-173px -5px;width:32px;height:32px}.sdk-main{width:80%;box-sizing:border-box;padding-left:20px;border-left:1px solid #ebebeb;background-color:#fff}.sdk-info,.sdk-item-aside{display:inline-block}.sdk-item-aside{width:35%}.sdk-item-icon{position:absolute;top:0;bottom:30px;left:0;right:0}.sdk-download-button{position:absolute;bottom:25px;left:10px;width:28%;line-height:30px;background-color:#0073eb;font-size:12px;color:#fff;text-align:center;cursor:pointer}.sdk-info{width:65%}.sdk-category-name{padding:10px 0;font-size:16px;font-weight:700}.sdk-collection{margin:0 -5px}.sdk-item-container{display:inline-block;box-sizing:border-box;width:33.333%;padding:10px}.sdk-item{position:relative;padding:30px 0 10px;background-color:#fcfcfc;border:1px solid #ebebeb}.sdk-item-name{font-size:14px;font-weight:700;padding:5px 0}.sdk-description{font-size:12px;height:55px;padding:3px 0}.sdk-version{font-size:12px;padding:3px 0 10px}.sdk-update-date{font-size:12px;padding:3px 0}.sdk-trial-block{padding:50px 0;text-align:center;background-color:#ebebeb}.sdk-trial-title{font-size:35px;padding:5px 0}.sdk-trial-accept,.sdk-trial-info{font-size:16px;padding:15px 0}.sdk-trial-accept{width:150px;margin:10px auto 0;background-color:#0073eb;color:#fff}.sdk-language-sprite{display:block;position:absolute;right:10px;top:10px;background:url(../../../images/sdk/language.png) no-repeat}.sdk-language-sprite.sdk-android{width:12px;height:14px;background-position:-5px -5px}.sdk-language-sprite.sdk-apple{width:11px;height:14px;background-position:-27px -5px}.sdk-language-sprite.sdk-cpp{width:23px;height:14px;background-position:-5px -29px}.sdk-language-sprite.sdk-java{width:16px;height:19px;background-position:-48px -5px}.sdk-category-icon{display:block;position:absolute;top:25px;left:15px;background:url(../../../images/sdk/category-icon.png) no-repeat}.sdk-category-icon.sdk-ocr{background-position:-5px -5px;width:72px;height:70px}.sdk-category-icon.sdk-nlp{background-position:-87px -5px;width:72px;height:70px}.sdk-category-icon.sdk-anti{background-position:-5px -85px;width:72px;height:70px}.sdk-category-icon.sdk-bfr{background-position:-87px -85px;width:72px;height:70px}.sdk-category-icon.sdk-bs{background-position:-169px -5px;width:60px;height:59px}
+/* color settings*/
+/* font-size settings*/
+/*page styles*/
+.ai-platform {
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+.ai-platform ul,
+.ai-platform ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ai-platform h1,
+.ai-platform h2,
+.ai-platform h3,
+.ai-platform h4,
+.ai-platform h5,
+.ai-platform h6 {
+  font-family: "Microsoft YaHei Light", "Microsoft YaHei", "微软雅黑", "Arial Narrow", Arial, "sans-serif" !important;
+  margin: 0;
+  font-weight: 500;
+}
+.ai-platform input,
+.ai-platform textarea,
+.ai-platform keygen,
+.ai-platform select,
+.ai-platform button {
+  font-family: "Microsoft YaHei Light", "Microsoft YaHei", "微软雅黑", "Arial Narrow", Arial, "sans-serif" !important;
+  outline: none !important;
+}
+.ai-platform a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.ai-platform a:hover {
+  color: #0073eb;
+}
+.ai-platform button,
+.ai-platform a[role="button"] {
+  width: 90px;
+  height: 32px;
+  line-height: 30px;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  -o-transition: all .1s linear;
+  transition: all .1s linear;
+  display: inline-block;
+  text-align: center;
+}
+.ai-platform button:hover,
+.ai-platform a[role="button"]:hover {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+}
+.ai-platform button.btn-primary,
+.ai-platform a[role="button"].btn-primary {
+  border: 1px solid #0073eb;
+  background-color: #0073eb;
+  color: #fff !important;
+}
+.ai-platform button.btn-primary:hover,
+.ai-platform a[role="button"].btn-primary:hover {
+  background-color: #1a81ed;
+}
+.ai-platform button.btn-normal,
+.ai-platform a[role="button"].btn-normal {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #666 !important;
+}
+.ai-platform button.btn-other,
+.ai-platform a[role="button"].btn-other {
+  border: 1px solid #333;
+  background-color: #333;
+  color: #fff !important;
+}
+.ai-platform button.btn-other:hover,
+.ai-platform a[role="button"].btn-other:hover {
+  border: 1px solid #0073eb;
+  background-color: #0073eb;
+}
+.ai-platform button.small,
+.ai-platform a[role="button"].small {
+  width: 80px;
+  height: 26px;
+  line-height: 24px;
+}
+.ai-platform button.media,
+.ai-platform a[role="button"].media {
+  width: 110px;
+  height: 38px;
+  line-height: 36px;
+}
+.ai-platform button.large,
+.ai-platform a[role="button"].large {
+  width: 150px;
+  height: 44px;
+  line-height: 42px;
+  font-size: 18px;
+}
+.ai-platform .container {
+  display: block;
+  width: 1180px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+  position: relative;
+}
+.ai-platform .clear-float {
+  zoom: 1;
+}
+.ai-platform .clear-float:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+.ai-platform .disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.ai-platform ::-webkit-input-placeholder {
+  color: #ccc;
+}
+.ai-platform :-moz-placeholder {
+  color: #ccc;
+}
+.ai-platform ::-moz-placeholder {
+  color: #ccc;
+}
+.ai-platform :-ms-input-placeholder {
+  color: #ccc;
+}
+/**
+ * 左侧导航部分变量
+ */
+/**
+ * 下载条目部分变量
+ */
+.sdk-download-container {
+  padding-right: 0;
+  font-size: 0;
+  border-left: 1px solid #ebebeb;
+}
+.sdk-aside,
+.sdk-main {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+.sdk-aside {
+  width: 20%;
+}
+.sdk-aside-header {
+  margin: 0 -10px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 25px;
+  border-bottom: 1px solid #efefef;
+  font-size: 16px;
+}
+.sdk-nav-item {
+  height: 35px;
+  line-height: 35px;
+  padding: 0 25px;
+  font-size: 12px;
+}
+.sdk-nav-item:hover {
+  color: #0073eb;
+  cursor: pointer;
+}
+.sdk-nav-item:hover .sdk-nav-icon {
+  background-image: url(../../../images/sdk/icon-sprite-active.png);
+}
+.sdk-nav-icon {
+  display: inline-block;
+  background: url(../../../images/sdk/icon-sprite.png) no-repeat;
+  vertical-align: middle;
+  transform: scale(0.7);
+}
+.sdk-nav-icon-bs {
+  background-position: -5px -5px;
+  width: 32px;
+  height: 32px;
+}
+.sdk-nav-icon-ocr {
+  background-position: -47px -5px;
+  width: 32px;
+  height: 32px;
+}
+.sdk-nav-icon-bfr {
+  background-position: -89px -5px;
+  width: 32px;
+  height: 32px;
+}
+.sdk-nav-icon-nlp {
+  background-position: -131px -5px;
+  width: 32px;
+  height: 32px;
+}
+.sdk-nav-icon-anti-porn {
+  background-position: -173px -5px;
+  width: 32px;
+  height: 32px;
+}
+.sdk-main {
+  width: 80%;
+  box-sizing: border-box;
+  padding-left: 20px;
+  border-left: 1px solid #ebebeb;
+  background-color: #fff;
+}
+.sdk-item-aside,
+.sdk-info {
+  display: inline-block;
+}
+.sdk-item-aside {
+  width: 35%;
+}
+.sdk-item-icon {
+  position: absolute;
+  top: 0;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+}
+.sdk-download-button {
+  position: absolute;
+  bottom: 25px;
+  left: 10px;
+  width: 28%;
+  line-height: 30px;
+  background-color: #0073eb;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+.sdk-info {
+  width: 65%;
+}
+.sdk-category-name {
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+.sdk-collection {
+  margin: 0 -5px;
+}
+.sdk-item-container {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 33.333%;
+  padding: 10px;
+}
+.sdk-item {
+  position: relative;
+  padding: 30px 0 10px;
+  background-color: #fcfcfc;
+  border: 1px solid #ebebeb;
+}
+.sdk-item-name {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 0;
+}
+.sdk-description {
+  font-size: 12px;
+  height: 55px;
+  padding: 3px 0;
+}
+.sdk-version {
+  font-size: 12px;
+  padding: 3px 0 10px;
+}
+.sdk-update-date {
+  font-size: 12px;
+  padding: 3px 0;
+}
+.sdk-trial-block {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #ebebeb;
+}
+.sdk-trial-title {
+  font-size: 35px;
+  padding: 5px 0;
+}
+.sdk-trial-info {
+  font-size: 16px;
+  padding: 15px 0;
+}
+.sdk-trial-accept {
+  width: 150px;
+  padding: 15px 0;
+  margin: 10px auto 0;
+  background-color: #0073eb;
+  font-size: 16px;
+  color: #fff;
+}
+.sdk-language-sprite {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: url(../../../images/sdk/language.png) no-repeat;
+}
+.sdk-language-sprite.sdk-android {
+  width: 12px;
+  height: 14px;
+  background-position: -5px -5px;
+}
+.sdk-language-sprite.sdk-apple {
+  width: 11px;
+  height: 14px;
+  background-position: -27px -5px;
+}
+.sdk-language-sprite.sdk-cpp {
+  width: 23px;
+  height: 14px;
+  background-position: -5px -29px;
+}
+.sdk-language-sprite.sdk-java {
+  width: 16px;
+  height: 19px;
+  background-position: -48px -5px;
+}
+.sdk-category-icon {
+  display: block;
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  background: url(../../../images/sdk/category-icon.png) no-repeat;
+}
+.sdk-category-icon.sdk-ocr {
+  background-position: -5px -5px;
+  width: 72px;
+  height: 70px;
+}
+.sdk-category-icon.sdk-nlp {
+  background-position: -87px -5px;
+  width: 72px;
+  height: 70px;
+}
+.sdk-category-icon.sdk-anti {
+  background-position: -5px -85px;
+  width: 72px;
+  height: 70px;
+}
+.sdk-category-icon.sdk-bfr {
+  background-position: -87px -85px;
+  width: 72px;
+  height: 70px;
+}
+.sdk-category-icon.sdk-bs {
+  background-position: -169px -5px;
+  width: 60px;
+  height: 59px;
+}

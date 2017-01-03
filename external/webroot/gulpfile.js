@@ -90,10 +90,10 @@ gulp.task('less', function () {
                 extname: '.css'
             })
         )
-        .pipe(autoPrefixer({
-            browsers: ['IE >= 9', 'Firefox > 1', 'Chrome > 1']
-        }))
-        .pipe(nano())
+        // .pipe(autoPrefixer({
+        //     browsers: ['IE >= 9', 'Firefox > 1', 'Chrome > 1']
+        // }))
+        // .pipe(nano())
         .pipe(gulp.dest('./dist/css'));
 });
 

@@ -1,1 +1,80 @@
-.page{height:32px;text-align:center;overflow:hidden}.page .page-num,.page .pg-func,.page span{display:inline-block;width:32px}.page .page-num,.page .pg-func{vertical-align:middle;box-sizing:border-box;margin-left:10px;height:32px;line-height:30px;cursor:pointer;-webkit-user-select:none;background:#fff;border:1px solid #d8d8d8;border-radius:3px;color:#646b7d}.page .pg-on,.page span:active{border-color:#39f}.page .pg-func{color:#06c}.page .disabled{background:#f7f7f7;color:#d8d8d8}.pg-lt{line-height:32px;float:left}.page-tip,.pg-lt span{display:inline-block}.page-tip{width:53px;height:30px;border:1px solid #d8d8d8;text-indent:10px;cursor:pointer}.dw-arw{position:relative;background-color:#fff}.dw-arw:after{content:" ";background:url(/static/markPic/widget/pager/arrow.png) no-repeat 50%;width:10px;height:10px;position:absolute;right:8px;top:45%;margin-top:-4px}.pn{border:1px solid #d8d8d8;border-top:0;cursor:pointer}.cfx:after{content:" ";display:block;width:0;height:0;clear:both}.pg-func{min-width:50px}
+.page {
+  height: 32px;
+  text-align: center;
+  overflow: hidden;
+}
+.page span {
+  display: inline-block;
+  width: 32px;
+}
+.page .pg-func,
+.page .page-num {
+  vertical-align: middle;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-left: 10px;
+  width: 32px;
+  height: 32px;
+  line-height: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  border-radius: 3px;
+  color: #646B7D;
+}
+.page span:active,
+.page .pg-on {
+  border-color: #39f;
+}
+.page .pg-func {
+  color: #06c;
+}
+.page .disabled {
+  background: #f7f7f7;
+  color: #d8d8d8;
+}
+.pg-lt {
+  line-height: 32px;
+  float: left;
+}
+.pg-lt span {
+  display: inline-block;
+}
+.page-tip {
+  width: 53px;
+  height: 30px;
+  display: inline-block;
+  border: 1px solid #d8d8d8;
+  text-indent: 10px;
+  cursor: pointer;
+}
+.dw-arw {
+  position: relative;
+  background-color: #fff;
+}
+.dw-arw:after {
+  content: " ";
+  background: url(/static/markPic/widget/pager/arrow.png) no-repeat center center;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 8px;
+  top: 45%;
+  margin-top: -4px;
+}
+.pn {
+  border: 1px solid #d8d8d8;
+  border-top: 0;
+  cursor: pointer;
+}
+.cfx:after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.pg-func {
+  min-width: 50px;
+}
