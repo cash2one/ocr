@@ -177,7 +177,7 @@
   box-sizing: border-box;
   background-color: #f0f7fc;
   background-size: 1600px 400px;
-  background-image: url('../../../images/support/about-us/about-banner.png');
+  background-image: url('../../../ai_images/support/about-us/about-banner.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
@@ -507,7 +507,7 @@
   }
 }
 .about-banner {
-  background: url(../../../images/support/about-us/about-banner.png) no-repeat center;
+  background: url(../../../ai_images/support/about-us/about-banner.png) no-repeat center;
 }
 .about-banner h1 {
   color: #fff;

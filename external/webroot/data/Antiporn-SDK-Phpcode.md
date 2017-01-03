@@ -1,8 +1,8 @@
-;#PHP SDK文档
+# PHP SDK文档
 
 本文档主要介绍图片智能色情识别服务。在使用本文档前，您需要先了解图片智能色情识别服务。
 
-# 安装图片智能色情识别 PHP SDK
+# 安装图片智能色情识别PHP SDK包
 
 **图片智能色情识别 PHP SDK目录结构**
 
@@ -20,21 +20,17 @@
 
 步骤如下：
 
-1.在[官方网站](https://aip.baidu.com/doc/Developer/index.html)下载PHP SDK压缩工具包。
+1. 在[官方网站](http://ai.baidu.com/sdk)下载PHP SDK压缩工具包。
 
-2.将下载的`aip-antiporn-php-sdk-version.zip`解压后，复制AipAntiPorn.php以及lib/*到工程文件夹中。
+2. 将下载的`aip-antiporn-php-sdk-version.zip`解压后，复制AipAntiPorn.php以及lib/*到工程文件夹中。
 
-3.引入AipAntiPorn.php
+3. 引入AipAntiPorn.php
 
 # 快速入门
 
 图片智能色情识别服务，依托百度业界领先的图像识别算法，基于大数据深度学习技术，提供一般色情识别和卡通色情识别，以及母婴类图片识别服务。
 
-1.初始化一个AipAntiPorn对象。
-
-# AipAntiPorn
-
-## 新建AipAntiPorn对象
+## 初始化AipAntiPorn对象
 
 用户可以参考如下代码新建一个AipAntiPorn对象：
 
@@ -74,7 +70,7 @@ $client = new AipAntiPorn(APP_ID, ACCESS_KEY_ID, SECRET_ACCESS_KEY);
 $response = $client->antiporn(file_get_contents('antiporn.jpg'));
 ```
 
-*色情识别 请求参数详情**
+**色情识别 请求参数详情**
 
 | 参数 | 类型 | 描述 | 是否必须 |
 | :---- | :---- | :---- | :---- |
@@ -94,7 +90,7 @@ $response = $client->antiporn(file_get_contents('antiporn.jpg'));
 
 ##
 
-* 第一版
+* 首次发布
 
 
 

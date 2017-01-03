@@ -2,7 +2,7 @@
 
 本文档主要介绍NLP PHP SDK的安装和使用。在使用本文档前，您需要先了解自然语言处理（Natural Language Processing）的基础知识，并已经开通了服务。
 
-# 安装BFR PHP SDK
+# 安装PHP SDK
 
 **BFR PHP SDK目录结构**
 
@@ -19,7 +19,7 @@
 
 步骤如下：
 
-1.在[官方网站](https://aip.baidu.com/doc/Developer/index.html)下载PHP SDK压缩工具包。
+1.在[官方网站](https://ai.baidu.com/sdk)下载PHP SDK压缩工具包。
 
 2.将下载的`aip-nlp-php-sdk-version.zip`解压后，复制AipNlp.php以及lib/*到工程文件夹中。
 
@@ -28,13 +28,9 @@
 
 # 快速入门
 
-1.初始化一个AipNlp对象。
+AipNlp类是与Nlp交互的客户端，所有Nlp操作都是通过AipNlp完成的。
 
-AipNlp类是与Nlp交互的客户端，所有Nlp操作都是通过AipNlp完成的。您可以参考[新建AipNlp](#新建AipNlp)，完成初始化AipNlp对象。
-
-# AipNlp
-
-## 新建AipNlp
+## 初始化AipNlp
 
 AipNlp类是Nlp的PHP SDK客户端，为使用Natural Language Processing的开发人员提供了一系列的交互方法。
 
@@ -349,12 +345,3 @@ $response = $client->commentTagApi('你好百度', $option);
 |+raw_adj_begin_pos|Int|词向量结果|
 |+degree_adv|String|原始副词|
 |+degree_adv_pos|Int|词向量结果|
-
-# 版本更新说明
-
-##
-
-* 第一版
-
-
-

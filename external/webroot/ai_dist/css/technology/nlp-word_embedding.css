@@ -177,7 +177,7 @@
   box-sizing: border-box;
   background-color: #f0f7fc;
   background-size: 1600px 400px;
-  background-image: url('../../../images/technology/nlp-word_embedding/banner.png');
+  background-image: url('../../../ai_images/technology/nlp-word_embedding/banner.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
@@ -508,7 +508,7 @@
 }
 .nlp-function {
   height: 440px;
-  background: url(../../../images/technology/nlp-dr/function-bg.png) center;
+  background: url(../../../ai_images/technology/nlp-dr/function-bg.png) center;
   text-align: center;
   color: #fff;
   font-size: 0;
@@ -548,7 +548,7 @@
 }
 .nlp-feature-icon {
   display: block;
-  background: url("../../../images/technology/nlp-dr/icon.png") no-repeat center;
+  background: url("../../../ai_images/technology/nlp-dr/icon.png") no-repeat center;
   background-size: 95px 134px;
   margin: 0 auto;
 }
@@ -609,7 +609,7 @@
 .nlp-scenario-icon {
   width: 25%;
   display: inline-block;
-  background: url("../../../images/technology/nlp-dr/icon.png") no-repeat;
+  background: url("../../../ai_images/technology/nlp-dr/icon.png") no-repeat;
   background-size: 95px 134px;
 }
 .nlp-scenario-icon.scenario-1 {
@@ -643,7 +643,7 @@
   background-size: 400px 135px;
 }
 .tech-section.tech-case .case-item:nth-child(1) {
-  background-image: url('../../../images/technology/nlp-dr/case-1.png');
+  background-image: url('../../../ai_images/technology/nlp-dr/case-1.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;

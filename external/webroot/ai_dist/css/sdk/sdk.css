@@ -177,11 +177,11 @@
   cursor: pointer;
 }
 .sdk-nav-item:hover .sdk-nav-icon {
-  background-image: url(../../../images/sdk/icon-sprite-active.png);
+  background-image: url(../../../ai_images/sdk/icon-sprite-active.png);
 }
 .sdk-nav-icon {
   display: inline-block;
-  background: url(../../../images/sdk/icon-sprite.png) no-repeat;
+  background: url(../../../ai_images/sdk/icon-sprite.png) no-repeat;
   vertical-align: middle;
   transform: scale(0.7);
 }
@@ -319,7 +319,7 @@
   position: absolute;
   right: 10px;
   top: 10px;
-  background: url(../../../images/sdk/language.png) no-repeat;
+  background: url(../../../ai_images/sdk/language.png) no-repeat;
 }
 .sdk-language-sprite.sdk-android {
   width: 12px;
@@ -346,7 +346,7 @@
   position: absolute;
   top: 25px;
   left: 15px;
-  background: url(../../../images/sdk/category-icon.png) no-repeat;
+  background: url(../../../ai_images/sdk/category-icon.png) no-repeat;
 }
 .sdk-category-icon.sdk-ocr {
   background-position: -5px -5px;
