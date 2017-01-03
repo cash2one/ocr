@@ -41,6 +41,7 @@ $(document).ready(function () {
     // 线上demo开始
     let resetDemo = () => {
         $('#demo-json > p').empty();
+        $('#demo-photo-upload  > input').val('');
         $('#demo-result .result-background').attr('class', 'result-background');
         $('#demo-photo-upload, #scan-photo').removeClass('disabled');
         isScanning = false;

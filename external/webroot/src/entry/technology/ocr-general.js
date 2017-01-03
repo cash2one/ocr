@@ -43,6 +43,7 @@ $(document).ready(function () {
         $('#demo-json > p').empty();
         $('#demo-result .result-background').attr('class', 'result-background');
         $('#demo-photo-upload, #scan-photo').removeClass('disabled');
+        $('#demo-photo-upload  > input').val('');
         isScanning = false;
     };
 

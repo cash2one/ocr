@@ -78,6 +78,7 @@
           font-size: 18px;
           line-height: 28px;
           margin-bottom: 35px;
+          max-width: 35em;
         }
 
         .get-started {
@@ -219,10 +220,6 @@
             .service-icon {
               .icon (url('../../ai_images/home/service.png'), -170px, -15px);
             }
-
-            ul > li > ul > li + li {
-              margin-left: 5px;
-            }
           }
 
           &:nth-child(4) .service-icon {
@@ -291,7 +288,7 @@
             width: 100%;
 
             & > * {
-              margin-left: 95px;
+              margin-left: 80px;
             }
 
             h3 {
@@ -323,7 +320,7 @@
               display: inline-block;
               color: #999;
               border-right: 1px solid fadeOut(@black, 95%);
-              width: 75px;
+              width: 60px;
               padding-right: 10px;
               text-align: right;
               vertical-align: middle;
@@ -358,7 +355,7 @@
             }
           }
           .inline-list {
-            margin-left: 95px;
+            margin-left: 80px;
 
             & > li {
               margin-right: 10px;
@@ -842,12 +839,8 @@
       }
 
       .btn-normal {
-        width: 150px;
-        height: 42px;
-        line-height: 42px;
         color: @white !important;
         background-color: transparent;
-        font-size: 18px;
         box-shadow: none;
 
         &:hover {
