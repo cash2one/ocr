@@ -351,14 +351,12 @@
     <ul class="case-list">
         <li class="case-item active">
             <div class="container">
-                <div class="case-icon"></div>
                 <h2>度秘</h2>
                 <p>度秘是百度的口语化对话的人工智能助理，通过百度语音唤醒技术可以唤醒度秘，满足用户真人化的交流需求</p>
             </div>
         </li>
         <li class="case-item">
             <div class="container">
-                <div class="case-icon"></div>
                 <h2>百度Carlife</h2>
                 <p>百度Carlife通过百度语音唤醒技术，可以让驾驶者在驾驶过程中双手无需离开方向盘<br>
                     即可实现拨打电话，播放音乐，设置导航等操作，让驾驶更轻松，行车更安全</p>

@@ -363,7 +363,7 @@
   height: 100%;
   background-size: cover;
   color: #fff;
-  padding-top: 50px;
+  padding-top: 120px;
   box-sizing: border-box;
   opacity: 0.2;
   z-index: 1;
@@ -384,7 +384,7 @@
   display: block;
   width: 90px;
   height: 90px;
-  margin: 0 auto 20px;
+  margin: -70px auto 20px;
 }
 .tech-section.tech-case .case-list > li h2 {
   color: #fff;
