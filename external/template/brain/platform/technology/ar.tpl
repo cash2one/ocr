@@ -313,21 +313,18 @@
     <ul class="case-list">
         <li class="case-item active">
             <div class="container">
-                <div class="case-icon"></div>
                 <h2>品牌营销</h2>
                 <p>在品牌营销场景，百度AR已联手欧莱雅、兰蔻等多家大型商家，共同实践AR营销方式，并取得明显效果</p>
             </div>
         </li>
         <li class="case-item">
             <div class="container">
-                <div class="case-icon"></div>
                 <h2>互动游戏</h2>
                 <p>百度AR在互动游戏场景不断扩展，现已实现通过AR游戏发放商家优惠券的方式，实现商家更高营销收益</p>
             </div>
         </li>
         <li class="case-item">
             <div class="container">
-                <div class="case-icon"></div>
                 <h2>更多场景应用</h2>
                 <p>百度AR正在探索教育、娱乐、LBS生活服务等更多业务场景，敬请期待！</p>
             </div>

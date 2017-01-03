@@ -8,7 +8,7 @@ import $ from 'jquery';
 
 export function getNews({pageNum = 0, limit = 5, success = $.noop, fail = $.noop}) {
     $.get(
-        '/news',
+        '/support/news',
         {
             action: 'list',
             pn: pageNum,
