@@ -1011,7 +1011,7 @@
 .tech-section.tech-case .case-indicator > li:nth-child(2) {
   background-image: url('../../../ai_images/technology/bfr-detect/case-icons.png');
   background-repeat: no-repeat;
-  background-position: -200px -210px;
-  background-position-x: -200px;
+  background-position: -210px -210px;
+  background-position-x: -210px;
   background-position-y: -210px;
 }
