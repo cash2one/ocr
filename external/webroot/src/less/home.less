@@ -696,6 +696,20 @@
     }
 
     &.user-case {
+      .container {
+        position: relative;
+
+        &:before {
+          content: "";
+          display: inline-block;
+          top: -50px;
+          left: 0;
+          width: 100%;
+          position: absolute;
+          height: 1px;
+          background-color: fadeOut(@black, 95%);
+        }
+      }
       ul.user-brand-list {
         overflow: hidden;
         margin-bottom: 50px;
