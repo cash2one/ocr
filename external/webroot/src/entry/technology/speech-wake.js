@@ -122,8 +122,12 @@ $(document).ready(function () {
         evaluateWakeWords({
             words: words,
             success: function (res) {
-                if (res.errno === 1 && res.msg === 'fail') {
-                    new AlertModal('接口出错，请稍候再试！');
+                if (res.errno === 1) {
+                    new AlertModal('访问接口出错，请登陆后再尝试该项服务！');
+                    return false;
+                }
+                else if (res.errno !== 0) {
+                    new AlertModal('访问接口出错，请稍候再试！');
                     return false;
                 }
                 $('#demo-wake-word').val('');
