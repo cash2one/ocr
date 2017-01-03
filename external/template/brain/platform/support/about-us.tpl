@@ -231,6 +231,7 @@
         </li>
     </ul>
 </section>
+{%if $userInfo eq Null%}
 <section class="tech-section get-started">
     <div class="container">
         <h2>现在注册，即享免费试用</h2>
@@ -240,6 +241,9 @@
         </div>
     </div>
 </section>
+{%/if%}
+
+
 </div>
 <aside class="aside-action">
     <ul>
