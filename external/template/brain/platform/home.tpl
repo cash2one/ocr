@@ -11,15 +11,15 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/images/favicon-32.ico">
-    <link rel="stylesheet" href="/dist/css/base.css">
-<link rel="stylesheet" href="/dist/css/home.css"></head>
+    <link rel="shortcut icon" href="/ai-images/favicon-32.ico">
+    <link rel="stylesheet" href="/ai-dist/css/base.css">
+<link rel="stylesheet" href="/ai_dist/css/home.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="/images/logo.png" alt="百度大脑">
+                <img src="/ai-images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -213,7 +213,7 @@
             <div>
                 <a role="button" class="get-started">免费试用</a>
             </div>
-            <video src="/images/home/banner-1.mp4" autoplay></video>
+            <video src="/ai-images/home/banner-1.mp4" autoplay></video>
         </li>
         <li>
             <h1>人工智能技术 增益您的产品222</h1>
@@ -488,19 +488,19 @@
         <h2>视频教程</h2>
         <ul class="video-list clear-float">
             <li>
-                <a><img src="/images/home/video-1.png"></a>
+                <a><img src="/ai-images/home/video-1.png"></a>
                 <h5>语音</h5>
             </li>
             <li>
-                <a><img src="/images/home/video-2.png"></a>
+                <a><img src="/ai-images/home/video-2.png"></a>
                 <h5>OCR</h5>
             </li>
             <li>
-                <a><img src="/images/home/video-3.png"></a>
+                <a><img src="/ai-images/home/video-3.png"></a>
                 <h5>人脸</h5>
             </li>
             <li>
-                <a><img src="/images/home/video-4.png"></a>
+                <a><img src="/ai-images/home/video-4.png"></a>
                 <h5>NLP</h5>
             </li>
         </ul>
@@ -607,6 +607,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/dist/js/base.bundle.js"></script>
-<script src="/dist/js/home.bundle.js"></script></body>
+<script src="/ai-dist/js/base.bundle.js"></script>
+<script src="/ai_dist/js/home.bundle.js"></script></body>
 </html>
