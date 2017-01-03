@@ -2,7 +2,9 @@
 @import '../common/global.less';
 
 @light-gray: #fcfcfc;
-@gray: #ebebeb;
+@gray: #f6f6f6;
+@font-gray: #666;
+@font-black: #14191e;
 
 // class前缀
 @prefix: sdk;
@@ -102,7 +104,7 @@
 .@{prefix}-main {
     width: 80%;
     box-sizing: border-box;
-    padding-left: 20px;
+    padding-left: 40px;
     border-left: 1px solid @gray;
     background-color: @white;
 }
@@ -153,7 +155,7 @@
 
 // sdk分组名
 .@{prefix}-category-name {
-    padding: 10px 0;
+    padding: 20px 0 20px 10px;
     font-size: @font-size-3;
     font-weight: bold;
 }
@@ -184,6 +186,7 @@
     font-size: @font-size-2;
     font-weight: bold;
     padding: 5px 0;
+    color: @font-black;
 }
 
 // sdk介绍
@@ -192,18 +195,21 @@
     // 支持多行介绍
     height: 55px;
     padding: 3px 0;
+    color: @font-gray;
 }
 
 // sdk版本
 .@{prefix}-version {
-    font-size: @font-size-1;
     padding: 3px 0 10px;
+    font-size: @font-size-1;
+    color: @font-gray;
 }
 
 // sdk更新日期
 .@{prefix}-update-date {
-    font-size: @font-size-1;
     padding: 3px 0;
+    font-size: @font-size-1;
+    color: @font-gray;
 }
 
 // 底部试用区块

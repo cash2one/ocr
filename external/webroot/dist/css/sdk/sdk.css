@@ -147,7 +147,7 @@
 .sdk-download-container {
   padding-right: 0;
   font-size: 0;
-  border-left: 1px solid #ebebeb;
+  border-left: 1px solid #f6f6f6;
 }
 .sdk-aside,
 .sdk-main {
@@ -213,8 +213,8 @@
 .sdk-main {
   width: 80%;
   box-sizing: border-box;
-  padding-left: 20px;
-  border-left: 1px solid #ebebeb;
+  padding-left: 40px;
+  border-left: 1px solid #f6f6f6;
   background-color: #fff;
 }
 .sdk-item-aside,
@@ -247,7 +247,7 @@
   width: 65%;
 }
 .sdk-category-name {
-  padding: 10px 0;
+  padding: 20px 0 20px 10px;
   font-size: 16px;
   font-weight: bold;
 }
@@ -264,30 +264,34 @@
   position: relative;
   padding: 30px 0 10px;
   background-color: #fcfcfc;
-  border: 1px solid #ebebeb;
+  border: 1px solid #f6f6f6;
 }
 .sdk-item-name {
   font-size: 14px;
   font-weight: bold;
   padding: 5px 0;
+  color: #14191e;
 }
 .sdk-description {
   font-size: 12px;
   height: 55px;
   padding: 3px 0;
+  color: #666;
 }
 .sdk-version {
-  font-size: 12px;
   padding: 3px 0 10px;
+  font-size: 12px;
+  color: #666;
 }
 .sdk-update-date {
-  font-size: 12px;
   padding: 3px 0;
+  font-size: 12px;
+  color: #666;
 }
 .sdk-trial-block {
   padding: 50px 0;
   text-align: center;
-  background-color: #ebebeb;
+  background-color: #f6f6f6;
 }
 .sdk-trial-title {
   font-size: 35px;
