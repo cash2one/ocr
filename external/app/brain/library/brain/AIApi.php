@@ -432,6 +432,52 @@ class Brain_AIApi {
     } 
  
     /**
+     * checkUrl
+     * 
+     * @param mixed $url 
+     * @access public
+     * @return void
+     */ 
+    public static function checkUrl($url) {
+        
+        $parts = parse_url($url);
+        $host = $parts['host'];
+        
+        $res = filter_var($url, FILTER_VALIDATE_URL);
+        if(!$res)
+        {
+            return false;
+        }
+        
+        $serverIp = $_SERVER['SERVER_ADDR'];
+        $ip = @gethostbyname($host);
+
+        if($serverIp == $ip)
+        {
+            return true;
+        }
+        
+        // 单独判断 loopback 127.x.x.x
+        $sp = explode('.', $ip);
+        if ($sp[0] === '127'){
+            return false;
+        }
+        
+        //整体判断是否为外网IP
+        $res = filter_var(
+            $ip,
+            FILTER_VALIDATE_IP,
+            FILTER_FLAG_IPV4 | FILTER_FLAG_NO_PRIV_RANGE |  FILTER_FLAG_NO_RES_RANGE);
+        if(!$res)
+        {
+            return false;
+        }
+        
+        
+        return true;
+    } 
+ 
+    /**
      * getHeaderByUrl 
      * 
      * @param mixed $url 
@@ -463,6 +509,23 @@ class Brain_AIApi {
         {
             return json_decode($ret_data, true);
         }
+        
+        $ret_data = array();
+        $ret_data['errno'] = 0;
+        $ret_data['msg'] = 'success';
+        $ret_data['data'] = array(
+            'Content-Type' => null, 
+            'Content-Length' => 0,
+            'image_data' => '', 
+        );  
+        
+        $isUrlValid = Brain_AIApi::checkUrl($url);
+        if(!$isUrlValid)
+        {
+            $ret_data['errno'] = 108;
+            $ret_data['msg'] = 'url is not valid';
+            return $ret_data;
+        }
 
         $isUrlAvailable = Brain_AIApi::checkUrlAvailable($url, 1);
 
@@ -471,12 +534,6 @@ class Brain_AIApi {
             $url = 'http'.substr($url, 5); 
             $isUrlAvailable = Brain_AIApi::checkUrlAvailable($url, 3);
         }   
-
-        $ret_data = array(
-            'Content-Type' => null, 
-            'Content-Length' => 0,
-            'image_data' => '', 
-        );  
 
         if(!$isUrlAvailable)
         {
@@ -488,15 +545,15 @@ class Brain_AIApi {
     
         if(!empty($image_header))  
         {
-            $ret_data['Content-Type'] = $image_header['Content-Type']; 
-            $ret_data['Content-Length'] = max(0, intval($image_header['Content-Length']));
+            $ret_data['data']['Content-Type'] = $image_header['Content-Type']; 
+            $ret_data['data']['Content-Length'] = max(0, intval($image_header['Content-Length']));
 
             if( $image_header['Content-Length'] <= Brain_AIApi::MAX_IMAGE_LIMIT &&
                 in_array($image_header['Content-Type'], Brain_AIApi::$arrImageType))
             {
                 $image_data = Brain_AIApi::getImageByUrl($url);
     
-                $ret_data['image_data'] = 'data:'.$image_header['Content-Type'].';base64,'.$image_data;
+                $ret_data['data']['image_data'] = 'data:'.$image_header['Content-Type'].';base64,'.$image_data;
             }
 
         }   

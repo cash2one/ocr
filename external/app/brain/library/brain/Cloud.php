@@ -51,8 +51,8 @@ class Brain_Cloud {
 
                 $tech_content = file_get_contents($odpDir."/webroot/src/view/technology/$tech.html");
 
-                $css = "<link rel=\"stylesheet\" href=\"/dist/css/technology/$tech.css\">\n";
-                $js = "<script src=\"/dist/js/technology/$tech.bundle.js\"></script>\n";
+                $css = "<link rel=\"stylesheet\" href=\"/ai_dist/css/technology/$tech.css\">\n";
+                $js = "<script src=\"/ai_dist/js/technology/$tech.bundle.js\"></script>\n";
 
                 $content = str_ireplace('<main>', '<main class="ai-platform">', $content);
                 $content = str_ireplace('{{body}}', $tech_content, $content);

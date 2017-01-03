@@ -16,7 +16,7 @@ class Controller_Main extends Ap_Controller_Abstract {
 
         'passport' => 'actions/page/Passport.php',
 
-        'news' => 'actions/page/News.php',
+        //'news' => 'actions/page/News.php',
         'case' => 'actions/page/Case.php',
         'seccode' => 'actions/page/Seccode.php',
         'subscribe' => 'actions/page/Subscribe.php',

@@ -1,3 +1,6 @@
+rm -rf brain
+rm -rf __MACOSX
 unzip brain.zip 
-rm -rf ../tuiguang
-mv dist ../tuiguang
+rm -rf ../activity/
+mkdir ../activity/
+mv brain ../activity/zuiqiangdanao

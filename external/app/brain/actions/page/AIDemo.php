@@ -22,12 +22,6 @@ class Action_AIDemo extends Ap_Action_Abstract {
      * @return void
      */
     public function execute() {
-        //print_r(Brain_AIApi::callImageApi('face', Brain_AIApi::getImageByUrl('http://bj-mc-prod-asset.oss-cn-beijing.aliyuncs.com/mc-official/images/face/demo-pic6.jpg')));
-        //print_r(Brain_AIApi::callImageApi('commontext', Brain_AIApi::getImageByUrl('http://www.bz55.com/uploads/allimg/150514/140-150514154428.jpg')));
-        //print_r(Brain_AIApi::callImageApi('idcard', Brain_AIApi::getImageByUrl('http://www.sznews.com/ent/images/attachement/jpg/site3/20141011/4437e629783815a2bce253.jpg')));
-        //print_r(Brain_AIApi::callImageApi('bankcard', Brain_AIApi::getImageByUrl('http://b.hiphotos.baidu.com/zhidao/pic/item/d058ccbf6c81800a187419d0b43533fa838b475e.jpg')));
-        //print_r(Brain_AIApi::callImageApi('pornography', Brain_AIApi::getImageByUrl('http://www.sznews.com/ent/images/attachement/jpg/site3/20140123/001e4f9d7bf9144b139712.jpg')));
-        //return
 
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
@@ -94,19 +88,22 @@ class Action_AIDemo extends Ap_Action_Abstract {
 
                     $ret_data = Brain_AIApi::getDataRetryByUrl($imageUrl);
                     
-                    if($ret_data['Content-Length'] > Brain_AIApi::MAX_IMAGE_LIMIT)
+                    if($ret_data['data']['Content-Length'] > Brain_AIApi::MAX_IMAGE_LIMIT)
                     {
                         Brain_Output::jsonOutput(105, '图片超过大小限制');
                         return;
                     }
                     
-                    if(!in_array($ret_data['Content-Type'], Brain_AIApi::$arrImageType))
+                    if(!in_array($ret_data['data']['Content-Type'], Brain_AIApi::$arrImageType))
                     {
                         Brain_Output::jsonOutput(106, '图片类型错误（支持jpg、png、bmp格式）');
                         return;
                     }
                     
-                    $filter_image = substr($ret_data['image_data'], stripos($ret_data['image_data'], ',') + 1);
+                    $filter_image = substr(
+                        $ret_data['data']['image_data'], 
+                        stripos($ret_data['data']['image_data'], ',') + 1
+                    );
                 }
                 else if($image != '')
                 {
@@ -153,7 +150,7 @@ class Action_AIDemo extends Ap_Action_Abstract {
                 
                 $ret_data = Brain_AIApi::getDataRetryByUrl($imageUrl);
 
-                Brain_Output::jsonOutput(0, 'success', $ret_data);
+                Brain_Output::jsonOutput($ret_data['errno'], $ret_data['msg'], $ret_data['data']);
                 return;
             }
             else

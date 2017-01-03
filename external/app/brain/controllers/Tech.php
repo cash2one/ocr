@@ -12,5 +12,6 @@ class Controller_Tech extends Ap_Controller_Abstract {
         'nlp'      => 'actions/page/tech/Nlp.php',
         'ocr'      => 'actions/page/tech/Ocr.php',
         'speech'   => 'actions/page/tech/Speech.php',
+        'ar'       => 'actions/page/tech/Ar.php',
     );
 }

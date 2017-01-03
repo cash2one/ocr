@@ -9,5 +9,7 @@ class Controller_Support extends Ap_Controller_Abstract {
 
         'about' => 'actions/page/support/About.php',
         'video' => 'actions/page/support/Video.php',
+        'news' => 'actions/page/support/News.php',
+        'faq' => 'actions/page/support/Faq.php',
     );
 }
