@@ -979,6 +979,14 @@
   background-position-x: -21px;
   background-position-y: center;
 }
+.tech-section.tech-demo .demo-container #demo-result .canvas-container.has-result.sexy::before {
+  opacity: 1;
+  background-image: url('../../../ai_images/technology/antiporn/scan-result-iconss.png');
+  background-repeat: no-repeat;
+  background-position: -234px center;
+  background-position-x: -234px;
+  background-position-y: center;
+}
 .tech-section.tech-demo .demo-container #demo-result .canvas-container.has-result.pornography::before {
   opacity: 1;
   background-image: url('../../../ai_images/technology/antiporn/scan-result-iconss.png');
