@@ -58,10 +58,10 @@ class Action_AIDemo extends Ap_Action_Abstract {
                     $input_data['spd'] = Brain_Util::getParamAsInt($arrInput, 'speed', 1);
                     $input_data['vol'] = Brain_Util::getParamAsInt($arrInput, 'vol', 1);
                     $input_data['per'] = Brain_Util::getParamAsInt($arrInput, 'person', 0);
-                    $input_data['tex'] = Brain_Util::getParamAsString($arrInput, 'text', '');
+                    $input_data['tex'] = addslashes(Brain_Util::getParamAsString($arrInput, 'text', ''));
                 }
                 else{
-                    $input_data['kw'] = Brain_Util::getParamAsString($arrInput, 'kw', '');
+                    $input_data['kw'] = addslashes(Brain_Util::getParamAsString($arrInput, 'kw', ''));
                     $input_data['t'] = time() . '000';
                 }
                 
