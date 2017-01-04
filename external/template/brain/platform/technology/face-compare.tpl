@@ -322,15 +322,8 @@
         <div class="guide-link clear-float">
             <h3>开发指南</h3>
             <ul>
-                <li><a href="/docs">技术文档 ></a></li>
+                <li><a href="/docs#FACE">技术文档 ></a></li>
                 <li><a href="/sdk">SDK下载 ></a></li>
-            </ul>
-        </div>
-        <div class="question-link clear-float">
-            <h3>常见问题</h3>
-            <ul>
-                <li><a>识别的图片支持怎样输入?</a></li>
-                <li><a>什么是base64编码，如何提供？</a></li>
             </ul>
         </div>
     </div>

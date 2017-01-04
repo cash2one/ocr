@@ -363,16 +363,16 @@
         <div class="guide-link clear-float">
             <h3>开发指南</h3>
             <ul>
-                <li><a href="/docs">技术文档 ></a></li>
+                <li><a href="/docs#Speech-Asr">技术文档 ></a></li>
                 <li><a href="/sdk">SDK下载 ></a></li>
             </ul>
         </div>
         <div class="question-link clear-float">
             <h3>常见问题</h3>
             <ul>
-                <li><a>语音识别REST API支持的音频格式、采样率有哪些？</a></li>
-                <li><a>语音识别 REST API 最长支持多长的录音？</a></li>
-                <li><a>语音识别SDK支持的音频格式、采样率有哪些？</a></li>
+                <li><a href="/docs#Speech-Asr-FAQ_Q2">语音识别REST API支持的音频格式、采样率有哪些？</a></li>
+                <li><a href="/docs#Speech-Asr-FAQ_Q3">语音识别REST API最长支持多长的录音？</a></li>
+                <li><a href="/docs#Speech-Asr-FAQ_Q4">语音识别SDK支持的音频格式、采样率有哪些？</a></li>
             </ul>
         </div>
     </div>
