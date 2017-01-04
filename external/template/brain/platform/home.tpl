@@ -208,10 +208,10 @@
 <section class="banner">
     <ul class="banner-content">
         <li class="active video-bg">
-            <h1>人工智能技术 增益您的产品</h1>
-            <p>内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案内容文案<br>内容文案内容文案内容文案内容</p>
+            <h1>让AI变革发生</h1>
+            <p>更全面、更优质、更可靠、更易用的人工智能服务<br>即刻开启AI发现之旅</p>
             <div>
-                <a role="button" class="get-started">免费试用</a>
+                <a role="button" class="get-started" href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fconsole.bce.baidu.com">免费试用</a>
             </div>
             <video src="/ai_images/home/banner-1.mp4" autoplay></video>
         </li>
