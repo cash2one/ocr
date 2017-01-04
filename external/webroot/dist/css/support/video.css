@@ -173,6 +173,7 @@
 }
 .video-collection {
   font-size: 0;
+  text-align: center;
 }
 .video-item-container {
   display: inline-block;
