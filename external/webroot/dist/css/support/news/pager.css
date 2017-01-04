@@ -21,18 +21,21 @@
   background: #fff;
   border: 1px solid #d8d8d8;
   border-radius: 3px;
-  color: #646B7D;
+  color: #666666;
+}
+.page .prev,
+.page .next {
+  width: 62px;
 }
 .page span:active,
 .page .pg-on {
-  border-color: #39f;
+  border-color: #0073ed;
 }
 .page .pg-func {
-  color: #06c;
+  color: #0073ed;
 }
 .page .disabled {
-  background: #f7f7f7;
-  color: #d8d8d8;
+  color: #666666;
 }
 .pg-lt {
   line-height: 32px;
@@ -77,4 +80,10 @@
 }
 .pg-func {
   min-width: 50px;
+}
+.pg {
+  font-size: 12px;
+}
+.pg form {
+  color: #666666;
 }

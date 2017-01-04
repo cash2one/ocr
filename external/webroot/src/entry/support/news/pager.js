@@ -135,7 +135,7 @@ $.extend($.fn, {
         function r3() {
             var t = '<div style="display: inline-block; vertical-align: middle">'
                 + '<span style="margin-left: 20px"><form style="display: inline-block" class="sl-index" >'
-                + '去第<input style="text-align: center; margin:0 10px;width: 32px;height: 32px;color: #646B7D;" '
+                + '去第<input style="text-align: center; margin:0 10px;width: 30px;height: 20px;color: #333333;" '
                 + 'type="text" value="' + (now + 1) + '"/>页</form></span>'
                 + '</div>';
             return t;
