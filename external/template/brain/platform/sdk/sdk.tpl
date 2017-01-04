@@ -361,7 +361,7 @@
                     <div class="sdk-item">
                         <i class="sdk-language-sprite"></i>
                         <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bs"></i>
+                            <i class="sdk-category-icon sdk-bs-package"></i>
                             <a href="http://bos.nj.bpc.baidu.com/v1/audio/s_1">
                                 <div class="sdk-download-button">下载</div>
                             </a>
@@ -380,7 +380,7 @@
                     <div class="sdk-item">
                         <i class="sdk-language-sprite"></i>
                         <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bs"></i>
+                            <i class="sdk-category-icon sdk-bs-package"></i>
                             <a href="http://bos.nj.bpc.baidu.com/v1/audio/s_2_InputMethod">
                                 <div class="sdk-download-button">下载</div>
                             </a>
@@ -399,7 +399,7 @@
                     <div class="sdk-item">
                         <i class="sdk-language-sprite"></i>
                         <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bs"></i>
+                            <i class="sdk-category-icon sdk-bs-package"></i>
                             <a href="http://bos.nj.bpc.baidu.com/v1/audio/s_2_Navi">
                                 <div class="sdk-download-button">下载</div>
                             </a>
