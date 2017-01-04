@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>百度大脑</title>
+    <title>{%$title%}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="百度大脑,Baidu Brai,百度AI,机器学习,大数据,图像技术,语音技术,自然语言处理,用户画像">
-    <meta name="description" content="百度大脑，汇集百度人工智能技术成果，已建成超大规模神经网络，拥有万亿级参数，能模拟人脑的工作机制，对开发者、创业者、企业等开放核心能力和底层技术">
+    <meta name="keywords" content="{%$keyword%}">
+    <meta name="description" content="{%$description%}">
     <script src="https://hm.baidu.com/hm.js?fdad4351b2e90e0f489d7fbfc47c8acf"></script>
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
@@ -210,7 +210,12 @@
         <h1>语音唤醒</h1>
         <p>支持特定语音指令唤醒和打断、唤醒的同时执行指令操作<br>轻量级，低功耗，可自定义设置多个唤醒词，为您的应用打造自然流畅的对话</p>
         <div>
+            {%if $src eq Null%}
             <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">获取API Key</a>
+            {%/if%}
+            {%if $src !== Null%}
+            <a role="button" class="btn-primary media" href="#wake-demo">获取唤醒词</a>
+            {%/if%}
         </div>
     </div>
 </section>
@@ -223,7 +228,7 @@
 </section>
 
 <section class="tech-section tech-demo">
-    <div class="container">
+    <div class="container" id="wake-demo">
         <h2>功能演示</h2>
         <div class="demo-input">
             <h3>唤醒词评估<small>告诉你哪些词适合作唤醒词，唤醒词导出需登录百度账号</small></h3>
@@ -241,7 +246,6 @@
                 </div>
             </div>
         </div>
-
         <div class="demo-rule collapsed">
             <h3>唤醒词规则</h3>
             <div class="rule-wrapper">

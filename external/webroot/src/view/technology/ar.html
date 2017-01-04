@@ -5,7 +5,12 @@
             实时视频显示及控制、多传感器融合、实时跟踪及注册、场景融合等新技<br>
             术与新手段，从而提供了一般情况下不同于人类可感知的信息。</p>
         <div class="consult">
+            {%if $src eq Null%}
             <a role="button" class="btn-primary media">商务合作</a>
+            {%/if%}
+            {%if $src !== Null%}
+            <a role="button" class="btn-primary media" href="ai@baidu.com">商务合作</a>
+            {%/if%}
         </div>
     </div>
 </section>

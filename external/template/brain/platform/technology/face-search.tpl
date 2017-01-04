@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>百度大脑</title>
+    <title>{%$title%}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="百度大脑,Baidu Brai,百度AI,机器学习,大数据,图像技术,语音技术,自然语言处理,用户画像">
-    <meta name="description" content="百度大脑，汇集百度人工智能技术成果，已建成超大规模神经网络，拥有万亿级参数，能模拟人脑的工作机制，对开发者、创业者、企业等开放核心能力和底层技术">
+    <meta name="keywords" content="{%$keyword%}">
+    <meta name="description" content="{%$description%}">
     <script src="https://hm.baidu.com/hm.js?fdad4351b2e90e0f489d7fbfc47c8acf"></script>
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
@@ -210,8 +210,13 @@
         <h1>人脸查找</h1>
         <p>为您提供1:N人脸查找匹配服务，帮助您轻松实现，从人脸库中识别用户身份或查找相似人脸</p>
         <div>
+            {%if $src eq Null%}
             <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">获取API Key</a>
             <a role="button" class="btn-other media" href="/docs#FACE">技术文档</a>
+            {%/if%}
+            {%if $src !== Null%}
+            <a role="button" class="btn-primary media" href="ai@baidu.com">商务合作</a>
+            {%/if%}
         </div>
     </div>
 </section>
@@ -321,6 +326,17 @@
         <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
         <div>
             <a role="button" class="btn-primary large" href="https://login.bce.baidu.com?fromai=1&redirect=encodeURIComponent(https://console.bce.baidu.com/)">免费试用</a>
+        </div>
+    </div>
+</section>
+{%/if%}
+{%if $src !== Null%}
+<section class="tech-section get-started">
+    <div class="container">
+        <h2>快速提交您的需求</h2>
+        <p>您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</p>
+        <div class="consult">
+            <a role="button" class="btn-primary large" href="ai@baidu.com">商务合作</a>
         </div>
     </div>
 </section>

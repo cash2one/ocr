@@ -3,8 +3,13 @@
         <h1>人脸对比</h1>
         <p>根据两张人脸的特征给出相似度评分<br>为您提供高精度的1:1人脸比对服务</p>
         <div>
+            {%if $src eq Null%}
             <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">获取API Key</a>
             <a role="button" class="btn-other media" href="/docs#FACE">技术文档</a>
+            {%/if%}
+            {%if $src !== Null%}
+            <a role="button" class="btn-primary media" href="ai@baidu.com">商务合作</a>
+            {%/if%}
         </div>
     </div>
 </section>
@@ -105,6 +110,17 @@
         <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
         <div>
             <a role="button" class="btn-primary large" href="https://login.bce.baidu.com?fromai=1&redirect=encodeURIComponent(https://console.bce.baidu.com/)">免费试用</a>
+        </div>
+    </div>
+</section>
+{%/if%}
+{%if $src !== Null%}
+<section class="tech-section get-started">
+    <div class="container">
+        <h2>快速提交您的需求</h2>
+        <p>您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</p>
+        <div class="consult">
+            <a role="button" class="btn-primary large" href="ai@baidu.com">商务合作</a>
         </div>
     </div>
 </section>
