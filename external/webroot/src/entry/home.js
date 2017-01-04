@@ -32,20 +32,17 @@ $(document).ready(function () {
             $(e).toggleClass('active', i === (currentBannerNum % banners.length));
             if ($(e).hasClass('video-bg')) {
                 let video = $(e).find('video')[0];
-                if (video.play === undefined) {
-                    return;
-                }
                 try {
                     if (i === (currentBannerNum % banners.length)) {
-                        $(e).find('video').css('opacity', 1);
                         video.play();
+                        $(e).find('video').css('opacity', 1);
                     } else {
-                        $(e).find('video').css('opacity', 0);
                         video.currentTime = 0;
                         video.pause();
+                        $(e).find('video').css('opacity', 0);
                     }
-                } catch (e) {
-                    console.error(e);
+                } catch (err) {
+                    console.error(err);
                 }
             }
         });
