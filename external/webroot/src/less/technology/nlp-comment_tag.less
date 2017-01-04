@@ -128,7 +128,7 @@
     // 特色条目
     &-item {
         position: relative;
-        padding: 110px 0 20px;
+        padding: 20px 0 ;
 
         &:hover {
             opacity: 1;
@@ -138,25 +138,20 @@
 
     // 特色图标
     &-icon {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        display: block;
-        margin: -25px auto -25px -80px;
-        transform: scale(.5);
-        transform-origin: center;
+        margin: 0 auto;
         background: url(/ai_images/technology/nlp-comment/feature.png) no-repeat center;
+        background-size: 255px 85px;
 
         &.feature-1 {
-            .feature-sprite(-5px, -5px, 160px, 160px);
+            .feature-sprite(0, 0, 85px, 85px);
         }
 
         &.feature-2 {
-            .feature-sprite(-175px, -5px, 160px, 160px);
+            .feature-sprite(-85px, 0px, 85px, 85px);
         }
 
         &.feature-3 {
-            .feature-sprite(-345px, -5px, 160px, 160px);
+            .feature-sprite(-170px, 0px, 85px, 85px);
         }
     }
 
@@ -195,8 +190,7 @@
     width: @width;
     height: @height;
     background: url(/ai_images/technology/nlp-comment/scenario.png) no-repeat @x @y;
-    transform: scale(.5);
-    transform-origin: 0 0;
+    background-size: 135px 45px;
 }
 
 .function-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
@@ -258,23 +252,23 @@
     }
 
     &-icon-1 {
-        .scenario-sprite(-5px, -5px, 80px, 80px);
+        .scenario-sprite(0px, -0px, 45px, 45px);
     }
 
     &-icon-2 {
-        .scenario-sprite(-95px, -5px, 80px, 80px);
+        .scenario-sprite(-45px, 0px, 45px, 45px);
     }
 
     &-icon-3 {
-        .scenario-sprite(-185px, -5px, 80px, 80px);
+        .scenario-sprite(-90px, 0px, 45px, 45px);
     }
 
     &-icon-4 {
-        .scenario-sprite(-275px, -5px, 80px, 80px);
+        .scenario-sprite(-135px, 0px, 45px, 45px);
     }
 
     &-icon-5 {
-        .scenario-sprite(-365px, -5px, 80px, 80px);
+        .scenario-sprite(-180px, 0px, 45px, 45px);
     }
 
     // 使用场景介绍信息容器

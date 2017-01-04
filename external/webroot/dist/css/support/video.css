@@ -28,6 +28,21 @@
 .ai-platform button {
   font-family: "Microsoft YaHei Light", "Microsoft YaHei", "微软雅黑", "Arial Narrow", Arial, "sans-serif" !important;
   outline: none !important;
+  color: #ccc;
+}
+.ai-platform input[data-dirty="false"],
+.ai-platform textarea[data-dirty="false"],
+.ai-platform keygen[data-dirty="false"],
+.ai-platform select[data-dirty="false"],
+.ai-platform button[data-dirty="false"] {
+  color: #ccc;
+}
+.ai-platform input[data-dirty="true"],
+.ai-platform textarea[data-dirty="true"],
+.ai-platform keygen[data-dirty="true"],
+.ai-platform select[data-dirty="true"],
+.ai-platform button[data-dirty="true"] {
+  color: #333;
 }
 .ai-platform a {
   cursor: pointer;
@@ -167,13 +182,13 @@
   margin: 0 -5px;
 }
 .video-category-title {
-  padding: 30px 0 5px;
+  padding: 30px 0 5px 10px;
   font-size: 30px;
-  text-align: center;
+  text-align: left;
 }
 .video-collection {
   font-size: 0;
-  text-align: center;
+  text-align: left;
 }
 .video-item-container {
   display: inline-block;
@@ -195,7 +210,7 @@
   background-color: #fff;
 }
 .video-intro {
-  height: 40px;
+  height: 20px;
   padding: 5px;
   font-size: 14px;
 }

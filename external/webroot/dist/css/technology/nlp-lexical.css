@@ -28,6 +28,21 @@
 .ai-platform button {
   font-family: "Microsoft YaHei Light", "Microsoft YaHei", "微软雅黑", "Arial Narrow", Arial, "sans-serif" !important;
   outline: none !important;
+  color: #ccc;
+}
+.ai-platform input[data-dirty="false"],
+.ai-platform textarea[data-dirty="false"],
+.ai-platform keygen[data-dirty="false"],
+.ai-platform select[data-dirty="false"],
+.ai-platform button[data-dirty="false"] {
+  color: #ccc;
+}
+.ai-platform input[data-dirty="true"],
+.ai-platform textarea[data-dirty="true"],
+.ai-platform keygen[data-dirty="true"],
+.ai-platform select[data-dirty="true"],
+.ai-platform button[data-dirty="true"] {
+  color: #333;
 }
 .ai-platform a {
   cursor: pointer;
@@ -529,36 +544,31 @@
 }
 .nlp-feature-item {
   position: relative;
-  padding: 110px 0 20px;
+  padding: 20px 0;
 }
 .nlp-feature-item:hover {
   opacity: 1;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 .nlp-feature-icon {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  display: block;
-  margin: -25px auto -25px -80px;
-  transform: scale(0.5);
-  transform-origin: center;
+  margin: 0 auto;
   background: url(/ai_images/technology/nlp-lexer/feature.png) no-repeat center;
+  background-size: 255px 85px;
 }
 .nlp-feature-icon.feature-1 {
-  width: 160px;
-  height: 160px;
-  background-position: -5px -5px;
+  width: 85px;
+  height: 85px;
+  background-position: 0 0;
 }
 .nlp-feature-icon.feature-2 {
-  width: 160px;
-  height: 160px;
-  background-position: -175px -5px;
+  width: 85px;
+  height: 85px;
+  background-position: -85px 0px;
 }
 .nlp-feature-icon.feature-3 {
-  width: 160px;
-  height: 160px;
-  background-position: -345px -5px;
+  width: 85px;
+  height: 85px;
+  background-position: -170px 0px;
 }
 .nlp-feature-name {
   padding: 0 0 15px;
@@ -613,39 +623,34 @@
   display: inline-block;
 }
 .nlp-scenario-icon-1 {
-  width: 80px;
-  height: 80px;
-  background: url(/ai_images/technology/nlp-lexer/scenario.png) no-repeat -5px -5px;
-  transform: scale(0.5);
-  transform-origin: 0 0;
+  width: 45px;
+  height: 45px;
+  background: url(/ai_images/technology/nlp-lexer/scenario.png) no-repeat 0px 0px;
+  background-size: 225px 45px;
 }
 .nlp-scenario-icon-2 {
-  width: 80px;
-  height: 80px;
-  background: url(/ai_images/technology/nlp-lexer/scenario.png) no-repeat -95px -5px;
-  transform: scale(0.5);
-  transform-origin: 0 0;
+  width: 45px;
+  height: 45px;
+  background: url(/ai_images/technology/nlp-lexer/scenario.png) no-repeat -45px 0px;
+  background-size: 225px 45px;
 }
 .nlp-scenario-icon-3 {
-  width: 80px;
-  height: 80px;
-  background: url(/ai_images/technology/nlp-lexer/scenario.png) no-repeat -185px -5px;
-  transform: scale(0.5);
-  transform-origin: 0 0;
+  width: 45px;
+  height: 45px;
+  background: url(/ai_images/technology/nlp-lexer/scenario.png) no-repeat -90px 0px;
+  background-size: 225px 45px;
 }
 .nlp-scenario-icon-4 {
-  width: 80px;
-  height: 80px;
-  background: url(/ai_images/technology/nlp-lexer/scenario.png) no-repeat -275px -5px;
-  transform: scale(0.5);
-  transform-origin: 0 0;
+  width: 45px;
+  height: 45px;
+  background: url(/ai_images/technology/nlp-lexer/scenario.png) no-repeat -135px 0px;
+  background-size: 225px 45px;
 }
 .nlp-scenario-icon-5 {
-  width: 80px;
-  height: 80px;
-  background: url(/ai_images/technology/nlp-lexer/scenario.png) no-repeat -365px -5px;
-  transform: scale(0.5);
-  transform-origin: 0 0;
+  width: 45px;
+  height: 45px;
+  background: url(/ai_images/technology/nlp-lexer/scenario.png) no-repeat -180px 0px;
+  background-size: 225px 45px;
 }
 .nlp-scenario-intro {
   width: 85%;

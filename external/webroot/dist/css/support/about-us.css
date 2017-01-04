@@ -28,6 +28,21 @@
 .ai-platform button {
   font-family: "Microsoft YaHei Light", "Microsoft YaHei", "微软雅黑", "Arial Narrow", Arial, "sans-serif" !important;
   outline: none !important;
+  color: #ccc;
+}
+.ai-platform input[data-dirty="false"],
+.ai-platform textarea[data-dirty="false"],
+.ai-platform keygen[data-dirty="false"],
+.ai-platform select[data-dirty="false"],
+.ai-platform button[data-dirty="false"] {
+  color: #ccc;
+}
+.ai-platform input[data-dirty="true"],
+.ai-platform textarea[data-dirty="true"],
+.ai-platform keygen[data-dirty="true"],
+.ai-platform select[data-dirty="true"],
+.ai-platform button[data-dirty="true"] {
+  color: #333;
 }
 .ai-platform a {
   cursor: pointer;
@@ -546,6 +561,9 @@
   color: #666666;
   padding: 14px 0;
   margin: 0;
+}
+.about-introduction .about-content img {
+  margin: 10px 0;
 }
 .about-introduction .about-content > li {
   margin-bottom: 30px;

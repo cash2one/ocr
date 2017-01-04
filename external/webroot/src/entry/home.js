@@ -32,7 +32,7 @@ $(document).ready(function () {
             $(e).toggleClass('active', i === (currentBannerNum % banners.length));
             if ($(e).hasClass('video-bg')) {
                 let video = $(e).find('video')[0];
-                if (video.currentTime === undefined) {
+                if (video.play === undefined) {
                     return;
                 }
                 try {
