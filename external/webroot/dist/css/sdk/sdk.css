@@ -147,7 +147,7 @@
  */
 .ai-platform .sdk-download-container {
   background-color: #fafafa;
-  padding-right: 0;
+  padding: 0;
 }
 .sdk-download-container {
   font-size: 0;
@@ -163,7 +163,6 @@
   width: 20%;
 }
 .sdk-aside-header {
-  margin: 0 -10px;
   height: 45px;
   line-height: 45px;
   padding: 2px 35px;

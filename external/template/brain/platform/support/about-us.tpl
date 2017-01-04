@@ -298,7 +298,7 @@
                 </li>
                 <li>
                     <h3>使用流程</h3>
-                    <img src="../../../ai_images/support/about-us/lc-pic.png" />
+                    <img width="840" src="/ai_images/support/about-us/lc-pic.png">
                 </li>
             </ul>
         </li>

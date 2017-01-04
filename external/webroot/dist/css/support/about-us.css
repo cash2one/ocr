@@ -547,6 +547,9 @@
   padding: 14px 0;
   margin: 0;
 }
+.about-introduction .about-content img {
+  margin: 10px 0;
+}
 .about-introduction .about-content > li {
   margin-bottom: 30px;
 }
