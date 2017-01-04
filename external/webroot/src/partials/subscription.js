@@ -8,11 +8,12 @@ export const SUBSCRIPTION_TMPL = {
     'APPLY': [
         '<form id="subscribe-form">',
             '<div>',
-                '<input type="text" maxlength="50" placeholder="请输入您的姓名/称呼（必填）" name="username">',
+                '<input type="text" maxlength="50" placeholder="请输入您的姓名/称呼（必填）" value="请输入您的姓名/称呼（必填）" name="username">',
             '</div>',
             '<div>',
                 '<input type="text" maxlength="50" placeholder="请输入您的邮箱地址（必填）" name="email" ',
-                'data-regex="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$">',
+                'data-regex="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$"' +
+                'value="请输入您的邮箱地址（必填）">',
             '</div>',
             '<div class="qr-code-input">',
                 '<input type="text" maxlength="4"  placeholder="请输入正确的验证码" name="code">',

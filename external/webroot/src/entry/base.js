@@ -43,4 +43,20 @@ $(document).ready(function () {
         e.stopPropagation();
         subscriptionModal.show();
     });
+
+    $('body').on('focus', 'input, textarea', function() {
+        if (!eval($(this).attr('data-dirty'))) {
+            $(this).val('');
+        }
+    });
+
+    $('body').on('blur', 'input, textarea', function() {
+        let self = $(this);
+        if (self.val() !==  '') {
+            self.attr('data-dirty', 'true');
+        }
+        else {
+            self.val(self.attr('placeholder')).attr('data-dirty', 'false');
+        }
+    });
 });

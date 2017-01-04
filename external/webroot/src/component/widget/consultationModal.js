@@ -65,7 +65,7 @@ export default class ConsultationModal extends Modal {
             form.find('.consult-info-warning').html('');
             for (let i = 0, len = inputsToCheck.length; i < len; i++) {
                 let input = form.find(inputsToCheck[i]);
-                if (!input.val()) {
+                if (!input.val() || !eval(input.attr('data-dirty'))) {
                     input.addClass('has-error');
                     form.find('.info-warning').html(input.attr('placeholder'));
                     return false;
