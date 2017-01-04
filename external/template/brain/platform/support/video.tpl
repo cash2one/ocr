@@ -186,8 +186,8 @@
             </ul>-->
             <ul>
                 {%if $userInfo eq Null%}
-                <li><a href="https://login.bcetest.baidu.com?fromai=1&redirect=encodeURIComponent(https://cp01-yf-db-02.epc.baidu.com:8030/)">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://login.bcetest.baidu.com?fromai=1&redirect=encodeURIComponent(https://qasandbox.bcetest.baidu.com/)">免费试用</a></li>
+                <li><a href="https://login.bcetest.baidu.com?fromai=1&redirect=https%3A%2F%2Fcp01-yf-db-02.epc.baidu.com%3A8030">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://login.bcetest.baidu.com?fromai=1&redirect=https%3A%2F%2Fqasandbox.bcetest.baidu.com">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 <li>
