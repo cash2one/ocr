@@ -96,7 +96,7 @@
                                 <span>机器翻译</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://api.fanyi.baidu.com/api/trans/product/index">机器翻译平台</a></li>
+                                <li><a href="http://api.fanyi.baidu.com/api/trans/product/index" target="_blank">机器翻译平台</a></li>
                             </ul>
                         </li>
                         <li id="tech-user-profile">
@@ -107,13 +107,13 @@
                                 <span>用户画像</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://erised.baidu.com/">用户画像平台</a></li>
+                                <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>推荐云平台</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://recsys.baidu.com/">推荐云平台</a></li>
+                                <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
                             </ul>
                         </li>
                         <li id="tech-machine-learning">
@@ -124,7 +124,7 @@
                                 <span>PaddlePaddle</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://www.paddlepaddle.org/">PaddlePaddle</a></li>
+                                <li><a href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a></li>
                             </ul>
                         </li>
                         <li id="tech-ar">
@@ -218,10 +218,11 @@
 </section>
 <section class="tech-section tech-intro">
     <div class="container">
+        <h2>技术介绍</h2>
         <div class="intro-item">
             <div class="intro-icon"></div>
             <h3>触发机制</h3>
-            <p>界领先的识图技术，支持2d图像ar、3d物体ar、手部ar、脸部ar、平面特性ar、lbs-ar等丰富触发机制</p>
+            <p>业界领先的识图技术，支持2D图像AR、3D物体AR、手部AR、脸部AR、LBS-AR等丰富触发机制</p>
         </div>
         <div class="intro-item">
             <div class="intro-icon"></div>
@@ -314,19 +315,22 @@
         <li class="case-item active">
             <div class="container">
                 <h2>品牌营销</h2>
-                <p>在品牌营销场景，百度AR已联手欧莱雅、兰蔻等多家大型商家，共同实践AR营销方式，并取得明显效果</p>
+                <p>在品牌营销场景，百度AR已联手日化行业、汽车行业、旅游行业、食品饮料行业等<br>
+                    在品牌推广中，融入更多的科技元素，打造品牌营销新体验。</p>
             </div>
         </li>
         <li class="case-item">
             <div class="container">
                 <h2>互动游戏</h2>
-                <p>百度AR在互动游戏场景不断扩展，现已实现通过AR游戏发放商家优惠券的方式，实现商家更高营销收益</p>
+                <p>最适合AR技术的互动游戏场景，针对品牌需求进行游戏定制，打造新的互动体验。<br>
+                    让品牌主收获更多品牌关注与好感度。</p>
             </div>
         </li>
         <li class="case-item">
             <div class="container">
                 <h2>更多场景应用</h2>
-                <p>百度AR正在探索教育、娱乐、LBS生活服务等更多业务场景，敬请期待！</p>
+                <p>百度AR正在探索教育、娱乐、LBS生活服务等更多业务场景<br>
+                    针对行业进行定制，让用户体验到最新的技术，敬请期待！</p>
             </div>
         </li>
     </ul>
@@ -399,15 +403,15 @@
         <nav class="friendly-links">
             <h3>友情链接</h3>
             <ul>
-                <li><a href="http://www.paddlepaddle.org/cn/index.html">PaddlePaddle机器学习平台</a></li>
-                <li><a href="http://yuyin.baidu.com/">百度语音</a></li>
-                <li><a href="http://fanyi.baidu.com/">百度翻译</a></li>
-                <li><a href="http://idl.baidu.com/">百度深度学习实验室</a></li>
-                <li><a href="http://bdp.baidu.com/">百度大数据+</a></li>
-                <li><a href="http://datamart.baidu.com/">百度大数据+数据开放平台</a></li>
-                <li><a href="http://recsys.baidu.com/">Recsys推荐云平台</a></li>
-                <li><a href="https://cloud.baidu.com/?t=cp:online-media%7Cci:%7Ccn:ai">百度云</a></li>
-                <li><a href="http://www.chuanke.com/">百度传课</a></li>
+                <li><a href="http://www.paddlepaddle.org/cn/index.html" target="_blank">PaddlePaddle机器学习平台</a></li>
+                <li><a href="http://yuyin.baidu.com/" target="_blank">百度语音</a></li>
+                <li><a href="http://fanyi.baidu.com/" target="_blank">百度翻译</a></li>
+                <li><a href="http://idl.baidu.com/" target="_blank">百度深度学习实验室</a></li>
+                <li><a href="http://bdp.baidu.com/" target="_blank">百度大数据+</a></li>
+                <li><a href="http://datamart.baidu.com/" target="_blank">百度大数据+数据开放平台</a></li>
+                <li><a href="http://recsys.baidu.com/" target="_blank">Recsys推荐云平台</a></li>
+                <li><a href="https://cloud.baidu.com/?t=cp:online-media%7Cci:%7Ccn:ai" target="_blank">百度云</a></li>
+                <li><a href="http://www.chuanke.com/" target="_blank">百度传课</a></li>
             </ul>
         </nav>
     </div>

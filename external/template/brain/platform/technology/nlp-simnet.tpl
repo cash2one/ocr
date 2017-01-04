@@ -96,7 +96,7 @@
                                 <span>机器翻译</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://api.fanyi.baidu.com/api/trans/product/index">机器翻译平台</a></li>
+                                <li><a href="http://api.fanyi.baidu.com/api/trans/product/index" target="_blank">机器翻译平台</a></li>
                             </ul>
                         </li>
                         <li id="tech-user-profile">
@@ -107,13 +107,13 @@
                                 <span>用户画像</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://erised.baidu.com/">用户画像平台</a></li>
+                                <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>推荐云平台</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://recsys.baidu.com/">推荐云平台</a></li>
+                                <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
                             </ul>
                         </li>
                         <li id="tech-machine-learning">
@@ -124,7 +124,7 @@
                                 <span>PaddlePaddle</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://www.paddlepaddle.org/">PaddlePaddle</a></li>
+                                <li><a href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a></li>
                             </ul>
                         </li>
                         <li id="tech-ar">
@@ -228,13 +228,13 @@
                     <span class="demo-title">比较句</span>
                     <span class="demo-title">相似度</span>
                 </li>
-                <li class="demo-content clear-float">
+                <li class="demo-content clear-float good">
                     <span class="demo-text">车头如何放置车牌</span>
                     <span class="demo-arrow"></span>
                     <span class="demo-compare">前牌照怎么装</span>
                     <span class="demo-score bad">0.761517</span>
                 </li>
-                <li class="demo-content clear-float good">
+                <li class="demo-content clear-float">
                     <span class="demo-text">车头如何放置车牌</span>
                     <span class="demo-arrow"></span>
                     <span class="demo-compare">如何办理北京牌照</span>
@@ -262,7 +262,7 @@
                 <div class="demo-result">
                     <ul id="demo-options"></ul>
                     <div class="demo-score">
-                        <small class="demo-score-desc">说明：该分值表明选项内容与文字的契合度数值接近于1，则契合度越好。</small>
+                        <small class="demo-score-desc">说明：该分值表明选项内容与文字的相似度，数值越接近于1，则相似度越高。</small>
                         <div class="demo-score-detail"></div>
                     </div>
                 </div>
@@ -292,7 +292,7 @@
                 <div class="feature-icon"></div>
                 <div class="feature-desc">
                     <h3>深度学习技术</h3>
-                    <p>在海量数据下，基于深度神经网络建模从单词语义到短文本语义的组合过程，模型更强大，表达效果更好</p>
+                    <p>在海量数据下，基于深度神经网络，对从单次语义到短文本语义的组合过程进行建模，模型更强大，表达效果更好</p>
                 </div>
             </div>
         </div>
@@ -307,14 +307,14 @@
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
                     <h3>信息检索</h3>
-                    <p>通过一段查询文本，检索其他的和该查询相似的文本。信息检索是一个基本任务，在很多具体应用中有信息检索需求。只要能把想要检索的对象表示成文本，则可以用本模块进行检索</p>
+                    <p>根据一段查询文本，检索其相似文本。信息检索是一个基本任务，在很多具体应用中有信息检索需求。只要能把想要检索的对象表示成文本，可以用本模块进行检索</p>
                 </div>
             </div>
             <div class="scene-item shadow">
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
                     <h3>新闻推荐</h3>
-                    <p>通过用户刚刚浏览的新闻标题，检索出其他的相似的新闻推荐给用户</p>
+                    <p>通过用户刚刚浏览的新闻标题，检索出其他的相似新闻推荐给用户</p>
                 </div>
             </div>
             <div class="scene-item shadow">
@@ -329,24 +329,13 @@
 </section>
 <section class="tech-section tech-case">
     <ul class="case-list">
-        <li class="case-item active">
-            <div class="container">
-                <h2>凤巢ActionAds问医生</h2>
-                <p>用户搜query询问疾病的话，会出对应主治该疾病的医生，SIMNET主要用于计算query和广告医生之间的相关性的<br>
-                    医生那边的特征是他的主治疾病，相比与其他相关性特征综合左右，可以统计出其中SIMNET特征占比30%以上</p>
-            </div>
-        </li>
         <li class="case-item">
             <div class="container">
                 <h2>百度搜索时效性推荐</h2>
-                <p>对用户搜索的具有时效性的用户查询，挖掘出一批相关的事件并进行推荐
-                    主要用SIMNET进行查询和事件文本进行相关性计算，然后作为一维基础特征作用于最终的排序模型</p>
+                <p>根据具有时效性的用户搜索内容查询，挖掘出相关的事件进行推荐<br>
+                    主要用模拟网络进行查询和事件文本进行相关性计算，然后作为一维基础特征作用于最终的排序模型。</p>
             </div>
         </li>
-    </ul>
-    <ul class="case-indicator">
-        <li class="active"><a>凤巢ActionAds</a></li>
-        <li><a>搜索推荐</a></li>
     </ul>
 </section>
 {%if $userInfo eq Null%}
@@ -435,15 +424,15 @@
         <nav class="friendly-links">
             <h3>友情链接</h3>
             <ul>
-                <li><a href="http://www.paddlepaddle.org/cn/index.html">PaddlePaddle机器学习平台</a></li>
-                <li><a href="http://yuyin.baidu.com/">百度语音</a></li>
-                <li><a href="http://fanyi.baidu.com/">百度翻译</a></li>
-                <li><a href="http://idl.baidu.com/">百度深度学习实验室</a></li>
-                <li><a href="http://bdp.baidu.com/">百度大数据+</a></li>
-                <li><a href="http://datamart.baidu.com/">百度大数据+数据开放平台</a></li>
-                <li><a href="http://recsys.baidu.com/">Recsys推荐云平台</a></li>
-                <li><a href="https://cloud.baidu.com/?t=cp:online-media%7Cci:%7Ccn:ai">百度云</a></li>
-                <li><a href="http://www.chuanke.com/">百度传课</a></li>
+                <li><a href="http://www.paddlepaddle.org/cn/index.html" target="_blank">PaddlePaddle机器学习平台</a></li>
+                <li><a href="http://yuyin.baidu.com/" target="_blank">百度语音</a></li>
+                <li><a href="http://fanyi.baidu.com/" target="_blank">百度翻译</a></li>
+                <li><a href="http://idl.baidu.com/" target="_blank">百度深度学习实验室</a></li>
+                <li><a href="http://bdp.baidu.com/" target="_blank">百度大数据+</a></li>
+                <li><a href="http://datamart.baidu.com/" target="_blank">百度大数据+数据开放平台</a></li>
+                <li><a href="http://recsys.baidu.com/" target="_blank">Recsys推荐云平台</a></li>
+                <li><a href="https://cloud.baidu.com/?t=cp:online-media%7Cci:%7Ccn:ai" target="_blank">百度云</a></li>
+                <li><a href="http://www.chuanke.com/" target="_blank">百度传课</a></li>
             </ul>
         </nav>
     </div>

@@ -266,19 +266,11 @@
 
   &.tech-case {
     .case-item:nth-child(1) {
-      .icon(url('../../../ai_images/technology/nlp-simnet/case-1.png'), center, center);
-    }
-    .case-item:nth-child(2) {
       .icon(url('../../../ai_images/technology/nlp-simnet/case-2.png'), center, center);
     }
 
     .case-indicator {
-      & > li:nth-child(1) {
-        .icon(@case-icons, -10px, -10px);
-      }
-      & > li:nth-child(2) {
-        .icon(@case-icons, -210px, -10px);
-      }
+      display: none;
     }
   }
 }
