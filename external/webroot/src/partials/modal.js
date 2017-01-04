@@ -5,7 +5,7 @@
 'use strict';
 
 export const MODAL_TMPL = [
-    '<div class="modal" id="<%= id %>">',
+    '<div class="ai-modal" id="<%= id %>">',
         '<header class="modal-header">',
             '<h3><%= title %></h3>',
             '<a class="modal-x"></a>',
@@ -16,7 +16,7 @@ export const MODAL_TMPL = [
 ].join('');
 
 export const ALERT_MODAL_TMPL = [
-    '<div class="modal alert" id="<%= id %>">',
+    '<div class="ai-modal alert" id="<%= id %>">',
     '<header class="modal-header">',
     '<h3><%= title %></h3>',
     '<a class="modal-x"></a>',
@@ -33,7 +33,7 @@ export const ALERT_MODAL_TMPL = [
 
 
 export const CONFIRM_MODAL_TMPL = [
-    '<div class="modal alert" id="<%= id %>">',
+    '<div class="ai-modal alert" id="<%= id %>">',
         '<header class="modal-header">',
             '<h3><%= title %></h3>',
             '<a class="modal-x"></a>',

@@ -169,12 +169,12 @@
         <div class="login">
             <!--<ul>
                 {%if $userInfo eq Null%}
-                <li><a href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://ai.baidu.com)">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">免费试用</a></li>
+                <li><a href="https://login.bce.baidu.com?fromai=1&redirect=encodeURIComponent(https://ai.baidu.com)">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://login.bce.baidu.com?fromai=1&redirect=encodeURIComponent(https://console.bce.baidu.com/)">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 <li>
-                    <a class="console" href="https://console.bce.baidu.com/ai/">控制台</a>
+                    <a class="console" href="https://console.bce.baidu.com/?fromai=1">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
@@ -186,17 +186,17 @@
             </ul>-->
             <ul>
                 {%if $userInfo eq Null%}
-                <li><a href="https://login.bcetest.baidu.com?redirect=encodeURIComponent(https://cp01-yf-db-02.epc.baidu.com:8030/)">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://login.bcetest.baidu.com?redirect=encodeURIComponent(https://qasandbox.bcetest.baidu.com/ai/)">免费试用</a></li>
+                <li><a href="https://login.bcetest.baidu.com?fromai=1&redirect=encodeURIComponent(https://cp01-yf-db-02.epc.baidu.com:8030/)">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://login.bcetest.baidu.com?fromai=1&redirect=encodeURIComponent(https://qasandbox.bcetest.baidu.com/)">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 <li>
-                    <a class="console" href="https://qasandbox.bcetest.baidu.com/ai/">控制台</a>
+                    <a class="console" href="https://qasandbox.bcetest.baidu.com/?fromai=1">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">退出</a></li>
+                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=https%3A%2F%2Fcp01-yf-db-02.epc.baidu.com%3A8030">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}

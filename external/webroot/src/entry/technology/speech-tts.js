@@ -73,7 +73,6 @@ $(document).ready(function () {
 
     // 监听输入框，并对字数进行限制
     $('#demo-text-content').on('keydown keyup change', function () {
-
         $('.demo-text').attr('data-counter', 200 - $(this).val().length);
     });
 

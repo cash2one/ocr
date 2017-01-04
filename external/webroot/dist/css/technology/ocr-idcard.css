@@ -152,7 +152,7 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.modal {
+.ai-modal {
   display: none;
   position: fixed;
   top: 50%;
@@ -167,7 +167,7 @@
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.modal .modal-header {
+.ai-modal .modal-header {
   height: 40px;
   line-height: 40px;
   text-align: center;
@@ -177,10 +177,10 @@
   position: relative;
   padding-bottom: 10px;
 }
-.modal .modal-header h3 {
+.ai-modal .modal-header h3 {
   font-weight: 500;
 }
-.modal .modal-header .modal-x {
+.ai-modal .modal-header .modal-x {
   background-image: url('../../../ai_images/template.png');
   background-repeat: no-repeat;
   background-position: -210px -40px;
@@ -193,24 +193,24 @@
   right: 0;
   top: 0;
 }
-.modal .modal-header .modal-x:hover {
+.ai-modal .modal-header .modal-x:hover {
   background-image: url('../../../ai_images/template.png');
   background-repeat: no-repeat;
   background-position: -240px -40px;
   background-position-x: -240px;
   background-position-y: -40px;
 }
-.modal .modal-content {
+.ai-modal .modal-content {
   color: #666;
   font-size: 12px;
   padding: 20px 25px;
 }
-.modal .modal-content form > p {
+.ai-modal .modal-content form > p {
   margin: 0 0 15px;
   font-size: 14px;
 }
-.modal .modal-content form > div > input[type="text"],
-.modal .modal-content form > div > textarea {
+.ai-modal .modal-content form > div > input[type="text"],
+.ai-modal .modal-content form > div > textarea {
   width: 100%;
   border: 1px solid #ebebeb;
   line-height: 34px;
@@ -220,21 +220,21 @@
   padding: 0 10px;
   border-radius: 2px;
 }
-.modal .modal-content form > div > input[type="text"].has-error,
-.modal .modal-content form > div > textarea.has-error {
+.ai-modal .modal-content form > div > input[type="text"].has-error,
+.ai-modal .modal-content form > div > textarea.has-error {
   border-color: #dc0000 !important;
 }
-.modal .modal-content form > div > textarea {
+.ai-modal .modal-content form > div > textarea {
   padding: 10px;
   resize: none;
   height: 9em;
   line-height: 1.5em;
 }
-.modal .modal-content form .qr-code-input input[type="text"] {
+.ai-modal .modal-content form .qr-code-input input[type="text"] {
   width: 40% !important;
   display: inline-block;
 }
-.modal .modal-content form .qr-code-input a {
+.ai-modal .modal-content form .qr-code-input a {
   display: inline-block;
   vertical-align: middle;
   float: right;
@@ -243,17 +243,17 @@
   width: 30%;
   cursor: pointer;
 }
-.modal .modal-content form .qr-code-input a > img {
+.ai-modal .modal-content form .qr-code-input a > img {
   height: 36px;
 }
-.modal .modal-content form .form-actions {
+.ai-modal .modal-content form .form-actions {
   text-align: center;
   margin-top: 10px;
 }
-.modal .modal-content form .form-actions button + button {
+.ai-modal .modal-content form .form-actions button + button {
   margin-left: 15px;
 }
-.modal .modal-content form .info-warning {
+.ai-modal .modal-content form .info-warning {
   color: #dc0000;
   font-size: 12px;
   line-height: 1em;
@@ -290,12 +290,12 @@
     width: 40px;
   }
 }
-.modal .modal-content .consult-loading {
+.ai-modal .modal-content .consult-loading {
   text-align: center;
   margin: 30px 0;
   font-size: 14px;
 }
-.modal .modal-content .consult-loading .loading-dot {
+.ai-modal .modal-content .consult-loading .loading-dot {
   width: 0;
   overflow: hidden;
   display: inline-block;
@@ -304,10 +304,10 @@
   -moz-animation: loading 4s linear infinite;
   animation: loading 4s linear infinite;
 }
-.modal .modal-content .consult-success {
+.ai-modal .modal-content .consult-success {
   font-size: 12px;
 }
-.modal .modal-content .consult-success .alert-image {
+.ai-modal .modal-content .consult-success .alert-image {
   margin: 10px auto;
   width: 60px;
   height: 60px;
@@ -317,12 +317,12 @@
   background-position-x: -200px;
   background-position-y: -85px;
 }
-.modal .modal-content .consult-success > p {
+.ai-modal .modal-content .consult-success > p {
   text-align: center;
   font-size: 14px;
   margin: 0;
 }
-.modal .modal-content .consult-fail .alert-image {
+.ai-modal .modal-content .consult-fail .alert-image {
   margin: 10px auto;
   width: 60px;
   height: 60px;
@@ -332,15 +332,15 @@
   background-position-x: -130px;
   background-position-y: -85px;
 }
-.modal .modal-content .consult-fail > p {
+.ai-modal .modal-content .consult-fail > p {
   text-align: center;
   margin: 0 0 20px 0;
   font-size: 14px;
 }
-.modal .modal-content .consult-fail .fail-actions {
+.ai-modal .modal-content .consult-fail .fail-actions {
   text-align: center;
 }
-.modal .modal-content .consult-fail .fail-actions button + button {
+.ai-modal .modal-content .consult-fail .fail-actions button + button {
   margin-left: 15px;
 }
 .tech-section {
