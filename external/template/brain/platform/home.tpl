@@ -96,7 +96,7 @@
                                 <span>机器翻译</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://api.fanyi.baidu.com/api/trans/product/index">机器翻译平台</a></li>
+                                <li><a href="http://api.fanyi.baidu.com/api/trans/product/index" target="_blank">机器翻译平台</a></li>
                             </ul>
                         </li>
                         <li id="tech-user-profile">
@@ -107,13 +107,13 @@
                                 <span>用户画像</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://erised.baidu.com/">用户画像平台</a></li>
+                                <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>推荐云平台</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://recsys.baidu.com/">推荐云平台</a></li>
+                                <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
                             </ul>
                         </li>
                         <li id="tech-machine-learning">
@@ -124,7 +124,7 @@
                                 <span>PaddlePaddle</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://www.paddlepaddle.org/">PaddlePaddle</a></li>
+                                <li><a href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a></li>
                             </ul>
                         </li>
                         <li id="tech-ar">
@@ -238,10 +238,9 @@
             </div>
         </li>
         <li>
-            <h1>增强现实</h1>
-            <p>增强现实(Augmented Reality，简称AR)技术，包含了多媒体、三维建模、<br>
-                实时视频显示及控制、多传感器融合、实时跟踪及注册、场景融合等新技<br>
-                术与新手段，从而提供了一般情况下不同于人类可感知的信息。</p>
+            <h1>百度AR-增强现实技术，让梦想照进现实</h1>
+            <p>人们通过增强现实技术看到更多，更远，更奇妙的世界<br>
+                颠覆认知，获取新知，检索比真实更真实的世界</p>
             <div>
                 <a role="button" class="get-started">免费试用2</a>
             </div>
@@ -363,7 +362,7 @@
                             <li>
                                 <h4>机器翻译</h4>
                                 <ul>
-                                    <li><a href="http://api.fanyi.baidu.com/api/trans/product/index">机器翻译平台</a></li>
+                                    <li><a href="http://api.fanyi.baidu.com/api/trans/product/index" target="_blank">机器翻译平台</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -382,8 +381,8 @@
                     <hr>
                     <div class="service-tech-list clear-float">
                         <ul class="inline-list">
-                            <li><a href="http://erised.baidu.com/">用户画像平台</a></li>
-                            <li><a href="http://recsys.baidu.com/">推荐云平台</a></li>
+                            <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
+                            <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
                         </ul>
                     </div>
                 </div>
@@ -400,7 +399,7 @@
                     <hr>
                     <div class="service-tech-list clear-float">
                         <ul class="inline-list">
-                            <li><a href="http://www.paddlepaddle.org/">PaddlePaddle</a></li>
+                            <li><a href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a></li>
                         </ul>
                     </div>
                 </div>
@@ -438,7 +437,7 @@
                         <p>提供多种服务接驳或答案回复、基于行业场景的私有知识图谱建设</p>
                     </div>
                     <div>
-                        <a role="button" href="#" class="btn-primary" href="/solution/robot">了解详情</a>
+                        <a role="button" class="btn-primary" href="/solution/robot">了解详情</a>
                     </div>
                 </div>
                 <div id="face-mobile-detect" class="solution-desc">
@@ -449,7 +448,7 @@
                         <p>极大缩短业务办理时间，提升业务的便捷性和安全性</p>
                     </div>
                     <div>
-                        <a role="button" href="#" class="btn-primary" href="/solution/faceprint">了解详情</a>
+                        <a role="button" class="btn-primary" href="/solution/faceprint">了解详情</a>
                     </div>
                 </div>
                 <div id="face-gate" class="solution-desc">
@@ -459,17 +458,17 @@
                         <p>实现企业人脸门禁管理，打造便捷、安全、可靠的企业环境与品牌形象</p>
                     </div>
                     <div>
-                        <a role="button" href="#" class="btn-primary" href="/solution/facegate">了解详情</a>
+                        <a role="button" class="btn-primary" href="/solution/facegate">了解详情</a>
                     </div>
                 </div>
                 <div id="phone-dialing-test" class="solution-desc">
                     <h3>号码风险识别</h3>
                     <div>
-                        <p>基于百度交易数据和百度用户画像构建全网用户手机号风险等级</p>
-                        <p>可广泛用于营销补贴业务的反作弊、反欺诈领域</p>
+                        <p>基于百度系业务在打击黑产工作中的数据和技术积累，提供用户手机号风险等级识别服务</p>
+                        <p>可广泛用于营销补贴业务的反作弊和反欺诈等场景</p>
                     </div>
                     <div>
-                        <a role="button" href="#" class="btn-primary" href="/solution/dialog">了解详情</a>
+                        <a role="button" class="btn-primary" href="/solution/dialog">了解详情</a>
                     </div>
                 </div>
             </div>
@@ -610,15 +609,15 @@
         <nav class="friendly-links">
             <h3>友情链接</h3>
             <ul>
-                <li><a href="http://www.paddlepaddle.org/cn/index.html">PaddlePaddle机器学习平台</a></li>
-                <li><a href="http://yuyin.baidu.com/">百度语音</a></li>
-                <li><a href="http://fanyi.baidu.com/">百度翻译</a></li>
-                <li><a href="http://idl.baidu.com/">百度深度学习实验室</a></li>
-                <li><a href="http://bdp.baidu.com/">百度大数据+</a></li>
-                <li><a href="http://datamart.baidu.com/">百度大数据+数据开放平台</a></li>
-                <li><a href="http://recsys.baidu.com/">Recsys推荐云平台</a></li>
-                <li><a href="https://cloud.baidu.com/?t=cp:online-media%7Cci:%7Ccn:ai">百度云</a></li>
-                <li><a href="http://www.chuanke.com/">百度传课</a></li>
+                <li><a href="http://www.paddlepaddle.org/cn/index.html" target="_blank">PaddlePaddle机器学习平台</a></li>
+                <li><a href="http://yuyin.baidu.com/" target="_blank">百度语音</a></li>
+                <li><a href="http://fanyi.baidu.com/" target="_blank">百度翻译</a></li>
+                <li><a href="http://idl.baidu.com/" target="_blank">百度深度学习实验室</a></li>
+                <li><a href="http://bdp.baidu.com/" target="_blank">百度大数据+</a></li>
+                <li><a href="http://datamart.baidu.com/" target="_blank">百度大数据+数据开放平台</a></li>
+                <li><a href="http://recsys.baidu.com/" target="_blank">Recsys推荐云平台</a></li>
+                <li><a href="https://cloud.baidu.com/?t=cp:online-media%7Cci:%7Ccn:ai" target="_blank">百度云</a></li>
+                <li><a href="http://www.chuanke.com/" target="_blank">百度传课</a></li>
             </ul>
         </nav>
     </div>
