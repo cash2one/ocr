@@ -44,9 +44,9 @@ public class Sample {
     public static void main(String[] args) {
 
         //设置APPID/AK/SK
-        String APP_ID = "your-app-id";
-        String API_KEY = "your-access-key-id";
-        String SECRET_KEY = "your-secret-access-key";
+        String APP_ID = "你的 App ID";
+        String API_KEY = "你的 API Key";
+        String SECRET_KEY = "你的 Secret Key";
 
         // 初始化一个Client
         AipFace client = new AipFace(APP_ID, API_KEY, SECRET_KEY);
@@ -158,10 +158,4 @@ public void faceRecognize(AipFace client) {
 | ++type                  | object   | 真实人脸/卡通人脸置信度                             |
 | +++human                | double   | 真实人脸置信度，[0, 1]                           |
 | +++cartoon              | double   | 卡通人脸置信度，[0, 1]                           |
-
-# 版本更新说明
-
-##
-
-* 首次发布
 

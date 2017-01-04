@@ -28,7 +28,7 @@ POST中参数按照API接口说明调用即可。
 https://aip.baidubce.com/rpc/2.0/nlp/v1/wordseg? access_token=24.f9ba9c5241b67688bb4adbed8bc91dec.2592000.1485570332.282335-8574074
 ```
 
-> **说明：**推荐使用调用方式一。方式一鉴权使用的Access_token必须通过API Key和Secret Key获取。
+> **说明：**方式一鉴权使用的Access_token必须通过API Key和Secret Key获取。
 
 # 调用方式二
 
@@ -63,7 +63,7 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 若请求错误，服务器将返回的JSON文本包含以下参数：
 
-* **error_code：**错误码；关于错误码的详细信息请参考“[通用错误码](#通用错误码)和[业务相关错误码](#业务相关错误码)”。
+* **error_code：**错误码；关于错误码的详细信息请参考“[通用错误码](#通用错误码)”。
 
 * **error_msg：**错误描述信息，帮助理解和解决发生的错误。
 
@@ -88,7 +88,7 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 
 
-## 公共错误码
+## 通用错误码
 
 <table>
 <tr><th>Code </th><th> Message </th><th> HTTP Status Code </th><th> 说明</th></tr>
@@ -104,21 +104,34 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 分词接口提供基本词和混排两种粒度的分词结果，基本词粒度较小，适用于搜索引擎等需要更多召回的任务，而混排粒度倾向于保留更多的短语。
 
-**HTTP方法** 
+**调用方式一请求示例**
 
-POST
+* HTTP方法: POST
 
-**请求URL**
+* 请求URL: https://aip.baidubce.com/rpc/2.0/nlp/v1/wordseg
 
-https://aip.baidubce.com/rpc/2.0/nlp/v1/wordseg
+* 请求示例:
 
-**请求示例**
+  ```
+  {
+    "query":"百度是一家高科技公司",
+    "lang_id":1
+  }
+  ```
+
+**调用方式二请求示例**
 
 ```
-{
-  "query":"百度是一家高科技公司",
-  "lang_id":1
-}
+POST /rpc/2.0/nlp/v1/wordseg HTTP/1.1
+accept-encoding: gzip, deflate
+x-bce-date: {utc-date-string}
+connection: keep-alive
+accept: */*
+host: aip.baidubce.com
+content-type: application/x-www-form-urlencoded
+authorization: {bce-authorization-string}
+
+query=百度是一家高科技公司&lang_id=1
 ```
 
 **请求参数**
@@ -267,20 +280,33 @@ https://aip.baidubce.com/rpc/2.0/nlp/v1/wordseg
 
 词性标注接口为分词结果中的每个单词标注一个正确的词性的程序，也标注每个词是名词、动词、形容词或其他词性。
 
-**HTTP方法** 
+**调用方式一请求示例**
 
-POST
+* HTTP方法: POST
 
-**请求URL**
+* 请求URL: https://aip.baidubce.com/rpc/2.0/nlp/v1/wordpos
 
-https://aip.baidubce.com/rpc/2.0/nlp/v1/wordpos?query=xxxxx
+* 请求示例
 
-**请求示例**
+  ```
+  {
+    "query": "你好百度"
+  }
+  ```
+
+**调用方式二请求示例**
 
 ```
-{
-  "query": "你好百度"
-}
+POST /rpc/2.0/nlp/v1/wordpos HTTP/1.1
+accept-encoding: gzip, deflate
+x-bce-date: {utc-date-string}
+connection: keep-alive
+accept: */*
+host: aip.baidubce.com
+content-type: application/x-www-form-urlencoded
+authorization: {bce-authorization-string}
+
+query=你好百度
 ```
 
 **请求参数**
@@ -320,34 +346,64 @@ https://aip.baidubce.com/rpc/2.0/nlp/v1/wordpos?query=xxxxx
 
 词向量接口提供两种功能：输入两个词tid=1得到两个词的相似度结果，输入1个词tid=2得到词的词向量。
 
-**HTTP方法** 
+**调用方式一请求示例**
 
-POST
+* HTTP方法: POST
 
-**请求URL**
+* 请求URL: https://aip.baidubce.com/rpc/2.0/nlp/v1/wordembedding
 
-https://aip.baidubce.com/rpc/2.0/nlp/v1/wordembedding
+* 请求参数
 
-**请求示例**
+  - 输入两个词
+
+    ```
+    {
+      "query1":"百度",
+      "query2":"谷歌",
+      "tid":1
+    }
+    ```
+
+  - 输入一个词
+
+    ```
+    {
+      "query1":"百度",
+      "tid":2
+    }
+    ```
+
+**调用方式二请求示例**
 
 - 输入两个词
 
-```
-{
-  "query1":"百度",
-  "query2":"谷歌",
-  "tid":1
-}
-```
+  ```
+  POST /rpc/2.0/nlp/v1/wordembedding HTTP/1.1
+  accept-encoding: gzip, deflate
+  x-bce-date: {utc-date-string}
+  connection: keep-alive
+  accept: */*
+  host: aip.baidubce.com
+  content-type: application/x-www-form-urlencoded
+  authorization: {bce-authorization-string}
+
+  query1=百度&query2=谷歌&tid=1
+  ```
 
 - 输入一个词
 
-```
-{
-  "query1":"百度",
-  "tid":2
-}
-```
+  ```
+  POST /rpc/2.0/nlp/v1/wordembedding HTTP/1.1
+  accept-encoding: gzip, deflate
+  x-bce-date: {utc-date-string}
+  connection: keep-alive
+  accept: */*
+  host: aip.baidubce.com
+  content-type: application/x-www-form-urlencoded
+  authorization: {bce-authorization-string}
+
+  query1=百度&tid=2
+  ```
 
 **请求参数**
 
@@ -391,22 +447,35 @@ https://aip.baidubce.com/rpc/2.0/nlp/v1/wordembedding
 
 中文DNN语言模型接口用于输出切词结果并给出每个词在句子中的概率值。
 
-**HTTP方法** 
+**调用方式一请求示例**
 
-POST
+* HTTP方法： POST
 
-**请求URL**
+* 请求URL： https://aip.baidubce.com/rpc/2.0/nlp/v1/dnnlm_cn
 
-https://aip.baidubce.com/rpc/2.0/nlp/v1/dnnlm_cn
+* 请求参数：
 
+  ```
+  {
+    "input_sequence":"百度是个搜索公司"
+  }
+  ```
 
-**请求示例**
+**调用方式二请求示例**
 
 ```
-{
-  "input_sequence":"百度是个搜索公司"
-}
+POST /rpc/2.0/nlp/v1/dnnlm_cn HTTP/1.1
+accept-encoding: gzip, deflate
+x-bce-date: {utc-date-string}
+connection: keep-alive
+accept: */*
+host: aip.baidubce.com
+content-type: application/x-www-form-urlencoded
+authorization: {bce-authorization-string}
+
+input_sequence=百度是个搜索公司
 ```
+
 
 **请求参数**
 
@@ -439,13 +508,11 @@ https://aip.baidubce.com/rpc/2.0/nlp/v1/dnnlm_cn
 
 短文本相似度接口用来判断两个文本的相似度得分。
 
-**HTTP方法** 
+**调用方式一请求示例**
 
-POST
+* HTTP方法： POST
 
-**请求URL**
-
-https://aip.baidubce.com/rest/2.0/nlp/v1/simnet?username=xxx\&app=xxx
+* 请求URL： https://aip.baidubce.com/rest/2.0/nlp/v1/simnet
 
 **请求示例**
 
@@ -458,6 +525,21 @@ https://aip.baidubce.com/rest/2.0/nlp/v1/simnet?username=xxx\&app=xxx
       "type":0
     }
 }
+```
+
+**调用方式二请求示例**
+
+```
+POST /rpc/2.0/nlp/v1/simnet HTTP/1.1
+accept-encoding: gzip, deflate
+x-bce-date: {utc-date-string}
+connection: keep-alive
+accept: */*
+host: aip.baidubce.com
+content-type: application/x-www-form-urlencoded
+authorization: {bce-authorization-string}
+
+qslots=[{"terms_sequence":"你好百度” ", "type":0, "items":[]}]&tslots=[{"terms_sequence":"你好世界” ", "type":0, "items":[]}]&type=0
 ```
 
 **请求参数**
@@ -486,26 +568,26 @@ https://aip.baidubce.com/rest/2.0/nlp/v1/simnet?username=xxx\&app=xxx
 
 **返回参数**
 
-| 参数         | 说明        |
-| ---------- | --------- |
-| score      | 两个文本相似度得分 |
-| error      |           |
-| type       | 默认为0       |
-| error_note | error对应文字说明   |
-| items      | 默认为空      |
+| 参数         | 说明          |
+| ---------- | ----------- |
+| score      | 两个文本相似度得分   |
+| error      | error code  |
+| type       | 默认为0        |
+| error_note | error对应文字说明 |
+| items      | 默认为空        |
 
 **错误码说明**  
 
-| Code        |Message    |返回说明|
-| ------ | ------------ |---------|
-| 0      | NO_ERROR |正确返回|
-| 1      | BEYOND_SLOT_LENGTH |输入长度过长|
-| 2      | OOV_ERROR |输入文本不在词表中|
-| 3      | LEGO_LIB_RET_ERROR |内部库错误|
-| 4      |OTHER_SERVER_ERROR |其它服务错误 |
-| 5      |INPUT_HAS_EMPTY |输入为空 |
-| 6      |INPUT_FORMAT_ERROR |输入格式错误 |
-| 7      |OTHER_CLIENT_ERROR |客服端错误 |
+| Code | Message            | 返回说明      |
+| ---- | ------------------ | --------- |
+| 0    | NO_ERROR           | 正确返回      |
+| 1    | BEYOND_SLOT_LENGTH | 输入长度过长    |
+| 2    | OOV_ERROR          | 输入文本不在词表中 |
+| 3    | LEGO_LIB_RET_ERROR | 内部库错误     |
+| 4    | OTHER_SERVER_ERROR | 其它服务错误    |
+| 5    | INPUT_HAS_EMPTY    | 输入为空      |
+| 6    | INPUT_FORMAT_ERROR | 输入格式错误    |
+| 7    | OTHER_CLIENT_ERROR | 客服端错误     |
 
 
 # 评论观点抽取接口
@@ -514,22 +596,35 @@ https://aip.baidubce.com/rest/2.0/nlp/v1/simnet?username=xxx\&app=xxx
 
 评论观点抽取接口用来提取一个句子观点评论的情感属性。
 
-**HTTP方法** 
+**调用方式一请求示例**
 
-POST
+* HTTP方法: POST
 
-**请求URL**
+* 请求URL: https://aip.baidubce.com/rpc/2.0/nlp/v1/comment_tag
 
-https://aip.baidubce.com/rpc/2.0/nlp/v1/comment_tag
+* 请求参数
 
-**请求示例**
+  ```
+  {
+    "comment":"个人觉得福克斯好，外观漂亮年轻，动力和操控性都不错",
+    "entity":"NULL",
+    "type":1
+  }
+  ```
+
+**调用方式二请求示例**
 
 ```
-{
-  "comment":"个人觉得福克斯好，外观漂亮年轻，动力和操控性都不错",
-  "entity":"NULL",
-  "type":1
-}
+POST /rpc/2.0/nlp/v1/comment_tag HTTP/1.1
+accept-encoding: gzip, deflate
+x-bce-date: {utc-date-string}
+connection: keep-alive
+accept: */*
+host: aip.baidubce.com
+content-type: application/x-www-form-urlencoded
+authorization: {bce-authorization-string}
+
+comment=个人觉得福克斯好，外观漂亮年轻，动力和操控性都不错&entity=null&type=1
 ```
 
 **请求参数**

@@ -10,8 +10,6 @@ API服务要求使用JSON格式的结构体来描述一个请求的具体内容,
 
 API服务均采用JSON格式的消息体作为响应返回的格式。
 
-> 说明：本文档中所有API接口示例统一以“调用方式一”举例，调用方式二构造方式参见[请求头域内容](#请求头域内容)。
-
 **服务限制**
 
 人脸识别服务对图片格式、图片大小有限制，格式支持jpg、png，长宽都要小于2048px。图片大小不超过1M。
@@ -29,10 +27,10 @@ POST中参数按照API接口说明调用即可。
 例如人脸识别API，使用HTTPS POST发送：
 
 ```
-https://aip.baidubce.com/rest/2.0/face/v1/detect? access_token=24.f9ba9c5241b67688bb4adbed8bc91dec.2592000.1485570332.282335-8574074
+https://aip.baidubce.com/rest/2.0/face/v1/detect?access_token=24.f9ba9c5241b67688bb4adbed8bc91dec.2592000.1485570332.282335-8574074
 ```
 
-> **说明：**推荐使用调用方式一。方式一鉴权使用的Access_token必须通过API Key和Secret Key获取。
+> **说明：**方式一鉴权使用的Access_token必须通过API Key和Secret Key获取。
 
 # 调用方式二
 
@@ -57,7 +55,7 @@ connection: keep-alive
 accept: */*
 host: aip.baidubce.com
 x-bce-request-id: 73c4e74c-3101-4a00-bf44-fe246959c05e
-content-type: application/x-www-form-urlencoded;
+content-type: application/json
 authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z/1800/host;x-bce-date/994014d96b0eb26578e039fa053a4f9003425da4bfedf33f4790882fb4c54903
 ```
 
@@ -67,7 +65,7 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 若请求错误，服务器将返回的JSON文本包含以下参数：
 
-* **error_code：**错误码；关于错误码的详细信息请参考“[通用错误码](#通用错误码)和[业务相关错误码](#业务相关错误码)”。
+* **error_code：**错误码；关于错误码的详细信息请参考**通用错误码**和**业务相关错误码**。
 
 * **error_msg：**错误描述信息，帮助理解和解决发生的错误。
 
@@ -133,20 +131,38 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 该请求用于检测图片中的人脸并返回人脸的属性及图片信息。
 
-**HTTP 方法**
+**调用方式一请求头**
 
-   POST
+* HTTP方法：POST
 
-**请求URL**
+* 请求URL： https://aip.baidubce.com/rest/2.0/face/v1/detect
 
-https://aip.baidubce.com/rest/2.0/face/v1/detect
+##### Header如下：
 
-**请求示例**
+| 参数           | 值                                 |
+| ------------ | --------------------------------- |
+| Content-Type | application/x-www-form-urlencoded |
 
-```http
-{
-    "image":图像base64编码
-}
+##### Body中数据如下：
+
+| 参数    | 值          |
+| ----- | ---------- |
+| image | 图像base64编码 |
+
+
+**调用方式二请求示例**
+
+```
+POST /rest/2.0/face/v1/detect HTTP/1.1
+accept-encoding: gzip, deflate
+x-bce-date: {utc-date-string}
+connection: keep-alive
+accept: */*
+host: aip.baidubce.com
+content-type: application/json 
+authorization: {bce-authorization-string}
+
+image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 ```
 
 **请求参数**

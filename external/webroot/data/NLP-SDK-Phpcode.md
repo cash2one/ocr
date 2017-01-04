@@ -41,9 +41,9 @@ AipNlp类是Nlp的PHP SDK客户端，为使用Natural Language Processing的开�
 require_once 'AipNlp.php';
 
 // 定义常量
-const APP_ID = '000212'
-const API_KEY = '020947f506934fe5b39763080359f0f8';
-const SECRET_KEY = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
 
 // 初始化AipNlp对象
 $AipNlp = new AipNlp(APP_ID, API_KEY, SECRET_KEY);
@@ -63,9 +63,9 @@ $AipNlp = new AipNlp(APP_ID, API_KEY, SECRET_KEY);
 require_once 'AipNlp.php';
 
 // 定义常量
-const APP_ID = '000212'
-const API_KEY = '020947f506934fe5b39763080359f0f8';
-const SECRET_KEY = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiNlp
 $client = new AipNlp(APP_ID, API_KEY, SECRET_KEY);
@@ -80,9 +80,9 @@ $response = $client->wordsegApi('你好百度');
 require_once 'AipNlp.php';
 
 // 定义常量
-const APP_ID = '000212'
-const API_KEY = '020947f506934fe5b39763080359f0f8';
-const SECRET_KEY = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiNlp
 $client = new AipNlp(APP_ID, API_KEY, SECRET_KEY);
@@ -127,9 +127,9 @@ $response = $client->wordsegApi('你好百度', $option);
 require_once 'AipNlp.php';
 
 // 定义常量
-const APP_ID = '000212'
-const API_KEY = '020947f506934fe5b39763080359f0f8';
-const SECRET_KEY = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiNlp
 $client = new AipNlp(APP_ID, API_KEY, SECRET_KEY);
@@ -164,9 +164,9 @@ $response = $client->wordpos('你好百度');
 require_once 'AipNlp.php';
 
 // 定义常量
-const APP_ID = '000212'
-const API_KEY = '020947f506934fe5b39763080359f0f8';
-const SECRET_KEY = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiNlp
 $client = new AipNlp(APP_ID, API_KEY, SECRET_KEY);
@@ -205,16 +205,15 @@ $response = $client->wordembedding('百度', '谷歌');
 require_once 'AipNlp.php';
 
 // 定义常量
-const APP_ID = '000212'
-const API_KEY = '020947f506934fe5b39763080359f0f8';
-const SECRET_KEY = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiNlp
 $client = new AipNlp(APP_ID, API_KEY, SECRET_KEY);
 
 // 调用中文DNN语言模型接口
 $response = $client->dnnlmCn('百度是个搜索公司');
-
 ```
 
 **中文DNN语言模型 请求参数详情**
@@ -243,16 +242,15 @@ $response = $client->dnnlmCn('百度是个搜索公司');
 require_once 'AipNlp.php';
 
 // 定义常量
-const APP_ID = '000212'
-const API_KEY = '020947f506934fe5b39763080359f0f8';
-const SECRET_KEY = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiNlp
 $client = new AipNlp(APP_ID, API_KEY, SECRET_KEY);
 
 // 调用短文本相似度接口
 $response = $client->simnet('百度是个搜索公司', '谷歌是个搜索公司');
-
 ```
 
 **短文本相似度 请求参数详情**
@@ -267,10 +265,25 @@ $response = $client->simnet('百度是个搜索公司', '谷歌是个搜索公�
 | 参数          | 类型     | 描述   |
 | :---------- | :----- | :--- |
 | output      | object | 返回对象 |
-| +score      | double |      |
-| +type       | Int    |      |
-| +error      | Int    |      |
-| +error-node | String |      |
+| +score      | double | 两个文本相似度得分 |
+| +type       | Int    | 默认为0 |
+| +error      | Int    | error code  |
+| +error-node | String | error对应文字说明   |
+
+**错误码说明**  
+
+| Code | Message            | 返回说明      |
+| ---- | ------------------ | --------- |
+| 0    | NO_ERROR           | 正确返回      |
+| 1    | BEYOND_SLOT_LENGTH | 输入长度过长    |
+| 2    | OOV_ERROR          | 输入文本不在词表中 |
+| 3    | LEGO_LIB_RET_ERROR | 内部库错误     |
+| 4    | OTHER_SERVER_ERROR | 其它服务错误    |
+| 5    | INPUT_HAS_EMPTY    | 输入为空      |
+| 6    | INPUT_FORMAT_ERROR | 输入格式错误    |
+| 7    | OTHER_CLIENT_ERROR | 客服端错误     |
+
+
 
 # 情感观点挖掘
 
@@ -281,16 +294,15 @@ $response = $client->simnet('百度是个搜索公司', '谷歌是个搜索公�
 require_once 'AipNlp.php';
 
 // 定义常量
-const APP_ID = '000212'
-const API_KEY = '020947f506934fe5b39763080359f0f8';
-const SECRET_KEY = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiNlp
 $client = new AipNlp(APP_ID, API_KEY, SECRET_KEY);
 
 // 调用情感观点挖掘接口
 $response = $client->commentTagApi('百度是个搜索公司');
-
 ```
 
 如果还想增加一些自定义参数配置：
@@ -301,9 +313,9 @@ $response = $client->commentTagApi('百度是个搜索公司');
 require_once 'AipNlp.php';
 
 // 定义常量
-const APP_ID = '000212'
-const API_KEY = '020947f506934fe5b39763080359f0f8';
-const SECRET_KEY = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiNlp
 $client = new AipNlp(APP_ID, API_KEY, SECRET_KEY);
@@ -347,12 +359,5 @@ $response = $client->commentTagApi('你好百度', $option);
 | +raw_adj_begin_pos  | Int      | 词向量结果                 |
 | +degree_adv         | String   | 原始副词                  |
 | +degree_adv_pos     | Int      | 词向量结果                 |
-
-# 版本更新说明
-
-##
-
-* 首次发布
-
 
 

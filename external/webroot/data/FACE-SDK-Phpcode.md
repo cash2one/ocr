@@ -44,9 +44,9 @@ AipFace类是Optical Character Recognition的PHP SDK客户端，为使用Optical
 require_once 'AipFace.php';
 
 // 定义常量
-const APP_ID = '000212'
-const API_KEY = '020947f506934fe5b39763080359f0f8';
-const SECRET_KEY = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
 
 // 初始化AipFace对象
 $aipFace = new AipFace(APP_ID, API_KEY, SECRET_KEY);
@@ -70,9 +70,9 @@ $aipFace = new AipFace(APP_ID, API_KEY, SECRET_KEY);
 require_once 'AipFace.php';
 
 // 定义常量
-const APP_ID = '000212'
-const API_KEY = '020947f506934fe5b39763080359f0f8';
-const SECRET_KEY = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiBFR
 $client = new AipFace(APP_ID, API_KEY, SECRET_KEY);
@@ -87,9 +87,9 @@ $response = $client->detect(file_get_contents('face.jpg'));
 require_once 'AipFace.php';
 
 // 定义常量
-const APP_ID = '000212'
-const API_KEY = '020947f506934fe5b39763080359f0f8';
-const SECRET_KEY = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiBFR
 $client = new AipFace(APP_ID, API_KEY, SECRET_KEY);
@@ -157,12 +157,5 @@ $response = $client->detect(file_get_contents('face.jpg'), $option);
 | ++type                  | object   | 真实人脸/卡通人脸置信度                             |
 | +++human                | double   | 真实人脸置信度，[0, 1]                           |
 | +++cartoon              | double   | 卡通人脸置信度，[0, 1]                           |
-
-# 版本更新说明
-
-##
-
-* 首次发布
-
 
 

@@ -91,9 +91,3 @@ public void antiPorn(AipAntiporn client) {
 | +class_name  | String   | 分类结果名称，示例：一般色情              |
 | +probability | double   | 分类结果置信度，示例：0.89471650123596 |
 
-# 版本更新说明
-
-##
-
-* 第一版
-

@@ -1,12 +1,24 @@
 # 简介
 
+本文档主要针对API开发者，调用AI服务相关的API接口有两种调用方式，两种不同的调用方式采用相同的接口URL，区别在于请求方式和鉴权方法不一样，请求参数和返回结果一致。
+
+**请求消息体格式**
+
+API服务要求使用JSON格式的结构体来描述一个请求的具体内容, 然后通过urlencode格式化请求体。
+
+**请求返回格式**
+
+API服务均采用JSON格式的消息体作为响应返回的格式。
+
+# 调用方式一
+
 ## 请求URL数据格式
 
 向API服务地址使用POST发送请求，必须在URL中带上参数：
 
 **access_token:** 必须参数，参考“[Access Token获取](/docs#Beginner-Auth)”。
 
-​POST中参数按照API接口说明调用即可。
+POST中参数按照API接口说明调用即可。
 
 例如黄反识别API，使用HTTPS POST发送：
 
@@ -22,12 +34,43 @@ API服务要求使用JSON格式的结构体来描述一个请求的具体内容,
 
 API服务均采用JSON格式的消息体作为响应返回的格式。
 
+> **说明：**方式一鉴权使用的Access_token必须通过API Key和Secret Key获取。
+
+# 调用方式二
+
+## 请求头域内容
+
+黄反识别的API服务需要在请求的HTTP头域中包含以下信息：
+
+* host（必填）
+* x-bce-date （必填）
+* x-bce-request-id（选填）
+* authorization（必填）
+* content-type（选填）
+* content-length（选填）
+
+作为示例，以下是一个标准的请求头域内容:
+
+```http
+POST rest/2.0/antiporn/v1/detect? HTTP/1.1
+accept-encoding: gzip, deflate
+x-bce-date: 2015-03-24T13:02:00Z
+connection: keep-alive
+accept: */*
+host: aip.baidubce.com
+x-bce-request-id: 73c4e74c-3101-4a00-bf44-fe246959c05e
+content-type: application/x-www-form-urlencoded;
+authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z/1800/host;x-bce-date/994014d96b0eb26578e039fa053a4f9003425da4bfedf33f4790882fb4c54903
+```
+
+> **说明：**方式二鉴权使用的[API认证机制](https://cloud.baidu.com/doc/Reference/AuthenticationMechanism.html)authorization必须通过百度云的[AK/SK](https://cloud.baidu.com/doc/Reference/GetAKSK.html)生成。 
+
 
 # 错误信息格式
 
 若请求错误，服务器将返回的JSON文本包含以下参数：
 
-* **error_code：**错误码；关于错误码的详细信息请参考“[通用错误码](#通用错误码)和[业务相关错误码](#业务相关错误码)”。
+* **error_code：**错误码；关于错误码的详细信息请参考“[通用错误码](#通用错误码)”。
 
 * **error_msg：**错误描述信息，帮助理解和解决发生的错误。
 
@@ -80,37 +123,53 @@ API服务均采用JSON格式的消息体作为响应返回的格式。
 
 该请求用于鉴定图片的色情度。即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的色情度。目前支持5个维度：一般色情，一般正常，卡通色情，卡通正常和其他。
 
-**HTTP 方法**
+**调用方式一请求示例**
 
-   POST
+* HTTP 方法： POST
 
-**请求URL**
+* 请求URL： https://aip.baidubce.com/rest/2.0/antiporn/v1/detect
 
-https://aip.baidubce.com/rest/2.0/antiporn/v1/detect
+##### Header如下：
 
-**请求示例**
+| 参数           | 值                                 |
+| ------------ | --------------------------------- |
+| Content-Type | application/x-www-form-urlencoded |
 
+##### Body中数据如下：
+
+| 参数    | 值          |
+| ----- | ---------- |
+| image | 图像base64编码 |
+
+
+
+**调用方式二请求示例**
+
+```json
+POST /rest/2.0/antiporn/v1/detect HTTP/1.1
+
+x-bce-date: 2016-10-18T02: 20: 01Z,
+host: aip.baidubce.com,
+accept: */*,
+authorization: bce-auth-v1/fbf9f7889585498d8ba8a68da26cbb2e/2016-10-18T02: 20: 01Z/1800/host/6c7cb35358b5c870666d14588af648e8c941a8b2300becd97831803198ee7a6d
+
+image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 ```
-{
-    image=图像base64编码
-}
-```
+
 **请求参数**
 
 | 参数    | 类型     | 是否必须 | 说明                       |
 | ----- | ------ | ---- | ------------------------ |
-| image | string | 是    | 图像数据，base64编码。图片大小不超过1M。 |
+| image | string | 是    | 图像数据，base64编码。 |
 
 
 **返回示例**
 
 ```
 result: [
-    {"class_name": "一般色情", ""probability": 0.010549738071859}，
-    {"class_name": "一般正常", ""probability": 0.08985498547554}，
-    {"class_name": "卡通色情", ""probability": 0.0048787374980748}，
-    {"class_name": "卡通正常", ""probability": 0.89471650123596}，
-    {"class_name": "其他", ""probability": 0.0.010549738071859}
+    {"class_name": "色情", ""probability": 0.014619}，
+    {"class_name": "正常", ""probability": 0.171783}，
+    {"class_name": "性感", ""probability": 0.813598}
     ]
 ```
 
@@ -126,7 +185,7 @@ result: [
 
 | 字段          | 类型     | 是否必须 | 说明      | 示例               |
 | ----------- | ------ | ---- | ------- | ---------------- |
-| class_name  | string | 是    | 分类结果名称  | 一般色情             |
+| class_name  | string | 是    | 分类结果名称  | 色情               |
 | probability | double | 是    | 分类结果置信度 | 0.89471650123596 |
 
 
