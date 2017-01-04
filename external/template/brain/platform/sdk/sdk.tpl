@@ -321,7 +321,7 @@
                 </div>
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite"></i>
+                        <i class="sdk-language-sprite sdk-apple"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bs"></i>
                             <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu-Voice-SDK-iOS-1.6.4.zip">
@@ -340,7 +340,7 @@
                 </div>
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite"></i>
+                        <i class="sdk-language-sprite sdk-android"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bs"></i>
                             <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu-Voice-SDK-Android-1.6.2.zip">
@@ -400,7 +400,7 @@
                         <i class="sdk-language-sprite"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bs"></i>
-                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/s_2_InputMethod">
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/s_2_Navi">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -478,7 +478,7 @@
                 </div>
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite"></i>
+                        <i class="sdk-language-sprite sdk-android"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-ocr"></i>
                             <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu_TTS_Demo_1.1.2.apk">
@@ -500,7 +500,7 @@
                         <i class="sdk-language-sprite sdk-apple"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-ocr"></i>
-                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu_TTS_Demo_1.1.2.apk">
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu-TTS-SDK-iOS-1.1.3.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
