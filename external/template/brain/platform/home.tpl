@@ -507,25 +507,25 @@
         <ul class="video-list clear-float">
             <li>
                 <a href="http://www.chuanke.com/v7867982-208144-1278714.html" target="_blank">
-                    <img src="/ai_images/home/video-1.png">
+                    <img src="/ai_images/home/video-1.jpg">
                 </a>
                 <h5>百度语音基础介绍及应用场景</h5>
             </li>
             <li>
                 <a href="http://www.chuanke.com/v7867982-208539-1278740.html" target="_blank">
-                    <img src="/ai_images/home/video-2.png">
+                    <img src="/ai_images/home/video-2.jpg">
                 </a>
                 <h5>百度OCR基础介绍及应用场景</h5>
             </li>
             <li>
                 <a href="http://www.chuanke.com/v7867982-208540-1278742.html" target="_blank">
-                    <img src="/ai_images/home/video-3.png">
+                    <img src="/ai_images/home/video-3.jpg">
                 </a>
                 <h5>百度人脸技术基础介绍及引用场景</h5>
             </li>
             <li>
                 <a href="http://www.chuanke.com/v7867982-208173-1278732.html" target="_blank">
-                    <img src="/ai_images/home/video-4.png">
+                    <img src="/ai_images/home/video-4.jpg">
                 </a>
                 <h5>百度翻译产品介绍</h5>
             </li>
