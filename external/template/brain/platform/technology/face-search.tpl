@@ -336,7 +336,7 @@
         <h2>快速提交您的需求</h2>
         <p>您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</p>
         <div class="consult">
-            <a role="button" class="btn-primary large" href="ai@baidu.com">商务合作</a>
+            <a role="button" class="btn-primary large" href="mailto:ai@baidu.com">商务合作</a>
         </div>
     </div>
 </section>
