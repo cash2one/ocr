@@ -68,7 +68,7 @@ export default class SubscriptionModal extends Modal {
                 let value = input.val();
                 let reg = input.attr('data-regex');
 
-                if (!value || input.attr('data-dirty') !== 'true') {
+                if (!value) {
                     input.addClass('has-error');
                     form.find('.info-warning').html(input.attr('placeholder'));
                     return false;
