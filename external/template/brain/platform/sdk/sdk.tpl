@@ -211,31 +211,31 @@
         <a href="#sdk-category-bs">
             <div class="sdk-nav-item">
                 <div class="sdk-nav-icon sdk-nav-icon-bs"></div>
-                <span>百度语音BS</span>
+                <span class="sdk-nav-text">百度语音BS</span>
             </div>
         </a>
         <a href="#sdk-category-ocr">
             <div class="sdk-nav-item">
                 <div class="sdk-nav-icon sdk-nav-icon-ocr"></div>
-                <span>文字识别OCR</span>
+                <span class="sdk-nav-text">文字识别OCR</span>
             </div>
         </a>
         <a href="#sdk-category-bfr">
             <div class="sdk-nav-item">
                 <div class="sdk-nav-icon sdk-nav-icon-bfr"></div>
-                <span>人脸识别BFR</span>
+                <span class="sdk-nav-text">人脸识别BFR</span>
             </div>
         </a>
         <a href="#sdk-category-nlp">
             <div class="sdk-nav-item">
                 <div class="sdk-nav-icon sdk-nav-icon-nlp"></div>
-                <span>自然语言处理NLP</span>
+                <span class="sdk-nav-text">自然语言处理NLP</span>
             </div>
         </a>
         <a href="#sdk-category-anti">
             <div class="sdk-nav-item ">
                 <div class="sdk-nav-icon sdk-nav-icon-anti-porn"></div>
-                <span>黄反识别</span>
+                <span class="sdk-nav-text">黄反识别</span>
             </div>
         </a>
     </div>

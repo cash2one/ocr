@@ -167,9 +167,9 @@
   font-size: 16px;
 }
 .sdk-nav-item {
-  height: 45px;
-  line-height: 45px;
-  font-size: 12px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
 }
 .sdk-nav-item:hover {
   color: #0073eb;
@@ -182,7 +182,7 @@
   display: inline-block;
   background: url(/ai_images/sdk/icon-sprite.png) no-repeat;
   vertical-align: middle;
-  transform: scale(0.7);
+  transform: scale(0.5);
 }
 .sdk-nav-icon-bs {
   background-position: -5px -5px;
@@ -208,6 +208,9 @@
   background-position: -173px -5px;
   width: 32px;
   height: 32px;
+}
+.sdk-nav-text {
+  vertical-align: middle;
 }
 .sdk-main {
   width: 80%;
@@ -290,7 +293,7 @@
   color: #666;
 }
 .sdk-version {
-  padding-bottom: 8px;
+  padding-bottom: 2px;
   font-size: 12px;
   color: #666;
 }

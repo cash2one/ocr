@@ -17,7 +17,7 @@
 // 左侧导航title高度
 @nav-header-height: 45px;
 // 左侧导航条目高度
-@nav-item-height: 45px;
+@nav-item-height: 40px;
 
 /**
  * 下载条目部分变量
@@ -56,46 +56,52 @@
     font-size: @font-size-3;
 }
 
-// 左侧列表的一个选项
-.@{prefix}-nav-item {
-    height: @nav-item-height;
-    line-height: @nav-item-height;
-    font-size: @font-size-1;
+.@{prefix}-nav {
+    // 左侧列表的一个选项
+    &-item {
+        height: @nav-item-height;
+        line-height: @nav-item-height;
+        font-size: @font-size-2;
 
-    &:hover {
-        color: @blue;
-        cursor: pointer;
+        &:hover {
+            color: @blue;
+            cursor: pointer;
 
-        .sdk-nav-icon {
-            background-image: url(/ai_images/sdk/icon-sprite-active.png);
+            .sdk-nav-icon {
+                background-image: url(/ai_images/sdk/icon-sprite-active.png);
+            }
         }
     }
-}
 
-.@{prefix}-nav-icon {
-    display: inline-block;
-    background: url(/ai_images/sdk/icon-sprite.png) no-repeat;
-    vertical-align: middle;
-    transform: scale(0.7);
+    &-icon {
+        display: inline-block;
+        background: url(/ai_images/sdk/icon-sprite.png) no-repeat;
+        vertical-align: middle;
+        transform: scale(.5);
 
-    &-bs {
-        .nav-icon-sprite(-5px, -5px, 32px, 32px);
+        &-bs {
+            .nav-icon-sprite(-5px, -5px, 32px, 32px);
+        }
+
+        &-ocr {
+            .nav-icon-sprite(-47px, -5px, 32px, 32px);
+        }
+
+        &-bfr {
+            .nav-icon-sprite(-89px, -5px, 32px, 32px);
+        }
+
+        &-nlp {
+            .nav-icon-sprite(-131px, -5px, 32px, 32px);
+        }
+
+        &-anti-porn {
+            .nav-icon-sprite(-173px, -5px, 32px, 32px);
+        }
     }
 
-    &-ocr {
-        .nav-icon-sprite(-47px, -5px, 32px, 32px);
-    }
-
-    &-bfr {
-        .nav-icon-sprite(-89px, -5px, 32px, 32px);
-    }
-
-    &-nlp {
-        .nav-icon-sprite(-131px, -5px, 32px, 32px);
-    }
-
-    &-anti-porn {
-        .nav-icon-sprite(-173px, -5px, 32px, 32px);
+    &-text {
+        vertical-align: middle;
     }
 }
 
@@ -210,7 +216,7 @@
 
 // sdk版本
 .@{prefix}-version {
-    padding-bottom: 8px;
+    padding-bottom: 2px;
     font-size: @font-size-1;
     color: @font-gray;
 }
