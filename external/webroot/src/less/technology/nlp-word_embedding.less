@@ -45,7 +45,7 @@
 .@{prefix}-feature {
     &-title {
         padding: 30px 0;
-        font-size: 25px;
+        font-size: 30px;
         text-align: center;
     }
 
@@ -53,49 +53,64 @@
     &-container {
         margin: 0 -@feature-padding / 2 40px;
         font-size: 0;
-        text-align: center;
     }
 
-    // 特色条目
-    &-item {
+    &-item-container {
         display: inline-block;
         width: 33.333%;
         box-sizing: border-box;
         vertical-align: top;
         padding: 10px @feature-padding / 2 0;
+    }
+
+    // 特色条目
+    &-item {
+        position: relative;
+        padding: 110px 0 20px;
 
         &:hover {
+            opacity: 1;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
     }
 
     // 特色图标
     &-icon {
+        position: absolute;
+        top: 0;
+        left: 50%;
         display: block;
-        background: url("../../../ai_images/technology/nlp-dr/icon.png") no-repeat center;
-        background-size: 95px 134px;
-        margin: 0 auto;
+        margin: -25px auto -25px -80px;
+        transform: scale(.5);
+        transform-origin: center;
+        background: url(/ai_images/technology/nlp-word_embedding/feature.png) no-repeat center;
 
         &.feature-1 {
-            .feature-sprite(-5px, -5px, 80px, 80px);
+            .feature-sprite(-5px, -5px, 160px, 160px);
+        }
+
+        &.feature-2 {
+            .feature-sprite(-175px, -5px, 160px, 160px);
+        }
+
+        &.feature-3 {
+            .feature-sprite(-345px, -5px, 160px, 160px);
         }
     }
 
     // 特色名称
     &-name {
-        padding: 15px 0;
+        padding: 0 0 15px;
         text-align: center;
         font-size: @font-size-4;
     }
 
     // 特色信息
     &-info {
-        height: 150px;
-        padding: 0 5px;
+        padding: 0 23px;
         font-size: @font-size-2;
         line-height: 25px;
         color: @dark-gray;
-        text-align: left;
     }
 }
 
@@ -105,7 +120,6 @@
     height: 1px;
     background-color: #efefef;
 }
-
 
 // 特色图标sprite
 .feature-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
@@ -118,7 +132,9 @@
 .scenario-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
     width: @width;
     height: @height;
-    background-position: @x @y;
+    background: url(/ai_images/technology/nlp-word_embedding/scenario.png) no-repeat @x @y;
+    transform: scale(.5);
+    transform-origin: 0 0;
 }
 
 .function-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
@@ -130,19 +146,19 @@
 .ai-platform {
     .@{prefix}-scenario {
         padding-bottom: 40px;
+        text-align: center;
     }
 }
 
 // 使用场景
 .@{prefix}-scenario {
     font-size: 0;
-    text-align: center;
     padding-bottom: 40px;
 
     // 使用场景title
     &-title {
         padding: 30px 0;
-        font-size: 25px;
+        font-size: 30px;
         text-align: center;
     }
 
@@ -150,7 +166,8 @@
     &-item {
         display: inline-block;
         width: 33.333%;
-        padding: 25px @scenario-padding / 2 0;
+        margin-bottom: 10px;
+        padding: 20px @scenario-padding / 2;
         box-sizing: border-box;
         vertical-align: top;
         font-size: 0;
@@ -166,51 +183,53 @@
         padding: 0 0 10px;
     }
 
-    &-icon,
     &-intro {
         display: inline-block;
         vertical-align: top;
+        text-align: left;
     }
 
     // 使用场景图标
-    &-icon {
-        width: 25%;
+    &-icon-container {
+        width: 15%;
         display: inline-block;
-        background: url(../../../ai_images/technology/nlp-dr/icon.png) no-repeat;
-        background-size: 95px 134px;
+    }
 
-        &.scenario-1 {
-            .scenario-sprite(-5px, -89px, 40px, 40px);
-        }
+    &-icon-1 {
+        .scenario-sprite(-5px, -5px, 80px, 80px);
+    }
 
-        &.scenario-2 {
-            .scenario-sprite(-50px, -89px, 40px, 40px);
-        }
+    &-icon-2 {
+        .scenario-sprite(-95px, -5px, 80px, 80px);
+    }
 
+    &-icon-3 {
+        .scenario-sprite(-185px, -5px, 80px, 80px);
+    }
+
+    &-icon-4 {
+        .scenario-sprite(-275px, -5px, 80px, 80px);
+    }
+
+    &-icon-5 {
+        .scenario-sprite(-365px, -5px, 80px, 80px);
     }
 
     // 使用场景介绍信息容器
     &-intro {
         width: 85%;
         box-sizing: border-box;
-        padding: 0 0 0 20px;
-    }
-
-    &-header {
-        padding: 10px 0;
-        font-size: @font-size-4;
-        text-align: left;
+        padding: 0 0 0 5px;
     }
 
     // 使用场景介绍信息详情
     &-detail {
-        height: 120px;
         font-size: @font-size-2;
         line-height: 25px;
         color: @dark-gray;
-        text-align: left;
     }
 }
+
 
 .tech-section{
     &.tech-case {

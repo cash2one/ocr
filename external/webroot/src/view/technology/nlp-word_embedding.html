@@ -23,10 +23,26 @@
 <div class="container">
     <div class="nlp-feature-container">
         <div class="nlp-feature-title">技术特色</div>
-        <div class="nlp-feature-item">
-            <div class="nlp-feature-icon feature-1"></div>
-            <div class="nlp-feature-name">粒度更灵活</div>
-            <div class="nlp-feature-info">分词输出混排和基本词两种粒度，用户可以根据具体应用场景选择对应粒度；词性标注结合了字模型与词模型的优势，能够进一步优化分词粒度，从而既保证了基本词汇的原子性，又保证了大粒度词汇，对领域新词、专有名词的识别尤其有效</div>
+        <div class="nlp-feature-item-container">
+            <div class="nlp-feature-item">
+                <div class="nlp-feature-icon feature-1"></div>
+                <div class="nlp-feature-name">大数据</div>
+                <div class="nlp-feature-info">使用百度大规模网页数据进行模型训练，样本数据丰富</div>
+            </div>
+        </div>
+        <div class="nlp-feature-item-container">
+            <div class="nlp-feature-item">
+                <div class="nlp-feature-icon feature-2"></div>
+                <div class="nlp-feature-name">深度学习</div>
+                <div class="nlp-feature-info">基于深度学习技术建立词向量表示模型</div>
+            </div>
+        </div>
+        <div class="nlp-feature-item-container">
+            <div class="nlp-feature-item">
+                <div class="nlp-feature-icon feature-3"></div>
+                <div class="nlp-feature-name">精度高</div>
+                <div class="nlp-feature-info">词向量精度高，能够准确描述词和词之间的相似度</div>
+            </div>
         </div>
     </div>
 </div>
@@ -34,17 +50,21 @@
 <div class="container nlp-scenario">
     <div class="nlp-scenario-title">应用场景</div>
     <div class="nlp-scenario-item">
-        <div class="nlp-scenario-icon scenario-1"></div>
+        <div class="nlp-scenario-icon-container">
+            <div class="nlp-scenario-icon-1"></div>
+        </div>
         <div class="nlp-scenario-intro">
-            <div class="nlp-scenario-header">情感分析</div>
-            <div class="nlp-scenario-detail">输入的文本内容首先进行分词处理，然后通过词性标注识别带有感情色彩的关键词、辅助情感分析算法用户评论的极性，最终得到用户对事物的观点和褒贬分类</div>
+            <div class="nlp-scenario-header">标注数据比较少的DNN任务</div>
+            <div class="nlp-scenario-detail">当DNN任务的标注数据量比较少的时候，可以用已训练好的词向量作为模型的初始化参数，模型效果一般会优于随机初始化的词向量。</div>
         </div>
     </div>
     <div class="nlp-scenario-item">
-        <div class="nlp-scenario-icon scenario-2"></div>
+        <div class="nlp-scenario-icon-container">
+            <div class="nlp-scenario-icon-2"></div>
+        </div>
         <div class="nlp-scenario-intro">
-            <div class="nlp-scenario-header">语音助手</div>
-            <div class="nlp-scenario-detail">用户客户身份认证，直播实名认证等场景，通过分词和词性标注，分析语音命令中的关键名词、动词、数量、时间，准确理解命令的含义，提高用户体验</div>
+            <div class="nlp-scenario-header">近似词挖掘</div>
+            <div class="nlp-scenario-detail">通过词向量中的空间距离可以判断两个词在语义、语法上的相似度，因此可以挖掘出当前词的近似词。</div>
         </div>
     </div>
 </div>
