@@ -185,7 +185,10 @@
 }
 .video-poster {
   height: 150px;
-  background-color: green;
+}
+.video-poster.voice {
+  background: url("../../../ai_images/support/video/voice.png") no-repeat bottom center;
+  background-size: cover;
 }
 .video-intro-container {
   padding: 12px 8px;

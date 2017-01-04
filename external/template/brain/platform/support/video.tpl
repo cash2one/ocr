@@ -216,7 +216,7 @@
             <div class="video-item-container">
                 <div class="video-item">
                     <a href="http://www.chuanke.com/v7867982-208144-1278714.html">
-                        <div class="video-poster"></div>
+                        <div class="video-poster voice"></div>
                         <div class="video-intro-container">
                             <div class="video-intro">百度语音基础介绍及应用场景</div>
                         </div>
