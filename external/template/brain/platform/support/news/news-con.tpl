@@ -213,13 +213,23 @@
 <section class="container news-main">
     <div class="news-title">{%$data.title%}</div>
     <div class="news-info-container">
-        <div class="news-date">{%$data.time%}</div>
+        <div class="news-date" id="news-date">{%$data.time%}</div>
         <div class="news-author">{%$data.author%}</div>
         <div class="news-view-count">{%$data.pv%}次浏览</div>
     </div>
     <hr class="news-info-split">
     <div class="news-content">
         {%$data.content%}
+    </div>
+</section>
+
+<section class="tech-section get-started">
+    <div class="container">
+        <h2>现在注册，即享免费试用</h2>
+        <p>结合百度人工智能技术为您提供免费的技术应用，结合百度人工智能技术为您提供免费的技术应用</p>
+        <div>
+            <a role="button" class="btn-primary large" href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">免费试用</a>
+        </div>
     </div>
 </section>
 
