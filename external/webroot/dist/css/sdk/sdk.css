@@ -362,29 +362,35 @@
   top: 25px;
   left: 15px;
   background: url(/ai_images/sdk/category-icon.png) no-repeat;
+  background-size: 440px 75px;
 }
 .sdk-category-icon.sdk-ocr {
-  background-position: -5px -5px;
-  width: 72px;
+  background-position: -142.5px -2.5px;
+  width: 70px;
   height: 70px;
 }
 .sdk-category-icon.sdk-nlp {
-  background-position: -87px -5px;
-  width: 72px;
+  background-position: -292.5px -2.5px;
+  width: 70px;
   height: 70px;
 }
 .sdk-category-icon.sdk-anti {
-  background-position: -5px -85px;
-  width: 72px;
+  background-position: -367.5px -2.5px;
+  width: 70px;
   height: 70px;
 }
 .sdk-category-icon.sdk-bfr {
-  background-position: -87px -85px;
-  width: 72px;
+  background-position: -217.5px -2.5px;
+  width: 70px;
   height: 70px;
 }
 .sdk-category-icon.sdk-bs {
-  background-position: -169px -5px;
+  background-position: -68.5px -2.5px;
+  width: 70px;
+  height: 70px;
+}
+.sdk-category-icon.sdk-bs-package {
+  background-position: -2.5px -2.5px;
   width: 60px;
   height: 59px;
 }

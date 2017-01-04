@@ -423,7 +423,7 @@
                     <div class="sdk-item">
                         <i class="sdk-language-sprite sdk-android"></i>
                         <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-ocr"></i>
+                            <i class="sdk-category-icon sdk-bs"></i>
                             <a href="http://bos.nj.bpc.baidu.com/v1/audio/bd_speech_sdk_tts_v2.2.9.20161020_154fa02_release.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
@@ -442,7 +442,7 @@
                     <div class="sdk-item">
                         <i class="sdk-language-sprite sdk-apple"></i>
                         <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-ocr"></i>
+                            <i class="sdk-category-icon sdk-bs"></i>
                             <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu_TTS_Combine_SDK_iOS.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
@@ -461,7 +461,7 @@
                     <div class="sdk-item">
                         <i class="sdk-language-sprite"></i>
                         <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-ocr"></i>
+                            <i class="sdk-category-icon sdk-bs"></i>
                             <a href="http://yuyin.baidu.com/file/download/1181">
                                 <div class="sdk-download-button">下载</div>
                             </a>
@@ -480,7 +480,7 @@
                     <div class="sdk-item">
                         <i class="sdk-language-sprite sdk-android"></i>
                         <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-ocr"></i>
+                            <i class="sdk-category-icon sdk-bs"></i>
                             <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu_TTS_Demo_1.1.2.apk">
                                 <div class="sdk-download-button">下载</div>
                             </a>
@@ -499,7 +499,7 @@
                     <div class="sdk-item">
                         <i class="sdk-language-sprite sdk-apple"></i>
                         <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-ocr"></i>
+                            <i class="sdk-category-icon sdk-bs"></i>
                             <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu-TTS-SDK-iOS-1.1.3.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
@@ -518,7 +518,7 @@
                     <div class="sdk-item">
                         <i class="sdk-language-sprite sdk-android"></i>
                         <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-ocr"></i>
+                            <i class="sdk-category-icon sdk-bs"></i>
                             <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu-TTS-SDK-Android-1.1.3.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
