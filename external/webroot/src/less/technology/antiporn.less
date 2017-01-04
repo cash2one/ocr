@@ -41,6 +41,7 @@
           opacity: 1;
           -webkit-transition: opacity 0.3s ease-out;
              -moz-transition: opacity 0.3s ease-out;
+              -ms-transition: opacity 0.3s ease-out;
                -o-transition: opacity 0.3s ease-out;
                   transition: opacity 0.3s ease-out;
           &:nth-child(1) {
@@ -66,6 +67,7 @@
           .icon(url('../../../ai_images/technology/antiporn/intro-case-1.png'), -602px, -310px);
           -webkit-transition: top 3s ease-out;
              -moz-transition: top 3s ease-out;
+              -ms-transition: top 3s ease-out;
                -o-transition: top 3s ease-out;
                   transition: top 3s ease-out;
         }
@@ -74,6 +76,7 @@
           top: 100%;
           -webkit-transition-delay: 0.3s;
              -moz-transition-delay: 0.3s;
+              -ms-transition-delay: 0.3s;
                -o-transition-delay: 0.3s;
                   transition-delay: 0.3s;
         }
@@ -89,6 +92,7 @@
           opacity: 0;
           -webkit-transition: opacity 0.3s ease-out;
              -moz-transition: opacity 0.3s ease-out;
+              -ms-transition: opacity 0.3s ease-out;
                -o-transition: opacity 0.3s ease-out;
                   transition: opacity 0.3s ease-out;
         }
@@ -107,6 +111,7 @@
           opacity: 1;
           -webkit-transition-delay: 3.3s;
              -moz-transition-delay: 3.3s;
+              -ms-transition-delay: 3.3s;
                -o-transition-delay: 3.3s;
                   transition-delay: 3.3s;
         }
@@ -228,10 +233,12 @@
             top: 50%;
             -webkit-transition: opacity 0.3s ease-out;
                -moz-transition: opacity 0.3s ease-out;
+                -ms-transition: opacity 0.3s ease-out;
                  -o-transition: opacity 0.3s ease-out;
                     transition: opacity 0.3s ease-out;
             -webkit-transform: translate(-50%, -50%);
                -moz-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
                  -o-transform: translate(-50%, -50%);
                     transform: translate(-50%, -50%);
           }
@@ -270,6 +277,14 @@
               }
               to {
                 -moz-transform: rotate(360deg);
+              }
+            }
+            @-ms-keyframes uploading {
+              from {
+                -ms-transform: rotate(0deg);
+              }
+              to {
+                -ms-transform: rotate(360deg);
               }
             }
             @-o-keyframes uploading {

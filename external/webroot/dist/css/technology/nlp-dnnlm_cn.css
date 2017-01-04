@@ -48,6 +48,7 @@
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: all .1s linear;
   -moz-transition: all .1s linear;
+  -ms-transition: all .1s linear;
   -o-transition: all .1s linear;
   transition: all .1s linear;
   display: inline-block;
@@ -154,6 +155,7 @@
   content: "";
   -webkit-transition: all .1s linear;
   -moz-transition: all .1s linear;
+  -ms-transition: all .1s linear;
   -o-transition: all .1s linear;
   transition: all .1s linear;
   display: inline-block;
@@ -374,6 +376,7 @@
   top: 0;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
 }
@@ -406,6 +409,7 @@
   white-space: nowrap;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
@@ -632,11 +636,17 @@
   -o-animation-delay: 0;
   -o-animation-iteration-count: 1;
   -o-animation-timing-function: ease-in;
+  -ms-animation-name: scanning;
+  -ms-animation-duration: 1s;
+  -ms-animation-delay: 0;
+  -ms-animation-iteration-count: 1;
+  -ms-animation-timing-function: ease-in;
 }
 .tech-section.tech-intro .intro-demo.scanned > li:nth-child(1) .demo-score > span {
   opacity: 1;
   -webkit-transition: opacity 300ms ease 1s;
   -moz-transition: opacity 300ms ease 1s;
+  -ms-transition: opacity 300ms ease 1s;
   -o-transition: opacity 300ms ease 1s;
   transition: opacity 300ms ease 1s;
 }
@@ -664,11 +674,17 @@
   -o-animation-delay: 1s;
   -o-animation-iteration-count: 1;
   -o-animation-timing-function: ease-in;
+  -ms-animation-name: scanning;
+  -ms-animation-duration: 1s;
+  -ms-animation-delay: 1s;
+  -ms-animation-iteration-count: 1;
+  -ms-animation-timing-function: ease-in;
 }
 .tech-section.tech-intro .intro-demo.scanned > li:nth-child(2) .demo-score > span {
   opacity: 1;
   -webkit-transition: opacity 300ms ease 2s;
   -moz-transition: opacity 300ms ease 2s;
+  -ms-transition: opacity 300ms ease 2s;
   -o-transition: opacity 300ms ease 2s;
   transition: opacity 300ms ease 2s;
 }
@@ -696,17 +712,24 @@
   -o-animation-delay: 2s;
   -o-animation-iteration-count: 1;
   -o-animation-timing-function: ease-in;
+  -ms-animation-name: scanning;
+  -ms-animation-duration: 1s;
+  -ms-animation-delay: 2s;
+  -ms-animation-iteration-count: 1;
+  -ms-animation-timing-function: ease-in;
 }
 .tech-section.tech-intro .intro-demo.scanned > li:nth-child(3) .demo-score > span {
   opacity: 1;
   -webkit-transition: opacity 300ms ease 3s;
   -moz-transition: opacity 300ms ease 3s;
+  -ms-transition: opacity 300ms ease 3s;
   -o-transition: opacity 300ms ease 3s;
   transition: opacity 300ms ease 3s;
 }
 .tech-section.tech-intro .intro-demo.scanned > li.bad .demo-score {
   -webkit-transition: color 300ms ease 3s;
   -moz-transition: color 300ms ease 3s;
+  -ms-transition: color 300ms ease 3s;
   -o-transition: color 300ms ease 3s;
   transition: color 300ms ease 3s;
   color: #ff6666;
@@ -714,6 +737,7 @@
 .tech-section.tech-intro .intro-demo.scanned > li.bad .demo-text-option {
   -webkit-transition: color 300ms ease 3s;
   -moz-transition: color 300ms ease 3s;
+  -ms-transition: color 300ms ease 3s;
   -o-transition: color 300ms ease 3s;
   transition: color 300ms ease 3s;
   color: #ff6666;
@@ -721,6 +745,7 @@
 .tech-section.tech-intro .intro-demo.scanned > li.good .demo-score {
   -webkit-transition: color 300ms ease 3s;
   -moz-transition: color 300ms ease 3s;
+  -ms-transition: color 300ms ease 3s;
   -o-transition: color 300ms ease 3s;
   transition: color 300ms ease 3s;
   color: #47d301;
@@ -732,6 +757,7 @@
   opacity: 1;
   -webkit-transition: opacity 300ms ease 3.5s;
   -moz-transition: opacity 300ms ease 3.5s;
+  -ms-transition: opacity 300ms ease 3.5s;
   -o-transition: opacity 300ms ease 3.5s;
   transition: opacity 300ms ease 3.5s;
 }
@@ -739,6 +765,7 @@
   opacity: 1;
   -webkit-transition: opacity 300ms ease 3.5s;
   -moz-transition: opacity 300ms ease 3.5s;
+  -ms-transition: opacity 300ms ease 3.5s;
   -o-transition: opacity 300ms ease 3.5s;
   transition: opacity 300ms ease 3.5s;
 }
