@@ -213,7 +213,7 @@
 <section class="container news-main">
     <div class="news-title">{%$data.title%}</div>
     <div class="news-info-container">
-        <div class="news-date" id="news-date"></div>
+        <div class="news-date">{%$data.time%}</div>
         <div class="news-author">{%$data.author%}</div>
         <div class="news-view-count">{%$data.pv%}次浏览</div>
     </div>
@@ -231,11 +231,6 @@
         var year = dateObj.getFullYear();
         var month = dateObj.getMonth() + 1;
         var date = dateObj.getDate();
-
-        newsDateContainer.innerHTML = '[' + year + '-' + month + '-' + date + ']';
-    })();
-</script>
-
 </div>
 <aside class="aside-action">
     <ul>
