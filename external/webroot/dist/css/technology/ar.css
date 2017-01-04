@@ -507,7 +507,7 @@
     padding-left: 100px !important;
   }
 }
-.tech-section.tech-intro h2 {
+.tech-section.tech-intro .container > h2 {
   margin-bottom: 60px;
 }
 .tech-section.tech-intro .intro-item {
