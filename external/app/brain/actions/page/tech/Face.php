@@ -24,6 +24,7 @@ class Action_Face extends Ap_Action_Abstract {
         $inputKeys = array_keys($arrInput);
         $tech = $inputKeys[0];
         if (in_array($tech, $techList)){
+            $arrPageInfo['page'] = substr(strtolower(__CLASS__), 7).'_'.$tech;
             Brain_Output::htmlOutput(
                 $arrPageInfo, 
                 "brain/platform/technology/$class_name-$tech.tpl"
