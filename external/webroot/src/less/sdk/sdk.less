@@ -69,6 +69,7 @@
         height: @nav-item-height;
         line-height: @nav-item-height;
         font-size: @font-size-2;
+        padding-left: 30px;
 
         &:hover {
             color: @blue;
@@ -307,25 +308,30 @@
     top: 25px;
     left: 15px;
     background: url(/ai_images/sdk/category-icon.png) no-repeat;
+    background-size: 440px 75px;
 
     &.@{prefix}-ocr {
-        .category-stitches-sprite(-5px, -5px, 72px, 70px);
+        .category-stitches-sprite(-142.5px, -2.5px, 70px, 70px);
     }
 
     &.@{prefix}-nlp {
-        .category-stitches-sprite(-87px, -5px, 72px, 70px);
+        .category-stitches-sprite(-292.5px, -2.5px, 70px, 70px);
     }
 
     &.@{prefix}-anti {
-        .category-stitches-sprite(-5px, -85px, 72px, 70px);
+        .category-stitches-sprite(-367.5px, -2.5px, 70px, 70px);
     }
 
     &.@{prefix}-bfr {
-        .category-stitches-sprite(-87px, -85px, 72px, 70px);
+        .category-stitches-sprite(-217.5px, -2.5px, 70px, 70px);
     }
 
     &.@{prefix}-bs {
-        .category-stitches-sprite(-169px, -5px, 60px, 59px);
+        .category-stitches-sprite(-68.5px, -2.5px, 70px, 70px);
+    }
+
+    &.@{prefix}-bs-package {
+        .category-stitches-sprite(-2.5px, -2.5px, 60px, 59px);
     }
 }
 
