@@ -32,13 +32,18 @@
         font-size: 0;
     }
 
-    // 特色条目
-    &-item {
+    &-item-container {
         display: inline-block;
         width: 33.333%;
         box-sizing: border-box;
         vertical-align: top;
         padding: 10px @feature-padding / 2 0;
+    }
+
+    // 特色条目
+    &-item {
+        position: relative;
+        padding: 110px 0 20px;
 
         &:hover {
             opacity: 1;
@@ -48,11 +53,14 @@
 
     // 特色图标
     &-icon {
+        position: absolute;
+        top: 0;
+        left: 50%;
         display: block;
-        background: url(/ai_images/technology/nlp-lexer/feature.png) no-repeat center;
-        margin: -25px auto;
+        margin: -25px auto -25px -80px;
         transform: scale(.5);
         transform-origin: center;
+        background: url(/ai_images/technology/nlp-lexer/feature.png) no-repeat center;
 
         &.feature-1 {
             .feature-sprite(-5px, -5px, 160px, 160px);
@@ -69,16 +77,15 @@
 
     // 特色名称
     &-name {
-        padding: 15px 0;
+        padding: 0 0 15px;
         text-align: center;
         font-size: @font-size-4;
     }
 
     // 特色信息
     &-info {
-        height: 150px;
-        padding: 0 5px;
-        font-size: @font-size-1;
+        padding: 0 23px;
+        font-size: @font-size-2;
         line-height: 25px;
         color: @dark-gray;
     }
@@ -135,7 +142,8 @@
     &-item {
         display: inline-block;
         width: 33.333%;
-        padding: 25px @scenario-padding / 2 0;
+        margin-bottom: 10px;
+        padding: 20px @scenario-padding / 2;
         box-sizing: border-box;
         vertical-align: top;
         font-size: 0;
@@ -191,7 +199,6 @@
 
     // 使用场景介绍信息详情
     &-detail {
-        height: 120px;
         font-size: @font-size-2;
         line-height: 25px;
         color: @dark-gray;
