@@ -13,6 +13,9 @@
     <![endif]-->
     <link rel="shortcut icon" href="/ai_images/favicon-32.ico">
     <link rel="stylesheet" href="/ai_dist/css/base.css">
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/ai_dist/css/ie9.css">
+    <![endif]-->
 <link rel="stylesheet" href="/ai_dist/css/technology/nlp-simnet.css"></head>
 <body class="ai-platform">
 <header class="header-nav">

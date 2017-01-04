@@ -13,6 +13,9 @@
     <![endif]-->
     <link rel="shortcut icon" href="/ai_images/favicon-32.ico">
     <link rel="stylesheet" href="/ai_dist/css/base.css">
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/ai_dist/css/ie9.css">
+    <![endif]-->
 <link rel="stylesheet" href="/ai_dist/css/technology/face-detect.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
@@ -249,7 +252,7 @@
                     </div>
                     <div class="demo-data">
                         <label for="demo-photo-url" style="display:none"></label>
-                        <input type="text" id="demo-photo-url" placeholder="请输入网络图片URL" value="请输入网络图片URL">
+                        <input type="text" id="demo-photo-url" placeholder="请输入网络图片URL">
                         <button type="button" class="btn-primary" id="scan-photo">检测</button>
                         <span>或</span>
                         <label id="demo-photo-upload"><input type="file">本地上传</label>

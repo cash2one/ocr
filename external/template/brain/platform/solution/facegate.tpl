@@ -13,6 +13,9 @@
     <![endif]-->
     <link rel="shortcut icon" href="/ai_images/favicon-32.ico">
     <link rel="stylesheet" href="/ai_dist/css/base.css">
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/ai_dist/css/ie9.css">
+    <![endif]-->
 <link rel="stylesheet" href="/ai_dist/css/solution/facegate.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
@@ -208,7 +211,7 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>人脸闸机解决方案</h1>
-        <p>提供完整的人脸身份核查解决方案，实现活体检测、拍照人脸识别、身份证人脸比对验证等多个业务环节，帮您规避业务风险，提升产品智能体验。</p>
+        <p>提供软硬件结合的人脸验证闸机解决方案，提供高精度、快速、海量人脸库的刷脸通行方案，帮助您打造更智能、更安全、更可靠的安防管理。</p>
         <div class="consult">
             <a role="button" class="btn-primary media">商务合作</a>
         </div>
