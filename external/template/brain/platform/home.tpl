@@ -67,10 +67,10 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>色情识别</span>
+                                <span>黄反识别</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/antiporn">色情识别</a></li>
+                                <li><a href="/tech/antiporn">黄反识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -135,7 +135,7 @@
                                 <span>AR增强现实</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/ar">AR增强现实</a></li>
+                                <li><a href="/tech/ar">AR内容平台</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -219,14 +219,14 @@
             <h1>人脸识别</h1>
             <p>快速检测人脸、定位五官关键点，准确识别多种人脸属性，为您提供多场景高精度的人脸识别服务。</p>
             <div>
-                <a role="button" class="get-started">免费试用1</a>
+                <a role="button" class="get-started" href="/tech/face/detect">了解详情</a>
             </div>
         </li>
         <li>
             <h1>文字识别</h1>
             <p>基于业界领先的深度学习技术<br>为您提供多场景、多语种、高精度的整体文字检测和识别服务</p>
             <div>
-                <a role="button" class="get-started">免费试用2</a>
+                <a role="button" class="get-started" href="/tech/ocr/general">了解详情</a>
             </div>
         </li>
         <li>
@@ -234,7 +234,7 @@
             <p>基于大数据和用户行为的分词、词性标注、命名实体识别<br>
                 定位基本语言元素，消除歧义，支撑自然语言的准确理解</p>
             <div>
-                <a role="button" class="get-started">免费试用2</a>
+                <a role="button" class="get-started" href="/tech/nlp/lexical">了解详情</a>
             </div>
         </li>
         <li>
@@ -242,7 +242,7 @@
             <p>人们通过增强现实技术看到更多，更远，更奇妙的世界<br>
                 颠覆认知，获取新知，检索比真实更真实的世界</p>
             <div>
-                <a role="button" class="get-started">免费试用2</a>
+                <a role="button" class="get-started" href="/tech/ar">了解详情</a>
             </div>
         </li>
     </ul>
@@ -416,7 +416,7 @@
                     <hr>
                     <div class="service-tech-list clear-float">
                         <ul class="inline-list">
-                            <li><a href="/tech/ar">AR增强现实</a></li>
+                            <li><a href="/tech/ar">AR内容平台</a></li>
                         </ul>
                     </div>
                 </div>
