@@ -4,7 +4,7 @@
  */
 'use strict';
 
-import $ from 'jquery';
+import 'jquery';
 import '../../bower_components/jquery.placeholder/jquery.placeholder.min';
 import News from '../component/widget/news';
 import ConsultationModal from '../component/widget/consultationModal';
