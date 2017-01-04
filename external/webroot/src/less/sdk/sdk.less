@@ -84,8 +84,8 @@
     &-icon {
         display: inline-block;
         background: url(/ai_images/sdk/icon-sprite.png) no-repeat;
+        background-size: 105px 21px;
         vertical-align: middle;
-        transform: scale(.5);
 
         &-bs {
             .nav-icon-sprite(-5px, -5px, 32px, 32px);
@@ -265,18 +265,18 @@
 
 // mixin
 .language-stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
-    width: @width;
-    height: @height;
-    background-position: @x @y;
+    width: @width / 2;
+    height: @height / 2;
+    background-position: @x / 2 @y / 2;
 }
 
 .@{prefix}-language-sprite {
     display: block;
     position: absolute;
-    right: -2px;
-    top: -2px;
+    right: 5px;
+    top: 5px;
     background: url(/ai_images/sdk/language.png) no-repeat;
-    transform: scale(.5);
+    background-size: 92px 23px;
     transform-origin: center;
 
     &.@{prefix}-android {
@@ -336,7 +336,7 @@
 }
 
 .nav-icon-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
-    background-position: @x @y;
-    width: @width;
-    height: @height;
+    background-position: @x / 2 @y / 2;
+    width: @width / 2;
+    height: @height / 2;
 }
