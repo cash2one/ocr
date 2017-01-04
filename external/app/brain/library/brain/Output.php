@@ -29,6 +29,22 @@ class Brain_Output {
         header('Content-Type: text/html; charset=UTF-8');
         $tpl = Bd_TplFactory::getInstance();
         $arrPageInfo['userInfo'] = Brain_User::getUserInfo();
+
+        $pageConf = Bd_Conf::getAppConf('page_'.$arrPageInfo['page']);
+        if(!empty($pageConf))
+        {
+            $arrPageInfo['title'] = $pageConf['title'];
+            $arrPageInfo['keyword'] = $pageConf['keyword'];
+            $arrPageInfo['description'] = $pageConf['description'];
+        }
+        else
+        {
+            $pageConf = Bd_Conf::getAppConf('page_default');
+            $arrPageInfo['title'] = $pageConf['title'];
+            $arrPageInfo['keyword'] = $pageConf['keyword'];
+            $arrPageInfo['description'] = $pageConf['description'];
+        }
+
         $tpl->assign($arrPageInfo);
         $strEcho = $tpl->fetch($strTpl);
         echo $strEcho;

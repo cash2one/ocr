@@ -17,6 +17,7 @@ class Action_Home extends Ap_Action_Abstract {
 
     public function execute() {
         $arrPageInfo['messagelist'] = Bd_Conf::getAppConf('messagelist');
+        $arrPageInfo['page'] = substr(strtolower(__CLASS__), 7);
         Brain_Output::htmlOutput(
             $arrPageInfo, 
             'brain/platform/home.tpl'

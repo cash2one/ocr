@@ -15,6 +15,7 @@
 class Action_Robot extends Ap_Action_Abstract {
 
     public function execute() {
+        $arrPageInfo['page'] = substr(strtolower(__CLASS__), 7);
         Brain_Output::htmlOutput(
             $arrPageInfo, 
             'brain/platform/solution/robot.tpl'

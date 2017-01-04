@@ -53,6 +53,7 @@ class Action_News extends Ap_Action_Abstract {
             }
             //Brain_Output::jsonOutput($arrRet);
             //Brain_Output::htmlOutput($arrRet, 'brain/page/news/detail.tpl');
+            $arrRet['page'] = substr(strtolower(__CLASS__), 7);
             Brain_Output::htmlOutput($arrRet, 'brain/platform/support/news/news-con.tpl');
         } else if ('delete' === $strAction) {
             // new
@@ -123,7 +124,9 @@ class Action_News extends Ap_Action_Abstract {
             echo $strRet;
         } else {
             //Brain_Output::htmlOutput(array(), 'brain/page/news/news.tpl');
-            Brain_Output::htmlOutput(array(), 'brain/platform/support/news/news-list.tpl');
+            $arrRet = array();
+            $arrRet['page'] = substr(strtolower(__CLASS__), 7);
+            Brain_Output::htmlOutput($arrRet, 'brain/platform/support/news/news-list.tpl');
         }
     }
 }
