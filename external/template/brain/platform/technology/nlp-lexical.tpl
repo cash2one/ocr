@@ -272,7 +272,7 @@
         </div>
     </div>
 </div>
-
+<hr class="nlp-section-border">
 <div class="container">
     <div class="nlp-feature-container">
         <div class="nlp-feature-title">技术特色</div>
