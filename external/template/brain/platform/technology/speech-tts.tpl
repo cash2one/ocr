@@ -230,7 +230,7 @@
         <div class="tech-intro-detail"></div>
     </div>
 </section>
-<section class="tech-section tech-demo">
+<section class="tech-section tech-demo" id="tts-demo">
     <div class="container">
         <h2>功能演示</h2>
         <div class="demo-container">
