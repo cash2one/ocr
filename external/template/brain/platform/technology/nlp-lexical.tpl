@@ -211,7 +211,7 @@
         <p>基于大数据和用户行为的分词、词性标注、命名实体识别<br>定位基本语言元素，消除歧义，支撑自然语言的准确理解</p>
         <div>
             <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">获取API Key</a>
-            <a role="button" class="btn-other media">技术文档</a>
+            <a role="button" class="btn-other media"  href="/docs#NLP">技术文档</a>
         </div>
     </div>
 </section>
@@ -359,8 +359,8 @@
 {%if $userInfo eq Null%}
 <section class="tech-section get-started">
     <div class="container">
-        <h2>现在注册，即享免费试用</h2>
-        <p>结合百度人工智能技术为您提供免费的技术应用，结合百度人工智能技术为您提供免费的技术应用</p>
+        <h2>立即获取免费API Key</h2>
+        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
         <div>
             <a role="button" class="btn-primary large" href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">免费试用</a>
         </div>

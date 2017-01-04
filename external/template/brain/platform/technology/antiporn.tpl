@@ -211,7 +211,7 @@
         <p>依托全网海量优质数据和深度神经网络技术，智能鉴别色情图片内容，为您的产品保驾护航。</p>
         <div>
             <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">获取API Key</a>
-            <a role="button" class="btn-other media">技术文档</a>
+            <a role="button" class="btn-other media" href="/docs#Antiporn">技术文档</a>
         </div>
     </div>
 </section>
