@@ -232,13 +232,13 @@
                     <span class="demo-text">车头如何放置车牌</span>
                     <span class="demo-arrow"></span>
                     <span class="demo-compare">前牌照怎么装</span>
-                    <span class="demo-score bad">0.761517</span>
+                    <span class="demo-score"><span>0.761517</span></span>
                 </li>
                 <li class="demo-content clear-float">
                     <span class="demo-text">车头如何放置车牌</span>
                     <span class="demo-arrow"></span>
                     <span class="demo-compare">如何办理北京牌照</span>
-                    <span class="demo-score"><span>0.48620</span></span>
+                    <span class="demo-score">0.48620</span>
                 </li>
                 <li class="demo-content clear-float">
                     <span class="demo-text">车头如何放置车牌</span>
