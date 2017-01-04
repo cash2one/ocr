@@ -557,7 +557,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 .nlp-feature-icon {
-  margin: 0 auto;
+  margin: 0 auto 10px;
   background: url(/ai_images/technology/nlp-word_embedding/feature.png) no-repeat center;
   background-size: 255px 85px;
 }

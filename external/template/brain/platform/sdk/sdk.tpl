@@ -13,6 +13,9 @@
     <![endif]-->
     <link rel="shortcut icon" href="/ai_images/favicon-32.ico">
     <link rel="stylesheet" href="/ai_dist/css/base.css">
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/ai_dist/css/ie9.css">
+    <![endif]-->
 <link rel="stylesheet" href="/ai_dist/css/sdk/sdk.css"></head>
 <body class="ai-platform">
 <header class="header-nav">
@@ -610,7 +613,7 @@
                             <div class="sdk-description">含唤醒功能及常用离线指令</div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.0.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-07-05</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-05</div>
                             </div>
                         </div>
                     </div>
