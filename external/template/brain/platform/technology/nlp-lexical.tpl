@@ -373,18 +373,17 @@
         <div class="guide-link clear-float">
             <h3>开发指南</h3>
             <ul>
-                <li><a>技术文档 ></a></li>
-                <li><a>SDK下载 ></a></li>
-                <li><a>教学视频 ></a></li>
+                <li><a href="/docs#NLP">技术文档 ></a></li>
+                <li><a href="/sdk">SDK下载 ></a></li>
             </ul>
         </div>
         <div class="question-link clear-float">
             <h3>常见问题</h3>
             <ul>
-                <li><a>图片格式和分辨率有限制吗？</a></li>
-                <li><a>支持身份证等垂直类的文字识别吗？</a></li>
-                <li><a>支持文档扫描图片的文字识别码？</a></li>
-                <li><a>怎么提高文字识别的准确率和识别速度？</a></li>
+                <li><a href="/docs#NLP-FAQ_Q1">输入编码是什么?</a></li>
+                <li><a href="/docs#NLP-FAQ_Q2">结果中的词性标注都是什么含义?</a></li>
+                <li><a href="/docs#NLP-FAQ_Q3">短文本相似度对文字字数有什么限制?</a></li>
+                <li><a href="/docs#NLP-FAQ_Q11">中文DNN语言模型对文本个数有什么限制？</a></li>
             </ul>
         </div>
     </div>
