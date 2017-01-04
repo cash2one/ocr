@@ -549,8 +549,8 @@
                             <div class="sdk-item-name">离在线融合SDK</div>
                             <div class="sdk-description">含唤醒功能及常用离线指令</div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 2.0</div>
-                                <div class="sdk-update-date">发布时间: 2016-06-24</div>
+                                <div class="sdk-version">版本: 1.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-05</div>
                             </div>
                         </div>
                     </div>
@@ -566,8 +566,8 @@
                             <div class="sdk-item-name">离在线融合SDK</div>
                             <div class="sdk-description">含唤醒功能及常用离线指令</div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 2.0</div>
-                                <div class="sdk-update-date">发布时间: 2016-06-24</div>
+                                <div class="sdk-version">版本: 1.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-05</div>
                             </div>
                         </div>
                     </div>
@@ -590,8 +590,8 @@
                             <div class="sdk-item-name">离在线融合SDK</div>
                             <div class="sdk-description">含唤醒功能及常用离线指令</div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 2.0</div>
-                                <div class="sdk-update-date">发布时间: 2016-06-24</div>
+                                <div class="sdk-version">版本: 1.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-05</div>
                             </div>
                         </div>
                     </div>
@@ -609,8 +609,8 @@
                             <div class="sdk-item-name">离在线融合SDK</div>
                             <div class="sdk-description">含唤醒功能及常用离线指令</div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 2.0</div>
-                                <div class="sdk-update-date">发布时间: 2016-06-24</div>
+                                <div class="sdk-version">版本: 1.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-07-05</div>
                             </div>
                         </div>
                     </div>
@@ -633,8 +633,8 @@
                             <div class="sdk-item-name">离在线融合SDK</div>
                             <div class="sdk-description">含唤醒功能及常用离线指令</div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 2.0</div>
-                                <div class="sdk-update-date">发布时间: 2016-06-24</div>
+                                <div class="sdk-version">版本: 1.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-05</div>
                             </div>
                         </div>
                     </div>
@@ -652,8 +652,8 @@
                             <div class="sdk-item-name">离在线融合SDK</div>
                             <div class="sdk-description">含唤醒功能及常用离线指令</div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 2.0</div>
-                                <div class="sdk-update-date">发布时间: 2016-06-24</div>
+                                <div class="sdk-version">版本: 1.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-05</div>
                             </div>
                         </div>
                     </div>
@@ -676,8 +676,8 @@
                             <div class="sdk-item-name">离在线融合SDK</div>
                             <div class="sdk-description">含唤醒功能及常用离线指令</div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 2.0</div>
-                                <div class="sdk-update-date">发布时间: 2016-06-24</div>
+                                <div class="sdk-version">版本: 1.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-05</div>
                             </div>
                         </div>
                     </div>
@@ -695,8 +695,8 @@
                             <div class="sdk-item-name">离在线融合SDK</div>
                             <div class="sdk-description">含唤醒功能及常用离线指令</div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 2.0</div>
-                                <div class="sdk-update-date">发布时间: 2016-06-24</div>
+                                <div class="sdk-version">版本: 1.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-05</div>
                             </div>
                         </div>
                     </div>
