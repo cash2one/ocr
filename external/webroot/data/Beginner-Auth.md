@@ -4,7 +4,7 @@
 
 本文档主要针对HTTP API调用者，百度AIP开放平台使用OAuth2.0授权调用开放API，调用API时必须在URL中带上accesss_token参数，获取Access Token的流程如下：
 
-## 获取Access Token
+## 获取AccessToken
 
 ##### 请求URL数据格式
 
