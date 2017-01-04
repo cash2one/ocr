@@ -114,6 +114,9 @@ $(document).ready(function () {
 
     // 上传图片
     $('#demo-photo-upload > input').change(function (e) {
+        if ($(this).val() === '') {
+            return false;
+        }
         if (isScanning) {
             new AlertModal('操作正在进行中，请稍候再试！');
             return;

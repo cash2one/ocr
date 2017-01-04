@@ -169,12 +169,12 @@
         <div class="login">
             <!--<ul>
                 {%if $userInfo eq Null%}
-                <li><a href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://ai.baidu.com)">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">免费试用</a></li>
+                <li><a href="https://login.bce.baidu.com?fromai=1&redirect=encodeURIComponent(https://ai.baidu.com)">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://login.bce.baidu.com?fromai=1&redirect=encodeURIComponent(https://console.bce.baidu.com/)">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 <li>
-                    <a class="console" href="https://console.bce.baidu.com/ai/">控制台</a>
+                    <a class="console" href="https://console.bce.baidu.com/?fromai=1">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
@@ -186,17 +186,17 @@
             </ul>-->
             <ul>
                 {%if $userInfo eq Null%}
-                <li><a href="https://login.bcetest.baidu.com?redirect=encodeURIComponent(https://cp01-yf-db-02.epc.baidu.com:8030/)">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://login.bcetest.baidu.com?redirect=encodeURIComponent(https://qasandbox.bcetest.baidu.com/ai/)">免费试用</a></li>
+                <li><a href="https://login.bcetest.baidu.com?fromai=1&redirect=encodeURIComponent(https://cp01-yf-db-02.epc.baidu.com:8030/)">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://login.bcetest.baidu.com?fromai=1&redirect=encodeURIComponent(https://qasandbox.bcetest.baidu.com/)">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 <li>
-                    <a class="console" href="https://qasandbox.bcetest.baidu.com/ai/">控制台</a>
+                    <a class="console" href="https://qasandbox.bcetest.baidu.com/?fromai=1">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">退出</a></li>
+                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=https%3A%2F%2Fcp01-yf-db-02.epc.baidu.com%3A8030">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -270,7 +270,7 @@
                     <div class="clear-float">
                         <div class="service-desc">
                             <h3>语音技术</h3>
-                            <p>多场景语音服务支持专家，让你的应用长上耳朵、开口说话</p>
+                            <p>多场景语音服务支持撞见，让你的应用长上耳朵、开口说话</p>
                         </div>
                         <div class="service-icon"></div>
                     </div>
@@ -299,7 +299,7 @@
                     <div class="clear-float">
                         <div class="service-desc">
                             <h3>图像技术</h3>
-                            <p>多场景语音服务支持专家，让你的应用长上耳朵、开口说话</p>
+                            <p>基于深度学习算法，智能识别图像中的文字内容和含义、分析人脸图像以及检测图片色情度</p>
                         </div>
                         <div class="service-icon"></div>
                     </div>
@@ -337,7 +337,7 @@
                     <div class="clear-float">
                         <div class="service-desc">
                             <h3>自然语言</h3>
-                            <p>多场景语音服务支持专家，让你的应用长上耳朵、开口说话</p>
+                            <p>基于自然语言处理技术，对人来自然语言进行分析、理解、生成、翻译，实现自然的人机对话交互</p>
                         </div>
                         <div class="service-icon"></div>
                     </div>
@@ -374,7 +374,7 @@
                     <div class="clear-float">
                         <div class="service-desc">
                             <h3>用户画像</h3>
-                            <p>多场景语音服务支持专家，让你的应用长上耳朵、开口说话</p>
+                            <p>基于海量互联网数据，利用更大数据分析处理能力，理解用户特征、兴趣偏好，实现精准的用户分析和个性化推荐</p>
                         </div>
                         <div class="service-icon"></div>
                     </div>
@@ -392,7 +392,7 @@
                     <div class="clear-float">
                         <div class="service-desc">
                             <h3>机器学习</h3>
-                            <p>多场景语音服务支持专家，让你的应用长上耳朵、开口说话</p>
+                            <p>开放易用的深度学习平台Paddle-Paddle，为企业级应用和学术调研提供支持</p>
                         </div>
                         <div class="service-icon"></div>
                     </div>
@@ -409,7 +409,7 @@
                     <div class="clear-float">
                         <div class="service-desc">
                             <h3>AR增强现实</h3>
-                            <p>多场景语音服务支持专家，让你的应用长上耳朵、开口说话</p>
+                            <p>增强现实技术（Augmented Reality，AR）将虚拟物体融合到现实世界中，使现实世界更加灵动</p>
                         </div>
                         <div class="service-icon"></div>
                     </div>

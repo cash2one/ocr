@@ -63,7 +63,7 @@ export default class Modal {
         });
 
         function close() {
-            $('.modal').trigger('close');
+            $('.ai-modal').trigger('close');
         }
 
         $('body').off('close', close).on('click', close);
