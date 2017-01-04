@@ -22,13 +22,19 @@ export function setPlaceHolder(container) {
         container.find('input[placeholder], textarea[placeholder]').each(function (i, e) {
             let input = $(e);
             input.parent().css('position', 'relative');
+            input.css({
+                position: 'relative',
+                zIndex: 2,
+                backgroundColor: 'transparent'
+            });
             let hint = $('<span class="hint">' + input.attr('placeholder') + '</span>');
             hint.css({
                 position: 'absolute',
                 top: '5px',
                 left: '10px',
                 padding: input.css('padding'),
-                color: '#ccc'
+                color: '#ccc',
+                zIndex: 1
             });
             $(e).after(hint);
         });
