@@ -545,14 +545,14 @@
             <div class="sdk-collection">
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
+                        <i class="sdk-language-sprite sdk-java"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-ocr"></i>
                             <div class="sdk-download-button">下载</div>
                         </div>
                         <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
+                            <div class="sdk-item-name">Java SDK</div>
+                            <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.0.0</div>
                                 <div class="sdk-update-date">发布时间: 2017-01-05</div>
@@ -562,14 +562,14 @@
                 </div>
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
+                        <i class="sdk-language-sprite sdk-php"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-ocr"></i>
                             <div class="sdk-download-button">下载</div>
                         </div>
                         <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
+                            <div class="sdk-item-name">PHP SDK</div>
+                            <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.0.0</div>
                                 <div class="sdk-update-date">发布时间: 2017-01-05</div>
@@ -592,8 +592,8 @@
                             </a>
                         </div>
                         <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
+                            <div class="sdk-item-name">Java SDK</div>
+                            <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.0.0</div>
                                 <div class="sdk-update-date">发布时间: 2017-01-05</div>
@@ -611,8 +611,8 @@
                             </a>
                         </div>
                         <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
+                            <div class="sdk-item-name">PHP SDK</div>
+                            <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.0.0</div>
                                 <div class="sdk-update-date">发布时间: 2017-01-05</div>
@@ -635,8 +635,8 @@
                             </a>
                         </div>
                         <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
+                            <div class="sdk-item-name">Java SDK</div>
+                            <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.0.0</div>
                                 <div class="sdk-update-date">发布时间: 2017-01-05</div>
@@ -654,8 +654,8 @@
                             </a>
                         </div>
                         <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
+                            <div class="sdk-item-name">PHP SDK</div>
+                            <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.0.0</div>
                                 <div class="sdk-update-date">发布时间: 2017-01-05</div>
@@ -678,8 +678,8 @@
                             </a>
                         </div>
                         <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
+                            <div class="sdk-item-name">Java SDK</div>
+                            <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.0.0</div>
                                 <div class="sdk-update-date">发布时间: 2017-01-05</div>
@@ -697,8 +697,8 @@
                             </a>
                         </div>
                         <div class="sdk-info">
-                            <div class="sdk-item-name">离在线融合SDK</div>
-                            <div class="sdk-description">含唤醒功能及常用离线指令</div>
+                            <div class="sdk-item-name">PHP SDK</div>
+                            <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.0.0</div>
                                 <div class="sdk-update-date">发布时间: 2017-01-05</div>
