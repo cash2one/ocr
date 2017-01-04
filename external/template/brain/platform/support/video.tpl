@@ -231,7 +231,7 @@
             <div class="video-item-container">
                 <div class="video-item">
                     <a href="http://www.chuanke.com/v7867982-208539-1278740.html">
-                        <div class="video-poster"></div>
+                        <div class="video-poster orc-info"></div>
                         <div class="video-intro-container">
                             <div class="video-intro">百度OCR基础介绍及场景应用</div>
                         </div>
@@ -241,7 +241,7 @@
             <div class="video-item-container">
                 <div class="video-item">
                     <a href="http://www.chuanke.com/v7867982-208150-1278728.html">
-                        <div class="video-poster"></div>
+                        <div class="video-poster orc-api"></div>
                         <div class="video-intro-container">
                             <div class="video-intro">百度OCR的API使用</div>
                         </div>
@@ -256,9 +256,9 @@
             <div class="video-item-container">
                 <div class="video-item">
                     <a href="http://www.chuanke.com/v7867982-208540-1278742.html">
-                        <div class="video-poster"></div>
+                        <div class="video-poster face"></div>
                         <div class="video-intro-container">
-                            <div class="video-intro">百度OCR基础介绍及场景应用</div>
+                            <div class="video-intro">百度人脸识别基础介绍及场景应用</div>
                         </div>
                     </a>
                 </div>
@@ -271,7 +271,7 @@
             <div class="video-item-container">
                 <div class="video-item">
                     <a href="http://www.chuanke.com/v7867982-208171-1278730.html">
-                        <div class="video-poster"></div>
+                        <div class="video-poster translation-function"></div>
                         <div class="video-intro-container">
                             <div class="video-intro">机器翻译功能和场景介绍</div>
                         </div>
@@ -281,7 +281,7 @@
             <div class="video-item-container">
                 <div class="video-item">
                     <a href="http://www.chuanke.com/v7867982-208173-1278732.html">
-                        <div class="video-poster"></div>
+                        <div class="video-poster translation-info"></div>
                         <div class="video-intro-container">
                             <div class="video-intro">机器翻译产品介绍</div>
                         </div>
@@ -291,7 +291,7 @@
             <div class="video-item-container">
                 <div class="video-item">
                     <a href="http://www.chuanke.com/v7867982-208163-1278729.html">
-                        <div class="video-poster"></div>
+                        <div class="video-poster translation"></div>
                         <div class="video-intro-container">
                             <div class="video-intro">机器翻译技术介绍</div>
                         </div>
@@ -301,7 +301,7 @@
             <div class="video-item-container">
                 <div class="video-item">
                     <a href="http://www.chuanke.com/v7867982-208172-1278731.html">
-                        <div class="video-poster"></div>
+                        <div class="video-poster translation-api"></div>
                         <div class="video-intro-container">
                             <div class="video-intro">机器翻译API使用教程</div>
                         </div>
@@ -315,7 +315,7 @@
                 <div class="video-item-container">
                     <div class="video-item">
                         <a href="http://www.chuanke.com/v7867982-208541-1278743.html">
-                            <div class="video-poster"></div>
+                            <div class="video-poster yellow-info"></div>
                             <div class="video-intro-container">
                                 <div class="video-intro">黄反识别基础介绍及场景使用</div>
                             </div>
@@ -325,7 +325,7 @@
                 <div class="video-item-container">
                     <div class="video-item">
                         <a href="http://www.chuanke.com/v7867982-208174-1278733.html">
-                            <div class="video-poster"></div>
+                            <div class="video-poster yellow-api"></div>
                             <div class="video-intro-container">
                                 <div class="video-intro">黄反识别API使用教程</div>
                             </div>

@@ -23,6 +23,9 @@
   border-radius: 3px;
   color: #666666;
 }
+.page .page-num:hover {
+  color: #0073ed;
+}
 .page .prev,
 .page .next {
   width: 62px;
