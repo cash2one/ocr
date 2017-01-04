@@ -62,6 +62,7 @@ $(document).ready(function () {
         setBannerNum(newBannerNum + 1);
     });
 
+    refreshBanner();
     setBannerNum(currentBannerNum + 1);
 
     // 渲染底部新闻
