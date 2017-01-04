@@ -11,6 +11,7 @@ import Modal from '../common/modal';
 import {SUBSCRIPTION_TMPL} from '../../partials/subscription';
 import {subscribe} from '../../model/subscription';
 import {checkQRCode} from '../../model/qrCode';
+import {setPlaceHolder} from '../common/placeholder';
 
 
 export default class SubscriptionModal extends Modal {
@@ -32,6 +33,7 @@ export default class SubscriptionModal extends Modal {
 
     reset() {
         this.setContent(EJS.render(SUBSCRIPTION_TMPL.APPLY));
+        setPlaceHolder($(this.container));
     }
 
     apply() {
