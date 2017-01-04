@@ -333,6 +333,9 @@
 .ai-platform.page-content .home-section.tech-service .service-container .service-item:nth-child(n+4) {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
+.ai-platform.page-content .home-section.tech-service .service-container .service-item:nth-child(n+4) p {
+  height: 3em;
+}
 .ai-platform.page-content .home-section.tech-service .service-container .service-item:nth-child(1) {
   height: 250px;
 }
@@ -362,9 +365,6 @@
   background-position: -170px -15px;
   background-position-x: -170px;
   background-position-y: -15px;
-}
-.ai-platform.page-content .home-section.tech-service .service-container .service-item:nth-child(3) p {
-  height: 3em;
 }
 .ai-platform.page-content .home-section.tech-service .service-container .service-item:nth-child(4) .service-icon {
   background-image: url('../../ai_images/home/service.png');
