@@ -4,11 +4,11 @@
 CURL_CMD="curl --user zhouyingfeng:9252522b511c3de99bd009802c8c74e2 -f"
 JOB_NAME="ai_platform_web_docker_build"
 JENKINS_JOB="http://tg.jenkins.baidu.com/job/${JOB_NAME}/"
-temp_file=./.tmp_curl_resp
-${CURL_CMD} -XPOST -I "${JENKINS_JOB}/build" > ${temp_file}1
+temp_file=./tmp_fl
+${CURL_CMD} -XPOST -I "${JENKINS_JOB}/build" > ${temp_file}1 2>&1
 if [ $? -ne 0 ]; then
     echo "Bad jenkins build invocation!"
-    rm -f ${temp_file}1
+    # rm -f ${temp_file}1
     exit 1
 fi
 
@@ -23,7 +23,7 @@ while true; do
     count=$(( count + 1 ))
     echo "count1:${count}"
     sleep 5
-    ${CURL_CMD} "${queue_url}" > ${temp_file}2
+    ${CURL_CMD} "${queue_url}" > ${temp_file}2  2>&1
     if [ "$?" = "0" ]; then
         build_url=`cat ${temp_file}2 | grep "\"${JENKINS_JOB}" | grep -v "\"${JENKINS_JOB}\"" | \
             awk -F "\"" '{print $4;}' | sed "s%\r%%g"`
@@ -45,7 +45,7 @@ done
 
 if [ ${build_started} -ne 1 ]; then
     echo "Building process of job[${build_url}] too long, or meet some error!"
-    rm -f ${temp_file}2
+    # rm -f ${temp_file}2
     exit 2
 fi
 
@@ -57,16 +57,16 @@ while true; do
     count=$(( count + 1 ))
     echo "count2:${count}"
     sleep 5
-    ${CURL_CMD} "${build_url}/api/json?pretty=true" > ${temp_file}3
+    ${CURL_CMD} "${build_url}/api/json?pretty=true" > ${temp_file}3 2>&1
     if [ $? -ne 0 ]; then
         echo "Can't get the details of finished job build:${build_url}"
         error_count=$(( error_count + 1 ))
-        rm -f ${temp_file}3
+        # rm -f ${temp_file}3
     fi
 
     if [ ${error_count} -gt 10 ]; then
         echo "Too many times that get the wrong job status:${build_url}"
-        rm -f ${temp_file}3
+        # rm -f ${temp_file}3
         exit 3
     fi
 
@@ -87,12 +87,12 @@ while true; do
 
     if [ ${error_count} -gt 10 ]; then
         echo "Too many times that get the wrong job status:${build_url}"
-        rm -f ${temp_file}3
+        # rm -f ${temp_file}3
         exit 3
     fi
     if [ ${count} -gt 200 ]; then
         echo "The build costs too much time:${build_url}"
-        rm -f ${temp_file}3
+        # rm -f ${temp_file}3
         exit 4
     fi
 done
@@ -113,12 +113,10 @@ if [ "${build_number}" = "" ]; then
     exit 5
 fi
 
-# concat the ftp url, and download it
+# concat the ftp url
 ftp_url="ftp://tg:a1b2c3.@ftp.jenkins.baidu.com:8557/${JOB_NAME}/${build_number}/"
 wget -r -nH -np -m ${ftp_url}
-
-# delete unused files, and cp new files into existing dir
 find ./${JOB_NAME}/${build_number}/external/ -name ".listing" | xargs rm -f
 cp ./${JOB_NAME}/${build_number}/external/webroot/dist/* ./webroot/
-# rm -rf ${JOB_NAME}
+rm -rf ${JOB_NAME}
 echo "all done"
