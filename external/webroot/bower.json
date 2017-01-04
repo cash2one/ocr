@@ -23,6 +23,7 @@
   ],
   "devDependencies": {
     "code-prettify": "*",
-    "jquery.placeholder": "^0.2.4"
+    "jquery.placeholder": "^0.2.4",
+    "input-placeholder-polyfill": "^1.0.0"
   }
 }
