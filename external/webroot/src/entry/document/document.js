@@ -84,7 +84,7 @@ let renderALinkTag = function () {
             if (href[0] !== '#') {
                 aTag.attr('target', '_blank');
             }
-        } 
+        }
     });
 };
 
