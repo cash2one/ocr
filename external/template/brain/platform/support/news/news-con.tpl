@@ -219,6 +219,7 @@
     </div>
     <hr class="news-info-split">
     <div class="news-content">
+        {%$data.content%}
     </div>
 </section>
 
