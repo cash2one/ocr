@@ -33,7 +33,7 @@ export default class SubscriptionModal extends Modal {
 
     reset() {
         this.setContent(EJS.render(SUBSCRIPTION_TMPL.APPLY));
-        setPlaceHolder($(this.container));
+        setPlaceHolder(this.getModal());
     }
 
     apply() {

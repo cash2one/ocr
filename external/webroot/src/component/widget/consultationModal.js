@@ -33,7 +33,7 @@ export default class ConsultationModal extends Modal {
 
     reset() {
         this.setContent(EJS.render(CONSULTATION_TMPL.APPLY));
-        setPlaceHolder($(this.container));
+        setPlaceHolder(this.getModal());
     }
 
     apply() {
