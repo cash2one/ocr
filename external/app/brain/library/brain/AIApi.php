@@ -30,7 +30,7 @@ class Brain_AIApi {
     身份证识别    https://openapi.baidu.com/rest/2.0/vis-ocr/v1/ocr/idcard
     银行卡识别    https://openapi.baidu.com/rest/2.0/vis-ocr/v1/ocr/bankcard
     人脸识别      https://openapi.baidu.com/rest/2.0/vis-faceattribute/v1/faceattribute
-    色情识别      https://openapi.baidu.com/rest/2.0/vis-antiporn/v1/antiporn
+    色情识别      https://openapi.baidu.com/rest/2.0/vis-antiporn/v2/antiporn
     */
 
     public static $arrTypelist = array(
@@ -59,7 +59,7 @@ class Brain_AIApi {
             ),
         ),
         "pornography" => array(
-            'url' => 'https://openapi.baidu.com/rest/2.0/vis-antiporn/v1/antiporn',
+            'url' => 'https://openapi.baidu.com/rest/2.0/vis-antiporn/v2/antiporn',
             'params' => array(),
         ),
         "tts" => array(
@@ -499,6 +499,17 @@ class Brain_AIApi {
      */ 
     public static function getDataRetryByUrl($url) {
 
+        if(strripos($url, 'https://cloudtest.baidu.com') === 0 
+            || strripos($url, 'https://cloud.baidu.com') === 0)
+        {
+            if (strripos($url, 'demo-card-') !== false)
+            {
+                $url = substr($url, strlen('https://cloudtest.baidu.com'));
+                $url = 'http://ai.baidu.com/index'.$url;
+                //$url = 'http://cp01-yf-db-02.epc.baidu.com:8033'.$url;
+            }
+        }
+
         $orignal_url = $url;
 
         $k = md5('image_info_'.$orignal_url);
@@ -529,7 +540,7 @@ class Brain_AIApi {
 
         $isUrlAvailable = Brain_AIApi::checkUrlAvailable($url, 1);
 
-        if(!$isUrlAvailable && strpos($url, 'https') === 0)
+        if(!$isUrlAvailable && strripos($url, 'https') === 0)
         {   
             $url = 'http'.substr($url, 5); 
             $isUrlAvailable = Brain_AIApi::checkUrlAvailable($url, 3);
