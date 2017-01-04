@@ -5,7 +5,6 @@
 'use strict';
 
 import $ from 'jquery';
-import 'input-placeholder-polyfill';
 import News from '../component/widget/news';
 import ConsultationModal from '../component/widget/consultationModal';
 import SubscriptionModal from '../component/widget/subscriptionModal';
@@ -44,4 +43,30 @@ $(document).ready(function () {
         e.stopPropagation();
         subscriptionModal.show();
     });
+
+    // 增加placeholder兼容性
+    function hasPlaceHolder () {
+        var input = document.createElement('input');
+        return 'placeholder' in input;
+    }
+    if (!hasPlaceHolder()) {
+        $('input[placeholder], textarea[placeholder]').each(function (i, e) {
+            let input = $(e);
+            input.parent().css('position', 'relative');
+            let hint = $('<span class="hint">' + input.attr('placeholder') + '</span>');
+            hint.css({
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                padding: input.css('padding'),
+                color: '#ccc'
+            });
+            $(e).after(hint);
+        });
+
+        $('body').on('blur keypress', 'input[placeholder], textarea[placeholder]', function () {
+            let value = $(this).val();
+            $(this).siblings('.hint').toggle(value === '');
+        });
+    }
 });

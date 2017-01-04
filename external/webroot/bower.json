@@ -22,7 +22,6 @@
     "tests"
   ],
   "devDependencies": {
-    "code-prettify": "*",
-    "jquery.placeholder": "^0.2.4"
+    "code-prettify": "*"
   }
 }
