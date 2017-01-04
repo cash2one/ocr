@@ -103,7 +103,7 @@
         <li><a>百度钱包</a></li>
     </ul>
 </section>
-{%if $userInfo eq Null%}
+{%if $userInfo eq Null and $src eq Null%}
 <section class="tech-section get-started">
     <div class="container">
         <h2>立即获取免费API Key</h2>
@@ -118,7 +118,7 @@
 <section class="tech-section get-started">
     <div class="container">
         <h2>快速提交您的需求</h2>
-        <p>您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</p>
+        <p>您可以点击下方按钮向我们发送合作邮件，我们会尽快与您取得联系</p>
         <div class="consult">
             <a role="button" class="btn-primary large" href="mailto:ai@baidu.com">商务合作</a>
         </div>
