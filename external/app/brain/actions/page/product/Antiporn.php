@@ -20,6 +20,7 @@ class Action_Antiporn extends Ap_Action_Abstract {
 
         $arrPageInfo = array(
             'title' => '色情识别-百度云',
+            'src' => 'cloud',
         );  
 
         Brain_Output::htmlOutput(

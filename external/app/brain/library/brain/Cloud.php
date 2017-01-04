@@ -36,15 +36,11 @@ class Brain_Cloud {
         $isTemplateExpired = Brain_Memcache::get(Brain_Cloud::MEMCACHE_KEY_TEMPLATE);
         $isTemplateExists = file_exists($templateFile);
 
-        //=====================feiren====================
-        $isTemplateExists = false;
-        
         if(empty($isTemplateExpired) || !$isTemplateExists)
         {
             
             $content = file_get_contents(Brain_Cloud::TEMPLATE_URL);
-        //=====================feiren====================
-            $content = file_get_contents($templateDir . '/cloud.html');
+            //$content = file_get_contents('https://cloudtest.baidu.com/solution/zhongce_tpl.html');
 
             if (!empty($content))
             {

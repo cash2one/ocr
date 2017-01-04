@@ -44,6 +44,7 @@ class Action_Speech extends Ap_Action_Abstract {
         
         $arrPageInfo = array(
             'title' => $titleList[$tech],
+            'src' => 'cloud',
         );  
 
         if (in_array($tech, $techList)){
