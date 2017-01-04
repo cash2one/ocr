@@ -5,6 +5,7 @@
 'use strict';
 
 import $ from 'jquery';
+import 'input-placeholder-polyfill';
 import News from '../component/widget/news';
 import ConsultationModal from '../component/widget/consultationModal';
 import SubscriptionModal from '../component/widget/subscriptionModal';
