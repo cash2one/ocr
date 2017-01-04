@@ -13,7 +13,7 @@
  * 左侧导航部分变量
  */
 // 左侧导航左右留白
-@nav-padding: 25px;
+@nav-padding: 35px;
 // 左侧导航title高度
 @nav-header-height: 45px;
 // 左侧导航条目高度
@@ -25,9 +25,15 @@
 // 下载条目左侧栏比例
 @item-aside-radio: 35%;
 
+.ai-platform {
+    .@{prefix}-download-container {
+        background-color: #fafafa;
+        padding-right: 0;
+    }
+}
+
 // 命名空间，防止冲突
 .@{prefix}-download-container {
-    padding-right: 0;
     // inline-block 3px
     font-size: 0;
     border-left: 1px solid @gray;
@@ -51,9 +57,11 @@
     margin: 0 -10px;
     height: @nav-header-height;
     line-height: @nav-header-height;
-    padding: 0 @nav-padding;
+    padding: 2px @nav-padding;
     border-bottom: 1px solid #efefef;
-    font-size: @font-size-3;
+    font-size: 18px;
+    color: #666;
+    background-color: @white;
 }
 
 .@{prefix}-nav {
