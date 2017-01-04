@@ -44,13 +44,13 @@ $(document).ready(function () {
         subscriptionModal.show();
     });
 
-    $('body').on('focus', 'input, textarea', function() {
-        if (!eval($(this).attr('data-dirty'))) {
+    $('body').on('focus', 'input, textarea', function () {
+        if ($(this).attr('data-dirty') === 'true') {
             $(this).val('');
         }
     });
 
-    $('body').on('blur', 'input, textarea', function() {
+    $('body').on('blur', 'input, textarea', function () {
         let self = $(this);
         if (self.val() !==  '') {
             self.attr('data-dirty', 'true');
