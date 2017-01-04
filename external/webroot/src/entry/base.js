@@ -5,6 +5,7 @@
 'use strict';
 
 import $ from 'jquery';
+import '../../bower_components/jquery.placeholder/jquery.placeholder.min';
 import News from '../component/widget/news';
 import ConsultationModal from '../component/widget/consultationModal';
 import SubscriptionModal from '../component/widget/subscriptionModal';
@@ -42,21 +43,5 @@ $(document).ready(function () {
     $('.email-subscribe').click(e => {
         e.stopPropagation();
         subscriptionModal.show();
-    });
-
-    $('body').on('focus', 'input, textarea', function () {
-        if ($(this).attr('data-dirty') === 'true') {
-            $(this).val('');
-        }
-    });
-
-    $('body').on('blur', 'input, textarea', function () {
-        let self = $(this);
-        if (self.val() !==  '') {
-            self.attr('data-dirty', 'true');
-        }
-        else {
-            self.val(self.attr('placeholder')).attr('data-dirty', 'false');
-        }
     });
 });
