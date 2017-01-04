@@ -661,7 +661,7 @@
   display: inline-block;
   width: 33.333%;
   margin-bottom: 10px;
-  padding: 20px 15px;
+  padding: 20px 40px;
   box-sizing: border-box;
   vertical-align: top;
   font-size: 0;
@@ -763,6 +763,7 @@
 }
 .tech-section.tech-case .case-list > li .case-icon {
   width: auto;
+  margin-top: 15px;
 }
 .tech-section.tech-case .case-list > li:nth-child(1) .case-icon {
   background: url("../../../ai_images/technology/nlp-comment/case-logo-1.png") no-repeat center center;

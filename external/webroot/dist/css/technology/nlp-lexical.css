@@ -512,7 +512,7 @@
   }
 }
 .nlp-feature-title {
-  padding: 30px 0;
+  padding: 30px 0 20px;
   font-size: 30px;
   text-align: center;
 }
@@ -592,7 +592,7 @@
   display: inline-block;
   width: 33.333%;
   margin-bottom: 10px;
-  padding: 20px 15px;
+  padding: 20px 40px;
   box-sizing: border-box;
   vertical-align: top;
   font-size: 0;
@@ -688,20 +688,21 @@
   display: block;
   margin: 10px auto;
   background: url(/ai_images/technology/nlp-lexer/function-sprite.png) no-repeat;
+  background-size: 420px 140px;
 }
 .nlp-function-icon.function-1 {
   background-position: -5px -5px;
-  width: 131px;
+  width: 130px;
   height: 130px;
 }
 .nlp-function-icon.function-2 {
-  background-position: -146px -5px;
-  width: 132px;
-  height: 131px;
+  background-position: -145px -5px;
+  width: 130px;
+  height: 130px;
 }
 .nlp-function-icon.function-3 {
-  background-position: -5px -146px;
-  width: 131px;
+  background-position: -285px -5px;
+  width: 130px;
   height: 130px;
 }
 .nlp-function-intro {
@@ -768,13 +769,14 @@
 }
 .lexer-demo-tab-label {
   display: inline-block;
-  padding: 10px 0;
-  width: 100px;
+  padding: 12px 0;
+  width: 110px;
   border: 1px solid #0073eb;
   vertical-align: top;
   text-align: center;
   font-size: 16px;
   cursor: pointer;
+  color: #0073eb;
 }
 .lexer-demo-tab-label:nth-child(1) {
   border-top-left-radius: 3px;
@@ -850,6 +852,7 @@
   width: 17px;
   height: 17px;
   background: url(/ai_images/technology/nlp-lexer/change-icon.png) no-repeat;
+  background-size: 17px 17px;
   position: absolute;
   top: 12px;
   left: 0;

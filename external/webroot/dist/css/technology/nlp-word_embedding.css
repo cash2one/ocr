@@ -613,10 +613,11 @@
   display: inline-block;
   width: 33.333%;
   margin-bottom: 10px;
-  padding: 20px 15px;
+  padding: 20px 40px;
   box-sizing: border-box;
   vertical-align: top;
   font-size: 0;
+  margin: 0 60px;
 }
 .nlp-scenario-item:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -691,4 +692,7 @@
 }
 .tech-section.tech-case .case-list > li {
   padding-top: 145px;
+}
+.center {
+  text-align: center;
 }

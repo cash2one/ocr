@@ -21,7 +21,7 @@
 
 .@{prefix}-feature {
     &-title {
-        padding: 30px 0;
+        padding: 30px 0 20px;
         font-size: 30px;
         text-align: center;
     }
@@ -143,7 +143,7 @@
         display: inline-block;
         width: 33.333%;
         margin-bottom: 10px;
-        padding: 20px @scenario-padding / 2;
+        padding: 20px 40px;
         box-sizing: border-box;
         vertical-align: top;
         font-size: 0;
@@ -243,17 +243,18 @@
         display: block;
         margin: 10px auto;
         background: url(/ai_images/technology/nlp-lexer/function-sprite.png) no-repeat;
+        background-size: 420px 140px;
 
         &.function-1 {
-            .function-sprite(-5px, -5px, 131px, 130px);
+            .function-sprite(-5px, -5px, 130px, 130px);
         }
 
         &.function-2 {
-            .function-sprite(-146px, -5px, 132px, 131px);
+            .function-sprite(-145px, -5px, 130px, 130px);
         }
 
         &.function-3 {
-            .function-sprite(-5px, -146px, 131px, 130px);
+            .function-sprite(-285px, -5px, 130px, 130px);
         }
     }
 
@@ -340,13 +341,14 @@
 
         &-label {
             display: inline-block;
-            padding: 10px 0;
-            width: 100px;
+            padding: 12px 0;
+            width: 110px;
             border: 1px solid #0073eb;
             vertical-align: top;
             text-align: center;
             font-size: 16px;
             cursor: pointer;
+            color: #0073eb;
 
             &:nth-child(1) {
                 border-top-left-radius: 3px;
@@ -441,6 +443,7 @@
             width: 17px;
             height: 17px;
             background: url(/ai_images/technology/nlp-lexer/change-icon.png) no-repeat;
+            background-size: 17px 17px;
             position: absolute;
             top: 12px;
             left: 0;
