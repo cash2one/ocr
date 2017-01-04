@@ -529,47 +529,63 @@
 }
 .nlp-feature-title {
   padding: 30px 0;
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
 }
 .nlp-feature-container {
   margin: 0 -50px 40px;
   font-size: 0;
-  text-align: center;
 }
-.nlp-feature-item {
+.nlp-feature-item-container {
   display: inline-block;
   width: 33.333%;
   box-sizing: border-box;
   vertical-align: top;
   padding: 10px 50px 0;
 }
+.nlp-feature-item {
+  position: relative;
+  padding: 110px 0 20px;
+}
 .nlp-feature-item:hover {
+  opacity: 1;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 .nlp-feature-icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
   display: block;
-  background: url("../../../ai_images/technology/nlp-dr/icon.png") no-repeat center;
-  background-size: 95px 134px;
-  margin: 0 auto;
+  margin: -25px auto -25px -80px;
+  transform: scale(0.5);
+  transform-origin: center;
+  background: url(/ai_images/technology/nlp-word_embedding/feature.png) no-repeat center;
 }
 .nlp-feature-icon.feature-1 {
-  width: 80px;
-  height: 80px;
+  width: 160px;
+  height: 160px;
   background-position: -5px -5px;
 }
+.nlp-feature-icon.feature-2 {
+  width: 160px;
+  height: 160px;
+  background-position: -175px -5px;
+}
+.nlp-feature-icon.feature-3 {
+  width: 160px;
+  height: 160px;
+  background-position: -345px -5px;
+}
 .nlp-feature-name {
-  padding: 15px 0;
+  padding: 0 0 15px;
   text-align: center;
   font-size: 18px;
 }
 .nlp-feature-info {
-  height: 150px;
-  padding: 0 5px;
+  padding: 0 23px;
   font-size: 14px;
   line-height: 25px;
   color: #828281;
-  text-align: left;
 }
 .nlp-section-border {
   border: 0;
@@ -578,21 +594,22 @@
 }
 .ai-platform .nlp-scenario {
   padding-bottom: 40px;
+  text-align: center;
 }
 .nlp-scenario {
   font-size: 0;
-  text-align: center;
   padding-bottom: 40px;
 }
 .nlp-scenario-title {
   padding: 30px 0;
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
 }
 .nlp-scenario-item {
   display: inline-block;
   width: 33.333%;
-  padding: 25px 15px 0;
+  margin-bottom: 10px;
+  padding: 20px 15px;
   box-sizing: border-box;
   vertical-align: top;
   font-size: 0;
@@ -604,43 +621,59 @@
   font-size: 18px;
   padding: 0 0 10px;
 }
-.nlp-scenario-icon,
 .nlp-scenario-intro {
   display: inline-block;
   vertical-align: top;
+  text-align: left;
 }
-.nlp-scenario-icon {
-  width: 25%;
+.nlp-scenario-icon-container {
+  width: 15%;
   display: inline-block;
-  background: url(../../../ai_images/technology/nlp-dr/icon.png) no-repeat;
-  background-size: 95px 134px;
 }
-.nlp-scenario-icon.scenario-1 {
-  width: 40px;
-  height: 40px;
-  background-position: -5px -89px;
+.nlp-scenario-icon-1 {
+  width: 80px;
+  height: 80px;
+  background: url(/ai_images/technology/nlp-word_embedding/scenario.png) no-repeat -5px -5px;
+  transform: scale(0.5);
+  transform-origin: 0 0;
 }
-.nlp-scenario-icon.scenario-2 {
-  width: 40px;
-  height: 40px;
-  background-position: -50px -89px;
+.nlp-scenario-icon-2 {
+  width: 80px;
+  height: 80px;
+  background: url(/ai_images/technology/nlp-word_embedding/scenario.png) no-repeat -95px -5px;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+}
+.nlp-scenario-icon-3 {
+  width: 80px;
+  height: 80px;
+  background: url(/ai_images/technology/nlp-word_embedding/scenario.png) no-repeat -185px -5px;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+}
+.nlp-scenario-icon-4 {
+  width: 80px;
+  height: 80px;
+  background: url(/ai_images/technology/nlp-word_embedding/scenario.png) no-repeat -275px -5px;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+}
+.nlp-scenario-icon-5 {
+  width: 80px;
+  height: 80px;
+  background: url(/ai_images/technology/nlp-word_embedding/scenario.png) no-repeat -365px -5px;
+  transform: scale(0.5);
+  transform-origin: 0 0;
 }
 .nlp-scenario-intro {
   width: 85%;
   box-sizing: border-box;
-  padding: 0 0 0 20px;
-}
-.nlp-scenario-header {
-  padding: 10px 0;
-  font-size: 18px;
-  text-align: left;
+  padding: 0 0 0 5px;
 }
 .nlp-scenario-detail {
-  height: 120px;
   font-size: 14px;
   line-height: 25px;
   color: #828281;
-  text-align: left;
 }
 .tech-section.tech-case .case-item .case-icon {
   background-size: 400px 135px;
