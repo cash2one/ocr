@@ -1,3 +1,9 @@
+/**
+ * @file 对IE9的placeholder进行兼容
+ * @author shiliang@baidu.com
+ */
+'use strict';
+
 import $ from 'jquery';
 
 // 增加placeholder兼容性
@@ -6,6 +12,12 @@ export function setPlaceHolder(container) {
         let input = document.createElement('input');
         return 'placeholder' in input;
     }
+
+    function togglePlaceholder() {
+        let value = $(this).val();
+        $(this).siblings('.hint').toggle(value === '');
+    }
+
     if (!hasPlaceHolder()) {
         container.find('input[placeholder], textarea[placeholder]').each(function (i, e) {
             let input = $(e);
@@ -21,10 +33,6 @@ export function setPlaceHolder(container) {
             $(e).after(hint);
         });
 
-        let togglePlaceholder = function () {
-            let value = $(this).val();
-            $(this).siblings('.hint').toggle(value === '');
-        }
 
         container.off('blur keypress', 'input[placeholder], textarea[placeholder]', togglePlaceholder)
             .on('blur keypress', 'input[placeholder], textarea[placeholder]', togglePlaceholder);
