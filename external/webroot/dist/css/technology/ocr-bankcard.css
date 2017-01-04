@@ -138,6 +138,211 @@
 .ai-platform :-ms-input-placeholder {
   color: #ccc;
 }
+.modal-show {
+  overflow: hidden;
+}
+.modal-show::after {
+  content: "";
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 420px;
+  padding: 10px 15px;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.modal .modal-header {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  border-bottom: 1px solid #f2f2f2;
+  position: relative;
+  padding-bottom: 10px;
+}
+.modal .modal-header h3 {
+  font-weight: 500;
+}
+.modal .modal-header .modal-x {
+  background-image: url('../../../ai_images/template.png');
+  background-repeat: no-repeat;
+  background-position: -210px -40px;
+  background-position-x: -210px;
+  background-position-y: -40px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.modal .modal-header .modal-x:hover {
+  background-image: url('../../../ai_images/template.png');
+  background-repeat: no-repeat;
+  background-position: -240px -40px;
+  background-position-x: -240px;
+  background-position-y: -40px;
+}
+.modal .modal-content {
+  color: #666;
+  font-size: 12px;
+  padding: 20px 25px;
+}
+.modal .modal-content form > p {
+  margin: 0 0 15px;
+  font-size: 14px;
+}
+.modal .modal-content form > div > input[type="text"],
+.modal .modal-content form > div > textarea {
+  width: 100%;
+  border: 1px solid #ebebeb;
+  line-height: 34px;
+  margin-bottom: 10px;
+  height: 36px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border-radius: 2px;
+}
+.modal .modal-content form > div > input[type="text"].has-error,
+.modal .modal-content form > div > textarea.has-error {
+  border-color: #dc0000 !important;
+}
+.modal .modal-content form > div > textarea {
+  padding: 10px;
+  resize: none;
+  height: 9em;
+  line-height: 1.5em;
+}
+.modal .modal-content form .qr-code-input input[type="text"] {
+  width: 40% !important;
+  display: inline-block;
+}
+.modal .modal-content form .qr-code-input a {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+  margin-right: 25%;
+  overflow: hidden;
+  width: 30%;
+  cursor: pointer;
+}
+.modal .modal-content form .qr-code-input a > img {
+  height: 36px;
+}
+.modal .modal-content form .form-actions {
+  text-align: center;
+  margin-top: 10px;
+}
+.modal .modal-content form .form-actions button + button {
+  margin-left: 15px;
+}
+.modal .modal-content form .info-warning {
+  color: #dc0000;
+  font-size: 12px;
+  line-height: 1em;
+}
+@-webkit-keyframes loading {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40px;
+  }
+}
+@-moz-keyframes loading {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40px;
+  }
+}
+@-o-keyframes loading {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40px;
+  }
+}
+@keyframes loading {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40px;
+  }
+}
+.modal .modal-content .consult-loading {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 14px;
+}
+.modal .modal-content .consult-loading .loading-dot {
+  width: 0;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-animation: loading 4s linear infinite;
+  -moz-animation: loading 4s linear infinite;
+  animation: loading 4s linear infinite;
+}
+.modal .modal-content .consult-success {
+  font-size: 12px;
+}
+.modal .modal-content .consult-success .alert-image {
+  margin: 10px auto;
+  width: 60px;
+  height: 60px;
+  background-image: url('../../../ai_images/template.png');
+  background-repeat: no-repeat;
+  background-position: -200px -85px;
+  background-position-x: -200px;
+  background-position-y: -85px;
+}
+.modal .modal-content .consult-success > p {
+  text-align: center;
+  font-size: 14px;
+  margin: 0;
+}
+.modal .modal-content .consult-fail .alert-image {
+  margin: 10px auto;
+  width: 60px;
+  height: 60px;
+  background-image: url('../../../ai_images/template.png');
+  background-repeat: no-repeat;
+  background-position: -130px -85px;
+  background-position-x: -130px;
+  background-position-y: -85px;
+}
+.modal .modal-content .consult-fail > p {
+  text-align: center;
+  margin: 0 0 20px 0;
+  font-size: 14px;
+}
+.modal .modal-content .consult-fail .fail-actions {
+  text-align: center;
+}
+.modal .modal-content .consult-fail .fail-actions button + button {
+  margin-left: 15px;
+}
 .tech-section {
   padding: 50px 0 40px;
 }
