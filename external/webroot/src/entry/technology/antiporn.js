@@ -85,14 +85,9 @@ $(document).ready(function () {
                     .attr('data-probability',
                         Math.round(activeResult.probability * 10000) / 100
                     )
-                    .toggleClass(
-                        'normal',
-                        ['一般正常', '卡通正常', '亲子'].indexOf(activeResult.class_name) !== -1
-                    )
-                    .toggleClass(
-                        'pornography',
-                        ['一般色情', '卡通色情'].indexOf(activeResult.class_name) !== -1
-                    );
+                    .toggleClass('normal', '正常' === activeResult.class_name)
+                    .toggleClass('sexy', '性感' === activeResult.class_name)
+                    .toggleClass('pornography', '色情' === activeResult.class_name);
 
                 isScanning = false;
             },
