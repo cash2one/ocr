@@ -47,9 +47,9 @@ public class Sample {
     public static void main(String[] args) {
 
         //设置APPID/AK/SK
-        String APP_ID = "your-app-id";
-        String API_KEY = "your-access-key-id";
-        String SECRET_KEY = "your-secret-access-key";
+        String APP_ID = "你的 App ID";
+        String API_KEY = "你的 API Key";
+        String SECRET_KEY = "你的 Secret Key";
 
         // 初始化一个BFRClient
         AipNlp client = new AipNlp(APP_ID, API_KEY, SECRET_KEY);
@@ -167,6 +167,7 @@ public void wordembedding(AipNlp client) {
 | +sim    | object | 相似度对象     |
 | ++sim   | double | 相似度       |
 
+
 # 中文DNN语言模型
 
 举例，传入短语，计算中文DNN语言模型：
@@ -220,13 +221,28 @@ public void simnet(AipNlp client) {
 
 **短文本相似度 返回数据参数详情**
 
-| 参数          | 类型     | 描述   |
-| :---------- | :----- | :--- |
-| output      | object | 返回对象 |
-| +score      | double |      |
-| +type       | Int    |      |
-| +error      | Int    |      |
-| +error-node | String |      |
+| 参数          | 类型     | 描述          |
+| :---------- | :----- | :---------- |
+| output      | object | 返回对象        |
+| +score      | double | 两个文本相似度得分   |
+| +type       | Int    | 默认为0        |
+| +error      | Int    | error code  |
+| +error-node | String | error对应文字说明 |
+
+**错误码说明**  
+
+| Code | Message            | 返回说明      |
+| ---- | ------------------ | --------- |
+| 0    | NO_ERROR           | 正确返回      |
+| 1    | BEYOND_SLOT_LENGTH | 输入长度过长    |
+| 2    | OOV_ERROR          | 输入文本不在词表中 |
+| 3    | LEGO_LIB_RET_ERROR | 内部库错误     |
+| 4    | OTHER_SERVER_ERROR | 其它服务错误    |
+| 5    | INPUT_HAS_EMPTY    | 输入为空      |
+| 6    | INPUT_FORMAT_ERROR | 输入格式错误    |
+| 7    | OTHER_CLIENT_ERROR | 客服端错误     |
+
+
 
 # 评论观点抽取
 
@@ -277,10 +293,4 @@ public void NLPCommentTag(AipNlp client) {
 | +raw_adj_begin_pos  | Int      | 词向量结果                 |
 | +degree_adv         | String   | 原始副词                  |
 | +degree_adv_pos     | Int      | 词向量结果                 |
-
-# 版本更新说明
-
-##
-
-* 首次发布
 

@@ -46,9 +46,9 @@ public class Sample {
     public static void main(String[] args) {
 
         //设置APPID/AK/SK
-        String APP_ID = "your-app-id";
-        String API_KEY = "your-access-key-id";
-        String SECRET_KEY = "your-secret-access-key";
+        String APP_ID = "你的 App ID";
+        String API_KEY = "你的 API Key";
+        String SECRET_KEY = "你的 Secret Key";
 
         // 初始化一个OcrClient
         AipOcr client = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
@@ -243,10 +243,4 @@ lottery：彩票分类，设置detect_direction有助于提升精度 |否|
 | \+\+width        | Unit32 | 表示定位位置的长方形的宽度                            |
 | \+\+height       | Unit32 | 表示定位位置的长方形的高度                            |
 | \+words          | String | 识别结果字符串                                  |
-
-# 版本更新说明
-
-##
-
-* 第一版
 

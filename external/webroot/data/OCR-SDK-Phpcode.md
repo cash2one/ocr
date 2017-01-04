@@ -44,9 +44,9 @@ AipOcr类是Optical Character Recognition的PHP SDK客户端，为使用Optical 
 require_once 'AipOcr.php';
 
 // 定义常量
-const APP_ID = '000212'
-const API_KEY = '020947f506934fe5b39763080359f0f8';
-const SECRET_KEY = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiOcr对象
 $aipOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
@@ -70,9 +70,9 @@ $aipOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
 require_once 'AipOcr.php';
 
 // 定义常量
-const APP_ID = '000212'
-const API_KEY = '020947f506934fe5b39763080359f0f8';
-const SECRET_KEY = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiOcr
 $client = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
@@ -87,9 +87,9 @@ $response = $client->general(file_get_contents('general.jpg'));
 require_once 'AipOcr.php';
 
 // 定义常量
-const APP_ID = '000212'
-const API_KEY = '020947f506934fe5b39763080359f0f8';
-const API_SECRET = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiOcr
 $client = new AipOcr(APP_ID, ACCESS_KEY_ID, SECRET_ACCESS_KEY);
@@ -147,9 +147,9 @@ lottery：彩票分类，设置detect_direction有助于提升精度|否|
 require_once 'AipOcr.php';
 
 // 定义常量
-const APP_ID = '000212'
-const API_KEY = '020947f506934fe5b39763080359f0f8';
-const SECRET_KEY = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiOcr
 $client = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
@@ -197,9 +197,9 @@ $response = $client->bankcard(file_get_contents('bankCard.jpg'));
 require_once 'AipOcr.php';
 
 // 定义常量
-const APP_ID = '000212'
-const API_KEY = '020947f506934fe5b39763080359f0f8';
-const SECRET_KEY = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiOcr
 $client = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
@@ -217,9 +217,9 @@ $response = $client->idcard(file_get_contents('idcard.jpg'), $isFront);
 require_once 'AipOcr.php';
 
 // 定义常量
-const APP_ID = '000212'
-const API_KEY = '020947f506934fe5b39763080359f0f8';
-const API_SECRET = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiOcr
 $client = new AipOcr(APP_ID, ACCESS_KEY_ID, SECRET_ACCESS_KEY);
@@ -248,11 +248,6 @@ $response = $client->idcard(file_get_contents('idcard.jpg'), $isFront, $options)
 | result             | Object | 定位和识别结果数组        |
 | \+bank_card_number | String | 银行卡识别结果          |
 
-# 版本更新说明
-
-##
-
-* 第一版
 
 
 
