@@ -142,7 +142,7 @@ let bindMinusPlus = function () {
 };
 
 let loadDefault = function () {
-    $(".doc-wrap .faq-menu > li:eq(0)").click();
+    $('.doc-wrap .faq-menu > li:eq(0)').click();
 };
 
 $(function () {

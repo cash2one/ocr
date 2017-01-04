@@ -83,6 +83,7 @@ let renderMdPage = function (tagName, clickNode, type) {
             $('#md_container').html(marked(res));
             $('code').addClass('prettyprint');
             window.PR.prettyPrint();
+            $('#md_container').scrollTop(0);
             setFaqAnchorId(tagName);
             if (type === 'node') {
                 bindLeafNodeScroll(clickNode, type);
@@ -157,8 +158,8 @@ let renderMenuActive = function () {
 
 
 let bindMinusPlus = function () {
-    $('.sidebar .pm-button').click(function () {
-        let button = $(this);
+    $('.sidebar > h1').click(function () {
+        let button = $(this).find('.pm-button');
         if (button.hasClass('nav-plus1') && button.hasClass('active')) {
             button.removeClass('active');
             $('.toc.jquery-accordion-menu:eq(0)').show(500);
@@ -182,17 +183,22 @@ let loadDefault = function () {
 
 let clickonce = true;
 let unfoldSidebar = function (id) {
-    let  element = $('#' + id);
-    let  parentUl = element.parent();
-    let  parentLi = parentUl.parent();
+    let element = $('#' + id);
+    let parentUl = element.parent();
+    let parentLi = parentUl.parent();
+    let firstClickNode = element.find('.click-node:eq(0)');
     let clickElement = function () {
         if (clickonce) {
             element.find('>a').click();
+            firstClickNode.click();
+            let subUl = firstClickNode.siblings().eq(0);
+            if (subUl.length) {
+                subUl.find('>li:eq(0)').click();
+            }
             clickonce = false;
         }
     };
     clickElement();
-    console.log(parentUl, parentLi);
     if (!parentUl.hasClass('submenu')) {
         clickonce = true;
         return;
@@ -202,6 +208,9 @@ let unfoldSidebar = function (id) {
     }
     else {
         parentUl.show();
+    }
+    if (parentLi.attr('id') === 'jquery-accordion-menu') {
+        $('.pm-button:eq(1)').removeClass('active');
     }
     unfoldSidebar(parentLi.attr('id'));
 };
@@ -216,8 +225,9 @@ let loadHashLocation = function () {
         unfoldSidebar(hashId);
     }
     else {
-        let  hash = hashId.split('_')[0];
-        let  questionId = hashId.split('_')[1];
+        let hash = hashId.split('_')[0];
+        let questionId = hashId.split('_')[1];
+        questionId = hash + '-' + questionId;
         unfoldSidebar(hash);
         setTimeout(function () {
             let questionElement = $('#md_container>#' + questionId);

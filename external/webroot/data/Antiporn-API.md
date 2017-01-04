@@ -4,14 +4,14 @@
 
 向API服务地址使用POST发送请求，必须在URL中带上参数：
 
-**access_token:** 必须参数，参考“[Access Token获取](https://aip.baidubce.com/doc/auth.html)”。
+**access_token:** 必须参数，参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)”。
 
 ​POST中参数按照API接口说明调用即可。
 
 例如黄反识别API，使用HTTPS POST发送：
 
 ```
-https://aip.bj.baidubce.com/rest/2.0/antiporn/v1/detect? access_token=24.f9ba9c5241b67688bb4adbed8bc91dec.2592000.1485570332.282335-8574074
+https://aip.baidubce.com/rest/2.0/antiporn/v1/detect? access_token=24.f9ba9c5241b67688bb4adbed8bc91dec.2592000.1485570332.282335-8574074
 ```
 
 **请求消息体格式**
@@ -86,7 +86,7 @@ API服务均采用JSON格式的消息体作为响应返回的格式。
 
 **请求URL**
 
-https://aip.bj.baidubce.com/rest/2.0/antiporn/v1/detect
+https://aip.baidubce.com/rest/2.0/antiporn/v1/detect
 
 **请求示例**
 
@@ -107,9 +107,9 @@ https://aip.bj.baidubce.com/rest/2.0/antiporn/v1/detect
 ```
 result: [
     {"class_name": "一般色情", ""probability": 0.010549738071859}，
-    {"class_name": "一般正常", ""probability": 0.08985498547554}
-    {"class_name": "卡通色情", ""probability": 0.0048787374980748}
-    {"class_name": "卡通正常", ""probability": 0.89471650123596}
+    {"class_name": "一般正常", ""probability": 0.08985498547554}，
+    {"class_name": "卡通色情", ""probability": 0.0048787374980748}，
+    {"class_name": "卡通正常", ""probability": 0.89471650123596}，
     {"class_name": "其他", ""probability": 0.0.010549738071859}
     ]
 ```
