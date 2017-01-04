@@ -512,6 +512,9 @@
     padding-left: 100px !important;
   }
 }
+.tech-section.tech-banner p {
+  max-width: 35em;
+}
 .tech-section.tech-intro .container > h2 {
   margin-bottom: 60px;
 }
