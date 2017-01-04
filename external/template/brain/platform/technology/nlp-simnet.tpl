@@ -186,7 +186,7 @@
             </ul>-->
             <ul>
                 {%if $userInfo eq Null%}
-                <li><a href="https://login.bcetest.baidu.com?fromai=1&redirect=https%3A%2F%2Fcp01-yf-db-02.epc.baidu.com%3A8030">登录</a></li>
+                <li><a href="https://login.bcetest.baidu.com?fromai=1&redirect=http%3A%2F%2Fcp01-yf-db-02.epc.baidu.com%3A8030">登录</a></li>
                 <li><a class="btn-primary free-demo" role="button" href="https://login.bcetest.baidu.com?fromai=1&redirect=https%3A%2F%2Fqasandbox.bcetest.baidu.com">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
@@ -196,7 +196,7 @@
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=https%3A%2F%2Fcp01-yf-db-02.epc.baidu.com%3A8030">退出</a></li>
+                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=http%3A%2F%2Fcp01-yf-db-02.epc.baidu.com%3A8030">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -208,7 +208,7 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>短文本相似度</h1>
-        <p>依托全网海量优质数据和深度神经网络技术，为您提供高精度的短文本相似度服务，帮助快速实现推荐、检索、排序等应用。</p>
+        <p>依托全网海量优质数据和深度神经网络技术，为您提供高精度的短文本相似度服务，帮助快速实现推荐、检索、排序等应用</p>
         <div>
             <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">获取API Key</a>
             <a role="button" class="btn-other media"  href="/docs#NLP">技术文档</a>
