@@ -42,7 +42,7 @@ $(document).ready(function () {
                         video.currentTime = 0;
                         video.pause();
                     }
-                } catch(e) {
+                } catch (e) {
                     console.error(e);
                 }
             }
