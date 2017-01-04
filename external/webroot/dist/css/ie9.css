@@ -5,3 +5,6 @@
 .tech-demo .demo-data #demo-photo-upload {
   display: none !important;
 }
+#tts-demo {
+  display: none;
+}
