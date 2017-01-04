@@ -384,6 +384,7 @@
     </div>
 </section>
 {%/if%}
+{%if $src eq Null%}
 <section class="tech-section tech-guide">
     <div class="container">
         <h2>使用指南</h2>
@@ -404,6 +405,7 @@
         </div>
     </div>
 </section>
+{%/if%}
 </div>
 <aside class="aside-action">
     <ul>
