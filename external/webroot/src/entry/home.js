@@ -32,11 +32,18 @@ $(document).ready(function () {
             $(e).toggleClass('active', i === (currentBannerNum % banners.length));
             if ($(e).hasClass('video-bg')) {
                 let video = $(e).find('video')[0];
-                if (i === (currentBannerNum % banners.length)) {
-                    video.play();
-                } else {
-                    video.currentTime = 0;
-                    video.pause();
+                if (video.currentTime === undefined) {
+                    return;
+                }
+                try {
+                    if (i === (currentBannerNum % banners.length)) {
+                        video.play();
+                    } else {
+                        video.currentTime = 0;
+                        video.pause();
+                    }
+                } catch(e) {
+                    console.error(e);
                 }
             }
         });
