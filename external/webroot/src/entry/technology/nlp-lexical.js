@@ -858,34 +858,31 @@ const paintDemo = demoNum => {
     });
 
     let termTabContentHTML = [];
+
     // 拼接术语HTML
-    for (let termNameEng of Object.keys(termTmp)) {
+    Object.keys(termTmp).forEach(termNameEng => {
         // 顺序生成分词html完成拼接
         const blocks = termTmp[termNameEng]
             .map(
-                block => {
-                    return `<div class="lexer-demo-block">${block}</div>`;
-                }
+                block => `<div class="lexer-demo-block">${block}</div>`
             )
             .join('\r');
 
-        /* eslint-disable */
         // 一个术语块
         const termHTML = [
-            `<div class="lexer-demo-term">`,
-            `    <div class="lexer-demo-left-side">`,
+            '<div class="lexer-demo-term">',
+            '    <div class="lexer-demo-left-side">',
             `        <div class="lexer-demo-term-name">${termRef[termNameEng]}</div>`,
             `        <div class="lexer-demo-term-name-eng">${termNameEng}</div>`,
-            `    </div>`,
-            `    <div class="lexer-demo-term-box">`,
+            '    </div>',
+            '    <div class="lexer-demo-term-box">',
             `        ${blocks}`,
-            `    </div>`,
-            `</div>`
+            '    </div>',
+            '</div>'
         ].join('\r');
-        /* eslint-enable */
 
         termTabContentHTML.push(termHTML);
-    }
+    });
 
     // 填充专业名词部分
     $termDemoTab.html(termTabContentHTML.join('\r'));
