@@ -579,10 +579,12 @@
             <div class="sdk-collection">
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
+                        <i class="sdk-language-sprite sdk-java"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bfr"></i>
-                            <div class="sdk-download-button">下载</div>
+                            <a href="http://ai.baidu.com/download/aip-ocr-java-sdk-1.0.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
                         </div>
                         <div class="sdk-info">
                             <div class="sdk-item-name">离在线融合SDK</div>
@@ -596,10 +598,12 @@
                 </div>
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
+                        <i class="sdk-language-sprite sdk-php"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bfr"></i>
-                            <div class="sdk-download-button">下载</div>
+                            <a href="http://ai.baidu.com/download/aip-ocr-php-sdk-1.0.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
                         </div>
                         <div class="sdk-info">
                             <div class="sdk-item-name">离在线融合SDK</div>
@@ -618,10 +622,12 @@
             <div class="sdk-collection">
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
+                        <i class="sdk-language-sprite sdk-java"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-nlp"></i>
-                            <div class="sdk-download-button">下载</div>
+                            <a href="http://ai.baidu.com/download/aip-nlp-java-sdk-1.0.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
                         </div>
                         <div class="sdk-info">
                             <div class="sdk-item-name">离在线融合SDK</div>
@@ -635,10 +641,12 @@
                 </div>
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
+                        <i class="sdk-language-sprite sdk-php"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-nlp"></i>
-                            <div class="sdk-download-button">下载</div>
+                            <a href="http://ai.baidu.com/download/aip-nlp-php-sdk-1.0.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
                         </div>
                         <div class="sdk-info">
                             <div class="sdk-item-name">离在线融合SDK</div>
@@ -657,10 +665,12 @@
             <div class="sdk-collection">
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
+                        <i class="sdk-language-sprite sdk-java"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-anti"></i>
-                            <div class="sdk-download-button">下载</div>
+                            <a href="http://ai.baidu.com/download/aip-antiporn-java-sdk-1.0.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
                         </div>
                         <div class="sdk-info">
                             <div class="sdk-item-name">离在线融合SDK</div>
@@ -674,10 +684,12 @@
                 </div>
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-java"></i>
+                        <i class="sdk-language-sprite sdk-php"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-anti"></i>
-                            <div class="sdk-download-button">下载</div>
+                            <a href="http://ai.baidu.com/download/aip-antiporn-php-sdk-1.0.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
                         </div>
                         <div class="sdk-info">
                             <div class="sdk-item-name">离在线融合SDK</div>
