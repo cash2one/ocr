@@ -138,17 +138,25 @@
         <li><a>更多场景应用</a></li>
     </ul>
 </section>
+{%if $src eq Null%}
 <section class="tech-section get-started">
     <div class="container">
         <h2>快速提交您的需求</h2>
         <p>您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</p>
         <div class="consult">
-            {%if $src eq Null%}
-            <a role="button" class="btn-primary media">商务合作</a>
-            {%/if%}
-            {%if $src !== Null%}
-            <a role="button" class="btn-primary media" href="mailto:ai@baidu.com">商务合作</a>
-            {%/if%}
+            <a role="button" class="btn-primary large">商务合作</a>
         </div>
     </div>
 </section>
+{%/if%}
+{%if $src !== Null%}
+<section class="tech-section get-started">
+    <div class="container">
+        <h2>快速提交您的需求</h2>
+        <p>您可以点击下方按钮向我们发送合作邮件，我们会尽快与您取得联系</p>
+        <div class="consult">
+            <a role="button" class="btn-primary large" href="mailto:ai@baidu.com">商务合作</a>
+        </div>
+    </div>
+</section>
+{%/if%}
