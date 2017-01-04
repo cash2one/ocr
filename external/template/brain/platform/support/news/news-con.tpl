@@ -226,7 +226,7 @@
     (function () {
         var newsDateContainer = document.getElementById('news-date');
         /* eslint-disable */
-        var dateObj = new Date(+{%$data.time%});
+        var dateObj = new Date(+{%$data.time%}000);
         /* eslint-enable */
         var year = dateObj.getFullYear();
         var month = dateObj.getMonth() + 1;
