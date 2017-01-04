@@ -169,8 +169,8 @@
         <div class="login">
             <!--<ul>
                 {%if $userInfo eq Null%}
-                <li><a href="https://login.bce.baidu.com?fromai=1&redirect=encodeURIComponent(https://ai.baidu.com)">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://login.bce.baidu.com?fromai=1&redirect=encodeURIComponent(https://console.bce.baidu.com/)">免费试用</a></li>
+                <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fconsole.bce.baidu.com">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 <li>
