@@ -11,6 +11,7 @@ import Modal from '../common/modal';
 import {CONSULTATION_TMPL} from '../../partials/consultation';
 import {sendConsultation} from '../../model/consultation';
 import {checkQRCode} from '../../model/qrCode';
+import {setPlaceHolder} from '../common/placeholder';
 
 
 export default class ConsultationModal extends Modal {
@@ -32,6 +33,7 @@ export default class ConsultationModal extends Modal {
 
     reset() {
         this.setContent(EJS.render(CONSULTATION_TMPL.APPLY));
+        setPlaceHolder($(this.container));
     }
 
     apply() {
