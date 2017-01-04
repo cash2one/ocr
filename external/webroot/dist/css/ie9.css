@@ -1,0 +1,7 @@
+.tech-demo .demo-data #demo-photo-url {
+  width: 455px;
+}
+.tech-demo .demo-data span,
+.tech-demo .demo-data #demo-photo-upload {
+  display: none;
+}
