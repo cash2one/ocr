@@ -70,7 +70,7 @@ https://aip.baidubce.com/oauth/2.0/token?
 
 ## 使用Access Key ID/Secret Access Key的开发者注意
 
-![](../../../../images/document/bce-ak-sk.png)
+![](../../../../ai_images/document/bce-ak-sk.png)
 
 如上图中，如果您使用的是“安全认证/Access Key ”中的Access Key ID 和 Secret Access Key的开发者，则不能使用获取Access Token的方式鉴权，具体鉴权认证机制参考“[百度云鉴权认证机制](https://cloud.baidu.com/doc/Reference/AuthenticationMechanism.html)”。
 
