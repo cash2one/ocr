@@ -3,12 +3,7 @@
         <h1>语音唤醒</h1>
         <p>支持特定语音指令唤醒和打断、唤醒的同时执行指令操作<br>轻量级，低功耗，可自定义设置多个唤醒词，为您的应用打造自然流畅的对话</p>
         <div>
-            {%if $src eq Null%}
-            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">获取API Key</a>
-            {%/if%}
-            {%if $src !== Null%}
             <a role="button" class="btn-primary media" href="#wake-demo">获取唤醒词</a>
-            {%/if%}
         </div>
     </div>
 </section>
