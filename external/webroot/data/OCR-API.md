@@ -22,7 +22,7 @@ OCR服务对图片格式、图片大小有限制，格式支持jpg、png，长�
 
 向API服务地址使用POST发送请求，必须在URL中带上参数：
 
-**access_token:** 必须参数，参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)”。
+**access_token:** 必须参数，参考“[Access Token获取](/docs#Beginner-Auth)”。
 
 POST中参数按照API接口说明调用即可。
 

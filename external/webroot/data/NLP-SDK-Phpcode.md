@@ -19,7 +19,7 @@
 
 步骤如下：
 
-1.在[官方网站](https://ai.baidu.com/sdk)下载PHP SDK压缩工具包。
+1.在[官方网站](/sdk)下载PHP SDK压缩工具包。
 
 2.将下载的`aip-nlp-php-sdk-version.zip`解压后，复制AipNlp.php以及lib/*到工程文件夹中。
 

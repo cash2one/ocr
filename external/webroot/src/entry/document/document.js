@@ -46,7 +46,8 @@ let setAnchorId = function (arr) {
 let setFaqAnchorId = function (tagname) {
     if (tagname.indexOf('FAQ') > 0) {
         $('#md_container p').each(function (i, element) {
-            $(this).attr('id', tagname + '-Q' + (i + 1));
+            // $(this).attr('id', tagname + '-Q' + (i + 1));
+            $(this).attr('id', 'Q' + (i + 1));
         });
     }
 };
@@ -71,6 +72,22 @@ let bindLeafNodeScroll = function (clickNode, type) {
     });
 };
 
+let renderALinkTag = function () {
+    $('#md_container h1, #md_container h2').each(function (i, element) {
+        $(element).attr('id', $(element).text());
+    });
+    let aList = $('#md_container a');
+    aList.each(function (i, element) {
+        let aTag = $(element);
+        let href = aTag.attr('href');
+        if (href.length) {
+            if (href[0] !== '#') {
+                aTag.attr('target', '_blank');
+            }
+        }
+    });
+};
+
 let renderMdPage = function (tagName, clickNode, type) {
     if (lastMdTag === tagName) {
         return;
@@ -84,6 +101,7 @@ let renderMdPage = function (tagName, clickNode, type) {
             $('code').addClass('prettyprint');
             window.PR.prettyPrint();
             $('#md_container').scrollTop(0);
+            renderALinkTag();
             setFaqAnchorId(tagName);
             if (type === 'node') {
                 bindLeafNodeScroll(clickNode, type);
@@ -183,7 +201,7 @@ let loadDefault = function () {
 
 let clickonce = true;
 let unfoldSidebar = function (id) {
-    let element = $('#' + id);
+    let element = $('[name="' + id + '"]');
     let parentUl = element.parent();
     let parentLi = parentUl.parent();
     let firstClickNode = element.find('.click-node:eq(0)');
@@ -212,7 +230,7 @@ let unfoldSidebar = function (id) {
     if (parentLi.attr('id') === 'jquery-accordion-menu') {
         $('.pm-button:eq(1)').removeClass('active');
     }
-    unfoldSidebar(parentLi.attr('id'));
+    unfoldSidebar(parentLi.attr('name'));
 };
 
 let loadHashLocation = function () {
@@ -227,7 +245,7 @@ let loadHashLocation = function () {
     else {
         let hash = hashId.split('_')[0];
         let questionId = hashId.split('_')[1];
-        questionId = hash + '-' + questionId;
+        // questionId = hash + '-' + questionId;
         unfoldSidebar(hash);
         setTimeout(function () {
             let questionElement = $('#md_container>#' + questionId);

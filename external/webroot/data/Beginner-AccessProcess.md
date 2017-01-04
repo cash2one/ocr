@@ -25,13 +25,13 @@
 
 ## 4. 生成签名
 第三方应用在调用开放平台API之前，首先需要获取Access Token（用户身份验证和授权的凭证）。  
-您需要使用创建应用所分配到的AppID、API Key及Secret Key，进行Access Token的生成，方法详见 [Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)”。
+您需要使用创建应用所分配到的AppID、API Key及Secret Key，进行Access Token的生成，方法详见 [Access Token获取](/docs#Beginner-Auth)”。
 
 
 
 ## 5. 启动开发
 目前各项服务我们都会开放REST API形式的服务，您可以点击「技术文档」中各服务的文档，查看**具体调用方法及参数**。  
 我们同样也为您提供了客户端或服务端SDK，后续会不断补充拓展，敬请持续关注。  
-[SDK下载页](http://ai.baidu.com/sdk.html)
+[SDK下载页](/sdk)
 
 

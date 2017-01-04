@@ -20,7 +20,7 @@
 
 步骤如下：
 
-1. 在[官方网站](http://ai.baidu.com/sdk)下载PHP SDK压缩工具包。
+1. 在[官方网站](/sdk)下载PHP SDK压缩工具包。
 
 2. 将下载的`aip-antiporn-php-sdk-version.zip`解压后，复制AipAntiPorn.php以及lib/*到工程文件夹中。
 
