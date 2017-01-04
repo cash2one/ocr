@@ -530,28 +530,28 @@
 .tech-section.tech-intro .intro-item .intro-icon {
   height: 170px;
 }
-.tech-section.tech-intro .intro-item:nth-child(1) .intro-icon {
+.tech-section.tech-intro .intro-item:nth-child(2) .intro-icon {
   background-image: url('../../../ai_images/technology/ar/intro-icons.png');
   background-repeat: no-repeat;
   background-position: 30px 0;
   background-position-x: 30px;
   background-position-y: 0;
 }
-.tech-section.tech-intro .intro-item:nth-child(2) .intro-icon {
+.tech-section.tech-intro .intro-item:nth-child(3) .intro-icon {
   background-image: url('../../../ai_images/technology/ar/intro-icons.png');
   background-repeat: no-repeat;
   background-position: -265px 0;
   background-position-x: -265px;
   background-position-y: 0;
 }
-.tech-section.tech-intro .intro-item:nth-child(3) .intro-icon {
+.tech-section.tech-intro .intro-item:nth-child(4) .intro-icon {
   background-image: url('../../../ai_images/technology/ar/intro-icons.png');
   background-repeat: no-repeat;
   background-position: 30px -145px;
   background-position-x: 30px;
   background-position-y: -145px;
 }
-.tech-section.tech-intro .intro-item:nth-child(4) .intro-icon {
+.tech-section.tech-intro .intro-item:nth-child(5) .intro-icon {
   background-image: url('../../../ai_images/technology/ar/intro-icons.png');
   background-repeat: no-repeat;
   background-position: -265px -145px;
