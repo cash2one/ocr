@@ -15,6 +15,7 @@
 .basic-transition (@property: all, @time, @timeFunc: ease, @delay: 0s) {
   -webkit-transition: @property @time @timeFunc @delay;
   -moz-transition: @property @time @timeFunc @delay;
+  -ms-transition: @property @time @timeFunc @delay;
   -o-transition: @property @time @timeFunc @delay;
   transition: @property @time @timeFunc @delay;
 }
@@ -51,4 +52,10 @@
   -o-animation-delay: @delay;
   -o-animation-iteration-count: @iteration;
   -o-animation-timing-function: @func;
+
+  -ms-animation-name: @name;
+  -ms-animation-duration: @duration;
+  -ms-animation-delay: @delay;
+  -ms-animation-iteration-count: @iteration;
+  -ms-animation-timing-function: @func;
 }

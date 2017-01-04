@@ -48,6 +48,7 @@
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: all .1s linear;
   -moz-transition: all .1s linear;
+  -ms-transition: all .1s linear;
   -o-transition: all .1s linear;
   transition: all .1s linear;
   display: inline-block;
@@ -178,6 +179,7 @@
   z-index: 9;
   -webkit-transition: opacity 1.5s ease-in-out 0s;
   -moz-transition: opacity 1.5s ease-in-out 0s;
+  -ms-transition: opacity 1.5s ease-in-out 0s;
   -o-transition: opacity 1.5s ease-in-out 0s;
   transition: opacity 1.5s ease-in-out 0s;
 }
@@ -251,6 +253,7 @@
   z-index: 99;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -403,6 +406,7 @@
   content: "";
   -webkit-transition: all .1s linear;
   -moz-transition: all .1s linear;
+  -ms-transition: all .1s linear;
   -o-transition: all .1s linear;
   transition: all .1s linear;
   display: inline-block;
@@ -555,6 +559,7 @@
   bottom: 0;
   -webkit-transition: right 0.5s ease 0s;
   -moz-transition: right 0.5s ease 0s;
+  -ms-transition: right 0.5s ease 0s;
   -o-transition: right 0.5s ease 0s;
   transition: right 0.5s ease 0s;
 }
@@ -706,6 +711,11 @@
   -o-animation-delay: 0;
   -o-animation-iteration-count: 1;
   -o-animation-timing-function: linear;
+  -ms-animation-name: rollInRight;
+  -ms-animation-duration: 0.2s;
+  -ms-animation-delay: 0;
+  -ms-animation-iteration-count: 1;
+  -ms-animation-timing-function: linear;
 }
 .ai-platform.page-content .home-section.solution .solution-container .solution-detail > div:nth-child(1) {
   display: block;
@@ -747,6 +757,14 @@
   }
 }
 @-moz-keyframes rollInRight {
+  from {
+    right: -100px;
+  }
+  to {
+    right: 20px;
+  }
+}
+@-ms-keyframes rollInRight {
   from {
     right: -100px;
   }
@@ -809,6 +827,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0);
   -webkit-transition: all .1s linear;
   -moz-transition: all .1s linear;
+  -ms-transition: all .1s linear;
   -o-transition: all .1s linear;
   transition: all .1s linear;
 }
