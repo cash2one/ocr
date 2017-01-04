@@ -6,6 +6,7 @@
 
 import $ from 'jquery';
 import {getHeader} from '../../model/demoAPI';
+import AlertModal from './alertModal';
 
 export default class DemoCanvas {
     constructor({selector, image, type, apiType, toCheck = true, scale = 1, success, fail}) {
@@ -22,7 +23,7 @@ export default class DemoCanvas {
 
         this.image.onerror = () => {
             this.fail();
-            console.error('图片加载失败，请重试');
+            new AlertModal('图片加载失败，请重试');
         };
 
         if (toCheck) {

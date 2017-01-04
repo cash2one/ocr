@@ -67,10 +67,10 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>色情识别</span>
+                                <span>黄反识别</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/antiporn">色情识别</a></li>
+                                <li><a href="/tech/antiporn">黄反识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -135,7 +135,7 @@
                                 <span>AR增强现实</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/ar">AR增强现实</a></li>
+                                <li><a href="/tech/ar">AR内容平台</a></li>
                             </ul>
                         </li>
                     </ul>
