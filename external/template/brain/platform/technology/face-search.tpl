@@ -211,7 +211,7 @@
         <p>为您提供1:N人脸查找匹配服务，帮助您轻松实现，从人脸库中识别用户身份或查找相似人脸</p>
         <div>
             <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">获取API Key</a>
-            <a role="button" class="btn-other media">技术文档</a>
+            <a role="button" class="btn-other media" href="/docs#FACE">技术文档</a>
         </div>
     </div>
 </section>
