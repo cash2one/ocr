@@ -1,6 +1,6 @@
 # 简介
 
-​本文档主要针对API开发者，调用AI服务相关的API接口有两种调用方式，两种不同的调用方式采用相同的接口URL，区别在于请求方式和鉴权方法不一样，请求参数和返回结果一致。
+本文档主要针对API开发者，调用AI服务相关的API接口有两种调用方式，两种不同的调用方式采用相同的接口URL，区别在于请求方式和鉴权方法不一样，请求参数和返回结果一致。
 
 **请求消息体格式**
 
@@ -22,14 +22,14 @@ OCR服务对图片格式、图片大小有限制，格式支持jpg、png，长�
 
 向API服务地址使用POST发送请求，必须在URL中带上参数：
 
-​**access_token:** 必须参数，参考“[Access Token获取](https://ai.baidu.com/docs/auth.html)”。
+**access_token:** 必须参数，参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)”。
 
-​POST中参数按照API接口说明调用即可。
+POST中参数按照API接口说明调用即可。
 
 例如文字识别API，使用HTTPS POST发送：
 
 ```
-https://aip.bj.baidubce.com/rest/2.0/ocr/v1/general? access_token=24.f9ba9c5241b67688bb4adbed8bc91dec.2592000.1485570332.282335-8574074
+https://aip.baidubce.com/rest/2.0/ocr/v1/general? access_token=24.f9ba9c5241b67688bb4adbed8bc91dec.2592000.1485570332.282335-8574074
 ```
 
 > **说明：**推荐使用调用方式一。方式一鉴权使用的Access_token必须通过API Key和Secret Key获取。
@@ -55,7 +55,7 @@ accept-encoding: gzip, deflate
 x-bce-date: 2015-03-24T13:02:00Z
 connection: keep-alive
 accept: */*
-host: aip.bj.baidubce.com
+host: aip.baidubce.com
 x-bce-request-id: 73c4e74c-3101-4a00-bf44-fe246959c05e
 content-type: application/x-www-form-urlencoded;
 authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z/1800/host;x-bce-date/994014d96b0eb26578e039fa053a4f9003425da4bfedf33f4790882fb4c54903
@@ -144,13 +144,13 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 **请求URL**
 
-https://aip.bj.baidubce.com/rest/2.0/ocr/v1/general
+https://aip.baidubce.com/rest/2.0/ocr/v1/general
 
 **请求示例**
 
 ```http
 {
-    image=图像base64编码
+    "image":图像base64编码
 }
 ```
 
@@ -248,13 +248,13 @@ Content-Type: application/json;charset=UTF-8
 
 **请求URL**
 
-https://aip.bj.baidubce.com/rest/2.0/ocr/v1/idcard
+https://aip.baidubce.com/rest/2.0/ocr/v1/idcard
 
 **请求示例**
 
 ```http
 {
-    "image":base64.b64encode(imagetostring)
+    "image":图像base64编码
 }
 ```
 
@@ -325,13 +325,13 @@ Content-Type: application/json;charset=UTF-8
 
 **请求URL**
 
-https://aip.bj.baidubce.com/rest/2.0/ocr/v1/bankcard
+https://aip.baidubce.com/rest/2.0/ocr/v1/bankcard
 
 **请求示例**
 
 ```http
 {
-    image=图像base64编码
+    "image":图像base64编码
 }
 ```
 

@@ -744,6 +744,7 @@
 		overflow-x:hidden;
 		overflow-y:scroll;
 		height:800px;
+		padding-right:32px;
 	}
 	.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6 {
 		font-size:12px;
@@ -860,6 +861,7 @@
 		border-left: 1px solid #EBEBEB;
 		border-right: 1px solid #EBEBEB;
 		text-align: left;
+		min-width:70px;
 	}
 	.markdown-body table tr {
 		background-color:#fff;
@@ -873,6 +875,9 @@
 		padding: 5px 10px;
 		border: 1px solid #CCE3FB;
 		background-color: #FAFAFA;
+	}
+	.markdown-body img {
+		width:820px;
 	}
 
 	.doc-wrap {
@@ -920,6 +925,7 @@
 		padding-top: 4px;
 		background: white;
 		padding-bottom: 4px;
+		cursor:pointer;
 	}
 	.toc > ul{
 		padding: 11px 0px;
@@ -937,7 +943,7 @@
 	.toc ul li.leaf.active {
 		color:white;
 	}
-	.toc li.active > a{
+	.toc li.active > a, .toc li > a:hover{
 		color:#0073eb;
 		cursor:pointer;
 	}
@@ -975,29 +981,36 @@
 	.sidebar > h1 >i.active {
 	    background:url("../../../ai_images/document/doc-icons.png") -144px -0px no-repeat;
 	}
-	.toc li span.icon.icon-jieru {
+	.toc li span.icon.icon-jieru, .toc li span.icon.icon-jieru {
 		margin-right:10px;
-		background:url("../../../ai_images/document/doc-icons.png") -0px -0px no-repeat;
+		background:url("../../../ai_images/document/doc-icons-2x.png") -0px -0px no-repeat;
 	}
-	.toc li.root.active > a > span.icon-jieru {
+	.toc li.root.active > a > span.icon-jieru,
+	.toc li.root:hover > a > span.icon-jieru {
 		font-size:12px;
-		background:url("../../../ai_images/document/doc-icons.png") -0px -16px no-repeat;
+		background:url("../../../ai_images/document/doc-icons-2x.png") -0px -16px no-repeat;
+
+	}
+	.toc li span.icon {
+		background-size: 176px 32px !important;
 	}
 	.toc li span.icon.icon-jianquan {
 		margin-right:10px;
-		background:url("../../../ai_images/document/doc-icons.png") -16px -0px no-repeat;
+		background:url("../../../ai_images/document/doc-icons-2x.png") -16px -0px no-repeat;
 	}
-	.toc li.root.active > a > span.icon-jianquan {
+	.toc li.root.active > a > span.icon-jianquan,
+	.toc li.root:hover > a > span.icon-jianquan {
 		font-size:12px;
-		background:url("../../../ai_images/document/doc-icons.png") -16px -16px no-repeat;
+		background:url("../../../ai_images/document/doc-icons-2x.png") -16px -16px no-repeat;
 	}
 	.toc li span.icon.icon-fuwu {
 		margin-right:10px;
-		background:url("../../../ai_images/document/doc-icons.png") -32px -0px no-repeat;
+		background:url("../../../ai_images/document/doc-icons-2x.png") -32px -0px no-repeat;
 	}
-	.toc li.root.active > a > span.icon-fuwu {
+	.toc li.root.active > a > span.icon-fuwu,
+	.toc li.root:hover > a > span.icon-fuwu {
 		font-size:12px;
-		background:url("../../../ai_images/document/doc-icons.png") -32px -16px no-repeat;
+		background:url("../../../ai_images/document/doc-icons-2x.png") -32px -16px no-repeat;
 	}
 	.toc li span.icon.icon-dot {
 		margin-right:10px;
@@ -1006,43 +1019,48 @@
 	}
 	.toc li span.icon.icon-yuyan {
 		margin-right:10px;
-		background:url("../../../ai_images/document/doc-icons.png") -96px -0px no-repeat;
+		background:url("../../../ai_images/document/doc-icons-2x.png") -96px -0px no-repeat;
 	}
-	.toc li.root.active > a > span.icon-yuyan {
+	.toc li.root.active > a > span.icon-yuyan,
+	.toc li.root:hover > a > span.icon-yuyan {
 		font-size:12px;
-		background:url("../../../ai_images/document/doc-icons.png") -96px -16px no-repeat;
+		background:url("../../../ai_images/document/doc-icons-2x.png") -96px -16px no-repeat;
 	}
 	.toc li span.icon.icon-huangfan {
 		margin-right:10px;
-		background:url("../../../ai_images/document/doc-icons.png") -112px -0px no-repeat;
+		background:url("../../../ai_images/document/doc-icons-2x.png") -112px -0px no-repeat;
 	}
-	.toc li.root.active > a > span.icon-huangfan {
+	.toc li.root.active > a > span.icon-huangfan,
+	.toc li.root:hover > a > span.icon-huangfan {
 		font-size:12px;
-		background:url("../../../ai_images/document/doc-icons.png") -112px -16px no-repeat;
+		background:url("../../../ai_images/document/doc-icons-2x.png") -112px -16px no-repeat;
 	}
 	.toc li span.icon.icon-renlian {
 		margin-right:10px;
-		background:url("../../../ai_images/document/doc-icons.png") -80px 0px no-repeat;
+		background:url("../../../ai_images/document/doc-icons-2x.png") -80px 0px no-repeat;
 	}
-	.toc li.root.active > a > span.icon-renlian {
+	.toc li.root.active > a > span.icon-renlian,
+	.toc li.root:hover > a > span.icon-renlian {
 		font-size:12px;
-		background:url("../../../ai_images/document/doc-icons.png") -80px -16px no-repeat;
+		background:url("../../../ai_images/document/doc-icons-2x.png") -80px -16px no-repeat;
 	}
 	.toc li span.icon.icon-wenzi {
 		margin-right:10px;
-		background:url("../../../ai_images/document/doc-icons.png") -64px -0px no-repeat;
+		background:url("../../../ai_images/document/doc-icons-2x.png") -64px -0px no-repeat;
 	}
-	.toc li.root.active > a > span.icon-wenzi {
+	.toc li.root.active > a > span.icon-wenzi,
+	.toc li.root:hover > a > span.icon-wenzi {
 		font-size:12px;
-		background:url("../../../ai_images/document/doc-icons.png") -64px -16px no-repeat;
+		background:url("../../../ai_images/document/doc-icons-2x.png") -64px -16px no-repeat;
 	}
 	.toc li span.icon.icon-yuyin {
 		margin-right:10px;
-		background:url("../../../ai_images/document/doc-icons.png") -48px -0px no-repeat;
+		background:url("../../../ai_images/document/doc-icons-2x.png") -48px -0px no-repeat;
 	}
-	.toc li.root.active > a > span.icon-yuyin {
+	.toc li.root.active > a > span.icon-yuyin,
+	.toc li.root:hover > a > span.icon-yuyin {
 		margin-right:10px;
-		background:url("../../../ai_images/document/doc-icons.png") -48px -16px no-repeat;
+		background:url("../../../ai_images/document/doc-icons-2x.png") -48px -16px no-repeat;
 	}
 	.toc ul.submenu li.leaf > a > i, .toc ul.submenu li.non-leaf > a > i{
 		margin-right: 10px;
@@ -1058,7 +1076,7 @@
 	    height: 16px;
 	    display: inline-block;
 	    vertical-align: middle;
-	    background:url("../../../ai_images/document/doc-icons-2x.png") -328px -10px no-repeat;
+	    background:url("../../../ai_images/document/doc-icons-2x.png") -328px -42px no-repeat;
 	}
 	.toc li {
 		cursor:pointer;
@@ -1185,5 +1203,10 @@
 	.toc .current a {
 		color:#333 !important;
 		background-position:10px -73px !important;
+	}
+	p code.prettyprint {
+	    color: black;
+	    padding: 0px !important;
+	    display: inline-block !important;
 	}
 }

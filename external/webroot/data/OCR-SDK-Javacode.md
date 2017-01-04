@@ -48,14 +48,17 @@ public class Sample {
         //设置APPID/AK/SK
         String APP_ID = "your-app-id";
         String API_KEY = "your-access-key-id";
-        String API_SECRET = "your-secret-access-key";
+        String SECRET_KEY = "your-secret-access-key";
 
         // 初始化一个OcrClient
-        AipOcr client = new AipOcr(APP_ID, API_KEY, API_SECRET);
+        AipOcr client = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
     }
 }
 ```
-在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`API_SECRET`是由系统分配给用户的，均为字符串，用于标识用户，为访问OCR做签名验证。其中`API_KEY`对应控制台中的“Access Key ID”，`SECRET_ACCESS_KEY`对应控制台中的“Access Key Secret”，获取方式请参考[获取AK/SK](../Reference/GetAKSK)。
+在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是在创建完毕应用后，系统分配给用户的，均为字符串，用于标识用户，为访问做签名验证，可在AI服务控制台中的**应用列表**中查看。  
+
+**注：**如您以前是百度云的老用户，其中`API_KEY`对应百度云的“Access Key ID”，`SECRET_KEY`对应百度云的“Access Key Secret”。
+
 
 # 通用文字识别
 
@@ -101,33 +104,33 @@ public void generalRecognition(AipOcr client) {
 
 **通用文字识别 请求参数详情**
 
-| 参数 | 类型 | 描述 | 是否必须 |
-| :---- | :---- | :---- | :---- |
-|detect_direction|Boolean|检测图像朝向(指输入图像是正常方向、逆时针旋转90/180/270度)，有效值：true、false，默认值: false。|否|
-|image|String|图像数据，支持本地图像文件路径，图像文件二进制数组|是|
-|language_type|String|识别语言类型(CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP)，默认为CHN_ENG|否|
-|mask|String|表示mask区域的黑白灰度图片，白色代表选中, base64编码|否|
-|recognize_granularity|String|是否定位单字符位置，big：不定位单字符位置，默认值；small：定位单字符位置|否|
+| 参数                    | 类型      | 描述                                       | 是否必须 |
+| :-------------------- | :------ | :--------------------------------------- | :--- |
+| detect_direction      | Boolean | 检测图像朝向(指输入图像是正常方向、逆时针旋转90/180/270度)，有效值：true、false，默认值: false。 | 否    |
+| image                 | String  | 图像数据，支持本地图像文件路径，图像文件二进制数组                | 是    |
+| language_type         | String  | 识别语言类型(CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP)，默认为CHN_ENG | 否    |
+| mask                  | String  | 表示mask区域的黑白灰度图片，白色代表选中, base64编码         | 否    |
+| recognize_granularity | String  | 是否定位单字符位置，big：不定位单字符位置，默认值；small：定位单字符位置 | 否    |
 
 **通用文字识别 返回数据参数详情**
 
-| 参数 | 类型 | 描述 |
-| :---- | :---- | :---- |
-|direction|Int32|图像方向，当detect_direction=true时存在。-1:未定义，0:正向，1: 逆时针90度， 2:逆时针180度， 3:逆时针270度|
-|log_id|Unit64|唯一的log id，用于问题定位|
-|words_result|Array|定位和识别结果数组|
-|words_result_num|Unit32|识别结果数，表示words_result的元素个数|
-|\+location|Array|位置数组（坐标0点为左上角）|
-|\+\+left|Unit32|表示定位位置的长方形左上顶点的水平坐标|
-|\+\+top|Unit32|表示定位位置的长方形左上顶点的垂直坐标|
-|\+\+width|Unit32|表示定位位置的长方形的宽度|
-|\+\+height|Unit32|表示定位位置的长方形的高度|
-|\+words|String|识别结果字符串|
-|\+chars|Array|当单字符结果，recognize_granularity=small时存在|
-|\+\+left|Unit32|表示定位位置的长方形左上顶点的水平坐标|
-|\+\+top|Unit32|表示定位位置的长方形左上顶点的垂直坐标|
-|\+\+width|Unit32|表示定位位置的长方形的宽度|
-|\+\+height|Unit32|表示定位位置的长方形的高度|
+| 参数               | 类型     | 描述                                       |
+| :--------------- | :----- | :--------------------------------------- |
+| direction        | Int32  | 图像方向，当detect_direction=true时存在。-1:未定义，0:正向，1: 逆时针90度， 2:逆时针180度， 3:逆时针270度 |
+| log_id           | Unit64 | 唯一的log id，用于问题定位                         |
+| words_result     | Array  | 定位和识别结果数组                                |
+| words_result_num | Unit32 | 识别结果数，表示words_result的元素个数                |
+| \+location       | Array  | 位置数组（坐标0点为左上角）                           |
+| \+\+left         | Unit32 | 表示定位位置的长方形左上顶点的水平坐标                      |
+| \+\+top          | Unit32 | 表示定位位置的长方形左上顶点的垂直坐标                      |
+| \+\+width        | Unit32 | 表示定位位置的长方形的宽度                            |
+| \+\+height       | Unit32 | 表示定位位置的长方形的高度                            |
+| \+words          | String | 识别结果字符串                                  |
+| \+chars          | Array  | 当单字符结果，recognize_granularity=small时存在    |
+| \+\+left         | Unit32 | 表示定位位置的长方形左上顶点的水平坐标                      |
+| \+\+top          | Unit32 | 表示定位位置的长方形左上顶点的垂直坐标                      |
+| \+\+width        | Unit32 | 表示定位位置的长方形的宽度                            |
+| \+\+height       | Unit32 | 表示定位位置的长方形的高度                            |
 
 # 银行卡文字识别
 
@@ -153,17 +156,17 @@ public void bankcardRecognition(AipOcr client) {
 
 **银行卡文字识别 请求参数详情**
 
-| 参数 | 类型 | 描述 | 是否必须 |
-| :---- | :---- | :---- | :---- |
-|image|String|图像数据，支持本地图像文件路径，图像文件二进制数组|是|
+| 参数    | 类型     | 描述                        | 是否必须 |
+| :---- | :----- | :------------------------ | :--- |
+| image | String | 图像数据，支持本地图像文件路径，图像文件二进制数组 | 是    |
 
 **银行卡文字识别 返回数据参数详情**
 
-| 参数 | 类型 | 描述 |
-| :---- | :---- | :---- |
-|log_id|Unit64|唯一的log id，用于问题定位|
-|result|Object|定位和识别结果数组|
-|\+bank_card_number|String|银行卡识别结果|
+| 参数                 | 类型     | 描述               |
+| :----------------- | :----- | :--------------- |
+| log_id             | Unit64 | 唯一的log id，用于问题定位 |
+| result             | Object | 定位和识别结果数组        |
+| \+bank_card_number | String | 银行卡识别结果          |
 
 # 身份证文字识别
 
@@ -217,29 +220,29 @@ public void idcardRecognition(AipOcr client) {
 
 **身份证文字识别 请求参数详情**
 
-| 参数 | 类型 | 描述 | 是否必须 |
-| :---- | :---- | :---- | :---- |
-|accuracy|String|精准度，精度越高，速度越慢。default：auto|否|
-|detect_direction|Boolean|检测图像朝向(指输入图像是正常方向、逆时针旋转90/180/270度)，有效值：true、false，默认值: false。|否|
-|id_card_side|String|front：身份证正面，back：身份证背面|是|
-|image|String|图像数据，支持本地图像文件路径，图像文件二进制数组|是|
+| 参数               | 类型      | 描述                                       | 是否必须 |
+| :--------------- | :------ | :--------------------------------------- | :--- |
+| accuracy         | String  | 精准度，精度越高，速度越慢。default：auto               | 否    |
+| detect_direction | Boolean | 检测图像朝向(指输入图像是正常方向、逆时针旋转90/180/270度)，有效值：true、false，默认值: false。 | 否    |
+| id_card_side     | String  | front：身份证正面，back：身份证背面                   | 是    |
+| image            | String  | 图像数据，支持本地图像文件路径，图像文件二进制数组                | 是    |
 |classify_dimension|String|分类维度（根据OCR结果进行分类），逗号分隔，当前只支持lottery。
 lottery：彩票分类，设置detect_direction有助于提升精度 |否|
 
 **身份证文字识别 返回数据参数详情**
 
-| 参数 | 类型 | 描述 |
-| :---- | :---- | :---- |
-|direction|Int32|图像方向，当detect_direction=true时存在。-1:未定义，0:正向，1: 逆时针90度， 2:逆时针180度， 3:逆时针270度|
-|log_id|Unit64|唯一的log id，用于问题定位|
-|words_result|Array|定位和识别结果数组，数组元素的key是身份证的主体字段（正面支持：住址、公民身份号码、出生、姓名、性别、民族，背面支持：签发日期、失效日期）。只返回识别出的字段。|
-|words_result_num|Unit32|识别结果数，表示words_result的元素个数|
-|\+location|Array|位置数组（坐标0点为左上角）|
-|\+\+left|Unit32|表示定位位置的长方形左上顶点的水平坐标|
-|\+\+top|Unit32|表示定位位置的长方形左上顶点的垂直坐标|
-|\+\+width|Unit32|表示定位位置的长方形的宽度|
-|\+\+height|Unit32|表示定位位置的长方形的高度|
-|\+words|String|识别结果字符串|
+| 参数               | 类型     | 描述                                       |
+| :--------------- | :----- | :--------------------------------------- |
+| direction        | Int32  | 图像方向，当detect_direction=true时存在。-1:未定义，0:正向，1: 逆时针90度， 2:逆时针180度， 3:逆时针270度 |
+| log_id           | Unit64 | 唯一的log id，用于问题定位                         |
+| words_result     | Array  | 定位和识别结果数组，数组元素的key是身份证的主体字段（正面支持：住址、公民身份号码、出生、姓名、性别、民族，背面支持：签发日期、失效日期）。只返回识别出的字段。 |
+| words_result_num | Unit32 | 识别结果数，表示words_result的元素个数                |
+| \+location       | Array  | 位置数组（坐标0点为左上角）                           |
+| \+\+left         | Unit32 | 表示定位位置的长方形左上顶点的水平坐标                      |
+| \+\+top          | Unit32 | 表示定位位置的长方形左上顶点的垂直坐标                      |
+| \+\+width        | Unit32 | 表示定位位置的长方形的宽度                            |
+| \+\+height       | Unit32 | 表示定位位置的长方形的高度                            |
+| \+words          | String | 识别结果字符串                                  |
 
 # 版本更新说明
 

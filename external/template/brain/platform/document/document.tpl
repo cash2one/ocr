@@ -221,7 +221,7 @@
         <h1 style="width: 260px; ">技术文档<i class="nav-plus2 pm-button active"></i></h1>
         <div class="toc jquery-accordion-menu" style="width: 260px;height:600px;height:641px;" id="jquery-accordion-menu">
             <ul class="level1 submenu" style="display:none">
-                <li id="Speech" class="node root"><a href="javascript:void(0)"><span class="icon icon-yuyin"></span>百度语音 BS</a>
+                <li id="Speech" class="node root"><a href="javascript:void(0)"><span class="icon icon-yuyin"></span>百度语音</a>
                     <ul class="level2 submenu">
                         <li id="Speech-Asr" class="non-leaf"><a href="javascript:void(0)"><span class="icon-arrow-down"></span>语音识别</a>
                             <ul class="level3 submenu">
@@ -345,7 +345,7 @@
                         </li>
                     </ul>
                 </li>
-                <li id="OCR" class="node root"><a href="javascript:void(0)"><span class="icon icon-wenzi"></span>文字识别 OCR</a>
+                <li id="OCR" class="node root"><a href="javascript:void(0)"><span class="icon icon-wenzi"></span>文字识别</a>
                     <ul class="level2 submenu">
                         <li id="OCR-API" class="non-leaf">
                             <a class="click-node" tag="OCR-API" href="javascript:void(0)"><span class="icon-arrow-down"></span>API 文档</a>
@@ -362,21 +362,19 @@
                             <ul class="level3 submenu">
                                 <li id="OCR-SDK-Javacode" class="non-leaf sdk-node">
                                     <a class="click-node" tag="OCR-SDK-Javacode" href="javascript:void(0)"><i></i>Java 语言</a>
-                                    <ul class="level4 submenu"></ul>
                                 </li>
                                 <li id="OCR-SDK-Phpcode" class="non-leaf sdk-node">
                                     <a class="click-node" tag="OCR-SDK-Phpcode" href="javascript:void(0)"><i></i>PHP 语言</a>
-                                    <ul class="level4 submenu"></ul>
                                 </li>
                             </ul>
                         </li>
                         <li id="OCR-FAQ" class="leaf"><a class="click-node" tag="OCR-FAQ" href="javascript:void(0)"><i></i>常见问题</a></li>
                     </ul>
                 </li>
-                <li id="BFR" class="node root"><a href="javascript:void(0)"><span class="icon icon-renlian"></span>人脸识别 BFR</a>
+                <li id="FACE" class="node root"><a href="javascript:void(0)"><span class="icon icon-renlian"></span>人脸识别</a>
                     <ul class="level2 submenu">
-                        <li id="BFR-API" class="non-leaf">
-                            <a class="click-node" tag="BFR-API" href="javascript:void(0)"><span class="icon-arrow-down"></span>API 文档</a>
+                        <li id="FACE-API" class="non-leaf">
+                            <a class="click-node" tag="FACE-API" href="javascript:void(0)"><span class="icon-arrow-down"></span>API 文档</a>
                             <ul class="level3 submenu">
                                 
                                 <li id="" class="leaf"><a href="javascript:void(0)"><i></i>简介</a></li>
@@ -386,28 +384,28 @@
                                 <li id="" class="leaf"><a href="javascript:void(0)"><i></i>人脸检测</a></li>
                             </ul>
                         </li>
-                        <li id="BFR-SDK" class="non-leaf">
+                        <li id="FACE-SDK" class="non-leaf">
                             <a href="javascript:void(0)"><span class="icon-arrow-down"></span>SDK 文档</a>
                             <ul class="level3 submenu">
-                                <li id="BFR-SDK-Javacode" class="non-leaf sdk-node">
-                                    <a class="click-node" tag="BFR-SDK-Javacode" href="javascript:void(0)"><i></i>Java 语言</a>
-                                    <ul class="level4 submenu"></ul>
+                                <li id="FACE-SDK-Javacode" class="non-leaf sdk-node">
+                                    <a class="click-node" tag="FACE-SDK-Javacode" href="javascript:void(0)"><i></i>Java 语言</a>
                                 </li>
-                                <li id="BFR-SDK-Phpcode" class="non-leaf sdk-node">
-                                    <a class="click-node" tag="BFR-SDK-Phpcode" href="javascript:void(0)"><i></i>PHP 语言</a>
-                                    <ul class="level4 submenu"></ul>
+                                <li id="FACE-SDK-Phpcode" class="non-leaf sdk-node">
+                                    <a class="click-node" tag="FACE-SDK-Phpcode" href="javascript:void(0)"><i></i>PHP 语言</a>
                                 </li>
                             </ul>
                         </li>
-                        <li id="BFR-FAQ" class="leaf"><a class="click-node" tag="BFR-FAQ" href="javascript:void(0)"><i></i>常见问题</a></li>
+                        <li id="FACE-FAQ" class="leaf"><a class="click-node" tag="FACE-FAQ" href="javascript:void(0)"><i></i>常见问题</a></li>
                     </ul>
                 </li>
-                <li id="NLP" class="node root"><a href="javascript:void(0)"><span class="icon icon-yuyan"></span>自然语言处理 NLP</a>
+                <li id="NLP" class="node root"><a href="javascript:void(0)"><span class="icon icon-yuyan"></span>自然语言处理</a>
                     <ul class="level2 submenu">
                         <li id="NLP-API" class="non-leaf">
                             <a class="click-node" tag="NLP-API" href="javascript:void(0)"><span class="icon-arrow-down"></span>API 文档</a>
                             <ul class="level3 submenu">
                                 <li id="" class="leaf"><a href="javascript:void(0)"><i></i>简介</a></li>
+                                <li id="" class="leaf"><a href="javascript:void(0)"><i></i>调用方式一</a></li>
+                                <li id="" class="leaf"><a href="javascript:void(0)"><i></i>调用方式二</a></li>
                                 <li id="" class="leaf"><a href="javascript:void(0)"><i></i>错误信息格式</a></li>
                                 <li id="" class="leaf"><a href="javascript:void(0)"><i></i>分词接口</a></li>
                                 <li id="" class="leaf"><a href="javascript:void(0)"><i></i>词性标注接口</a></li>
@@ -422,11 +420,9 @@
                             <ul class="level3 submenu">
                                 <li id="NLP-SDK-Javacode" class="non-leaf sdk-node">
                                     <a class="click-node" tag="NLP-SDK-Javacode" href="javascript:void(0)"><i></i>Java 语言</a>
-                                    <ul class="level4 submenu"></ul>
                                 </li>
                                 <li id="NLP-SDK-Phpcode" class="non-leaf sdk-node">
                                     <a class="click-node" tag="NLP-SDK-Phpcode" href="javascript:void(0)"><i></i>PHP 语言</a>
-                                    <ul class="level4 submenu"></ul>
                                 </li>
                             </ul>
                         </li>
@@ -438,7 +434,7 @@
                         <li id="Antiporn-API" class="non-leaf">
                             <a class="click-node" tag="Antiporn-API" href="javascript:void(0)"><span class="icon-arrow-down"></span>API 文档</a>
                             <ul class="level3 submenu">
-                                <li id="" class="leaf"><a href="javascript:void(0)"><i></i>使用须知</a></li>
+                                <li id="" class="leaf"><a href="javascript:void(0)"><i></i>简介</a></li>
                                 <li id="" class="leaf"><a href="javascript:void(0)"><i></i>错误信息格式</a></li>
                                 <li id="" class="leaf"><a href="javascript:void(0)"><i></i>黄反识别</a></li>
                             </ul>
@@ -448,11 +444,9 @@
                             <ul class="level3 submenu">
                                 <li id="Antiporn-SDK-Javacode" class="non-leaf sdk-node">
                                     <a class="click-node" tag="Antiporn-SDK-Javacode" href="javascript:void(0)"><i></i>Java 语言</a>
-                                    <ul class="level4 submenu"></ul>
                                 </li>
                                 <li id="Antiporn-SDK-Phpcode" class="non-leaf sdk-node">
                                     <a class="click-node" tag="Antiporn-SDK-Phpcode" href="javascript:void(0)"><i></i>PHP 语言</a>
-                                    <ul class="level4 submenu"></ul>
                                 </li>
                             </ul>
                         </li>
@@ -462,7 +456,6 @@
             </ul>
         </div>
     </div>
-
     <div class="doc-main">
         <nav class="doc-breadcrumb">
             <ul class="crumb" >

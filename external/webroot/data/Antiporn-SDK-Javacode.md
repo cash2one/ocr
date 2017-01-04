@@ -1,8 +1,8 @@
 #Java SDK文档
 
-本文档主要介绍图片智能色情识别服务。在使用本文档前，您需要先了解图片智能色情识别服务。
+本文档主要介绍图片黄反识别服务。在使用本文档前，您需要先了解黄反识别服务。
 
-# 安装色情识别服务 Java SDK
+# 安装黄反识别服务 Java SDK
 
 ** Java SDK目录结构**
 
@@ -20,7 +20,7 @@
 
 步骤如下：
 
-1.在[官方网站](https://ai.baidu.com/sdk)下载Java SDK压缩工具包。
+1.在[官方网站](http://ai.baidu.com/sdk)下载Java SDK压缩工具包。
 
 2.将下载的`aip-java-sdk-version.zip`解压后，复制到工程文件夹中。
 
@@ -46,16 +46,18 @@ public class Sample {
         //设置APPID/AK/SK
         String APP_ID = "your-app-id";
         String API_KEY = "your-access-key-id";
-        String API_SECRET = "your-secret-access-key";
+        String SECRET_KEY = "your-secret-access-key";
 
         // 初始化一个AntipornClient
-        AipAntiporn client = new AipAntiporn(APP_ID, API_KEY, API_SECRET);
+        AipAntiporn client = new AipAntiporn(APP_ID, API_KEY, SECRET_KEY);
     }
 }
 ```
-在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`API_SECRET`是由系统分配给用户的，均为字符串，用于标识用户，为访问BFR做签名验证。其中`API_KEY`对应控制台中的“Access Key ID”，`SECRET_ACCESS_KEY`对应控制台中的“Access Key Secret”，获取方式请参考[获取AK/SK](../Reference/GetAKSK)。
+在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是在创建完毕应用后，系统分配给用户的，均为字符串，用于标识用户，为访问做签名验证，可在AI服务控制台中的**应用列表**中查看。  
 
-# 色情识别
+**注：**如您以前是百度云的老用户，其中`API_KEY`对应百度云的“Access Key ID”，`SECRET_KEY`对应百度云的“Access Key Secret”。
+
+# 黄反识别
 
 图片接受类型支持本地图片路径字符串，图片文件二进制数组。
 
@@ -73,21 +75,21 @@ public void antiPorn(AipAntiporn client) {
 }
 ```
 
-**色情识别 请求参数详情**
+**黄反识别 请求参数详情**
 
-| 参数 | 类型 | 描述 | 是否必须 |
-| :---- | :---- | :---- | :---- |
-|image|String|图像数据，支持本地图像文件路径，图像文件二进制数组|是|
+| 参数    | 类型     | 描述                        | 是否必须 |
+| :---- | :----- | :------------------------ | :--- |
+| image | String | 图像数据，支持本地图像文件路径，图像文件二进制数组 | 是    |
 
-**色情识别 返回数据参数详情**
+**黄反识别 返回数据参数详情**
 
-| 参数 | 类型 | 描述 |
-| :---- | :---- | :---- |
-|log_id|uint64|日志id|
-|result_num|Int|人脸数目|
-|result|object[]|人脸属性对象的集合|
-|+class_name|String|分类结果名称，示例：一般色情|
-|+probability|double|分类结果置信度，示例：0.89471650123596|
+| 参数           | 类型       | 描述                          |
+| :----------- | :------- | :-------------------------- |
+| log_id       | uint64   | 日志id                        |
+| result_num   | Int      | 人脸数目                        |
+| result       | object[] | 人脸属性对象的集合                   |
+| +class_name  | String   | 分类结果名称，示例：一般色情              |
+| +probability | double   | 分类结果置信度，示例：0.89471650123596 |
 
 # 版本更新说明
 

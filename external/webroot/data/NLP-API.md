@@ -2,20 +2,6 @@
 
 本文档主要针对API开发者，调用AI服务相关的API接口有两种调用方式，两种不同的调用方式采用相同的接口URL，区别在于请求方式和鉴权方法不一样，请求参数和返回结果一致。
 
-## 请求URL数据格式
-
-向API服务地址使用POST发送请求，必须在URL中带上参数：
-
-​**access_token:** 必须参数，参考“[Access Token获取](https://aip.baidubce.com/doc/auth.html)”。
-
-​POST中参数按照API接口说明调用即可。
-
-例如自然语言处理API，使用HTTPS POST发送：
-
-```
-https://aip.bj.baidubce.com/rpc/2.0/nlp/v1/wordseg? access_token=24.f9ba9c5241b67688bb4adbed8bc91dec.2592000.1485570332.282335-8574074
-```
-
 **请求消息体格式**
 
 API服务要求使用JSON格式的结构体来描述一个请求的具体内容, 然后通过urlencode格式化请求体。
@@ -24,6 +10,54 @@ API服务要求使用JSON格式的结构体来描述一个请求的具体内容,
 
 API服务均采用JSON格式的消息体作为响应返回的格式。
 
+> 说明：本文档中所有API接口示例统一以“调用方式一”举例，调用方式二构造方式参见[请求头域内容](#请求头域内容)。
+
+# 调用方式一
+
+## 请求URL数据格式
+
+向API服务地址使用POST发送请求，必须在URL中带上参数：
+
+**access_token:** 必须参数，参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)”。
+
+POST中参数按照API接口说明调用即可。
+
+例如自然语言处理API，使用HTTPS POST发送：
+
+```
+https://aip.baidubce.com/rpc/2.0/nlp/v1/wordseg? access_token=24.f9ba9c5241b67688bb4adbed8bc91dec.2592000.1485570332.282335-8574074
+```
+
+> **说明：**推荐使用调用方式一。方式一鉴权使用的Access_token必须通过API Key和Secret Key获取。
+
+# 调用方式二
+
+## 请求头域内容
+
+NLP的API服务需要在请求的HTTP头域中包含以下信息：
+
+* host（必填）
+* x-bce-date （必填）
+* x-bce-request-id（选填）
+* authorization（必填）
+* content-type（选填）
+* content-length（选填）
+
+作为示例，以下是一个标准的请求头域内容:
+
+```http
+POST rpc/2.0/nlp/v1/wordseg? HTTP/1.1
+accept-encoding: gzip, deflate
+x-bce-date: 2015-03-24T13:02:00Z
+connection: keep-alive
+accept: */*
+host: aip.baidubce.com
+x-bce-request-id: 73c4e74c-3101-4a00-bf44-fe246959c05e
+content-type: application/x-www-form-urlencoded;
+authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z/1800/host;x-bce-date/994014d96b0eb26578e039fa053a4f9003425da4bfedf33f4790882fb4c54903
+```
+
+> **说明：**方式二鉴权使用的[API认证机制](https://cloud.baidu.com/doc/Reference/AuthenticationMechanism.html)authorization必须通过百度云的[AK/SK](https://cloud.baidu.com/doc/Reference/GetAKSK.html)生成。
 
 # 错误信息格式
 
@@ -63,6 +97,7 @@ API服务均采用JSON格式的消息体作为响应返回的格式。
 <tr><td>Unavailable </td><td> Service internal error occurred </td><td> 500 </td><td> 内部服务发生错误</td></tr>
 </table>
 
+
 # 分词接口
 
 **接口描述**
@@ -75,7 +110,7 @@ POST
 
 **请求URL**
 
-https://aip.bj.baidubce.com/rpc/2.0/nlp/v1/wordseg
+https://aip.baidubce.com/rpc/2.0/nlp/v1/wordseg
 
 **请求示例**
 
@@ -238,7 +273,7 @@ POST
 
 **请求URL**
 
-https://aip.bj.baidubce.com/rpc/2.0/nlp/v1/wordpos?query=xxxxx
+https://aip.baidubce.com/rpc/2.0/nlp/v1/wordpos?query=xxxxx
 
 **请求示例**
 
@@ -291,7 +326,7 @@ POST
 
 **请求URL**
 
-https://aip.bj.baidubce.com/rpc/2.0/nlp/v1/wordembedding
+https://aip.baidubce.com/rpc/2.0/nlp/v1/wordembedding
 
 **请求示例**
 
@@ -362,7 +397,7 @@ POST
 
 **请求URL**
 
-https://aip.bj.baidubce.com/rpc/2.0/nlp/v1/dnnlm_cn
+https://aip.baidubce.com/rpc/2.0/nlp/v1/dnnlm_cn
 
 
 **请求示例**
@@ -410,7 +445,7 @@ POST
 
 **请求URL**
 
-https://aip.bj.baidubce.com/rest/2.0/nlp/v1/simnet?username=xxx\&app=xxx
+https://aip.baidubce.com/rest/2.0/nlp/v1/simnet?username=xxx\&app=xxx
 
 **请求示例**
 
@@ -455,9 +490,23 @@ https://aip.bj.baidubce.com/rest/2.0/nlp/v1/simnet?username=xxx\&app=xxx
 | ---------- | --------- |
 | score      | 两个文本相似度得分 |
 | error      |           |
-| type       |           |
-| error_note |           |
-| items      |           |
+| type       | 默认为0       |
+| error_note | error对应文字说明   |
+| items      | 默认为空      |
+
+**错误码说明**  
+
+| Code        |Message    |返回说明|
+| ------ | ------------ |---------|
+| 0      | NO_ERROR |正确返回|
+| 1      | BEYOND_SLOT_LENGTH |输入长度过长|
+| 2      | OOV_ERROR |输入文本不在词表中|
+| 3      | LEGO_LIB_RET_ERROR |内部库错误|
+| 4      |OTHER_SERVER_ERROR |其它服务错误 |
+| 5      |INPUT_HAS_EMPTY |输入为空 |
+| 6      |INPUT_FORMAT_ERROR |输入格式错误 |
+| 7      |OTHER_CLIENT_ERROR |客服端错误 |
+
 
 # 评论观点抽取接口
 
@@ -471,7 +520,7 @@ POST
 
 **请求URL**
 
-https://aip.bj.baidubce.com/rpc/2.0/nlp/v1/comment_tag
+https://aip.baidubce.com/rpc/2.0/nlp/v1/comment_tag
 
 **请求示例**
 

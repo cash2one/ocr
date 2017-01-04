@@ -928,6 +928,7 @@
   overflow-x: hidden;
   overflow-y: scroll;
   height: 800px;
+  padding-right: 32px;
 }
 .doc-wrap .markdown-body h1,
 .doc-wrap .markdown-body h2,
@@ -1051,6 +1052,7 @@
   border-left: 1px solid #EBEBEB;
   border-right: 1px solid #EBEBEB;
   text-align: left;
+  min-width: 70px;
 }
 .doc-wrap .markdown-body table tr {
   background-color: #fff;
@@ -1064,6 +1066,9 @@
   padding: 5px 10px;
   border: 1px solid #CCE3FB;
   background-color: #FAFAFA;
+}
+.doc-wrap .markdown-body img {
+  width: 820px;
 }
 .doc-wrap .doc-wrap {
   margin-bottom: 0;
@@ -1108,6 +1113,7 @@
   padding-top: 4px;
   background: white;
   padding-bottom: 4px;
+  cursor: pointer;
 }
 .doc-wrap .toc > ul {
   padding: 11px 0px;
@@ -1125,7 +1131,8 @@
 .doc-wrap .toc ul li.leaf.active {
   color: white;
 }
-.doc-wrap .toc li.active > a {
+.doc-wrap .toc li.active > a,
+.doc-wrap .toc li > a:hover {
   color: #0073eb;
   cursor: pointer;
 }
@@ -1163,29 +1170,36 @@
 .doc-wrap .sidebar > h1 > i.active {
   background: url("../../../ai_images/document/doc-icons.png") -144px 0px no-repeat;
 }
+.doc-wrap .toc li span.icon.icon-jieru,
 .doc-wrap .toc li span.icon.icon-jieru {
   margin-right: 10px;
-  background: url("../../../ai_images/document/doc-icons.png") 0px 0px no-repeat;
+  background: url("../../../ai_images/document/doc-icons-2x.png") 0px 0px no-repeat;
 }
-.doc-wrap .toc li.root.active > a > span.icon-jieru {
+.doc-wrap .toc li.root.active > a > span.icon-jieru,
+.doc-wrap .toc li.root:hover > a > span.icon-jieru {
   font-size: 12px;
-  background: url("../../../ai_images/document/doc-icons.png") 0px -16px no-repeat;
+  background: url("../../../ai_images/document/doc-icons-2x.png") 0px -16px no-repeat;
+}
+.doc-wrap .toc li span.icon {
+  background-size: 176px 32px !important;
 }
 .doc-wrap .toc li span.icon.icon-jianquan {
   margin-right: 10px;
-  background: url("../../../ai_images/document/doc-icons.png") -16px 0px no-repeat;
+  background: url("../../../ai_images/document/doc-icons-2x.png") -16px 0px no-repeat;
 }
-.doc-wrap .toc li.root.active > a > span.icon-jianquan {
+.doc-wrap .toc li.root.active > a > span.icon-jianquan,
+.doc-wrap .toc li.root:hover > a > span.icon-jianquan {
   font-size: 12px;
-  background: url("../../../ai_images/document/doc-icons.png") -16px -16px no-repeat;
+  background: url("../../../ai_images/document/doc-icons-2x.png") -16px -16px no-repeat;
 }
 .doc-wrap .toc li span.icon.icon-fuwu {
   margin-right: 10px;
-  background: url("../../../ai_images/document/doc-icons.png") -32px 0px no-repeat;
+  background: url("../../../ai_images/document/doc-icons-2x.png") -32px 0px no-repeat;
 }
-.doc-wrap .toc li.root.active > a > span.icon-fuwu {
+.doc-wrap .toc li.root.active > a > span.icon-fuwu,
+.doc-wrap .toc li.root:hover > a > span.icon-fuwu {
   font-size: 12px;
-  background: url("../../../ai_images/document/doc-icons.png") -32px -16px no-repeat;
+  background: url("../../../ai_images/document/doc-icons-2x.png") -32px -16px no-repeat;
 }
 .doc-wrap .toc li span.icon.icon-dot {
   margin-right: 10px;
@@ -1194,43 +1208,48 @@
 }
 .doc-wrap .toc li span.icon.icon-yuyan {
   margin-right: 10px;
-  background: url("../../../ai_images/document/doc-icons.png") -96px 0px no-repeat;
+  background: url("../../../ai_images/document/doc-icons-2x.png") -96px 0px no-repeat;
 }
-.doc-wrap .toc li.root.active > a > span.icon-yuyan {
+.doc-wrap .toc li.root.active > a > span.icon-yuyan,
+.doc-wrap .toc li.root:hover > a > span.icon-yuyan {
   font-size: 12px;
-  background: url("../../../ai_images/document/doc-icons.png") -96px -16px no-repeat;
+  background: url("../../../ai_images/document/doc-icons-2x.png") -96px -16px no-repeat;
 }
 .doc-wrap .toc li span.icon.icon-huangfan {
   margin-right: 10px;
-  background: url("../../../ai_images/document/doc-icons.png") -112px 0px no-repeat;
+  background: url("../../../ai_images/document/doc-icons-2x.png") -112px 0px no-repeat;
 }
-.doc-wrap .toc li.root.active > a > span.icon-huangfan {
+.doc-wrap .toc li.root.active > a > span.icon-huangfan,
+.doc-wrap .toc li.root:hover > a > span.icon-huangfan {
   font-size: 12px;
-  background: url("../../../ai_images/document/doc-icons.png") -112px -16px no-repeat;
+  background: url("../../../ai_images/document/doc-icons-2x.png") -112px -16px no-repeat;
 }
 .doc-wrap .toc li span.icon.icon-renlian {
   margin-right: 10px;
-  background: url("../../../ai_images/document/doc-icons.png") -80px 0px no-repeat;
+  background: url("../../../ai_images/document/doc-icons-2x.png") -80px 0px no-repeat;
 }
-.doc-wrap .toc li.root.active > a > span.icon-renlian {
+.doc-wrap .toc li.root.active > a > span.icon-renlian,
+.doc-wrap .toc li.root:hover > a > span.icon-renlian {
   font-size: 12px;
-  background: url("../../../ai_images/document/doc-icons.png") -80px -16px no-repeat;
+  background: url("../../../ai_images/document/doc-icons-2x.png") -80px -16px no-repeat;
 }
 .doc-wrap .toc li span.icon.icon-wenzi {
   margin-right: 10px;
-  background: url("../../../ai_images/document/doc-icons.png") -64px 0px no-repeat;
+  background: url("../../../ai_images/document/doc-icons-2x.png") -64px 0px no-repeat;
 }
-.doc-wrap .toc li.root.active > a > span.icon-wenzi {
+.doc-wrap .toc li.root.active > a > span.icon-wenzi,
+.doc-wrap .toc li.root:hover > a > span.icon-wenzi {
   font-size: 12px;
-  background: url("../../../ai_images/document/doc-icons.png") -64px -16px no-repeat;
+  background: url("../../../ai_images/document/doc-icons-2x.png") -64px -16px no-repeat;
 }
 .doc-wrap .toc li span.icon.icon-yuyin {
   margin-right: 10px;
-  background: url("../../../ai_images/document/doc-icons.png") -48px 0px no-repeat;
+  background: url("../../../ai_images/document/doc-icons-2x.png") -48px 0px no-repeat;
 }
-.doc-wrap .toc li.root.active > a > span.icon-yuyin {
+.doc-wrap .toc li.root.active > a > span.icon-yuyin,
+.doc-wrap .toc li.root:hover > a > span.icon-yuyin {
   margin-right: 10px;
-  background: url("../../../ai_images/document/doc-icons.png") -48px -16px no-repeat;
+  background: url("../../../ai_images/document/doc-icons-2x.png") -48px -16px no-repeat;
 }
 .doc-wrap .toc ul.submenu li.leaf > a > i,
 .doc-wrap .toc ul.submenu li.non-leaf > a > i {
@@ -1248,7 +1267,7 @@
   height: 16px;
   display: inline-block;
   vertical-align: middle;
-  background: url("../../../ai_images/document/doc-icons-2x.png") -328px -10px no-repeat;
+  background: url("../../../ai_images/document/doc-icons-2x.png") -328px -42px no-repeat;
 }
 .doc-wrap .toc li {
   cursor: pointer;
@@ -1382,4 +1401,9 @@
 .doc-wrap .toc .current a {
   color: #333 !important;
   background-position: 10px -73px !important;
+}
+.doc-wrap p code.prettyprint {
+  color: black;
+  padding: 0px !important;
+  display: inline-block !important;
 }

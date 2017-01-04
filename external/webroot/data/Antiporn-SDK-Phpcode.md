@@ -1,10 +1,10 @@
 # PHP SDK文档
 
-本文档主要介绍图片智能色情识别服务。在使用本文档前，您需要先了解图片智能色情识别服务。
+本文档主要介绍黄反识别服务。在使用本文档前，您需要先了解黄反识别服务。
 
-# 安装图片智能色情识别PHP SDK包
+# 安装黄反识别PHP SDK包
 
-**图片智能色情识别 PHP SDK目录结构**
+**黄反色情识别 PHP SDK目录结构**
 
     AipAntiPorn
            ├── AipAntiPorn.php                 //AntiPorn识别类
@@ -41,16 +41,18 @@ require_once 'AipAntiPorn.php';
 // 定义常量
 const APP_ID = '000212'
 const API_KEY = '020947f506934fe5b39763080359f0f8';
-const API_SECRET = '9cb5e2bf0e7045d78d7b27f62337f4cc';
+const SECRET_KEY = '9cb5e2bf0e7045d78d7b27f62337f4cc';
 
 // 初始化AipAntiPorn对象
-$AipAntiPorn = new AipAntiPorn(APP_ID, API_KEY, API_SECRET);
+$AipAntiPorn = new AipAntiPorn(APP_ID, API_KEY, SECRET_KEY);
 ```
 
-在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`API_SECRET`是由系统分配给用户的，均为字符串，用于标识用户，为访问BFR做签名验证。其中`API_KEY`对应控制台中的“Access Key ID”，`SECRET_ACCESS_KEY`对应控制台中的“Access Key Secret”，获取方式请参考[获取AK/SK](../Reference/GetAKSK)。
+在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是在创建完毕应用后，系统分配给用户的，均为字符串，用于标识用户，为访问做签名验证，可在AI服务控制台中的**应用列表**中查看。  
+
+**注：**如您以前是百度云的老用户，其中`API_KEY`对应百度云的“Access Key ID”，`SECRET_KEY`对应百度云的“Access Key Secret”。
 
 
-# 图片智能色情识别
+# 黄反识别
 
 图片参数仅支持图片文件内容。
 
@@ -72,19 +74,19 @@ $response = $client->antiporn(file_get_contents('antiporn.jpg'));
 
 **色情识别 请求参数详情**
 
-| 参数 | 类型 | 描述 | 是否必须 |
-| :---- | :---- | :---- | :---- |
-|image|String|图片参数仅支持图片文件内容|是|
+| 参数    | 类型     | 描述            | 是否必须 |
+| :---- | :----- | :------------ | :--- |
+| image | String | 图片参数仅支持图片文件内容 | 是    |
 
 **色情识别 返回数据参数详情**
 
-| 参数 | 类型 | 描述 |
-| :---- | :---- | :---- |
-|log_id|uint64|日志id|
-|result_num|Int|人脸数目|
-|result|object[]|人脸属性对象的集合|
-|+class_name|String|分类结果名称，示例：一般色情|
-|+probability|double|分类结果置信度，示例：0.89471650123596|
+| 参数           | 类型       | 描述                          |
+| :----------- | :------- | :-------------------------- |
+| log_id       | uint64   | 日志id                        |
+| result_num   | Int      | 人脸数目                        |
+| result       | object[] | 人脸属性对象的集合                   |
+| +class_name  | String   | 分类结果名称，示例：一般色情              |
+| +probability | double   | 分类结果置信度，示例：0.89471650123596 |
 
 # 版本更新说明
 
