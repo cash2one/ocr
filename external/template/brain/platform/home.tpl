@@ -186,8 +186,8 @@
             </ul>-->
             <ul>
                 {%if $userInfo eq Null%}
-                <li><a href="https://login.bcetest.baidu.com?fromai=1&redirect=encodeURIComponent(https://cp01-yf-db-02.epc.baidu.com:8030/)">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://login.bcetest.baidu.com?fromai=1&redirect=encodeURIComponent(https://qasandbox.bcetest.baidu.com/)">免费试用</a></li>
+                <li><a href="https://login.bcetest.baidu.com?fromai=1&redirect=https%3A%2F%2Fcp01-yf-db-02.epc.baidu.com%3A8030">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://login.bcetest.baidu.com?fromai=1&redirect=https%3A%2F%2Fqasandbox.bcetest.baidu.com">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 <li>
@@ -337,7 +337,7 @@
                     <div class="clear-float">
                         <div class="service-desc">
                             <h3>自然语言</h3>
-                            <p>基于自然语言处理技术，对人来自然语言进行分析、理解、生成、翻译，实现自然的人机对话交互</p>
+                            <p>基于自然语言处理技术，对人类自然语言进行分析、理解、生成、翻译，实现自然的人机对话交互</p>
                         </div>
                         <div class="service-icon"></div>
                     </div>
@@ -523,7 +523,7 @@
             </li>
         </ul>
         <div class="more-videos">
-            <a role="button" class="btn-normal">更多视频</a>
+            <a role="button" class="btn-normal" href="/support/video">更多视频</a>
         </div>
     </div>
 </section>
