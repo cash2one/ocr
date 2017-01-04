@@ -40,7 +40,7 @@ $.get(url, undefined, undefined, 'json')
 function r(d) {
     const s = [];
 
-    for (let {title, desc, time, href} of d) {
+    d.forEach(function ({title, desc, time, href}) {
         const articleHTML = [
             '<div class="news-list">',
             `    <a href=${href}>`,
@@ -51,7 +51,7 @@ function r(d) {
         ].join('\r');
 
         s.push(articleHTML);
-    }
+    });
 
     // 填充新闻列表
     dom.html(s.join('\r'));
