@@ -173,6 +173,7 @@
   width: 100%;
   z-index: -1;
   background-color: transparent;
+  opacity: 0;
 }
 .ai-platform.page-content .banner ul.banner-content > li.active {
   opacity: 1;

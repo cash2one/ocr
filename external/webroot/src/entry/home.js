@@ -37,8 +37,10 @@ $(document).ready(function () {
                 }
                 try {
                     if (i === (currentBannerNum % banners.length)) {
+                        $(e).find('video').css(opacity, 1);
                         video.play();
                     } else {
+                        $(e).find('video').css(opacity, 0);
                         video.currentTime = 0;
                         video.pause();
                     }
