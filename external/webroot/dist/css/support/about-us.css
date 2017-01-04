@@ -30,20 +30,6 @@
   outline: none !important;
   color: #ccc;
 }
-.ai-platform input[data-dirty="false"],
-.ai-platform textarea[data-dirty="false"],
-.ai-platform keygen[data-dirty="false"],
-.ai-platform select[data-dirty="false"],
-.ai-platform button[data-dirty="false"] {
-  color: #ccc;
-}
-.ai-platform input[data-dirty="true"],
-.ai-platform textarea[data-dirty="true"],
-.ai-platform keygen[data-dirty="true"],
-.ai-platform select[data-dirty="true"],
-.ai-platform button[data-dirty="true"] {
-  color: #333;
-}
 .ai-platform a {
   cursor: pointer;
   text-decoration: none;
