@@ -417,7 +417,7 @@
   line-height: 31px;
   color: #666;
   margin-bottom: 33px;
-  max-width: 35em;
+  max-width: 30em;
 }
 .tech-section.tech-banner a + a {
   margin-left: 10px;
@@ -899,6 +899,7 @@
   font-size: 12px;
   -webkit-transform: translate(-50%, 100%);
   -moz-transform: translate(-50%, 100%);
+  -ms-transform: translate(-50%, 100%);
   -o-transform: translate(-50%, 100%);
   transform: translate(-50%, 100%);
 }

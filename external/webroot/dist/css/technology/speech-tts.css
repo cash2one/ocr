@@ -417,7 +417,7 @@
   line-height: 31px;
   color: #666;
   margin-bottom: 33px;
-  max-width: 35em;
+  max-width: 30em;
 }
 .tech-section.tech-banner a + a {
   margin-left: 10px;
@@ -778,6 +778,7 @@
   background-size: 130px 100px;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background-image: url('../../../ai_images/technology/speech-tts/demo-icons.png');

@@ -173,6 +173,7 @@
   width: 100%;
   z-index: -1;
   background-color: transparent;
+  opacity: 0;
 }
 .ai-platform.page-content .banner ul.banner-content > li.active {
   opacity: 1;
@@ -231,7 +232,7 @@
   font-size: 18px;
   line-height: 28px;
   margin-bottom: 35px;
-  max-width: 35em;
+  max-width: 30em;
 }
 .ai-platform.page-content .banner ul.banner-content > li .get-started {
   border: 1px solid #fff;

@@ -417,7 +417,7 @@
   line-height: 31px;
   color: #666;
   margin-bottom: 33px;
-  max-width: 35em;
+  max-width: 30em;
 }
 .tech-section.tech-banner a + a {
   margin-left: 10px;
@@ -767,6 +767,7 @@
   top: 100%;
   -webkit-transition: top 3s linear;
   -moz-transition: top 3s linear;
+  -ms-transition: top 3s linear;
   -o-transition: top 3s linear;
   transition: top 3s linear;
 }
@@ -793,6 +794,7 @@
   opacity: 0;
   -webkit-transition: opacity 1.5s ease-out;
   -moz-transition: opacity 1.5s ease-out;
+  -ms-transition: opacity 1.5s ease-out;
   -o-transition: opacity 1.5s ease-out;
   transition: opacity 1.5s ease-out;
 }
@@ -956,6 +958,14 @@
   }
   to {
     -moz-transform: rotate(360deg);
+  }
+}
+@-ms-keyframes uploading {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
   }
 }
 @-o-keyframes uploading {

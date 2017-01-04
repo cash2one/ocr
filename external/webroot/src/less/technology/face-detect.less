@@ -28,6 +28,7 @@
           opacity: 1;
           -webkit-transition-delay: 1s;
              -moz-transition-delay: 1s;
+              -ms-transition-delay: 1s;
                -o-transition-delay: 1s;
                   transition-delay: 1s;
         }
@@ -87,6 +88,7 @@
         float: left;
         -webkit-transition: opacity 1.5s ease-out;
            -moz-transition: opacity 1.5s ease-out;
+            -ms-transition: opacity 1.5s ease-out;
              -o-transition: opacity 1.5s ease-out;
                 transition: opacity 1.5s ease-out;
       }
@@ -212,6 +214,14 @@
               }
               to {
                 -moz-transform: rotate(360deg);
+              }
+            }
+            @-ms-keyframes uploading {
+              from {
+                -ms-transform: rotate(0deg);
+              }
+              to {
+                -ms-transform: rotate(360deg);
               }
             }
             @-o-keyframes uploading {
