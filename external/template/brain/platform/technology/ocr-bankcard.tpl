@@ -288,7 +288,7 @@
                 <div class="feature-icon"></div>
                 <div class="feature-desc">
                     <h3>准确性高</h3>
-                    <p>国内首个公有云OCR产品，基于百度深度学习研究院（IDL）强大的深度学习算法和中文检测识别技术，身份证识别率98%以上</p>
+                    <p>国内首个公有云OCR产品，基于百度深度学习研究院（IDL）强大的深度学习算法和中文检测识别技术，银行卡识别率98%以上</p>
                 </div>
             </div>
             <div class="feature-item shadow">
