@@ -213,8 +213,8 @@
 <section class="banner">
     <ul class="banner-content">
         <li class="active video-bg">
-            <h1>让AI变革发生</h1>
-            <p>更全面、更优质、更可靠、更易用的人工智能服务<br>即刻开启AI发现之旅</p>
+            <h1>让 AI 变革发生</h1>
+            <p>更全面、优质、易用的人工智能服务<br>即刻开启AI发现之旅</p>
             <div>
                 <a role="button" class="get-started" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
             </div>
@@ -223,7 +223,7 @@
         <li>
             <a href="/tech/face/detect">
                 <h1>人脸识别</h1>
-                <p>快速检测人脸、定位五官关键点，准确识别多种人脸属性，为您提供多场景高精度的人脸识别服务。</p>
+                <p>快速检测人脸、定位五官关键点，准确识别多种人脸属性,<br>为您提供多场景高精度的人脸识别服务。</p>
                 <div>
                     <button type="button" class="get-started">了解详情</button>
                 </div>
