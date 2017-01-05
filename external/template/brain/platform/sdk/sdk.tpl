@@ -216,25 +216,25 @@
         <a href="#sdk-category-bs">
             <div class="sdk-nav-item">
                 <div class="sdk-nav-icon sdk-nav-icon-bs"></div>
-                <span class="sdk-nav-text">百度语音BS</span>
+                <span class="sdk-nav-text">百度语音</span>
             </div>
         </a>
         <a href="#sdk-category-ocr">
             <div class="sdk-nav-item">
                 <div class="sdk-nav-icon sdk-nav-icon-ocr"></div>
-                <span class="sdk-nav-text">文字识别OCR</span>
+                <span class="sdk-nav-text">文字识别</span>
             </div>
         </a>
         <a href="#sdk-category-bfr">
             <div class="sdk-nav-item">
                 <div class="sdk-nav-icon sdk-nav-icon-bfr"></div>
-                <span class="sdk-nav-text">人脸识别BFR</span>
+                <span class="sdk-nav-text">人脸识别</span>
             </div>
         </a>
         <a href="#sdk-category-nlp">
             <div class="sdk-nav-item">
                 <div class="sdk-nav-icon sdk-nav-icon-nlp"></div>
-                <span class="sdk-nav-text">自然语言处理NLP</span>
+                <span class="sdk-nav-text">自然语言处理</span>
             </div>
         </a>
         <a href="#sdk-category-anti">
@@ -246,7 +246,7 @@
     </div>
     <div class="sdk-main">
         <div class="sdk-category">
-            <a name="sdk-category-bs"><div class="sdk-category-name">百度语音BS</div></a>
+            <a name="sdk-category-bs"><div class="sdk-category-name">百度语音</div></a>
             <div class="sdk-collection">
                 <div class="sdk-item-container">
                     <div class="sdk-item">
@@ -422,7 +422,7 @@
             </div>
         </div>
         <div class="sdk-category">
-            <div class="sdk-category-name">百度语音BS - 语音合成</div>
+            <div class="sdk-category-name">百度语音 - 语音合成</div>
             <div class="sdk-collection">
                 <div class="sdk-item-container">
                     <div class="sdk-item">
@@ -541,12 +541,13 @@
             </div>
         </div>
         <div class="sdk-category">
-            <a name="sdk-category-ocr"><div class="sdk-category-name">文字识别OCR</div></a>
+            <a name="sdk-category-ocr"><div class="sdk-category-name">文字识别</div></a>
             <div class="sdk-collection">
                 <div class="sdk-item-container">
                     <div class="sdk-item">
                         <i class="sdk-language-sprite sdk-java"></i>
                         <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-ocr"></i>
                             <a href="http://ai.baidu.com/download/aip-ocr-java-sdk-1.0.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
@@ -565,6 +566,7 @@
                     <div class="sdk-item">
                         <i class="sdk-language-sprite sdk-php"></i>
                         <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-ocr"></i>
                             <a href="http://ai.baidu.com/download/aip-ocr-php-sdk-1.0.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
@@ -582,7 +584,7 @@
             </div>
         </div>
         <div class="sdk-category">
-            <a name="sdk-category-bfr"><div class="sdk-category-name">人脸识别BFR</div></a>
+            <a name="sdk-category-bfr"><div class="sdk-category-name">人脸识别</div></a>
             <div class="sdk-collection">
                 <div class="sdk-item-container">
                     <div class="sdk-item">
@@ -625,7 +627,7 @@
             </div>
         </div>
         <div class="sdk-category">
-            <a name="sdk-category-nlp"><div class="sdk-category-name">自然语言处理NLP</div></a>
+            <a name="sdk-category-nlp"><div class="sdk-category-name">自然语言处理</div></a>
             <div class="sdk-collection">
                 <div class="sdk-item-container">
                     <div class="sdk-item">
