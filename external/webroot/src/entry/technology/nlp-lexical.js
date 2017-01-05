@@ -76,10 +76,6 @@ const segments = [
             type: 'v'
         },
         {
-            block: '太空',
-            type: 's'
-        },
-        {
             block: '着',
             type: 'u'
         },
