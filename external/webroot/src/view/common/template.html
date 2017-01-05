@@ -172,7 +172,7 @@
             </ul>
         </nav>
         <div class="login">
-            <!--<ul>
+            <ul>
                 {%if $userInfo eq Null%}
                 <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
                 <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
@@ -184,24 +184,7 @@
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li><a href="https://passport.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">登出</a></li>
-                    </ul>
-                </li>
-                {%/if%}
-            </ul>-->
-            <ul>
-                {%if $userInfo eq Null%}
-                <li><a href="https://login.bcetest.baidu.com?fromai=1&redirect=http%3A%2F%2Fcp01-yf-db-02.epc.baidu.com%3A8030">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://qasandbox.bcetest.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
-                {%/if%}
-                {%if $userInfo != Null%}
-                <li>
-                    <a class="console" href="https://qasandbox.bcetest.baidu.com/?fromai=1#/aip/overview">控制台</a>
-                </li>
-                <li>
-                    <a>{%$userInfo.uname%}</a>
-                    <ul class="sub-top-nav">
-                        <li><a href="https://passport.rdtest.baidu.com/?logout&u=http%3A%2F%2Fcp01-yf-db-02.epc.baidu.com%3A8030">退出</a></li>
+                        <li><a href="https://passport.baidu.com/?logout&u=https%3A%2F%ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -224,19 +207,12 @@
         <div class="footer-links">
             <nav class="quick-path">
                 <h3>控制台入口</h3>
-                <!--<ul>
+                <ul>
                     <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
                     <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
                     <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
                     <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
                     <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
-                </ul>-->
-                <ul>
-                    <li><a href="https://qasandbox.bcetest.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
-                    <li><a href="https://qasandbox.bcetest.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
-                    <li><a href="https://qasandbox.bcetest.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
-                    <li><a href="https://qasandbox.bcetest.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
-                    <li><a href="https://qasandbox.bcetest.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
                 </ul>
             </nav>
             <nav class="resource">
