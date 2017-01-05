@@ -25,7 +25,7 @@ class Brain_AIApi {
     );
 
     public static $arrHostWhiteList = array(
-        'h.hiphotos.baidu.com',
+        'hiphotos.baidu.com',
     );
     
     //api list
@@ -454,9 +454,12 @@ class Brain_AIApi {
         }
 
         //白名单
-        if(in_array($host, Brain_AIApi::$arrHostWhiteList))
+        foreach( Brain_AIApi::$arrHostWhiteList as $whiteHost)
         {
-            return true;
+            if(stripos($host, $whiteHost) !== false)
+            {
+                return true;
+            }
         }
         
         //允许内网本机
