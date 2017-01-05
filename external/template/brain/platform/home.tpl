@@ -225,7 +225,7 @@
                 <h1>人脸识别</h1>
                 <p>快速检测人脸、定位五官关键点，准确识别多种人脸属性，为您提供多场景高精度的人脸识别服务。</p>
                 <div>
-                    <button class="get-started">了解详情</button>
+                    <button type="button" class="get-started">了解详情</button>
                 </div>
             </a>
         </li>
@@ -234,7 +234,7 @@
                 <h1>文字识别</h1>
                 <p>基于业界领先的深度学习技术<br>为您提供多场景、多语种、高精度的整体文字检测和识别服务</p>
                 <div>
-                    <button class="get-started">了解详情</button>
+                    <button type="button" class="get-started">了解详情</button>
                 </div>
             </a>
         </li>
@@ -244,7 +244,7 @@
                 <p>基于大数据和用户行为的分词、词性标注、命名实体识别<br>
                     定位基本语言元素，消除歧义，支撑自然语言的准确理解</p>
                 <div>
-                    <button class="get-started">了解详情</button>
+                    <button type="button" class="get-started">了解详情</button>
                 </div>
             </a>
         </li>
@@ -254,7 +254,7 @@
                 <p>人们通过增强现实技术看到更多，更远，更奇妙的世界<br>
                     颠覆认知，获取新知，检索比真实更真实的世界</p>
                 <div>
-                    <button class="get-started">了解详情</button>
+                    <button type="button" class="get-started">了解详情</button>
                 </div>
             </a>
         </li>
