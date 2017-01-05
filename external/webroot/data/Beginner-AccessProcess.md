@@ -25,7 +25,7 @@
 
 ## 4. 生成签名
 第三方应用在调用开放平台API之前，首先需要获取Access Token（用户身份验证和授权的凭证）。  
-您需要使用创建应用所分配到的AppID、API Key及Secret Key，进行Access Token的生成，方法详见 [Access Token获取](/docs#Beginner-Auth)”。
+您需要使用创建应用所分配到的AppID、API Key及Secret Key，进行Access Token的生成，方法详见“[Access Token获取](/docs#Beginner-Auth)”。
 
 
 
