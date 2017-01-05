@@ -219,16 +219,17 @@
     <div class="container" id="news-container"></div>
     <div class="pg"></div>
 </div>
+{%if $userInfo eq Null%}
 <section class="tech-section get-started">
     <div class="container">
-        <h2>现在注册，即享免费试用</h2>
-        <p>结合百度人工智能技术为您提供免费的技术应用，结合百度人工智能技术为您提供免费的技术应用</p>
+        <h2>立即获取免费API Key</h2>
+        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
         <div>
-            <a role="button" class="btn-primary large" href="https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)">免费试用</a>
+            <a role="button" class="btn-primary large" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
         </div>
     </div>
 </section>
-
+{%/if%}
 </div>
 <aside class="aside-action">
     <ul>
