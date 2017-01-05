@@ -521,7 +521,7 @@ class Brain_AIApi {
         {
             if (strripos($url, 'demo-card-') !== false)
             {
-                $url = substr($url, strlen('https://cloudtest.baidu.com'));
+                $url = substr($url, strlen('https://cloud.baidu.com'));
                 $url = 'http://ai.baidu.com/index'.$url;
                 //$url = 'http://cp01-yf-db-02.epc.baidu.com:8033'.$url;
             }
