@@ -15,6 +15,7 @@
         {%$data.content%}
     </div>
 </section>
+{%if $userInfo eq Null%}
 <section class="tech-section get-started">
     <div class="container">
         <h2>现在注册，即享免费试用</h2>
@@ -24,7 +25,7 @@
         </div>
     </div>
 </section>
-
+{%/if%}
 <script>
     (function () {
         var newsDateContainer = document.getElementById('news-date');
