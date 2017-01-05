@@ -225,7 +225,7 @@
 <section class="tech-section tech-intro">
     <div class="container">
         <h2>功能介绍</h2>
-        <p>支持二代身份证正反面识别，可识别所有字段，对倾斜、暗光、曝光、阴影等异常情况稳定性好、识别准确率高达98%以上<br>请尽量保证上传的图像80%以上是身份证区域</p>
+        <p>支持二代身份证正反面关键字段识别，可识别所有字段，对倾斜、暗光、过曝、阴影等异常情况稳定性好、识别准确率高达98%以上<br>请尽量保证上传的图像80%以上是身份证区域</p>
         <div class="tech-intro-detail">
             <div class="original-card"></div>
             <div class="arrow"></div>
@@ -331,14 +331,14 @@
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
                     <h3>视频场景</h3>
-                    <p>用户客户身份认证，直播实名认证等场景，减少用户身份证输入操作，提高用户体验</p>
+                    <p>用户身份认证，直播实名认证等场景，减少用户身份证输入操作，提高用户体验</p>
                 </div>
             </div>
             <div class="scene-item shadow">
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
                     <h3>电商场景</h3>
-                    <p>用户电商用户身份绑定，电商用户实名认证，电商商家身份认证等场景，减少身份证输入操作，提高用户体验</p>
+                    <p>用于电商用户身份绑定、实名认证、商家身份认证等场景，减少用户输入操作，提升用户体验</p>
                 </div>
             </div>
         </div>
