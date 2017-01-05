@@ -918,6 +918,9 @@
   background-position-x: -40px;
   background-position-y: -53px;
 }
+.tech-section.tech-feature .feature-item {
+  min-height: 200px;
+}
 .tech-section.tech-feature .feature-item + .feature-item {
   margin-left: 110px;
 }
@@ -937,7 +940,7 @@
   background-position-x: -90px;
   background-position-y: -5px;
 }
-.tech-section.tech-feature .feature-item:nth-child(3) .feature-icon {
+.tech-section.tech-feature .feature-item:nth-child(2) .feature-icon {
   background-image: url('../../../ai_images/technology/speech-wake/icons.png');
   background-repeat: no-repeat;
   background-position: -175px -5px;

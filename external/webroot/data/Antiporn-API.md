@@ -156,10 +156,12 @@ authorization: bce-auth-v1/fbf9f7889585498d8ba8a68da26cbb2e/2016-10-18T02: 20: 0
 image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 ```
 
+---
+
 **请求参数**
 
-| 参数    | 类型     | 是否必须 | 说明                       |
-| ----- | ------ | ---- | ------------------------ |
+| 参数    | 类型     | 是否必须 | 说明             |
+| ----- | ------ | ---- | -------------- |
 | image | string | 是    | 图像数据，base64编码。 |
 
 

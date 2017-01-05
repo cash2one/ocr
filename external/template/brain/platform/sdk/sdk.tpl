@@ -548,7 +548,9 @@
                         <i class="sdk-language-sprite sdk-java"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-ocr"></i>
-                            <div class="sdk-download-button">下载</div>
+                            <a href="http://ai.baidu.com/download/aip-ocr-java-sdk-1.0.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
                         </div>
                         <div class="sdk-info">
                             <div class="sdk-item-name">Java SDK</div>
@@ -565,7 +567,9 @@
                         <i class="sdk-language-sprite sdk-php"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-ocr"></i>
-                            <div class="sdk-download-button">下载</div>
+                            <a href="http://ai.baidu.com/download/aip-ocr-php-sdk-1.0.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
                         </div>
                         <div class="sdk-info">
                             <div class="sdk-item-name">PHP SDK</div>
@@ -587,7 +591,7 @@
                         <i class="sdk-language-sprite sdk-java"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bfr"></i>
-                            <a href="http://ai.baidu.com/download/aip-ocr-java-sdk-1.0.zip">
+                            <a href="http://ai.baidu.com/download/aip-face-java-sdk-1.0.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -606,7 +610,7 @@
                         <i class="sdk-language-sprite sdk-php"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bfr"></i>
-                            <a href="http://ai.baidu.com/download/aip-ocr-php-sdk-1.0.zip">
+                            <a href="http://ai.baidu.com/download/aip-face-php-sdk-1.0.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>

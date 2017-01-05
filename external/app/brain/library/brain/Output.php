@@ -45,6 +45,11 @@ class Brain_Output {
             $arrPageInfo['description'] = $pageConf['description'];
         }
 
+        if($arrPageInfo['src'] == 'cloud')
+        {
+            $arrPageInfo['title'] = str_ireplace('百度大脑', '百度云', $arrPageInfo['title']);
+        }
+
         $tpl->assign($arrPageInfo);
         $strEcho = $tpl->fetch($strTpl);
         echo $strEcho;
