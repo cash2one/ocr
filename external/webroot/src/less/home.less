@@ -70,6 +70,10 @@
           .icon (url('../../ai_images/home/banner-5.png'), center, center);
         }
 
+        & > a {
+          color: @white;
+        }
+
 
         h1 {
           font-size: 42px;
@@ -90,9 +94,15 @@
           line-height: 42px;
           width: 150px;
           font-size: 18px;
+          background-color: transparent;
+          color: @white;
+          box-sizing: content-box;
+          padding: 0;
+
 
           &:hover {
             background-color: @white;
+            color: @blue;
           }
         }
       }

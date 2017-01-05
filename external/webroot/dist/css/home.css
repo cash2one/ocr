@@ -225,6 +225,9 @@
   background-position-x: center;
   background-position-y: center;
 }
+.ai-platform.page-content .banner ul.banner-content > li > a {
+  color: #fff;
+}
 .ai-platform.page-content .banner ul.banner-content > li h1 {
   font-size: 42px;
   line-height: 42px;
@@ -242,9 +245,14 @@
   line-height: 42px;
   width: 150px;
   font-size: 18px;
+  background-color: transparent;
+  color: #fff;
+  box-sizing: content-box;
+  padding: 0;
 }
 .ai-platform.page-content .banner ul.banner-content > li .get-started:hover {
   background-color: #fff;
+  color: #0073eb;
 }
 .ai-platform.page-content .banner ul.banner-indicator {
   position: absolute;

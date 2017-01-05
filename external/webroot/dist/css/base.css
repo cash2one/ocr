@@ -375,6 +375,7 @@ header.header-nav .login > ul > li > a.console:hover {
 #tech-service .tech-title {
   font-size: 18px;
   margin-bottom: 20px;
+  color: #999;
 }
 #tech-service .tech-title .tech-title-icon {
   display: inline-block;
