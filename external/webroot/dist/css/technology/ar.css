@@ -693,3 +693,6 @@
   background-position-x: -310px;
   background-position-y: -10px;
 }
+.tech-section.get-started p {
+  line-height: 30px;
+}
