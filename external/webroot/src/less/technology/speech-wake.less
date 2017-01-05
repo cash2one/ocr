@@ -202,6 +202,9 @@
   }
 
   &.tech-feature{
+    .feature-item {
+      min-height: 200px;
+    }
     .feature-item + .feature-item{
       margin-left: 110px;
     }
@@ -218,7 +221,7 @@
     .feature-item:nth-child(1) .feature-icon{
         .icon(@icons, -90px, -5px);
       }
-    .feature-item:nth-child(3) .feature-icon{
+    .feature-item:nth-child(2) .feature-icon{
       .icon(@icons, -175px, -5px);
     }
     .feature-item:nth-child(3) .feature-icon{
