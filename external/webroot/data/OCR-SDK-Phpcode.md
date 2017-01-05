@@ -103,36 +103,44 @@ $response = $client->general(file_get_contents('general.jpg'), $option);
 
 **通用文字识别 请求参数详情**
 
-| 参数                    | 类型      | 描述                                       | 是否必须 |
-| :-------------------- | :------ | :--------------------------------------- | :--- |
-| detect_direction      | Boolean | 检测图像朝向(指输入图像是正常方向、逆时针旋转90/180/270度)，有效值：true、false，默认值: false。 | 否    |
-| image                 | String  | 图像数据，仅支持图像文件流                            | 是    |
-| language_type         | String  | 识别语言类型(CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP)，默认为CHN_ENG | 否    |
-| mask                  | String  | 表示mask区域的黑白灰度图片，白色代表选中, base64编码         | 否    |
-| recognize_granularity | String  | 是否定位单字符位置，big：不定位单字符位置，默认值；small：定位单字符位置 | 否    |
-| detect_language       | String  | 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）           | 否    |
-|classify_dimension|String|分类维度（根据OCR结果进行分类），逗号分隔，当前只支持lottery。
-lottery：彩票分类，设置detect_direction有助于提升精度|否|
+<table>
+<tr><th>参数</th><th>是否必选</th><th>类型</th><th>可选值范围</th><th>说明</th></tr>
+<tr><td>image</td><td>true</td><td>string</td><td>-</td><td>图像数据，base64编码</td></tr>
+<tr><td>recognize_granularity</td><td>false</td><td>string</td><td>big、small</td><td>是否定位单字符位置，big：不定位单字符位置，默认值；small：定位单字符位置 </td></tr>
+<tr><td>mask</td><td>false</td><td>string</td><td>-</td><td>表示mask区域的黑白灰度图片，白色代表选中, base64编码</td></tr>
+<tr><td>language_type</td><td>false</td><td>string</td><td>CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP</td><td>识别语言类型，默认为CHN_ENG。可选值包括：<ul><li>CHN_ENG：中英文混合；</li><li>ENG：英文；</li><li>POR：葡萄牙语；</li><li>FRE：法语；</li><li>GER：德语；</li><li>ITA：意大利语；</li><li>SPA：西班牙语；</li><li>RUS：俄语；</li><li>JAP：日语</li></ul></td></tr>
+<tr><td>detect_direction</td><td>false</td><td>boolean</td><td>true、false</td><td>是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<ul><li>true：检测朝向；</li><li>false：不检测朝向。</li></ul></td></tr>
+<tr><td>detect_language</td><td>FALSE</td><td>string</td><td>true、false</td><td>是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）</td></tr>
+<tr><td>classify_dimension</td><td>FALSE</td><td>string</td><td>lottery</td><td>分类维度（根据OCR结果进行分类），逗号分隔，当前只支持lottery。<br/>lottery：彩票分类，设置detect_direction有助于提升精度</td></tr>
+<tr><td>vertexes_location</td><td>FALSE</td><td>string</td><td>true、false</td><td>是否返回文字外接多边形顶点位置，不支持单字位置。默认为false</td></tr>
+</table>
 
 **通用文字识别 返回数据参数详情**
 
-| 参数               | 类型     | 描述                                       |
-| :--------------- | :----- | :--------------------------------------- |
-| direction        | Int32  | 图像方向，当detect_direction=true时存在。-1:未定义，0:正向，1: 逆时针90度， 2:逆时针180度， 3:逆时针270度 |
-| log_id           | Unit64 | 唯一的log id，用于问题定位                         |
-| words_result     | Array  | 定位和识别结果数组                                |
-| words_result_num | Unit32 | 识别结果数，表示words_result的元素个数                |
-| \+location       | Array  | 位置数组（坐标0点为左上角）                           |
-| \+\+left         | Unit32 | 表示定位位置的长方形左上顶点的水平坐标                      |
-| \+\+top          | Unit32 | 表示定位位置的长方形左上顶点的垂直坐标                      |
-| \+\+width        | Unit32 | 表示定位位置的长方形的宽度                            |
-| \+\+height       | Unit32 | 表示定位位置的长方形的高度                            |
-| \+words          | String | 识别结果字符串                                  |
-| \+chars          | Array  | 当单字符结果，recognize_granularity=small时存在    |
-| \+\+left         | Unit32 | 表示定位位置的长方形左上顶点的水平坐标                      |
-| \+\+top          | Unit32 | 表示定位位置的长方形左上顶点的垂直坐标                      |
-| \+\+width        | Unit32 | 表示定位位置的长方形的宽度                            |
-| \+\+height       | Unit32 | 表示定位位置的长方形的高度                            |
+<table>
+<tr><th>字段</th><th>必选</th><th>类型</th><th>说明</th></tr>
+<tr><td>direction</td><td>否</td><td>int32</td><td>图像方向，当detect_direction=true时存在。<ul><li>-1:未定义，</li><li>0:正向，</li><li>1: 逆时针90度，</li><li>2:逆时针180度，</li><li>3:逆时针270度</li></ul></td></tr>
+<tr><td>log_id</td><td>是</td><td>uint64</td><td>唯一的log id，用于问题定位</td></tr>
+<tr><td>words_result</td><td>是</td><td>array()</td><td>定位和识别结果数组</td></tr>
+<tr><td>words_result_num</td><td>是</td><td>uint32</td><td>识别结果数，表示words_result的元素个数</td></tr>
+
+<tr><td>+vertexes_location</td><td>否</td><td>array()</td><td>当前为四个顶点: 左上，右上，右下，左下。当vertexes_location=true时存在</td></tr>
+<tr><td>++x</td><td>是</td><td>uint32</td><td>水平坐标（坐标0点为左上角）</td></tr>
+<tr><td>++y</td><td>是</td><td>uint32</td><td>垂直坐标（坐标0点为左上角）</td></tr>
+<tr><td>+location</td><td>是</td><td>array()</td><td>位置数组（坐标0点为左上角）</td></tr>
+<tr><td>++left</td><td>是</td><td>uint32</td><td>表示定位位置的长方形左上顶点的水平坐标</td></tr>
+<tr><td>++top</td><td>是</td><td>uint32</td><td>表示定位位置的长方形左上顶点的垂直坐标</td></tr>
+<tr><td>++width</td><td>是</td><td>uint32</td><td>表示定位位置的长方形的宽度</td></tr>
+<tr><td>++height</td><td>是</td><td>uint32</td><td>表示定位位置的长方形的高度</td></tr>
+<tr><td>+words</td><td>否</td><td>string</td><td>识别结果字符串</td></tr>
+<tr><td>+chars</td><td>否</td><td>array()</td><td>单字符结果，recognize_granularity=small时存在</td></tr>
+<tr><td>++location</td><td>是</td><td>array()</td><td>位置数组（坐标0点为左上角）</td></tr>
+<tr><td>+++left</td><td>是</td><td>uint32</td><td>表示定位位置的长方形左上顶点的水平坐标</td></tr>
+<tr><td>+++top</td><td>是</td><td>uint32</td><td>表示定位位置的长方形左上顶点的垂直坐标</td></tr>
+<tr><td>+++width</td><td>是</td><td>uint32</td><td>表示定位定位位置的长方形的宽度</td></tr>
+<tr><td>+++height</td><td>是</td><td>uint32</td><td>表示位置的长方形的高度</td></tr>
+<tr><td>++char</td><td>是</td><td>string</td><td>单字符识别结果</td></tr>
+</table>
 
 # 银行卡文字识别
 
