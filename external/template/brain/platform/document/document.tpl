@@ -293,7 +293,7 @@
                         <li name="Speech-Tts" class="non-leaf"><a href="javascript:void(0)"><span class="icon-arrow-down"></span>语音合成</a>
                             <ul class="level3 submenu">
                                 <li name="Speech-Tts-O2OAndroidSDK" class="non-leaf">
-                                    <a class="click-node" tag="Speech-Tts-O2OAndroidSDK" href="javascript:void(0)"><span class="icon-arrow-down"></span>离线在线语音识别 Android SDK</a>
+                                    <a class="click-node" tag="Speech-Tts-O2OAndroidSDK" href="javascript:void(0)"><span class="icon-arrow-down"></span>离线在线语音合成 Android SDK</a>
                                     <ul class="level4 submenu">
                                         <li name="" class="leaf"><a href="javascript:void(0)"><i></i>简介</a></li>
                                         <li name="" class="leaf"><a href="javascript:void(0)"><i></i>集成指南</a></li>
