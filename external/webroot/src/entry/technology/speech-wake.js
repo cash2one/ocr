@@ -123,7 +123,7 @@ $(document).ready(function () {
             words: words,
             success: function (res) {
                 if (res.errno === 1) {
-                    new AlertModal('访问接口出错，请登陆后再尝试该项服务！');
+                    new AlertModal('访问接口出错，请登陆百度账号后再尝试该项服务！');
                     return false;
                 }
                 else if (res.errno !== 0) {

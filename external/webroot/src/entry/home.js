@@ -59,8 +59,7 @@ $(document).ready(function () {
         setBannerNum(newBannerNum + 1);
     });
 
-    refreshBanner();
-    setBannerNum(currentBannerNum + 1);
+    $('.banner-indicator > li').eq(0).click();
 
     // 渲染底部新闻
     new News({

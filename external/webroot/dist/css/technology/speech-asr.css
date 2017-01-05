@@ -539,39 +539,32 @@
 .tech-section.tech-feature .feature-item:nth-child(1) .feature-icon {
   background-image: url('../../../ai_images/technology/speech-asr/icons.png');
   background-repeat: no-repeat;
-  background-position: -5px -5px;
-  background-position-x: -5px;
-  background-position-y: -5px;
-}
-.tech-section.tech-feature .feature-item:nth-child(2) .feature-icon {
-  background-image: url('../../../ai_images/technology/speech-asr/icons.png');
-  background-repeat: no-repeat;
   background-position: -90px -5px;
   background-position-x: -90px;
   background-position-y: -5px;
 }
-.tech-section.tech-feature .feature-item:nth-child(3) .feature-icon {
+.tech-section.tech-feature .feature-item:nth-child(2) .feature-icon {
   background-image: url('../../../ai_images/technology/speech-asr/icons.png');
   background-repeat: no-repeat;
   background-position: -175px -5px;
   background-position-x: -175px;
   background-position-y: -5px;
 }
-.tech-section.tech-feature .feature-item:nth-child(4) .feature-icon {
+.tech-section.tech-feature .feature-item:nth-child(3) .feature-icon {
   background-image: url('../../../ai_images/technology/speech-asr/icons.png');
   background-repeat: no-repeat;
   background-position: -260px -5px;
   background-position-x: -260px;
   background-position-y: -5px;
 }
-.tech-section.tech-feature .feature-item:nth-child(5) .feature-icon {
+.tech-section.tech-feature .feature-item:nth-child(4) .feature-icon {
   background-image: url('../../../ai_images/technology/speech-asr/icons.png');
   background-repeat: no-repeat;
   background-position: -345px -5px;
   background-position-x: -345px;
   background-position-y: -5px;
 }
-.tech-section.tech-feature .feature-item:nth-child(6) .feature-icon {
+.tech-section.tech-feature .feature-item:nth-child(5) .feature-icon {
   background-image: url('../../../ai_images/technology/speech-asr/icons.png');
   background-repeat: no-repeat;
   background-position: -430px -5px;

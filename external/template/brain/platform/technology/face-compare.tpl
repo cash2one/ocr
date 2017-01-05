@@ -175,11 +175,11 @@
             <!--<ul>
                 {%if $userInfo eq Null%}
                 <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fconsole.bce.baidu.com">免费试用</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 <li>
-                    <a class="console" href="https://console.bce.baidu.com/?fromai=1">控制台</a>
+                    <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
@@ -192,7 +192,7 @@
             <ul>
                 {%if $userInfo eq Null%}
                 <li><a href="https://login.bcetest.baidu.com?fromai=1&redirect=http%3A%2F%2Fcp01-yf-db-02.epc.baidu.com%3A8030">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://login.bcetest.baidu.com?fromai=1&redirect=https%3A%2F%2Fqasandbox.bcetest.baidu.com%2F%3Ffromai%3D1%23%2Faip%2Foverview">免费试用</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://qasandbox.bcetest.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 <li>
@@ -297,14 +297,14 @@
             <div class="container">
                 <div class="case-icon"></div>
                 <h2>泰康人寿</h2>
-                <p>百度钱包是中国领先的在线支付应用和服务平台<br>调用百度身份证OCR接口进行用户身份证识别，识别速度快，准确率高<br>减少了用户的输入操作，有效的提高了用户的体验</p>
+                <p>用于微信投保的回执和回访环节，通过人脸验证来在线校验客户身份</p>
             </div>
         </li>
         <li class="case-item">
             <div class="container">
                 <div class="case-icon"></div>
                 <h2>百度钱包</h2>
-                <p>百度钱包是中国领先的在线支付应用和服务平台<br>调用百度身份证OCR接口进行用户身份证识别，识别速度快，准确率高<br>减少了用户的输入操作，有效的提高了用户的体验</p>
+                <p>百度金融实名认证，通过人脸识别校验用户身份证件真实性</p>
             </div>
         </li>
     </ul>
@@ -440,7 +440,9 @@
             }
             return false;
         }
-        document.getElementById('feedback-btn').onclick = loadRightBar;
+        document.getElementById('feedback-btn').onclick = function () {
+            loadRightBar();
+        };
     })();
 
     function loadScript(url, callback, opt) {
