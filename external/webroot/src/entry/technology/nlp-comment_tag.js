@@ -920,8 +920,7 @@ const paintDemo = demoNum => {
         // 当前这条评论的分析结果
         const analyzeResult = scopes[demoNum][sentenceIndex];
 
-        // 逐一过分析结果段落
-        for (let {scope, attitude, tag, weight} of analyzeResult) {
+        analyzeResult.forEach(({scope, attitude, tag, weight}) => {
             // 根据分析结果，为这个字填充上情感标识
             const startPos = sentence.indexOf(scope);
             const scopeLength = scope.length;
@@ -952,7 +951,7 @@ const paintDemo = demoNum => {
             if (existTagData[tag][attitude].value > topValue) {
                 topValue = tempValue;
             }
-        }
+        });
 
         sentenceDataArray.push(sentenceData);
     });
@@ -972,8 +971,9 @@ const paintDemo = demoNum => {
 
     // 对比图html集合，待拼接
     const contrastHTMLArr = [];
+
     // 右侧绘图
-    for (let tagName of Object.keys(existTagData)) {
+    Object.keys(existTagData).forEach(tagName => {
         // 一个tag的正反向值
         const positiveValue = existTagData[tagName][ATTITUDE.POSITIVE].value;
         const negativeValue = existTagData[tagName][ATTITUDE.NEGATIVE].value;
@@ -997,7 +997,7 @@ const paintDemo = demoNum => {
         ].join('\r');
 
         contrastHTMLArr.push(commentHTML);
-    }
+    });
 
     // 一次渲染，生成DOM结构，避免重复DOM操作
     $demoCaseContainer.html(caseList.join('\r'));
