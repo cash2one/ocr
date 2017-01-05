@@ -65,7 +65,7 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 若请求错误，服务器将返回的JSON文本包含以下参数：
 
-* **error_code：**错误码；关于错误码的详细信息请参考**通用错误码**和**业务相关错误码**。
+* **error_code：**错误码；关于错误码的详细信息请参考“[通用错误码](#通用错误码)和[业务相关错误码](#业务相关错误码)”。
 
 * **error_msg：**错误描述信息，帮助理解和解决发生的错误。
 
@@ -165,11 +165,12 @@ authorization: {bce-authorization-string}
 image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 ```
 
+---
+
 **请求参数**
 
 <table>
 <tr><th>参数</th><th>是否必选</th><th>类型</th><th>说明</th></tr>
-<tr><td>access_token</td><td>必选</td><td>string</td><td>Oauth2.0授权所获token。 </td></tr>
 <tr><td>image</td><td>是</td><td>string</td><td>base64编码后的图片数据，图片大小不超过2M。</td></tr>
 <tr><td>max_face_num</td><td>否</td><td>uint32</td><td>最多处理人脸数目，默认值1</td></tr>
 <tr><td>face_fields</td><td>否</td><td>string</td><td>包括age、beauty、expression、faceshape、gender、glasses、landmark、race、qualities信息，逗号分隔，默认只返回人脸框、概率和旋转角度。</td></tr>

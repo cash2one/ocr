@@ -10,7 +10,7 @@ API服务要求使用JSON格式的结构体来描述一个请求的具体内容,
 
 API服务均采用JSON格式的消息体作为响应返回的格式。
 
-> 说明：本文档中所有API接口示例统一以“调用方式一”举例，调用方式二构造方式参见[请求头域内容](#请求头域内容)。
+> 说明：本文档中所有API接口示例统一以“调用方式一”举例，调用方式二构造方式参见[请求头域内容][1]。
 
 # 调用方式一
 
@@ -18,7 +18,7 @@ API服务均采用JSON格式的消息体作为响应返回的格式。
 
 向API服务地址使用POST发送请求，必须在URL中带上参数：
 
-**access_token:** 必须参数，参考“[Access Token获取](/docs#Beginner-Auth)”。
+**access\_token:** 必须参数，参考“[Access Token获取][2]”。
 
 POST中参数按照API接口说明调用即可。
 
@@ -28,7 +28,7 @@ POST中参数按照API接口说明调用即可。
 https://aip.baidubce.com/rpc/2.0/nlp/v1/wordseg? access_token=24.f9ba9c5241b67688bb4adbed8bc91dec.2592000.1485570332.282335-8574074
 ```
 
-> **说明：**方式一鉴权使用的Access_token必须通过API Key和Secret Key获取。
+> **说明：**方式一鉴权使用的Access\_token必须通过API Key和Secret Key获取。
 
 # 调用方式二
 
@@ -57,15 +57,15 @@ content-type: application/x-www-form-urlencoded;
 authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z/1800/host;x-bce-date/994014d96b0eb26578e039fa053a4f9003425da4bfedf33f4790882fb4c54903
 ```
 
-> **说明：**方式二鉴权使用的[API认证机制](https://cloud.baidu.com/doc/Reference/AuthenticationMechanism.html)authorization必须通过百度云的[AK/SK](https://cloud.baidu.com/doc/Reference/GetAKSK.html)生成。
+> **说明：**方式二鉴权使用的[API认证机制][3]authorization必须通过百度云的[AK/SK][4]生成。
 
 # 错误信息格式
 
 若请求错误，服务器将返回的JSON文本包含以下参数：
 
-* **error_code：**错误码；关于错误码的详细信息请参考“[通用错误码](#通用错误码)”。
+* **error\_code：**错误码；关于错误码的详细信息请参考“[通用错误码][5]”。
 
-* **error_msg：**错误描述信息，帮助理解和解决发生的错误。
+* **error\_msg：**错误描述信息，帮助理解和解决发生的错误。
 
 例如Access Token失效返回：
 
@@ -81,10 +81,10 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 **Access Token错误码**
 
-| error_CODE | error_MSG                               | 解释               |
-| ---------- | --------------------------------------- | ---------------- |
-| 100        | Invalid parameter                       | 无效参数             |
-| 110        | Access token invalid or no longer valid | Access Token过期失效 |
+| error\_CODE | error\_MSG                              | 解释               |
+| ----------- | --------------------------------------- | ---------------- |
+| 100         | Invalid parameter                       | 无效参数             |
+| 110         | Access token invalid or no longer valid | Access Token过期失效 |
 
 
 
@@ -134,12 +134,15 @@ authorization: {bce-authorization-string}
 query=百度是一家高科技公司&lang_id=1
 ```
 
+---
+
+
 **请求参数**
 
-| 参数名称    | 类型     | 详细说明                                     |
-| ------- | ------ | ---------------------------------------- |
-| query   | String | 必须，待分词的文本，目前输入编码统一为GBK                   |
-| lang_id | Int    | 非必须，默认为1，输入字符串的语言对应的id，简体中文设置为1（目前不支持其他语言） |
+| 参数名称     | 类型     | 详细说明                                     |
+| -------- | ------ | ---------------------------------------- |
+| query    | String | 必须，待分词的文本，目前输入编码统一为GBK                   |
+| lang\_id | Int    | 非必须，默认为1，输入字符串的语言对应的id，简体中文设置为1（目前不支持其他语言） |
 
 **返回示例**
 
@@ -309,6 +312,8 @@ authorization: {bce-authorization-string}
 query=你好百度
 ```
 
+---
+
 **请求参数**
 
 | Key   | 类型     | 含义及备注                                    |
@@ -320,7 +325,7 @@ query=你好百度
 ```
 {
   "result_out" : 
-	 [
+     [
            {"word" : "你好", "offset" : 0, "length" : 1, "type" : "v", "confidence" : 1.0}, 
            {"word" : "百度", "offset" : 1, "length" : 1, "type" : "nt", "confidence" : 1.0}
       ] 
@@ -332,12 +337,12 @@ query=你好百度
 
 | Key         | 类型     | 含义及备注                              |
 | ----------- | ------ | ---------------------------------- |
-| result_out  | array  | 词性标注结果数组，数组中每个元素对应一个词汇。每个词汇是一个dict |
+| result\_out | array  | 词性标注结果数组，数组中每个元素对应一个词汇。每个词汇是一个dict |
 | +word       | string | 词汇的字面                              |
 | +offset     | int    | 偏移量，以基本粒度词汇为单位                     |
 | +length     | int    | 长度，以基本粒度词汇为单位                      |
 | +type       | string | 词性                                 |
-| +confidence | float  | 置信度分值，0~1                          |
+| +confidence | float  | 置信度分值，0\~1                         |
 
 
 # 词向量表示接口
@@ -356,22 +361,22 @@ query=你好百度
 
   - 输入两个词
 
-    ```
-    {
-      "query1":"百度",
-      "query2":"谷歌",
-      "tid":1
-    }
-    ```
+  ```
+  {
+    "query1":"百度",
+    "query2":"谷歌",
+    "tid":1
+  }
+  ```
 
   - 输入一个词
 
-    ```
-    {
-      "query1":"百度",
-      "tid":2
-    }
-    ```
+  ```
+  {
+    "query1":"百度",
+    "tid":2
+  }
+  ```
 
 **调用方式二请求示例**
 
@@ -404,6 +409,7 @@ query=你好百度
 
   query1=百度&tid=2
   ```
+---
 
 **请求参数**
 
@@ -423,9 +429,9 @@ query=你好百度
   "data":
     {  "sim":
         {
- 		  "sim":0.180343},
-		  "vec":null
-		}
+          "sim":0.180343},
+          "vec":null
+        }
 }
 ```
 
@@ -451,7 +457,7 @@ query=你好百度
 
 * HTTP方法： POST
 
-* 请求URL： https://aip.baidubce.com/rpc/2.0/nlp/v1/dnnlm_cn
+* 请求URL： https://aip.baidubce.com/rpc/2.0/nlp/v1/dnnlm\_cn
 
 * 请求参数：
 
@@ -476,12 +482,14 @@ authorization: {bce-authorization-string}
 input_sequence=百度是个搜索公司
 ```
 
+---
+
 
 **请求参数**
 
-| 参数             | 说明          |
-| -------------- | ----------- |
-| Input_sequence | 输入的句子，不需要切词 |
+| 参数              | 说明          |
+| --------------- | ----------- |
+| Input\_sequence | 输入的句子，不需要切词 |
 
 
 **返回示例**
@@ -489,16 +497,16 @@ input_sequence=百度是个搜索公司
 ```
 {
   "seq_seg":"百度 是 个 搜索 公司",
-  "seq_prob":" 0.00059052	0.00373688	0.0372463	0.00137015	0.000118814 "
+  "seq_prob":" 0.00059052   0.00373688  0.0372463   0.00137015  0.000118814 "
 }
 ```
 
 **返回参数**
 
-| 参数       | 说明             |
-| -------- | -------------- |
-| seq_seg  | 句子的切词结果        |
-| seq_prob | 切词后每个词在句子中的概率值 |
+| 参数        | 说明             |
+| --------- | -------------- |
+| seq\_seg  | 句子的切词结果        |
+| seq\_prob | 切词后每个词在句子中的概率值 |
 
 
 # 短文本相似度接口
@@ -542,14 +550,17 @@ authorization: {bce-authorization-string}
 qslots=[{"terms_sequence":"你好百度” ", "type":0, "items":[]}]&tslots=[{"terms_sequence":"你好世界” ", "type":0, "items":[]}]&type=0
 ```
 
+---
+
+
 **请求参数**
 
-| 参数                     | 说明       |
-| ---------------------- | -------- |
-| qslots中的terms_sequence | 短文本1     |
-| tslots中的terms_sequence | 短文本2     |
-| items                  | 均设置为空列表  |
-| type                   | 类别，均设置为0 |
+| 参数                      | 说明       |
+| ----------------------- | -------- |
+| qslots中的terms\_sequence | 短文本1     |
+| tslots中的terms\_sequence | 短文本2     |
+| items                   | 均设置为空列表  |
+| type                    | 类别，均设置为0 |
 
 **返回示例**
 
@@ -568,26 +579,26 @@ qslots=[{"terms_sequence":"你好百度” ", "type":0, "items":[]}]&tslots=[{"t
 
 **返回参数**
 
-| 参数         | 说明          |
-| ---------- | ----------- |
-| score      | 两个文本相似度得分   |
-| error      | error code  |
-| type       | 默认为0        |
-| error_note | error对应文字说明 |
-| items      | 默认为空        |
+| 参数          | 说明          |
+| ----------- | ----------- |
+| score       | 两个文本相似度得分   |
+| error       | error code  |
+| type        | 默认为0        |
+| error\_note | error对应文字说明 |
+| items       | 默认为空        |
 
 **错误码说明**  
 
-| Code | Message            | 返回说明      |
-| ---- | ------------------ | --------- |
-| 0    | NO_ERROR           | 正确返回      |
-| 1    | BEYOND_SLOT_LENGTH | 输入长度过长    |
-| 2    | OOV_ERROR          | 输入文本不在词表中 |
-| 3    | LEGO_LIB_RET_ERROR | 内部库错误     |
-| 4    | OTHER_SERVER_ERROR | 其它服务错误    |
-| 5    | INPUT_HAS_EMPTY    | 输入为空      |
-| 6    | INPUT_FORMAT_ERROR | 输入格式错误    |
-| 7    | OTHER_CLIENT_ERROR | 客服端错误     |
+| Code | Message               | 返回说明      |
+| ---- | --------------------- | --------- |
+| 0    | NO\_ERROR             | 正确返回      |
+| 1    | BEYOND\_SLOT\_LENGTH  | 输入长度过长    |
+| 2    | OOV\_ERROR            | 输入文本不在词表中 |
+| 3    | LEGO\_LIB\_RET\_ERROR | 内部库错误     |
+| 4    | OTHER\_SERVER\_ERROR  | 其它服务错误    |
+| 5    | INPUT\_HAS\_EMPTY     | 输入为空      |
+| 6    | INPUT\_FORMAT\_ERROR  | 输入格式错误    |
+| 7    | OTHER\_CLIENT\_ERROR  | 客服端错误     |
 
 
 # 评论观点抽取接口
@@ -600,7 +611,7 @@ qslots=[{"terms_sequence":"你好百度” ", "type":0, "items":[]}]&tslots=[{"t
 
 * HTTP方法: POST
 
-* 请求URL: https://aip.baidubce.com/rpc/2.0/nlp/v1/comment_tag
+* 请求URL: https://aip.baidubce.com/rpc/2.0/nlp/v1/comment\_tag
 
 * 请求参数
 
@@ -626,6 +637,9 @@ authorization: {bce-authorization-string}
 
 comment=个人觉得福克斯好，外观漂亮年轻，动力和操控性都不错&entity=null&type=1
 ```
+
+---
+
 
 **请求参数**
 
@@ -675,3 +689,9 @@ comment=个人觉得福克斯好，外观漂亮年轻，动力和操控性都不
 | comment  | 表示待抽取观点的评论文本。                |
 | entity   | 实体名，当前取值为NULL，暂时不生效          |
 | type     | 表示情感极性（其中2表示积极、1表示中性、0表示消极）。 |
+
+[1]:	#请求头域内容
+[2]:	/docs#Beginner-Auth
+[3]:	https://cloud.baidu.com/doc/Reference/AuthenticationMechanism.html
+[4]:	https://cloud.baidu.com/doc/Reference/GetAKSK.html
+[5]:	#通用错误码

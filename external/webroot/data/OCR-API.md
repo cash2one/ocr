@@ -148,7 +148,7 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 | ------------ | --------------------------------- |
 | Content-Type | application/x-www-form-urlencoded |
 
-##### Body中数据如下：
+##### Body中数据示例：
 
 | 参数    | 值          |
 | ----- | ---------- |
@@ -169,6 +169,9 @@ authorization: bce-auth-v1/fbf9f7889585498d8ba8a68da26cbb2e/2016-10-18T02: 20: 0
 image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 
 ```
+
+---
+
 
 **请求参数**
 
@@ -291,6 +294,7 @@ image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 
 ```
 
+---
 
 **请求参数**
 
@@ -386,6 +390,9 @@ authorization: bce-auth-v1/fbf9f7889585498d8ba8a68da26cbb2e/2016-10-18T02: 20: 0
 image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK&access_token=21.21cda41bd9739ce5a083f3326f64b610.2592000.1469180474.1686270206-11101624
 
 ```
+
+---
+
 
 **请求参数**
 
