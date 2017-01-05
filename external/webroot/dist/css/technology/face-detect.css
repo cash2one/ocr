@@ -1085,7 +1085,6 @@
 }
 .tech-section.tech-demo .demo-container .demo-data #demo-photo-url {
   height: 36px;
-  line-height: 36px;
   border: 1px solid #ebebeb;
   padding: 0 11px;
   width: 320px;
@@ -1098,9 +1097,9 @@
   color: #999;
 }
 .tech-section.tech-demo .demo-container .demo-data .btn-primary {
-  line-height: 34px;
+  line-height: 36px;
   width: 100px;
-  height: 38px;
+  height: 36px;
   box-shadow: none;
 }
 .tech-section.tech-demo .demo-container .demo-data input[type="file"] {
