@@ -8,7 +8,6 @@ import $ from 'jquery';
 import DemoCanvas from '../../component/widget/demoCanvas';
 import {scanFace} from '../../model/demoAPI';
 import AlertModal from '../../component/widget/alertModal';
-import {setPlaceHolder} from '../../component/common/placeholder';
 
 $(document).ready(function () {
     // case点击效果
@@ -32,8 +31,6 @@ $(document).ready(function () {
     $('.tech-intro-detail').one('demo', function () {
         $('.tech-intro-detail').addClass('scanned');
     });
-
-    setPlaceHolder($('.tech-demo'));
 
 
     // 线上demo开始

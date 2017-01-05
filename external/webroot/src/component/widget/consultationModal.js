@@ -83,7 +83,6 @@ export default class ConsultationModal extends Modal {
                         this.refreshQRCode();
                         return false;
                     }
-                    this.apply();
                     sendConsultation({
                         data: {
                             tech: form.find('input[name=tech]:checked').val(),
@@ -104,6 +103,7 @@ export default class ConsultationModal extends Modal {
                         },
                         fail: () => this.applyFail()
                     });
+                    this.apply();
                 },
                 fail: () => this.applyFail()
             });

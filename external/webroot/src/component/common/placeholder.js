@@ -21,7 +21,10 @@ export function setPlaceHolder(container) {
     if (!hasPlaceHolder()) {
         container.find('input[placeholder], textarea[placeholder]').each(function (i, e) {
             let input = $(e);
-            input.parent().css('position', 'relative');
+            input.parent().css({
+                position: 'relative',
+                zIndex: 'auto'
+            });
             input.css({
                 position: 'relative',
                 zIndex: 2,
@@ -30,13 +33,17 @@ export function setPlaceHolder(container) {
             let hint = $('<span class="hint">' + input.attr('placeholder') + '</span>');
             hint.css({
                 position: 'absolute',
-                top: '5px',
+                top: '10px',
                 left: '10px',
                 padding: input.css('padding'),
                 color: '#ccc',
                 zIndex: 1
             });
             $(e).after(hint);
+            hint.click(function () {
+                input.focus();
+                hint.hide();
+            });
         });
 
 

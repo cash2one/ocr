@@ -91,7 +91,6 @@ export default class SubscriptionModal extends Modal {
                         this.refreshQRCode();
                         return false;
                     }
-                    this.apply();
                     subscribe({
                         data: {
                             name: form.find('input[name=username]').val(),
@@ -108,6 +107,7 @@ export default class SubscriptionModal extends Modal {
                         },
                         fail: () => this.applyFail()
                     });
+                    this.apply();
                 },
                 fail: () => this.applyFail()
             });

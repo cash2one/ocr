@@ -175,11 +175,11 @@
             <!--<ul>
                 {%if $userInfo eq Null%}
                 <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fconsole.bce.baidu.com">免费试用</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 <li>
-                    <a class="console" href="https://console.bce.baidu.com/?fromai=1">控制台</a>
+                    <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
@@ -192,7 +192,7 @@
             <ul>
                 {%if $userInfo eq Null%}
                 <li><a href="https://login.bcetest.baidu.com?fromai=1&redirect=http%3A%2F%2Fcp01-yf-db-02.epc.baidu.com%3A8030">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://login.bcetest.baidu.com?fromai=1&redirect=https%3A%2F%2Fqasandbox.bcetest.baidu.com%2F%3Ffromai%3D1%23%2Faip%2Foverview">免费试用</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://qasandbox.bcetest.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 <li>
@@ -280,7 +280,7 @@
                         <img src="/ai_images/technology/bfr-detect/demo-card-3.jpg">
                     </li>
                     <li>
-                        <img src="/ai_images/technology/bfr-detect/demo-card-4.jpg">
+                        <img src="/ai_images/technology/bfr-detect/demo-card-4.png">
                     </li>
                     <li>
                         <img src="/ai_images/technology/bfr-detect/demo-card-5.png">
@@ -387,7 +387,7 @@
         <h2>立即获取免费API Key</h2>
         <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
         <div>
-            <a role="button" class="btn-primary large" href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fconsole.bce.baidu.com">免费试用</a>
+            <a role="button" class="btn-primary large" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
         </div>
     </div>
 </section>
@@ -518,7 +518,9 @@
             }
             return false;
         }
-        document.getElementById('feedback-btn').onclick = loadRightBar;
+        document.getElementById('feedback-btn').onclick = function () {
+            loadRightBar();
+        };
     })();
 
     function loadScript(url, callback, opt) {
