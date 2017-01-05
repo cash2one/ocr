@@ -623,7 +623,7 @@
     color: #666666;
 }
 .news-banner {
-  background: url('../../../../ai_images/support/news/news-list/banner.jpg') no-repeat center;
+  background: #000 url('../../../../ai_images/support/news/news-list/banner.jpg') no-repeat center;
 }
 .news-banner h1 {
   color: #fff;
