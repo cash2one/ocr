@@ -209,6 +209,7 @@ class Brain_AIApi {
         curl_setopt($ch, CURLOPT_TIMEOUT, 30);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_COOKIE, 'BDUSS='.$_COOKIE['BDUSS']);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $ret_data = curl_exec($ch);
         $curl_errno = curl_errno($ch); 
         $curl_error = curl_error($ch);
@@ -372,6 +373,7 @@ class Brain_AIApi {
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_COOKIE, 'BDUSS='.$_COOKIE['BDUSS']);
         
         $header = array(
@@ -427,6 +429,7 @@ class Brain_AIApi {
         curl_setopt($ch, CURLOPT_HEADER, false ); 
         curl_setopt($ch, CURLOPT_NOBODY, true ); 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true ); 
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
         curl_exec($ch);
         $status = curl_errno($ch);
