@@ -23,6 +23,10 @@ class Brain_AIApi {
         'application/x-bmp',
         'image/bmp',
     );
+
+    public static $arrHostWhiteList = array(
+        'h.hiphotos.baidu.com',
+    );
     
     //api list
     /*
@@ -448,7 +452,14 @@ class Brain_AIApi {
         {
             return false;
         }
+
+        //白名单
+        if(in_array($host, Brain_AIApi::$arrHostWhiteList))
+        {
+            return true;
+        }
         
+        //允许内网本机
         $serverIp = $_SERVER['SERVER_ADDR'];
         $ip = @gethostbyname($host);
 
