@@ -26,6 +26,10 @@ class Brain_AIApi {
 
     public static $arrHostWhiteList = array(
         'hiphotos.baidu.com',
+        'hiphotos.bdimg.com',
+        'imgsrc.baidu.com',
+        'imgsrc.bdimg.com',
+        'imgtn.bdimg.com',
     );
     
     //api list
