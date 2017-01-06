@@ -33,8 +33,6 @@
 
 # 快速入门
 
-1.初始化一个AipFaceClient。
-
 AipFaceClient是与人脸识别交互服务的客户端，所有人脸识别操作都是通过AipFaceClient完成的。您可以参考**新建AipFaceClient**，完成初始化客户端的操作。
 
 # AipFaceClient
