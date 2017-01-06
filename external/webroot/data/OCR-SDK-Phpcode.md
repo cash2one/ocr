@@ -174,7 +174,7 @@ $result = $apiOcr->bankcard(file_get_contents('bankcard.jpg'));
 
 | 参数                 | 类型     | 描述               |
 | :----------------- | :----- | :--------------- |
-| log_id             | Unit64 | 唯一的log id，用于问题定位 |
+| log_id             | Uint64 | 唯一的log id，用于问题定位 |
 | result             | Object | 定位和识别结果数组        |
 | \+bank_card_number | String | 银行卡识别结果          |
 
@@ -245,12 +245,12 @@ $result = $apiOcr->idcard(file_get_contents('idcard.jpg'), $isFront, $options);
 | 参数               | 类型     | 描述                                       |
 | :--------------- | :----- | :--------------------------------------- |
 | direction        | Int32  | 图像方向，当detect_direction=true时存在。-1:未定义，0:正向，1: 逆时针90度， 2:逆时针180度， 3:逆时针270度 |
-| log_id           | Unit64 | 唯一的log id，用于问题定位                         |
+| log_id           | Uint64 | 唯一的log id，用于问题定位                         |
 | words_result     | Array  | 定位和识别结果数组，数组元素的key是身份证的主体字段（正面支持：住址、公民身份号码、出生、姓名、性别、民族，背面支持：签发日期、失效日期）。只返回识别出的字段。 |
-| words_result_num | Unit32 | 识别结果数，表示words_result的元素个数                |
+| words_result_num | Uint32 | 识别结果数，表示words_result的元素个数                |
 | \+location       | Array  | 位置数组（坐标0点为左上角）                           |
-| \+\+left         | Unit32 | 表示定位位置的长方形左上顶点的水平坐标                      |
-| \+\+top          | Unit32 | 表示定位位置的长方形左上顶点的垂直坐标                      |
-| \+\+width        | Unit32 | 表示定位位置的长方形的宽度                            |
-| \+\+height       | Unit32 | 表示定位位置的长方形的高度                            |
+| \+\+left         | Uint32 | 表示定位位置的长方形左上顶点的水平坐标                      |
+| \+\+top          | Uint32 | 表示定位位置的长方形左上顶点的垂直坐标                      |
+| \+\+width        | Uint32 | 表示定位位置的长方形的宽度                            |
+| \+\+height       | Uint32 | 表示定位位置的长方形的高度                            |
 | \+words          | String | 识别结果字符串                                  |
