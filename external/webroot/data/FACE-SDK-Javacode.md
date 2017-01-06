@@ -35,7 +35,7 @@
 
 1.初始化一个AipFaceClient。
 
-AipFaceClient是与Optical Character Recognition(BFR)交互的客户端，所有BFR操作都是通过AipFaceClient完成的。您可以参考**新建AipFaceClient**，完成初始化客户端的操作。
+AipFaceClient是与人脸识别交互服务的客户端，所有人脸识别操作都是通过AipFaceClient完成的。您可以参考**新建AipFaceClient**，完成初始化客户端的操作。
 
 # AipFaceClient
 
@@ -52,19 +52,19 @@ public class Sample {
     public static final String APP_ID = "你的 App ID";
     public static final String API_KEY = "你的 Api ID";
     public static final String SECRET_KEY = "你的 Secret Key";
-    
+
     public static void main(String[] args) {
 
         // 初始化一个BFRClient
         AipFace client = new AipFace(APP_ID, API_KEY, SECRET_KEY);
-        
+
         String image = "test.jpg";
         JSONObject res = face.detect(path, new HashMap<String, String>());
         System.out.println(res.toString(2));
     }
 }
 ```
-在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是在创建完毕应用后，系统分配给用户的，均为字符串，用于标识用户，为访问做签名验证，可在AI服务控制台中的**应用列表**中查看。  
+在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是在创建完毕应用后，系统分配给用户的，均为字符串，用于标识用户，为访问做签名验证，可在AI服务控制台中的**应用列表**中查看。
 
 **注：**如您以前是百度云的老用户，其中`API_KEY`对应百度云的“Access Key ID”，`SECRET_KEY`对应百度云的“Access Key Secret”。
 
