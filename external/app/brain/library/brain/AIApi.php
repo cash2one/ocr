@@ -30,6 +30,7 @@ class Brain_AIApi {
         'imgsrc.baidu.com',
         'imgsrc.bdimg.com',
         'imgtn.bdimg.com',
+        '10.57.6.47',
     );
     
     //api list
