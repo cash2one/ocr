@@ -242,7 +242,7 @@
             </a>
         </li>
         <li>
-            <a href="/activity/zuiqiangdanao"></a>
+            <a href="/activity/zuiqiangdanao/"></a>
         </li>
     </ul>
     <ul class="banner-indicator">
