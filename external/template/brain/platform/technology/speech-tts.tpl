@@ -241,7 +241,7 @@
                             <a class="player play"></a>
                             <span class="demo-speed">
                                 <a class="decrease"><</a>
-                                <span data-speed="3" class="demo-current-speed"></span>
+                                <span data-speed="5" class="demo-current-speed"></span>
                                 <a class="increase">></a>
                             </span>
                             <span class="demo-volume">
