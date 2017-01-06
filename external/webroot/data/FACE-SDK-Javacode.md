@@ -116,8 +116,8 @@ public void faceRecognize(AipFace client) {
 | 参数           | 类型            | 描述                                       | 是否必须 |
 | :----------- | :------------ | :--------------------------------------- | :--- |
 | face_fields  | Boolean       | 包括age、beauty、expression、faceshape、gender、glasses、landmark、race、qualities信息，逗号分隔，默认只返回人脸框、概率和旋转角度。 | 否    |
-| max_face_num | 最多处理人脸数目，默认值1 | 是                                        |      |
-| image        | String        | 图像数据，支持本地图像文件路径，图像文件二进制数组                | 是    |
+| max_face_num | uint32 | 最多处理人脸数目，默认值1                                        | 否     |
+| image        | String        | 图像数据，仅支持图像文件流                            | 是    |
 
 **人脸检测 返回数据参数详情**
 
