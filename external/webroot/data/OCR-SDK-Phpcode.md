@@ -24,20 +24,18 @@
 
 1.在[官方网站](/sdk)下载PHP SDK压缩工具包。
 
-2.将下载的`ocr.zip`解压后，复制AipOrc.php以及lib/*到工程文件夹中。
+2.将下载的`aip-ocr-php-sdk-version.zip`解压后，复制AipOrc.php以及lib/*到工程文件夹中。
 
 3.引入AipOcr.php
 
 
 # 快速入门
 
-AipOcr类是与Optical Character Recognition(OCR)交互的客户端，所有OCR操作都是通过AipOcr完成的。
-
-## 初始化AipOcr
+## 初始化一个AipOcr对象
 
 AipOcr类是Optical Character Recognition的PHP SDK客户端，为使用Optical Character Recognition的开发人员提供了一系列的交互方法。
 
-用户可以参考如下代码新建一个AipOcr对象：
+用户可以参考如下代码初始化一个AipOcr对象：
 
 ```php
 // 引入文字识别OCR SDK
@@ -59,7 +57,7 @@ $aipOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
 
 # 通用文字识别
 
-通用文字识别可以接受任意图片，并识别出图片中的文字以及全部文字串。
+通用文字识别可以接受任意图片，并识别出图片中的文字。
 
 图片参数仅支持图片文件内容。
 
@@ -75,10 +73,10 @@ const API_KEY = '你的 API Key';
 const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiOcr
-$client = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
+$apiOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
 
 // 调用通用文字识别接口
-$response = $client->general(file_get_contents('general.jpg'));
+$result = $apiOcr->general(file_get_contents('general.jpg'));
 ```
 传入图片时还想增加一些自定义参数配置：
 
@@ -92,13 +90,13 @@ const API_KEY = '你的 API Key';
 const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiOcr
-$client = new AipOcr(APP_ID, ACCESS_KEY_ID, SECRET_ACCESS_KEY);
+$apiOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
 
 // 定义参数变量
 $option = array('detect_direction' => false, 'language_type' => "CHN_ENG");
 
 // 调用通用文字识别接口
-$response = $client->general(file_get_contents('general.jpg'), $option);
+$result = $apiOcr->general(file_get_contents('general.jpg'), $option);
 ```
 
 **通用文字识别 请求参数详情**
@@ -142,7 +140,7 @@ $response = $client->general(file_get_contents('general.jpg'), $option);
 <tr><td>++char</td><td>是</td><td>string</td><td>单字符识别结果</td></tr>
 </table>
 
-# 银行卡文字识别
+# 银行卡识别
 
 银行卡文字识别需要接受银行卡正面带数字的清晰图片，能识别出对应的银行卡号。
 
@@ -160,38 +158,30 @@ const API_KEY = '你的 API Key';
 const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiOcr
-$client = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
+$apiOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
 
 // 调用银行卡识别接口
-$response = $client->bankcard(file_get_contents('bankCard.jpg'));
+$result = $apiOcr->bankcard(file_get_contents('bankcard.jpg'));
 ```
-**身份证文字识别 请求参数详情**
 
-| 参数               | 类型      | 描述                                       | 是否必须 |
-| :--------------- | :------ | :--------------------------------------- | :--- |
-| accuracy         | String  | 精准度，精度越高，速度越慢。default：auto               | 否    |
-| detect_direction | Boolean | 检测图像朝向(指输入图像是正常方向、逆时针旋转90/180/270度)，有效值：true、false，默认值: false。 | 否    |
-| id_card_side     | String  | front：身份证正面，back：身份证背面                   | 是    |
-| image            | String  | 图像数据，仅支持图像文件流                            | 是    |
+**银行卡识别 请求参数详情**
 
-**身份证文字识别 返回数据参数详情**
+| 参数    | 类型     | 描述            | 是否必须 |
+| :---- | :----- | :------------ | :--- |
+| image | String | 图像数据，仅支持图像文件流 | 是    |
 
-| 参数               | 类型     | 描述                                       |
-| :--------------- | :----- | :--------------------------------------- |
-| direction        | Int32  | 图像方向，当detect_direction=true时存在。-1:未定义，0:正向，1: 逆时针90度， 2:逆时针180度， 3:逆时针270度 |
-| log_id           | Unit64 | 唯一的log id，用于问题定位                         |
-| words_result     | Array  | 定位和识别结果数组，数组元素的key是身份证的主体字段（正面支持：住址、公民身份号码、出生、姓名、性别、民族，背面支持：签发日期、失效日期）。只返回识别出的字段。 |
-| words_result_num | Unit32 | 识别结果数，表示words_result的元素个数                |
-| \+location       | Array  | 位置数组（坐标0点为左上角）                           |
-| \+\+left         | Unit32 | 表示定位位置的长方形左上顶点的水平坐标                      |
-| \+\+top          | Unit32 | 表示定位位置的长方形左上顶点的垂直坐标                      |
-| \+\+width        | Unit32 | 表示定位位置的长方形的宽度                            |
-| \+\+height       | Unit32 | 表示定位位置的长方形的高度                            |
-| \+words          | String | 识别结果字符串                                  |
+**银行卡识别 返回数据参数详情**
 
-# 身份证文字识别
+| 参数                 | 类型     | 描述               |
+| :----------------- | :----- | :--------------- |
+| log_id             | Unit64 | 唯一的log id，用于问题定位 |
+| result             | Object | 定位和识别结果数组        |
+| \+bank_card_number | String | 银行卡识别结果          |
 
-身份证文字识别一次只能接受身份证正面或反面的清晰图片，能识别出证件上的文字。
+
+# 身份证识别
+
+身份证识别一次只能接受身份证正面或反面的清晰图片，能识别出证件上的文字。
 
 图片参数仅支持图片文件内容。
 
@@ -210,13 +200,13 @@ const API_KEY = '你的 API Key';
 const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiOcr
-$client = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
+$apiOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
 
 // 设置识别身份证正面参数
 $isFront = false;
 
 // 调用身份证识别接口
-$response = $client->idcard(file_get_contents('idcard.jpg'), $isFront);
+$result = $apiOcr->idcard(file_get_contents('idcard.jpg'), $isFront);
 ```
 传入图片时还想增加一些自定义参数配置：
 
@@ -230,7 +220,7 @@ const API_KEY = '你的 API Key';
 const SECRET_KEY = '你的 Secret Key';
 
 // 初始化ApiOcr
-$client = new AipOcr(APP_ID, ACCESS_KEY_ID, SECRET_ACCESS_KEY);
+$apiOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
 
 // 设置识别身份证正面参数
 $isFront = false;
@@ -239,23 +229,28 @@ $isFront = false;
 $options = array('detectDirection' => false, 'accuracy' => 'high');
 
 // 调用身份证识别接口
-$response = $client->idcard(file_get_contents('idcard.jpg'), $isFront, $options);
+$result = $apiOcr->idcard(file_get_contents('idcard.jpg'), $isFront, $options);
 ```
 
-**银行卡文字识别 请求参数详情**
+**身份证识别 请求参数详情**
 
-| 参数    | 类型     | 描述            | 是否必须 |
-| :---- | :----- | :------------ | :--- |
-| image | String | 图像数据，仅支持图像文件流 | 是    |
+| 参数               | 类型      | 描述                                       | 是否必须 |
+| :--------------- | :------ | :--------------------------------------- | :--- |
+| detect_direction | Boolean | 检测图像朝向(指输入图像是正常方向、逆时针旋转90/180/270度)，有效值：true、false，默认值: false。 | 否    |
+| id_card_side     | String  | front：身份证正面，back：身份证背面                   | 是    |
+| image            | String  | 图像数据，仅支持图像文件流                            | 是    |
 
-**银行卡文字识别 返回数据参数详情**
+**身份证识别 返回数据参数详情**
 
-| 参数                 | 类型     | 描述               |
-| :----------------- | :----- | :--------------- |
-| log_id             | Unit64 | 唯一的log id，用于问题定位 |
-| result             | Object | 定位和识别结果数组        |
-| \+bank_card_number | String | 银行卡识别结果          |
-
-
-
-
+| 参数               | 类型     | 描述                                       |
+| :--------------- | :----- | :--------------------------------------- |
+| direction        | Int32  | 图像方向，当detect_direction=true时存在。-1:未定义，0:正向，1: 逆时针90度， 2:逆时针180度， 3:逆时针270度 |
+| log_id           | Unit64 | 唯一的log id，用于问题定位                         |
+| words_result     | Array  | 定位和识别结果数组，数组元素的key是身份证的主体字段（正面支持：住址、公民身份号码、出生、姓名、性别、民族，背面支持：签发日期、失效日期）。只返回识别出的字段。 |
+| words_result_num | Unit32 | 识别结果数，表示words_result的元素个数                |
+| \+location       | Array  | 位置数组（坐标0点为左上角）                           |
+| \+\+left         | Unit32 | 表示定位位置的长方形左上顶点的水平坐标                      |
+| \+\+top          | Unit32 | 表示定位位置的长方形左上顶点的垂直坐标                      |
+| \+\+width        | Unit32 | 表示定位位置的长方形的宽度                            |
+| \+\+height       | Unit32 | 表示定位位置的长方形的高度                            |
+| \+words          | String | 识别结果字符串                                  |

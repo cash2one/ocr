@@ -1,10 +1,10 @@
-# PHP SDK文档
+#PHP SDK文档
 
 本文档主要介绍黄反识别服务。在使用本文档前，您需要先了解黄反识别服务。
 
-# 安装黄反识别PHP SDK包
+# 安装黄反识别 PHP SDK
 
-**黄反色情识别 PHP SDK目录结构**
+**黄反识别 PHP SDK目录结构**
 
     AipAntiPorn
            ├── AipAntiPorn.php                 //AntiPorn识别类
@@ -20,19 +20,19 @@
 
 步骤如下：
 
-1. 在[官方网站](/sdk)下载PHP SDK压缩工具包。
+1.在[官方网站](/sdk)下载PHP SDK压缩工具包。
 
-2. 将下载的`aip-antiporn-php-sdk-version.zip`解压后，复制AipAntiPorn.php以及lib/*到工程文件夹中。
+2.将下载的`aip-antiporn-php-sdk-version.zip`解压后，复制AipAntiPorn.php以及lib/*到工程文件夹中。
 
-3. 引入AipAntiPorn.php
+3.引入AipAntiPorn.php
 
 # 快速入门
 
-图片智能色情识别服务，依托百度业界领先的图像识别算法，基于大数据深度学习技术，提供一般色情识别和卡通色情识别，以及母婴类图片识别服务。
+黄反识别服务，依托百度业界领先的图像识别算法，基于大数据深度学习技术，提供图片一般色情、性感、正常三个类别的识别服务。
 
-## 初始化AipAntiPorn对象
+## 初始化一个AipAntiPorn对象
 
-用户可以参考如下代码新建一个AipAntiPorn对象：
+用户可以参考如下代码初始化一个AipAntiPorn对象：
 
 ```php
 // 引入AntiPorn SDK
@@ -57,7 +57,7 @@ $AipAntiPorn = new AipAntiPorn(APP_ID, API_KEY, SECRET_KEY);
 图片参数仅支持图片文件内容。
 
 ```php
-// 引入文字识别BFR SDK
+// 引入黄反识别 SDK
 require_once 'AipAntiPorn.php';
 
 // 定义常量
@@ -65,11 +65,11 @@ const APP_ID = '你的 App ID'
 const API_KEY = '你的 API Key';
 const SECRET_KEY = '你的 Secret Key';
 
-// 初始化ApiBFR
-$client = new AipAntiPorn(APP_ID, API_KEY, SECRET_KEY);
+// 初始化AipAntiPorn
+$aipAntiPorn = new AipAntiPorn(APP_ID, API_KEY, SECRET_KEY);
 
-// 调用通用文字识别接口
-$response = $client->antiporn(file_get_contents('antiporn.jpg'));
+// 调用黄反识别接口
+$result = $aipAntiPorn->detect(file_get_contents('antiporn.jpg'));
 ```
 
 **黄反识别 请求参数详情**
@@ -87,7 +87,4 @@ $response = $client->antiporn(file_get_contents('antiporn.jpg'));
 | result       | object[] | 结果数组，每项内容对应一个分类维度的结果        |
 | +class_name  | String   | 分类结果名称，示例：色情                |
 | +probability | double   | 分类结果置信度，示例：0.89471650123596 |
-
-
-
 

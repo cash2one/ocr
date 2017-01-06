@@ -2,7 +2,7 @@
 
 本文档主要介绍NLP Java SDK的安装和使用。在使用本文档前，您需要先了解自然语言处理（Natural Language Processing）的基础知识，并已经开通了服务。
 
-# 安装Java SDK
+# 安装NLP Java SDK
 
 **BFR Java SDK目录结构**
 
@@ -25,33 +25,39 @@
 
 1.在[官方网站](/sdk)下载Java SDK压缩工具包。
 
-2.将下载的`aip-java-sdk-version.zip`解压后，复制到工程文件夹中。
+2.将下载的`aip-nlp-java-sdk-version.zip`解压后，复制到工程文件夹中。
 
 3.在Eclipse右键“工程 -> Properties -> Java Build Path -> Add JARs”。
 
-4.添加SDK工具包`lib/api-java-sdk-version.jar`和第三方依赖工具包`third-party/*.jar`。
+4.添加SDK工具包`nlp-sdk.jar`和第三方依赖工具包`third-party/*.jar`。
 
-其中，`version`为版本号，添加完成后，用户就可以在工程中使用BFR Java SDK。
+其中，`version`为版本号，添加完成后，用户就可以在工程中使用NLP Java SDK。
 
 
 # 快速入门
 
-图片智能色情识别服务，依托百度业界领先的图像识别算法，基于大数据深度学习技术，提供一般色情识别和卡通色情识别，以及母婴类图片识别服务。
+1.初始化一个AipNlpClient。
 
-## 初始化一个AipAntiPorn对象
+AipNlpClient是与Natural Language Processing（NLP）交互的客户端，所有NLP操作都是通过AipNlpClient完成的。您可以参考**新建AipNlpClient**，完成初始化客户端的操作。
+
+# AipNlpClient
+
+## 新建AipNlpClient
+
+新建AipNlpClient是Natural Language Processing的Java客户端，为使用Natural Language Processing的开发人员提供了一系列的交互方法。
 
 用户可以参考如下代码新建一AipNlpClient：
 
 ```java
 public class Sample {
+
+    //设置APPID/AK/SK
+    public static final String APP_ID = "你的 App ID";
+    public static final String API_KEY = "你的 Api ID";
+    public static final String SECRET_KEY = "你的 Secret Key";
+    
     public static void main(String[] args) {
-
-        //设置APPID/AK/SK
-        String APP_ID = "你的 App ID";
-        String API_KEY = "你的 API Key";
-        String SECRET_KEY = "你的 Secret Key";
-
-        // 初始化一个BFRClient
+        // 初始化一个NLPClient
         AipNlp client = new AipNlp(APP_ID, API_KEY, SECRET_KEY);
     }
 }
@@ -60,7 +66,7 @@ public class Sample {
 
 **注：**如您以前是百度云的老用户，其中`API_KEY`对应百度云的“Access Key ID”，`SECRET_KEY`对应百度云的“Access Key Secret”。
 
-# 分词
+# 中文分词
 
 举例，要对字符串'你好百度'进行分词：
 
@@ -77,14 +83,14 @@ public void wordseg(AipNlp client) {
 }
 ```
 
-**分词 请求参数详情**
+**中文分词 请求参数详情**
 
 | 参数      | 类型     | 描述                                     | 是否必须 |
 | :------ | :----- | :------------------------------------- | :--- |
 | query   | String | 待分词的文本，目前输入编码统一为GBK                    | 是    |
 | lang_id | Int    | 默认为1，输入字符串的语言对应的id，简体中文设置为1（目前不支持其他语言） | 否    |
 
-**分词 返回数据参数详情**
+**中文分词 返回数据参数详情**
 
 | 参数             | 类型     | 描述                                       |
 | :------------- | :----- | :--------------------------------------- |
@@ -101,38 +107,8 @@ public void wordseg(AipNlp client) {
 | spbtermoffsets | Int[]  | 该参数为列表，元素个数为识别出来的短语个数，每个元素值表示对应短语是从第几个基本词开始的（基本词偏移） |
 | spbtermpos     | Int[]  | 参数值为列表，元素值为对应切分出来的短语在 subphrbuf的字节偏移以及长度，整数的低24bit为偏移，高8bit为长度 |
 
-# 词性标注
 
-举例，要对字符串'你好百度'进行词性标注：
-
-```java
-public void wordseg(AipNlp client) {
-
-    // 使用词性标注接口
-    JSONObject response = client.wordpos("百度是一个搜索公司");
-    System.out.println(response.toString());
-
-}
-```
-
-**词性标注 请求参数详情**
-
-| 参数    | 类型     | 描述                     | 是否必须 |
-| :---- | :----- | :--------------------- | :--- |
-| query | String | 必须，待分词的文本，目前输入编码统一为GBK | 是    |
-
-**词性标注 返回数据参数详情**
-
-| 参数          | 类型       | 描述             |
-| :---------- | :------- | :------------- |
-| result_out  | object[] | 人脸属性对象的集合      |
-| +word       | String   | 词汇的字面          |
-| +offset     | Int      | 偏移量，以基本粒度词汇为单位 |
-| +length     | Int      | 长度，以基本粒度词汇为单位  |
-| +type       | String   | 词性             |
-| +confidence | double   | 置信度分值，0~1      |
-
-# 词向量
+# 中文词向量表示
 
 举例，传入一个词计算词的的词向量，或者传入两个词计算两者相似度：
 
@@ -149,14 +125,14 @@ public void wordembedding(AipNlp client) {
 }
 ```
 
-**词向量 请求参数详情**
+**中文词向量表示 请求参数详情**
 
-| 参数     | 类型     | 描述                    | 是否必须 |
-| :----- | :----- | :-------------------- | :--- |
-| query1 | String | 输入的第一个词，目前输入编码统一为GBK; | 是    |
-| query2 | String | 输入的第二个词，目前输入编码统一为GBK; | 是    |
+| 参数     | 类型     | 描述                                       | 是否必须 |
+| :----- | :----- | :--------------------------------------- | :--- |
+| query1 | String | 输入的第一个词                                  | 是    |
+| query2 | String | 输入的第二个词，若不输入，则输出结果为query1的向量表示，若输入，则输出为两个词的相似度 | 否    |
 
-**词向量 返回数据参数详情**
+**中文词向量表示 返回数据参数详情**
 
 | 参数      | 类型     | 描述        |
 | :------ | :----- | :-------- |
@@ -166,7 +142,6 @@ public void wordembedding(AipNlp client) {
 | +vec    | object | 词向量结果     |
 | +sim    | object | 相似度对象     |
 | ++sim   | double | 相似度       |
-
 
 # 中文DNN语言模型
 
@@ -181,6 +156,7 @@ public void dnnlmCn(AipNlp client) {
 
 }
 ```
+
 **中文DNN语言模型 请求参数详情**
 
 | 参数       | 类型     | 描述          | 是否必须 |
@@ -214,10 +190,10 @@ public void simnet(AipNlp client) {
 
 **短文本相似度 请求参数详情**
 
-| 参数     | 类型     | 描述                    | 是否必须 |
-| :----- | :----- | :-------------------- | :--- |
-| query1 | String | 输入的第一个词，目前输入编码统一为GBK; | 是    |
-| query2 | String | 输入的第二个词，目前输入编码统一为GBK; | 是    |
+| 参数     | 类型     | 描述       | 是否必须 |
+| :----- | :----- | :------- | :--- |
+| query1 | String | 输入的第一个词; | 是    |
+| query2 | String | 输入的第二个词; | 是    |
 
 **短文本相似度 返回数据参数详情**
 
@@ -228,21 +204,6 @@ public void simnet(AipNlp client) {
 | +type       | Int    | 默认为0        |
 | +error      | Int    | error code  |
 | +error-node | String | error对应文字说明 |
-
-**错误码说明**  
-
-| Code | Message            | 返回说明      |
-| ---- | ------------------ | --------- |
-| 0    | NO_ERROR           | 正确返回      |
-| 1    | BEYOND_SLOT_LENGTH | 输入长度过长    |
-| 2    | OOV_ERROR          | 输入文本不在词表中 |
-| 3    | LEGO_LIB_RET_ERROR | 内部库错误     |
-| 4    | OTHER_SERVER_ERROR | 其它服务错误    |
-| 5    | INPUT_HAS_EMPTY    | 输入为空      |
-| 6    | INPUT_FORMAT_ERROR | 输入格式错误    |
-| 7    | OTHER_CLIENT_ERROR | 客服端错误     |
-
-
 
 # 评论观点抽取
 
@@ -293,4 +254,6 @@ public void NLPCommentTag(AipNlp client) {
 | +raw_adj_begin_pos  | Int      | 词向量结果                 |
 | +degree_adv         | String   | 原始副词                  |
 | +degree_adv_pos     | Int      | 词向量结果                 |
+
+
 
