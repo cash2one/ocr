@@ -521,6 +521,64 @@
                         </div>
                     </div>
                 </div>
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-bs-package"></i>
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/offline_female.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">离线女声数据包</div>
+                            <div class="sdk-description">女声语音模型数据资源文件</div>
+                            <div class="sdk-bottom-info">
+                                <div class="sdk-version"></div>
+                                <div class="sdk-update-date">发布时间: 2015-07-16</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-bs-package"></i>
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/offline_male.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">离线男声数据包</div>
+                            <div class="sdk-description">男声语音模型数据资源文件</div>
+                            <div class="sdk-bottom-info">
+                                <div class="sdk-version"></div>
+                                <div class="sdk-update-date">发布时间: 2015-07-16</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-bs-package"></i>
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/offline_femal+male.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">离线女生+男生数据包</div>
+                            <div class="sdk-description">女生+男生语音模型数据资源文件</div>
+                            <div class="sdk-bottom-info">
+                                <div class="sdk-version"></div>
+                                <div class="sdk-update-date">发布时间: 2015-07-16</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="sdk-category">
