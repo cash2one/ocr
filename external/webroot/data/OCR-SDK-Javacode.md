@@ -26,16 +26,20 @@
 c
 3.在Eclipse右键“工程 -> Properties -> Java Build Path -> Add JARs”。
 
-4.添加SDK工具包`lib/aip-java-sdk-version.jar`和第三方依赖工具包`third-party/*.jar`。
+4.添加SDK工具包`ocr-sdk.jar`和第三方依赖工具包`third-party/*.jar`。
 
 其中，`version`为版本号，添加完成后，用户就可以在工程中使用OCR Java SDK。
 
 
 # 快速入门
 
-AipOcrClient是与Optical Character Recognition(OCR)交互的客户端，所有OCR操作都是通过AipOcrClient完成的。
+1.初始化一个AipOcrClient。
 
-## 初始化AipOcrClient
+AipOcrClient是与Optical Character Recognition(OCR)交互的客户端，所有OCR操作都是通过AipOcrClient完成的。您可以参考**新建AipOcrClient**，完成初始化客户端的操作。
+
+# AipOcrClient
+
+## 新建AipOcrClient
 
 OcrClient是Optical Character Recognition的Java客户端，为使用Optical Character Recognition的开发人员提供了一系列的交互方法。
 
@@ -43,15 +47,29 @@ OcrClient是Optical Character Recognition的Java客户端，为使用Optical Cha
 
 ```java
 public class Sample {
+    //设置APPID/AK/SK
+    public static final String APP_ID = "你的 App ID";
+    public static final String API_KEY = "你的 Api ID";
+    public static final String SECRET_KEY = "你的 Secret Key";
+
     public static void main(String[] args) {
-
-        //设置APPID/AK/SK
-        String APP_ID = "你的 App ID";
-        String API_KEY = "你的 API Key";
-        String SECRET_KEY = "你的 Secret Key";
-
         // 初始化一个OcrClient
         AipOcr client = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
+
+        // 调用身份证识别接口
+        String idFilePath = "test.jpg";
+        JSONObject idcardRes = client.idcard(idFilePath, true);
+        System.out.println(idcardRes.toString(2));
+
+        // 调用银行卡识别接口
+        String bankFilePath = "test_bank.jpg";
+        JSONObject bankRes = client.bankcard(bankFilePath);
+        System.out.println(bankRes.toString(2));
+
+        // 调用通用识别接口
+        String genFilePath = "test_general.jpg";
+        JSONObject genRes = client.general(genFilePath, new HashMap<String, String>());
+        System.out.println(genRes.toString(2));
     }
 }
 ```
@@ -59,12 +77,11 @@ public class Sample {
 
 **注：**如您以前是百度云的老用户，其中`API_KEY`对应百度云的“Access Key ID”，`SECRET_KEY`对应百度云的“Access Key Secret”。
 
-
 # 通用文字识别
 
 通用文字识别可以接受任意图片，并识别出图片中的文字以及全部文字串。
 
-图片接受类型支持本地图片路径字符串，图片文件二进制数组。
+图片接受参数类型：支持本地图片路径字符串，图片文件二进制数组。
 
 举例，要对一张图片进行文字识别，具体的文字的内容和信息在返回的words_result字段中：
 
@@ -143,7 +160,7 @@ public void generalRecognition(AipOcr client) {
 <tr><td>++char</td><td>是</td><td>string</td><td>单字符识别结果</td></tr>
 </table>
 
-# 银行卡文字识别
+# 银行卡识别
 
 银行卡文字识别需要接受银行卡正面带数字的清晰图片，能识别出对应的银行卡号。
 
@@ -165,13 +182,13 @@ public void bankcardRecognition(AipOcr client) {
 }
 ```
 
-**银行卡文字识别 请求参数详情**
+**银行卡识别 请求参数详情**
 
 | 参数    | 类型     | 描述                        | 是否必须 |
 | :---- | :----- | :------------------------ | :--- |
 | image | String | 图像数据，支持本地图像文件路径，图像文件二进制数组 | 是    |
 
-**银行卡文字识别 返回数据参数详情**
+**银行卡识别 返回数据参数详情**
 
 | 参数                 | 类型     | 描述               |
 | :----------------- | :----- | :--------------- |
@@ -179,11 +196,11 @@ public void bankcardRecognition(AipOcr client) {
 | result             | Object | 定位和识别结果数组        |
 | \+bank_card_number | String | 银行卡识别结果          |
 
-# 身份证文字识别
+# 身份证识别
 
-身份证文字识别一次只能接受身份证正面或反面的清晰图片，能识别出证件上的文字。
+身份证识别一次只能接受身份证正面或反面的清晰图片，能识别出证件上的文字。
 
-图片接受类型支持本地图片路径字符串，图片文件二进制数组。
+图片接受参数类型：支持本地图片路径字符串，图片文件二进制数组。
 
 举例，要对一张身份证进行文字识别，可以仅传入图片信息和注明正面/反面：
 返回的words_result记录了信息，
@@ -194,15 +211,16 @@ public void bankcardRecognition(AipOcr client) {
 public void idcardRecognition(AipOcr client) {
     // 设置识别身份证正面参数
     boolean isFront = true;
+    HashMap<String, String> options = new HashMap<String, String>();
 
     // 参数为本地图片路径
-    String imagePath = "bankcard.jpg";
-    JSONObject response = client.bankcard(imagePath, side);
+    String imagePath = "idcard.jpg";
+    JSONObject response = client.idcard(imagePath, isFront, options);
     System.out.println(response.toString());
 
     // 参数为本地图片文件二进制数组
     byte[] file = readImageFile(imagePath);
-    JSONObject response = client.bankcard(file, side);
+    JSONObject response = client.idcard(file, isFront, options);
     System.out.println(response.toString());
 }
 ```
@@ -218,29 +236,26 @@ public void idcardRecognition(AipOcr client) {
     options.put("detect_direction", "false");
 
     // 参数为本地图片路径
-    String imagePath = "bankcard.jpg";
-    JSONObject response = client.bankcard(imagePath, side, options);
+    String imagePath = "idcard.jpg";
+    JSONObject response = client.idcard(imagePath, side, options);
     System.out.println(response.toString());
 
     // 参数为本地图片文件二进制数组
     byte[] file = readImageFile(imagePath);
-    JSONObject response = client.bankcard(file, side, options);
+    JSONObject response = client.idcard(file, side, options);
     System.out.println(response.toString());
 }
 ```
 
-**身份证文字识别 请求参数详情**
+**身份证识别 请求参数详情**
 
 | 参数               | 类型      | 描述                                       | 是否必须 |
 | :--------------- | :------ | :--------------------------------------- | :--- |
-| accuracy         | String  | 精准度，精度越高，速度越慢。default：auto               | 否    |
 | detect_direction | Boolean | 检测图像朝向(指输入图像是正常方向、逆时针旋转90/180/270度)，有效值：true、false，默认值: false。 | 否    |
 | id_card_side     | String  | front：身份证正面，back：身份证背面                   | 是    |
 | image            | String  | 图像数据，支持本地图像文件路径，图像文件二进制数组                | 是    |
-|classify_dimension|String|分类维度（根据OCR结果进行分类），逗号分隔，当前只支持lottery。
-lottery：彩票分类，设置detect_direction有助于提升精度 |否|
 
-**身份证文字识别 返回数据参数详情**
+**身份证识别 返回数据参数详情**
 
 | 参数               | 类型     | 描述                                       |
 | :--------------- | :----- | :--------------------------------------- |
@@ -254,4 +269,6 @@ lottery：彩票分类，设置detect_direction有助于提升精度 |否|
 | \+\+width        | Unit32 | 表示定位位置的长方形的宽度                            |
 | \+\+height       | Unit32 | 表示定位位置的长方形的高度                            |
 | \+words          | String | 识别结果字符串                                  |
+
+
 
