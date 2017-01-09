@@ -52,7 +52,7 @@ class NewsBroadcast extends React.Component {
         var newsContentHtml = this.state.content.length
             ? this.state.content.map(function (news) {
                 return <li key={"news-broadcast-content-" + news.id}>
-                    <a href={"/news?action=detail&id=" + news.id} target="_blank" title={news.title}>
+                    <a href={"/internal/news?action=detail&id=" + news.id} target="_blank" title={news.title}>
                         {news.title.length > 21 ? (news.title.slice(0, 18) + '...') : news.title }
                         [{self.convertTimeFormat(news.time)}]
                     </a>
@@ -61,7 +61,7 @@ class NewsBroadcast extends React.Component {
             : <li><a href="#">暂无新闻</a></li>;
         var moreNews = this.state.content.length
             ? <div className="news-more">
-                <a href="/news" target="_self">更多 ></a>
+                <a href="/internal/news" target="_self">更多 ></a>
             </div>
             : null;
 
