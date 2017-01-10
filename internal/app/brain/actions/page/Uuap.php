@@ -15,6 +15,7 @@
 class Action_Uuap extends Ap_Action_Abstract {
 
     public function execute() {
+        echo 'xxxxx';
         echo Bd_PhpCas::isAuthenticated();
     }
 }
