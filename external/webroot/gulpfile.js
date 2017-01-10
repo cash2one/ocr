@@ -96,6 +96,46 @@ gulp.task('less', function () {
         // .pipe(nano())
         .pipe(gulp.dest('./dist/css'));
 });
+gulp.task('html', function () {
+    gutil.log('Task Html: started!');
+
+    glob('./src/view/**/!(*template).html', function (err, files) {
+        if (err) {
+            gutil.log(err);
+        }
+        var tasks = files.map(function (entry) {
+            var data = fs.readFileSync(entry, 'utf-8');
+            var basename = nodePath.basename(entry, '.html');
+            var relativePath = nodePath.relative('src/view', entry);
+            var dirname = nodePath.dirname(relativePath);
+            dirname = dirname === '.' ? '' : dirname;
+
+            var cssPath = nodePath.join('/ai_dist/css/', dirname, basename + '.css').replace(/\\/g, '/');
+            var jsPath = nodePath.join('/ai_dist/js/', dirname, basename + '.bundle.js').replace(/\\/g, '/');
+            return gulp.src('./src/view/common/template.html')
+                .pipe(replace(/\{\{body}}/g, data))
+                .pipe(replace(/<\/head>/g, '<link rel="stylesheet" href="' + cssPath + '"></head>'))
+                .pipe(replace(/<\/body>/g,
+                    jsExcludes.indexOf(jsPath) === -1
+                        ? ('<script src="' + jsPath + '"></script></body>')
+                        : '</body>'
+                    )
+                )
+                .pipe(
+                    rename({
+                        dirname: dirname,
+                        basename: basename,
+                        extname: '.tpl'
+                    })
+                )
+                .pipe(gulp.dest('../template/brain/platform'));
+        });
+
+        eventStream.merge(tasks).on('end', function () {
+            gutil.log('Task Html: finished!');
+        });
+    });
+});
 
 gulp.task('jsCompile_watch', function () {
     return watch('./src/**/*.js', function () {
@@ -203,6 +243,6 @@ gulp.task('apply-prod-environment', function () {
     process.env.NODE_ENV = 'production';
 });
 
-gulp.task('default', ['apply-prod-environment', 'jsCompile', 'less']);
+gulp.task('default', ['apply-prod-environment', 'jsCompile', 'less', 'html']);
 
 gulp.task('watch', ['jsCompile_watch', 'less_watch', 'html_watch']);

@@ -13,10 +13,8 @@
     <![endif]-->
     <link rel="shortcut icon" href="/ai_images/favicon-32.ico">
     <link rel="stylesheet" href="/ai_dist/css/base.css">
-
     <!--[if IE 9]>
     <link rel="stylesheet" href="/ai_dist/css/ie9.css">
-    <script src="/ai_dist/js/lib/input-placeholder-polyfill.min.js"></script>
     <![endif]-->
 <link rel="stylesheet" href="/ai_dist/css/technology/face-compare.css"></head>
 <body class="ai-platform">
