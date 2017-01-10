@@ -22,6 +22,7 @@ class Action_News extends Ap_Action_Abstract {
      * @return void
      */
     public function execute() {
+        !Brain_User::checkUuapLogin() && exit(0);
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
         $strAction = $arrInput['action'];
