@@ -1,5 +1,5 @@
 #/bin/sh
-OUTPUT_DIR=output/internal
+OUTPUT_DIR=output/
 mkdir -p ${OUTPUT_DIR}
 
 #sh invoke_jenkins_job.sh
