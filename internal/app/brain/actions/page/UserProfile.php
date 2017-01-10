@@ -15,6 +15,7 @@
 class Action_UserProfile extends Ap_Action_Abstract {
 
     public function execute() {
+        !Brain_User::checkUuapLogin() && exit(0);
         Brain_Output::htmlOutput(
             $arrPageInfo, 
             'views/userProfile.html'
