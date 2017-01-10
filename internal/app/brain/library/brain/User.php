@@ -45,8 +45,17 @@ class Brain_User {
         //WSDL文件的地址
         //$wsdluri = "http://itebeta.baidu.com:8102/ws/UserRemoteService?wsdl";
         //$appKey = "UICWSTestKey";
-        $wsdluri = "http://uuap.baidu.com:8086/ws/UserRemoteService?wsdl";
-        $appKey = "uuapclient-7-dtS4xXLQbP2kqietxAXw";
+        //$wsdluri = "http://uuap.baidu.com:8086/ws/UserRemoteService?wsdl";
+        //$appKey = "uuapclient-7-dtS4xXLQbP2kqietxAXw";
+        $confDir = 'ral/services/uuap/';
+        $confPath = 'CamelConfig/ServiceConfig/Local/Service/';
+        $serviceConf = Bd_Conf::getConf($confDir . $confPath);
+
+        $wsdluri = 'http://';
+        $wsdluri .= $serviceConf[1]['Server'][0]["Hostname"].':'.$serviceConf[1]["DefaultPort"];
+        $wsdluri .= "/ws/UserRemoteService?wsdl";
+        $appKey = $serviceConf[1]["AppKey"];
+
 
         $soapclient = new SoapClient($wsdluri);
 
