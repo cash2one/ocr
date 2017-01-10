@@ -1,10 +1,10 @@
 #/bin/sh
-OUTPUT_DIR=output/external
+OUTPUT_DIR=output/internal
 mkdir -p ${OUTPUT_DIR}
 
-sh invoke_jenkins_job.sh
+#sh invoke_jenkins_job.sh
 
-BUILD_SUB_DIRS="app conf data template webroot scripts webserver"
+BUILD_SUB_DIRS="app conf data template webroot webserver"
 
 cp -rf ${BUILD_SUB_DIRS} ${OUTPUT_DIR}
 #tar -cf ${OUTPUT_DIR}.tar ${OUTPUT_DIR}/*
