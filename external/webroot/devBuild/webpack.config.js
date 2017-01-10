@@ -10,6 +10,7 @@ const path = require('path');
 // 第三方模块
 const glob = require('glob');
 const webpack = require('webpack');
+const moment = require('moment');
 
 // webpack plugin
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -19,6 +20,14 @@ const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 // 构建配置
 const buildConfig = require('./config.json');
 /* eslint-enable */
+
+const now = moment();
+buildConfig.currentVersion = {
+    timeStamp: now.unix(),
+    date: now.format('YYYY-MM-DD')
+};
+// 时间戳路径
+const versionPath = buildConfig.currentVersion.timeStamp;
 
 const entries = glob.sync(
     '**/*.js',
@@ -71,6 +80,7 @@ module.exports = {
     entry: webpackEntries,
     resolve: {
         root: [
+            path.resolve(__dirname, '..'),
             path.resolve(__dirname, '..', 'node_modules'),
             path.resolve(__dirname, '..', 'bower_components')
         ],
@@ -79,6 +89,7 @@ module.exports = {
             src: path.resolve(__dirname, '..', 'src'),
             // 模板路径
             view: path.resolve(__dirname, '..', 'src', 'view'),
+            // less快捷路径
             less: path.resolve(__dirname, '..', 'src', 'less'),
             // for 老古董ejs
             ejs: 'ejs/ejs.js'
@@ -89,7 +100,7 @@ module.exports = {
         // 放入已包含时间戳的路径
         path: path.join(__dirname, '..', 'asset'),
         // TODO 添加时间戳路径,附带回滚机制
-        filename: 'js/[name].js'
+        filename: `${versionPath}/js/[name].js`
     },
     module: {
         loaders: [
@@ -111,32 +122,36 @@ module.exports = {
                 loader: 'html-loader',
                 query: {
                     // 不尝试修改html中图片路径，目前路径都是对的
-                    attrs: false,
                     minimize: false
                 }
             },
             {
                 // TODO，小icon分单独文件夹管理，base64打包如css，省去拼接雪碧图
-                test: /\.(jpg|png)$/,
+                test: /\.(jpe?g|png|gif|mp4)$/i,
                 loader: 'file-loader',
                 query: {
-                    name: '[path][name].[ext]',
-                    publicPath: '/ai_dist',
-                    outputPath: '..'
+                    name: `${versionPath}/[path][name].[ext]`,
+                    publicPath: '/ai_dist/'
                 }
             }
         ]
     },
     plugins: [
+        // 通过插件注入环境变量，防止不同操作系统间命令行传入的差异性
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: '"production"'
+            }
+        }),
         // 提取通用部分
         new CommonsChunkPlugin({
             name: ['common.bundle'],
-            filename: 'js/[name].js',
+            filename: `${versionPath}/js/[name].js`,
             // TODO 暂时不尝试给base.bundle.js抽离通用代码,
             chunks: normalModules
         }),
         ...htmlWebpackPluginArr,
         // css文件单独打包
-        new ExtractTextPlugin('css/[name].css')
+        new ExtractTextPlugin(`${versionPath}/css/[name].css`)
     ]
 };
