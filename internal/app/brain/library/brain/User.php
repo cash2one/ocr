@@ -36,6 +36,7 @@ class Brain_User {
      * getUuapByHi 根据hi获取用户信息
      * 
      * @static
+     * @param mixed $type 
      * @access public
      * @return void
      */
