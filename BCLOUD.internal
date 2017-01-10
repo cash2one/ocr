@@ -1,0 +1,1 @@
+BUILD_SUBMITTER -x -m baidu/ai/platform/internal -c "cd baidu/ai/platform/internal && sh build.sh" -u ./
