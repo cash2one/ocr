@@ -182,7 +182,7 @@
   box-sizing: border-box;
   background-color: #f0f7fc;
   background-size: 1600px 400px;
-  background-image: url('../../../../ai_images/support/news/news-list/banner.jpg');
+  background-image: url('/ai_images/support/news/news-list/banner.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
@@ -625,7 +625,7 @@
     color: #666666;
 }
 .news-banner {
-  background: #000 url('../../../../ai_images/support/news/news-list/banner.jpg') no-repeat center;
+  background: #000 url('/ai_images/support/news/news-list/banner.jpg') no-repeat center;
 }
 .news-banner h1 {
   color: #fff;

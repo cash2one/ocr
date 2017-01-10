@@ -151,7 +151,7 @@
 .video-banner {
   height: 200px;
   color: #fff;
-  background: #0e1b56 url(../../../ai_images/support/video/video-banner.png) center;
+  background: #0e1b56 url(/ai_images/support/video/video-banner.png) center;
 }
 .video-banner-title,
 .video-banner-intro {
@@ -190,43 +190,43 @@
   height: 214px;
 }
 .video-poster.voice {
-  background: url("../../../ai_images/support/video/voice.jpg") no-repeat bottom center;
+  background: url("/ai_images/support/video/voice.jpg") no-repeat bottom center;
   background-size: cover;
 }
 .video-poster.orc-info {
-  background: url("../../../ai_images/support/video/orc-info.jpg") no-repeat bottom center;
+  background: url("/ai_images/support/video/orc-info.jpg") no-repeat bottom center;
   background-size: cover;
 }
 .video-poster.orc-api {
-  background: url("../../../ai_images/support/video/orc-api.jpg") no-repeat bottom center;
+  background: url("/ai_images/support/video/orc-api.jpg") no-repeat bottom center;
   background-size: cover;
 }
 .video-poster.face {
-  background: url("../../../ai_images/support/video/face.jpg") no-repeat bottom center;
+  background: url("/ai_images/support/video/face.jpg") no-repeat bottom center;
   background-size: cover;
 }
 .video-poster.translation {
-  background: url("../../../ai_images/support/video/translation.jpg") no-repeat bottom center;
+  background: url("/ai_images/support/video/translation.jpg") no-repeat bottom center;
   background-size: cover;
 }
 .video-poster.translation-api {
-  background: url("../../../ai_images/support/video/translation-api.jpg") no-repeat bottom center;
+  background: url("/ai_images/support/video/translation-api.jpg") no-repeat bottom center;
   background-size: cover;
 }
 .video-poster.translation-function {
-  background: url("../../../ai_images/support/video/translation-function.jpg") no-repeat bottom center;
+  background: url("/ai_images/support/video/translation-function.jpg") no-repeat bottom center;
   background-size: cover;
 }
 .video-poster.translation-info {
-  background: url("../../../ai_images/support/video/translation-info.jpg") no-repeat bottom center;
+  background: url("/ai_images/support/video/translation-info.jpg") no-repeat bottom center;
   background-size: cover;
 }
 .video-poster.yellow-info {
-  background: url("../../../ai_images/support/video/yellow-info.jpg") no-repeat bottom center;
+  background: url("/ai_images/support/video/yellow-info.jpg") no-repeat bottom center;
   background-size: cover;
 }
 .video-poster.yellow-api {
-  background: url("../../../ai_images/support/video/yellow-api.jpg") no-repeat bottom center;
+  background: url("/ai_images/support/video/yellow-api.jpg") no-repeat bottom center;
   background-size: cover;
 }
 .video-intro-container {

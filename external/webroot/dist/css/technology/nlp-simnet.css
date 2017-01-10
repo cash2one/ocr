@@ -182,7 +182,7 @@
   box-sizing: border-box;
   background-color: #f0f7fc;
   background-size: 1600px 400px;
-  background-image: url('../../../ai_images/technology/nlp-simnet/banner.png');
+  background-image: url('/ai_images/technology/nlp-simnet/banner.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
@@ -208,7 +208,7 @@
 }
 .tech-section.tech-intro {
   height: 400px;
-  background-image: url('../../../ai_images/technology/nlp-simnet/intro-bg.png');
+  background-image: url('/ai_images/technology/nlp-simnet/intro-bg.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
@@ -545,7 +545,7 @@
   left: -37px;
   top: -12px;
   border: 2px dashed #47d301;
-  background-image: url('../../../ai_images/technology/nlp-simnet/demo-icons.png');
+  background-image: url('/ai_images/technology/nlp-simnet/demo-icons.png');
   background-repeat: no-repeat;
   background-position: 770px 15px;
   background-position-x: 770px;
@@ -571,7 +571,7 @@
   width: 100px;
   opacity: 0;
   background-size: 57px 55px;
-  background-image: url('../../../ai_images/technology/nlp-simnet/demo-icons.png');
+  background-image: url('/ai_images/technology/nlp-simnet/demo-icons.png');
   background-repeat: no-repeat;
   background-position: center -17px;
   background-position-x: center;
@@ -651,7 +651,7 @@
   width: 20px;
   height: 20px;
   float: left;
-  background-image: url('../../../ai_images/technology/nlp-simnet/demo-icons.png');
+  background-image: url('/ai_images/technology/nlp-simnet/demo-icons.png');
   background-repeat: no-repeat;
   background-position: top right;
   background-position-x: top;
@@ -739,21 +739,21 @@
   background-size: 260px 135px;
 }
 .tech-section.tech-feature .feature-item:nth-child(1) .feature-icon {
-  background-image: url('../../../ai_images/technology/nlp-simnet/icons.png');
+  background-image: url('/ai_images/technology/nlp-simnet/icons.png');
   background-repeat: no-repeat;
   background-position: -5px -5px;
   background-position-x: -5px;
   background-position-y: -5px;
 }
 .tech-section.tech-feature .feature-item:nth-child(2) .feature-icon {
-  background-image: url('../../../ai_images/technology/nlp-simnet/icons.png');
+  background-image: url('/ai_images/technology/nlp-simnet/icons.png');
   background-repeat: no-repeat;
   background-position: -90px -5px;
   background-position-x: -90px;
   background-position-y: -5px;
 }
 .tech-section.tech-feature .feature-item:nth-child(3) .feature-icon {
-  background-image: url('../../../ai_images/technology/nlp-simnet/icons.png');
+  background-image: url('/ai_images/technology/nlp-simnet/icons.png');
   background-repeat: no-repeat;
   background-position: -175px -5px;
   background-position-x: -175px;
@@ -766,28 +766,28 @@
   background-size: 260px 135px;
 }
 .tech-section.tech-scene .scene-item:nth-child(1) .scene-icon {
-  background-image: url('../../../ai_images/technology/nlp-simnet/icons.png');
+  background-image: url('/ai_images/technology/nlp-simnet/icons.png');
   background-repeat: no-repeat;
   background-position: -5px -90px;
   background-position-x: -5px;
   background-position-y: -90px;
 }
 .tech-section.tech-scene .scene-item:nth-child(2) .scene-icon {
-  background-image: url('../../../ai_images/technology/nlp-simnet/icons.png');
+  background-image: url('/ai_images/technology/nlp-simnet/icons.png');
   background-repeat: no-repeat;
   background-position: -50px -90px;
   background-position-x: -50px;
   background-position-y: -90px;
 }
 .tech-section.tech-scene .scene-item:nth-child(3) .scene-icon {
-  background-image: url('../../../ai_images/technology/nlp-simnet/icons.png');
+  background-image: url('/ai_images/technology/nlp-simnet/icons.png');
   background-repeat: no-repeat;
   background-position: -95px -90px;
   background-position-x: -95px;
   background-position-y: -90px;
 }
 .tech-section.tech-case .case-item:nth-child(1) {
-  background-image: url('../../../ai_images/technology/nlp-simnet/case-2.png');
+  background-image: url('/ai_images/technology/nlp-simnet/case-2.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
