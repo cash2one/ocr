@@ -11,7 +11,7 @@ const path = require('path');
 const glob = require('glob');
 const webpack = require('webpack');
 
-// webpack plgin
+// webpack plugin
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
@@ -33,7 +33,7 @@ const webpackEntries = {};
 // 一个文件一个html页面
 const htmlWebpackPluginArr = [];
 // 需要抽取通用代码普通模块
-const nomalModules = [];
+const normalModules = [];
 entries.forEach(entry => {
     const {dir, name} = path.parse(entry);
     const resourcePath = path.join(dir, name);
@@ -57,7 +57,8 @@ entries.forEach(entry => {
         })
     );
 
-    nomalModules.push(resourcePath);
+    // 填充需要提取通用代码的模块
+    normalModules.push(resourcePath);
 });
 
 // 目前想到的只有jQuery是通用的，要单独打包的
@@ -78,6 +79,7 @@ module.exports = {
             src: path.resolve(__dirname, '..', 'src'),
             // 模板路径
             view: path.resolve(__dirname, '..', 'src', 'view'),
+            less: path.resolve(__dirname, '..', 'src', 'less'),
             // for 老古董ejs
             ejs: 'ejs/ejs.js'
         }
@@ -98,15 +100,29 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader', 'less-loader')
+                loader: ExtractTextPlugin.extract(
+                    'style-loader',
+                    'css-loader!less-loader'
+                )
             },
             {
                 // 模板拼接用
                 test: /\.html$/,
                 loader: 'html-loader',
                 query: {
+                    // 不尝试修改html中图片路径，目前路径都是对的
                     attrs: false,
                     minimize: false
+                }
+            },
+            {
+                // TODO，小icon分单独文件夹管理，base64打包如css，省去拼接雪碧图
+                test: /\.(jpg|png)$/,
+                loader: 'file-loader',
+                query: {
+                    name: '[path][name].[ext]',
+                    publicPath: '/ai_dist',
+                    outputPath: '..'
                 }
             }
         ]
@@ -117,7 +133,7 @@ module.exports = {
             name: ['common.bundle'],
             filename: 'js/[name].js',
             // TODO 暂时不尝试给base.bundle.js抽离通用代码,
-            chunks: nomalModules
+            chunks: normalModules
         }),
         ...htmlWebpackPluginArr,
         // css文件单独打包
