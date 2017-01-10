@@ -37,6 +37,8 @@ const entries = glob.sync(
     }
 );
 
+const extractLESS = new ExtractTextPlugin(`${versionPath}/css/[name].css`);
+
 // 生成符合webpack规则的entries
 const webpackEntries = {};
 // 一个文件一个html页面
@@ -73,6 +75,7 @@ entries.forEach(entry => {
 // 目前想到的只有jQuery是通用的，要单独打包的
 webpackEntries['common.bundle'] = ['jquery'];
 webpackEntries['base.bundle'] = 'src/entry/base';
+webpackEntries['base.style'] = ['src/less/base.less'];
 
 module.exports = {
     // 注意基准路径是webroot
@@ -80,7 +83,6 @@ module.exports = {
     entry: webpackEntries,
     resolve: {
         root: [
-            path.resolve(__dirname, '..'),
             path.resolve(__dirname, '..', 'node_modules'),
             path.resolve(__dirname, '..', 'bower_components')
         ],
@@ -111,18 +113,20 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                loader: ExtractTextPlugin.extract(
+                loader: extractLESS.extract(
                     'style-loader',
                     'css-loader!less-loader'
                 )
             },
             {
-                // 模板拼接用
-                test: /\.html$/,
+                // 模板拼接，通用资源替换
+                test: /\.(html|ejs)$/,
                 loader: 'html-loader',
                 query: {
                     // 不尝试修改html中图片路径，目前路径都是对的
-                    minimize: false
+                    minimize: false,
+                    // 编译通用Less,修改图片、视频缓存路径
+                    attrs: ['img:src', 'link:href', 'video:src']
                 }
             },
             {
@@ -132,6 +136,15 @@ module.exports = {
                 query: {
                     name: `${versionPath}/[path][name].[ext]`,
                     publicPath: '/ai_dist/'
+                }
+            },
+            {
+                // 不需要缓存的静态资源
+                test: /\.ico$/,
+                loader: 'file-loader',
+                query: {
+                    name: '[path][name].[ext]',
+                    publicPath: '/ai_dist'
                 }
             }
         ]
@@ -152,6 +165,6 @@ module.exports = {
         }),
         ...htmlWebpackPluginArr,
         // css文件单独打包
-        new ExtractTextPlugin(`${versionPath}/css/[name].css`)
+        extractLESS,
     ]
 };
