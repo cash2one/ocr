@@ -17,7 +17,7 @@
 // 段落间距
 
 .@{prefix}-banner{
-    background: url(../../../ai_images/support/about-us/about-banner.png) no-repeat center;
+    background: url(/ai_images/support/about-us/about-banner.png) no-repeat center;
 
     h1{
         color: #fff;
@@ -37,14 +37,14 @@
         margin: 0 auto;
 
         // 文字
-        h2{
+        .@{prefix}-list-one-title{
             font-size: @font-size-4;
             color: @dark-block;
             padding-bottom: 20px;
             border-bottom: 1px solid #f7f7f7;
         }
 
-        h3{
+        .@{prefix}-list-two-title{
             font-size: @font-size-3;
             color: @dark-block;
             margin-top: 20px;
@@ -61,17 +61,17 @@
         img{
             margin: 10px 0;
         }
+    }
+    .@{prefix}-list-one {
 
-        & > li{
+        & > li {
             margin-bottom: 30px;
+        }
+    }
+    .@{prefix}-list-two {
 
-            ul{
-                & > li{
-                    p{
-                        padding-top: 6px;
-                    }
-                }
-            }
+        p{
+            padding-top: 6px;
         }
     }
 }

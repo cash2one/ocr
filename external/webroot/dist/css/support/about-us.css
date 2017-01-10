@@ -515,7 +515,7 @@
   }
 }
 .about-banner {
-  background: url(../../../ai_images/support/about-us/about-banner.png) no-repeat center;
+  background: url(/ai_images/support/about-us/about-banner.png) no-repeat center;
 }
 .about-banner h1 {
   color: #fff;
@@ -532,13 +532,13 @@
   padding: 0 10px;
   margin: 0 auto;
 }
-.about-introduction .about-content h2 {
+.about-introduction .about-content .about-list-one-title {
   font-size: 18px;
   color: #333333;
   padding-bottom: 20px;
   border-bottom: 1px solid #f7f7f7;
 }
-.about-introduction .about-content h3 {
+.about-introduction .about-content .about-list-two-title {
   font-size: 16px;
   color: #333333;
   margin-top: 20px;
@@ -553,9 +553,9 @@
 .about-introduction .about-content img {
   margin: 10px 0;
 }
-.about-introduction .about-content > li {
+.about-introduction .about-list-one > li {
   margin-bottom: 30px;
 }
-.about-introduction .about-content > li ul > li p {
+.about-introduction .about-list-two p {
   padding-top: 6px;
 }
