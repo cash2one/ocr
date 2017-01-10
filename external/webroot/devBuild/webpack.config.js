@@ -32,6 +32,8 @@ const entries = glob.sync(
 const webpackEntries = {};
 // 一个文件一个html页面
 const htmlWebpackPluginArr = [];
+// 需要抽取通用代码普通模块
+const nomalModules = [];
 entries.forEach(entry => {
     const {dir, name} = path.parse(entry);
     const resourcePath = path.join(dir, name);
@@ -54,10 +56,13 @@ entries.forEach(entry => {
             mainContent: resourcePath
         })
     );
+
+    nomalModules.push(resourcePath);
 });
 
 // 目前想到的只有jQuery是通用的，要单独打包的
 webpackEntries['common.bundle'] = ['jquery'];
+webpackEntries['base.bundle'] = 'src/entry/base';
 
 module.exports = {
     // 注意基准路径是webroot
@@ -78,7 +83,7 @@ module.exports = {
         }
     },
     output: {
-        publicPath: 'ai_dist',
+        publicPath: '/ai_dist',
         // 放入已包含时间戳的路径
         path: path.join(__dirname, '..', 'asset'),
         // TODO 添加时间戳路径,附带回滚机制
@@ -110,7 +115,9 @@ module.exports = {
         // 提取通用部分
         new CommonsChunkPlugin({
             name: ['common.bundle'],
-            filename: '[name].js'
+            filename: 'js/[name].js',
+            // TODO 暂时不尝试给base.bundle.js抽离通用代码,
+            chunks: nomalModules
         }),
         ...htmlWebpackPluginArr,
         // css文件单独打包
