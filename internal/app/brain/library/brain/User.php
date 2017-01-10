@@ -18,43 +18,58 @@ class Brain_User {
      * @return void
      */
     public static function getUserInfo() {
-        $clientIp = Bd_Ip::getClientIp();
-
-        //整体判断是否为外网IP
-        $isIPV4 = filter_var($clientIp, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4);
-        if(!$isIPV4) 
-        {
-            return false;
-        }
-
-        $isExternal = filter_var(
-            $clientIp, FILTER_VALIDATE_IP,
-            FILTER_FLAG_IPV4 | FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE
-        );
-        if($isExternal)
-        {
-            return false;
-        }
-        
-        $userInfo = Bd_PhpCas::isAuthenticated();
+        $userInfo = Bd_Passport::checkUserLogin();
 
         if ($userInfo === false)
         {
-            $userInfo = Bd_PhpCas::login();
-
+            return false;
         }
-        
-        return $userInfo;
+        else
+        {
+            $uuapUser = Brain_User::getUuapByHi($userInfo['uname']);
+            //$uuapUser = Brain_User::getUuapByHi('yuxiangchichu');
+            return $uuapUser->return->username;
+        }
     }
  
     /**
-     * checkUuapLogin 检查UUAP登录
+     * getUuapByHi 根据hi获取用户信息
+     * 
+     * @static
+     * @param mixed $type 
+     * @access public
+     * @return void
+     */
+    public static function getUuapByHi($hi) {
+
+        //WSDL文件的地址
+        //$wsdluri = "http://itebeta.baidu.com:8102/ws/UserRemoteService?wsdl";
+        //$appKey = "UICWSTestKey";
+        $wsdluri = "http://uuap.baidu.com:8086/ws/UserRemoteService?wsdl";
+        $appKey = "uuapclient-7-dtS4xXLQbP2kqietxAXw";
+
+        $soapclient = new SoapClient($wsdluri);
+
+        //SoapHeader（命名空间，关键字--appKey--无需变化，appKey对应的值,false)
+        $soapheader = new SoapHeader(
+            "http://schemas.xmlsoap.org/wsdl/soap/", "appKey", $appKey, false
+        );
+        $soapclient->__setSoapHeaders(array($soapheader));
+
+        //发出请求调用
+        $ret = $soapclient->getUserByHiNumber(array('arg0'=>$hi));
+
+        return $ret;
+    }
+ 
+    /**
+     * checkInternalUser 检查UUAP登录
      * 
      * @static
      * @access public
      * @return void
      */
-    public static function checkUuapLogin() {
+    public static function checkInternalUser() {
         
         if (!empty($_COOKIE['uniqId']))
         {

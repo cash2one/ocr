@@ -17,7 +17,7 @@ class Action_Home extends Ap_Action_Abstract {
 
     public function execute() {
 
-        !Brain_User::checkUuapLogin() && exit(0);
+        !Brain_User::checkInternalUser() && exit(0);
 //        $arrPageInfo['messagelist'] = Bd_Conf::getAppConf('messagelist');
         Brain_Output::htmlOutput(
             $arrPageInfo, 
