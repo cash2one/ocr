@@ -15,7 +15,7 @@
 class Action_Uuap extends Ap_Action_Abstract {
 
     public function execute() {
-        var_dump(Brain_User::getUuapByHi());
+        var_dump(Brain_User::getUuapByHi('yuxiangchichu'));
     }
 }
 /* vim: set expandtab ts=4 sw=4 sts=4 tw=80: */
