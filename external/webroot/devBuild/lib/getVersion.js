@@ -12,6 +12,7 @@ const fs = require('fs');
 const argv = require('minimist')(process.argv.slice(2));
 const moment = require('moment');
 
+// 版本记录文件
 const versionFilePath = '../../version.json';
 
 // 版本配置文件
@@ -68,5 +69,3 @@ module.exports = function () {
 
     return versionConfig.currentVersion.timeStamp;
 };
-
-module.exports();
