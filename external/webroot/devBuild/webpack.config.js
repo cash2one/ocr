@@ -17,6 +17,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
+// 关键参数
+const publicPath = '/ai_dist/';
+
 // 构建配置
 const buildConfig = require('./config.json');
 /* eslint-enable */
@@ -72,7 +75,11 @@ entries.forEach(entry => {
             // 模板
             template: path.resolve(__dirname, '..', 'src', 'view', 'common', 'template.ejs'),
             // 以下是自定义属性, 注意这里不要补充后缀，后缀留在模板里，避免动态引入，无法使用html-loader
-            mainContent: resourcePath
+            mainContent: resourcePath,
+            // 这个页面需要用到的css和js
+            jsCommonBundle: path.join(publicPath, versionPath + '', 'js', 'common.bundle.js'),
+            cssFile: path.join(publicPath, versionPath + '', 'css', `${resourcePath}Style.css`),
+            jsFile: path.join(publicPath, versionPath + '', 'js', `${resourcePath}.js`)
         })
     );
 
@@ -108,7 +115,7 @@ module.exports = {
         }
     },
     output: {
-        publicPath: '/ai_dist',
+        publicPath,
         // 放入已包含时间戳的路径
         path: path.join(__dirname, '..', 'asset'),
         // TODO 添加时间戳路径,附带回滚机制
@@ -144,7 +151,7 @@ module.exports = {
                 loader: 'file-loader',
                 query: {
                     name: `${versionPath}/[path][name].[ext]`,
-                    publicPath: '/ai_dist/'
+                    publicPath
                 }
             },
             {
@@ -153,7 +160,7 @@ module.exports = {
                 loader: 'file-loader',
                 query: {
                     name: '[path][name].[ext]',
-                    publicPath: '/ai_dist'
+                    publicPath
                 }
             }
         ]

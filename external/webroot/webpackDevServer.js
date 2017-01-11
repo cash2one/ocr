@@ -11,19 +11,24 @@ var app = express();
 
 var port = 8088;
 
-app.use(
-    '/ai_images',
-    express.static(path.join(__dirname, 'ai_images'))
-);
+// app.use(
+//     '/ai_images',
+//     express.static(path.join(__dirname, 'ai_images'))
+// );
+//
+// app.use(
+//     '/ai_dist/css',
+//     express.static(path.join(__dirname, 'asset', 'css'))
+// );
+//
+// app.use(
+//     '/ai_dist/js',
+//     express.static(path.join(__dirname, 'asset', 'js'))
+// );
 
 app.use(
-    '/ai_dist/css',
-    express.static(path.join(__dirname, 'asset', 'css'))
-);
-
-app.use(
-    '/ai_dist/js',
-    express.static(path.join(__dirname, 'asset', 'js'))
+    '/ai_dist',
+    express.static(path.join(__dirname, 'asset'))
 );
 
 app.get('/html/*', function (req, res, next) {

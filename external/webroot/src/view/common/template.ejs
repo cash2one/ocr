@@ -11,21 +11,21 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="../../../ai_images/favicon-32.ico">
+    <link rel="shortcut icon" href="<%= require('../../../ai_images/favicon-32.ico') %>">
 
     <!--[if IE 9]>
     <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.ie9.css[0] %>">
     <script src="/ai_dist/js/lib/input-placeholder-polyfill.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.base.css[0] %>">
-    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css[2] %>">
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.cssFile %>">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="../../ai_images/logo.png" alt="百度大脑">
+                <img src="<%= require('../../../ai_images/logo.png') %>" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -325,6 +325,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="<%= htmlWebpackPlugin.files.js[3] %>"></script>
+<script src="<%= htmlWebpackPlugin.options.jsCommonBundle %>"></script>
+<script src="<%= htmlWebpackPlugin.options.jsFile %>"></script>
 </body>
 </html>
