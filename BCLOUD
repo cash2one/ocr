@@ -1,1 +1,2 @@
+export
 BUILD_SUBMITTER -x -m baidu/ai/platform/external -c "cd baidu/ai/platform/external && GIT_BRAN=${GIT_BRANCH} && sh build.sh" -u ./
