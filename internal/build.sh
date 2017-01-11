@@ -4,7 +4,7 @@ mkdir -p ${OUTPUT_DIR}
 
 #sh invoke_jenkins_job.sh
 
-BUILD_SUB_DIRS="app conf data template webroot webserver"
+BUILD_SUB_DIRS="app conf data scripts template webroot webserver"
 
 cp -rf ${BUILD_SUB_DIRS} ${OUTPUT_DIR}
 #tar -cf ${OUTPUT_DIR}.tar ${OUTPUT_DIR}/*
