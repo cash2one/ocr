@@ -6,5 +6,3 @@
 /internal/webroot/node_modules/
 service.log.*
 /external/webroot/bower_components/
-/external/template/
-/external/webroot/dist/
