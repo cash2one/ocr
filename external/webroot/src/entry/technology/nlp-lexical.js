@@ -3,7 +3,6 @@
  * @author Franck Chen(chenfan02@baidu.com)
  */
 import $ from 'jquery';
-import 'less/technology/nlp-lexical.less';
 
 /* eslint-disable */
 const sentences = [

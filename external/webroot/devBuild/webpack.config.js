@@ -52,6 +52,8 @@ entries.forEach(entry => {
 
     // 去除文件后缀，资源入数组，防止entry引用entry
     webpackEntries[resourcePath] = [path.join('src', 'entry', entry)];
+    // less不需要在js中引入，最大程度减少破坏js,补充style是为了保证不和js入口名字冲突
+    webpackEntries[`${resourcePath}Style`] = [path.join('src', 'less', `${resourcePath}.less`)];
 
     // 逐一添加plugin，生成html入口
     htmlWebpackPluginArr.push(
@@ -64,8 +66,9 @@ entries.forEach(entry => {
             // ie9 polyfill位置比较特殊，需要定制化
             chunks: [
                 'ie9', 'base',
-                'common.bundle', resourcePath
+                'common.bundle', resourcePath, `${resourcePath}Style`
             ],
+            chunksSortMode: 'dependency',
             // 模板
             template: path.resolve(__dirname, '..', 'src', 'view', 'common', 'template.ejs'),
             // 以下是自定义属性, 注意这里不要补充后缀，后缀留在模板里，避免动态引入，无法使用html-loader
@@ -79,9 +82,10 @@ entries.forEach(entry => {
 
 // 目前想到的只有jQuery是通用的，要单独打包的
 webpackEntries['common.bundle'] = ['jquery'];
+// 通用代码
 webpackEntries['base.bundle'] = 'src/entry/base.js';
-webpackEntries['base'] = ['src/less/base.less'];
-webpackEntries['ie9'] = ['src/less/ie9.less'];
+webpackEntries.base = ['src/less/base.less'];
+webpackEntries.ie9 = ['src/less/ie9.less'];
 
 module.exports = {
     // 注意基准路径是webroot
@@ -124,10 +128,6 @@ module.exports = {
                     'css-loader!less-loader'
                 )
             },
-            // {
-            //     test: /\.ejs$/,
-            //     loader: 'html-loader!ejs-loader'
-            // },
             {
                 // 模板拼接，通用资源替换
                 test: /\.html$/,
@@ -174,6 +174,6 @@ module.exports = {
         }),
         ...htmlWebpackPluginArr,
         // css文件单独打包
-        extractLESS,
+        extractLESS
     ]
 };
