@@ -1,0 +1,6 @@
+FROM node:6.9.2
+MAINTAINER ZhouYingfeng <zhouyingfeng@baidu.com>
+
+RUN apt-get update
+RUN npm install -g gulp@^3.9.1
+RUN npm install bower -g
