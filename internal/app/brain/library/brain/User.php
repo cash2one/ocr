@@ -79,27 +79,29 @@ class Brain_User {
      * @return void
      */
     public static function checkInternalUser() {
-        
-        if (!empty($_COOKIE['uniqId']))
+
+        $passUser = Bd_Passport::checkUserLogin();
+        $username = $passUser['uname'];
+        if(empty($username))
         {
-            $userInfo = Brain_Memcache::get($_COOKIE['uniqId']);
-            if (!empty($userInfo))
-            {
-                return $userInfo;
-            }
+            return;
         }
 
-        $userInfo = Brain_User::getUserInfo();
+        $k = 'passport_to_uuap_'.$username;
+        $userInfo = Brain_Memcache::get($k);
+
         if (!empty($userInfo))
         {
-
-            $uniqId = Brain_User::genUniqId();
-
-            $userInfo = Brain_Memcache::set($uniqId, $userInfo, 3600);
-            setcookie("uniqId", $uniqId, time() + 24 * 3600, '/');
-            
             return $userInfo;
         }
+
+        $uuapUser = Brain_User::getUuapByHi($username);
+        if (!empty($uuapUser->return->username))
+        {
+            Brain_Memcache::set($k, $uuapUser->return->username, 3600);
+            return $uuapUser->return->username;
+        }
+        
     }
  
     /**
