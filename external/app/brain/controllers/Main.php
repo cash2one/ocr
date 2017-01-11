@@ -15,6 +15,7 @@ class Controller_Main extends Ap_Controller_Abstract {
         'userprofile' => 'actions/page/UserProfile.php',
 
         'passport' => 'actions/page/Passport.php',
+        'uuap' => 'actions/page/Uuap.php',
 
         //'news' => 'actions/page/News.php',
         'case' => 'actions/page/Case.php',
