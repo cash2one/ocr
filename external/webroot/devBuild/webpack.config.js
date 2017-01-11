@@ -56,7 +56,7 @@ entries.forEach(entry => {
     // 去除文件后缀，资源入数组，防止entry引用entry
     webpackEntries[resourcePath] = [path.join('src', 'entry', entry)];
     // less不需要在js中引入，最大程度减少破坏js,补充style是为了保证不和js入口名字冲突
-    webpackEntries[`${resourcePath}Style`] = [path.join('src', 'less', `${resourcePath}.less`)];
+    webpackEntries[`${resourcePath}.style`] = [path.join('src', 'less', `${resourcePath}.less`)];
 
     // 逐一添加plugin，生成html入口
     htmlWebpackPluginArr.push(
@@ -69,7 +69,7 @@ entries.forEach(entry => {
             // ie9 polyfill位置比较特殊，需要定制化
             chunks: [
                 'ie9', 'base',
-                'common.bundle', resourcePath, `${resourcePath}Style`
+                'common.bundle', resourcePath, `${resourcePath}.style`
             ],
             chunksSortMode: 'dependency',
             // 模板
@@ -78,7 +78,7 @@ entries.forEach(entry => {
             mainContent: resourcePath,
             // 这个页面需要用到的css和js
             jsCommonBundle: path.join(publicPath, versionPath + '', 'js', 'common.bundle.js'),
-            cssFile: path.join(publicPath, versionPath + '', 'css', `${resourcePath}Style.css`),
+            cssFile: path.join(publicPath, versionPath + '', 'css', `${resourcePath}.style.css`),
             jsFile: path.join(publicPath, versionPath + '', 'js', `${resourcePath}.js`),
             // TODO 这个基础包应该是没用的，未来要下掉，有冗余
             basicBundle: path.join(publicPath, versionPath + '', 'js', 'base.bundle.js')
