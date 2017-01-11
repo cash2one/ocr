@@ -50,6 +50,7 @@ class Brain_User {
      * checkInternalUser 检查hi账号是否关联UUAP账号
      * 
      * @static
+     * @param mixed $username 
      * @access public
      * @return void
      */
