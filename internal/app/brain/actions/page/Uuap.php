@@ -15,8 +15,7 @@
 class Action_Uuap extends Ap_Action_Abstract {
 
     public function execute() {
-        echo 'xxxxx';
-        echo Bd_PhpCas::isAuthenticated();
+        var_dump(Brain_User::getUuapByHi('yuxiangchichu'));
     }
 }
 /* vim: set expandtab ts=4 sw=4 sts=4 tw=80: */

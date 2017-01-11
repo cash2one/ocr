@@ -1,0 +1,17 @@
+FROM registry.qianmo.baidu.com/qianmo/ftqa/bdg/524/public/ai-platform:node_basic
+MAINTAINER ZhouYingfeng <zhouyingfeng@baidu.com>
+
+ENV AIP_DOWN="/aip_download"
+RUN mkdir -p ${AIP_DOWN}
+
+COPY external/webroot/package.json ${AIP_DOWN}
+COPY external/webroot/bower.json ${AIP_DOWN}
+
+WORKDIR ${AIP_DOWN}
+RUN npm install
+RUN bower install --allow-root
+
+RUN mkdir -p "/aip"
+VOLUME ["/aip"]
+WORKDIR /aip
+CMD ["/bin/sh", "start_container.sh"]
