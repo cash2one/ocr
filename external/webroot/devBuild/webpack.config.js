@@ -10,28 +10,22 @@ const path = require('path');
 // 第三方模块
 const glob = require('glob');
 const webpack = require('webpack');
-const moment = require('moment');
 
 // webpack plugin
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
+const getVersion = require('./lib/getVersion');
+/* eslint-enable */
+
 // 关键参数
 const publicPath = '/ai_dist/';
 
-// 构建配置
-const buildConfig = require('./config.json');
-/* eslint-enable */
+// 获取版本号
+const versionPath = getVersion();
 
-const now = moment();
-buildConfig.currentVersion = {
-    timeStamp: now.unix(),
-    date: now.format('YYYY-MM-DD')
-};
-// 时间戳路径
-const versionPath = buildConfig.currentVersion.timeStamp;
-
+// 项目主体以js为着眼点
 const entries = glob.sync(
     '**/*.js',
     {
