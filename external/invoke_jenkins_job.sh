@@ -116,7 +116,10 @@ fi
 # concat the ftp url
 ftp_url="ftp://tg:a1b2c3.@ftp.jenkins.baidu.com:8557/${JOB_NAME}/${build_number}/"
 wget -q -r -nH -np -m ${ftp_url}
-find ./${JOB_NAME}/${build_number}/external/ -name ".listing" | xargs rm -f
-cp -r ./${JOB_NAME}/${build_number}/external/webroot/dist/* ./webroot/dist/
+find ./${JOB_NAME}/${build_number}/ -name ".listing" | xargs rm -f
+# cp -r ./${JOB_NAME}/${build_number}/external/webroot/dist/* ./webroot/dist/
+# cp -r ./${JOB_NAME}/${build_number}/external/template/* ./template/
+cp -r ./${JOB_NAME}/${build_number}/external/* ./
+
 rm -rf ${JOB_NAME}
 echo "all done"
