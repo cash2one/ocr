@@ -2,7 +2,7 @@
 OUTPUT_DIR=output/
 mkdir -p ${OUTPUT_DIR}
 
-#sh invoke_jenkins_job.sh
+sh invoke_jenkins_job.sh
 
 #BUILD_SUB_DIRS="app conf data template webroot scripts webserver"
 

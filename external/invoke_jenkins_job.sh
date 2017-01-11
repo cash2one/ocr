@@ -1,11 +1,13 @@
 #!/bin/bash
 
+# get the git code branch name
+branch=`git branch --list | grep "\*" | cut -f 2 -d " "`
 # start a jenkin job build
 CURL_CMD="curl --user zhouyingfeng:9252522b511c3de99bd009802c8c74e2 -f"
-JOB_NAME="ai_platform_web_docker_build"
+JOB_NAME="ai_platform_web_docker_build_test"
 JENKINS_JOB="http://tg.jenkins.baidu.com/job/${JOB_NAME}/"
 temp_file=./tmp_fl
-${CURL_CMD} -XPOST -I "${JENKINS_JOB}/build" > ${temp_file}1 2>&1
+${CURL_CMD} -XPOST -I "${JENKINS_JOB}/buildWithParameters?BRANCH_NAME=${branch}" > ${temp_file}1 2>&1
 if [ $? -ne 0 ]; then
     echo "Bad jenkins build invocation!"
     rm -f ${temp_file}1
