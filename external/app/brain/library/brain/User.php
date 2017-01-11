@@ -33,7 +33,6 @@ class Brain_User {
             $result = array(
                 'uid' => $userInfo['uid'],
                 'uname' => iconv('gb2312', 'utf-8', $userInfo['uname']),
-                'internalLink' => '',
             );
 
             $isInternalUser = Brain_User::checkInternalUser($userInfo['uname']);
