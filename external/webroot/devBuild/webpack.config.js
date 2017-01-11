@@ -37,6 +37,7 @@ const entries = glob.sync(
     }
 );
 
+// 样式独立打包
 const extractLESS = new ExtractTextPlugin(`${versionPath}/css/[name].css`);
 
 // 生成符合webpack规则的entries
@@ -55,12 +56,16 @@ entries.forEach(entry => {
     // 逐一添加plugin，生成html入口
     htmlWebpackPluginArr.push(
         new HtmlWebpackPlugin({
-            // 注入css和js
-            inject: true,
+            // 我们的代码比较特殊，所以这里改为定制化插入，比如ie9 polyfill
+            inject: false,
             // 一次只能生成一个html文件...
-            filename: path.join('entry', `${resourcePath}.html`),
+            filename: path.join('entry', `${resourcePath}.tpl`),
             // 一个html直包含对应chunk，这样能为每个entry自定义模板
-            chunks: ['common.bundle', resourcePath],
+            // ie9 polyfill位置比较特殊，需要定制化
+            chunks: [
+                'ie9', 'base',
+                'common.bundle', resourcePath
+            ],
             // 模板
             template: path.resolve(__dirname, '..', 'src', 'view', 'common', 'template.ejs'),
             // 以下是自定义属性, 注意这里不要补充后缀，后缀留在模板里，避免动态引入，无法使用html-loader
@@ -74,8 +79,9 @@ entries.forEach(entry => {
 
 // 目前想到的只有jQuery是通用的，要单独打包的
 webpackEntries['common.bundle'] = ['jquery'];
-webpackEntries['base.bundle'] = 'src/entry/base';
-webpackEntries['base.style'] = ['src/less/base.less'];
+webpackEntries['base.bundle'] = 'src/entry/base.js';
+webpackEntries['base'] = ['src/less/base.less'];
+webpackEntries['ie9'] = ['src/less/ie9.less'];
 
 module.exports = {
     // 注意基准路径是webroot
@@ -118,19 +124,22 @@ module.exports = {
                     'css-loader!less-loader'
                 )
             },
+            // {
+            //     test: /\.ejs$/,
+            //     loader: 'html-loader!ejs-loader'
+            // },
             {
                 // 模板拼接，通用资源替换
-                test: /\.(html|ejs)$/,
+                test: /\.html$/,
                 loader: 'html-loader',
                 query: {
-                    // 不尝试修改html中图片路径，目前路径都是对的
                     minimize: false,
-                    // 编译通用Less,修改图片、视频缓存路径
-                    attrs: ['img:src', 'link:href', 'video:src']
+                    // 修改图片、视频缓存路径
+                    attrs: ['img:src', 'video:src']
                 }
             },
             {
-                // TODO，小icon分单独文件夹管理，base64打包如css，省去拼接雪碧图
+                // TODO，小icon分单独文件夹管理，base64打包入css，省去拼接雪碧图
                 test: /\.(jpe?g|png|gif|mp4)$/i,
                 loader: 'file-loader',
                 query: {
