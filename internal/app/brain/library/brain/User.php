@@ -81,7 +81,7 @@ class Brain_User {
     public static function checkInternalUser() {
 
         $passUser = Bd_Passport::checkUserLogin();
-        $username = $passUser['uname'];
+        $username = iconv('gb2312', 'utf-8', $passUser['uname']);
         if(empty($username))
         {
             return;
