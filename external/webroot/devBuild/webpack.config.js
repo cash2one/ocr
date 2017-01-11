@@ -79,7 +79,9 @@ entries.forEach(entry => {
             // 这个页面需要用到的css和js
             jsCommonBundle: path.join(publicPath, versionPath + '', 'js', 'common.bundle.js'),
             cssFile: path.join(publicPath, versionPath + '', 'css', `${resourcePath}Style.css`),
-            jsFile: path.join(publicPath, versionPath + '', 'js', `${resourcePath}.js`)
+            jsFile: path.join(publicPath, versionPath + '', 'js', `${resourcePath}.js`),
+            // TODO 这个基础包应该是没用的，未来要下掉，有冗余
+            basicBundle: path.join(publicPath, versionPath + '', 'js', 'base.bundle.js')
         })
     );
 
