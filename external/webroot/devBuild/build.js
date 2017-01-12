@@ -12,18 +12,37 @@ let webpackConfig = require('./webpack.config');
 
 const isWatchMode = argv.hasOwnProperty('w');
 
+// 编译器
+const compiler = webpack(webpackConfig);
+// 打印配置
+const printConfig = {
+    hash: false,
+    children: false,
+    modules: false,
+    chunkOrigins: false,
+    chunksSort: false,
+    source: false,
+    // 以下是控制台参数
+    chunks: false,
+    colors: true
+};
+
+
 if (isWatchMode) {
-    Object.assign(
-        webpackConfig,
+    compiler.watch(
         {
-            watch: true
+            aggregateTimeout: 300,
+            poll: true
+        },
+        (err, stats) => {
+            console.log(stats.toString(printConfig));
         }
     );
 }
-
-webpack(
-    webpackConfig,
-    () => {
-
-    }
-);
+else {
+    compiler.run(
+        (err, stats) => {
+            console.log(stats.toString(printConfig));
+        }
+    );
+}
