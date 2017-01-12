@@ -1,1 +1,1 @@
-BUILD_SUBMITTER -x -m baidu/ai/platform/external -c "cd baidu/ai/platform/external && sh build.sh" -u ./
+BUILD_SUBMITTER -x -m baidu/ai/platform/external -c "cd baidu/ai/platform/external && GITBR=`git branch --list | grep \"\*\" | cut -f 2 -d \" \"` && sh build.sh" -u ./
