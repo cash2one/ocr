@@ -182,7 +182,7 @@
   box-sizing: border-box;
   background-color: #f0f7fc;
   background-size: 1600px 400px;
-  background-image: url('../../../ai_images/technology/nlp-word_embedding/banner.png');
+  background-image: url('/ai_images/technology/nlp-word_embedding/banner.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
@@ -516,7 +516,7 @@
 }
 .nlp-function {
   height: 440px;
-  background: url(../../../ai_images/technology/nlp-dr/function-bg.png) center;
+  background: url(/ai_images/technology/nlp-dr/function-bg.png) center;
   text-align: center;
   color: #fff;
   font-size: 0;
@@ -677,7 +677,7 @@
   background-size: 400px 135px;
 }
 .tech-section.tech-case .case-item:nth-child(1) {
-  background-image: url('../../../ai_images/technology/nlp-dr/case-1.png');
+  background-image: url('/ai_images/technology/nlp-dr/case-1.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;

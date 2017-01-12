@@ -182,7 +182,7 @@
   box-sizing: border-box;
   background-color: #f0f7fc;
   background-size: 1600px 400px;
-  background-image: url('../../../ai_images/support/about-us/about-banner.png');
+  background-image: url('/ai_images/support/about-us/about-banner.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-position-x: center;
@@ -515,47 +515,37 @@
   }
 }
 .about-banner {
-  background: url(../../../ai_images/support/about-us/about-banner.png) no-repeat center;
+  background: url(/ai_images/support/about-us/about-banner.png) no-repeat center;
 }
-.about-banner h1 {
+.about-banner .about-title {
   color: #fff;
   font-size: 42px;
   line-height: 54px;
   padding: 100px 0;
   text-align: center;
 }
-.about-introduction {
+.ai-platform .about-introduction {
   padding: 50px 0;
 }
-.about-introduction .about-content {
-  width: 1180px;
-  padding: 0 10px;
-  margin: 0 auto;
+.about-section-border {
+  border: 1px solid #f7f7f7;
+  margin-bottom: 20px;
 }
-.about-introduction .about-content h2 {
+.about-list-one-title {
   font-size: 18px;
-  color: #333333;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #f7f7f7;
+  color: #333;
+  margin-bottom: 20px;
 }
-.about-introduction .about-content h3 {
+.about-list-two-title {
   font-size: 16px;
-  color: #333333;
-  margin-top: 20px;
+  color: #333;
 }
-.about-introduction .about-content p {
+.about-list-info {
   font-size: 12px;
   line-height: 25px;
-  color: #666666;
-  padding: 14px 0;
-  margin: 0;
+  color: #666;
+  margin: 14px 0 44px;
 }
-.about-introduction .about-content img {
+.about-list-img {
   margin: 10px 0;
-}
-.about-introduction .about-content > li {
-  margin-bottom: 30px;
-}
-.about-introduction .about-content > li ul > li p {
-  padding-top: 6px;
 }

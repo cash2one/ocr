@@ -652,7 +652,7 @@
 }
 .nlp-function {
   height: 490px;
-  background: url(../../../ai_images/technology/nlp-lexer/function-bg.png) center;
+  background: url(/ai_images/technology/nlp-lexer/function-bg.png) center;
   text-align: center;
   color: #fff;
   font-size: 0;
