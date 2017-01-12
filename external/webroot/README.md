@@ -4,7 +4,7 @@ yarn<br>
 bower install<br>
 > 依赖安装推荐使用yarn,yarn缓存机制更加完善，同时会生成版本锁文件yarn.lock,确保依赖版本固定，更加安全<br>
 
-## 注意事项
+## 注意事项<br>
 * 不要尝试使用yarn clean去清理依赖包中的无用内容，默认清理影响postcss的正常使用<br>
 * 如果发现丢失了内容，可执行yarn install --force尝试找回<br>
 
