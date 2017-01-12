@@ -10,7 +10,40 @@ const argv = require('minimist')(process.argv.slice(2));
 let webpackConfig = require('./webpack.config');
 /* eslint-enable */
 
-const isWatchMode = argv.hasOwnProperty('w');
+const isWatchMode = argv.hasOwnProperty('w') || argv.hasOwnProperty('watch');
+const isOnlineMode = argv.hasOwnProperty('o') || argv.hasOwnProperty('online');
+
+// 增量观察构建模式
+if (isWatchMode) {
+    webpackConfig = Object.assign(
+        {},
+        webpackConfig,
+        {
+            plugins: [
+                ...webpackConfig.plugins,
+                // 增量构建时避免错误跳出，或输出错误结果代码
+                new webpack.NoErrorsPlugin()
+            ]
+        }
+    );
+}
+
+// 线上、测试构建模式
+if (isOnlineMode) {
+    webpackConfig = Object.assign(
+        {},
+        webpackConfig,
+        {
+            plugins: [
+                ...webpackConfig.plugins,
+                new webpack.optimize.UglifyJsPlugin({
+                    warnings: false,
+                    comments: false
+                })
+            ]
+        }
+    );
+}
 
 // 编译器
 const compiler = webpack(webpackConfig);
