@@ -19,6 +19,7 @@ if (isWatchMode) {
         {},
         webpackConfig,
         {
+            devtool: 'source-map',
             plugins: [
                 ...webpackConfig.plugins,
                 // 增量构建时避免错误跳出，或输出错误结果代码
@@ -36,6 +37,7 @@ if (isOnlineMode) {
         {
             plugins: [
                 ...webpackConfig.plugins,
+                // js和css双压缩
                 new webpack.optimize.UglifyJsPlugin({
                     warnings: false,
                     comments: false
