@@ -13,3 +13,4 @@ bower install<br>
 ## 构建脚本<br>
 yarn build -- 构建静态资源(不生成新版本号)<br>
 yarn watch -- 本地开发构建，不生成新版本号，生成新版本号，并观测代码变动，开始增量构建<br>
+yarn bump -- 生成新版本号，并构建<br>
