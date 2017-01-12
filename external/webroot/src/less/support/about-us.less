@@ -2,7 +2,7 @@
 @import '../common/global.less';
 @import '../common/tech-page.less';
 
-@banner: url('/ai_images/support/about-us/about-banner.png');
+@banner: url('../../../ai_images/support/about-us/about-banner.png');
 @icons: none;
 @intro-bg: none;
 @case-icons: none;
@@ -17,7 +17,7 @@
 // 段落间距
 
 .@{prefix}-banner {
-    background: url(/ai_images/support/about-us/about-banner.png) no-repeat center;
+    background: url(../../../ai_images/support/about-us/about-banner.png) no-repeat center;
 
     .@{prefix}-title {
         color: #fff;
@@ -66,6 +66,7 @@
 
     // 图片
     &-img {
+        max-width: 100%;
         margin: 10px 0;
     }
 }

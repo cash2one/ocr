@@ -2,10 +2,10 @@
 @import '../common/global.less';
 @import '../common/tech-page.less';
 
-@banner: url('/ai_images/technology/nlp-word_embedding/banner.png');
-@icons: url('/ai_images/technology/nlp-comment/icon.png');
+@banner: url('../../../ai_images/technology/nlp-word_embedding/banner.png');
+@icons: url('../../../ai_images/technology/nlp-comment/icon.png');
 @intro-bg: none;
-@case-icons: url('/ai_images/technology/nlp-comment/case-icons.png');
+@case-icons: url('../../../ai_images/technology/nlp-comment/case-icons.png');
 
 // 前缀
 @prefix: nlp;
@@ -16,7 +16,7 @@
 // 功能介绍部分
 .@{prefix}-function {
     height: 440px;
-    background: url(/ai_images/technology/nlp-dr/function-bg.png) center;
+    background: url(../../../ai_images/technology/nlp-dr/function-bg.png) center;
     text-align: center;
     color: @white;
     font-size: 0;
@@ -77,7 +77,7 @@
     // 特色图标
     &-icon {
         margin: 0 auto 10px;
-        background: url(/ai_images/technology/nlp-word_embedding/feature.png) no-repeat center;
+        background: url(../../../ai_images/technology/nlp-word_embedding/feature.png) no-repeat center;
         background-size: 255px 85px;
 
         &.feature-1 {
@@ -127,7 +127,7 @@
 .scenario-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
     width: @width;
     height: @height;
-    background: url(/ai_images/technology/nlp-word_embedding/scenario.png) no-repeat @x @y;
+    background: url(../../../ai_images/technology/nlp-word_embedding/scenario.png) no-repeat @x @y;
     background-size: 90px 45px;
 }
 
@@ -232,7 +232,7 @@
             background-size: 800px/2 270px/2;
         }
         .case-item:nth-child(1) {
-            .icon(url('/ai_images/technology/nlp-dr/case-1.png'), center, center);
+            .icon(url('../../../ai_images/technology/nlp-dr/case-1.png'), center, center);
 
         }
 
