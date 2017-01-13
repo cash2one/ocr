@@ -4,3 +4,4 @@ MAINTAINER ZhouYingfeng <zhouyingfeng@baidu.com>
 RUN apt-get update
 RUN npm install -g gulp@^3.9.1
 RUN npm install bower -g
+RUN npm -g install yarn
