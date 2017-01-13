@@ -35,7 +35,7 @@ class Brain_User {
                 'uname' => iconv('gb2312', 'utf-8', $userInfo['uname']),
             );
 
-            $isInternalUser = Brain_User::checkInternalUser($userInfo['uname']);
+            $isInternalUser = Brain_User::checkInternalUser($result['uname']);
             if($isInternalUser)
             {
                 $result['internalLink'] = '/internal/';
@@ -112,7 +112,7 @@ class Brain_User {
         $soapclient->__setSoapHeaders(array($soapheader));
 
         //发出请求调用
-        $ret = $soapclient->getUserByHiNumber(array('arg0'=>$hi));
+        @$ret = $soapclient->getUserByHiNumber(array('arg0'=>$hi));
 
         return $ret;
     }
