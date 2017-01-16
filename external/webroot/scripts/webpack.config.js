@@ -58,7 +58,7 @@ entries.forEach(entry => {
             // 我们的代码比较特殊，所以这里改为定制化插入，比如ie9 polyfill
             inject: false,
             // 一次只能生成一个html文件...
-            filename: path.join('entry', `${resourcePath}.tpl`),
+            filename: path.join('..', '..', 'template', 'brain', 'platform',`${resourcePath}.tpl`),
             // 一个html直包含对应chunk，这样能为每个entry自定义模板
             // ie9 polyfill位置比较特殊，需要定制化
             chunks: [
@@ -113,7 +113,7 @@ module.exports = {
     output: {
         publicPath,
         // 放入已包含时间戳的路径
-        path: path.join(__dirname, '..', 'asset'),
+        path: path.join(__dirname, '..', 'dist'),
         // TODO 添加时间戳路径,附带回滚机制
         filename: `${versionPath}/js/[name].js`
     },

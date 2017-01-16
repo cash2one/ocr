@@ -13,7 +13,7 @@ const argv = require('minimist')(process.argv.slice(2));
 const moment = require('moment');
 
 // 版本记录文件
-const versionFilePath = '../../version.json';
+const versionFilePath = __dirname + '/../../version.json';
 
 // 版本配置文件
 const versionConfig = require(versionFilePath);

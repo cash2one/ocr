@@ -24,8 +24,11 @@ cd ${CODE_DIR}/external/webroot
 ## npm install & bower install will cost too much time if the newwork sucks...
 ## let's skip them to accelerate the progress.
 if [ "${STOP_UPDATE}" = "" ]; then
-    npm install
+    # npm install
+    # bower install --allow-root
+    yarn
     bower install --allow-root
 fi
 
-gulp
+# gulp
+yarn build

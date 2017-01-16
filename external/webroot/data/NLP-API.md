@@ -269,13 +269,15 @@ query=百度是一家高科技公司&lang_id=1
 | wordsepbuf     | String | 基本词粒度结果，以\t分割                            |
 | wsbtermcount   | int    | 基本词粒度输出的词个数                              |
 | wsbtermoffsets | List   | 该参数为列表，元素个数为切分出来的词个数，每个元素值表示对应的基本词在被切分文本的起始位置（字节偏移） |
+| wsbtermpos     | List   | 参数值为列表，元素值为对应切分出来的基本词在 wordsepbuf的字节偏移以及长度，整数的低24bit为偏移，高8bit为长度  |
 | wpcompbuf      | String | 混排粒度结果，以\t分割                             |
 | wpbtermcount   | Int    | 混排粒度输出的词个数                               |
 | wpbtermoffsets | List   | 该参数为列表，元素个数为切分出来的词个数，每个元素值表示对应的词是从第几个基本词开始的（基本词偏移） |
+| wpbtermpos     | List   | 参数值为列表，元素值为对应切分出来的词在 wpcompbuf的字节偏移以及长度，整数的低24bit为偏移，高8bit为长度 |
 | subphrbuf      | String | 所有识别出来的短语，以\t分割                          |
 | spbtermcount   | Int    | 识别出来的短语个数                                |
 | spbtermoffsets | List   | 该参数为列表，元素个数为识别出来的短语个数，每个元素值表示对应短语是从第几个基本词开始的（基本词偏移） |
-
+| spbtermpos     | List   | 参数值为列表，元素值为对应切分出来的短语在 subphrbuf的字节偏移以及长度，整数的低24bit为偏移，高8bit为长度 |
 
 # 词性标注接口
 
@@ -619,7 +621,7 @@ qslots=[{"terms_sequence":"你好百度” ", "type":0, "items":[]}]&tslots=[{"t
   {
     "comment":"个人觉得福克斯好，外观漂亮年轻，动力和操控性都不错",
     "entity":"NULL",
-    "type":1
+    "type":10
   }
   ```
 
@@ -675,7 +677,7 @@ comment=个人觉得福克斯好，外观漂亮年轻，动力和操控性都不
   "adj":"不错",
   "comment":"个人觉得福克斯好，外观漂亮年轻，动力和操控性都不错",
   "entity":"NULL",
-  "prop":"动力",
+  "fea":"动力",
   "type":"2"
 }
 ```
@@ -688,7 +690,9 @@ comment=个人觉得福克斯好，外观漂亮年轻，动力和操控性都不
 | adj      | 表示抽取结果中的评价词                  |
 | comment  | 表示待抽取观点的评论文本。                |
 | entity   | 实体名，当前取值为NULL，暂时不生效          |
+| fea      | 抽取结果中的属性词。 |
 | type     | 表示情感极性（其中2表示积极、1表示中性、0表示消极）。 |
+| 其他参数   | 暂不生效 |
 
 [1]:	#请求头域内容
 [2]:	/docs#Beginner-Auth
