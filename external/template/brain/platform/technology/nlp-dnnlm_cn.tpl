@@ -176,6 +176,9 @@
                 <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
+                {%if $userInfo.internalLink !== Null%}
+                <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
+                {%/if%}
                 <li>
                     <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
@@ -194,7 +197,7 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>中文DNN语言模型</h1>
-        <p>依托全网海量优质数据和深度神经网络技术，通过词语向量化实现文本的可计算，帮助您快速完成语义挖掘、相似度计算等应用。</p>
+        <p>依托全网海量优质数据和深度神经网络技术，判断一句话是否符合语言表达习惯，帮助您实现文本分析、纠错、对话等多种语义应用。</p>
         <div>
             <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">获取API Key</a>
             {%if $src eq Null%}
@@ -357,6 +360,7 @@
     </div>
 </section>
 {%/if%}
+
 </div>
 <aside class="aside-action">
     <ul>

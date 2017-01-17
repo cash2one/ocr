@@ -176,6 +176,9 @@
                 <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
+                {%if $userInfo.internalLink !== Null%}
+                <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
+                {%/if%}
                 <li>
                     <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
@@ -239,7 +242,7 @@
     <div class="lexer-demo-case" id="demo-case"></div>
     <div class="lexer-demo-tab" id="lexer-demo-tab">
         <div class="lexer-demo-tab-label label-selected" data-tab-for="word-type">词性识别</div>
-        <div class="lexer-demo-tab-label" data-tab-for="term">专业名词</div>
+        <div class="lexer-demo-tab-label" data-tab-for="term">专有名词</div>
     </div>
     <div class="lexer-demo-result">
         <div class="lexer-demo-tab-content tab-show" data-tab-id="word-type">
@@ -307,7 +310,7 @@
         </div>
         <div class="nlp-scenario-intro">
             <div class="nlp-scenario-header">多轮交互式搜索</div>
-            <div class="nlp-scenario-detail">通过专名识别技术定位多轮，自动判断后续对话中对该实体的进一步信息需求</div>
+            <div class="nlp-scenario-detail">通过专名识别定位多轮对话中的核心实体，自动判断后续对话中对该实体的进一步信息需求</div>
         </div>
     </div>
     <div class="nlp-scenario-item">
