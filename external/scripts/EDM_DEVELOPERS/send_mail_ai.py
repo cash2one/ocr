@@ -191,48 +191,48 @@ def gen_mail_content(xls_prefix, email, token):
 
     header = """
 <div align="center">
-<table style="margin:0 auto; width: 800px; background-color:#fff;font-family:'Microsoft Yahei';" border="0" cellspacing="0"
-       cellpadding="0">
+<table style=" width: 800px; background-color:#fff;font-family:'Microsoft Yahei';" border="0" cellspacing="0" cellpadding="0">
     <tbody>
-    <tr>
-        <td 
-            style="background-color: #14191d;text-align:left;height: 30px; color:#eee;padding: 10px 30px;">
-            <!--<span style="display:inline-block; line-height: 30px;font-size: 12px;">【百度大脑】一周热点</span>-->
-            <img src="data/common/ai_logo.png" height="30">
+    <tr style="background-color: #14191d;height: 30px;font-size:12px;">
+        <td style="padding:15px 30px;width:25%%;">
+            <a href="http://developer.baidu.com/?edm201701l" target="_blank">
+                <img src="data/common/developer_logo.png" height="30"></a>
         </td>
-        <td 
-            style="background-color: #14191d;text-align:right;height: 30px; padding: 10px 30px;font-size: 12px;">
-            <a href="http://ai.baidu.com/" style="line-height:30px; display: inline-block; color:#eee;">[浏览官网]</a>
-            <span style="line-height:30px; display: inline-block; color:#eee;"> | </span>
-            <a href="%s" style="line-height:30px; display: inline-block; color:#eee;">[退订]</a>
+        <td style="padding:15px 0;width:25%%;">
+            <a href=" https://ai.baidu.com/?edm201701l" target="_blank">
+                <img src="data/common/ai_logo.png" height="30">
+            </a>
+        </td>
+        <td colspan="2" style="text-align:right;padding:15px 30px;width:50%%;">
+            <a style="line-height:30px;display:inline-block;color:#fff;text-decoration:none;font-size:14px;"
+               href="https://ai.baidu.com/?edm201701RU" target="_blank">【浏览百度大脑官网】</a>
+
         </td>
     </tr>
     <tr>
-        <td colspan="2" style="padding-bottom: 15px; background-color: #14191d;">
+        <td colspan="4"  style="background-color:#14191d;">
             <a href="https://ai.baidu.com" target="_blank">
-                <img style="width:100%%; height:100%%;" src="data/common/header.png">
+                <img width="100%%" src="http://bos.nj.bpc.baidu.com/v1/developer/e3793c1a-1c9f-44d1-8fef-1115e4ee961a.png">
             </a>
         </td>
     </tr>
     """
     
-    header = header % unsubscribe_link.encode('utf8')
+    #header = header % unsubscribe_link.encode('utf8')
 
     content = """
     <tr>
-        <td colspan="2" style="padding-bottom: 0px;">
+        <td rowspan="2" style="padding: 15px 30px;width:25%%;">
+            <img height="100" src="%s"  width="170" height="100" style="width:170px; height:100px">
+        </td>
+        <td colspan="3" style="padding: 15px 30px 0 15px;width: 600px;">
+            <h2 style="font-size: 16px;color:#666;">
+                <a style="color:#666;text-decoration:none;font-size: 16px;" href="%s" target="_blank">%s</a>
+            </h2>
         </td>
     </tr>
     <tr>
-        <td rowspan="2" style="padding: 3px 30px;">
-            <img src="%s" width="170" height="100" style="width:170px; height:100px">
-        </td>
-        <td style="padding: 5px 30px 0 0;">
-            <h2 style="font-size: 16px;color:#666;"><a href="%s" style='color:#555; '>%s</a></h2>
-        </td>
-    </tr>
-    <tr>
-        <td style="font-size: 14px;color:#999;padding: 0 30px 15px 0;">
+        <td colspan="3" style="font-size: 14px;color:#999;padding: 0 30px 15px 15px;width: 600px;">
             %s
         </td>
     </tr>
@@ -240,18 +240,31 @@ def gen_mail_content(xls_prefix, email, token):
 
     footer = """
     <tr>
-        <td colspan="2" style="padding-top: 15px; border-top: 1px solid #aaa;" align="center">
-            <img width="200" height="200" src="data/common/gongzhonghao.png">
+        <td colspan="2" style="padding-top: 15px;text-align:center;width:50%%;">
+            <img src="data/common/ai_qr.png" width="200" height="200"></td>
+        <td colspan="2" style="padding-top: 15px;text-align:center;width:50%%;">
+            <img src="data/common/developer_qr.jpeg" width="200" height="200"></td>
+    </tr>
+    <tr>
+        <td colspan="2" style="padding: 15px;font-size:12px;text-align:center;width:50%%;">更多AI内容，请关注【百度大脑】微信公众号</td>
+        <td colspan="2" style="padding: 15px;font-size:12px;text-align:center;width:50%%;">了解百度更多开放技术，请关注【百度开发者中心】微信公众号
         </td>
     </tr>
     <tr>
-        <td colspan="2" style="padding-top: 15px; color:#aaa; font-size: 12px;" align="center">
-            更多内容，请关注【百度大脑】微信公众号
+        <td colspan="4" style="padding: 15px;font-size:12px;text-align:center;">
+            请勿回复此邮件，如有问题，欢迎发送邮件到<a href="mailto:developer_support@baidu.com">developer_support@baidu.com</a>咨询
         </td>
     </tr>
-    <tr>
-        <td colspan="2" style="padding: 15px 0; color:#aaa; font-size: 12px; border-bottom: 2px solid #00a;" align="center">
-            请勿直接回复此邮件，如有问题，欢迎发送邮件到 ai@baidu.com 咨询
+    <tr style="background-color: #14191d;height: 30px;">
+        <td colspan="3" style="padding:15px 0;text-align:right;">
+            <a href="http://developer.baidu.com/?edm201701r" target="_blank">
+               <img src="data/common/developer_logo.png" height="30">
+            </a>
+        </td>
+        <td style="padding:15px 30px;text-align:right;width:25%%;">
+            <a href="https://ai.baidu.com/?edm201701r" target="_blank">
+               <img src="data/common/ai_logo.png" height="30"></a>
+            </a>
         </td>
     </tr>
     </tbody>
@@ -288,19 +301,17 @@ if __name__ == '__main__':
 
     email = sys.argv[1]
     xls_prefix = "data/orginal/%s" % (time.strftime("%Y%m%d"))
-    # xls_prefix = "data/orginal/20161212"
+    #xls_prefix = "data/orginal/20170112"
 
-    all_user_info = get_subscribe_user(email)
-    for email, v in all_user_info.iteritems():
-        token = v['token']
-        # print email, token
     
-        html_data = gen_mail_content(xls_prefix, email, token)
-        content, img_list = get_mail_content(html_data)
-        # print content.encode('utf8')
-        
-        # send('xuyifei@baidu.com', 'test', content, img_list)
-        # st = SendThread('xuyifei@baidu.com', 'test', content, img_list)
-        # st = SendThread('yuxiangchichu@126.com', 'test', content, img_list)
-        st = SendThread(email, '【百度大脑】一周热点', content, img_list)
-        st.start()
+    token = ''
+    html_data = gen_mail_content(xls_prefix, email, token)
+    content, img_list = get_mail_content(html_data)
+    print content.encode('utf8')
+    exit(0)
+    
+    # send('xuyifei@baidu.com', 'test', content, img_list)
+    # st = SendThread('xuyifei@baidu.com', 'test', content, img_list)
+    # st = SendThread('yuxiangchichu@126.com', 'test', content, img_list)
+    st = SendThread(email, '【百度大脑】一周热点', content, img_list)
+    st.start()
