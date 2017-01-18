@@ -34,6 +34,10 @@ const entries = glob.sync(
     }
 );
 
+const removeExtenstion = function (filename) {
+    return filename.substr(0, filename.lastIndexOf('.') || filename);
+};
+
 // 样式独立打包
 const extractLESS = new ExtractTextPlugin(`${versionPath}/css/[name].css`);
 
@@ -44,13 +48,12 @@ const htmlWebpackPluginArr = [];
 // 需要抽取通用代码普通模块
 const normalModules = [];
 entries.forEach(entry => {
-    const {dir, name} = path.parse(entry);
-    const resourcePath = path.join(dir, name);
+    const resourcePath = removeExtenstion(entry);
 
     // 去除文件后缀，资源入数组，防止entry引用entry
-    webpackEntries[resourcePath] = [path.join('src', 'entry', entry)];
+    webpackEntries[resourcePath] = ['./' + path.join('src', 'entry', entry)];
     // less不需要在js中引入，最大程度减少破坏js,补充style是为了保证不和js入口名字冲突
-    webpackEntries[`${resourcePath}.style`] = [path.join('src', 'less', `${resourcePath}.less`)];
+    webpackEntries[`${resourcePath}.style`] = ['./' + path.join('src', 'less', `${resourcePath}.less`)];
 
     // 逐一添加plugin，生成html入口
     htmlWebpackPluginArr.push(
