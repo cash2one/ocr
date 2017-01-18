@@ -51,8 +51,9 @@ class Brain_Cloud {
                 $versionContent = json_decode(file_get_contents($odpDir."/webroot/version.json"), true);
                 $feVersion = $versionContent['currentVersion']['timeStamp'];
 
-                $css = "<link rel=\"stylesheet\" href=\"/ai_dist/$feVersion/css/technology/$tech.css\">\n";
-                $js = "<script src=\"/ai_dist/$feVersion/js/technology/$tech.bundle.js\"></script>\n";
+                $css = "<link rel=\"stylesheet\" href=\"/ai_dist/$feVersion/css/technology/$tech.style.css\">\n";
+                $js = "<script src=\"/ai_dist/$feVersion/js/technology/$tech.js\"></script>\n";
+                $js .= "<script src=\"/ai_dist/$feVersion/js/common.bundle.js\"></script>\n";
 
                 $content = str_ireplace('<main>', '<main class="ai-platform">', $content);
                 $content = str_ireplace('{{body}}', $tech_content, $content);

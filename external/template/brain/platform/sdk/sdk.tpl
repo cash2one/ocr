@@ -623,6 +623,26 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite sdk-python"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-ocr"></i>
+                            <a href="http://ai.baidu.com/download/aip-ocr-python-sdk-1.0.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">Python SDK</div>
+                            <div class="sdk-description"></div>
+                            <div class="sdk-bottom-info">
+                                <div class="sdk-version">版本: 1.0.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-05</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="sdk-category">
@@ -658,6 +678,26 @@
                         </div>
                         <div class="sdk-info">
                             <div class="sdk-item-name">PHP SDK</div>
+                            <div class="sdk-description"></div>
+                            <div class="sdk-bottom-info">
+                                <div class="sdk-version">版本: 1.0.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-05</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite sdk-python"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-bfr"></i>
+                            <a href="http://ai.baidu.com/download/aip-ocr-python-sdk-1.0.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">Python SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.0.0</div>
@@ -709,6 +749,26 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite sdk-python"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-nlp"></i>
+                            <a href="http://ai.baidu.com/download/aip-ocr-python-sdk-1.0.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">Python SDK</div>
+                            <div class="sdk-description"></div>
+                            <div class="sdk-bottom-info">
+                                <div class="sdk-version">版本: 1.0.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-05</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="sdk-category">
@@ -744,6 +804,26 @@
                         </div>
                         <div class="sdk-info">
                             <div class="sdk-item-name">PHP SDK</div>
+                            <div class="sdk-description"></div>
+                            <div class="sdk-bottom-info">
+                                <div class="sdk-version">版本: 1.0.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-05</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite sdk-python"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-anti"></i>
+                            <a href="http://ai.baidu.com/download/aip-ocr-python-sdk-1.0.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">Python SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.0.0</div>
