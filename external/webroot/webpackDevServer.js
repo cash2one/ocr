@@ -13,14 +13,14 @@ var port = 8088;
 
 app.use(
     '/ai_dist',
-    express.static(path.join(__dirname, 'asset'))
+    express.static(path.join(__dirname, 'dist'))
 );
 
 app.get('/html/*', function (req, res, next) {
     var relativePath = path.relative('/html', req.path);
 
     fs.readFile(
-        path.join(__dirname, 'asset', 'entry', relativePath),
+        path.join(__dirname, '..', 'template', 'brain', 'platform', relativePath),
         function (err, data) {
             if (err) {
                 next();
