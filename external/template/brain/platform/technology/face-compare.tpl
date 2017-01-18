@@ -198,12 +198,10 @@
     <div class="container">
         <h1>人脸对比</h1>
         <p>根据两张人脸的特征给出相似度评分<br>为您提供高精度的1:1人脸比对服务</p>
-        <div class="consult">
+        <div>
+            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">获取API Key</a>
             {%if $src eq Null%}
-            <a role="button" class="btn-primary media">商务合作</a>
-            {%/if%}
-            {%if $src !== Null%}
-            <a role="button" class="btn-primary media" href="mailto:ai@baidu.com">商务合作</a>
+            <a role="button" class="btn-other media" href="/docs#FACE">技术文档</a>
             {%/if%}
         </div>
     </div>
@@ -297,28 +295,39 @@
         <li><a>百度钱包</a></li>
     </ul>
 </section>
+{%if $userInfo eq Null%}
+<section class="tech-section get-started">
+    <div class="container">
+        <h2>立即获取免费API Key</h2>
+        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
+        <div>
+            <a role="button" class="btn-primary large" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+        </div>
+    </div>
+</section>
+{%/if%}
 {%if $src eq Null%}
-<section class="tech-section get-started">
+<section class="tech-section tech-guide">
     <div class="container">
-        <h2>快速提交您的需求</h2>
-        <p>您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</p>
-        <div class="consult">
-            <a role="button" class="btn-primary large">商务合作</a>
+        <h2>使用指南</h2>
+        <div class="guide-link clear-float">
+            <h3>开发指南</h3>
+            <ul>
+                <li><a href="/docs#FACE">技术文档 ></a></li>
+                <li><a href="/sdk">SDK下载 ></a></li>
+            </ul>
+        </div>
+        <div class="question-link clear-float">
+            <h3>常见问题</h3>
+            <ul>
+                <li><a href="/docs#FACE-FAQ_Q1">识别的图片支持怎样输入?</a></li>
+                <li><a href="/docs#FACE-FAQ_Q2">什么是base64编码，如何提供？</a></li>
+            </ul>
         </div>
     </div>
 </section>
 {%/if%}
-{%if $src !== Null%}
-<section class="tech-section get-started">
-    <div class="container">
-        <h2>快速提交您的需求</h2>
-        <p>您可以点击下方按钮向我们发送合作邮件，我们会尽快与您取得联系</p>
-        <div class="consult">
-            <a role="button" class="btn-primary large" href="mailto:ai@baidu.com">商务合作</a>
-        </div>
-    </div>
-</section>
-{%/if%}
+
 </div>
 <aside class="aside-action">
     <ul>
