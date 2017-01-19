@@ -60,7 +60,7 @@ content-type: application/x-www-form-urlencoded
 authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z/1800/host;x-bce-date/994014d96b0eb26578e039fa053a4f9003425da4bfedf33f4790882fb4c54903
 ```
 
-> **说明：**方式二鉴权使用的[API认证机制](https://cloud.baidu.com/doc/Reference/AuthenticationMechanism.html)authorization必须通过百度云的[AK/SK](https://cloud.baidu.com/doc/Reference/GetAKSK.html)生成。 
+> **说明：**方式二鉴权使用的[API认证机制](https://cloud.baidu.com/doc/Reference/AuthenticationMechanism.html)authorization必须通过百度云的[AK/SK](https://cloud.baidu.com/doc/Reference/GetAKSK.html)生成。
 
 
 # 错误信息格式
@@ -93,7 +93,7 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 ## 通用错误码
 
 | 错误码 | 错误信息 | 描述 |
-| --- | --- | --- | 
+| --- | --- | --- |
 | 216015 | module closed | 模块关闭 |
 | 216100 | invalid param | 非法参数 |
 | 216101 | not enough param | 参数数量不够 |
@@ -139,7 +139,8 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 * 请求URL： `https://aip.baidubce.com/rest/2.0/ocr/v1/general`
 
-* URL参数：
+* URL参数：<br>
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
@@ -173,7 +174,7 @@ image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 **请求参数**
 
 | 参数 | 是否必选 | 类型 | 可选值范围 | 说明 |
-| --- | --- | --- | ---- | ---- | 
+| --- | --- | --- | ---- | ---- |
 | image | true | string | - | 图像数据，base64编码 |
 | recognize_granularity | false | string | big、small | 是否定位单字符位置，big：不定位单字符位置，默认值；small：定位单字符位置  |
 | mask | false | string | - | 表示mask区域的黑白灰度图片，白色代表选中, base64编码 |
@@ -268,7 +269,8 @@ Content-Type: application/json;charset=UTF-8
 
 * 请求URL： `https://aip.baidubce.com/rest/2.0/ocr/v1/idcard`
 
-* URL参数：
+* URL参数：<br>
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
@@ -302,7 +304,7 @@ id_card_side=front&image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK...
 **请求参数**
 
 | 参数 | 是否必选 | 类型 | 可选值范围 | 说明 |
-| --- | --- | --- | ---- | ---- | 
+| --- | --- | --- | ---- | ---- |
 | detect_direction | false | boolean | true、false | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
 | id_card_side | true | string | front、back | front：身份证正面；back：身份证背面 |
 | image | true | string | - | 图像数据，base64编码 |
@@ -364,7 +366,8 @@ Content-Type: application/json;charset=UTF-8
 
 * 请求URL: `https://aip.baidubce.com/rest/2.0/ocr/v1/bankcard`
 
-* URL参数：
+* URL参数：<br>
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
@@ -421,4 +424,4 @@ image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 | +bank_card_number | string | 是    | 银行卡卡号         |
 
 
-​	
+​

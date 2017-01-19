@@ -5,11 +5,11 @@
 
 **请求消息体格式**
 
-API服务要求使用JSON格式的结构体来描述一个请求的具体内容。
+API服务要求使用JSON格式的结构体来描述一个请求的具体内容。**发送时需要对body整体进行GBK编码。**
 
 **请求返回格式**
 
-API服务均采用JSON格式的消息体作为响应返回的格式。
+API服务均采用JSON格式的消息体作为响应返回的格式。**返回内容为GBK编码**
 
 # 调用方式一
 
@@ -56,7 +56,7 @@ content-type: application/x-www-form-urlencoded;
 authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z/1800/host;x-bce-date/994014d96b0eb26578e039fa053a4f9003425da4bfedf33f4790882fb4c54903
 ```
 
-> **说明：**方式二鉴权使用的[API认证机制](https://cloud.baidu.com/doc/Reference/AuthenticationMechanism.html)authorization必须通过百度云的[AK/SK](https://cloud.baidu.com/doc/Reference/GetAKSK.html)生成。 
+> **说明：**方式二鉴权使用的[API认证机制](https://cloud.baidu.com/doc/Reference/AuthenticationMechanism.html)authorization必须通过百度云的[AK/SK](https://cloud.baidu.com/doc/Reference/GetAKSK.html)生成。
 
 # 错误信息格式
 
@@ -108,7 +108,8 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 * 请求URL: `https://aip.baidubce.com/rpc/2.0/nlp/v1/wordseg`
 
-* URL参数：
+* URL参数：<br>
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
@@ -152,7 +153,7 @@ authorization: {bce-authorization-string}
 
 | 参数名称     | 类型     | 详细说明                                     |
 | -------- | ------ | ---------------------------------------- |
-| query    | String | 必须，待分词的文本，目前输入编码统一为GBK                   |
+| query    | String | 必须，待分词的文本                   |
 | lang\_id | Int    | 非必须，默认为1，输入字符串的语言对应的id，简体中文设置为1（目前不支持其他语言） |
 
 **返回示例**
@@ -303,7 +304,8 @@ authorization: {bce-authorization-string}
 
 * 请求URL: `https://aip.baidubce.com/rpc/2.0/nlp/v1/wordpos`
 
-* URL参数：
+* URL参数：<br>
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
@@ -349,11 +351,11 @@ authorization: {bce-authorization-string}
 
 ```
 {
-  "result_out" : 
+  "result_out" :
      [
-           {"word" : "你好", "offset" : 0, "length" : 1, "type" : "v", "confidence" : 1.0}, 
+           {"word" : "你好", "offset" : 0, "length" : 1, "type" : "v", "confidence" : 1.0},
            {"word" : "百度", "offset" : 1, "length" : 1, "type" : "nz", "confidence" : 1.0}
-      ] 
+      ]
 }
 ```
 
@@ -424,7 +426,8 @@ authorization: {bce-authorization-string}
 
 * 请求URL: `https://aip.baidubce.com/rpc/2.0/nlp/v1/wordembedding`
 
-* URL参数：
+* URL参数：<br>
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
@@ -542,7 +545,8 @@ authorization: {bce-authorization-string}
 
 * 请求URL： `https://aip.baidubce.com/rpc/2.0/nlp/v1/dnnlm\_cn`
 
-* URL参数：
+* URL参数：<br>
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
@@ -614,7 +618,8 @@ authorization: {bce-authorization-string}
 
 * 请求URL： `https://aip.baidubce.com/rest/2.0/nlp/v1/simnet`
 
-* URL参数：
+* URL参数：<br>
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
@@ -630,7 +635,7 @@ authorization: {bce-authorization-string}
 {
   "input":
     {
-      "qslots":[{"terms_sequence":"你好百度” ", "type":0, "items":[]}], 
+      "qslots":[{"terms_sequence":"你好百度” ", "type":0, "items":[]}],
       "tslots":[{"terms_sequence":"你好世界” ", "type":0, "items":[]}],
       "type":0
     }
@@ -652,7 +657,7 @@ authorization: {bce-authorization-string}
 {
   "input":
     {
-      "qslots":[{"terms_sequence":"你好百度” ", "type":0, "items":[]}], 
+      "qslots":[{"terms_sequence":"你好百度” ", "type":0, "items":[]}],
       "tslots":[{"terms_sequence":"你好世界” ", "type":0, "items":[]}],
       "type":0
     }
@@ -694,7 +699,7 @@ authorization: {bce-authorization-string}
 | error\_note | error对应文字说明 |
 | items       | 默认为空        |
 
-**错误码说明**  
+**错误码说明**
 
 | Code | Message               | 返回说明      |
 | ---- | --------------------- | --------- |
@@ -720,7 +725,8 @@ authorization: {bce-authorization-string}
 
 * 请求URL: `https://aip.baidubce.com/rpc/2.0/nlp/v1/comment\_tag`
 
-* URL参数：
+* URL参数：<br>
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |

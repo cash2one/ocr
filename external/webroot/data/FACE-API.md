@@ -43,7 +43,7 @@ https://aip.baidubce.com/rest/2.0/face/v1/detect?access_token=24.f9ba9c5241b6768
 * x-bce-date （必填）
 * x-bce-request-id（选填）
 * authorization（必填）
-* content-type（必填） 
+* content-type（必填）
 * content-length（选填）
 
 作为示例，以下是一个标准的人脸识别的请求头域内容:
@@ -60,7 +60,7 @@ content-type: application/json
 authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z/1800/host;x-bce-date/994014d96b0eb26578e039fa053a4f9003425da4bfedf33f4790882fb4c54903
 ```
 
-> **说明：**方式二鉴权使用的[API认证机制](https://cloud.baidu.com/doc/Reference/AuthenticationMechanism.html)authorization必须通过百度云的[AK/SK](https://cloud.baidu.com/doc/Reference/GetAKSK.html)生成。 
+> **说明：**方式二鉴权使用的[API认证机制](https://cloud.baidu.com/doc/Reference/AuthenticationMechanism.html)authorization必须通过百度云的[AK/SK](https://cloud.baidu.com/doc/Reference/GetAKSK.html)生成。
 
 # 错误信息格式
 
@@ -137,7 +137,8 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 * 请求URL： `https://aip.baidubce.com/rest/2.0/face/v1/detect`
 
-* URL参数：
+* URL参数：<br>
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
@@ -162,7 +163,7 @@ x-bce-date: {utc-date-string}
 connection: keep-alive
 accept: */*
 host: aip.baidubce.com
-content-type: application/json 
+content-type: application/json
 authorization: {bce-authorization-string}
 
 image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
@@ -302,7 +303,8 @@ image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 - HTTP方法：POST
 - 请求URL： `https://aip.baidubce.com/rest/2.0/faceverify/v1/match`
 
-* URL参数：
+* URL参数：<br>
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
@@ -328,7 +330,7 @@ x-bce-date: {utc-date-string}
 connection: keep-alive
 accept: */*
 host: aip.baidubce.com
-content-type: application/json 
+content-type: application/json
 authorization: {bce-authorization-string}
 
 images=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
