@@ -11,18 +11,21 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/ai_images/favicon-32.ico">
-    <link rel="stylesheet" href="/ai_dist/css/base.css">
+    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
+
     <!--[if IE 9]>
-    <link rel="stylesheet" href="/ai_dist/css/ie9.css">
+    <link rel="stylesheet" href="/ai_dist/1484138428/css/ie9.css">
+    <script src="/ai_dist/js/lib/input-placeholder-polyfill.min.js"></script>
     <![endif]-->
-<link rel="stylesheet" href="/ai_dist/css/home.css"></head>
+    <link rel="stylesheet" href="/ai_dist/1484138428/css/base.css">
+    <link rel="stylesheet" href="/ai_dist/1484138428/css/home.style.css">
+</head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="/ai_images/logo.png" alt="百度大脑">
+                <img src="/ai_dist/1484138428/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -202,7 +205,7 @@
             <div>
                 <a role="button" class="get-started" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
             </div>
-            <video src="/ai_images/home/banner-1.mp4"></video>
+            <video src="/ai_dist/1484138428/ai_images/home/banner-1.mp4"></video>
         </li>
         <li>
             <a href="/tech/face/detect">
@@ -508,25 +511,25 @@
         <ul class="video-list clear-float">
             <li>
                 <a href="http://www.chuanke.com/v7867982-208144-1278714.html" target="_blank">
-                    <img src="/ai_images/home/video-1.jpg">
+                    <img src="/ai_dist/1484138428/ai_images/home/video-1.jpg">
                 </a>
                 <h5>百度语音基础介绍及应用场景</h5>
             </li>
             <li>
                 <a href="http://www.chuanke.com/v7867982-208539-1278740.html" target="_blank">
-                    <img src="/ai_images/home/video-2.jpg">
+                    <img src="/ai_dist/1484138428/ai_images/home/video-2.jpg">
                 </a>
                 <h5>百度OCR基础介绍及应用场景</h5>
             </li>
             <li>
                 <a href="http://www.chuanke.com/v7867982-208540-1278742.html" target="_blank">
-                    <img src="/ai_images/home/video-3.jpg">
+                    <img src="/ai_dist/1484138428/ai_images/home/video-3.jpg">
                 </a>
                 <h5>百度人脸技术基础介绍及引用场景</h5>
             </li>
             <li>
                 <a href="http://www.chuanke.com/v7867982-208173-1278732.html" target="_blank">
-                    <img src="/ai_images/home/video-4.jpg">
+                    <img src="/ai_dist/1484138428/ai_images/home/video-4.jpg">
                 </a>
                 <h5>百度翻译产品介绍</h5>
             </li>
@@ -635,7 +638,7 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/js/base.bundle.js"></script>
+<script src="/ai_dist/1484138428/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {
@@ -695,5 +698,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="/ai_dist/js/home.bundle.js"></script></body>
+<script src="/ai_dist/1484138428/js/common.bundle.js"></script>
+<script src="/ai_dist/1484138428/js/home.js"></script>
+</body>
 </html>

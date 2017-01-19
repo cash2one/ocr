@@ -1,4 +1,4 @@
-FROM registry.qianmo.baidu.com/qianmo/ftqa/bdg/524/public/ai-platform:node_basic
+FROM registry.qianmo.baidu.com/qianmo/ftqa/bdg/524/public/ai-platform:node_with_yarn
 MAINTAINER ZhouYingfeng <zhouyingfeng@baidu.com>
 
 ENV AIP_DOWN="/aip_download"
@@ -8,6 +8,7 @@ COPY external/webroot/package.json ${AIP_DOWN}
 COPY external/webroot/bower.json ${AIP_DOWN}
 
 WORKDIR ${AIP_DOWN}
+RUN yarn
 RUN npm install
 RUN bower install --allow-root
 

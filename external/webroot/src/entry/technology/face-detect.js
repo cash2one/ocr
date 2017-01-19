@@ -9,6 +9,21 @@ import DemoCanvas from '../../component/widget/demoCanvas';
 import {scanFace} from '../../model/demoAPI';
 import AlertModal from '../../component/widget/alertModal';
 
+/* eslint-disable */
+// demo图片路径集合，TODO 后填充图片地址，略不合理
+const demoImagePaths = [
+    // 静态引入，不要尝试些变量！
+    require('../../../ai_images/technology/bfr-detect/demo-card-1.jpg'),
+    require('../../../ai_images/technology/bfr-detect/demo-card-2.jpg'),
+    require('../../../ai_images/technology/bfr-detect/demo-card-3.jpg'),
+    require('../../../ai_images/technology/bfr-detect/demo-card-4.png'),
+    require('../../../ai_images/technology/bfr-detect/demo-card-5.png'),
+    require('../../../ai_images/technology/bfr-detect/demo-card-6.jpg'),
+    require('../../../ai_images/technology/bfr-detect/demo-card-7.jpg'),
+    require('../../../ai_images/technology/bfr-detect/demo-card-8.jpg')
+];
+/* eslint-enable */
+
 $(document).ready(function () {
     // case点击效果
     $('.case-indicator > li').click(function () {
@@ -330,8 +345,15 @@ $(document).ready(function () {
         }
     });
 
+    const $demoImgContainer = $('.demo-card-list > li');
+    $demoImgContainer.each(function (index, element) {
+        $(element)
+            .find('img')
+            .attr('src', `${window.location.protocol}//${window.location.host}${demoImagePaths[index]}`);
+    });
+
     // 绑定实例图点击事件
-    $('.demo-card-list > li').click(function () {
+    $demoImgContainer.click(function () {
         if (isScanning) {
             new AlertModal('操作正在进行中，请稍候再试！');
             return;
@@ -339,7 +361,7 @@ $(document).ready(function () {
         isScanning = true;
         $('.demo-card-list > li').removeClass('active');
         $(this).addClass('active');
-        let url = window.location.protocol + '//' + window.location.host + $(this).find('img').attr('src');
+        let url = $(this).find('img').attr('src');
         $('#demo-photo-upload, #scan-photo').addClass('disabled');
         new DemoCanvas({
             selector: '#demo-result .canvas-container',
