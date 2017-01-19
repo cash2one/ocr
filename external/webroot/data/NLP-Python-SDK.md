@@ -289,12 +289,3 @@ result = aipNlp.commentTag('特斯拉外观很漂亮', options)
 | +raw_adj_begin_pos  | Int      | 词向量结果                 |
 | +degree_adv         | String   | 原始副词                  |
 | +degree_adv_pos     | Int      | 词向量结果                 |
-
-# 版本更新说明
-
-##
-
-* 第一版
-
-
-

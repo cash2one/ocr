@@ -100,7 +100,7 @@ def get_file_content(filePath):
 
 # 定义参数变量
 options = {
-    'max_face_num': 1, 
+    'max_face_num': 1,
     'face_fields': "age,beauty,expression,faceshape",
 }
 
@@ -300,12 +300,3 @@ result = aipFace.match([
     ]
 }
 ```
-
-# 版本更新说明
-
-##
-
-* 第一版
-
-
-

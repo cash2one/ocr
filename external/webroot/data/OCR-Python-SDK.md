@@ -362,12 +362,3 @@ result = aipOcr.idcard(get_file_content('idcard.jpg'), isFront, options)
   "words_result_num": 6
 }
 ```
-
-# 版本更新说明
-
-##
-
-* 第一版
-
-
-

@@ -121,12 +121,3 @@ result = aipAntiPorn.detect(get_file_content('antiporn.jpg'))
   ]
 }
 ```
-
-# 版本更新说明
-
-##
-
-* 第一版
-
-
-

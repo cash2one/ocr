@@ -371,12 +371,12 @@
                         <li name="FACE-API" class="non-leaf">
                             <a class="click-node" tag="FACE-API" href="javascript:void(0)"><span class="icon-arrow-down"></span>API 文档</a>
                             <ul class="level3 submenu">
-                                
+
                                 <li name="" class="leaf"><a href="javascript:void(0)"><i></i>简介</a></li>
                                 <li name="" class="leaf"><a href="javascript:void(0)"><i></i>调用方式一</a></li>
                                 <li name="" class="leaf"><a href="javascript:void(0)"><i></i>调用方式二</a></li>
                                 <li name="" class="leaf"><a href="javascript:void(0)"><i></i>错误信息格式</a></li>
-                                <li name="" class="leaf"><a href="javascript:void(0)"><i></i>人脸检测</a></li>
+                                <li name="" class="leaf"><a href="javascript:void(0)"><i></i>识别接口</a></li>
                             </ul>
                         </li>
                         <li name="FACE-SDK" class="non-leaf">
