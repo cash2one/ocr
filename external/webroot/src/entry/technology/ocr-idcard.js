@@ -9,6 +9,17 @@ import DemoCanvas from '../../component/widget/demoCanvas';
 import {scanIDCard} from '../../model/demoAPI';
 import AlertModal from '../../component/widget/alertModal';
 
+/* eslint-disable */
+const demoImgPath = [
+    require('../../../ai_images/technology/ocr-idcard/demo-card-1.png'),
+    require('../../../ai_images/technology/ocr-idcard/demo-card-2.png'),
+    require('../../../ai_images/technology/ocr-idcard/demo-card-3.png'),
+    require('../../../ai_images/technology/ocr-idcard/demo-card-4.png'),
+    require('../../../ai_images/technology/ocr-idcard/demo-card-5.png'),
+    require('../../../ai_images/technology/ocr-idcard/demo-card-6.png')
+];
+/* eslint-enable */
+
 $(document).ready(function () {
     // case点击效果
     $('.case-indicator > li').click(function () {
@@ -61,7 +72,7 @@ $(document).ready(function () {
         $('#demo-json > p').empty();
         $('#demo-result .result-background').attr('class', 'result-background loading');
         let options = {
-            success: function (res) {
+            success(res) {
                 $('#demo-photo-upload, #scan-photo').removeClass('disabled');
                 $('#demo-json > p').html(JSON.stringify(res, null, '\t'));
                 $('#demo-result .result-background').removeClass('loading');
@@ -93,14 +104,15 @@ $(document).ready(function () {
                     .toggleClass('error-no-result', hasNoResult);
                 isScanning = false;
             },
-            fail: function (xhr) {
+            fail(xhr) {
                 new AlertModal('接口发生错误：' + xhr.status + ' - ' + xhr.statusText);
                 resetDemo();
             }
         };
         if (type === 'url') {
             options.imageUrl = url;
-        } else if (type === 'stream') {
+        }
+        else if (type === 'stream') {
             options.image = imgSrc;
         }
 
@@ -123,7 +135,7 @@ $(document).ready(function () {
             selector: '#demo-origin',
             image: file,
             type: 'stream',
-            success: imgSrc => {
+            success(imgSrc) {
                 $('#demo-photo-upload  > input').val('');
                 startScan('stream', imgSrc);
             },
@@ -153,7 +165,7 @@ $(document).ready(function () {
             image: url,
             type: 'url',
             apiType: 'idcard',
-            success: imgSrc => {
+            success(imgSrc) {
                 startScan('url', imgSrc, url);
             },
             fail: resetDemo
@@ -167,8 +179,16 @@ $(document).ready(function () {
         }
     });
 
+    const $demoCartList = $('.demo-card-list > li');
+
+    $demoCartList.each(function (index, item) {
+        $(item)
+            .find('img')
+            .attr('src', `${window.location.protocol}//${window.location.host}${demoImgPath[index]}`);
+    });
+
     // 绑定实例图点击事件
-    $('.demo-card-list > li').click(function () {
+    $demoCartList.click(function () {
         if (isScanning) {
             new AlertModal('操作正在进行中，请稍候再试！');
             return;
@@ -176,14 +196,14 @@ $(document).ready(function () {
         isScanning = true;
         $('.demo-card-list > li').removeClass('active');
         $(this).addClass('active');
-        let url = window.location.protocol + '//' + window.location.host + $(this).find('img').attr('src');
+        let url = $(this).find('img').attr('src');
         $('#demo-photo-upload, #scan-photo').addClass('disabled');
         new DemoCanvas({
             selector: '#demo-origin',
             image: url,
             type: 'url',
             toCheck: false,
-            success: imgSrc => {
+            success(imgSrc) {
                 startScan('url', imgSrc, url);
             },
             fail: resetDemo
