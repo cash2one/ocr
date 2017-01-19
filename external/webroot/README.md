@@ -17,3 +17,10 @@ yarn bump -- 生成新版本号，并构建<br>
 
 ## 构建过程说明<br>
 构建中静态分析，检测html,less中中引用的静态资源地址在源文件中是否存在，如果不存在则报错，无法通过编译，确保线上不会丢失静态资源<br>
+
+## 环境地址汇总<br>
+线下沙盒环境: http://cp01-yf-db-02.epc.baidu.com:8033/<br>
+线下沙盒环境jenkins: http://tg.jenkins.baidu.com/job/ai_platform_web_docker_build_branch<br>
+测试环境: http://cp01-data-flow-research.epc.baidu.com:8032<br>
+测试环境jenkins: http://tg.jenkins.baidu.com/job/holmes_aip_branch_deploy/<br>
+* 线下jenkins服务有外网权限<br>

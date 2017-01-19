@@ -347,7 +347,9 @@ $(document).ready(function () {
 
     const $demoImgContainer = $('.demo-card-list > li');
     $demoImgContainer.each(function (index, element) {
-        $(element).find('img').attr('src', `//${window.location.host}${demoImagePaths[index]}`);
+        $(element)
+            .find('img')
+            .attr('src', `${window.location.protocol}//${window.location.host}${demoImagePaths[index]}`);
     });
 
     // 绑定实例图点击事件
