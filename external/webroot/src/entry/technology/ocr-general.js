@@ -16,7 +16,9 @@ const demoImgPath = [
     require('../../../ai_images/technology/ocr-general/demo-card-3.png'),
     require('../../../ai_images/technology/ocr-general/demo-card-4.png'),
     require('../../../ai_images/technology/ocr-general/demo-card-5.png'),
-    require('../../../ai_images/technology/ocr-general/demo-card-6.jpg')
+    require('../../../ai_images/technology/ocr-general/demo-card-6.jpg'),
+    require('../../../ai_images/technology/ocr-general/demo-card-7.png'),
+    require('../../../ai_images/technology/ocr-general/demo-card-8.png')
 ];
 /* eslint-enable */
 
