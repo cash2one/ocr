@@ -199,7 +199,7 @@
 <div class="ai-platform page-content">
 <div class="video-banner">
     <div class="video-banner-title">教学视频</div>
-    <div class="video-banner-intro">观看一下教学视频，将跳转至百度传课页面</div>
+    <div class="video-banner-intro">观看以下教学视频，将跳转至百度传课页面</div>
 </div>
 <div class="video-container container">
     <div class="video-category">
