@@ -33,7 +33,7 @@ class Brain_Cloud {
             mkdir($templateDir);
         }
             
-        $isTemplateExpired = Brain_Memcache::get(Brain_Cloud::MEMCACHE_KEY_TEMPLATE);
+        $isTemplateExpired = Brain_Memcache::get(Brain_Cloud::MEMCACHE_KEY_TEMPLATE.$_SERVER["SERVER_ADDR"]);
         $isTemplateExists = file_exists($templateFile);
 
         if(empty($isTemplateExpired) || !$isTemplateExists)
@@ -64,7 +64,7 @@ class Brain_Cloud {
                 
                 file_put_contents($templateFile, $content);
 
-                Brain_Memcache::set(Brain_Cloud::MEMCACHE_KEY_TEMPLATE, 1, Brain_Cloud::TEMPLATE_LIFE_TIME);
+                Brain_Memcache::set(Brain_Cloud::MEMCACHE_KEY_TEMPLATE.$_SERVER["SERVER_ADDR"], 1, Brain_Cloud::TEMPLATE_LIFE_TIME);
             }
         }
 
