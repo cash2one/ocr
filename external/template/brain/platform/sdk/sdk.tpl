@@ -179,9 +179,6 @@
                 <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
-                {%if $userInfo.internalLink !== Null%}
-                <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
-                {%/if%}
                 <li>
                     <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
@@ -602,7 +599,7 @@
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-20</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
                             </div>
                         </div>
                     </div>
@@ -621,7 +618,7 @@
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-20</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
                             </div>
                         </div>
                     </div>
@@ -641,7 +638,7 @@
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-20</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
                             </div>
                         </div>
                     </div>
@@ -665,7 +662,7 @@
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-20</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
                             </div>
                         </div>
                     </div>
@@ -684,7 +681,7 @@
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-20</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
                             </div>
                         </div>
                     </div>
@@ -704,7 +701,7 @@
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-20</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
                             </div>
                         </div>
                     </div>
@@ -728,7 +725,7 @@
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-20</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
                             </div>
                         </div>
                     </div>
@@ -747,7 +744,7 @@
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-20</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
                             </div>
                         </div>
                     </div>
@@ -767,7 +764,7 @@
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-20</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
                             </div>
                         </div>
                     </div>
@@ -791,7 +788,7 @@
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-20</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
                             </div>
                         </div>
                     </div>
@@ -810,7 +807,7 @@
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-20</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
                             </div>
                         </div>
                     </div>
@@ -830,7 +827,7 @@
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-20</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
                             </div>
                         </div>
                     </div>
