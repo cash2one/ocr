@@ -146,11 +146,13 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
 
 * Header如下：
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | Content-Type | application/x-www-form-urlencoded |
 
 * Body中数据示例：
+
 | 参数    | 值          |
 | ----- | ---------- |
 | image | 图像base64编码 |
@@ -276,11 +278,13 @@ Content-Type: application/json;charset=UTF-8
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
 
 * Header如下：
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | Content-Type | application/x-www-form-urlencoded |
 
 * Body中数据如下：
+
 | 参数           | 值                                    |
 | ------------ | ------------------------------------ |
 | image        | 图像base64编码                           |
@@ -373,11 +377,13 @@ Content-Type: application/json;charset=UTF-8
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
 
 * Header如下：
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | Content-Type | application/x-www-form-urlencoded |
 
 * Body中数据如下：
+
 | 参数    | 值          |
 | ----- | ---------- |
 | image | 图像base64编码 |

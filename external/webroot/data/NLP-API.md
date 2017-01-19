@@ -115,6 +115,7 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
 
 * Header如下：
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | Content-Type | application/json |
@@ -311,6 +312,7 @@ authorization: {bce-authorization-string}
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
 
 * Header如下：
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | Content-Type | application/json |
@@ -433,6 +435,7 @@ authorization: {bce-authorization-string}
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
 
 * Header如下：
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | Content-Type | application/json |
@@ -552,6 +555,7 @@ authorization: {bce-authorization-string}
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
 
 * Header如下：
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | Content-Type | application/json |
@@ -625,6 +629,7 @@ authorization: {bce-authorization-string}
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
 
 * Header如下：
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | Content-Type | application/json |
@@ -732,6 +737,7 @@ authorization: {bce-authorization-string}
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
 
 * Header如下：
+
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | Content-Type | application/json |
