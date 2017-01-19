@@ -179,9 +179,6 @@
                 <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
-                {%if $userInfo.internalLink !== Null%}
-                <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
-                {%/if%}
                 <li>
                     <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
@@ -352,11 +349,14 @@
                         <li name="OCR-SDK" class="non-leaf">
                             <a href="javascript:void(0)"><span class="icon-arrow-down"></span>SDK 文档</a>
                             <ul class="level3 submenu">
-                                <li name="OCR-SDK-Javacode" class="non-leaf sdk-node">
-                                    <a class="click-node" tag="OCR-SDK-Javacode" href="javascript:void(0)"><i></i>Java 语言</a>
+                                <li name="OCR-Java-SDK" class="non-leaf sdk-node">
+                                    <a class="click-node" tag="OCR-Java-SDK" href="javascript:void(0)"><i></i>Java 语言</a>
                                 </li>
-                                <li name="OCR-SDK-Phpcode" class="non-leaf sdk-node">
-                                    <a class="click-node" tag="OCR-SDK-Phpcode" href="javascript:void(0)"><i></i>PHP 语言</a>
+                                <li name="OCR-PHP-SDK" class="non-leaf sdk-node">
+                                    <a class="click-node" tag="OCR-PHP-SDK" href="javascript:void(0)"><i></i>PHP 语言</a>
+                                </li>
+                                <li name="OCR-Python-SDK" class="non-leaf sdk-node">
+                                    <a class="click-node" tag="OCR-Python-SDK" href="javascript:void(0)"><i></i>Python 语言</a>
                                 </li>
                             </ul>
                         </li>
@@ -379,11 +379,14 @@
                         <li name="FACE-SDK" class="non-leaf">
                             <a href="javascript:void(0)"><span class="icon-arrow-down"></span>SDK 文档</a>
                             <ul class="level3 submenu">
-                                <li name="FACE-SDK-Javacode" class="non-leaf sdk-node">
-                                    <a class="click-node" tag="FACE-SDK-Javacode" href="javascript:void(0)"><i></i>Java 语言</a>
+                                <li name="Face-Java-SDK" class="non-leaf sdk-node">
+                                    <a class="click-node" tag="Face-Java-SDK" href="javascript:void(0)"><i></i>Java 语言</a>
                                 </li>
-                                <li name="FACE-SDK-Phpcode" class="non-leaf sdk-node">
-                                    <a class="click-node" tag="FACE-SDK-Phpcode" href="javascript:void(0)"><i></i>PHP 语言</a>
+                                <li name="Face-PHP-SDK" class="non-leaf sdk-node">
+                                    <a class="click-node" tag="Face-PHP-SDK" href="javascript:void(0)"><i></i>PHP 语言</a>
+                                </li>
+                                <li name="Face-Python-SDK" class="non-leaf sdk-node">
+                                    <a class="click-node" tag="Face-Python-SDK" href="javascript:void(0)"><i></i>Python 语言</a>
                                 </li>
                             </ul>
                         </li>
@@ -410,11 +413,14 @@
                         <li name="NLP-SDK" class="non-leaf">
                             <a href="javascript:void(0)"><span class="icon-arrow-down"></span>SDK 文档</a>
                             <ul class="level3 submenu">
-                                <li name="NLP-SDK-Javacode" class="non-leaf sdk-node">
-                                    <a class="click-node" tag="NLP-SDK-Javacode" href="javascript:void(0)"><i></i>Java 语言</a>
+                                <li name="NLP-Java-SDK" class="non-leaf sdk-node">
+                                    <a class="click-node" tag="NLP-Java-SDK" href="javascript:void(0)"><i></i>Java 语言</a>
                                 </li>
-                                <li name="NLP-SDK-Phpcode" class="non-leaf sdk-node">
-                                    <a class="click-node" tag="NLP-SDK-Phpcode" href="javascript:void(0)"><i></i>PHP 语言</a>
+                                <li name="NLP-PHP-SDK" class="non-leaf sdk-node">
+                                    <a class="click-node" tag="NLP-PHP-SDK" href="javascript:void(0)"><i></i>PHP 语言</a>
+                                </li>
+                                <li name="NLP-Python-SDK" class="non-leaf sdk-node">
+                                    <a class="click-node" tag="NLP-Python-SDK" href="javascript:void(0)"><i></i>Python 语言</a>
                                 </li>
                             </ul>
                         </li>
@@ -436,11 +442,14 @@
                         <li name="Antiporn-SDK" class="non-leaf">
                             <a href="javascript:void(0)"><span class="icon-arrow-down"></span>SDK 文档</a>
                             <ul class="level3 submenu">
-                                <li name="Antiporn-SDK-Javacode" class="non-leaf sdk-node">
-                                    <a class="click-node" tag="Antiporn-SDK-Javacode" href="javascript:void(0)"><i></i>Java 语言</a>
+                                <li name="Antiporn-Java-SDK" class="non-leaf sdk-node">
+                                    <a class="click-node" tag="Antiporn-Java-SDK" href="javascript:void(0)"><i></i>Java 语言</a>
                                 </li>
-                                <li name="Antiporn-SDK-Phpcode" class="non-leaf sdk-node">
-                                    <a class="click-node" tag="Antiporn-SDK-Phpcode" href="javascript:void(0)"><i></i>PHP 语言</a>
+                                <li name="Antiporn-PHP-SDK" class="non-leaf sdk-node">
+                                    <a class="click-node" tag="Antiporn-PHP-SDK" href="javascript:void(0)"><i></i>PHP 语言</a>
+                                </li>
+                                <li name="Antiporn-Python-SDK" class="non-leaf sdk-node">
+                                    <a class="click-node" tag="Antiporn-Python-SDK" href="javascript:void(0)"><i></i>Python 语言</a>
                                 </li>
                             </ul>
                         </li>
