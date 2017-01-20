@@ -8,6 +8,12 @@ import $ from 'jquery';
 import {getHeader} from '../../model/demoAPI';
 import AlertModal from './alertModal';
 
+/* eslint-disable */
+const notFoundImg = require('../../../ai_images/error/not-found.png');
+const formatImg = require('../../../ai_images/error/image-format.png');
+const tooLargeImg = require('../../../ai_images/error/too-large.png');
+/* eslint-enable */
+
 export default class DemoCanvas {
     constructor({selector, image, type, apiType, toCheck = true, scale = 1, success, fail}) {
         if (!$(selector).context) {
@@ -65,21 +71,21 @@ export default class DemoCanvas {
                 let contentSize = res.data['Content-Length'];
                 if ((!contentType && !contentSize) || res.errno !== 0) {
                     // console.error('此错误可能是由于图片的同源策略造成的!');
-                    dfd.reject('/ai_images/error/not-found.png');
+                    dfd.reject(notFoundImg);
                     return;
                 }
                 if (!/image\/(png|bmp|jpg|jpeg)/.test(contentType)) {
-                    dfd.reject('/ai_images/error/image-format.png');
+                    dfd.reject(formatImg);
                     return;
                 }
                 if (contentSize > 2 * 1024 * 1024) {
-                    dfd.reject('/ai_images/error/too-large.png');
+                    dfd.reject(tooLargeImg);
                     return;
                 }
                 dfd.resolve(res.data.image_data);
             },
             fail: function () {
-                dfd.reject('/ai_images/error/not-found.png');
+                dfd.reject(notFoundImg);
             }
         });
         return dfd.promise();
@@ -89,23 +95,23 @@ export default class DemoCanvas {
         let dfd = $.Deferred();
         let reader = new FileReader();
         if (!image) {
-            dfd.reject('/ai_images/error/not-found.png');
+            dfd.reject(notFoundImg);
             return dfd.promise();
         }
         reader.readAsDataURL(image);
         reader.onload = e => {
             if (!/image\/(png|bmp|jpeg)/.test(image.type)) {
-                dfd.reject('/ai_images/error/image-format.png');
+                dfd.reject(formatImg);
                 return false;
             }
             if (image.size > 2 * 1024 * 1024) {
-                dfd.reject('/ai_images/error/too-large.png');
+                dfd.reject(tooLargeImg);
                 return false;
             }
             dfd.resolve(e.target.result);
         };
         reader.onerror = () => {
-            dfd.reject('/ai_images/error/not-found.png');
+            dfd.reject(notFoundImg);
         };
         return dfd.promise();
     }

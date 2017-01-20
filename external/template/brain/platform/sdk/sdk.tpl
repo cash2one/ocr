@@ -573,8 +573,8 @@
                             </a>
                         </div>
                         <div class="sdk-info">
-                            <div class="sdk-item-name">离线女生+男生数据包</div>
-                            <div class="sdk-description">女生+男生语音模型数据资源文件</div>
+                            <div class="sdk-item-name">离线女声+男声数据包</div>
+                            <div class="sdk-description">女声+男声语音模型数据资源文件</div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version"></div>
                                 <div class="sdk-update-date">发布时间: 2015-07-16</div>
@@ -637,7 +637,7 @@
                             </a>
                         </div>
                         <div class="sdk-info">
-                            <div class="sdk-item-name">python SDK</div>
+                            <div class="sdk-item-name">Python SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.1.0</div>
@@ -700,7 +700,7 @@
                             </a>
                         </div>
                         <div class="sdk-info">
-                            <div class="sdk-item-name">python SDK</div>
+                            <div class="sdk-item-name">Python SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.1.0</div>
@@ -763,7 +763,7 @@
                             </a>
                         </div>
                         <div class="sdk-info">
-                            <div class="sdk-item-name">python SDK</div>
+                            <div class="sdk-item-name">Python SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.1.0</div>
@@ -826,7 +826,7 @@
                             </a>
                         </div>
                         <div class="sdk-info">
-                            <div class="sdk-item-name">python SDK</div>
+                            <div class="sdk-item-name">Python SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.1.0</div>

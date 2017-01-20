@@ -222,6 +222,68 @@
         </div>
     </div>
 </section>
+<section class="tech-section tech-demo">
+    <div class="container">
+        <h2>功能演示</h2>
+        <div class="demo-container clear-float">
+            <div class="clear-float">
+                <div class="data-view-container">
+                    <div class="data-view" data-label="识别结果" id="demo-result">
+                        <div class="canvas-container"></div>
+                        <div id="result-gallery">
+                            <ul></ul>
+                        </div>
+                        <ul id="face-details">
+
+                        </ul>
+                    </div>
+                    <div class="demo-data">
+                        <label for="demo-photo-url" style="display:none"></label>
+                        <input type="text" id="demo-photo-url" placeholder="请输入网络图片URL" value="请输入网络图片URL">
+                        <button type="button" class="btn-primary" id="scan-photo">检测</button>
+                        <span>或</span>
+                        <label id="demo-photo-upload"><input type="file">本地上传</label>
+                    </div>
+                    <p class="demo-desc">
+                        提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片，图片大小不超过2M。为保证正常识别效果，请保证需要识别部分为图片主体部分。</p>
+                </div>
+                <div class="data-view-container">
+                    <div class="data-view" data-label="RESPONSE JSON" id="demo-json">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <ul class="demo-card-list clear-float">
+                    <li>
+                        <img src="/ai_dist/1484138428/ai_images/technology/antiporn/demo-card-1.jpg">
+                    </li>
+                    <li>
+                        <img src="/ai_dist/1484138428/ai_images/technology/antiporn/demo-card-2.jpg">
+                    </li>
+                    <li>
+                        <img src="/ai_dist/1484138428/ai_images/technology/antiporn/demo-card-3.jpg">
+                    </li>
+                    <li>
+                        <img src="/ai_dist/1484138428/ai_images/technology/antiporn/demo-card-4.jpg">
+                    </li>
+                    <li>
+                        <img src="/ai_dist/1484138428/ai_images/technology/antiporn/demo-card-5.jpg">
+                    </li>
+                    <li>
+                        <img src="/ai_dist/1484138428/ai_images/technology/antiporn/demo-card-6.jpg">
+                    </li>
+                    <li>
+                        <img src="/ai_dist/1484138428/ai_images/technology/antiporn/demo-card-7.jpg">
+                    </li>
+                    <li>
+                        <img src="/ai_dist/1484138428/ai_images/technology/antiporn/demo-card-8.jpg">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="tech-section tech-feature">
     <div class="container">
         <h2>技术特色</h2>
@@ -336,6 +398,7 @@
     </div>
 </section>
 {%/if%}
+
 </div>
 <aside class="aside-action">
     <ul>
