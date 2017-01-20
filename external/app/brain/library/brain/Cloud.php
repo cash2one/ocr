@@ -52,6 +52,7 @@ class Brain_Cloud {
                 $feVersion = $versionContent['currentVersion']['timeStamp'];
 
                 $css = "<link rel=\"stylesheet\" href=\"/ai_dist/$feVersion/css/technology/$tech.style.css\">\n";
+                $css .= "<!--[if IE 9]><link rel=\"stylesheet\" href=\"/ai_dist/$feVersion/css/ie9.css\"><![endif]-->";
 
                 $js = "<script src=\"/ai_dist/$feVersion/js/common.bundle.js\"></script>\n";
                 $js .= "<script src=\"/ai_dist/$feVersion/js/technology/$tech.js\"></script>\n";
