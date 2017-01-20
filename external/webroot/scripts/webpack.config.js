@@ -118,7 +118,9 @@ module.exports = {
         // 放入已包含时间戳的路径
         path: path.join(__dirname, '..', 'dist'),
         // TODO 添加时间戳路径,附带回滚机制
-        filename: `${versionPath}/js/[name].js`
+        filename: `${versionPath}/js/[name].js`,
+        // 优化jsonp函数名
+        jsonpFunction: 'duAI'
     },
     module: {
         loaders: [
