@@ -15,7 +15,6 @@
 
     <!--[if IE 9]>
     <link rel="stylesheet" href="/ai_dist/1484894584/css/ie9.css">
-    <script src="/ai_dist/js/lib/input-placeholder-polyfill.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="/ai_dist/1484894584/css/base.css">
     <link rel="stylesheet" href="/ai_dist/1484894584/css/technology/antiporn.style.css">
@@ -239,7 +238,7 @@
                     </div>
                     <div class="demo-data">
                         <label for="demo-photo-url" style="display:none"></label>
-                        <input type="text" id="demo-photo-url" placeholder="请输入网络图片URL" value="请输入网络图片URL">
+                        <input type="text" id="demo-photo-url" placeholder="请输入网络图片URL">
                         <button type="button" class="btn-primary" id="scan-photo">检测</button>
                         <span>或</span>
                         <label id="demo-photo-upload"><input type="file">本地上传</label>

@@ -15,7 +15,6 @@
 
     <!--[if IE 9]>
     <link rel="stylesheet" href="/ai_dist/1484894584/css/ie9.css">
-    <script src="/ai_dist/js/lib/input-placeholder-polyfill.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="/ai_dist/1484894584/css/base.css">
     <link rel="stylesheet" href="/ai_dist/1484894584/css/technology/speech-wake.style.css">
