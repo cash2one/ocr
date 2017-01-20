@@ -14,18 +14,18 @@
     <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="/ai_dist/1484138428/css/ie9.css">
+    <link rel="stylesheet" href="/ai_dist/1484894584/css/ie9.css">
     <script src="/ai_dist/js/lib/input-placeholder-polyfill.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="/ai_dist/1484138428/css/base.css">
-    <link rel="stylesheet" href="/ai_dist/1484138428/css/technology/ocr-bankcard.style.css">
+    <link rel="stylesheet" href="/ai_dist/1484894584/css/base.css">
+    <link rel="stylesheet" href="/ai_dist/1484894584/css/technology/ocr-bankcard.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="/ai_dist/1484138428/ai_images/logo.png" alt="百度大脑">
+                <img src="/ai_dist/1484894584/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -241,22 +241,22 @@
                 <p class="demo-desc">提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片，图片大小不超过2M，长边不超过2048像素。为保证正常识别效果，请保持银行卡正面向上，并为图片主体部分。</p>
                 <ul class="demo-card-list clear-float">
                     <li>
-                        <img src="/ai_dist/1484138428/ai_images/technology/ocr-bankcard/demo-card-1.png">
+                        <img src="/ai_dist/1484894584/ai_images/technology/ocr-bankcard/demo-card-1.png">
                     </li>
                     <li>
-                        <img src="/ai_dist/1484138428/ai_images/technology/ocr-bankcard/demo-card-2.png">
+                        <img src="/ai_dist/1484894584/ai_images/technology/ocr-bankcard/demo-card-2.png">
                     </li>
                     <li>
-                        <img src="/ai_dist/1484138428/ai_images/technology/ocr-bankcard/demo-card-3.png">
+                        <img src="/ai_dist/1484894584/ai_images/technology/ocr-bankcard/demo-card-3.png">
                     </li>
                     <li>
-                        <img src="/ai_dist/1484138428/ai_images/technology/ocr-bankcard/demo-card-4.png">
+                        <img src="/ai_dist/1484894584/ai_images/technology/ocr-bankcard/demo-card-4.png">
                     </li>
                     <li>
-                        <img src="/ai_dist/1484138428/ai_images/technology/ocr-bankcard/demo-card-5.png">
+                        <img src="/ai_dist/1484894584/ai_images/technology/ocr-bankcard/demo-card-5.png">
                     </li>
                     <li>
-                        <img src="/ai_dist/1484138428/ai_images/technology/ocr-bankcard/demo-card-6.png">
+                        <img src="/ai_dist/1484894584/ai_images/technology/ocr-bankcard/demo-card-6.png">
                     </li>
                 </ul>
             </div>
@@ -454,7 +454,7 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1484138428/js/base.bundle.js"></script>
+<script src="/ai_dist/1484894584/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {
@@ -514,7 +514,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="/ai_dist/1484138428/js/common.bundle.js"></script>
-<script src="/ai_dist/1484138428/js/technology/ocr-bankcard.js"></script>
+<script src="/ai_dist/1484894584/js/common.bundle.js"></script>
+<script src="/ai_dist/1484894584/js/technology/ocr-bankcard.js"></script>
 </body>
 </html>

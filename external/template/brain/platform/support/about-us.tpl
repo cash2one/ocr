@@ -14,18 +14,18 @@
     <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="/ai_dist/1484138428/css/ie9.css">
+    <link rel="stylesheet" href="/ai_dist/1484894584/css/ie9.css">
     <script src="/ai_dist/js/lib/input-placeholder-polyfill.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="/ai_dist/1484138428/css/base.css">
-    <link rel="stylesheet" href="/ai_dist/1484138428/css/support/about-us.style.css">
+    <link rel="stylesheet" href="/ai_dist/1484894584/css/base.css">
+    <link rel="stylesheet" href="/ai_dist/1484894584/css/support/about-us.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="/ai_dist/1484138428/ai_images/logo.png" alt="百度大脑">
+                <img src="/ai_dist/1484894584/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -270,7 +270,7 @@
     <div class="about-list-two-title">2. SDK</div>
     <div class="about-list-info">移动端&服务端应用SDK：获得开放能力，适合离在线场景，支持java/php等语言，支持 Android / iOS等平台。</div>
     <div class="about-list-two-title">使用流程</div>
-    <img class="about-list-img"  src="/ai_dist/1484138428/ai_images/support/about-us/lc-pic.png">
+    <img class="about-list-img"  src="/ai_dist/1484894584/ai_images/support/about-us/lc-pic.png">
 </section>
 {%if $userInfo eq Null%}
 <section class="tech-section get-started">
@@ -354,7 +354,7 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1484138428/js/base.bundle.js"></script>
+<script src="/ai_dist/1484894584/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {
@@ -414,7 +414,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="/ai_dist/1484138428/js/common.bundle.js"></script>
-<script src="/ai_dist/1484138428/js/support/about-us.js"></script>
+<script src="/ai_dist/1484894584/js/common.bundle.js"></script>
+<script src="/ai_dist/1484894584/js/support/about-us.js"></script>
 </body>
 </html>
