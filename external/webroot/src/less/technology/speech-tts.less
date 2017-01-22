@@ -12,327 +12,327 @@
 @import '../common/tech-page.less';
 
 .tech-section {
-  &.tech-intro{
-    height: 400px;
+    &.tech-intro {
+        height: 400px;
 
-    .tech-intro-detail {
-      height: 340px;
-      background-size: 1440px/2 600px/2;
-      .icon(@intro, center, center);
+        .tech-intro-detail {
+            height: 340px;
+            background-size: 1440px / 2 600px / 2;
+            .icon(@intro, center, center);
+        }
     }
-  }
 
-  &.tech-demo{
-    .demo-container {
-      width: 1000px;
-      margin: 0 auto;
-      height: 250px;
-      border: 1px solid fadeOut(@black, 90%);
-
-
-      & > div {
-        display: inline-block;
-        float: left;
-      }
-
-      .demo-icon {
-        margin-left: -100%;
-        width: 180px;
-        background-color: #e6f1fd;
-        height: 100%;
-        text-align: center;
-        position: relative;
-        border-right: 1px solid fadeOut(@black, 90%);
-
-        span {
-          color: #666;
-          font-size: @font-size-3;
-          position: relative;
-          top: 60%;
-        }
-
-        &::after {
-          content: "";
-          display: inline-block;
-          position: absolute;
-          top: 40%;
-          left: 50%;
-          height: 80px;
-          width: 80px;
-          background-size: 260px/2 200px/2;
-          -webkit-transform: translate(-50%, -50%);
-             -moz-transform: translate(-50%, -50%);
-              -ms-transform: translate(-50%, -50%);
-               -o-transform: translate(-50%, -50%);
-                  transform: translate(-50%, -50%);
-          .icon(@demo-icons, -5px, -10px);
-        }
-      }
-
-      .demo-input {
-        width: 100%;
-        height: 100%;
-
-        & > div {
-          margin-left: 180px;
-          height: 100%;
-          box-sizing: border-box;
-        }
-
-        .demo-text {
-          height: 160px;
-          position: relative;
-
-          &::after{
-            content: "还可以输入"attr(data-counter)"字";
-            display: inline-block;
-            position: absolute;
-            left: 5px;
-            bottom: 5px;
-            color: #999;
-          }
-
-          textarea {
-            width: 100%;
-            border: none;
-            border-bottom: 1px solid fadeOut(@black, 90%);
-            height: 100%;
-            resize: none;
-            padding: 10px;
-            color: #999;
-            background-color: #fafafa;
-            float: left;
-            box-sizing: border-box;
-            font-size: 14px;
-          }
-        }
+    &.tech-demo {
+        .demo-container {
+            width: 1000px;
+            margin: 0 auto;
+            height: 250px;
+            border: 1px solid fadeOut(@black, 90%);
 
 
-
-        .demo-settings {
-          height: 90px;
-          clear: left;
-
-          & > div {
-            float: left;
-            display: inline-block;
-            padding: 10px;
-            height: 100%;
-            box-sizing: border-box;
-          }
-          .demo-setting-title {
-            color: #666;
-            line-height: 30px;
-          }
-          .btn-normal {
-            border-color: @blue;
-
-            &.selected {
-              color: @white  !important;
-              background-color: @blue;
-              border-color: @blue;
-            }
-          }
-        }
-
-        .demo-control {
-          float: right !important;
-
-          & > * {
-            float: left;
-            margin-top: 10px;
-          }
-
-          .player {
-            display: inline-block;
-            height: 50px;
-            width: 50px;
-            border-radius: 27px;
-            border: 2px solid @blue;
-            background-size: 260px/2 200px/2;
-            box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
-
-            &:hover {
-              box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+            & > div {
+                display: inline-block;
+                float: left;
             }
 
-            &.play {
-              .icon(@demo-icons, -85px, 10px);
+            .demo-icon {
+                margin-left: -100%;
+                width: 180px;
+                background-color: #e6f1fd;
+                height: 100%;
+                text-align: center;
+                position: relative;
+                border-right: 1px solid fadeOut(@black, 90%);
+
+                span {
+                    color: #666;
+                    font-size: @font-size-3;
+                    position: relative;
+                    top: 60%;
+                }
+
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    top: 40%;
+                    left: 50%;
+                    height: 80px;
+                    width: 80px;
+                    background-size: 260px / 2 200px / 2;
+                    -webkit-transform: translate(-50%, -50%);
+                    -moz-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    -o-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    .icon(@demo-icons, -5px, -10px);
+                }
             }
 
-            &.pause {
-              .icon(@demo-icons, -86px, -60px);
-            }
-
-          }
-
-          .demo-speed {
-            color: #666;
-            line-height: 50px;
-            margin-left: 15px;
-            margin-right: 15px;
-            -webkit-user-select: none;
-               -moz-user-select: none;
-                -ms-user-select: none;
-                    user-select: none;
-
-            .demo-current-speed {
-              margin: 0 5px;
-              width: 20px;
-              text-align: center;
-              display: inline-block;
-
-              &::after {
-                content: attr(data-speed)'X';
-              }
-            }
-          }
-
-          .demo-volume {
-            .icon {
-              display: inline-block;
-              height: 20px;
-              width: 20px;
-              background-size: 260px/2 200px/2;
-              margin: 15px 5px;
-              .icon(@demo-icons, -105px, -39px);
-            }
-
-            .volume-slider {
-              display: inline-block;
-              width: 100px;
-              height: 2px;
-              background: #fafafa;
-              border-radius: 3px;
-              border: 1px solid transparent;
-              position: relative;
-              top: -21px;
-
-              &.noUi-target,
-              &.noUi-target * {
-                -webkit-touch-callout: none;
-                -webkit-tap-highlight-color: transparent;
-                -webkit-user-select: none;
-                -ms-touch-action: none;
-                touch-action: none;
-                -ms-user-select: none;
-                -moz-user-select: none;
-                user-select: none;
-                -moz-box-sizing: border-box;
-              }
-
-              .noUi-base {
+            .demo-input {
                 width: 100%;
                 height: 100%;
-                position: relative;
-                z-index: 1;
-                background: #e1e1e1;
 
-                .noUi-connect {
-                  background-color: @blue;
-                  position: absolute;
-                  right: 0;
-                  top: 0;
-                  left: 0;
-                  bottom: 0;
-                  border-radius: 3px;
+                & > div {
+                    margin-left: 180px;
+                    height: 100%;
+                    box-sizing: border-box;
                 }
-                .noUi-origin {
-                  position: absolute;
-                  height: 0;
-                  width: 0;
+
+                .demo-text {
+                    height: 160px;
+                    position: relative;
+
+                    &::after {
+                        content: "还可以输入"attr(data-counter)"字";
+                        display: inline-block;
+                        position: absolute;
+                        left: 5px;
+                        bottom: 5px;
+                        color: #999;
+                    }
+
+                    textarea {
+                        width: 100%;
+                        border: none;
+                        border-bottom: 1px solid fadeOut(@black, 90%);
+                        height: 100%;
+                        resize: none;
+                        padding: 10px;
+                        color: #999;
+                        background-color: #fafafa;
+                        float: left;
+                        box-sizing: border-box;
+                        font-size: 14px;
+                    }
                 }
-                .noUi-handle {
-                  position: relative;
-                  border-radius: 6px;
-                  height: 9px;
-                  width: 9px;
-                  background: @blue;
-                  left: -6px;
-                  top: -3px;
-                  cursor: pointer;
+
+
+
+                .demo-settings {
+                    height: 90px;
+                    clear: left;
+
+                    & > div {
+                        float: left;
+                        display: inline-block;
+                        padding: 10px;
+                        height: 100%;
+                        box-sizing: border-box;
+                    }
+                    .demo-setting-title {
+                        color: #666;
+                        line-height: 30px;
+                    }
+                    .btn-normal {
+                        border-color: @blue;
+
+                        &.selected {
+                            color: @white  !important;
+                            background-color: @blue;
+                            border-color: @blue;
+                        }
+                    }
                 }
-              }
+
+                .demo-control {
+                    float: right !important;
+
+                    & > * {
+                        float: left;
+                        margin-top: 10px;
+                    }
+
+                    .player {
+                        display: inline-block;
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 27px;
+                        border: 2px solid @blue;
+                        background-size: 260px / 2 200px / 2;
+                        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+
+                        &:hover {
+                            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+                        }
+
+                        &.play {
+                            .icon(@demo-icons, -85px, 10px);
+                        }
+
+                        &.pause {
+                            .icon(@demo-icons, -86px, -60px);
+                        }
+
+                    }
+
+                    .demo-speed {
+                        color: #666;
+                        line-height: 50px;
+                        margin-left: 15px;
+                        margin-right: 15px;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+
+                        .demo-current-speed {
+                            margin: 0 5px;
+                            width: 20px;
+                            text-align: center;
+                            display: inline-block;
+
+                            &::after {
+                                content: attr(data-speed)'X';
+                            }
+                        }
+                    }
+
+                    .demo-volume {
+                        .icon {
+                            display: inline-block;
+                            height: 20px;
+                            width: 20px;
+                            background-size: 260px / 2 200px / 2;
+                            margin: 15px 5px;
+                            .icon(@demo-icons, -105px, -39px);
+                        }
+
+                        .volume-slider {
+                            display: inline-block;
+                            width: 100px;
+                            height: 2px;
+                            background: #fafafa;
+                            border-radius: 3px;
+                            border: 1px solid transparent;
+                            position: relative;
+                            top: -21px;
+
+                            &.noUi-target,
+                            &.noUi-target * {
+                                -webkit-touch-callout: none;
+                                -webkit-tap-highlight-color: transparent;
+                                -webkit-user-select: none;
+                                -ms-touch-action: none;
+                                touch-action: none;
+                                -ms-user-select: none;
+                                -moz-user-select: none;
+                                user-select: none;
+                                -moz-box-sizing: border-box;
+                            }
+
+                            .noUi-base {
+                                width: 100%;
+                                height: 100%;
+                                position: relative;
+                                z-index: 1;
+                                background: #e1e1e1;
+
+                                .noUi-connect {
+                                    background-color: @blue;
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+                                    left: 0;
+                                    bottom: 0;
+                                    border-radius: 3px;
+                                }
+                                .noUi-origin {
+                                    position: absolute;
+                                    height: 0;
+                                    width: 0;
+                                }
+                                .noUi-handle {
+                                    position: relative;
+                                    border-radius: 6px;
+                                    height: 9px;
+                                    width: 9px;
+                                    background: @blue;
+                                    left: -6px;
+                                    top: -3px;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
             }
-          }
         }
-      }
-    }
-  }
-
-  &.tech-feature{
-    .feature-item + .feature-item{
-      margin-left: 110px;
-    }
-    .feature-item:nth-child(3n+1){
-      margin-left: 0;
-    }
-    .feature-item:nth-child(n+4){
-      margin-top: 15px;
-    }
-    .feature-item .feature-icon {
-      background-size: 690px/2 270px/2;
     }
 
-    .feature-item:nth-child(1) .feature-icon{
-      .icon(@icons, -90px, -5px);
+    &.tech-feature {
+        .feature-item + .feature-item {
+            margin-left: 110px;
+        }
+        .feature-item:nth-child(3n+1) {
+            margin-left: 0;
+        }
+        .feature-item:nth-child(n+4) {
+            margin-top: 15px;
+        }
+        .feature-item .feature-icon {
+            background-size: 690px / 2 270px / 2;
+        }
+
+        .feature-item:nth-child(1) .feature-icon {
+            .icon(@icons, -90px, -5px);
+        }
+        .feature-item:nth-child(2) .feature-icon {
+            .icon(@icons, -175px, -5px);
+        }
+        .feature-item:nth-child(3) .feature-icon {
+            .icon(@icons, -260px, -5px);
+        }
     }
-    .feature-item:nth-child(2) .feature-icon{
-      .icon(@icons, -175px, -5px);
-    }
-    .feature-item:nth-child(3) .feature-icon{
-      .icon(@icons, -260px, -5px);
-    }
-  }
-  &.tech-scene{
-    .scene-item .scene-icon {
-      background-size: 690px/2 270px/2;
+    &.tech-scene {
+        .scene-item .scene-icon {
+            background-size: 690px / 2 270px / 2;
+        }
+
+        .scene-item:nth-child(1) {
+            margin-left: 150px;
+            margin-right: 80px;
+            & .scene-icon {
+                .icon(@icons, -5px, -90px);
+            }
+        }
+        .scene-item:nth-child(2) {
+            margin-left: 80px;
+            margin-right: 150px;
+            & .scene-icon {
+                .icon(@icons, -50px, -90px);
+            }
+        }
     }
 
-    .scene-item:nth-child(1) {
-      margin-left: 150px;
-      margin-right: 80px;
-      & .scene-icon {
-        .icon(@icons, -5px, -90px);
-      }
-    }
-    .scene-item:nth-child(2) {
-      margin-left: 80px;
-      margin-right: 150px;
-      & .scene-icon {
-        .icon(@icons, -50px, -90px);
-      }
-    }
-  }
+    &.tech-case {
+        .case-item .case-icon {
+            background-size: 402px / 2 270px / 2;
+        }
 
-  &.tech-case {
-    .case-item .case-icon{
-      background-size: 402px/2 270px/2;
+        .case-item:nth-child(1) {
+            .icon(url('../../../ai_images/technology/speech-tts/case-1.png'), center, center);
+
+            .case-icon {
+                .icon(@case-icons, -5px, -5px);
+            }
+        }
+
+        .case-item:nth-child(2) {
+            .icon(url('../../../ai_images/technology/speech-tts/case-2.png'), center, center);
+
+            .case-icon {
+                .icon(@case-icons, -105px, -5px);
+            }
+        }
+
+        .case-indicator {
+            & > li:nth-child(1) {
+                .icon(@case-icons, -10px, -210px);
+            }
+            & > li:nth-child(2) {
+                .icon(@case-icons, -210px, -210px);
+            }
+        }
     }
-
-    .case-item:nth-child(1) {
-      .icon(url('../../../ai_images/technology/speech-tts/case-1.png'), center, center);
-
-      .case-icon {
-        .icon(@case-icons, -5px, -5px);
-      }
-    }
-
-    .case-item:nth-child(2) {
-      .icon(url('../../../ai_images/technology/speech-tts/case-2.png'), center, center);
-
-      .case-icon {
-        .icon(@case-icons, -105px, -5px);
-      }
-    }
-
-    .case-indicator {
-      & > li:nth-child(1) {
-        .icon(@case-icons, -10px, -210px);
-      }
-      & > li:nth-child(2) {
-        .icon(@case-icons, -210px, -210px);
-      }
-    }
-  }
 }

@@ -8,57 +8,57 @@
 @import '../common/tech-page.less';
 
 .tech-section {
-  &.tech-intro.solution{
-    .solution-case {
-      width: 320px;
-      height: 180px;
-      margin-left: 40px;
-    }
-  }
-
-  &.tech-feature{
-    .feature-item .feature-icon {
-      background-size: 520px/2 270px/2;
+    &.tech-intro.solution {
+        .solution-case {
+            width: 320px;
+            height: 180px;
+            margin-left: 40px;
+        }
     }
 
-    .feature-item:nth-child(1){
-      margin-left: 150px;
-      margin-right: 80px;
+    &.tech-feature {
+        .feature-item .feature-icon {
+            background-size: 520px / 2 270px / 2;
+        }
 
-      .feature-icon {
-        .icon(@icons, -5px, -5px);
-      }
-    }
-    .feature-item:nth-child(2){
-      margin-left: 80px;
-      margin-right: 150px;
+        .feature-item:nth-child(1) {
+            margin-left: 150px;
+            margin-right: 80px;
 
-      .feature-icon {
-        .icon(@icons, -90px, -5px);
-      }
+            .feature-icon {
+                .icon(@icons, -5px, -5px);
+            }
+        }
+        .feature-item:nth-child(2) {
+            margin-left: 80px;
+            margin-right: 150px;
 
-    }
-  }
-  &.tech-scene{
-    .scene-item .scene-icon{
-      background-size: 520px/2 270px/2;
-    }
+            .feature-icon {
+                .icon(@icons, -90px, -5px);
+            }
 
-    .scene-item:nth-child(1) {
-      margin-left: 150px;
-      margin-right: 80px;
-      .scene-icon {
-        .icon(@icons, -5px, -90px);
-      }
+        }
     }
-    .scene-item:nth-child(2) {
-      margin-left: 80px;
-      margin-right: 150px;
+    &.tech-scene {
+        .scene-item .scene-icon {
+            background-size: 520px / 2 270px / 2;
+        }
 
-      .scene-icon {
-        .icon(@icons, -50px, -90px);
-      }
+        .scene-item:nth-child(1) {
+            margin-left: 150px;
+            margin-right: 80px;
+            .scene-icon {
+                .icon(@icons, -5px, -90px);
+            }
+        }
+        .scene-item:nth-child(2) {
+            margin-left: 80px;
+            margin-right: 150px;
+
+            .scene-icon {
+                .icon(@icons, -50px, -90px);
+            }
+        }
     }
-  }
 
 }
