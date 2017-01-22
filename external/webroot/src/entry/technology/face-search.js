@@ -29,16 +29,22 @@ $(document).ready(function () {
     // 绑定功能介绍动画
     $('.tech-intro-detail').one('demo', function () {
         let counter = 0;
-        let interval = setInterval(function () {
-            let faces = $('.face-list > li');
-            faces.each((i, e) => {
-                $(e).toggleClass('scanning', i === counter);
-            });
-            if (counter === faces.length) {
-                clearInterval(interval);
-                $('.face-list > li').addClass('scanned');
-            }
-            counter++;
-        }, 700);
+        let faces = $('.face-list > li');
+
+        let interval = setInterval(
+            function () {
+                faces
+                    .removeClass('scanning')
+                    .eq(counter)
+                    .addClass('scanning');
+
+                if (counter++ === faces.length) {
+                    faces.addClass('scanned');
+
+                    clearInterval(interval);
+                }
+            },
+            700
+        );
     });
 });

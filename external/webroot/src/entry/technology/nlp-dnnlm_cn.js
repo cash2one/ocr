@@ -39,22 +39,26 @@ $(document).ready(function () {
         minScore = 0;
         let demoData = DNN_DATA[demoCounter++ % DNN_DATA.length];
         $('.demo-input').attr('data-text', demoData.text);
-        let options = [];
-        for (let word in demoData.options) {
-            let html = [
+
+        let options = Object.keys(demoData.options).map(word => {
+            const html = [
                 '<li>',
-                    '<a role="button" data-score="' + demoData.options[word] + '" class="btn-normal">',
-                        word,
-                    '</a>',
+                `    <a role="button" data-score="${demoData.options[word]}" class="btn-normal">${word}</a>`,
                 '</li>'
             ].join('');
+
             minScore = minScore === 0
                 ? demoData.options[word]
                 : (demoData.options[word] < minScore ? demoData.options[word] : minScore);
-            options.push($(html));
-        }
-        $('#demo-options').html(options)
-            .find('a.btn-normal').eq(0).click();
+
+            return $(html);
+        });
+
+        $('#demo-options')
+            .html(options)
+            .find('a.btn-normal')
+            .eq(0)
+            .click();
     });
 
     // demo选项切换

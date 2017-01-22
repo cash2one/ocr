@@ -5,7 +5,6 @@
 'use strict';
 
 import $ from 'jquery';
-import docAccordionMenu from '../../component/widget/docAccordionMenu';
 import marked from 'marked';
 import  '../../../bower_components/code-prettify/src/prettify';
 
@@ -37,7 +36,7 @@ let renderMdPage = function (tagName, clickNode, type) {
     $.ajax({
         type: 'GET',
         url: '/data/' + tagName + '.md',
-        success: function (res) {
+        success(res) {
             lastMdTag = tagName;
             $('#md_container').html(marked(res));
             $('code').addClass('prettyprint');
@@ -64,19 +63,19 @@ let bindAllNodeClick = function () {
     });
 };
 
-let bindAllLeafClick = function () {
-    $('.leaf-node').click(function () {
-        let tagName =  $(this).attr('tag');
-        if (tagName) {
-            renderMdPage(tagName, $(this), 'leaf');
-        }
-    });
-};
+// let bindAllLeafClick = function () {
+//     $('.leaf-node').click(function () {
+//         let tagName =  $(this).attr('tag');
+//         if (tagName) {
+//             renderMdPage(tagName, $(this), 'leaf');
+//         }
+//     });
+// };
 
 $.ajax({
     type: 'GET',
     url: '/data/notice.md',
-    success: function (res) {
+    success(res) {
         $('#md_container').html(marked(res));
         $('code').addClass('prettyprint');
         window.PR.prettyPrint();
@@ -129,10 +128,12 @@ let bindMinusPlus = function () {
         if (button.hasClass('nav-plus1') && button.hasClass('active')) {
             button.removeClass('active');
             $('.toc.jquery-accordion-menu:eq(0)').show(500);
-        } else if (button.hasClass('nav-plus1')) {
+        }
+        else if (button.hasClass('nav-plus1')) {
             button.addClass('active');
             $('.toc.jquery-accordion-menu:eq(0)').hide(500);
-        } else if (button.hasClass('nav-plus2') && button.hasClass('active')) {
+        }
+        else if (button.hasClass('nav-plus2') && button.hasClass('active')) {
             button.removeClass('active');
             $('.toc.jquery-accordion-menu:eq(1)').show(500);
         }

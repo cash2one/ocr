@@ -17,5 +17,4 @@ $(document).ready(function () {
             $(e).toggleClass('active', i === $(this).index());
         });
     });
-
 });

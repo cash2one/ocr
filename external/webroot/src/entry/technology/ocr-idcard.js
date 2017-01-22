@@ -91,18 +91,17 @@ $(document).ready(function () {
                     return false;
                 }
                 let hasNoResult = true;
-                for (let key in res.data.words_result) {
-                    if (!res.data.words_result.hasOwnProperty(key)) {
-                        continue;
-                    }
+                Object.keys(res.data.words_result).forEach(key => {
                     let words = res.data.words_result[key].words;
                     hasNoResult = hasNoResult && !words;
                     $('#demo-result .result-background').find('.' + ID_CARD_KEY_MAP[key]).html(words);
                     if (key === '性别') {
                         $('#demo-result .result-background').toggleClass(ID_CARD_KEY_MAP[words] || '', true);
                     }
-                }
-                $('#demo-result .result-background').toggleClass('has-result', !hasNoResult)
+                });
+
+                $('#demo-result .result-background')
+                    .toggleClass('has-result', !hasNoResult)
                     .toggleClass('error-no-result', hasNoResult);
                 isScanning = false;
             },
