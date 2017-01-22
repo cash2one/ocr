@@ -9,6 +9,8 @@ import docAccordionMenu from '../../component/widget/docAccordionMenu';
 import marked from 'marked';
 import  '../../../bower_components/code-prettify/src/prettify';
 
+import 'less/document/document.less';
+
 window.$ = $;
 window.marked = marked;
 

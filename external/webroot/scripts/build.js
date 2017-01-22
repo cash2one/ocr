@@ -12,6 +12,7 @@ let webpackConfig = require('./webpack.config');
 
 const isWatchMode = argv.hasOwnProperty('w') || argv.hasOwnProperty('watch');
 const isOnlineMode = argv.hasOwnProperty('o') || argv.hasOwnProperty('online');
+const isBumpBuild = argv.hasOwnProperty('bump');
 
 // 增量观察构建模式
 if (isWatchMode) {
@@ -30,7 +31,7 @@ if (isWatchMode) {
 }
 
 // 线上、测试构建模式
-if (isOnlineMode) {
+if (isOnlineMode || isBumpBuild) {
     webpackConfig = Object.assign(
         {},
         webpackConfig,

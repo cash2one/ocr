@@ -7,6 +7,8 @@
 import $ from 'jquery';
 import News from '../component/widget/news';
 
+import 'less/home.less';
+
 $(document).ready(function () {
     // 首页轮播图
     let currentBannerNum = 0;

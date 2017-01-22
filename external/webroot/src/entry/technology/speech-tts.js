@@ -10,6 +10,8 @@ import noUiSlider from 'nouislider';
 import {synthesizeSpeech} from '../../model/demoAPI';
 import AlertModal from '../../component/widget/alertModal';
 
+import 'less/technology/speech-tts.less';
+
 $(document).ready(function () {
     // case点击效果
     $('.case-indicator > li').click(function () {

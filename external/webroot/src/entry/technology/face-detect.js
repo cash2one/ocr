@@ -9,6 +9,8 @@ import DemoCanvas from '../../component/widget/demoCanvas';
 import {scanFace} from '../../model/demoAPI';
 import AlertModal from '../../component/widget/alertModal';
 
+import 'less/technology/face-detect.less';
+
 /* eslint-disable */
 // demo图片路径集合，TODO 后填充图片地址，略不合理
 const demoImagePaths = [

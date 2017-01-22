@@ -9,6 +9,8 @@ import DemoCanvas from '../../component/widget/demoCanvas';
 import {scanIDCard} from '../../model/demoAPI';
 import AlertModal from '../../component/widget/alertModal';
 
+import 'less/technology/ocr-idcard.less';
+
 /* eslint-disable */
 const demoImgPath = [
     require('../../../ai_images/technology/ocr-idcard/demo-card-1.png'),

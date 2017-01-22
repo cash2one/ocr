@@ -3,6 +3,8 @@ import $ from 'jquery';
 
 import './pager.js';
 
+import 'less/support/news/news-list.less';
+
 const countPerPage = 10;
 const page = $('.pg').page({pageNum: countPerPage});
 
