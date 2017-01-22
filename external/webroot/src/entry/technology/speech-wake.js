@@ -10,6 +10,7 @@ import {evaluateWakeWords, exportWakeWords} from '../../model/demoAPI';
 import AlertModal from '../../component/widget/alertModal';
 import ConfirmModal from '../../component/widget/confirmModal';
 
+import 'less/technology/speech-wake.less';
 
 $(document).ready(function () {
     // case点击效果

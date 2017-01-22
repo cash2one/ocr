@@ -9,6 +9,8 @@ import DemoCanvas from '../../component/widget/demoCanvas';
 import {scanPornography} from '../../model/demoAPI';
 import AlertModal from '../../component/widget/alertModal';
 
+import '../../less/technology/ar.less';
+
 /* eslint-disable */
 const demoImagePaths = [
     require('../../../ai_images/technology/antiporn/demo-card-1.jpg'),

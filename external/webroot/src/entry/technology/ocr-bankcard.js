@@ -9,6 +9,8 @@ import DemoCanvas from '../../component/widget/demoCanvas';
 import {scanBankCard} from '../../model/demoAPI';
 import AlertModal from '../../component/widget/alertModal';
 
+import 'less/technology/ocr-bankcard.less';
+
 /* eslint-disable */
 const demoImgPath = [
     require('../../../ai_images/technology/ocr-bankcard/demo-card-1.png'),

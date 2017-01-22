@@ -7,6 +7,8 @@
 import $ from 'jquery';
 import {SIMNET_DATA} from '../../data/simnet-data';
 
+import '../../less/technology/nlp-simnet.less';
+
 $(document).ready(function () {
     // case点击效果
     $('.case-indicator > li').click(function () {

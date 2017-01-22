@@ -5,6 +5,7 @@
 'use strict';
 
 import $ from 'jquery';
+import 'less/technology/ar.less';
 
 $(document).ready(function () {
     // case点击效果

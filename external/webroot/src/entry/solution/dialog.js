@@ -6,6 +6,8 @@
 
 import $ from 'jquery';
 
+import 'less/solution/dialog.less';
+
 $(document).ready(function () {
     // case点击效果
     $('.case-indicator > li').click(function () {

@@ -9,6 +9,8 @@ import DemoCanvas from '../../component/widget/demoCanvas';
 import {scanGeneralText} from '../../model/demoAPI';
 import AlertModal from '../../component/widget/alertModal';
 
+import 'less/technology/ocr-general.less';
+
 /* eslint-disable */
 const demoImgPath = [
     require('../../../ai_images/technology/ocr-general/demo-card-1.png'),

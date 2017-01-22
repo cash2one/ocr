@@ -14,9 +14,9 @@
     <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="/ai_dist/1484894584/css/ie9.css">
+    <link rel="stylesheet" href="/ai_dist/1484894584/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="/ai_dist/1484894584/css/base.css">
+    <link rel="stylesheet" href="/ai_dist/1484894584/css/base.style.css">
     <link rel="stylesheet" href="/ai_dist/1484894584/css/technology/face-detect.style.css">
 </head>
 <body class="ai-platform">

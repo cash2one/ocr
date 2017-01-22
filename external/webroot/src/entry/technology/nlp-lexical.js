@@ -4,6 +4,8 @@
  */
 import $ from 'jquery';
 
+import 'less/technology/nlp-lexical.less';
+
 /* eslint-disable */
 const sentences = [
     '2003年10月15日，杨利伟乘由长征二号F火箭运载的神舟五号飞船首次进入太空，象征着中国太空事业向前迈进一大步，起到了里程碑的作用。',
