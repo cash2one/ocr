@@ -20,11 +20,11 @@ var _hmt = _hmt || [];
 })();
 </script>
     {%block name="head_static"%}{%/block%}
-    <link rel="stylesheet" href="/dist/css/news.css">
+    <link rel="stylesheet" href="/internal/dist/css/news.css">
 {%/head%}
 {%body%}
     {%include  'views/common/navigation.html'%}
-    <div class="wrapper" style="margin-bottom: 0;height:auto;">
+    <div class="wrapper" style="margin-bottom: 0;height:auto;  padding: 80px 0 30px;">
         <div class="content-wrapper">
             <div class="main">
                 {%block name="content"%}{%/block%}

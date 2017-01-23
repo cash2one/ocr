@@ -2,7 +2,7 @@ require('brain:widget/pager/pager.js');
 var countPerPage = 10,
     page = $('.pg').page({pageNum: countPerPage});
 var q = query();
-var url = '/news?action=list&source='+ q['source'] +'&pn=0&rn=9999999';
+var url = '/internal/news?action=list&source=' + q['source'] + '&pn=0&rn=9999999';
 var dom = $('.lst');
 $.get(url, undefined, undefined, 'json')
     .then(function (d) {
@@ -11,7 +11,7 @@ $.get(url, undefined, undefined, 'json')
                 title: item.title,
                 desc: item.abs,
                 time: transformTime(parseInt(item.time, 10) * 1000),
-                href: '/news?action=modifynews&source=' + q['source'] + '&id=' + item.id
+                href: '/internal/news?action=modifynews&source=' + q['source'] + '&id=' + item.id
             }
         });
     }, function () {
