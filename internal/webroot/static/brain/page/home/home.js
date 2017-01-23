@@ -18,7 +18,7 @@
         }, delay * 1000);
     });
 
-    $.get('/news?action=list&pn=0&rn=9999999', undefined, undefined, 'json')
+    $.get('/internal/news?action=list&pn=0&rn=9999999', undefined, undefined, 'json')
         .then(function (d) {
             var dom = $('.add-news');
             var length = d.data.length;

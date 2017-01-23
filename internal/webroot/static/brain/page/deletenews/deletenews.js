@@ -19,7 +19,7 @@ $.get(url, undefined, undefined, 'json')
                 title: item.title,
                 desc: item.abs,
                 time: transformTime(parseInt(item.time, 10) * 1000),
-                href: '/news?action=delete&source=' + q['source'] + '&id=' + item.id
+                href: '/internal/news?action=delete&source=' + q['source'] + '&id=' + item.id
             }
         });
     }, function () {
