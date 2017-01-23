@@ -5,6 +5,7 @@
 'use strict';
 
 import $ from 'jquery';
+import throttle from 'lodash.throttle';
 import News from '../component/widget/news';
 import ConsultationModal from '../component/widget/consultationModal';
 import SubscriptionModal from '../component/widget/subscriptionModal';
@@ -16,9 +17,14 @@ $(document).ready(function () {
         $('.back-top').toggle($(document).scrollTop() > $(window).height() / 2);
     };
     toggleBackTop();
-    $(window).scroll(() => {
-        toggleBackTop();
-    });
+    $(window).scroll(
+        throttle(
+            () => {
+                toggleBackTop;
+            },
+            300
+        )
+    );
 
     $('.back-top > a').click(() => {
         $(document).scrollTop(0);

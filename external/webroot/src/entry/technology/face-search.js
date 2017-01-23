@@ -5,7 +5,7 @@
 'use strict';
 
 import $ from 'jquery';
-
+import throttle from 'lodash.throttle';
 import 'less/technology/face-search.less';
 
 $(document).ready(function () {
@@ -20,11 +20,16 @@ $(document).ready(function () {
     });
 
     // 触发功能介绍动画
-    $(window).scroll(() => {
-        if ($(document).scrollTop() >= 100) {
-            $('.tech-intro-detail').trigger('demo');
-        }
-    });
+    $(window).scroll(
+        throttle(
+            () => {
+                if ($(document).scrollTop() >= 100) {
+                    $('.tech-intro-detail').trigger('demo');
+                }
+            },
+            300
+        )
+    );
 
     // 绑定功能介绍动画
     $('.tech-intro-detail').one('demo', function () {
