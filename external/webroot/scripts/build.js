@@ -4,8 +4,12 @@
  */
 
 /* eslint-disable */
+const os = require('os');
+
 const webpack = require('webpack');
 const argv = require('minimist')(process.argv.slice(2));
+const Dashboard = require('webpack-dashboard');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
 let webpackConfig = require('./webpack.config');
 /* eslint-enable */
@@ -78,9 +82,18 @@ if (isWatchMode) {
     );
 }
 else {
+    const isOSX = os.platform() === 'darwin';
+
+    if (isOSX) {
+        const dashboard = new Dashboard();
+        compiler.apply(new DashboardPlugin(dashboard.setData));
+    }
+
     compiler.run(
         (err, stats) => {
-            console.log(stats.toString(printConfig));
+            if (!isOSX) {
+                console.log(stats.toString(printConfig));
+            }
         }
     );
 }
