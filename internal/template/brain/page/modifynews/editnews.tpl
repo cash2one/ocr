@@ -59,6 +59,6 @@
     </form>
 
 </div>
-<script src="/static/brain/page/modifynews/ckeditor/ckeditor.js"></script>
+<script src="/internal/static/brain/page/modifynews/ckeditor/ckeditor.js"></script>
 {%require name='brain:page/modifynews/editnews.tpl'%}{%/block%}
 

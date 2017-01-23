@@ -20,7 +20,7 @@ var _hmt = _hmt || [];
 })();
 </script>
     {%block name="head_static"%}{%/block%}
-    <link rel="stylesheet" href="/dist/css/news.css">
+    <link rel="stylesheet" href="/internal/dist/css/news.css">
 {%/head%}
 {%body%}
     {%include  'views/common/navigation.html'%}
