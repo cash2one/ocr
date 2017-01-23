@@ -201,7 +201,11 @@
         <h1>短文本相似度</h1>
         <p>依托全网海量优质数据和深度神经网络技术，为您提供高精度的短文本相似度服务，帮助快速实现推荐、检索、排序等应用。</p>
         <div>
-            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">获取API Key</a>
+            <a role="button"
+               class="btn-primary media"
+               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">
+                获取API Key
+            </a>
             {%if $src eq Null%}
             <a role="button" class="btn-other media"  href="/docs#NLP">技术文档</a>
             {%/if%}
@@ -337,7 +341,11 @@
         <h2>立即获取免费API Key</h2>
         <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
         <div>
-            <a role="button" class="btn-primary large" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+            <a role="button"
+               class="btn-primary large"
+               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">
+                免费试用
+            </a>
         </div>
     </div>
 </section>
@@ -349,22 +357,31 @@
         <div class="guide-link clear-float">
             <h3>开发指南</h3>
             <ul>
-                <li><a href="/docs#NLP">技术文档 ></a></li>
-                <li><a href="/sdk">SDK下载 ></a></li>
+                <li><a href="/docs#NLP">技术文档 &gt;</a></li>
+                <li><a href="/sdk">SDK下载 &gt;</a></li>
             </ul>
         </div>
         <div class="question-link clear-float">
             <h3>常见问题</h3>
             <ul>
-                <li><a href="/docs#NLP-FAQ_Q1">输入编码是什么?</a></li>
-                <li><a href="/docs#NLP-FAQ_Q2">结果中的词性标注都是什么含义?</a></li>
-                <li><a href="/docs#NLP-FAQ_Q3">短文本相似度对文字字数有什么限制?</a></li>
-                <li><a href="/docs#NLP-FAQ_Q11">中文DNN语言模型对文本个数有什么限制？</a></li>
+                <li>
+                    <a href="/docs#NLP-FAQ_Q1">输入编码是什么?</a>
+                </li>
+                <li>
+                    <a href="/docs#NLP-FAQ_Q2">结果中的词性标注都是什么含义?</a>
+                </li>
+                <li>
+                    <a href="/docs#NLP-FAQ_Q3">短文本相似度对文字字数有什么限制?</a>
+                </li>
+                <li>
+                    <a href="/docs#NLP-FAQ_Q11">中文DNN语言模型对文本个数有什么限制？</a>
+                </li>
             </ul>
         </div>
     </div>
 </section>
 {%/if%}
+
 </div>
 <aside class="aside-action">
     <ul>

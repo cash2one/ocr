@@ -19,9 +19,7 @@ $(document).ready(function () {
     toggleBackTop();
     $(window).scroll(
         throttle(
-            () => {
-                toggleBackTop;
-            },
+            toggleBackTop,
             300
         )
     );
