@@ -51,7 +51,7 @@
 
     // 容器
     &-container {
-        margin: 0 - (@feature-padding / 2) 40px;
+        margin: 0 0 - (@feature-padding / 2) 40px;
         font-size: 0;
     }
 
@@ -117,30 +117,21 @@
 }
 
 // 特色图标sprite
-.feature-sprite(@x: 0,
-@y: 0,
-@width: 0,
-@height: 0) {
+.feature-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
     width: @width;
     height: @height;
     background-position: @x @y;
 }
 
 // 使用场景图标sprite mixin
-.scenario-sprite(@x: 0,
-@y: 0,
-@width: 0,
-@height: 0) {
+.scenario-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
     width: @width;
     height: @height;
     background: url(../../../ai_images/technology/nlp-word_embedding/scenario.png) no-repeat @x @y;
     background-size: 90px 45px;
 }
 
-.function-sprite(@x: 0,
-@y: 0,
-@width: 0,
-@height: 0) {
+.function-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
     background-position: @x @y;
     width: @width;
     height: @height;

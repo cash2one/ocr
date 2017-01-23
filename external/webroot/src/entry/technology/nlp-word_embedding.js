@@ -6,7 +6,7 @@
 
 import $ from 'jquery';
 
-import '../../less/technology/nlp-word_embedding.less';
+import 'less/technology/nlp-word_embedding.less';
 
 $(document).ready(function () {
     // case点击效果

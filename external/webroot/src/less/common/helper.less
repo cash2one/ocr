@@ -12,10 +12,7 @@
 // page styles
 @fonts: "Microsoft YaHei Light", "Microsoft YaHei", "微软雅黑", "Arial Narrow", Arial, "sans-serif" !important;
 
-.basic-transition (@property: all,
-@time,
-@timeFunc: ease,
-@delay: 0s) {
+.basic-transition (@property: all, @time, @timeFunc: ease, @delay: 0s) {
     -webkit-transition: @property @time @timeFunc @delay;
     -moz-transition: @property @time @timeFunc @delay;
     -ms-transition: @property @time @timeFunc @delay;
@@ -23,9 +20,7 @@
     transition: @property @time @timeFunc @delay;
 }
 
-.icon (@url,
-@x,
-@y) {
+.icon (@url, @x, @y) {
     background-image: @url;
     background-repeat: no-repeat;
     background-position: @x @y;
@@ -33,11 +28,7 @@
     background-position-y: @y;
 }
 
-.animate (@name,
- @duration,
- @delay,
- @iteration,
- @func) {
+.animate (@name, @duration, @delay, @iteration, @func) {
     animation-name: @name;
     animation-duration: @duration;
     animation-delay: @delay;

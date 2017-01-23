@@ -7,7 +7,7 @@
 import $ from 'jquery';
 import {DNN_DATA} from '../../data/dnn-data';
 
-import '../../less/technology/nlp-dnnlm_cn.less';
+import 'less/technology/nlp-dnnlm_cn.less';
 
 $(document).ready(function () {
     // case点击效果
