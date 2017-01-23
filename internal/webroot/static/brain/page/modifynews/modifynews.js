@@ -1,7 +1,7 @@
 (function () {
     var q = query();
-    var detailUrl = '/news?action=detail2&source=' + q['source'] + '&id=' + q['id'];
-    var url = '/news?action=update';
+    var detailUrl = '/internal/news?action=detail2&source=' + q['source'] + '&id=' + q['id'];
+    var url = '/internal/news?action=update';
     $.get(detailUrl, undefined, undefined, 'json')
         .then(function (d) {
             var content = d.data['content'];
@@ -24,7 +24,7 @@
     CKEDITOR.replace('content', {
         contentsCss: css,
         enterMode: CKEDITOR.ENTER_DIV,
-        filebrowserUploadUrl: '/news?action=pic'
+        filebrowserUploadUrl: '/internal/news?action=pic'
     });
     $(document.body).on('click', '.submit', function () {
         var json = $('.frm input').toArray().reduce(function (json, element) {

@@ -1,10 +1,10 @@
 define('brain:widget/news/news.js', function(require, exports, module){
 
 require('brain:widget/pager/pager.js');
-var countPerPage = 10,
-    page = $('.pg').page({pageNum: countPerPage});
+var countPerPage = 10;
+var page = $('.pg').page({pageNum: countPerPage});
 
-var url = '/news?action=list&pn=0&rn=9999999';
+var url = '/internal/news?action=list&pn=0&rn=9999999';
 var dom = $('.lst');
 
 $.get(url, undefined, undefined, 'json')
@@ -14,7 +14,7 @@ $.get(url, undefined, undefined, 'json')
                 title: item.title,
                 desc: item.abs,
                 time: transformTime(parseInt(item.time, 10) * 1000),
-                href: '/news?action=detail&id=' + item.id
+                href: '/internal/news?action=detail&id=' + item.id
             }
         });
     }, function () {

@@ -7,7 +7,7 @@
     CKEDITOR.replace('content', {
         contentsCss: css,
         enterMode: CKEDITOR.ENTER_DIV,
-        filebrowserUploadUrl: '/news?action=pic'
+        filebrowserUploadUrl: '/internal/news?action=pic'
     });
     var url = '/news?action=add';
     $(document.body).on('click', '.submit', function () {
