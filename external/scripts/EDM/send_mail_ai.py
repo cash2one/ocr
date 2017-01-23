@@ -209,7 +209,7 @@ def gen_mail_content(xls_prefix, email, token):
     </tr>
     <tr>
         <td colspan="2" style="padding-bottom: 15px; background-color: #14191d;">
-            <a href="https://ai.baidu.com" target="_blank">
+            <a href="http://ai.baidu.com" target="_blank">
                 <img style="width:100%%; height:100%%;" src="data/common/header.png">
             </a>
         </td>

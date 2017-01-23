@@ -199,19 +199,19 @@ def gen_mail_content(xls_prefix, email, token):
                 <img src="data/common/developer_logo.png" height="30"></a>
         </td>
         <td style="padding:15px 0;width:25%%;">
-            <a href=" https://ai.baidu.com/?edm201701l" target="_blank">
+            <a href=" http://ai.baidu.com/?edm201701l" target="_blank">
                 <img src="data/common/ai_logo.png" height="30">
             </a>
         </td>
         <td colspan="2" style="text-align:right;padding:15px 30px;width:50%%;">
             <a style="line-height:30px;display:inline-block;color:#fff;text-decoration:none;font-size:14px;"
-               href="https://ai.baidu.com/?edm201701RU" target="_blank">【浏览百度大脑官网】</a>
+               href="http://ai.baidu.com/?edm201701RU" target="_blank">【浏览百度大脑官网】</a>
 
         </td>
     </tr>
     <tr>
         <td colspan="4"  style="background-color:#14191d;">
-            <a href="https://ai.baidu.com" target="_blank">
+            <a href="http://ai.baidu.com" target="_blank">
                 <img width="100%%" src="http://bos.nj.bpc.baidu.com/v1/developer/e3793c1a-1c9f-44d1-8fef-1115e4ee961a.png">
             </a>
         </td>
@@ -262,7 +262,7 @@ def gen_mail_content(xls_prefix, email, token):
             </a>
         </td>
         <td style="padding:15px 30px;text-align:right;width:25%%;">
-            <a href="https://ai.baidu.com/?edm201701r" target="_blank">
+            <a href="http://ai.baidu.com/?edm201701r" target="_blank">
                <img src="data/common/ai_logo.png" height="30"></a>
             </a>
         </td>
