@@ -9,7 +9,7 @@
         enterMode: CKEDITOR.ENTER_DIV,
         filebrowserUploadUrl: '/internal/news?action=pic'
     });
-    var url = '/news?action=add';
+    var url = '/internal/news?action=add';
     $(document.body).on('click', '.submit', function () {
         var json = $('.frm input').toArray().reduce(function (json, element) {
             var $element = $(element);
