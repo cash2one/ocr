@@ -41,11 +41,13 @@
     "marked": "^0.3.6",
     "minimist": "^1.2.0",
     "nouislider": "^9.1.0",
+    "postcss-loader": "^1.2.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.14.0",
     "webpack-dashboard": "^0.2.1"
   },
   "dependencies": {
+    "autoprefixer": "^6.7.0",
     "lodash.throttle": "^4.1.1",
     "moment": "^2.17.1"
   }

@@ -16,6 +16,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
+// postcss
+const autoprefixer = require('autoprefixer');
+
 const getVersion = require('./lib/getVersion');
 /* eslint-enable */
 
@@ -133,7 +136,7 @@ module.exports = {
                 test: /\.less$/,
                 loader: extractLESS.extract(
                     'style-loader',
-                    'css-loader!less-loader'
+                    'css-loader!postcss-loader!less-loader'
                 )
             },
             {
@@ -183,5 +186,12 @@ module.exports = {
         ...htmlWebpackPluginArr,
         // css文件单独打包
         extractLESS
-    ]
+    ],
+    postcss: () => {
+        return [
+            autoprefixer({
+                browsers: ['ie > 1', 'chrome > 1', 'ff > 1']
+            })
+        ];
+    }
 };
