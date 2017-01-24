@@ -42,10 +42,7 @@
 
             &.scanning::before {
                 top: 100%;
-                -webkit-transition: top 3s linear;
-                -moz-transition: top 3s linear;
-                -ms-transition: top 3s linear;
-                -o-transition: top 3s linear;
+
                 transition: top 3s linear;
             }
 
@@ -65,10 +62,7 @@
             width: 400px;
             height: 250px;
             opacity: 0;
-            -webkit-transition: opacity 1.5s ease-out;
-            -moz-transition: opacity 1.5s ease-out;
-            -ms-transition: opacity 1.5s ease-out;
-            -o-transition: opacity 1.5s ease-out;
+
             transition: opacity 1.5s ease-out;
 
             &.scanned {
@@ -176,38 +170,6 @@
                         height: 32px;
                         .animate(uploading, 0.8s, 0, infinite, ease-in);
 
-                        @-webkit-keyframes uploading {
-                            from {
-                                -webkit-transform: rotate(0deg);
-                            }
-                            to {
-                                -webkit-transform: rotate(360deg);
-                            }
-                        }
-                        @-moz-keyframes uploading {
-                            from {
-                                -moz-transform: rotate(0deg);
-                            }
-                            to {
-                                -moz-transform: rotate(360deg);
-                            }
-                        }
-                        @-ms-keyframes uploading {
-                            from {
-                                -ms-transform: rotate(0deg);
-                            }
-                            to {
-                                -ms-transform: rotate(360deg);
-                            }
-                        }
-                        @-o-keyframes uploading {
-                            from {
-                                -o-transform: rotate(0deg);
-                            }
-                            to {
-                                -o-transform: rotate(360deg);
-                            }
-                        }
                         @keyframes uploading {
                             from {
                                 transform: rotate(0deg);

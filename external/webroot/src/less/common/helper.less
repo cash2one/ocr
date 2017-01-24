@@ -13,10 +13,6 @@
 @fonts: "Microsoft YaHei Light", "Microsoft YaHei", "微软雅黑", "Arial Narrow", Arial, "sans-serif" !important;
 
 .basic-transition (@property: all, @time, @timeFunc: ease, @delay: 0s) {
-    -webkit-transition: @property @time @timeFunc @delay;
-    -moz-transition: @property @time @timeFunc @delay;
-    -ms-transition: @property @time @timeFunc @delay;
-    -o-transition: @property @time @timeFunc @delay;
     transition: @property @time @timeFunc @delay;
 }
 
@@ -34,28 +30,4 @@
     animation-delay: @delay;
     animation-iteration-count: @iteration;
     animation-timing-function: @func;
-    // Firefox:
-    -moz-animation-name: @name;
-    -moz-animation-duration: @duration;
-    -moz-animation-delay: @delay;
-    -moz-animation-iteration-count: @iteration;
-    -moz-animation-timing-function: @func;
-    // Safari 和 Chrome:
-    -webkit-animation-name: @name;
-    -webkit-animation-duration: @duration;
-    -webkit-animation-delay: @delay;
-    -webkit-animation-iteration-count: @iteration;
-    -webkit-animation-timing-function: @func;
-    // Opera:
-    -o-animation-name: @name;
-    -o-animation-duration: @duration;
-    -o-animation-delay: @delay;
-    -o-animation-iteration-count: @iteration;
-    -o-animation-timing-function: @func;
-
-    -ms-animation-name: @name;
-    -ms-animation-duration: @duration;
-    -ms-animation-delay: @delay;
-    -ms-animation-iteration-count: @iteration;
-    -ms-animation-timing-function: @func;
 }
