@@ -14,7 +14,7 @@ class NewsBroadcast extends React.Component {
 
     componentDidMount() {
         $.getJSON(
-            '/news',
+            '/internal/news',
             {
                 action: 'list',
                 pn: 0,
