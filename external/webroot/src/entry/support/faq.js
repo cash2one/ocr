@@ -5,8 +5,9 @@
 'use strict';
 
 import $ from 'jquery';
+import '../../component/widget/docAccordionMenu';
 import marked from 'marked';
-import 'code-prettify/src/prettify';
+import  'code-prettify/src/prettify';
 
 import 'less/support/faq.less';
 
@@ -63,14 +64,14 @@ let bindAllNodeClick = function () {
     });
 };
 
-// let bindAllLeafClick = function () {
-//     $('.leaf-node').click(function () {
-//         let tagName =  $(this).attr('tag');
-//         if (tagName) {
-//             renderMdPage(tagName, $(this), 'leaf');
-//         }
-//     });
-// };
+let bindAllLeafClick = function () {
+    $('.leaf-node').click(function () {
+        let tagName =  $(this).attr('tag');
+        if (tagName) {
+            renderMdPage(tagName, $(this), 'leaf');
+        }
+    });
+};
 
 $.ajax({
     type: 'GET',
@@ -108,7 +109,7 @@ let renderMenuActive = function () {
             let html = '';
             for (let i = 0; i < breadcrumbList.length; i++) {
                 html += '<li><span class="divider">&gt;</span></li><li><span class="">'
-                        + breadcrumbList[i] + '</span></li>';
+                    + breadcrumbList[i] + '</span></li>';
             }
             $('.doc-breadcrumb .crumb').hide().html(html);
             $('.doc-breadcrumb .crumb li:eq(0)').remove();
