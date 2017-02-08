@@ -29,7 +29,7 @@
     "ejs": "^2.5.5",
     "envify": "^3.4.1",
     "express": "^4.14.1",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "2.0.0",
     "file-loader": "^0.10.0",
     "glob": "^7.1.1",
     "howler": "^2.0.2",
