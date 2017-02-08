@@ -5,9 +5,12 @@
 'use strict';
 
 import $ from 'jquery';
+import throttle from 'lodash.throttle';
 import DemoCanvas from '../../component/widget/demoCanvas';
 import {scanPornography} from '../../model/demoAPI';
 import AlertModal from '../../component/widget/alertModal';
+
+import '../../less/technology/antiporn.less';
 
 /* eslint-disable */
 const demoImagePaths = [
@@ -34,11 +37,16 @@ $(document).ready(function () {
     });
 
     // 触发功能介绍动画
-    $(window).scroll(() => {
-        if ($(document).scrollTop() >= 100) {
-            $('.tech-intro-detail').trigger('demo');
-        }
-    });
+    $(window).scroll(
+        throttle(
+            () => {
+                if ($(document).scrollTop() >= 100) {
+                    $('.tech-intro-detail').trigger('demo');
+                }
+            },
+            300
+        )
+    );
 
     // 绑定功能介绍动画
     $('.tech-intro-detail').one('demo', function () {

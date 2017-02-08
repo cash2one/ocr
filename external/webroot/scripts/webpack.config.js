@@ -16,6 +16,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
+// postcss
+const autoprefixer = require('autoprefixer');
+
 const getVersion = require('./lib/getVersion');
 /* eslint-enable */
 
@@ -34,12 +37,12 @@ const entries = glob.sync(
     }
 );
 
-const removeExtenstion = function (filename) {
+const removeExtension = function (filename) {
     return filename.substr(0, filename.lastIndexOf('.') || filename);
 };
 
 // 样式独立打包
-const extractLESS = new ExtractTextPlugin(`${versionPath}/css/[name].css`);
+const extractLESS = new ExtractTextPlugin(`${versionPath}/css/[name].style.css`);
 
 // 生成符合webpack规则的entries
 const webpackEntries = {};
@@ -48,12 +51,12 @@ const htmlWebpackPluginArr = [];
 // 需要抽取通用代码普通模块
 const normalModules = [];
 entries.forEach(entry => {
-    const resourcePath = removeExtenstion(entry);
+    const resourcePath = removeExtension(entry);
 
     // 去除文件后缀，资源入数组，防止entry引用entry
     webpackEntries[resourcePath] = ['./' + path.join('src', 'entry', entry)];
     // less不需要在js中引入，最大程度减少破坏js,补充style是为了保证不和js入口名字冲突
-    webpackEntries[`${resourcePath}.style`] = ['./' + path.join('src', 'less', `${resourcePath}.less`)];
+    // webpackEntries[`${resourcePath}.style`] = ['./' + path.join('src', 'less', `${resourcePath}.less`)];
 
     // 逐一添加plugin，生成html入口
     htmlWebpackPluginArr.push(
@@ -133,7 +136,7 @@ module.exports = {
                 test: /\.less$/,
                 loader: extractLESS.extract(
                     'style-loader',
-                    'css-loader!less-loader'
+                    'css-loader!postcss-loader!less-loader'
                 )
             },
             {
@@ -183,5 +186,12 @@ module.exports = {
         ...htmlWebpackPluginArr,
         // css文件单独打包
         extractLESS
-    ]
+    ],
+    postcss: () => {
+        return [
+            autoprefixer({
+                browsers: ['ie > 1', 'chrome > 1', 'ff > 1']
+            })
+        ];
+    }
 };

@@ -10,6 +10,8 @@ import noUiSlider from 'nouislider';
 import {synthesizeSpeech} from '../../model/demoAPI';
 import AlertModal from '../../component/widget/alertModal';
 
+import 'less/technology/speech-tts.less';
+
 $(document).ready(function () {
     // case点击效果
     $('.case-indicator > li').click(function () {
@@ -90,7 +92,7 @@ $(document).ready(function () {
                 person: person,
                 text: text
             },
-            success: function (res) {
+            success(res) {
                 if (res.errno === 1) {
                     new AlertModal('访问接口出错，请登陆百度账号后再尝试该项服务！');
                     return false;
@@ -112,7 +114,7 @@ $(document).ready(function () {
                     player.removeClass('pause').addClass('play');
                 });
             },
-            fail: function (xhr) {
+            fail(xhr) {
                 if (sound) {
                     sound.stop();
                 }
@@ -126,5 +128,4 @@ $(document).ready(function () {
             sound.stop();
         }
     });
-
 });

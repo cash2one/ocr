@@ -6,6 +6,8 @@
 
 import $ from 'jquery';
 
+import 'less/error.less';
+
 $(document).ready(function () {
     let second = 4;
     setInterval(function () {

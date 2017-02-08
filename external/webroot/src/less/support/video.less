@@ -135,81 +135,77 @@
 }
 
 
-    ul.video-list {
-        margin: 10px 0 0;
+ul.video-list {
+    margin: 10px 0 0;
 
-        & > li {
-            width: 260px;
-            padding: 10px 10px 20px;
-            text-align: center;
-            float: left;
+    & > li {
+        width: 260px;
+        padding: 10px 10px 20px;
+        text-align: center;
+        float: left;
+        position: relative;
+
+        & + li {
+            margin-left: 20px;
+        }
+
+        &::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            box-shadow: 0 2px 8px fadeOut(@black, 100%);
+            transition: all .1s linear;
+        }
+
+        &:hover::after {
+            box-shadow: 0 2px 8px fadeOut(@black, 80%);
+        }
+
+        & > a {
+            display: inline-block;
+            width: 250px;
+            height: 140px;
             position: relative;
+            z-index: 9;
 
-            & + li {
-                margin-left: 20px;
-            }
-
-            &::after {
+            &::before {
                 content: "";
                 display: inline-block;
-                height: 100%;
-                width: 100%;
+                height: 30px;
+                width: 30px;
                 position: absolute;
-                left: 0;
-                top: 0;
-                box-shadow: 0 2px 8px fadeOut(@black, 100%);
-                -webkit-transition: all .1s linear;
-                -moz-transition: all .1s linear;
-                -ms-transition: all .1s linear;
-                -o-transition: all .1s linear;
-                transition: all .1s linear;
+                left: 110px;
+                top: 55px;
+                background-size: 100px / 2 60px / 2;
+                .icon (url('../../../ai_images/home/video-arrow.png'), 3px, 0);
+            }
+            &:hover::before {
+                .icon (url('../../../ai_images/home/video-arrow.png'), -24px, 0);
             }
 
-            &:hover::after {
-                box-shadow: 0 2px 8px fadeOut(@black, 80%);
-            }
-
-            & > a {
-                display: inline-block;
-                width: 250px;
-                height: 140px;
-                position: relative;
-                z-index: 9;
-
-                &::before {
-                    content: "";
-                    display: inline-block;
-                    height: 30px;
-                    width: 30px;
-                    position: absolute;
-                    left: 110px;
-                    top: 55px;
-                    background-size: 100px/2 60px/2;
-                    .icon (url('../../../ai_images/home/video-arrow.png'), 3px, 0);
-                }
-                &:hover::before {
-                    .icon (url('../../../ai_images/home/video-arrow.png'), -24px, 0);
-                }
-
-                & > img {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-
-
-            h5 {
-                font-size: @font-size-1;
-                margin-top: 15px;
-                color: #666;
-            }
-            iframe {
-                border: none;
+            & > img {
                 width: 100%;
-                height: 130px;
+                height: 100%;
             }
         }
+
+
+        h5 {
+            font-size: @font-size-1;
+            margin-top: 15px;
+            color: #666;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 130px;
+        }
     }
+}
 .more-videos {
     text-align: center;
     margin-top: 10px;

@@ -5,6 +5,8 @@
 
 import $ from 'jquery';
 
+import 'less/technology/nlp-comment_tag.less';
+
 const ATTITUDE = {
     NEGATIVE: 0,
     POSITIVE: 1,

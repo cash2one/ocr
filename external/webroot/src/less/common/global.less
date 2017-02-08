@@ -1,140 +1,146 @@
 .ai-platform {
-  font-size: @font-size-2;
-  -webkit-font-smoothing: antialiased;
-
-  ul, ol {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: @fonts;
-    margin: 0;
-    font-weight: 500;
-  }
-
-  input, textarea, keygen, select, button {
-    font-family: @fonts;
-    outline: none !important;
-    color: #ccc;
-  }
-
-  a {
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-
-    &:hover {
-      color: #0073eb;
-    }
-  }
-
-  button,
-  a[role="button"]{
-    display: inline-block;
-    width: 90px;
-    height: 32px;
-    line-height: 32px;
-    border-radius: 2px;
     font-size: @font-size-2;
-    cursor: pointer;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
-    -webkit-transition: all .1s linear;
-       -moz-transition: all .1s linear;
-        -ms-transition: all .1s linear;
-         -o-transition: all .1s linear;
-            transition: all .1s linear;
-    display: inline-block;
-    text-align: center;
-    box-sizing: content-box;
-    padding: 0;
+    -webkit-font-smoothing: antialiased;
 
-    &:hover {
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .4);
+    ul,
+    ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: @fonts;
+        margin: 0;
+        font-weight: 500;
     }
 
-    &.btn-primary {
-      border: 1px solid @blue;
-      background-color: @blue;
-      color: @white !important;
-
-      &:hover {
-        background-color: #1a81ed;
-      }
+    input,
+    textarea,
+    keygen,
+    select,
+    button {
+        font-family: @fonts;
+        outline: none !important;
+        color: #ccc;
     }
 
-    &.btn-normal {
-      border: 1px solid #ccc;
-      background-color: @white;
-      color: #666 !important;
+    a {
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            color: #0073eb;
+        }
     }
 
-    &.btn-other {
-      border: 1px solid #333;
-      background-color: #333;
-      color: @white !important;
+    button,
+    a[role="button"] {
+        display: inline-block;
+        width: 90px;
+        height: 32px;
+        line-height: 32px;
+        border-radius: 2px;
+        font-size: @font-size-2;
+        cursor: pointer;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+        transition: all .1s linear;
+        display: inline-block;
+        text-align: center;
+        box-sizing: content-box;
+        padding: 0;
 
-      &:hover {
-        border: 1px solid @blue;
-        background-color: @blue;
-      }
+        &:hover {
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .4);
+        }
+
+        &.btn-primary {
+            border: 1px solid @blue;
+            background-color: @blue;
+            color: @white !important;
+
+            &:hover {
+                background-color: #1a81ed;
+            }
+        }
+
+        &.btn-normal {
+            border: 1px solid #ccc;
+            background-color: @white;
+            color: #666 !important;
+        }
+
+        &.btn-other {
+            border: 1px solid #333;
+            background-color: #333;
+            color: @white !important;
+
+            &:hover {
+                border: 1px solid @blue;
+                background-color: @blue;
+            }
+        }
+
+        &.small {
+            width: 80px;
+            height: 26px;
+            line-height: 26px;
+        }
+
+        &.media {
+            width: 110px;
+            height: 38px;
+            line-height: 38px;
+        }
+
+        &.large {
+            width: 150px;
+            height: 44px;
+            line-height: 44px;
+            font-size: 18px;
+        }
     }
 
-    &.small {
-      width: 80px;
-      height: 26px;
-      line-height: 26px;
+    .container {
+        display: block;
+        width: 1180px;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 10px;
+        position: relative;
+    }
+    .clear-float {
+        zoom: 1;
+        &:after {
+            display: block;
+            clear: both;
+            content: "";
+            visibility: hidden;
+            height: 0
+        }
     }
 
-    &.media {
-      width: 110px;
-      height: 38px;
-      line-height: 38px;
+    .disabled {
+        opacity: .7;
+        cursor: not-allowed;
     }
 
-    &.large {
-      width: 150px;
-      height: 44px;
-      line-height: 44px;
-      font-size: 18px;
+    ::-webkit-input-placeholder {
+        color: #ccc;
     }
-  }
-
-  .container {
-    display: block;
-    width: 1180px;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 10px;
-    position: relative;
-  }
-  .clear-float {
-    zoom: 1;
-    &:after {
-      display: block;
-      clear: both;
-      content: "";
-      visibility: hidden;
-      height: 0
+    :-moz-placeholder {
+        color: #ccc;
     }
-  }
-
-  .disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-  }
-
-  ::-webkit-input-placeholder {
-    color: #ccc;
-  }
-  :-moz-placeholder {
-    color: #ccc;
-  }
-  ::-moz-placeholder {
-    color: #ccc;
-  }
-  :-ms-input-placeholder {
-    color: #ccc;
-  }
+    ::-moz-placeholder {
+        color: #ccc;
+    }
+    :-ms-input-placeholder {
+        color: #ccc;
+    }
 }

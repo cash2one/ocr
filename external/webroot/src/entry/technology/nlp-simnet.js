@@ -5,7 +5,11 @@
 'use strict';
 
 import $ from 'jquery';
+import throttle from 'lodash.throttle';
+
 import {SIMNET_DATA} from '../../data/simnet-data';
+
+import 'less/technology/nlp-simnet.less';
 
 $(document).ready(function () {
     // case点击效果
@@ -19,11 +23,16 @@ $(document).ready(function () {
     });
 
     // 触发功能介绍动画
-    $(window).scroll(() => {
-        if ($(document).scrollTop() >= 100) {
-            $('.tech-intro-detail').trigger('demo');
-        }
-    });
+    $(window).scroll(
+        throttle(
+            () => {
+                if ($(document).scrollTop() >= 100) {
+                    $('.tech-intro-detail').trigger('demo');
+                }
+            },
+            300
+        )
+    );
 
     // 绑定功能介绍动画
     $('.tech-intro-detail').one('demo', function () {
@@ -37,20 +46,22 @@ $(document).ready(function () {
         maxScore = 0;
         let demoData = SIMNET_DATA[demoCounter++ % SIMNET_DATA.length];
         $('.demo-input').html(demoData.text);
-        let options = [];
-        for (let word in demoData.options) {
-            let html = [
+        let options = Object.keys(demoData.options).map(word => {
+            const html = [
                 '<li>',
-                    '<a role="button" data-score="' + demoData.options[word] + '" class="btn-normal">',
-                        word,
-                    '</a>',
+                `    <a role="button" data-score="${demoData.options[word]}" class="btn-normal">${word}</a>`,
                 '</li>'
             ].join('');
-            maxScore = demoData.options[word] > maxScore ? demoData.options[word] : maxScore;
-            options.push($(html));
-        }
-        $('#demo-options').html(options)
-            .find('a.btn-normal').eq(0).click();
+            maxScore = demoData.options[word] > maxScore
+                ? demoData.options[word]
+                : maxScore;
+            return $(html);
+        });
+        $('#demo-options')
+            .html(options)
+            .find('a.btn-normal')
+            .eq(0)
+            .click();
     });
 
     // demo选项切换
