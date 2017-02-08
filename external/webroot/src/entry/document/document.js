@@ -5,16 +5,44 @@
 'use strict';
 
 import $ from 'jquery';
+import '../../component/widget/docAccordionMenu';
 import marked from 'marked';
-import  '../../../bower_components/code-prettify/src/prettify';
-
+import 'code-prettify/src/prettify';
 import 'less/document/document.less';
 
 window.$ = $;
 window.marked = marked;
 
 let lastMdTag = '';
+let currentMdName = '';
+let anchorMap = {
+    faceRecognition: {
+        '使用须知': 'faceRecognition-1',
+        '接口规范': 'faceRecognition-2',
+        '错误信息格式': 'faceRecognition-3',
+        '人脸识别接口': 'faceRecognition-4',
+        'APP用户组信息接口': 'faceRecognition-5',
+        '人脸属性': 'faceRecognition-6'
+    }
+};
 
+let matchAnchor = function (className, cnName) {
+    if (anchorMap[className]) {
+        return anchorMap[className][cnName];
+    }
+    else {
+        return '';
+    }
+};
+
+let setAnchorId = function (arr) {
+    if (!arr.length) {
+        return;
+    }
+    for (let i = 0; i < arr.length; i++) {
+        $(arr[i]).attr('id', matchAnchor('faceRecognition', $(arr[i]).text()));
+    }
+};
 
 let setFaqAnchorId = function (tagname) {
     if (tagname.indexOf('FAQ') > 0) {
@@ -98,6 +126,14 @@ let bindAllNodeClick = function () {
     });
 };
 
+let bindAllLeafClick = function () {
+    $('.leaf-node').click(function () {
+        let tagName =  $(this).attr('tag');
+        if (tagName) {
+            renderMdPage(tagName, $(this), 'leaf');
+        }
+    });
+};
 
 $(function () {
     $('#jquery-accordion-menu').docAccordionMenu();
@@ -126,7 +162,7 @@ let renderMenuActive = function () {
             let html = '';
             for (let i = 0; i < breadcrumbList.length; i++) {
                 html += '<li><span class="divider">&gt;</span></li><li><span class="">'
-                        + breadcrumbList[i] + '</span></li>';
+                    + breadcrumbList[i] + '</span></li>';
             }
             $('.doc-breadcrumb .crumb').hide().html(html);
             $('.doc-breadcrumb .crumb li:eq(0)').remove();
