@@ -14,17 +14,17 @@
     <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="/ai_dist/1484894584/css/ie9.style.css">
+    <link rel="stylesheet" href="/ai_dist/1486524138/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="/ai_dist/1484894584/css/base.style.css">
-    <link rel="stylesheet" href="/ai_dist/1484894584/css/home.style.css">
+    <link rel="stylesheet" href="/ai_dist/1486524138/css/base.style.css">
+    <link rel="stylesheet" href="/ai_dist/1486524138/css/home.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="/ai_dist/1484894584/ai_images/logo.png" alt="百度大脑">
+                <img src="/ai_dist/1486524138/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -208,7 +208,7 @@
                     免费试用
                 </a>
             </div>
-            <video src="/ai_dist/1484894584/ai_images/home/banner-1.mp4">
+            <video src="/ai_dist/1486524138/ai_images/home/banner-1.mp4">
             </video>
         </li>
         <li>
@@ -587,7 +587,7 @@
                     <img alt="百度语音基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="/ai_dist/1484894584/ai_images/home/video-1.png">
+                         src="/ai_dist/1486524138/ai_images/home/video-1.png">
                 </a>
                 <h5>百度语音基础介绍及应用场景</h5>
             </li>
@@ -597,7 +597,7 @@
                     <img alt="百度OCR基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="/ai_dist/1484894584/ai_images/home/video-2.png">
+                         src="/ai_dist/1486524138/ai_images/home/video-2.png">
                 </a>
                 <h5>百度OCR基础介绍及应用场景</h5>
             </li>
@@ -607,7 +607,7 @@
                     <img alt="百度人脸技术基础介绍及引用场景"
                         width="500"
                         height="280"
-                        src="/ai_dist/1484894584/ai_images/home/video-3.png">
+                        src="/ai_dist/1486524138/ai_images/home/video-3.png">
                 </a>
                 <h5>百度人脸技术基础介绍及引用场景</h5>
             </li>
@@ -618,7 +618,7 @@
                     <img alt="百度翻译产品介绍"
                          width="500"
                          height="280"
-                         src="/ai_dist/1484894584/ai_images/home/video-4.png">
+                         src="/ai_dist/1486524138/ai_images/home/video-4.png">
                 </a>
                 <h5>百度翻译产品介绍</h5>
             </li>
@@ -731,7 +731,7 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1484894584/js/base.bundle.js"></script>
+<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {
@@ -791,7 +791,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="/ai_dist/1484894584/js/common.bundle.js"></script>
-<script src="/ai_dist/1484894584/js/home.js"></script>
+<script src="/ai_dist/1486524138/js/common.bundle.js"></script>
+<script src="/ai_dist/1486524138/js/home.js"></script>
 </body>
 </html>

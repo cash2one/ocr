@@ -14,17 +14,17 @@
     <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="/ai_dist/1484894584/css/ie9.style.css">
+    <link rel="stylesheet" href="/ai_dist/1486524138/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="/ai_dist/1484894584/css/base.style.css">
-    <link rel="stylesheet" href="/ai_dist/1484894584/css/solution/facegate.style.css">
+    <link rel="stylesheet" href="/ai_dist/1486524138/css/base.style.css">
+    <link rel="stylesheet" href="/ai_dist/1486524138/css/solution/facegate.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="/ai_dist/1484894584/ai_images/logo.png" alt="百度大脑">
+                <img src="/ai_dist/1486524138/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -214,7 +214,7 @@
         <div class="solution-container">
             <div class="solution-case shadow">
                 <div class="solution-icon">
-                    <img src="/ai_dist/1484894584/ai_images/solution/facegate/solution-case-1.png">
+                    <img src="/ai_dist/1486524138/ai_images/solution/facegate/solution-case-1.png">
                 </div>
                 <div class="solution-desc">
                     <h3>提高出入体验</h3>
@@ -227,7 +227,7 @@
             </div>
             <div class="solution-case shadow">
                 <div class="solution-icon">
-                    <img src="/ai_dist/1484894584/ai_images/solution/facegate/solution-case-2.png">
+                    <img src="/ai_dist/1486524138/ai_images/solution/facegate/solution-case-2.png">
                 </div>
                 <div class="solution-desc">
                     <h3>降低人力成本</h3>
@@ -239,7 +239,7 @@
             </div>
             <div class="solution-case shadow">
                 <div class="solution-icon">
-                    <img src="/ai_dist/1484894584/ai_images/solution/facegate/solution-case-3.png">
+                    <img src="/ai_dist/1486524138/ai_images/solution/facegate/solution-case-3.png">
                 </div>
                 <div class="solution-desc">
                     <h3>可配置的权限系统</h3>
@@ -251,7 +251,7 @@
             </div>
             <div class="solution-case shadow">
                 <div class="solution-icon">
-                    <img src="/ai_dist/1484894584/ai_images/solution/facegate/solution-case-4.png">
+                    <img src="/ai_dist/1486524138/ai_images/solution/facegate/solution-case-4.png">
                 </div>
                 <div class="solution-desc">
                     <h3>全天候稳定保障</h3>
@@ -395,7 +395,7 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1484894584/js/base.bundle.js"></script>
+<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {
@@ -455,7 +455,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="/ai_dist/1484894584/js/common.bundle.js"></script>
-<script src="/ai_dist/1484894584/js/solution/facegate.js"></script>
+<script src="/ai_dist/1486524138/js/common.bundle.js"></script>
+<script src="/ai_dist/1486524138/js/solution/facegate.js"></script>
 </body>
 </html>
