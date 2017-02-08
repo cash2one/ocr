@@ -6,7 +6,7 @@
 
 import $ from 'jquery';
 import marked from 'marked';
-import  '../../../bower_components/code-prettify/src/prettify';
+import 'code-prettify/src/prettify';
 
 import 'less/support/faq.less';
 
