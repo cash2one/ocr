@@ -14,17 +14,17 @@
     <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="/ai_dist/1484894584/css/ie9.css">
+    <link rel="stylesheet" href="/ai_dist/1486524138/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="/ai_dist/1484894584/css/base.css">
-    <link rel="stylesheet" href="/ai_dist/1484894584/css/home.style.css">
+    <link rel="stylesheet" href="/ai_dist/1486524138/css/base.style.css">
+    <link rel="stylesheet" href="/ai_dist/1486524138/css/home.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="/ai_dist/1484894584/ai_images/logo.png" alt="百度大脑">
+                <img src="/ai_dist/1486524138/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -166,6 +166,7 @@
                         <li><a href="/support/video">教学视频</a></li>
                         <li><a href="/support/faq">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
+                        <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
                     </ul>
                 </li>
@@ -202,9 +203,14 @@
             <h1>让 AI 变革发生</h1>
             <p>更全面、优质、易用的人工智能服务<br>即刻开启AI发现之旅</p>
             <div>
-                <a role="button" class="get-started" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+                <a role="button"
+                   class="get-started"
+                   href="https://console.bce.baidu.com/?fromai=1#/aip/overview">
+                    免费试用
+                </a>
             </div>
-            <video src="/ai_dist/1484894584/ai_images/home/banner-1.mp4"></video>
+            <video src="/ai_dist/1486524138/ai_images/home/banner-1.mp4">
+            </video>
         </li>
         <li>
             <a href="/tech/face/detect">
@@ -261,7 +267,7 @@
     <div class="container">
         <div class="news-container"></div>
         <h4>新闻动态</h4>
-        <a href="/support/news">more ></a>
+        <a href="/support/news">more &gt;</a>
     </div>
 </section>
 <section class="tech-service home-section">
@@ -283,14 +289,20 @@
                             <li>
                                 <h4>语音识别</h4>
                                 <ul>
-                                    <li><a href="/tech/speech/asr">语音识别</a></li>
-                                    <li><a href="/tech/speech/wake">语音唤醒</a></li>
+                                    <li>
+                                        <a href="/tech/speech/asr">语音识别</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/speech/wake">语音唤醒</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
                                 <h4>语音合成</h4>
                                 <ul>
-                                    <li><a href="/tech/speech/tts">语音合成</a></li>
+                                    <li>
+                                        <a href="/tech/speech/tts">语音合成</a>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
@@ -312,17 +324,29 @@
                             <li>
                                 <h4>文字识别</h4>
                                 <ul>
-                                    <li><a href="/tech/ocr/general">通用文字识别</a></li>
-                                    <li><a href="/tech/ocr/idcard">身份证识别</a></li>
-                                    <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
+                                    <li>
+                                        <a href="/tech/ocr/general">通用文字识别</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/ocr/idcard">身份证识别</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/ocr/bankcard">银行卡识别</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
                                 <h4>人脸识别</h4>
                                 <ul>
-                                    <li><a href="/tech/face/detect">人脸检测</a></li>
-                                    <li><a href="/tech/face/compare">人脸对比</a></li>
-                                    <li><a href="/tech/face/search">人脸查找</a></li>
+                                    <li>
+                                        <a href="/tech/face/detect">人脸检测</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/face/compare">人脸对比</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/face/search">人脸查找</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
@@ -350,22 +374,47 @@
                             <li>
                                 <h4>词汇级</h4>
                                 <ul>
-                                    <li><a href="/tech/nlp/lexical">词法分析</a></li>
-                                    <li><a href="/tech/nlp/word_embedding">中文词向量表示</a></li>
+                                    <li>
+                                        <a href="/tech/nlp/lexical">
+                                            词法分析
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/nlp/word_embedding">
+                                            中文词向量表示
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
                                 <h4>短文本级</h4>
                                 <ul>
-                                    <li><a href="/tech/nlp/dnnlm_cn">中文DNN语言模型</a></li>
-                                    <li><a href="/tech/nlp/simnet">短文本相似度</a></li>
-                                    <li><a href="/tech/nlp/comment_tag">评论观点抽取</a></li>
+                                    <li>
+                                        <a href="/tech/nlp/dnnlm_cn">
+                                            中文DNN语言模型
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/nlp/simnet">
+                                            短文本相似度
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/nlp/comment_tag">
+                                            评论观点抽取
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
                                 <h4>机器翻译</h4>
                                 <ul>
-                                    <li><a href="http://api.fanyi.baidu.com/api/trans/product/index" target="_blank">机器翻译平台</a></li>
+                                    <li>
+                                        <a href="http://api.fanyi.baidu.com/api/trans/product/index"
+                                           target="_blank">
+                                            机器翻译平台
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
@@ -384,8 +433,16 @@
                     <hr>
                     <div class="service-tech-list clear-float">
                         <ul class="inline-list">
-                            <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
-                            <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
+                            <li>
+                                <a href="http://datamart.baidu.com/datax-web/introduce_datax"
+                                   target="_blank">用户画像平台</a>
+                            </li>
+                            <li>
+                                <a href="http://recsys.baidu.com/"
+                                   target="_blank">
+                                    推荐云平台
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -402,7 +459,12 @@
                     <hr>
                     <div class="service-tech-list clear-float">
                         <ul class="inline-list">
-                            <li><a href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a></li>
+                            <li>
+                                <a href="http://www.paddlepaddle.org/"
+                                   target="_blank">
+                                    PaddlePaddle
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -419,7 +481,11 @@
                     <hr>
                     <div class="service-tech-list clear-float">
                         <ul class="inline-list">
-                            <li><a href="/tech/ar">AR内容平台</a></li>
+                            <li>
+                                <a href="/tech/ar">
+                                    AR内容平台
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -440,7 +506,9 @@
                         <p>提供多种服务接驳或答案回复、基于行业场景的私有知识图谱建设</p>
                     </div>
                     <div>
-                        <a role="button" class="btn-primary" href="/solution/robot">了解详情</a>
+                        <a role="button"
+                           class="btn-primary"
+                           href="/solution/robot">了解详情</a>
                     </div>
                 </div>
                 <div id="face-mobile-detect" class="solution-desc">
@@ -451,7 +519,9 @@
                         <p>极大缩短业务办理时间，提升业务的便捷性和安全性。</p>
                     </div>
                     <div>
-                        <a role="button" class="btn-primary" href="/solution/faceprint">了解详情</a>
+                        <a role="button"
+                           class="btn-primary"
+                           href="/solution/faceprint">了解详情</a>
                     </div>
                 </div>
                 <div id="face-gate" class="solution-desc">
@@ -461,7 +531,9 @@
                         <p>实现企业人脸门禁管理，打造便捷、安全、可靠的企业环境与品牌形象</p>
                     </div>
                     <div>
-                        <a role="button" class="btn-primary" href="/solution/facegate">了解详情</a>
+                        <a role="button"
+                           class="btn-primary"
+                           href="/solution/facegate">了解详情</a>
                     </div>
                 </div>
                 <div id="phone-dialing-test" class="solution-desc">
@@ -471,7 +543,9 @@
                         <p>可广泛用于营销补贴业务的反作弊和反欺诈等场景</p>
                     </div>
                     <div>
-                        <a role="button" class="btn-primary" href="/solution/dialog">了解详情</a>
+                        <a role="button"
+                           class="btn-primary"
+                           href="/solution/dialog">了解详情</a>
                     </div>
                 </div>
             </div>
@@ -509,26 +583,43 @@
         <h2>视频教程</h2>
         <ul class="video-list clear-float">
             <li>
-                <a href="http://www.chuanke.com/v7867982-208144-1278714.html" target="_blank">
-                    <img src="/ai_dist/1484894584/ai_images/home/video-1.png">
+                <a href="http://www.chuanke.com/v7867982-208144-1278714.html"
+                   target="_blank">
+                    <img alt="百度语音基础介绍及应用场景"
+                         width="500"
+                         height="280"
+                         src="/ai_dist/1486524138/ai_images/home/video-1.png">
                 </a>
                 <h5>百度语音基础介绍及应用场景</h5>
             </li>
             <li>
-                <a href="http://www.chuanke.com/v7867982-208539-1278740.html" target="_blank">
-                    <img src="/ai_dist/1484894584/ai_images/home/video-2.png">
+                <a href="http://www.chuanke.com/v7867982-208539-1278740.html"
+                   target="_blank">
+                    <img alt="百度OCR基础介绍及应用场景"
+                         width="500"
+                         height="280"
+                         src="/ai_dist/1486524138/ai_images/home/video-2.png">
                 </a>
                 <h5>百度OCR基础介绍及应用场景</h5>
             </li>
             <li>
-                <a href="http://www.chuanke.com/v7867982-208540-1278742.html" target="_blank">
-                    <img src="/ai_dist/1484894584/ai_images/home/video-3.png">
+                <a href="http://www.chuanke.com/v7867982-208540-1278742.html"
+                   target="_blank">
+                    <img alt="百度人脸技术基础介绍及引用场景"
+                        width="500"
+                        height="280"
+                        src="/ai_dist/1486524138/ai_images/home/video-3.png">
                 </a>
                 <h5>百度人脸技术基础介绍及引用场景</h5>
             </li>
             <li>
-                <a href="http://www.chuanke.com/v7867982-208173-1278732.html" target="_blank">
-                    <img src="/ai_dist/1484894584/ai_images/home/video-4.png">
+                <a
+                    href="http://www.chuanke.com/v7867982-208173-1278732.html"
+                    target="_blank">
+                    <img alt="百度翻译产品介绍"
+                         width="500"
+                         height="280"
+                         src="/ai_dist/1486524138/ai_images/home/video-4.png">
                 </a>
                 <h5>百度翻译产品介绍</h5>
             </li>
@@ -561,7 +652,11 @@
         <h2>立即获取免费API Key</h2>
         <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
         <div>
-            <a role="button" class="btn-normal large" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+            <a role="button"
+               class="btn-normal large"
+               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">
+                免费试用
+            </a>
         </div>
     </div>
 </section>
@@ -637,7 +732,7 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1484894584/js/base.bundle.js"></script>
+<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {
@@ -697,7 +792,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="/ai_dist/1484894584/js/common.bundle.js"></script>
-<script src="/ai_dist/1484894584/js/home.js"></script>
+<script src="/ai_dist/1486524138/js/common.bundle.js"></script>
+<script src="/ai_dist/1486524138/js/home.js"></script>
 </body>
 </html>

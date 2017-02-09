@@ -7,6 +7,8 @@
 import $ from 'jquery';
 import News from '../component/widget/news';
 
+import 'less/home.less';
+
 $(document).ready(function () {
     // 首页轮播图
     let currentBannerNum = 0;
@@ -36,13 +38,15 @@ $(document).ready(function () {
                     if (i === (currentBannerNum % banners.length)) {
                         video.play();
                         $(e).find('video').css('opacity', 1);
-                    } else {
+                    }
+                    else {
                         video.currentTime = 0;
                         video.pause();
                         $(e).find('video').css('opacity', 0);
                     }
-                } catch (err) {
-                    console.error(err);
+                }
+                catch (err) {
+                    // console.error(err);
                 }
             }
         });

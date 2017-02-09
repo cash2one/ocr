@@ -10,113 +10,113 @@
 @import '../common/tech-page.less';
 
 .tech-section {
-  &.tech-intro{
-    height: 400px;
+    &.tech-intro {
+        height: 400px;
 
-    .tech-intro-detail {
-      height: 340px;
-      background-size: 1440px/2 600px/2;
-      .icon(@intro, center, center);
-    }
-  }
-
-  &.tech-feature{
-    .feature-item + .feature-item{
-      margin-left: 110px;
-    }
-    .feature-item:nth-child(3n+1) {
-      margin-left: 0;
-    }
-    .feature-item:nth-child(n+4){
-      margin-top: 15px;
-    }
-    .feature-item .feature-icon {
-      background-size: 1030px/2 270px/2;
+        .tech-intro-detail {
+            height: 340px;
+            background-size: 1440px / 2 600px / 2;
+            .icon(@intro, center, center);
+        }
     }
 
-    .feature-item:nth-child(1) .feature-icon{
-      .icon(@icons, -90px, -5px);
+    &.tech-feature {
+        .feature-item + .feature-item {
+            margin-left: 110px;
+        }
+        .feature-item:nth-child(3n+1) {
+            margin-left: 0;
+        }
+        .feature-item:nth-child(n+4) {
+            margin-top: 15px;
+        }
+        .feature-item .feature-icon {
+            background-size: 1030px / 2 270px / 2;
+        }
+
+        .feature-item:nth-child(1) .feature-icon {
+            .icon(@icons, -90px, -5px);
+        }
+        .feature-item:nth-child(2) .feature-icon {
+            .icon(@icons, -175px, -5px);
+        }
+        .feature-item:nth-child(3) .feature-icon {
+            .icon(@icons, -260px, -5px);
+        }
+        .feature-item:nth-child(4) .feature-icon {
+            .icon(@icons, -345px, -5px);
+        }
+        .feature-item:nth-child(5) .feature-icon {
+            .icon(@icons, -430px, -5px);
+        }
     }
-    .feature-item:nth-child(2) .feature-icon{
-      .icon(@icons, -175px, -5px);
-    }
-    .feature-item:nth-child(3) .feature-icon{
-      .icon(@icons, -260px, -5px);
-    }
-    .feature-item:nth-child(4) .feature-icon{
-      .icon(@icons, -345px, -5px);
-    }
-    .feature-item:nth-child(5) .feature-icon{
-      .icon(@icons, -430px, -5px);
-    }
-  }
-  &.tech-scene{
-    .scene-item + .scene-item{
-      margin-left: 50px;
-    }
-    .scene-item:nth-child(3n+1) {
-      margin-left: 0;
-    }
-    .scene-item:nth-child(n+4){
-      margin-top: 15px;
+    &.tech-scene {
+        .scene-item + .scene-item {
+            margin-left: 50px;
+        }
+        .scene-item:nth-child(3n+1) {
+            margin-left: 0;
+        }
+        .scene-item:nth-child(n+4) {
+            margin-top: 15px;
+        }
+
+        .scene-item .scene-icon {
+            background-size: 1030px / 2 270px / 2;
+        }
+
+        .scene-item:nth-child(1) .scene-icon {
+            .icon(@icons, -5px, -90px);
+        }
+        .scene-item:nth-child(2) .scene-icon {
+            .icon(@icons, -50px, -90px);
+        }
+        .scene-item:nth-child(3) .scene-icon {
+            .icon(@icons, -95px, -90px);
+        }
+        .scene-item:nth-child(4) .scene-icon {
+            .icon(@icons, -140px, -90px);
+        }
+        .scene-item:nth-child(5) .scene-icon {
+            .icon(@icons, -185px, -90px);
+        }
     }
 
-    .scene-item .scene-icon{
-      background-size: 1030px/2 270px/2;
-    }
+    &.tech-case {
+        .case-item .case-icon {
+            background-size: 800px / 2 270px / 2;
+        }
 
-    .scene-item:nth-child(1) .scene-icon{
-      .icon(@icons, -5px, -90px);
-    }
-    .scene-item:nth-child(2) .scene-icon{
-      .icon(@icons, -50px, -90px);
-    }
-    .scene-item:nth-child(3) .scene-icon{
-      .icon(@icons, -95px, -90px);
-    }
-    .scene-item:nth-child(4) .scene-icon{
-      .icon(@icons, -140px, -90px);
-    }
-    .scene-item:nth-child(5) .scene-icon{
-      .icon(@icons, -185px, -90px);
-    }
-  }
+        .case-item:nth-child(1) {
+            .icon(url('../../../ai_images/technology/speech-asr/case-1.png'), center, center);
+            .case-icon {
+                .icon(@case-icons, -5px, -5px);
+            }
+        }
+        .case-item:nth-child(2) {
+            .icon(url('../../../ai_images/technology/speech-asr/case-2.png'), center, center);
+            .case-icon {
+                .icon(@case-icons, -105px, -5px);
+            }
+        }
+        .case-item:nth-child(3) {
+            .icon(url('../../../ai_images/technology/speech-asr/case-3.png'), center, center);
+            .case-icon {
+                .icon(@case-icons, -205px, -5px);
+            }
 
-  &.tech-case {
-    .case-item .case-icon{
-      background-size: 800px/2 270px/2;
-    }
+        }
 
-    .case-item:nth-child(1) {
-      .icon(url('../../../ai_images/technology/speech-asr/case-1.png'), center, center);
-      .case-icon {
-        .icon(@case-icons, -5px, -5px);
-      }
+        .case-indicator {
+            & > li:nth-child(1) {
+                .icon(@case-icons, -10px, -210px);
+            }
+            & > li:nth-child(2) {
+                .icon(@case-icons, -210px, -210px);
+            }
+            & > li:nth-child(3) {
+                .icon(@case-icons, -410px, -210px);
+            }
+        }
     }
-    .case-item:nth-child(2) {
-      .icon(url('../../../ai_images/technology/speech-asr/case-2.png'), center, center);
-      .case-icon {
-        .icon(@case-icons, -105px, -5px);
-      }
-    }
-    .case-item:nth-child(3) {
-      .icon(url('../../../ai_images/technology/speech-asr/case-3.png'), center, center);
-      .case-icon {
-        .icon(@case-icons, -205px, -5px);
-      }
-
-    }
-
-    .case-indicator {
-      & > li:nth-child(1) {
-        .icon(@case-icons, -10px, -210px);
-      }
-      & > li:nth-child(2) {
-        .icon(@case-icons, -210px, -210px);
-      }
-      & > li:nth-child(3) {
-        .icon(@case-icons, -410px, -210px);
-      }
-    }
-  }
 }

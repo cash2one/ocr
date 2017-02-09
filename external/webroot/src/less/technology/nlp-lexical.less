@@ -1,6 +1,6 @@
 @import '../common/helper.less';
 @import '../common/global.less';
-@import '../common/tech-page';
+@import '../common/tech-page.less';
 
 @banner: url(../../../ai_images/technology/nlp-lexer/banner.png);
 @icons: url(../../../ai_images/solution/dialog/icons.png);
@@ -28,7 +28,7 @@
 
     // 容器
     &-container {
-        margin: 0 -@feature-padding / 2 40px;
+        margin: 0 0 - (@feature-padding / 2) 40px;
         font-size: 0;
     }
 
@@ -271,7 +271,7 @@
     width: 900px;
     margin: 0 auto;
 
-    &-title{
+    &-title {
         font-size: 30px;
         color: #333;
         text-align: center;
@@ -432,7 +432,7 @@
         cursor: pointer;
         position: relative;
 
-        &:before{
+        &:before {
             content: '';
             display: block;
             width: 17px;
@@ -457,7 +457,7 @@
     cursor: pointer;
 }
 
-.tech-section{
+.tech-section {
     h2 {
         padding-top: 30px;
     }
@@ -476,7 +476,7 @@
 
     &.tech-case {
         .case-item .case-icon {
-            background-size: 800px/2 270px/2;
+            background-size: 800px / 2 270px / 2;
         }
         .case-item:nth-child(1) {
             .icon(url(../../../ai_images/technology/nlp-lexer/case-1.png), center, center);
@@ -500,22 +500,22 @@
                 .icon(@case-icons, -305px, -5px);
             }
         }
-        .case-list{
-            & > li{
+        .case-list {
+            & > li {
                 padding-top: 88px;
 
-                .case-icon{
+                .case-icon {
                     width: auto;
                 }
 
-                &:nth-child(1){
-                    .case-icon{
+                &:nth-child(1) {
+                    .case-icon {
                         background: url(../../../ai_images/technology/nlp-comment/case-logo-1.png) no-repeat center center;
                     }
                 }
 
-                &:nth-child(2){
-                    .case-icon{
+                &:nth-child(2) {
+                    .case-icon {
                         background: url(../../../ai_images/technology/nlp-comment/case-logo-2.png) no-repeat center center;
                     }
                 }

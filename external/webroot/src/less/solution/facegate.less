@@ -8,86 +8,82 @@
 @import '../common/tech-page.less';
 
 .tech-section {
-  &.tech-intro.solution{
-    .solution-case {
-      width: 515px;
-      height: 165px;
-      margin-left: 50px;
+    &.tech-intro.solution {
+        .solution-case {
+            width: 515px;
+            height: 165px;
+            margin-left: 50px;
 
-      &:nth-child(n+3) {
-        margin-top: 15px;
-      }
-
-      .solution-desc {
-        & > ul {
-          padding-left: 30px;
-          line-height: 30px;
-          color: #666;
-          font-size: @font-size-1;
-
-          & > li {
-            position: relative;
-
-            &:before {
-              content: "";
-              display: inline-block;
-              height: 6px;
-              width: 6px;
-              border-radius: 2px;
-              border: 1px solid #999;
-              position: absolute;
-              top: 11px;
-              left: -20px;
-              -webkit-transform: rotate(45deg);
-              -moz-transform: rotate(45deg);
-              -ms-transform: rotate(45deg);
-              -o-transform: rotate(45deg);
-              transform: rotate(45deg);
+            &:nth-child(n+3) {
+                margin-top: 15px;
             }
-          }
+
+            .solution-desc {
+                & > ul {
+                    padding-left: 30px;
+                    line-height: 30px;
+                    color: #666;
+                    font-size: @font-size-1;
+
+                    & > li {
+                        position: relative;
+
+                        &:before {
+                            content: "";
+                            display: inline-block;
+                            height: 6px;
+                            width: 6px;
+                            border-radius: 2px;
+                            border: 1px solid #999;
+                            position: absolute;
+                            top: 11px;
+                            left: -20px;
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+            }
         }
-      }
-    }
-  }
-
-  &.tech-feature{
-    .feature-item + .feature-item{
-      margin-left: 110px;
-    }
-    .feature-item .feature-icon {
-      background-size: 500px/2 160px/2;
     }
 
-    .feature-item:nth-child(1) .feature-icon{
-      .icon(@icons, 0px, 0);
-    }
-    .feature-item:nth-child(2) .feature-icon{
-      .icon(@icons, -80px, 0);
-    }
-    .feature-item:nth-child(3) .feature-icon{
-      .icon(@icons, -165px, 0);
-    }
-  }
+    &.tech-feature {
+        .feature-item + .feature-item {
+            margin-left: 110px;
+        }
+        .feature-item .feature-icon {
+            background-size: 500px / 2 160px / 2;
+        }
 
-  &.tech-case {
-    .case-item .case-icon {
-      background-size: 800px/2 270px/2;
-    }
-    .case-item:nth-child(1) {
-      .icon(url('../../../ai_images/solution/facegate/case-1.png'), center, center);
-
-    }
-    .case-item:nth-child(2) {
-      .icon(url('../../../ai_images/solution/facegate/case-2.png'), center, center);
+        .feature-item:nth-child(1) .feature-icon {
+            .icon(@icons, 0px, 0);
+        }
+        .feature-item:nth-child(2) .feature-icon {
+            .icon(@icons, -80px, 0);
+        }
+        .feature-item:nth-child(3) .feature-icon {
+            .icon(@icons, -165px, 0);
+        }
     }
 
-    .case-indicator {
-      & > li:nth-child(1) {
-        .icon(@case-icons, -200px, -10px);
-      }
-      & > li:nth-child(2) {
-        .icon(@case-icons, -5px, -10px);
-      }
+    &.tech-case {
+        .case-item .case-icon {
+            background-size: 800px / 2 270px / 2;
+        }
+        .case-item:nth-child(1) {
+            .icon(url('../../../ai_images/solution/facegate/case-1.png'), center, center);
+
+        }
+        .case-item:nth-child(2) {
+            .icon(url('../../../ai_images/solution/facegate/case-2.png'), center, center);
+        }
+
+        .case-indicator {
+            & > li:nth-child(1) {
+                .icon(@case-icons, -200px, -10px);
+            }
+            & > li:nth-child(2) {
+                .icon(@case-icons, -5px, -10px);
+            }
+        }
     }
-  }
 }

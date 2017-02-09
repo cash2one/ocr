@@ -14,17 +14,17 @@
     <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="/ai_dist/1484894584/css/ie9.css">
+    <link rel="stylesheet" href="/ai_dist/1486524138/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="/ai_dist/1484894584/css/base.css">
-    <link rel="stylesheet" href="/ai_dist/1484894584/css/technology/antiporn.style.css">
+    <link rel="stylesheet" href="/ai_dist/1486524138/css/base.style.css">
+    <link rel="stylesheet" href="/ai_dist/1486524138/css/technology/antiporn.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="/ai_dist/1484894584/ai_images/logo.png" alt="百度大脑">
+                <img src="/ai_dist/1486524138/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -166,6 +166,7 @@
                         <li><a href="/support/video">教学视频</a></li>
                         <li><a href="/support/faq">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
+                        <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
                     </ul>
                 </li>
@@ -255,28 +256,28 @@
             <div>
                 <ul class="demo-card-list clear-float">
                     <li>
-                        <img src="/ai_dist/1484894584/ai_images/technology/antiporn/demo-card-1.jpg">
+                        <img src="/ai_dist/1486524138/ai_images/technology/antiporn/demo-card-1.jpg">
                     </li>
                     <li>
-                        <img src="/ai_dist/1484894584/ai_images/technology/antiporn/demo-card-2.jpg">
+                        <img src="/ai_dist/1486524138/ai_images/technology/antiporn/demo-card-2.jpg">
                     </li>
                     <li>
-                        <img src="/ai_dist/1484894584/ai_images/technology/antiporn/demo-card-3.jpg">
+                        <img src="/ai_dist/1486524138/ai_images/technology/antiporn/demo-card-3.jpg">
                     </li>
                     <li>
-                        <img src="/ai_dist/1484894584/ai_images/technology/antiporn/demo-card-4.jpg">
+                        <img src="/ai_dist/1486524138/ai_images/technology/antiporn/demo-card-4.jpg">
                     </li>
                     <li>
-                        <img src="/ai_dist/1484894584/ai_images/technology/antiporn/demo-card-5.jpg">
+                        <img src="/ai_dist/1486524138/ai_images/technology/antiporn/demo-card-5.jpg">
                     </li>
                     <li>
-                        <img src="/ai_dist/1484894584/ai_images/technology/antiporn/demo-card-6.jpg">
+                        <img src="/ai_dist/1486524138/ai_images/technology/antiporn/demo-card-6.jpg">
                     </li>
                     <li>
-                        <img src="/ai_dist/1484894584/ai_images/technology/antiporn/demo-card-7.jpg">
+                        <img src="/ai_dist/1486524138/ai_images/technology/antiporn/demo-card-7.jpg">
                     </li>
                     <li>
-                        <img src="/ai_dist/1484894584/ai_images/technology/antiporn/demo-card-8.jpg">
+                        <img src="/ai_dist/1486524138/ai_images/technology/antiporn/demo-card-8.jpg">
                     </li>
                 </ul>
             </div>
@@ -468,7 +469,7 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1484894584/js/base.bundle.js"></script>
+<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {
@@ -528,7 +529,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="/ai_dist/1484894584/js/common.bundle.js"></script>
-<script src="/ai_dist/1484894584/js/technology/antiporn.js"></script>
+<script src="/ai_dist/1486524138/js/common.bundle.js"></script>
+<script src="/ai_dist/1486524138/js/technology/antiporn.js"></script>
 </body>
 </html>

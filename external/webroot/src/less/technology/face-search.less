@@ -10,106 +10,106 @@
 @import '../common/tech-page.less';
 
 .tech-section {
-  &.tech-intro{
-    height: 645px;
+    &.tech-intro {
+        height: 645px;
 
-    .tech-intro-detail{
-      margin-top: 40px;
-      height: 500px;
-      position: relative;
-      .icon(@intro, center, center);
-    }
-
-    .face-list {
-      width: 751px;
-      position: absolute;
-      top: 36px;
-      left: 67px;
-
-      & > li {
-        display: inline-block;
-        width: 179px;
-        height: 208px;
-        transition: all 0.3s ease;
-        border: 3px solid transparent;
-        float: left;
-
-        &.right.scanning {
-          border-color: @blue;
-          background-color: fadeOut(@blue, 80%);
+        .tech-intro-detail {
+            margin-top: 40px;
+            height: 500px;
+            position: relative;
+            .icon(@intro, center, center);
         }
 
-        &.wrong.scanning {
-          border-color: red;
-          background-color: fadeOut(red, 80%);
+        .face-list {
+            width: 751px;
+            position: absolute;
+            top: 36px;
+            left: 67px;
+
+            & > li {
+                display: inline-block;
+                width: 179px;
+                height: 208px;
+                transition: all .3s ease;
+                border: 3px solid transparent;
+                float: left;
+
+                &.right.scanning {
+                    border-color: @blue;
+                    background-color: fadeOut(@blue, 80%);
+                }
+
+                &.wrong.scanning {
+                    border-color: #fa0000;
+                    background-color: fadeOut(red, 80%);
+                }
+
+                &.right.scanned {
+                    border-color: @blue;
+                    background-color: transparent;
+                }
+
+                &.wrong.scanned {
+                    border-color: fadeOut(@black, 15%);
+                    background-color: fadeOut(@black, 15%);
+                }
+            }
+        }
+    }
+
+    &.tech-feature {
+        .feature-item + .feature-item {
+            margin-left: 110px;
+        }
+        .feature-item .feature-icon {
+            background-size: 520px / 2 270px / 2;
         }
 
-        &.right.scanned {
-          border-color: @blue;
-          background-color: transparent;
+        .feature-item:nth-child(1) .feature-icon {
+            .icon(@icons, -5px, -5px);
+        }
+        .feature-item:nth-child(2) .feature-icon {
+            .icon(@icons, -90px, -5px);
+        }
+        .feature-item:nth-child(3) .feature-icon {
+            .icon(@icons, -175px, -5px);
+        }
+    }
+    &.tech-scene {
+        .scene-item + .scene-item {
+            margin-left: 50px;
+        }
+        .scene-item .scene-icon {
+            background-size: 520px / 2 270px / 2;
         }
 
-        &.wrong.scanned {
-          border-color: fadeOut(@black, 15%);
-          background-color: fadeOut(@black, 15%);
+        .scene-item:nth-child(1) .scene-icon {
+            .icon(@icons, -5px, -90px);
         }
-      }
-    }
-  }
-
-  &.tech-feature{
-    .feature-item + .feature-item{
-      margin-left: 110px;
-    }
-    .feature-item .feature-icon {
-      background-size: 520px/2 270px/2;
+        .scene-item:nth-child(2) .scene-icon {
+            .icon(@icons, -50px, -90px);
+        }
+        .scene-item:nth-child(3) .scene-icon {
+            .icon(@icons, -95px, -90px);
+        }
     }
 
-    .feature-item:nth-child(1) .feature-icon{
-      .icon(@icons, -5px, -5px);
-    }
-    .feature-item:nth-child(2) .feature-icon{
-      .icon(@icons, -90px, -5px);
-    }
-    .feature-item:nth-child(3) .feature-icon{
-      .icon(@icons, -175px, -5px);
-    }
-  }
-  &.tech-scene{
-    .scene-item + .scene-item{
-      margin-left: 50px;
-    }
-    .scene-item .scene-icon{
-      background-size: 520px/2 270px/2;
-    }
+    &.tech-case {
+        .case-item:nth-child(1) {
+            .icon(url('../../../ai_images/technology/bfr-search/case-1.png'), center, center);
 
-    .scene-item:nth-child(1) .scene-icon{
-      .icon(@icons, -5px, -90px);
-    }
-    .scene-item:nth-child(2) .scene-icon{
-      .icon(@icons, -50px, -90px);
-    }
-    .scene-item:nth-child(3) .scene-icon{
-      .icon(@icons, -95px, -90px);
-    }
-  }
+        }
+        .case-item:nth-child(2) {
+            .icon(url('../../../ai_images/technology/bfr-search/case-2.png'), center, center);
+        }
 
-  &.tech-case {
-    .case-item:nth-child(1) {
-      .icon(url('../../../ai_images/technology/bfr-search/case-1.png'), center, center);
-
+        .case-indicator {
+            & > li:nth-child(1) {
+                .icon(@case-icons, -10px, -10px);
+            }
+            & > li:nth-child(2) {
+                .icon(@case-icons, -210px, -10px);
+            }
+        }
     }
-    .case-item:nth-child(2) {
-      .icon(url('../../../ai_images/technology/bfr-search/case-2.png'), center, center);
-    }
-
-    .case-indicator {
-      & > li:nth-child(1) {
-        .icon(@case-icons, -10px, -10px);
-      }
-      & > li:nth-child(2) {
-        .icon(@case-icons, -210px, -10px);
-      }
-    }
-  }
 }

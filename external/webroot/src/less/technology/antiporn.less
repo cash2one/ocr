@@ -11,505 +11,445 @@
 @import '../common/tech-page.less';
 
 .tech-section {
-  &.tech-intro{
-    .tech-intro-detail {
-      padding: 0px 35px;
-      margin: 30px auto 0;
-      display: inline-block;
-
-      .scan-box {
-        width: 350px;
-        height: 250px;
-        float: left;
-        overflow: hidden;
-        position: relative;
-        opacity: 0.7;
-
-        &:nth-child(1) {
-          .icon(url('../../../ai_images/technology/antiporn/intro-case-1.png'), -14px, -293px);
-        }
-        &:nth-child(2) {
-          margin-left: 30px;
-          .icon(url('../../../ai_images/technology/antiporn/intro-case-2.png'), -12px, -293px);
-        }
-        &:nth-child(3) {
-          margin-left: 30px;
-          .icon(url('../../../ai_images/technology/antiporn/intro-case-3.png'), -13px, -293px);
-        }
-
-        &.scanned {
-          opacity: 1;
-          -webkit-transition: opacity 0.3s ease-out;
-             -moz-transition: opacity 0.3s ease-out;
-              -ms-transition: opacity 0.3s ease-out;
-               -o-transition: opacity 0.3s ease-out;
-                  transition: opacity 0.3s ease-out;
-          &:nth-child(1) {
-            .icon(url('../../../ai_images/technology/antiporn/intro-case-1.png'), -10px, -11px);
-          }
-          &:nth-child(2) {
-            .icon(url('../../../ai_images/technology/antiporn/intro-case-2.png'), -10px, -10px);
-          }
-          &:nth-child(3) {
-            .icon(url('../../../ai_images/technology/antiporn/intro-case-3.png'), -10px, -11px);
-          }
-        }
-
-
-        &::before {
-          content: "";
-          width: 350px;
-          height: 130px;
-          position: absolute;
-          display: inline-block;
-          left: 0;
-          top: -130px;
-          .icon(url('../../../ai_images/technology/antiporn/intro-case-1.png'), -602px, -310px);
-          -webkit-transition: top 3s ease-out;
-             -moz-transition: top 3s ease-out;
-              -ms-transition: top 3s ease-out;
-               -o-transition: top 3s ease-out;
-                  transition: top 3s ease-out;
-        }
-
-        &.scanned::before {
-          top: 100%;
-          -webkit-transition-delay: 0.3s;
-             -moz-transition-delay: 0.3s;
-              -ms-transition-delay: 0.3s;
-               -o-transition-delay: 0.3s;
-                  transition-delay: 0.3s;
-        }
-
-        &::after {
-          content: "";
-          width: 350px;
-          height: 250px;
-          position: absolute;
-          display: inline-block;
-          left: 0;
-          top: 0;
-          opacity: 0;
-          -webkit-transition: opacity 0.3s ease-out;
-             -moz-transition: opacity 0.3s ease-out;
-              -ms-transition: opacity 0.3s ease-out;
-               -o-transition: opacity 0.3s ease-out;
-                  transition: opacity 0.3s ease-out;
-        }
-
-        &:nth-child(1)::after {
-          .icon(url('../../../ai_images/technology/antiporn/intro-case-1.png'), -740px, -10px);
-        }
-        &:nth-child(2)::after {
-          .icon(url('../../../ai_images/technology/antiporn/intro-case-2.png'), -740px, -10px);
-        }
-        &:nth-child(3)::after {
-          .icon(url('../../../ai_images/technology/antiporn/intro-case-3.png'), -740px, -10px);
-        }
-
-        &.scanned::after {
-          opacity: 1;
-          -webkit-transition-delay: 3.3s;
-             -moz-transition-delay: 3.3s;
-              -ms-transition-delay: 3.3s;
-               -o-transition-delay: 3.3s;
-                  transition-delay: 3.3s;
-        }
-      }
-
-    }
-  }
-
-  &.tech-demo {
-    .demo-container {
-      .data-view-container {
-        width: 50%;
-        float: left;
-        height: 500px;
-      }
-
-      .data-view {
-        width: 100%;
-        height: 350px;
-        position: relative;
-        box-sizing: border-box;
-        padding-right: 10px;
-
-
-        &[data-label] {
-          color: #666;
-          background-color: #fafafa;
-          border: 1px solid #ebebeb;
-          overflow: hidden;
-          padding-right: 0;
-
-          & + .data-view[data-label]{
-            border-left: none;
-          }
-
-          &::after {
-            content: attr(data-label);
+    &.tech-intro {
+        .tech-intro-detail {
+            padding: 0 35px;
+            margin: 30px auto 0;
             display: inline-block;
-            border: 1px solid #cce3fb;
-            background-color: #e6fafd;
-            position: absolute;
-            left: -1px;
-            top: -1px;
-            padding: 0 15px;
-            line-height: 30px;
-            z-index: 9;
-          }
-        }
-      }
 
-      #demo-result {
-        height: 400px;
-        margin-bottom: 10px;
-        border-right: none;
+            .scan-box {
+                width: 350px;
+                height: 250px;
+                float: left;
+                overflow: hidden;
+                position: relative;
+                opacity: .7;
 
-        .canvas-container {
-          height: 100%;
-          width: 100%;
+                &:nth-child(1) {
+                    .icon(url('../../../ai_images/technology/antiporn/intro-case-1.png'), -14px, -293px);
+                }
+                &:nth-child(2) {
+                    margin-left: 30px;
+                    .icon(url('../../../ai_images/technology/antiporn/intro-case-2.png'), -12px, -293px);
+                }
+                &:nth-child(3) {
+                    margin-left: 30px;
+                    .icon(url('../../../ai_images/technology/antiporn/intro-case-3.png'), -13px, -293px);
+                }
 
-          &::after {
-            content: "";
-            display: inline-block;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-          }
+                &.scanned {
+                    opacity: 1;
+                    transition: opacity .3s ease-out;
+                    &:nth-child(1) {
+                        .icon(url('../../../ai_images/technology/antiporn/intro-case-1.png'), -10px, -11px);
+                    }
+                    &:nth-child(2) {
+                        .icon(url('../../../ai_images/technology/antiporn/intro-case-2.png'), -10px, -10px);
+                    }
+                    &:nth-child(3) {
+                        .icon(url('../../../ai_images/technology/antiporn/intro-case-3.png'), -10px, -11px);
+                    }
+                }
 
-          &.error-upload-fail canvas,
-          &.error-no-result canvas,
-          &.error-timeout canvas{
-            display: none;
-          }
-          &.error-image-format::after {
-            .icon(url('../../../ai_images/error/image-format.png'), center, center);
-          }
-          &.error-upload-fail::after {
-            .icon(url('../../../ai_images/error/upload-fail.png'), center, center);
-          }
-          &.error-no-result::after {
-            .icon(url('../../../ai_images/error/no-result.png'), center, center);
-          }
-          &.error-timeout::after {
-            .icon(url('../../../ai_images/error/timeout.png'), center, center);
-          }
-          &.has-result::after {
-            background-color: fadeOut(@black, 50%);
-          }
 
-          &.loading::after {
-            color: #666;
-            content: "图片上传中";
-            line-height: 398px;
-            text-align: center;
-          }
+                &::before {
+                    content: "";
+                    width: 350px;
+                    height: 130px;
+                    position: absolute;
+                    display: inline-block;
+                    left: 0;
+                    top: -130px;
+                    .icon(url('../../../ai_images/technology/antiporn/intro-case-1.png'), -602px, -310px);
+                    transition: top 3s ease-out;
+                }
 
-          &::before {
-            content: "";
-            display: inline-block;
-            position: absolute;
-            left: 340px;
-            top: 75px;
-            width: 110px;
-            height: 120px;
-            z-index: 2;
-          }
-          &.has-result::before {
-            content: attr(data-probability);
-            opacity: 0;
-            width: 204px;
-            height: 270px;
-            line-height: 580px;
-            color: white;
-            font-size: 24px;
-            text-align: center;
-            left: 50%;
-            top: 50%;
-            -webkit-transition: opacity 0.3s ease-out;
-               -moz-transition: opacity 0.3s ease-out;
-                -ms-transition: opacity 0.3s ease-out;
-                 -o-transition: opacity 0.3s ease-out;
-                    transition: opacity 0.3s ease-out;
-            -webkit-transform: translate(-50%, -50%);
-               -moz-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                 -o-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
-          }
+                &.scanned::before {
+                    top: 100%;
+                    transition-delay: .3s;
+                }
 
-          &.has-result.normal::before {
-            opacity: 1;
-            .icon(@scan-result-icons, -21px, center);
-          }
-          &.has-result.sexy::before {
-            opacity: 1;
-            .icon(@scan-result-icons, -234px, center);
-          }
-          &.has-result.pornography::before {
-            opacity: 1;
-            .icon(@scan-result-icons, -447px, center);
-          }
-          &.loading::before {
-            .icon(url('../../../ai_images/loading.png'), center, center);
-            left: 277px;
-            top: 145px;
-            width: 32px;
-            height: 32px;
-            .animate(uploading, 0.8s, 0, infinite, ease-in);
+                &::after {
+                    content: "";
+                    width: 350px;
+                    height: 250px;
+                    position: absolute;
+                    display: inline-block;
+                    left: 0;
+                    top: 0;
+                    opacity: 0;
+                    transition: opacity .3s ease-out;
+                }
 
-            @-webkit-keyframes uploading {
-              from {
-                -webkit-transform: rotate(0deg);
-              }
-              to {
-                -webkit-transform: rotate(360deg);
-              }
+                &:nth-child(1)::after {
+                    .icon(url('../../../ai_images/technology/antiporn/intro-case-1.png'), -740px, -10px);
+                }
+                &:nth-child(2)::after {
+                    .icon(url('../../../ai_images/technology/antiporn/intro-case-2.png'), -740px, -10px);
+                }
+                &:nth-child(3)::after {
+                    .icon(url('../../../ai_images/technology/antiporn/intro-case-3.png'), -740px, -10px);
+                }
+
+                &.scanned::after {
+                    opacity: 1;
+                    transition-delay: 3.3s;
+                }
             }
-            @-moz-keyframes uploading {
-              from {
-                -moz-transform: rotate(0deg);
-              }
-              to {
-                -moz-transform: rotate(360deg);
-              }
+
+        }
+    }
+
+    &.tech-demo {
+        .demo-container {
+            .data-view-container {
+                width: 50%;
+                float: left;
+                height: 500px;
             }
-            @-ms-keyframes uploading {
-              from {
-                -ms-transform: rotate(0deg);
-              }
-              to {
-                -ms-transform: rotate(360deg);
-              }
+
+            .data-view {
+                width: 100%;
+                height: 350px;
+                position: relative;
+                box-sizing: border-box;
+                padding-right: 10px;
+
+
+                &[data-label] {
+                    color: #666;
+                    background-color: #fafafa;
+                    border: 1px solid #ebebeb;
+                    overflow: hidden;
+                    padding-right: 0;
+
+                    & + .data-view[data-label] {
+                        border-left: none;
+                    }
+
+                    &::after {
+                        content: attr(data-label);
+                        display: inline-block;
+                        border: 1px solid #cce3fb;
+                        background-color: #e6fafd;
+                        position: absolute;
+                        left: -1px;
+                        top: -1px;
+                        padding: 0 15px;
+                        line-height: 30px;
+                        z-index: 9;
+                    }
+                }
             }
-            @-o-keyframes uploading {
-              from {
-                -o-transform: rotate(0deg);
-              }
-              to {
-                -o-transform: rotate(360deg);
-              }
+
+            #demo-result {
+                height: 400px;
+                margin-bottom: 10px;
+                border-right: none;
+
+                .canvas-container {
+                    height: 100%;
+                    width: 100%;
+
+                    &::after {
+                        content: "";
+                        display: inline-block;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+                    }
+
+                    &.error-upload-fail canvas,
+                    &.error-no-result canvas,
+                    &.error-timeout canvas {
+                        display: none;
+                    }
+                    &.error-image-format::after {
+                        .icon(url('../../../ai_images/error/image-format.png'), center, center);
+                    }
+                    &.error-upload-fail::after {
+                        .icon(url('../../../ai_images/error/upload-fail.png'), center, center);
+                    }
+                    &.error-no-result::after {
+                        .icon(url('../../../ai_images/error/no-result.png'), center, center);
+                    }
+                    &.error-timeout::after {
+                        .icon(url('../../../ai_images/error/timeout.png'), center, center);
+                    }
+                    &.has-result::after {
+                        background-color: fadeOut(@black, 50%);
+                    }
+
+                    &.loading::after {
+                        color: #666;
+                        content: "图片上传中";
+                        line-height: 398px;
+                        text-align: center;
+                    }
+
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        position: absolute;
+                        left: 340px;
+                        top: 75px;
+                        width: 110px;
+                        height: 120px;
+                        z-index: 2;
+                    }
+                    &.has-result::before {
+                        content: attr(data-probability);
+                        opacity: 0;
+                        width: 204px;
+                        height: 270px;
+                        line-height: 580px;
+                        color: @white;
+                        font-size: 24px;
+                        text-align: center;
+                        left: 50%;
+                        top: 50%;
+                        transition: opacity .3s ease-out;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    &.has-result.normal::before {
+                        opacity: 1;
+                        .icon(@scan-result-icons, -21px, center);
+                    }
+                    &.has-result.sexy::before {
+                        opacity: 1;
+                        .icon(@scan-result-icons, -234px, center);
+                    }
+                    &.has-result.pornography::before {
+                        opacity: 1;
+                        .icon(@scan-result-icons, -447px, center);
+                    }
+                    &.loading::before {
+                        .icon(url('../../../ai_images/loading.png'), center, center);
+                        left: 277px;
+                        top: 145px;
+                        width: 32px;
+                        height: 32px;
+                        .animate(uploading, 0.8s, 0, infinite, ease-in);
+
+                        @keyframes uploading {
+                            from {
+                                transform: rotate(0deg);
+                            }
+                            to {
+                                transform: rotate(360deg);
+                            }
+                        }
+                    }
+                }
             }
-            @keyframes uploading {
-              from {
-                transform: rotate(0deg);
-              }
-              to {
-                transform: rotate(360deg);
-              }
+
+            #demo-json {
+                height: 100%;
+
+                p {
+                    white-space: pre-wrap;
+                    padding: 40px 30px;
+                    margin: 0;
+                    overflow: auto;
+                    height: 100%;
+                    box-sizing: border-box;
+                }
             }
-          }
+
+            .demo-desc {
+                font-size: @font-size-1;
+                line-height: @font-size-1 + 8px;
+                margin-top: 12px;
+                margin-bottom: 0;
+                color: #999;
+            }
+
+            .demo-data {
+                height: 38px;
+
+                & > * {
+                    float: left;
+                }
+
+                #demo-photo-url {
+                    height: 36px;
+                    border: 1px solid #ebebeb;
+                    padding: 0 11px;
+                    width: 320px;
+                    color: #333;
+                }
+
+                span {
+                    margin: 0 10px;
+                    display: inline-block;
+                    line-height: 38px;
+                    color: #999;
+                }
+
+                .btn-primary {
+                    line-height: 36px;
+                    width: 100px;
+                    height: 36px;
+                    box-shadow: none;
+                }
+
+                input[type="file"] {
+                    width: 0;
+                    height: 0;
+                }
+
+                label {
+                    border: 1px solid @blue;
+                    background-color: @blue;
+                    color: @white;
+                    width: 100px;
+                    height: 36px;
+                    line-height: 36px;
+                    text-align: center;
+                    border-radius: 2px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #1a81ed;
+                    }
+                }
+            }
+
+            .demo-card-list {
+                margin-top: 16px;
+                border: 1px solid #ebebeb;
+
+                & > li {
+                    box-sizing: border-box;
+                    display: inline-block;
+                    width: 12.5%;
+                    height: 95px;
+                    text-align: center;
+                    vertical-align: middle;
+                    float: left;
+                    background-color: #fafafa;
+                    padding: 10px;
+                    position: relative;
+                    cursor: pointer;
+
+                    & + li {
+                        border-left: 1px solid fadeOut(@black, 95%);
+                    }
+
+                    &.active::after,
+                    &:hover::after {
+                        content: "";
+                        display: inline-block;
+                        border: 2px solid #7fb9f5;
+                        position: absolute;
+                        left: -1px;
+                        top: -1px;
+                        right: -1px;
+                        bottom: -1px;
+                        box-sizing: border-box;
+                        z-index: 9;
+                    }
+
+                    & > img {
+                        max-height: 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
         }
-      }
-
-      #demo-json {
-        height: 100%;
-
-        p {
-          white-space: pre-wrap;
-          padding: 40px 30px;
-          margin: 0;
-          overflow: auto;
-          height: 100%;
-          box-sizing: border-box;
-        }
-      }
-
-      .demo-desc {
-        font-size: @font-size-1;
-        line-height: @font-size-1 + 8px;
-        margin-top: 12px;
-        margin-bottom: 0;
-        color: #999;
-      }
-
-      .demo-data {
-        height: 38px;
-
-        & > * {
-          float: left;
+    }
+    &.tech-feature {
+        .feature-item + .feature-item {
+            margin-left: 110px;
         }
 
-        #demo-photo-url {
-          height: 36px;
-          border: 1px solid #ebebeb;
-          padding: 0 11px;
-          width: 320px;
-          color: #333;
+        .feature-item .feature-icon {
+            background-size: 520px / 2 270px / 2;
         }
 
-        span {
-          margin: 0 10px;
-          display: inline-block;
-          line-height: 38px;
-          color: #999;
+        .feature-item:nth-child(1) .feature-icon {
+            .icon(@icons, -5px, -5px);
+        }
+        .feature-item:nth-child(2) .feature-icon {
+            .icon(@icons, -90px, -5px);
+        }
+        .feature-item:nth-child(3) .feature-icon {
+            .icon(@icons, -175px, -5px);
+        }
+    }
+
+    &.tech-scene {
+        .scene-item .scene-icon {
+            background-size: 520px / 2 270px / 2;
         }
 
-        .btn-primary {
-          line-height: 36px;
-          width: 100px;
-          height: 36px;
-          box-shadow: none;
+        .scene-item:nth-child(1) {
+            margin-left: 150px;
+            margin-right: 80px;
+            .scene-icon {
+                .icon(@icons, -5px, -90px);
+            }
+        }
+        .scene-item:nth-child(2) {
+            margin-left: 80px;
+            margin-right: 150px;
+
+            .scene-icon {
+                .icon(@icons, -50px, -90px);
+            }
+        }
+    }
+
+    &.tech-case {
+        .case-item .case-icon {
+            background-size: 800px / 2 270px / 2;
+        }
+        .case-item:nth-child(1) {
+            .icon(url('../../../ai_images/technology/antiporn/case-1.png'), center, center);
+
+            .case-icon {
+                .icon(@case-icons, -5px, -5px);
+            }
+        }
+        .case-item:nth-child(2) {
+            .icon(url('../../../ai_images/technology/antiporn/case-2.png'), center, center);
+
+            .case-icon {
+                .icon(@case-icons, -105px, -5px);
+            }
+        }
+        .case-item:nth-child(3) {
+            .icon(url('../../../ai_images/technology/antiporn/case-3.png'), center, center);
+
+            .case-icon {
+                .icon(@case-icons, -205px, -5px);
+            }
+        }
+        .case-item:nth-child(4) {
+            .icon(url('../../../ai_images/technology/antiporn/case-4.png'), center, center);
+
+            .case-icon {
+                .icon(@case-icons, -305px, -5px);
+            }
         }
 
-        input[type="file"]{
-          width: 0;
-          height: 0;
+        .case-indicator {
+            & > li:nth-child(1) {
+                .icon(@case-icons, -10px, -210px);
+            }
+            & > li:nth-child(2) {
+                .icon(@case-icons, -210px, -210px);
+            }
+            & > li:nth-child(3) {
+                .icon(@case-icons, -410px, -210px);
+            }
+            & > li:nth-child(4) {
+                .icon(@case-icons, -610px, -210px);
+            }
         }
-
-        label {
-          border: 1px solid @blue;
-          background-color: @blue;
-          color: @white;
-          width: 100px;
-          height: 36px;
-          line-height: 36px;
-          text-align: center;
-          border-radius: 2px;
-          cursor: pointer;
-
-          &:hover {
-            background-color: #1a81ed;
-          }
-        }
-      }
-
-      .demo-card-list {
-        margin-top: 16px;
-        border: 1px solid #ebebeb;
-
-        & > li {
-          box-sizing: border-box;
-          display: inline-block;
-          width: 12.5%;
-          height: 95px;
-          text-align: center;
-          vertical-align: middle;
-          float: left;
-          background-color: #fafafa;
-          padding: 10px;
-          position: relative;
-          cursor: pointer;
-
-          & + li {
-            border-left: 1px solid fadeOut(@black, 95%);
-          }
-
-          &.active::after,
-          &:hover::after {
-            content: "";
-            display: inline-block;
-            border: 2px solid #7fb9f5;
-            position: absolute;
-            left: -1px;
-            top: -1px;
-            right: -1px;
-            bottom: -1px;
-            box-sizing: border-box;
-            z-index: 9;
-          }
-
-          & > img {
-            max-height: 100%;
-            max-width: 100%;
-          }
-        }
-      }
     }
-  }
-  &.tech-feature{
-    .feature-item + .feature-item{
-      margin-left: 110px;
-    }
-
-    .feature-item .feature-icon {
-      background-size: 520px/2 270px/2;
-    }
-
-    .feature-item:nth-child(1) .feature-icon{
-      .icon(@icons, -5px, -5px);
-    }
-    .feature-item:nth-child(2) .feature-icon{
-      .icon(@icons, -90px, -5px);
-    }
-    .feature-item:nth-child(3) .feature-icon{
-      .icon(@icons, -175px, -5px);
-    }
-  }
-
-  &.tech-scene{
-    .scene-item .scene-icon {
-      background-size: 520px/2 270px/2;
-    }
-
-    .scene-item:nth-child(1) {
-      margin-left: 150px;
-      margin-right: 80px;
-      .scene-icon {
-        .icon(@icons, -5px, -90px);
-      }
-    }
-    .scene-item:nth-child(2) {
-      margin-left: 80px;
-      margin-right: 150px;
-
-      .scene-icon {
-        .icon(@icons, -50px, -90px);
-      }
-    }
-  }
-
-  &.tech-case {
-    .case-item .case-icon {
-      background-size: 800px/2 270px/2;
-    }
-    .case-item:nth-child(1) {
-      .icon(url('../../../ai_images/technology/antiporn/case-1.png'), center, center);
-
-      .case-icon {
-        .icon(@case-icons, -5px, -5px);
-      }
-    }
-    .case-item:nth-child(2) {
-      .icon(url('../../../ai_images/technology/antiporn/case-2.png'), center, center);
-
-      .case-icon {
-        .icon(@case-icons, -105px, -5px);
-      }
-    }
-    .case-item:nth-child(3) {
-      .icon(url('../../../ai_images/technology/antiporn/case-3.png'), center, center);
-
-      .case-icon {
-        .icon(@case-icons, -205px, -5px);
-      }
-    }
-    .case-item:nth-child(4) {
-      .icon(url('../../../ai_images/technology/antiporn/case-4.png'), center, center);
-
-      .case-icon {
-        .icon(@case-icons, -305px, -5px);
-      }
-    }
-
-    .case-indicator {
-      & > li:nth-child(1) {
-        .icon(@case-icons, -10px, -210px);
-      }
-      & > li:nth-child(2) {
-        .icon(@case-icons, -210px, -210px);
-      }
-      & > li:nth-child(3) {
-        .icon(@case-icons, -410px, -210px);
-      }
-      & > li:nth-child(4) {
-        .icon(@case-icons, -610px, -210px);
-      }
-    }
-  }
 }

@@ -5,9 +5,12 @@
 'use strict';
 
 import $ from 'jquery';
+import throttle from 'lodash.throttle';
 import DemoCanvas from '../../component/widget/demoCanvas';
 import {scanFace} from '../../model/demoAPI';
 import AlertModal from '../../component/widget/alertModal';
+
+import 'less/technology/face-detect.less';
 
 /* eslint-disable */
 // demo图片路径集合，TODO 后填充图片地址，略不合理
@@ -36,11 +39,16 @@ $(document).ready(function () {
     });
 
     // 触发功能介绍动画
-    $(window).scroll(() => {
-        if ($(document).scrollTop() >= 100) {
-            $('.tech-intro-detail').trigger('demo');
-        }
-    });
+    $(window).scroll(
+        throttle(
+            () => {
+                if ($(document).scrollTop() >= 100) {
+                    $('.tech-intro-detail').trigger('demo');
+                }
+            },
+            300
+        )
+    );
 
     // 绑定功能介绍动画
     $('.tech-intro-detail').one('demo', function () {
@@ -159,13 +167,13 @@ $(document).ready(function () {
     const FACE_PROPERTY_DICT = {
         age: {
             name: '年龄',
-            transform: value => {
+            transform(value) {
                 return Math.round(value);
             }
         },
         race: {
             name: '人种',
-            transform: value => {
+            transform(value) {
                 return {
                     yellow: '黄种人',
                     white: '白种人',
@@ -176,7 +184,7 @@ $(document).ready(function () {
         },
         gender: {
             name: '性别',
-            transform: value => {
+            transform(value) {
                 return {
                     male: '男性',
                     female: '女性'
@@ -185,7 +193,7 @@ $(document).ready(function () {
         },
         expression: {
             name: '表情',
-            transform: value => {
+            transform(value) {
                 return {
                     0: '不笑',
                     1: '微笑',
@@ -195,7 +203,7 @@ $(document).ready(function () {
         },
         glasses: {
             name: '眼镜',
-            transform: value => {
+            transform(value) {
                 return {
                     0: '无眼镜',
                     1: '普通眼镜',
@@ -214,15 +222,14 @@ $(document).ready(function () {
             return false;
         }
         details.show();
-        for (let i in FACE_PROPERTY_DICT) {
-            if (data.hasOwnProperty(i)) {
-                let label = FACE_PROPERTY_DICT[i].name;
-                let value = FACE_PROPERTY_DICT[i].transform(data[i]);
-                details.append(
-                    $('<li></li>').html(label + ' : ' + value)
-                );
-            }
-        }
+
+        Object.keys(FACE_PROPERTY_DICT).forEach(key => {
+            let label = FACE_PROPERTY_DICT[key].name;
+            let value = FACE_PROPERTY_DICT[key].transform(data[key]);
+            details.append(
+                $('<li></li>').html(label + ' : ' + value)
+            );
+        });
     };
 
     let startScan = function (type, imgSrc, url) {
@@ -232,7 +239,7 @@ $(document).ready(function () {
         $('#face-details').hide().empty();
 
         let options = {
-            success: function (res) {
+            success(res) {
                 $('#demo-photo-upload, #scan-photo').removeClass('disabled');
                 $('#demo-json > p').html(JSON.stringify(res, null, '\t'));
                 $('#demo-result .canvas-container').removeClass('loading');
@@ -260,7 +267,8 @@ $(document).ready(function () {
                     toggleGallery(false);
                     drawLandMark(res.data.result[0]);
                     showScanResult(res.data.result[0], false);
-                } else {
+                }
+                else {
                     toggleGallery(true);
                     setGalleryContent(res.data);
                     drawRect(res.data.result);
@@ -268,14 +276,15 @@ $(document).ready(function () {
                 }
                 isScanning = false;
             },
-            fail: function (xhr) {
+            fail(xhr) {
                 new AlertModal('接口发生错误：' + xhr.status + ' - ' + xhr.statusText);
                 resetDemo();
             }
         };
         if (type === 'url') {
             options.imageUrl = url;
-        } else if (type === 'stream') {
+        }
+        else if (type === 'stream') {
             options.image = imgSrc;
         }
 
@@ -301,7 +310,7 @@ $(document).ready(function () {
             image: file,
             type: 'stream',
             lazyRender: true,
-            success: imgSrc => {
+            success(imgSrc) {
                 $('#demo-photo-upload  > input').val('');
                 startScan('stream', imgSrc);
             },
@@ -331,7 +340,7 @@ $(document).ready(function () {
             image: url,
             type: 'url',
             apiType: 'face',
-            success: imgSrc => {
+            success(imgSrc) {
                 startScan('url', imgSrc, url);
             },
             fail: resetDemo
@@ -368,7 +377,7 @@ $(document).ready(function () {
             image: url,
             type: 'url',
             toCheck: false,
-            success: imgSrc => {
+            success(imgSrc) {
                 startScan('url', imgSrc, url);
             },
             fail: resetDemo
@@ -388,7 +397,7 @@ $(document).ready(function () {
             image: $(this).find('img').attr('src'),
             toCheck: false,
             // scale: isAll ? 1 : 2,
-            success: function () {
+            success() {
                 if (isAll) {
                     drawRect(faceData);
                 }

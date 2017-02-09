@@ -10,154 +10,154 @@
 @import '../common/tech-page.less';
 
 .tech-section {
-  &.tech-banner {
-    p {
-      max-width: 35em;
-    }
-  }
-  &.tech-intro{
-    .container > h2 {
-      margin-bottom: 60px;
-    }
-
-    .intro-item {
-      display: inline-block;
-      width: 22%;
-      float: left;
-      color: @white;
-
-      & + .intro-item {
-        margin-left: 4%;
-      }
-
-      .intro-icon{
-        height: 170px;
-      }
-
-      &:nth-child(2) .intro-icon{
-        .icon(@intro-icons, 30px, 0);
-      }
-      &:nth-child(3) .intro-icon{
-        .icon(@intro-icons, -265px, 0);
-      }
-      &:nth-child(4) .intro-icon{
-        .icon(@intro-icons, 30px, -145px);
-      }
-      &:nth-child(5) .intro-icon{
-        .icon(@intro-icons, -265px, -145px);
-      }
-
-      h3 {
-        font-size: 18px;
-        text-align: center;
-      }
-
-      p {
-        font-size: @font-size-2;
-      }
-    }
-  }
-
-
-  &.tech-scene{
-    .scene-item:nth-child(3n+2),
-    .scene-item:nth-child(3n+3) {
-      margin-left: 50px;
-    }
-
-    .scene-item .scene-icon {
-      background-size: 280px/2 190px/2;
-    }
-
-    .scene-item:nth-child(1) .scene-icon {
-      .icon(@icons, -5px, -5px);
-    }
-    .scene-item:nth-child(2) .scene-icon {
-      .icon(@icons, -50px, -5px);
-    }
-    .scene-item:nth-child(3) .scene-icon {
-      .icon(@icons, -95px, -5px);
-    }
-    .scene-item:nth-child(4) .scene-icon {
-      .icon(@icons, -5px, -50px);
-    }
-    .scene-item:nth-child(5) .scene-icon {
-      .icon(@icons, -50px, -50px);
-    }
-    .scene-item:nth-child(6) .scene-icon {
-      .icon(@icons, -95px, -50px);
-    }
-  }
-
-  &.tech-product {
-    padding: 50px 0 40px;
-    h2 {
-      margin-bottom: 50px;
-    }
-
-    .product-desc-list {
-      float: right;
-      width: 380px;
-
-      .product-desc {
-        padding-right: 60px;
-        margin-top: 30px;
-        padding-left: 80px;
-
-        h3 {
-          font-size: 18px;
-          color: #333;
-          line-height: 18px;
-          margin-bottom: 15px;
-        }
+    &.tech-banner {
         p {
-          color: #666;
-          line-height: 24px;
-          margin: 0;
+            max-width: 35em;
         }
-      }
+    }
+    &.tech-intro {
+        .container > h2 {
+            margin-bottom: 60px;
+        }
+
+        .intro-item {
+            display: inline-block;
+            width: 22%;
+            float: left;
+            color: @white;
+
+            & + .intro-item {
+                margin-left: 4%;
+            }
+
+            .intro-icon {
+                height: 170px;
+            }
+
+            &:nth-child(2) .intro-icon {
+                .icon(@intro-icons, 30px, 0);
+            }
+            &:nth-child(3) .intro-icon {
+                .icon(@intro-icons, -265px, 0);
+            }
+            &:nth-child(4) .intro-icon {
+                .icon(@intro-icons, 30px, -145px);
+            }
+            &:nth-child(5) .intro-icon {
+                .icon(@intro-icons, -265px, -145px);
+            }
+
+            h3 {
+                font-size: 18px;
+                text-align: center;
+            }
+
+            p {
+                font-size: @font-size-2;
+            }
+        }
     }
 
-    .flow-chart {
-      height: 380px;
-      text-align: center;
-      width: 800px;
-      float: right;
 
-      & > img {
-        height: 90%;
-      }
-    }
-  }
+    &.tech-scene {
+        .scene-item:nth-child(3n+2),
+        .scene-item:nth-child(3n+3) {
+            margin-left: 50px;
+        }
 
-  &.tech-case {
-    .case-item:nth-child(1) {
-      .icon(url('../../../ai_images/technology/ar/case-1.png'), center, center);
-    }
-    .case-item:nth-child(2) {
-      .icon(url('../../../ai_images/technology/ar/case-2.png'), center, center);
-    }
-    .case-item:nth-child(3) {
-      .icon(url('../../../ai_images/technology/ar/case-3.png'), center, center);
+        .scene-item .scene-icon {
+            background-size: 280px / 2 190px / 2;
+        }
+
+        .scene-item:nth-child(1) .scene-icon {
+            .icon(@icons, -5px, -5px);
+        }
+        .scene-item:nth-child(2) .scene-icon {
+            .icon(@icons, -50px, -5px);
+        }
+        .scene-item:nth-child(3) .scene-icon {
+            .icon(@icons, -95px, -5px);
+        }
+        .scene-item:nth-child(4) .scene-icon {
+            .icon(@icons, -5px, -50px);
+        }
+        .scene-item:nth-child(5) .scene-icon {
+            .icon(@icons, -50px, -50px);
+        }
+        .scene-item:nth-child(6) .scene-icon {
+            .icon(@icons, -95px, -50px);
+        }
     }
 
-    .case-indicator {
-      & > li:nth-child(1) {
-        .icon(@case-icons, -10px, -10px);
-      }
-      & > li:nth-child(2) {
-        .icon(@case-icons, -160px, -10px);
-      }
-      & > li:nth-child(3) {
-        .icon(@case-icons, -310px, -10px);
-      }
-    }
-  }
+    &.tech-product {
+        padding: 50px 0 40px;
+        h2 {
+            margin-bottom: 50px;
+        }
 
-  &.get-started {
-    p {
-      line-height: 30px;
+        .product-desc-list {
+            float: right;
+            width: 380px;
+
+            .product-desc {
+                padding-right: 60px;
+                margin-top: 30px;
+                padding-left: 80px;
+
+                h3 {
+                    font-size: 18px;
+                    color: #333;
+                    line-height: 18px;
+                    margin-bottom: 15px;
+                }
+                p {
+                    color: #666;
+                    line-height: 24px;
+                    margin: 0;
+                }
+            }
+        }
+
+        .flow-chart {
+            height: 380px;
+            text-align: center;
+            width: 800px;
+            float: right;
+
+            & > img {
+                height: 90%;
+            }
+        }
     }
-  }
+
+    &.tech-case {
+        .case-item:nth-child(1) {
+            .icon(url('../../../ai_images/technology/ar/case-1.png'), center, center);
+        }
+        .case-item:nth-child(2) {
+            .icon(url('../../../ai_images/technology/ar/case-2.png'), center, center);
+        }
+        .case-item:nth-child(3) {
+            .icon(url('../../../ai_images/technology/ar/case-3.png'), center, center);
+        }
+
+        .case-indicator {
+            & > li:nth-child(1) {
+                .icon(@case-icons, -10px, -10px);
+            }
+            & > li:nth-child(2) {
+                .icon(@case-icons, -160px, -10px);
+            }
+            & > li:nth-child(3) {
+                .icon(@case-icons, -310px, -10px);
+            }
+        }
+    }
+
+    &.get-started {
+        p {
+            line-height: 30px;
+        }
+    }
 
 }
