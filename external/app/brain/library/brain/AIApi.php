@@ -63,7 +63,7 @@ class Brain_AIApi {
         "face" => array(
             'url' => 'https://openapi.baidu.com/rest/2.0/vis-faceattribute/v1/faceattribute',
             'params' => array(
-                'max_face_num' => 5,
+                'max_face_num' => 20,
                 'face_fields' => 'age,beauty,expression,faceshape,gender,glasses,landmark,race',
             ),
         ),
