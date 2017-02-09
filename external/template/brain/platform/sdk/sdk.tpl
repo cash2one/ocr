@@ -166,6 +166,7 @@
                         <li><a href="/support/video">教学视频</a></li>
                         <li><a href="/support/faq">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
+                        <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
                     </ul>
                 </li>
@@ -274,7 +275,7 @@
                 </div>
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-android"></i>
+                        <i class="sdk-language-sprite"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bs"></i>
                             <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu_Voice_RestApi_SampleCode.zip">
@@ -293,7 +294,7 @@
                 </div>
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite"></i>
+                        <i class="sdk-language-sprite sdk-android"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bs"></i>
                             <a href="http://bos.nj.bpc.baidu.com/v1/audio/DEMO-VoiceRecognition-2.0.1.apk">

@@ -166,6 +166,7 @@
                         <li><a href="/support/video">教学视频</a></li>
                         <li><a href="/support/faq">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
+                        <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
                     </ul>
                 </li>
@@ -212,7 +213,7 @@
     <div class="container">
         <div class="nlp-function-title">功能介绍</div>
         <div class="nlp-function-intro">
-            评论观点抽服务能够对给定产品（包括商品或服务）的用户评论文本，自动分析评论关注点和评论观点，并输出评论观点标签及评论观点极性<br>
+            评论观点抽取服务能够对给定产品（包括商品或服务）的用户评论文本，自动分析评论关注点和评论观点，并输出评论观点标签及评论观点极性<br>
             目前支持12类产品用户评论的观点抽取，包括美食、酒店、汽车、景点等<br>
             实现特定产品全部评论的评论观点挖掘，帮助商家进行产品分析，辅助用户进行消费决策
         </div>
@@ -364,6 +365,7 @@
     </div>
 </section>
 {%/if%}
+
 </div>
 <aside class="aside-action">
     <ul>
