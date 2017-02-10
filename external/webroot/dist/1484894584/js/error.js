@@ -1,1 +1,0 @@
-duAI([28],{129:function(n,t,e){n.exports=e(22)},22:function(n,t,e){"use strict";function u(n){return n&&n.__esModule?n:{default:n}}var o=e(0),r=u(o);e(61),(0,r.default)(document).ready(function(){var n=4;setInterval(function(){(0,r.default)("#error-back").html(n--+"秒后返回"),0===n&&window.open("//ai.baidu.com","_self")},1e3)})},61:function(n,t){}},[129]);

@@ -155,7 +155,7 @@ module.exports = {
                             attrs: ['img:src', 'video:src']
                         }
                     }
-                ],
+                ]
             },
             {
                 // TODO，小icon分单独文件夹管理，base64打包入css，省去拼接雪碧图
@@ -168,7 +168,7 @@ module.exports = {
                             publicPath
                         }
                     }
-                ],
+                ]
             },
             {
                 // 不需要缓存的静态资源
@@ -181,7 +181,7 @@ module.exports = {
                             publicPath
                         }
                     }
-                ],
+                ]
             }
         ]
     },
