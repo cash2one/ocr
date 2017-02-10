@@ -101,7 +101,7 @@ module.exports = {
     context: path.resolve(__dirname, '..'),
     entry: webpackEntries,
     resolve: {
-        root: [
+        modules: [
             path.resolve(__dirname, '..', 'node_modules'),
             path.resolve(__dirname, '..', 'bower_components')
         ],
@@ -126,46 +126,62 @@ module.exports = {
         jsonpFunction: 'duAI'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /(node_modules|bower_components)/
+                exclude: /(node_modules|bower_components)/,
+                use: [
+                    {
+                        loader: 'babel-loader'
+                    }
+                ]
             },
             {
                 test: /\.less$/,
-                loader: extractLESS.extract(
-                    'style-loader',
-                    'css-loader!postcss-loader!less-loader'
-                )
+                loader: extractLESS.extract({
+                    use: 'css-loader!postcss-loader!less-loader',
+                    fallback: 'style-loader'
+                })
             },
             {
                 // 模板拼接，通用资源替换
                 test: /\.html$/,
-                loader: 'html-loader',
-                query: {
-                    minimize: false,
-                    // 修改图片、视频缓存路径
-                    attrs: ['img:src', 'video:src']
-                }
+                use: [
+                    {
+                        loader: 'html-loader',
+                        options: {
+                            minimize: false,
+                            // 修改图片、视频缓存路径
+                            attrs: ['img:src', 'video:src']
+                        }
+                    }
+                ],
             },
             {
                 // TODO，小icon分单独文件夹管理，base64打包入css，省去拼接雪碧图
                 test: /\.(jpe?g|png|gif|mp4)$/i,
-                loader: 'file-loader',
-                query: {
-                    name: `${versionPath}/[path][name].[ext]`,
-                    publicPath
-                }
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: `${versionPath}/[path][name].[ext]`,
+                            publicPath
+                        }
+                    }
+                ],
             },
             {
                 // 不需要缓存的静态资源
                 test: /\.ico$/,
-                loader: 'file-loader',
-                query: {
-                    name: '[path][name].[ext]',
-                    publicPath
-                }
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]',
+                            publicPath
+                        }
+                    }
+                ],
             }
         ]
     },
@@ -186,12 +202,5 @@ module.exports = {
         ...htmlWebpackPluginArr,
         // css文件单独打包
         extractLESS
-    ],
-    postcss: () => {
-        return [
-            autoprefixer({
-                browsers: ['ie > 1', 'chrome > 1', 'ff > 1']
-            })
-        ];
-    }
+    ]
 };

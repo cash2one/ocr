@@ -43,7 +43,6 @@ if (isOnlineMode || isBumpBuild) {
             plugins: [
                 ...webpackConfig.plugins,
                 new webpack.optimize.OccurrenceOrderPlugin(true),
-                new webpack.optimize.DedupePlugin(),
                 // js和css双压缩
                 new webpack.optimize.UglifyJsPlugin({
                     warnings: false,

@@ -1,1 +1,10 @@
-.tech-demo .demo-data #demo-photo-url{width:454px!important}.tech-demo .demo-data #demo-photo-upload,.tech-demo .demo-data span{display:none!important}#tts-demo{display:none}
+.tech-demo .demo-data #demo-photo-url {
+  width: 454px !important;
+}
+.tech-demo .demo-data span,
+.tech-demo .demo-data #demo-photo-upload {
+  display: none !important;
+}
+#tts-demo {
+  display: none;
+}
