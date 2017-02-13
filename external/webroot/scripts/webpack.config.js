@@ -139,8 +139,21 @@ module.exports = {
             {
                 test: /\.less$/,
                 loader: extractLESS.extract({
-                    use: 'css-loader!postcss-loader!less-loader',
-                    fallback: 'style-loader'
+                    fallback: 'style-loader',
+                    loader: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                minimize: true
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader'
+                        },
+                        {
+                            loader: 'less-loader'
+                        }
+                    ]
                 })
             },
             {
