@@ -79,9 +79,7 @@ entries.forEach(entry => {
             // 这个页面需要用到的css和js
             jsCommonBundle: path.join(publicPath, versionPath + '', 'js', 'common.bundle.js'),
             cssFile: path.join(publicPath, versionPath + '', 'css', `${resourcePath}.style.css`),
-            jsFile: path.join(publicPath, versionPath + '', 'js', `${resourcePath}.js`),
-            // TODO 这个基础包应该是没用的，未来要下掉，有冗余
-            basicBundle: path.join(publicPath, versionPath + '', 'js', 'base.bundle.js')
+            jsFile: path.join(publicPath, versionPath + '', 'js', `${resourcePath}.js`)
         })
     );
 
@@ -89,10 +87,9 @@ entries.forEach(entry => {
     normalModules.push(resourcePath);
 });
 
-// 目前想到的只有jQuery是通用的，要单独打包的
-webpackEntries['common.bundle'] = ['jquery'];
-// 通用代码
-webpackEntries['base.bundle'] = 'src/entry/base.js';
+// jQuery和通用代码单独打包
+webpackEntries['common.bundle'] = ['jquery', 'src/entry/base.js'];
+// 两个单独引入的css，目前没有想好如何处理
 webpackEntries.base = ['src/less/base.less'];
 webpackEntries.ie9 = ['src/less/ie9.less'];
 
@@ -138,9 +135,9 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                loader: extractLESS.extract({
+                use: extractLESS.extract({
                     fallback: 'style-loader',
-                    loader: [
+                    use: [
                         {
                             loader: 'css-loader',
                             options: {
@@ -209,7 +206,6 @@ module.exports = {
         new CommonsChunkPlugin({
             name: ['common.bundle'],
             filename: `${versionPath}/js/[name].js`,
-            // TODO 暂时不尝试给base.bundle.js抽离通用代码,
             chunks: normalModules
         }),
         ...htmlWebpackPluginArr,

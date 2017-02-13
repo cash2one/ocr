@@ -28,7 +28,7 @@ if (isWatchMode) {
             plugins: [
                 ...webpackConfig.plugins,
                 // 增量构建时避免错误跳出，或输出错误结果代码
-                new webpack.NoErrorsPlugin()
+                new webpack.NoEmitOnErrorsPlugin()
             ]
         }
     );
