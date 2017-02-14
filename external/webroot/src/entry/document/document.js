@@ -8,13 +8,10 @@ import $ from 'jquery';
 import '../../component/widget/docAccordionMenu';
 import marked from 'marked';
 import 'code-prettify/src/prettify';
+
 import 'less/document/document.less';
 
-window.$ = $;
-window.marked = marked;
-
 let lastMdTag = '';
-let currentMdName = '';
 let anchorMap = {
     faceRecognition: {
         '使用须知': 'faceRecognition-1',
@@ -35,10 +32,14 @@ let matchAnchor = function (className, cnName) {
     }
 };
 
+// markdown容器
+const $mdContainer = $('#md_container');
+
 let setAnchorId = function (arr) {
     if (!arr.length) {
         return;
     }
+
     for (let i = 0; i < arr.length; i++) {
         $(arr[i]).attr('id', matchAnchor('faceRecognition', $(arr[i]).text()));
     }
@@ -46,7 +47,7 @@ let setAnchorId = function (arr) {
 
 let setFaqAnchorId = function (tagname) {
     if (tagname.indexOf('FAQ') > 0) {
-        $('#md_container p').each(function (i, element) {
+        $mdContainer.find('p').each(function (i, element) {
             // $(this).attr('id', tagname + '-Q' + (i + 1));
             $(this).attr('id', 'Q' + (i + 1));
         });
@@ -57,7 +58,8 @@ let bindLeafNodeScroll = function (clickNode, type) {
     let scrollToLeafNodeH1 = function (index) {
         let offset = Math.abs($('#md_container>h1').eq(0).offset().top
             - $('#md_container>h1').eq(index).offset().top);
-        $('#md_container').scrollTop(offset);
+
+        $mdContainer.scrollTop(offset);
     };
     let leafNodes = clickNode.parent().find('>ul>li');
     leafNodes.each(function (i, element) {
@@ -77,8 +79,8 @@ let renderALinkTag = function () {
     $('#md_container h1, #md_container h2').each(function (i, element) {
         $(element).attr('id', $(element).text());
     });
-    let aList = $('#md_container a');
-    aList.each(function (i, element) {
+
+    $mdContainer.find('a').each(function (i, element) {
         let aTag = $(element);
         let href = aTag.attr('href');
         if (href.length) {
@@ -93,15 +95,16 @@ let renderMdPage = function (tagName, clickNode, type) {
     if (lastMdTag === tagName) {
         return;
     }
+
     $.ajax({
         type: 'GET',
         url: '/data/' + tagName + '.md',
         success(res) {
             lastMdTag = tagName;
-            $('#md_container').html(marked(res));
+            $mdContainer.html(marked(res));
             $('code').addClass('prettyprint');
             window.PR.prettyPrint();
-            $('#md_container').scrollTop(0);
+            $mdContainer.scrollTop(0);
             renderALinkTag();
             setFaqAnchorId(tagName);
             if (type === 'node') {
@@ -118,6 +121,7 @@ let bindAllNodeClick = function () {
             renderMdPage(tagName, $(this), 'node');
         }
     });
+
     $('.beginner.root .click-node').click(function () {
         let tagName =  $(this).attr('tag');
         if (tagName) {
@@ -134,10 +138,6 @@ let bindAllLeafClick = function () {
         }
     });
 };
-
-$(function () {
-    $('#jquery-accordion-menu').docAccordionMenu();
-});
 
 let renderMenuActive = function () {
     $('.sidebar li').click(function () {
@@ -175,26 +175,16 @@ let renderMenuActive = function () {
     });
 };
 
-
 let bindMinusPlus = function () {
-    $('.sidebar > h1').click(function () {
-        let button = $(this).find('.pm-button');
-        if (button.hasClass('nav-plus1') && button.hasClass('active')) {
-            button.removeClass('active');
-            $('.toc.jquery-accordion-menu:eq(0)').show(500);
-        }
-        else if (button.hasClass('nav-plus1')) {
-            button.addClass('active');
-            $('.toc.jquery-accordion-menu:eq(0)').hide(500);
-        }
-        else if (button.hasClass('nav-plus2') && button.hasClass('active')) {
-            button.removeClass('active');
-            $('.toc.jquery-accordion-menu:eq(1) > ul').show(500);
-        }
-        else {
-            button.addClass('active');
-            $('.toc.jquery-accordion-menu:eq(1) > ul').hide(500);
-        }
+    // 大类
+    const $category = $('.sidebar > h1');
+    // 大类别旁边的加减号
+    const $categoryFolderIcon = $('.pm-button');
+
+    $category.click(function (e) {
+        // TODO
+        $categoryFolderIcon.toggleClass('active');
+        $(e.currentTarget).next().find('>ul').toggle(500);
     });
 };
 
@@ -260,10 +250,10 @@ let loadHashLocation = function () {
     }
 };
 
-$(function () {
-    bindMinusPlus();
-    renderMenuActive();
-    bindAllNodeClick();
-    loadDefault();
-    loadHashLocation();
-});
+$('#jquery-accordion-menu').docAccordionMenu();
+
+bindMinusPlus();
+renderMenuActive();
+bindAllNodeClick();
+loadDefault();
+loadHashLocation();
