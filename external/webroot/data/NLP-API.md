@@ -546,7 +546,7 @@ authorization: {bce-authorization-string}
 
 * HTTP方法： POST
 
-* 请求URL： `https://aip.baidubce.com/rpc/2.0/nlp/v1/dnnlm\_cn`
+* 请求URL： `https://aip.baidubce.com/rpc/2.0/nlp/v1/dnnlm_cn`
 
 * URL参数：<br>
 
