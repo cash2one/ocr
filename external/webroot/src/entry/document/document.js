@@ -14,7 +14,7 @@ import '../../component/widget/docAccordionMenu';
 import 'less/document/document.less';
 
 // 上次浏览的md文件名,用于防止连续点击造成的重复提交
-let lastMdName = '';
+let previousMdFile = '';
 
 // markdown容器
 const $mdContainer = $('#md_container');
@@ -43,7 +43,7 @@ let enableList = function (clickNode, type) {
     docNodes.each(function (index, element) {
         $(element).click(function () {
             let requestMd = $(this).attr('data-md');
-            if (requestMd === lastMdName) {
+            if (requestMd === previousMdFile) {
                 scrollToLeafNodeH1(index);
             }
             else {
@@ -70,21 +70,21 @@ let renderALinkTag = function () {
     });
 };
 
-let renderMdPage = function (tagName, clickNode, mdType) {
+let renderMdPage = function (mdName, clickNode, mdType) {
     // 防止多次提交
-    if (lastMdName === tagName) {
+    if (previousMdFile === mdName) {
         return;
     }
 
     $.ajax({
         type: 'GET',
-        url: '/data/' + tagName + '.md',
+        url: '/data/' + mdName + '.md',
         // TODO fail处理
-        success(res) {
-            lastMdName = tagName;
+        success(markdownContent) {
+            previousMdFile = mdName;
 
             // md解析
-            $mdContainer.html(marked(res));
+            $mdContainer.html(marked(markdownContent));
 
             // 代码高亮
             $('code').addClass('prettyprint');
@@ -94,7 +94,7 @@ let renderMdPage = function (tagName, clickNode, mdType) {
             $mdContainer.scrollTop(0);
 
             renderALinkTag();
-            setFaqAnchorId(tagName);
+            setFaqAnchorId(mdName);
 
             // 文档页有都有锚点，在加载完成后调整锚点
             if (mdType === 'api-doc') {
@@ -105,41 +105,27 @@ let renderMdPage = function (tagName, clickNode, mdType) {
 };
 
 let bindAllNodeClick = function () {
-    // 所有涉及掉文档跳转的节点，包括文档内锚点跳转和文档间跳转
-    const $docHref = $('.doc-href');
+    // 所有涉及掉文档跳转的节点，包括文档内锚点跳转和文档间跳转,是个a标签
+    $('.leaf, .sdk-node')
+        .filter('[data-md]')
+        .on(
+            'click',
+            function (e) {
+                const $currentTarget = $(e.currentTarget);
 
-    // TODO click-node和叶子节点整合
-    $docHref.click(function () {
-        const $this = $(this);
-        // md文件名
-        let mdName = $this.attr('data-md');
+                // 这个节点需要用到的md文件
+                const requestMd = $currentTarget.attr('data-md');
+                const isBeginnerMd = $currentTarget.parents().hasClass('.beginner');
 
-        if (mdName) {
-            renderMdPage(mdName, $this, 'api-doc');
-        }
-    });
-
-    let docNodes = $docHref.parent().find('>ul>li');
-    docNodes.each(function (index, element) {
-        $(element).click(function () {
-            let requestMd = $(this).attr('data-md');
-            if (requestMd === lastMdName) {
-                // scrollToLeafNodeH1(index);
+                if (requestMd === previousMdFile) {
+                    // scrollToLeafNodeH1(index);
+                }
+                else {
+                    // TODO 第三个参数太扯了
+                    renderMdPage(requestMd, $(this), isBeginnerMd ? 'beginner' : 'doc-md');
+                }
             }
-            else {
-                renderMdPage(requestMd, $(this), type);
-            }
-        });
-    });
-
-    $('.beginner.root .doc-href').click(function () {
-        const $this = $(this);
-
-        let mdName =  $this.attr('tag');
-        if (mdName) {
-            renderMdPage(mdName, $this, 'beginner');
-        }
-    });
+        );
 };
 
 /**
@@ -168,7 +154,7 @@ let renderBreadcrumb = function () {
         let htmlMakeup = [];
 
         $target
-            .parents('.none-leaf, .root')
+            .parents('.non-leaf, .root')
             .andSelf()
             .each(function (index, element) {
                 // 屏蔽掉最左侧的箭头
@@ -195,7 +181,7 @@ let renderBreadcrumb = function () {
     });
 };
 
-let bindMinusPlus = function () {
+let initAccordion = function () {
     // 大类
     const $category = $('.sidebar > h1');
     // 大类别旁边的加减号
@@ -246,7 +232,7 @@ let unfoldSidebar = function (id) {
 };
 
 let loadHashLocation = function () {
-    let  hashId = window.location.hash;
+    let hashId = window.location.hash;
     if (!hashId) {
         return;
     }
@@ -272,7 +258,7 @@ let loadHashLocation = function () {
 
 $('#jquery-accordion-menu').docAccordionMenu();
 
-bindMinusPlus();
+initAccordion();
 renderBreadcrumb();
 bindAllNodeClick();
 loadDefault();
