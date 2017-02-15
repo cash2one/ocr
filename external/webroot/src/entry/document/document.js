@@ -2,74 +2,52 @@
  * @file 模板脚本入口
  * @author wangjiedong@baidu.com
  */
+
 'use strict';
 
 import $ from 'jquery';
-import '../../component/widget/docAccordionMenu';
 import marked from 'marked';
-import 'code-prettify/src/prettify';
+import {prettyPrint} from 'code-prettify/src/prettify';
+
+import '../../component/widget/docAccordionMenu';
 
 import 'less/document/document.less';
 
-let lastMdTag = '';
-let anchorMap = {
-    faceRecognition: {
-        '使用须知': 'faceRecognition-1',
-        '接口规范': 'faceRecognition-2',
-        '错误信息格式': 'faceRecognition-3',
-        '人脸识别接口': 'faceRecognition-4',
-        'APP用户组信息接口': 'faceRecognition-5',
-        '人脸属性': 'faceRecognition-6'
-    }
-};
-
-let matchAnchor = function (className, cnName) {
-    if (anchorMap[className]) {
-        return anchorMap[className][cnName];
-    }
-    else {
-        return '';
-    }
-};
+// 上次浏览的md文件名,用于防止连续点击造成的重复提交
+let lastMdName = '';
 
 // markdown容器
 const $mdContainer = $('#md_container');
-
-let setAnchorId = function (arr) {
-    if (!arr.length) {
-        return;
-    }
-
-    for (let i = 0; i < arr.length; i++) {
-        $(arr[i]).attr('id', matchAnchor('faceRecognition', $(arr[i]).text()));
-    }
-};
+// breadcrumb
+const $breadcrumb = $('.doc-breadcrumb .crumb');
 
 let setFaqAnchorId = function (tagname) {
     if (tagname.indexOf('FAQ') > 0) {
-        $mdContainer.find('p').each(function (i, element) {
-            // $(this).attr('id', tagname + '-Q' + (i + 1));
+        $mdContainer.find('p').each(function (i) {
             $(this).attr('id', 'Q' + (i + 1));
         });
     }
 };
 
-let bindLeafNodeScroll = function (clickNode, type) {
+// 挂载锚点和文档跳转
+let enableList = function (clickNode, type) {
     let scrollToLeafNodeH1 = function (index) {
         let offset = Math.abs($('#md_container>h1').eq(0).offset().top
             - $('#md_container>h1').eq(index).offset().top);
 
         $mdContainer.scrollTop(offset);
     };
-    let leafNodes = clickNode.parent().find('>ul>li');
-    leafNodes.each(function (i, element) {
+
+    // fixme
+    let docNodes = clickNode.parent().find('>ul>li');
+    docNodes.each(function (index, element) {
         $(element).click(function () {
-            let curTag = $(this).parent().parent().find('>a').attr('tag');
-            if (curTag === lastMdTag) {
-                scrollToLeafNodeH1(i);
+            let requestMd = $(this).attr('data-md');
+            if (requestMd === lastMdName) {
+                scrollToLeafNodeH1(index);
             }
             else {
-                renderMdPage(curTag, $(this), type);
+                renderMdPage(requestMd, $(this), type);
             }
         });
     });
@@ -83,6 +61,7 @@ let renderALinkTag = function () {
     $mdContainer.find('a').each(function (i, element) {
         let aTag = $(element);
         let href = aTag.attr('href');
+
         if (href.length) {
             if (href[0] !== '#') {
                 aTag.attr('target', '_blank');
@@ -91,87 +70,128 @@ let renderALinkTag = function () {
     });
 };
 
-let renderMdPage = function (tagName, clickNode, type) {
-    if (lastMdTag === tagName) {
+let renderMdPage = function (tagName, clickNode, mdType) {
+    // 防止多次提交
+    if (lastMdName === tagName) {
         return;
     }
 
     $.ajax({
         type: 'GET',
         url: '/data/' + tagName + '.md',
+        // TODO fail处理
         success(res) {
-            lastMdTag = tagName;
+            lastMdName = tagName;
+
+            // md解析
             $mdContainer.html(marked(res));
+
+            // 代码高亮
             $('code').addClass('prettyprint');
-            window.PR.prettyPrint();
+            prettyPrint();
+
+            // md切换后滚至顶部
             $mdContainer.scrollTop(0);
+
             renderALinkTag();
             setFaqAnchorId(tagName);
-            if (type === 'node') {
-                bindLeafNodeScroll(clickNode, type);
+
+            // 文档页有都有锚点，在加载完成后调整锚点
+            if (mdType === 'api-doc') {
+                // enableList(clickNode, mdType);
             }
         }
     });
 };
 
 let bindAllNodeClick = function () {
-    $('.click-node').click(function () {
-        let tagName =  $(this).attr('tag');
-        if (tagName) {
-            renderMdPage(tagName, $(this), 'node');
+    // 所有涉及掉文档跳转的节点，包括文档内锚点跳转和文档间跳转
+    const $docHref = $('.doc-href');
+
+    // TODO click-node和叶子节点整合
+    $docHref.click(function () {
+        const $this = $(this);
+        // md文件名
+        let mdName = $this.attr('data-md');
+
+        if (mdName) {
+            renderMdPage(mdName, $this, 'api-doc');
         }
     });
 
-    $('.beginner.root .click-node').click(function () {
-        let tagName =  $(this).attr('tag');
-        if (tagName) {
-            renderMdPage(tagName, $(this), 'beginner');
-        }
-    });
-};
-
-let bindAllLeafClick = function () {
-    $('.leaf-node').click(function () {
-        let tagName =  $(this).attr('tag');
-        if (tagName) {
-            renderMdPage(tagName, $(this), 'leaf');
-        }
-    });
-};
-
-let renderMenuActive = function () {
-    $('.sidebar li').click(function () {
-        let thisElement = $(this);
-        $('.sidebar li.active').removeClass('active');
-        $(this).addClass('active');
-        let allParents = thisElement.parents();
-        for (let i = 0; i < allParents.length; i++) {
-            if ($(allParents[i]).hasClass('root')) {
-                $(allParents[i]).addClass('active');
-                break;
+    let docNodes = $docHref.parent().find('>ul>li');
+    docNodes.each(function (index, element) {
+        $(element).click(function () {
+            let requestMd = $(this).attr('data-md');
+            if (requestMd === lastMdName) {
+                // scrollToLeafNodeH1(index);
             }
+            else {
+                renderMdPage(requestMd, $(this), type);
+            }
+        });
+    });
+
+    $('.beginner.root .doc-href').click(function () {
+        const $this = $(this);
+
+        let mdName =  $this.attr('tag');
+        if (mdName) {
+            renderMdPage(mdName, $this, 'beginner');
         }
-        if (thisElement.hasClass('leaf') || thisElement.hasClass('sdk-node')) {
-            let breadcrumbList = [thisElement.find('>a').text()];
-            for (let i = 0; i < allParents.length; i++) {
-                if ($(allParents[i]).hasClass('non-leaf') || $(allParents[i]).hasClass('root')) {
-                    let text = $(allParents[i]).find('>a').text();
-                    breadcrumbList.splice(0, 0, text);
+    });
+};
+
+/**
+ * TODO
+ *
+ * *严格整理leaf,non-leaf太乱
+ * *防止重复点击
+ */
+let renderBreadcrumb = function () {
+    // 所有叶子，叶子的特点是加载新md，刷新breadcrumb
+    const leaves = $('.sidebar')
+        .find('.leaf, .sdk-node, .guide-node');
+    const $sideBarElement = $('.sidebar li');
+
+    // 左侧列表中任意一项的点击处理
+    leaves.click(function () {
+        let $target = $(this);
+
+        // 点击的节点高亮
+        $sideBarElement.removeClass('active');
+        $target.addClass('active');
+        // 上级的非叶子节点激活
+        $target.closest('.root').addClass('active');
+
+        // 拼接breadcrumb结构
+        let htmlMakeup = [];
+
+        $target
+            .parents('.none-leaf, .root')
+            .andSelf()
+            .each(function (index, element) {
+                // 屏蔽掉最左侧的箭头
+                if (index > 0) {
+                    // 箭头
+                    htmlMakeup = [
+                        ...htmlMakeup,
+                        '<li>',
+                        '    <span class="divider">&gt;</span>',
+                        '</li>'
+                    ];
                 }
-            }
-            let html = '';
-            for (let i = 0; i < breadcrumbList.length; i++) {
-                html += '<li><span class="divider">&gt;</span></li><li><span class="">'
-                    + breadcrumbList[i] + '</span></li>';
-            }
-            $('.doc-breadcrumb .crumb').hide().html(html);
-            $('.doc-breadcrumb .crumb li:eq(0)').remove();
-            $('.doc-breadcrumb .crumb').show();
-        }
-        else if (thisElement.parent().hasClass('beginner')) {
-            let html = '<li><span>' + thisElement.text() + '</span></li>';
-            $('.doc-breadcrumb .crumb').html(html);
-        }
+
+                htmlMakeup = [
+                    ...htmlMakeup,
+                    '<li>',
+                    `    <span>${$(element).find('>a').text()}</span>`,
+                    '</li>'
+                ];
+            });
+
+        // 渲染breadcrumb
+        $breadcrumb.html(htmlMakeup.join('\r'));
     });
 };
 
@@ -182,9 +202,9 @@ let bindMinusPlus = function () {
     const $categoryFolderIcon = $('.pm-button');
 
     $category.click(function (e) {
-        // TODO
+        // TODO html结构重新整理
         $categoryFolderIcon.toggleClass('active');
-        $(e.currentTarget).next().find('>ul').toggle(500);
+        $(e.currentTarget).next().find('>ul').toggle(300);
     });
 };
 
@@ -192,34 +212,33 @@ let loadDefault = function () {
     $('.doc-wrap .beginner > li:eq(0)').click();
 };
 
-let clickonce = true;
+let clickOnce = true;
 let unfoldSidebar = function (id) {
     let element = $('[name="' + id + '"]');
     let parentUl = element.parent();
     let parentLi = parentUl.parent();
     let firstClickNode = element.find('.click-node:eq(0)');
+
     let clickElement = function () {
-        if (clickonce) {
+        if (clickOnce) {
             element.find('>a').click();
             firstClickNode.click();
             let subUl = firstClickNode.siblings().eq(0);
             if (subUl.length) {
                 subUl.find('>li:eq(0)').click();
             }
-            clickonce = false;
+            clickOnce = false;
         }
     };
     clickElement();
+
     if (!parentUl.hasClass('submenu')) {
-        clickonce = true;
+        clickOnce = true;
         return;
     }
-    if (!parentUl.hasClass('level1')) {
-        parentUl.show();
-    }
-    else {
-        parentUl.show();
-    }
+
+    parentUl.show();
+
     if (parentLi.attr('id') === 'jquery-accordion-menu') {
         $('.pm-button:eq(1)').removeClass('active');
     }
@@ -232,6 +251,7 @@ let loadHashLocation = function () {
         return;
     }
     hashId = hashId.split('#')[1];
+
     if (hashId.split('_').length === 1) {
         unfoldSidebar(hashId);
     }
@@ -253,7 +273,7 @@ let loadHashLocation = function () {
 $('#jquery-accordion-menu').docAccordionMenu();
 
 bindMinusPlus();
-renderMenuActive();
+renderBreadcrumb();
 bindAllNodeClick();
 loadDefault();
 loadHashLocation();
