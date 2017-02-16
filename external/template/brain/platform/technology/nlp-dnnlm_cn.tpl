@@ -197,7 +197,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<section class="tech-section tech-banner">
+    <section class="tech-section tech-banner">
     <div class="container">
         <h1>中文DNN语言模型</h1>
         <p>依托全网海量优质数据和深度神经网络技术，判断一句话是否符合语言表达习惯，帮助您实现文本分析、纠错、对话等多种语义应用。</p>
@@ -434,7 +434,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {

@@ -197,7 +197,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<section class="site-error">
+    <section class="site-error">
     <img src="/ai_dist/1486524138/ai_images/error/site-error.png">
     <p>对不起，页面出错啦!</p>
     <div>
@@ -275,7 +275,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {

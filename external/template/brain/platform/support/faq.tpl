@@ -197,10 +197,10 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<div class="doc-wrap">
+    <div class="doc-wrap">
     <div class="sidebar sidebar-fixed">
         <h1 style="width: 260px;cursor:default">常见问题</h1>
-        <div class="toc jquery-accordion-menu" style="height:800px;width:260px;padding">
+        <div class="toc jquery-accordion-menu" style="height:800px;width:260px">
             <ul class="level1 submenu faq-menu" style="border-bottom:1px solid #ebebeb">
                 <li tag="FAQ-Account" class="node root click-node" style="padding-left:5px">
                     <a href="javascript:void(0)">账号问题</a>
@@ -298,7 +298,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {

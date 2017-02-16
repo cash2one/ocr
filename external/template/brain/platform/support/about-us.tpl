@@ -197,7 +197,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<section class="about-banner">
+    <section class="about-banner">
     <div class="container">
         <h1 class="about-title">关于我们</h1>
     </div>
@@ -354,7 +354,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {

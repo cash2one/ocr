@@ -197,175 +197,225 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<section class="tech-section tech-banner">
-    <div class="container">
-        <h1>语音识别</h1>
-        <p>为您提供高精度的语音识别服务，融合百度领先的自然语言处理技术<br>支持多场景智能语音交互</p>
-        <div>
-            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">获取API Key</a>
-            {%if $src eq Null%}
-            <a role="button" class="btn-other media" href="/docs#Speech-Asr">技术文档</a>
-            {%/if%}
+    <section class="tech-section tech-banner">
+    <div class="ai-container">
+        <div class="tech-banner-title">
+            语音识别
+        </div>
+        <div class="tech-banner-info">
+            为您提供高精度的语音识别服务，融合百度领先的自然语言处理技术支持多场景智能语音交互
+        </div>
+        <div class="tech-banner-btn-list">
+            <!-- 按钮类名用途未知，暂留 -->
+            <a role="button"
+               class="btn-primary media"
+               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">
+                获取API Key
+            </a>
+            <!--{%if $src eq Null%}-->
+            <a role="button"
+               class="btn-other media"
+               href="/docs#NLP">
+                技术文档
+            </a>
+            <!--{%/if%}-->
         </div>
     </div>
 </section>
-<section class="tech-section tech-intro">
-    <div class="container">
-        <h2>功能介绍</h2>
-        <p>百度语音识别为开发者提供业界优质且免费的语音服务，通过场景识别优化，为车载导航，智能家居和社交聊天等行业提供语音解决方案<br>
-            百度语音识别的准确率达到90%以上，让您的应用绘“声”绘色</p>
-        <div class="tech-intro-detail"></div>
+<section class="tech-section tech-function">
+    <div class="ai-container">
+        <div class="tech-function-title">
+            功能介绍
+        </div>
+        <div class="tech-function-info">
+            百度语音识别为开发者提供业界优质且免费的语音服务，通过场景识别优化，为车载导航，智能家居和社交聊天等行业提供语音解决方案<br>
+            百度语音识别的准确率达到90%以上，让您的应用绘“声”绘色
+
+        </div>
+        <div class="tech-function-pic">
+            <img width="670" src="/ai_dist/1486524138/ai_images/technology/speech-asr/intro.png" >
+        </div>
     </div>
 </section>
-<section class="tech-section tech-feature">
-    <div class="container">
-        <h2>技术特色</h2>
-        <div class="feature-list clear-float">
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>全平台REST API</h3>
-                    <p>行业率先推出语音识别REST API，采用HTTP方式请求，可适用于任何平台的语音识别</p>
+<section class="ai-container tech-section tech-feature">
+    <div class="tech-feature-title">技术特色</div>
+    <div class="tech-feature-list tech-clear">
+        <div class="tech-feature-item tech-feature-shadow">
+            <div class="tech-feature-icon tech-feature-icon-1"></div>
+            <div class="tech-feature-desc">
+                <div class="tech-feature-desc-title">全平台REST API</div>
+                <div class="tech-feature-desc-info">
+                    行业率先推出语音识别REST API，采用HTTP方式请求，可适用于任何平台的语音识别
                 </div>
             </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>离线在线融合模式</h3>
-                    <p>SDK可以根据当前网络状况及指令的类型，自动判断使用本地引擎还是云端引擎进行语音识别</p>
+        </div>
+        <div class="tech-feature-item tech-feature-shadow">
+            <div class="tech-feature-icon tech-feature-icon-2"></div>
+            <div class="tech-feature-desc">
+                <div class="tech-feature-desc-title">离线在线融合模式</div>
+                <div class="tech-feature-desc-info" >SDK可以根据当前网络状况及指令的类型，自动判断使用本地引擎还是云端引擎进行语音识别</div>
+            </div>
+        </div>
+        <div class="tech-feature-item tech-feature-shadow">
+            <div class="tech-feature-icon tech-feature-icon-3"></div>
+            <div class="tech-feature-desc">
+                <div class="tech-feature-desc-title">深度语义解析</div>
+                <div class="tech-feature-desc-info">
+                    支持多达35个垂类领域的语义理解定制，如：交通，社交，娱乐等领域。以及支持自定义指令集和问答对设置，让你的应用理解用户的意图
                 </div>
             </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>深度语义解析</h3>
-                    <p>支持多达35个垂类领域的语义理解定制，如：交通，社交，娱乐等领域。以及支持自定义指令集和问答对设置，让你的应用理解用户的意图</p>
-                </div>
+        </div>
+        <div class="tech-feature-item tech-feature-shadow">
+            <div class="tech-feature-icon tech-feature-icon-4"></div>
+            <div class="tech-feature-desc">
+                <div class="tech-feature-desc-title">场景识别定制</div>
+                <div class="tech-feature-desc-info" >开发者可根据使用场景，自定义设置识别垂类模型。有音乐、视频、地图、游戏、电商共17个垂类可供选择，一步设置，精确到位</div>
             </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>场景识别定制</h3>
-                    <p>开发者可根据使用场景，自定义设置识别垂类模型。有音乐、视频、地图、游戏、电商共17个垂类可供选择，一步设置，精确到位</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>自定义上传语料，训练模型</h3>
-                    <p>开发者可以自行上传词库，训练专属识别模型。提交的语料越多、越全，语音识别的效果提升也会越明显</p>
+        </div>
+        <div class="tech-feature-item tech-feature-shadow">
+            <div class="tech-feature-icon tech-feature-icon-3"></div>
+            <div class="tech-feature-desc">
+                <div class="tech-feature-desc-title">自定义上传语料，训练模型</div>
+                <div class="tech-feature-desc-info">
+                    开发者可以自行上传词库，训练专属识别模型。提交的语料越多、越全，语音识别的效果提升也会越明显
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="tech-section tech-scene">
-    <div class="container">
-        <h2>应用场景</h2>
-        <div class="scene-list clear-float">
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>交通出行</h3>
-                    <p>全程语音导航，结合地图指示，方便安全</p>
+<hr class="tech-section-border">
+<section class="ai-container tech-section tech-scenario">
+    <div class="tech-scenario-title">应用场景</div>
+    <div class="tech-scenario-list tech-clear">
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-1"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">交通出行</div>
+                <div class="tech-scenario-desc-info">
+                    全程语音导航，结合地图指示，方便安全
                 </div>
             </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>应用助手</h3>
-                    <p>通过语音与应用交互，来搜索内容，播放歌曲</p>
+        </div>
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-2"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">应用助手</div>
+                <div class="tech-scenario-desc-info">
+                    通过语音与应用交互，来搜索内容，播放歌曲
                 </div>
             </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>智能家居</h3>
-                    <p>通过专名识别识别多轮对话中的核心实体，智慧语音控制家电家具，让家更智能</p>
+        </div>
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-3"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">智能家居</div>
+                <div class="tech-scenario-desc-info">
+                    通过专名识别识别多轮对话中的核心实体，智慧语音控制家电家具，让家更智能
                 </div>
             </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>社交聊天</h3>
-                    <p>社交聊天发送实时语音，支持中文，英文，中英文混杂识别，方言支持粤语，四川话等。让沟通交流更准确快捷</p>
+        </div>
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-4"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">社交聊天</div>
+                <div class="tech-scenario-desc-info">
+                    社交聊天发送实时语音，支持中文，英文，中英文混杂识别，方言支持粤语，四川话等。让沟通交流更准确快捷
                 </div>
             </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>游戏娱乐</h3>
-                    <p>即时语音聊天，边玩边聊</p>
+        </div>
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-5"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">游戏娱乐</div>
+                <div class="tech-scenario-desc-info">
+                    即时语音聊天，边玩边聊
                 </div>
             </div>
         </div>
     </div>
 </section>
 <section class="tech-section tech-case">
-    <ul class="case-list">
-        <li class="case-item active">
-            <div class="container">
-                <div class="case-icon"></div>
-                <h2>手机百度</h2>
-                <p>手机百度可以通过语音输入用户的搜索关键词<br>
+    <div class="tech-case-list">
+        <div class="tech-case-item tech-case-item-1 active">
+            <div class="ai-container">
+                <div class="tech-case-item-logo"></div>
+                <div class="tech-case-item-title">手机百度</div>
+                <div class="tech-case-item-info">
+                    手机百度可以通过语音输入用户的搜索关键词<br>
                     直接匹配出相应搜索结果，利用百度语音识别技术进行搜索的效率是拼音输入搜索的183.46%
-                </p>
+                </div>
             </div>
-        </li>
-        <li class="case-item">
-            <div class="container">
-                <div class="case-icon"></div>
-                <h2>陌陌</h2>
-                <p>发送实时语音，畅快聊天</p>
+        </div>
+        <div class="tech-case-item tech-case-item-2">
+            <div class="ai-container">
+                <div class="tech-case-item-logo"></div>
+                <div class="tech-case-item-title">陌陌</div>
+                <div class="tech-case-item-info">
+                    发送实时语音，畅快聊天
+                </div>
             </div>
-        </li>
-        <li class="case-item">
-            <div class="container">
-                <div class="case-icon"></div>
-                <h2>百度输入法</h2>
-                <p>百度输入法利用百度语音识别技术实时将用户的字句转换成文字，提升输入效率</p>
+        </div>
+        <div class="tech-case-item tech-case-item-3">
+            <div class="ai-container">
+                <div class="tech-case-item-logo"></div>
+                <div class="tech-case-item-title">百度输入法</div>
+                <div class="tech-case-item-info">
+                    百度输入法利用百度语音识别技术实时将用户的字句转换成文字，提升输入效率
+                </div>
             </div>
-        </li>
-    </ul>
-    <ul class="case-indicator">
-        <li class="active"><a>手机百度</a></li>
-        <li><a>陌陌</a></li>
-        <li><a>百度输入法</a></li>
-    </ul>
+        </div>
+    </div>
+    <div class="tech-case-option">
+        <div class="tech-case-option-btn tech-case-option-btn-1 active">
+            手机百度
+        </div>
+        <div class="tech-case-option-btn tech-case-option-btn-2">
+            陌陌
+        </div>
+        <div class="tech-case-option-btn tech-case-option-btn-3">
+            百度输入法
+        </div>
+    </div>
 </section>
+
 {%if $userInfo eq Null%}
-<section class="tech-section get-started">
-    <div class="container">
-        <h2>立即获取免费API Key</h2>
-        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
-        <div>
-            <a role="button" class="btn-primary large" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+<section class="tech-section get-started tech-free">
+    <div class="ai-container">
+        <div class="tech-free-title">立即获取免费API Key</div>
+        <div class="tech-free-info">现在试用，获取免费API Key，免费调用各项开放能力API</div>
+        <div class="tech-free-btn">
+            <a role="button"
+               class="btn-primary large"
+               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">
+                免费试用
+            </a>
         </div>
     </div>
 </section>
 {%/if%}
 {%if $src eq Null%}
 <section class="tech-section tech-guide">
-    <div class="container">
-        <h2>使用指南</h2>
-        <div class="guide-link clear-float">
-            <h3>开发指南</h3>
-            <ul>
-                <li><a href="/docs#Speech-Asr">技术文档 ></a></li>
-                <li><a href="/sdk">SDK下载 ></a></li>
-            </ul>
+    <div class="ai-container">
+        <div class="tech-guide-title">使用指南</div>
+        <div class="tech-guide-link tech-clear">
+            <div class="tech-guide-link-title">开发指南</div>
+            <div class="tech-guide-link-list">
+                <a class="tech-link-btn" href="/docs#Speech-Asr">技术文档 &gt;</a>
+                <a class="tech-link-btn" href="/sdk">SDK下载 &gt;</a>
+            </div>
         </div>
-        <div class="question-link clear-float">
-            <h3>常见问题</h3>
-            <ul>
-                <li><a href="/docs#Speech-Asr-FAQ_Q2">语音识别REST API支持的音频格式、采样率有哪些？</a></li>
-                <li><a href="/docs#Speech-Asr-FAQ_Q3">语音识别REST API最长支持多长的录音？</a></li>
-                <li><a href="/docs#Speech-Asr-FAQ_Q4">语音识别SDK支持的音频格式、采样率有哪些？</a></li>
-            </ul>
+        <div class="tech-guide-question tech-clear">
+            <div class="tech-guide-question-title">常见问题</div>
+            <div class="tech-guide-question-list">
+                <a class="tech-link-btn" href="/docs#Speech-Asr-FAQ_Q2">语音识别REST API支持的音频格式、采样率有哪些？</a>
+                <a class="tech-link-btn" href="/docs#Speech-Asr-FAQ_Q3">语音识别REST API最长支持多长的录音？</a>
+                <a class="tech-link-btn" href="/docs#Speech-Asr-FAQ_Q4">语音识别SDK支持的音频格式、采样率有哪些？</a>
+            </div>
         </div>
     </div>
 </section>
 {%/if%}
+
 </div>
 <aside class="aside-action">
     <ul>
@@ -436,7 +486,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {

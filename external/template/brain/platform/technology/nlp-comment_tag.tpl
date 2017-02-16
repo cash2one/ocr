@@ -197,7 +197,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<section class="tech-section tech-banner">
+    <section class="tech-section tech-banner">
     <div class="container">
         <h1>评论观点抽取</h1>
         <p>自动抽取和分析评论观点，帮助您实现舆情分析、用户理解，支持产品优化和营销决策。</p>
@@ -436,7 +436,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {

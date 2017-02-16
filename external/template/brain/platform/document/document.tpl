@@ -197,7 +197,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<div class="doc-wrap">
+    <div class="doc-wrap">
     <div class="sidebar sidebar-fixed">
         <h1 style="width: 260px;">新手指南<i class="nav-plus1 pm-button"></i></h1>
         <div class="toc jquery-accordion-menu" style="width: 260px;">
@@ -210,9 +210,9 @@
                 </li>
             </ul>
         </div>
-        <h1 style="width: 260px; ">技术文档<i class="nav-plus2 pm-button active"></i></h1>
-        <div class="toc jquery-accordion-menu" style="width: 260px;height:600px;height:641px;" id="jquery-accordion-menu">
-            <ul class="level1 submenu" style="display:none">
+        <h1 style="width: 260px; ">技术文档<i class="nav-plus2 pm-button"></i></h1>
+        <div class="toc jquery-accordion-menu" style="width: 260px;height:641px;" id="jquery-accordion-menu">
+            <ul class="level1 submenu">
                 <li name="Speech" class="node root"><a href="javascript:void(0)"><span class="icon icon-yuyin"></span>百度语音</a>
                     <ul class="level2 submenu">
                         <li name="Speech-Asr" class="non-leaf"><a href="javascript:void(0)"><span class="icon-arrow-down"></span>语音识别</a>
@@ -546,7 +546,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {

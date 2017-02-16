@@ -197,7 +197,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<section class="tech-section tech-banner">
+    <section class="tech-section tech-banner">
     <div class="container">
         <h1>人脸核身解决方案</h1>
         <p>提供完整的人脸身份核查解决方案，实现活体检测、拍照人脸识别、身份证人脸比对验证等多个业务环节，帮您规避业务风险，提升产品智能体验。</p>
@@ -364,7 +364,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {

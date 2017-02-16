@@ -197,7 +197,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<section class="tech-section tech-banner">
+    <section class="tech-section tech-banner">
     <div class="container">
         <h1>语音唤醒</h1>
         <p>支持特定语音指令唤醒和打断、唤醒的同时执行指令操作<br>轻量级，低功耗，可自定义设置多个唤醒词，为您的应用打造自然流畅的对话</p>
@@ -432,7 +432,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {

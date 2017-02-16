@@ -8,14 +8,20 @@ import $ from 'jquery';
 
 import 'less/technology/nlp-word_embedding.less';
 
-$(document).ready(function () {
-    // case点击效果
-    $('.case-indicator > li').click(function () {
-        $('.case-indicator > li').each((i, e) => {
-            $(e).toggleClass('active', i === $(this).index());
-        });
-        $('.case-item').each((i, e) => {
-            $(e).toggleClass('active', i === $(this).index());
-        });
-    });
+const $target = $('.tech-case-option-btn');
+const $caseCon = $('.tech-case-item');
+
+$target.on('click', function () {
+    const i = $(this).index();
+
+    $(this).addClass('active')
+        .siblings()
+        .removeClass('active');
+
+    $caseCon.eq(i)
+        .addClass('active')
+        .siblings()
+        .removeClass('active');
 });
+
+

@@ -1,250 +1,68 @@
-@import '../common/helper.less';
-@import '../common/global.less';
-@import '../common/tech-page.less';
+@import '../common/setting.less';
+@import '../common/banner.less';
+@import '../common/tech-feature.less';
+@import '../common/tech-scenario.less';
+@import '../common/tech-case.less';
+@import '../common/fixedFile.less';
 
-@banner: url('../../../ai_images/technology/nlp-word_embedding/banner.png');
-@icons: url('../../../ai_images/technology/nlp-comment/icon.png');
-@intro-bg: none;
-@case-icons: url('../../../ai_images/technology/nlp-comment/case-icons.png');
+// 技术单页前缀
+@prefix : tech;
 
-// 前缀
-@prefix: nlp;
-
-//颜色
-@dark-gray: #828281;
-
-// 功能介绍部分
-.@{prefix}-function {
-    height: 440px;
-    background: url(../../../ai_images/technology/nlp-dr/function-bg.png) center;
-    text-align: center;
-    color: @white;
-    font-size: 0;
-
-    // 功能介绍4个字
-    &-title {
-        padding: 30px 0 20px;
-        font-size: 30px;
-    }
-    &-intro {
-        width: 870px;
-        font-size: @font-size-2;
-        line-height: 25px;
-        margin: 0 auto;
-    }
-
-    &-pic {
-        margin: 5px auto;
-    }
+// 调用通用的banner模块
+.@{prefix}-banner {
+    .banner(@page-name: nlp-word_embedding);
 }
-// 每个特色介绍间的距离
-@feature-padding: 100px;
-@scenario-padding: 30px;
-@function-padding: 40px;
 
+// 调用通用的tech-feature模块
 .@{prefix}-feature {
-    &-title {
-        padding: 30px 0;
-        font-size: 30px;
-        text-align: center;
-    }
-
-    // 容器
-    &-container {
-        margin: 0 0 - (@feature-padding / 2) 40px;
-        font-size: 0;
-    }
-
-    &-item-container {
-        display: inline-block;
-        width: 33.333%;
-        box-sizing: border-box;
-        vertical-align: top;
-        padding: 10px @feature-padding / 2 0;
-    }
-
-    // 特色条目
-    &-item {
-        position: relative;
-        padding: 20px 0;
-
-        &:hover {
-            opacity: 1;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        }
-    }
-
-    // 特色图标
-    &-icon {
-        margin: 0 auto 10px;
-        background: url(../../../ai_images/technology/nlp-word_embedding/feature.png) no-repeat center;
-        background-size: 255px 85px;
-
-        &.feature-1 {
-            .feature-sprite(0, 0, 85px, 85px);
-        }
-
-        &.feature-2 {
-            .feature-sprite(-85px, 0px, 85px, 85px);
-        }
-
-        &.feature-3 {
-            .feature-sprite(-170px, 0px, 85px, 85px);
-        }
-    }
-
-    // 特色名称
-    &-name {
-        padding: 0 0 15px;
-        text-align: center;
-        font-size: @font-size-4;
-    }
-
-    // 特色信息
-    &-info {
-        padding: 0 23px;
-        font-size: @font-size-2;
-        line-height: 25px;
-        color: @dark-gray;
-    }
+    .tech-feature(@page-name: nlp-word_embedding, @icon-num: 3)
 }
 
-// 分割线
-.@{prefix}-section-border {
-    border: 0;
-    height: 1px;
-    background-color: #efefef;
-}
-
-// 特色图标sprite
-.feature-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
-    width: @width;
-    height: @height;
-    background-position: @x @y;
-}
-
-// 使用场景图标sprite mixin
-.scenario-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
-    width: @width;
-    height: @height;
-    background: url(../../../ai_images/technology/nlp-word_embedding/scenario.png) no-repeat @x @y;
-    background-size: 90px 45px;
-}
-
-.function-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
-    background-position: @x @y;
-    width: @width;
-    height: @height;
-}
-
-.ai-platform {
-    .@{prefix}-scenario {
-        padding-bottom: 40px;
-        text-align: center;
-    }
-}
-
-// 使用场景
+// 调用通用的apply-scenario模块
 .@{prefix}-scenario {
-    font-size: 0;
-    padding-bottom: 40px;
+    .apply-scenario(@page-name: nlp-word_embedding, @icon-num: 2);
+}
+// 居中特殊处理
+.@{prefix}-scenario {
+    text-align: center;
 
-    // 使用场景title
-    &-title {
-        padding: 30px 0;
-        font-size: 30px;
-        text-align: center;
-    }
-
-    // 使用场景条目
-    &-item {
+    &-list {
         display: inline-block;
-        width: 33.333%;
-        margin-bottom: 10px;
-        padding: 20px 40px;
-        box-sizing: border-box;
-        vertical-align: top;
-        font-size: 0;
-        margin: 0 60px;
-
-        &:hover {
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        }
-    }
-
-    // 使用场景标题
-    &-header {
-        font-size: @font-size-4;
-        padding: 0 0 10px;
-    }
-
-    &-intro {
-        display: inline-block;
-        vertical-align: top;
         text-align: left;
     }
-
-    // 使用场景图标
-    &-icon-container {
-        width: 15%;
-        display: inline-block;
-    }
-
-    &-icon-1 {
-        .scenario-sprite(0px, -0px, 45px, 45px);
-    }
-
-    &-icon-2 {
-        .scenario-sprite(-45px, 0px, 45px, 45px);
-    }
-
-    &-icon-3 {
-        .scenario-sprite(-90px, 0px, 45px, 45px);
-    }
-
-    &-icon-4 {
-        .scenario-sprite(-135px, 0px, 45px, 45px);
-    }
-
-    &-icon-5 {
-        .scenario-sprite(-180px, 0px, 45px, 45px);
-    }
-
-    // 使用场景介绍信息容器
-    &-intro {
-        width: 85%;
-        box-sizing: border-box;
-        padding: 0 0 0 5px;
-    }
-
-    // 使用场景介绍信息详情
-    &-detail {
-        font-size: @font-size-2;
-        line-height: 25px;
-        color: @dark-gray;
-    }
 }
 
-
-.tech-section {
-    &.tech-case {
-        .case-item .case-icon {
-            background-size: 800px / 2 270px / 2;
-        }
-        .case-item:nth-child(1) {
-            .icon(url('../../../ai_images/technology/nlp-dr/case-1.png'), center, center);
-
-        }
-
-        .case-list {
-            & > li {
-                padding-top: 145px;
-            }
-        }
-    }
+// 调用通用的tech-case模块
+.@{prefix}-case {
+    .tech-case(@page-name: nlp-word_embedding; @num: 1; @case-logo: false;)
 }
 
-
-.center {
+// 功能介绍
+.@{prefix}-function {
+    height: 440px;
+    background: url(../../../ai_images/technology/nlp-word_embedding/function-bg.png) no-repeat top center;
+    background-size: cover;
     text-align: center;
+    color: @white;
+
+    // 功能介绍标题
+    &-title {
+        padding: 30px 0 20px;
+        font-size: @big-title-size;
+    }
+
+    // 功能介绍简介
+    &-info {
+        width: 870px;
+        margin: 0 auto;
+        line-height: 25 / 14;
+    }
+
+    // 功能介绍图片
+    &-pic {
+        margin: 0 auto;
+        padding: 10px 0;
+    }
 }
+
+

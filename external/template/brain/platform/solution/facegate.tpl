@@ -197,7 +197,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<section class="tech-section tech-banner">
+    <section class="tech-section tech-banner">
     <div class="container">
         <h1>人脸闸机解决方案</h1>
         <p>提供软硬件结合的人脸验证闸机解决方案，提供高精度、快速、海量人脸库的刷脸通行方案，帮助您打造更智能、更安全、更可靠的安防管理。</p>
@@ -396,7 +396,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {

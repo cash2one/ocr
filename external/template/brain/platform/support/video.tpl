@@ -197,7 +197,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<div class="video-banner">
+    <div class="video-banner">
     <div class="video-banner-title">教学视频</div>
     <div class="video-banner-intro">观看以下教学视频，将跳转至百度传课页面</div>
 </div>
@@ -391,7 +391,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {

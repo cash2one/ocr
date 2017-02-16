@@ -1,122 +1,172 @@
-@import '../common/helper.less';
-@import '../common/global.less';
+@import '../common/setting.less';
+@import '../common/banner.less';
+@import '../common/tech-feature.less';
+@import '../common/tech-scenario.less';
 
-@banner: url('../../../ai_images/technology/speech-asr/banner.png');
-@icons: url('../../../ai_images/technology/speech-asr/icons.png');
-@intro-bg: url('../../../ai_images/technology/speech-asr/intro-bg.png');
-@intro: url('../../../ai_images/technology/speech-asr/intro.png');
-@case-icons: url('../../../ai_images/technology/speech-asr/case-icons.png');
+@import '../common/tech-case.less';
+@import '../common/fixedFile.less';
 
-@import '../common/tech-page.less';
 
-.tech-section {
-    &.tech-intro {
-        height: 400px;
 
-        .tech-intro-detail {
-            height: 340px;
-            background-size: 1440px / 2 600px / 2;
-            .icon(@intro, center, center);
-        }
+// 技术单页前缀
+@prefix : tech;
+
+// 调用通用的banner模块
+.@{prefix}-banner {
+    .banner(@page-name: speech-asr);
+}
+
+// 调用通用的tech-feature模块
+.@{prefix}-feature {
+    .tech-feature(@page-name: speech-asr, @icon-num: 5)
+}
+
+// 调用通用的apply-scenario模块
+.@{prefix}-scenario {
+    .apply-scenario(@page-name: speech-asr, @icon-num: 5);
+}
+
+// 调用通用的tech-case模块
+.@{prefix}-case {
+    .tech-case(@page-name: speech-asr; @num: 3; @case-logo: ture;)
+}
+
+// 功能介绍
+.@{prefix}-function {
+    height: 440px;
+    background: url(../../../ai_images/technology/speech-asr/intro-bg.png) no-repeat top center;
+    background-size: cover;
+    text-align: center;
+    color: @white;
+
+    // 功能介绍标题
+    &-title {
+        padding: 30px 0 20px;
+        font-size: @big-title-size;
     }
 
-    &.tech-feature {
-        .feature-item + .feature-item {
-            margin-left: 110px;
-        }
-        .feature-item:nth-child(3n+1) {
-            margin-left: 0;
-        }
-        .feature-item:nth-child(n+4) {
-            margin-top: 15px;
-        }
-        .feature-item .feature-icon {
-            background-size: 1030px / 2 270px / 2;
-        }
-
-        .feature-item:nth-child(1) .feature-icon {
-            .icon(@icons, -90px, -5px);
-        }
-        .feature-item:nth-child(2) .feature-icon {
-            .icon(@icons, -175px, -5px);
-        }
-        .feature-item:nth-child(3) .feature-icon {
-            .icon(@icons, -260px, -5px);
-        }
-        .feature-item:nth-child(4) .feature-icon {
-            .icon(@icons, -345px, -5px);
-        }
-        .feature-item:nth-child(5) .feature-icon {
-            .icon(@icons, -430px, -5px);
-        }
-    }
-    &.tech-scene {
-        .scene-item + .scene-item {
-            margin-left: 50px;
-        }
-        .scene-item:nth-child(3n+1) {
-            margin-left: 0;
-        }
-        .scene-item:nth-child(n+4) {
-            margin-top: 15px;
-        }
-
-        .scene-item .scene-icon {
-            background-size: 1030px / 2 270px / 2;
-        }
-
-        .scene-item:nth-child(1) .scene-icon {
-            .icon(@icons, -5px, -90px);
-        }
-        .scene-item:nth-child(2) .scene-icon {
-            .icon(@icons, -50px, -90px);
-        }
-        .scene-item:nth-child(3) .scene-icon {
-            .icon(@icons, -95px, -90px);
-        }
-        .scene-item:nth-child(4) .scene-icon {
-            .icon(@icons, -140px, -90px);
-        }
-        .scene-item:nth-child(5) .scene-icon {
-            .icon(@icons, -185px, -90px);
-        }
+    // 功能介绍简介
+    &-info {
+        width: 870px;
+        margin: 0 auto;
+        line-height: 25 / 14;
     }
 
-    &.tech-case {
-        .case-item .case-icon {
-            background-size: 800px / 2 270px / 2;
-        }
-
-        .case-item:nth-child(1) {
-            .icon(url('../../../ai_images/technology/speech-asr/case-1.png'), center, center);
-            .case-icon {
-                .icon(@case-icons, -5px, -5px);
-            }
-        }
-        .case-item:nth-child(2) {
-            .icon(url('../../../ai_images/technology/speech-asr/case-2.png'), center, center);
-            .case-icon {
-                .icon(@case-icons, -105px, -5px);
-            }
-        }
-        .case-item:nth-child(3) {
-            .icon(url('../../../ai_images/technology/speech-asr/case-3.png'), center, center);
-            .case-icon {
-                .icon(@case-icons, -205px, -5px);
-            }
-
-        }
-
-        .case-indicator {
-            & > li:nth-child(1) {
-                .icon(@case-icons, -10px, -210px);
-            }
-            & > li:nth-child(2) {
-                .icon(@case-icons, -210px, -210px);
-            }
-            & > li:nth-child(3) {
-                .icon(@case-icons, -410px, -210px);
-            }
-        }
+    // 功能介绍图片
+    &-pic {
+        margin: 0 auto;
+        padding: 10px 0;
     }
 }
+
+//.tech-section {
+//    &.tech-intro {
+//        height: 400px;
+//
+//        .tech-intro-detail {
+//            height: 340px;
+//            background-size: 1440px / 2 600px / 2;
+//            .icon(@intro, center, center);
+//        }
+//    }
+//
+//    &.tech-feature {
+//        .feature-item + .feature-item {
+//            margin-left: 110px;
+//        }
+//        .feature-item:nth-child(3n+1) {
+//            margin-left: 0;
+//        }
+//        .feature-item:nth-child(n+4) {
+//            margin-top: 15px;
+//        }
+//        .feature-item .feature-icon {
+//            background-size: 1030px / 2 270px / 2;
+//        }
+//
+//        .feature-item:nth-child(1) .feature-icon {
+//            .icon(@icons, -90px, -5px);
+//        }
+//        .feature-item:nth-child(2) .feature-icon {
+//            .icon(@icons, -175px, -5px);
+//        }
+//        .feature-item:nth-child(3) .feature-icon {
+//            .icon(@icons, -260px, -5px);
+//        }
+//        .feature-item:nth-child(4) .feature-icon {
+//            .icon(@icons, -345px, -5px);
+//        }
+//        .feature-item:nth-child(5) .feature-icon {
+//            .icon(@icons, -430px, -5px);
+//        }
+//    }
+//    &.tech-scene {
+//        .scene-item + .scene-item {
+//            margin-left: 50px;
+//        }
+//        .scene-item:nth-child(3n+1) {
+//            margin-left: 0;
+//        }
+//        .scene-item:nth-child(n+4) {
+//            margin-top: 15px;
+//        }
+//
+//        .scene-item .scene-icon {
+//            background-size: 1030px / 2 270px / 2;
+//        }
+//
+//        .scene-item:nth-child(1) .scene-icon {
+//            .icon(@icons, -5px, -90px);
+//        }
+//        .scene-item:nth-child(2) .scene-icon {
+//            .icon(@icons, -50px, -90px);
+//        }
+//        .scene-item:nth-child(3) .scene-icon {
+//            .icon(@icons, -95px, -90px);
+//        }
+//        .scene-item:nth-child(4) .scene-icon {
+//            .icon(@icons, -140px, -90px);
+//        }
+//        .scene-item:nth-child(5) .scene-icon {
+//            .icon(@icons, -185px, -90px);
+//        }
+//    }
+//
+//    &.tech-case {
+//        .case-item .case-icon {
+//            background-size: 800px / 2 270px / 2;
+//        }
+//
+//        .case-item:nth-child(1) {
+//            .icon(url('../../../ai_images/technology/speech-asr/case-1.png'), center, center);
+//            .case-icon {
+//                .icon(@case-icons, -5px, -5px);
+//            }
+//        }
+//        .case-item:nth-child(2) {
+//            .icon(url('../../../ai_images/technology/speech-asr/case-2.png'), center, center);
+//            .case-icon {
+//                .icon(@case-icons, -105px, -5px);
+//            }
+//        }
+//        .case-item:nth-child(3) {
+//            .icon(url('../../../ai_images/technology/speech-asr/case-3.png'), center, center);
+//            .case-icon {
+//                .icon(@case-icons, -205px, -5px);
+//            }
+//
+//        }
+//
+//        .case-indicator {
+//            & > li:nth-child(1) {
+//                .icon(@case-icons, -10px, -210px);
+//            }
+//            & > li:nth-child(2) {
+//                .icon(@case-icons, -210px, -210px);
+//            }
+//            & > li:nth-child(3) {
+//                .icon(@case-icons, -410px, -210px);
+//            }
+//        }
+//    }
+//}
