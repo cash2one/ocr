@@ -178,12 +178,14 @@ let loadDefault = function () {
 };
 
 let clickOnce = true;
-let unfoldSidebar = function (id) {
-    let element = $('[name="' + id + '"]');
-    let parentUl = element.parent();
-    let parentLi = parentUl.parent();
-    let firstClickNode = element.find('.click-node:eq(0)');
+let unfoldSidebar = function (docName) {
+    const element = $('[name="' + docName + '"]');
+    const parentUl = element.parent();
+    const parentLi = parentUl.parent();
+    // fixme clicknode即第四级路径
+    const firstClickNode = element.find('.click-node:eq(0)');
 
+    // fixme 重构
     let clickElement = function () {
         if (clickOnce) {
             element.find('>a').click();
@@ -192,9 +194,11 @@ let unfoldSidebar = function (id) {
             if (subUl.length) {
                 subUl.find('>li:eq(0)').click();
             }
+
             clickOnce = false;
         }
     };
+
     clickElement();
 
     if (!parentUl.hasClass('submenu')) {
@@ -207,12 +211,13 @@ let unfoldSidebar = function (id) {
     if (parentLi.attr('id') === 'jquery-accordion-menu') {
         $('.pm-button:eq(1)').removeClass('active');
     }
+
     unfoldSidebar(parentLi.attr('name'));
 };
 
 // 通过hash跳转锚点
 let loadHashLocation = function () {
-    let hashPath = window.location.hash.split('#')[1];
+    const hashPath = window.location.hash.split('#')[1];
     if (!hashPath) {
         return;
     }
