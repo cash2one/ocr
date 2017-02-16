@@ -3,8 +3,6 @@
  * @author wangjiedong@baidu.com
  */
 
-'use strict';
-
 import $ from 'jquery';
 import marked from 'marked';
 import {prettyPrint} from 'code-prettify/src/prettify';
@@ -21,56 +19,32 @@ const $mdContainer = $('#md_container');
 // breadcrumb
 const $breadcrumb = $('.doc-breadcrumb .crumb');
 
-let setFaqAnchorId = function (tagname) {
-    if (tagname.indexOf('FAQ') > 0) {
-        $mdContainer.find('p').each(function (i) {
-            $(this).attr('id', 'Q' + (i + 1));
-        });
-    }
-};
-
-// 挂载锚点和文档跳转
-let enableList = function (clickNode, type) {
-    let scrollToLeafNodeH1 = function (index) {
-        let offset = Math.abs($('#md_container>h1').eq(0).offset().top
-            - $('#md_container>h1').eq(index).offset().top);
-
-        $mdContainer.scrollTop(offset);
-    };
-
-    // fixme
-    let docNodes = clickNode.parent().find('>ul>li');
-    docNodes.each(function (index, element) {
-        $(element).click(function () {
-            let requestMd = $(this).attr('data-md');
-            if (requestMd === previousMdFile) {
-                scrollToLeafNodeH1(index);
-            }
-            else {
-                renderMdPage(requestMd, $(this), type);
-            }
-        });
+let setFaqAnchorId = function () {
+    $mdContainer.find('p').each(function (i) {
+        $(this).attr('id', 'Q' + (i + 1));
     });
 };
 
-let renderALinkTag = function () {
-    $('#md_container h1, #md_container h2').each(function (i, element) {
-        $(element).attr('id', $(element).text());
-    });
+let enableInlineAnchor = function () {
+    // 为每个标题添加id,为锚点跳转做准备
+    $('#md_container h1, #md_container h2').each(
+        function (i, element) {
+            const $element = $(element);
+            // TODO id居然是中文的
+            $element.attr('id', $element.text());
+        }
+    );
 
-    $mdContainer.find('a').each(function (i, element) {
-        let aTag = $(element);
-        let href = aTag.attr('href');
-
-        if (href.length) {
-            if (href[0] !== '#') {
-                aTag.attr('target', '_blank');
-            }
+    // 处理文档内指定的本页面内锚点跳转
+    $mdContainer.find('a[href]').each(function (i, element) {
+        const $aTag = $(element);
+        if ($aTag.attr('href').indexOf('#') >= 0) {
+            $aTag.attr('target', '_blank');
         }
     });
 };
 
-let renderMdPage = function (mdName, clickNode, mdType) {
+let renderMdPage = function (mdName) {
     // 防止多次提交
     if (previousMdFile === mdName) {
         return;
@@ -93,20 +67,27 @@ let renderMdPage = function (mdName, clickNode, mdType) {
             // md切换后滚至顶部
             $mdContainer.scrollTop(0);
 
-            renderALinkTag();
-            setFaqAnchorId(mdName);
+            // 激活所有文档内通过a标签完成文档内锚点跳转的链接
+            enableInlineAnchor();
 
-            // 文档页有都有锚点，在加载完成后调整锚点
-            if (mdType === 'api-doc') {
-                // enableList(clickNode, mdType);
+            // 常见问题内部锚点，和文档锚点区别是以p标签为单位
+            if (mdName.indexOf('FAQ') > 0) {
+                setFaqAnchorId();
             }
         }
     });
 };
 
-let bindAllNodeClick = function () {
+let enableList = function () {
+    let scrollToLeafNodeH1 = function (index) {
+        let offset = Math.abs($('#md_container>h1').eq(0).offset().top
+            - $('#md_container>h1').eq(index).offset().top);
+
+        $mdContainer.scrollTop(offset);
+    };
+
     // 所有涉及掉文档跳转的节点，包括文档内锚点跳转和文档间跳转,是个a标签
-    $('.leaf, .sdk-node')
+    $('.leaf, .sdk-node, .guide-node')
         .filter('[data-md]')
         .on(
             'click',
@@ -115,14 +96,12 @@ let bindAllNodeClick = function () {
 
                 // 这个节点需要用到的md文件
                 const requestMd = $currentTarget.attr('data-md');
-                const isBeginnerMd = $currentTarget.parents().hasClass('.beginner');
 
                 if (requestMd === previousMdFile) {
                     // scrollToLeafNodeH1(index);
                 }
                 else {
-                    // TODO 第三个参数太扯了
-                    renderMdPage(requestMd, $(this), isBeginnerMd ? 'beginner' : 'doc-md');
+                    renderMdPage(requestMd);
                 }
             }
         );
@@ -134,7 +113,7 @@ let bindAllNodeClick = function () {
  * *严格整理leaf,non-leaf太乱
  * *防止重复点击
  */
-let renderBreadcrumb = function () {
+let initBreadcrumb = function () {
     // 所有叶子，叶子的特点是加载新md，刷新breadcrumb
     const leaves = $('.sidebar')
         .find('.leaf, .sdk-node, .guide-node');
@@ -231,35 +210,34 @@ let unfoldSidebar = function (id) {
     unfoldSidebar(parentLi.attr('name'));
 };
 
+// 通过hash跳转锚点
 let loadHashLocation = function () {
-    let hashId = window.location.hash;
-    if (!hashId) {
+    let hashPath = window.location.hash.split('#')[1];
+    if (!hashPath) {
         return;
     }
-    hashId = hashId.split('#')[1];
 
-    if (hashId.split('_').length === 1) {
-        unfoldSidebar(hashId);
-    }
-    else {
-        let hash = hashId.split('_')[0];
-        let questionId = hashId.split('_')[1];
-        // questionId = hash + '-' + questionId;
-        unfoldSidebar(hash);
-        setTimeout(function () {
-            let questionElement = $('#md_container>#' + questionId);
-            if (questionElement.length) {
-                let offset = questionElement.offset().top;
-                $('body').scrollTop(offset);
-            }
-        }, 500);
+    const [docName, anchorId] = hashPath.split('_');
+    unfoldSidebar(docName);
+
+    if (anchorId) {
+        setTimeout(
+            () => {
+                let questionElement = $(`#${anchorId}`);
+
+                if (questionElement.length > 0) {
+                    questionElement[0].scrollIntoView();
+                }
+            },
+            500
+        );
     }
 };
 
 $('#jquery-accordion-menu').docAccordionMenu();
 
 initAccordion();
-renderBreadcrumb();
-bindAllNodeClick();
+initBreadcrumb();
+enableList();
 loadDefault();
 loadHashLocation();
