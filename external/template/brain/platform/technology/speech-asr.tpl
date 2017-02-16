@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="{%$keyword%}">
     <meta name="description" content="{%$description%}">
+    <meta name="baidu-site-verification" content="GOPjfm49Yc">
     <script src="https://hm.baidu.com/hm.js?fdad4351b2e90e0f489d7fbfc47c8acf"></script>
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
@@ -206,19 +207,18 @@
             为您提供高精度的语音识别服务，融合百度领先的自然语言处理技术支持多场景智能语音交互
         </div>
         <div class="tech-banner-btn-list">
-            <!-- 按钮类名用途未知，暂留 -->
             <a role="button"
                class="btn-primary media"
                href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">
                 获取API Key
             </a>
-            <!--{%if $src eq Null%}-->
+            {%if $src eq Null%}
             <a role="button"
                class="btn-other media"
                href="/docs#NLP">
                 技术文档
             </a>
-            <!--{%/if%}-->
+            {%/if%}
         </div>
     </div>
 </section>
@@ -336,7 +336,7 @@
 </section>
 <section class="tech-section tech-case">
     <div class="tech-case-list">
-        <div class="tech-case-item tech-case-item-1 active">
+        <div class="tech-case-item tech-case-item-1 tech-case-active">
             <div class="ai-container">
                 <div class="tech-case-item-logo"></div>
                 <div class="tech-case-item-title">手机百度</div>
@@ -366,7 +366,7 @@
         </div>
     </div>
     <div class="tech-case-option">
-        <div class="tech-case-option-btn tech-case-option-btn-1 active">
+        <div class="tech-case-option-btn tech-case-option-btn-1 tech-case-active">
             手机百度
         </div>
         <div class="tech-case-option-btn tech-case-option-btn-2">

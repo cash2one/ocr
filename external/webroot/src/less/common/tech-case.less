@@ -1,4 +1,4 @@
-@import '../common/setting.less';
+@import '../common/initialize.less';
 // 还得优化
 // @page-name: 单页名称
 // @num: 案例数量
@@ -16,7 +16,7 @@
             background-size: cover;
 
             .tech-case-item-logo when (@case-logo = ture) {
-                background: url("../../../ai_images/technology/@{page-name}/case-logo-@{i}.png") no-repeat center center;
+                background: url("../../../ai_images/technology/@{page-name}/sprite/case-logo-@{i}.png") no-repeat center center;
                 background-size: cover;
             }
         }
@@ -43,7 +43,7 @@
         }
 
 
-        &.active {
+        &.tech-case-active {
             opacity: 1;
         }
 
@@ -98,7 +98,7 @@
                 z-index: -1;
             }
 
-            &.active {
+            &.tech-case-active {
                 padding: 17px 10px;
 
                 &:after {
@@ -111,7 +111,7 @@
         .case-icons(@num);
         .case-icons(@n, @i: 1) when (@i =< @n) {
             &-btn-@{i} when (@n > 1) {
-                background: url("../../../ai_images/technology/@{page-name}/case-icon-@{i}.png") no-repeat center center;
+                background: url("../../../ai_images/technology/@{page-name}/sprite/case-icon-@{i}.png") no-repeat center center;
                 background-size: cover;
             }
             .case-icons(@n, (@i + 1));

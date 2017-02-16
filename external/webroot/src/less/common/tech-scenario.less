@@ -1,4 +1,4 @@
-@import '../common/setting.less';
+@import '../common/initialize.less';
 
 // @page-name: 单页名称
 // @icon-num: icon循环数量
@@ -39,7 +39,7 @@
     .scenario-icon(@icon-num);
     .scenario-icon(@n, @i: 1) when (@i =< @n) {
         &-icon-@{i} {
-            background: url("../../../ai_images/technology/@{page-name}/scenario-icon-@{i}.png");
+            background: url("../../../ai_images/technology/@{page-name}/sprite/scenario-icon-@{i}.png");
             background-size: contain;
         }
         .scenario-icon(@n, (@i + 1));

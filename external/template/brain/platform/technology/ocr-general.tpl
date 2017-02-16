@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="{%$keyword%}">
     <meta name="description" content="{%$description%}">
+    <meta name="baidu-site-verification" content="GOPjfm49Yc">
     <script src="https://hm.baidu.com/hm.js?fdad4351b2e90e0f489d7fbfc47c8acf"></script>
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>

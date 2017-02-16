@@ -8,18 +8,5 @@ import $ from 'jquery';
 
 import 'less/technology/speech-asr.less';
 
-const $target = $('.tech-case-option-btn');
-const $caseCon = $('.tech-case-item');
+import '../common/tech-case.js';
 
-$target.on('click', function () {
-    const i = $(this).index();
-
-    $(this).addClass('active')
-        .siblings()
-        .removeClass('active');
-
-    $caseCon.eq(i)
-        .addClass('active')
-        .siblings()
-        .removeClass('active');
-});

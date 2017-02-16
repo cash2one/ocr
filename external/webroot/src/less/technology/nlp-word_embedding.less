@@ -1,9 +1,9 @@
-@import '../common/setting.less';
+@import '../common/initialize.less';
 @import '../common/banner.less';
 @import '../common/tech-feature.less';
 @import '../common/tech-scenario.less';
 @import '../common/tech-case.less';
-@import '../common/fixedFile.less';
+@import '../common/tech-commom.less';
 
 // 技术单页前缀
 @prefix : tech;
@@ -21,9 +21,7 @@
 // 调用通用的apply-scenario模块
 .@{prefix}-scenario {
     .apply-scenario(@page-name: nlp-word_embedding, @icon-num: 2);
-}
-// 居中特殊处理
-.@{prefix}-scenario {
+    // 居中特殊处理
     text-align: center;
 
     &-list {

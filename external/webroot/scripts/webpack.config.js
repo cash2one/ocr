@@ -33,7 +33,7 @@ const entries = glob.sync(
     '**/*.js',
     {
         cwd: path.join(__dirname, '..', 'src', 'entry'),
-        ignore: ['**/pager.js', '**/base.js']
+        ignore: ['**/pager.js', '**/base.js', '**/common/*.js']
     }
 );
 
@@ -168,8 +168,18 @@ module.exports = {
                 ]
             },
             {
+                // icon转换base64
+                test: /sprite(\/|\\).+\.(jpe?g|png|gif)$/i,
+                use: [
+                    {
+                        loader: 'url-loader'
+                    }
+                ]
+            },
+            {
                 // TODO，小icon分单独文件夹管理，base64打包入css，省去拼接雪碧图
                 test: /\.(jpe?g|png|gif|mp4)$/i,
+                exclude: /sprite(\/|\\).+\.(jpe?g|png|gif)$/i,
                 use: [
                     {
                         loader: 'file-loader',

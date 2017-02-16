@@ -1,4 +1,4 @@
-@import '../common/setting.less';
+@import '../common/initialize.less';
 // @page-name: 单页名称
 // @icon-num: icon循环数量
 // @width: 每个item宽度
@@ -40,7 +40,7 @@
     .feature-icon(@icon-num);
     .feature-icon(@n, @i: 1) when (@i =< @n) {
         &-icon-@{i} {
-            background: url("../../../ai_images/technology/@{page-name}/feature-icon-@{i}.png") no-repeat;
+            background: url("../../../ai_images/technology/@{page-name}/sprite/feature-icon-@{i}.png") no-repeat;
             background-size: contain;
         }
         .feature-icon(@n, (@i + 1));
