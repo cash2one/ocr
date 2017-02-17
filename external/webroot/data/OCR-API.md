@@ -237,25 +237,25 @@ Content-Type: application/json;charset=UTF-8
 
 | 字段 | 必选 | 类型 | 说明 |
 | --- | --- | --- | ---- |
-| direction | 否 | int | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
-| log_id | 是 | int | 唯一的log id，用于问题定位 |
-| words_result | 是 | array | 定位和识别结果数组 |
-| words_result_num | 是 | int | 识别结果数，表示words_result的元素个数 |
-| +vertexes_location | 否 | array | 当前为四个顶点: 左上，右上，右下，左下。当vertexes_location=true时存在 |
-| ++x | 是 | int | 水平坐标（坐标0点为左上角） |
-| ++y | 是 | int | 垂直坐标（坐标0点为左上角） |
-| +location | 是 | array | 位置数组（坐标0点为左上角） |
-| ++left | 是 | int | 表示定位位置的长方形左上顶点的水平坐标 |
-| ++top | 是 | int | 表示定位位置的长方形左上顶点的垂直坐标 |
-| ++width | 是 | int | 表示定位位置的长方形的宽度 |
-| ++height | 是 | int | 表示定位位置的长方形的高度 |
+| direction | 否 | int32 | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
+| log_id | 是 | uint64 | 唯一的log id，用于问题定位 |
+| words_result | 是 | array() | 定位和识别结果数组 |
+| words_result_num | 是 | uint32 | 识别结果数，表示words_result的元素个数 |
+| +vertexes_location | 否 | array() | 当前为四个顶点: 左上，右上，右下，左下。当vertexes_location=true时存在 |
+| ++x | 是 | uint32 | 水平坐标（坐标0点为左上角） |
+| ++y | 是 | uint32 | 垂直坐标（坐标0点为左上角） |
+| +location | 是 | array() | 位置数组（坐标0点为左上角） |
+| ++left | 是 | uint32 | 表示定位位置的长方形左上顶点的水平坐标 |
+| ++top | 是 | uint32 | 表示定位位置的长方形左上顶点的垂直坐标 |
+| ++width | 是 | uint32 | 表示定位位置的长方形的宽度 |
+| ++height | 是 | uint32 | 表示定位位置的长方形的高度 |
 | +words | 否 | string | 识别结果字符串 |
-| +chars | 否 | array | 单字符结果，recognize_granularity=small时存在 |
-| ++location | 是 | array | 位置数组（坐标0点为左上角） |
-| +++left | 是 | int | 表示定位位置的长方形左上顶点的水平坐标 |
-| +++top | 是 | int | 表示定位位置的长方形左上顶点的垂直坐标 |
-| +++width | 是 | int | 表示定位定位位置的长方形的宽度 |
-| +++height | 是 | int | 表示位置的长方形的高度 |
+| +chars | 否 | array() | 单字符结果，recognize_granularity=small时存在 |
+| ++location | 是 | array() | 位置数组（坐标0点为左上角） |
+| +++left | 是 | uint32 | 表示定位位置的长方形左上顶点的水平坐标 |
+| +++top | 是 | uint32 | 表示定位位置的长方形左上顶点的垂直坐标 |
+| +++width | 是 | uint32 | 表示定位定位位置的长方形的宽度 |
+| +++height | 是 | uint32 | 表示位置的长方形的高度 |
 | ++char | 是 | string | 单字符识别结果 |
 
 
@@ -346,15 +346,15 @@ Content-Type: application/json;charset=UTF-8
 
 | 字段 | 必选 | 类型 | 说明 |
 | --- | --- | --- | ---- |
-| direction | 否 | int | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
-| log_id | 是 | int | 唯一的log id，用于问题定位 |
-| words_result | 是 | array | 定位和识别结果数组 |
-| words_result_num | 是 | int | 识别结果数，表示words_result的元素个数 |
-| +location | 是 | array | 位置数组（坐标0点为左上角） |
-| ++left | 是 | int | 表示定位位置的长方形左上顶点的水平坐标 |
-| ++top | 是 | int | 表示定位位置的长方形左上顶点的垂直坐标 |
-| ++width | 是 | int | 表示定位位置的长方形的宽度 |
-| ++height | 是 | int | 表示定位位置的长方形的高度 |
+| direction | 否 | int32 | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
+| log_id | 是 | uint64 | 唯一的log id，用于问题定位 |
+| words_result | 是 | array() | 定位和识别结果数组 |
+| words_result_num | 是 | uint32 | 识别结果数，表示words_result的元素个数 |
+| +location | 是 | array() | 位置数组（坐标0点为左上角） |
+| ++left | 是 | uint32 | 表示定位位置的长方形左上顶点的水平坐标 |
+| ++top | 是 | uint32 | 表示定位位置的长方形左上顶点的垂直坐标 |
+| ++width | 是 | uint32 | 表示定位位置的长方形的宽度 |
+| ++height | 是 | uint32 | 表示定位位置的长方形的高度 |
 | +words | 否 | string | 识别结果字符串 |
 
 
@@ -425,7 +425,7 @@ image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 
 | 参数                | 类型     | 是否必须 | 说明            |
 | ----------------- | ------ | ---- | ------------- |
-| log_id            | int | 是    | 请求标识码，随机数，唯一。 |
+| log_id            | uint64 | 是    | 请求标识码，随机数，唯一。 |
 | result            | object | 是    | 返回结果          |
 | +bank_card_number | string | 是    | 银行卡卡号         |
 
