@@ -18,6 +18,8 @@ let previousMdFile = '';
 const $mdContainer = $('#md_container');
 // breadcrumb
 const $breadcrumb = $('.doc-breadcrumb .crumb');
+// 左侧列表节点 TODO 选择命中的节点太多了，需要优化
+const $sideBarElement = $('.sidebar li');
 
 // 默认打开的markdown文档名
 const defaultMd = 'Beginner-AccessProcess';
@@ -84,28 +86,6 @@ let renderMdPage = function (mdName) {
     return promise;
 };
 
-let enableList = function () {
-    // 所有涉及掉文档跳转的节点，包括文档内锚点跳转和文档间跳转,是个a标签
-    $('.leaf, .sdk-node, .guide-node')
-        .filter('[data-md]')
-        .on(
-            'click',
-            function (e) {
-                const $currentTarget = $(e.currentTarget);
-
-                // 这个节点需要用到的md文件
-                const requestMd = $currentTarget.attr('data-md');
-
-                if (requestMd === previousMdFile) {
-                    // scrollToLeafNodeH1(index);
-                }
-                else {
-                    renderMdPage(requestMd);
-                }
-            }
-        );
-};
-
 const renderBreadCrumb = function (data) {
     let htmlMakeup = [];
 
@@ -132,32 +112,44 @@ const renderBreadCrumb = function (data) {
     $breadcrumb.html(htmlMakeup.join('\r'));
 };
 
-let initBreadcrumb = function () {
-    // 所有叶子，叶子的特点是加载新md，刷新breadcrumb
-    const leaves = $('.sidebar')
-        .find('.leaf, .sdk-node, .guide-node');
-    const $sideBarElement = $('.sidebar li');
+// 目录激活
+let enableCatalogue = function () {
+    // 所有涉及掉文档跳转的节点，包括文档内锚点跳转和文档间跳转,是个a标签
+    $('.leaf, .sdk-node, .guide-node')
+        .filter('[data-md]')
+        .on(
+            'click',
+            function (e) {
+                const $currentTarget = $(e.currentTarget);
+                const $target = $(this);
 
-    // 左侧列表中任意一项的点击处理
-    leaves.click(function () {
-        let $target = $(this);
+                // 这个节点需要用到的md文件
+                const requestMd = $currentTarget.attr('data-md');
 
-        // 点击的节点高亮, 其他的节点取消高亮
-        $sideBarElement.removeClass('active');
-        $target.addClass('active');
-        // 上级的非叶子节点激活
-        $target.closest('.root').addClass('active');
+                // 点击的节点高亮, 其他的节点取消高亮
+                $sideBarElement.removeClass('active');
+                $target.addClass('active');
+                // 上级的非叶子节点激活
+                $target.closest('.root').addClass('active');
 
-        const breadcrumbData = [];
-        $target
-            .parents('.non-leaf, .root')
-            .andSelf()
-            .find('>a')
-            .each(function (index, element) {
-                breadcrumbData.push($(element).text().trim());
-            });
-        renderBreadCrumb(breadcrumbData);
-    });
+                const breadcrumbData = [];
+                $target
+                    .parents('.non-leaf, .root')
+                    .andSelf()
+                    .find('>a')
+                    .each(function (index, element) {
+                        breadcrumbData.push($(element).text().trim());
+                    });
+                renderBreadCrumb(breadcrumbData);
+
+                if (requestMd === previousMdFile) {
+                    // scrollToLeafNodeH1(index);
+                }
+                else {
+                    renderMdPage(requestMd);
+                }
+            }
+        );
 };
 
 let initAccordion = function () {
@@ -222,8 +214,7 @@ let loadDoc = function (docName, anchorId = null) {
 $('#jquery-accordion-menu').docAccordionMenu();
 
 initAccordion();
-initBreadcrumb();
-enableList();
+enableCatalogue();
 
 // 分析hash路径获取到需要加载的文档以及锚点
 const hashPath = window.location.hash.split('#')[1] || '';
