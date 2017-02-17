@@ -2,258 +2,228 @@
  * @file 模板脚本入口
  * @author wangjiedong@baidu.com
  */
-'use strict';
 
 import $ from 'jquery';
-import '../../component/widget/docAccordionMenu';
 import marked from 'marked';
-import 'code-prettify/src/prettify';
+import 'code-prettify';
+
+import '../../component/widget/docAccordionMenu';
 
 import 'less/document/document.less';
 
-let lastMdTag = '';
-let anchorMap = {
-    faceRecognition: {
-        '使用须知': 'faceRecognition-1',
-        '接口规范': 'faceRecognition-2',
-        '错误信息格式': 'faceRecognition-3',
-        '人脸识别接口': 'faceRecognition-4',
-        'APP用户组信息接口': 'faceRecognition-5',
-        '人脸属性': 'faceRecognition-6'
-    }
-};
-
-let matchAnchor = function (className, cnName) {
-    if (anchorMap[className]) {
-        return anchorMap[className][cnName];
-    }
-    else {
-        return '';
-    }
-};
+// 上次浏览的md文件名,用于防止连续点击造成的重复提交
+let previousMdFile = '';
 
 // markdown容器
 const $mdContainer = $('#md_container');
+// breadcrumb
+const $breadcrumb = $('.doc-breadcrumb .crumb');
+// 左侧列表节点 TODO 选择命中的节点太多了，需要优化
+const $sideBarElement = $('.sidebar li');
 
-let setAnchorId = function (arr) {
-    if (!arr.length) {
-        return;
-    }
+// 默认打开的markdown文档名
+const defaultMd = 'Beginner-AccessProcess';
 
-    for (let i = 0; i < arr.length; i++) {
-        $(arr[i]).attr('id', matchAnchor('faceRecognition', $(arr[i]).text()));
-    }
-};
-
-let setFaqAnchorId = function (tagname) {
-    if (tagname.indexOf('FAQ') > 0) {
-        $mdContainer.find('p').each(function (i, element) {
-            // $(this).attr('id', tagname + '-Q' + (i + 1));
-            $(this).attr('id', 'Q' + (i + 1));
-        });
-    }
-};
-
-let bindLeafNodeScroll = function (clickNode, type) {
-    let scrollToLeafNodeH1 = function (index) {
-        let offset = Math.abs($('#md_container>h1').eq(0).offset().top
-            - $('#md_container>h1').eq(index).offset().top);
-
-        $mdContainer.scrollTop(offset);
-    };
-    let leafNodes = clickNode.parent().find('>ul>li');
-    leafNodes.each(function (i, element) {
-        $(element).click(function () {
-            let curTag = $(this).parent().parent().find('>a').attr('tag');
-            if (curTag === lastMdTag) {
-                scrollToLeafNodeH1(i);
-            }
-            else {
-                renderMdPage(curTag, $(this), type);
-            }
-        });
+let setFaqAnchorId = function () {
+    $mdContainer.find('p').each(function (i) {
+        $(this).attr('id', 'Q' + (i + 1));
     });
 };
 
-let renderALinkTag = function () {
-    $('#md_container h1, #md_container h2').each(function (i, element) {
-        $(element).attr('id', $(element).text());
-    });
+let enableInlineAnchor = function () {
+    // 为每个标题添加id,为锚点跳转做准备
+    $mdContainer.find('h1, h2').each(
+        function (i, element) {
+            const $element = $(element);
+            // TODO id居然是中文的
+            $element.attr('id', $element.text());
+        }
+    );
 
-    $mdContainer.find('a').each(function (i, element) {
-        let aTag = $(element);
-        let href = aTag.attr('href');
-        if (href.length) {
-            if (href[0] !== '#') {
-                aTag.attr('target', '_blank');
-            }
+    // 处理文档内指定的本页面内锚点跳转
+    $mdContainer.find('a[href]').each(function (i, element) {
+        const $aTag = $(element);
+        if ($aTag.attr('href').indexOf('#') >= 0) {
+            $aTag.attr('target', '_blank');
         }
     });
 };
 
-let renderMdPage = function (tagName, clickNode, type) {
-    if (lastMdTag === tagName) {
-        return;
-    }
+let renderMdPage = function (mdName) {
+    /* eslint-disable */
+    const promise = $.Deferred();
+    /* eslint-enable */
 
     $.ajax({
         type: 'GET',
-        url: '/data/' + tagName + '.md',
-        success(res) {
-            lastMdTag = tagName;
-            $mdContainer.html(marked(res));
+        url: '/data/' + mdName + '.md',
+        // TODO fail处理
+        success(markdownContent) {
+            previousMdFile = mdName;
+
+            // md解析
+            $mdContainer.html(marked(markdownContent));
+
+            // 代码高亮
             $('code').addClass('prettyprint');
-            window.PR.prettyPrint();
+            /* eslint-disable */
+            PR.prettyPrint();
+            /* eslint-enable */
+
+            // md切换后滚至顶部
             $mdContainer.scrollTop(0);
-            renderALinkTag();
-            setFaqAnchorId(tagName);
-            if (type === 'node') {
-                bindLeafNodeScroll(clickNode, type);
+
+            // 激活所有文档内通过a标签完成文档内锚点跳转的链接
+            enableInlineAnchor();
+
+            // 常见问题内部锚点，和文档锚点区别是以p标签为单位
+            if (mdName.indexOf('FAQ') > 0) {
+                setFaqAnchorId();
             }
+
+            promise.resolve();
         }
     });
+
+    return promise;
 };
 
-let bindAllNodeClick = function () {
-    $('.click-node').click(function () {
-        let tagName =  $(this).attr('tag');
-        if (tagName) {
-            renderMdPage(tagName, $(this), 'node');
+const renderBreadCrumb = function (data) {
+    let htmlMakeup = [];
+
+    data.forEach((element, index) => {
+        // 屏蔽掉最左侧的箭头
+        if (index > 0) {
+            // 箭头
+            htmlMakeup = [
+                ...htmlMakeup,
+                '<li>',
+                '    <span class="divider">&gt;</span>',
+                '</li>'
+            ];
         }
+
+        htmlMakeup = [
+            ...htmlMakeup,
+            '<li>',
+            `    <span>${element}</span>`,
+            '</li>'
+        ];
     });
 
-    $('.beginner.root .click-node').click(function () {
-        let tagName =  $(this).attr('tag');
-        if (tagName) {
-            renderMdPage(tagName, $(this), 'beginner');
-        }
-    });
+    $breadcrumb.html(htmlMakeup.join('\r'));
 };
 
-let bindAllLeafClick = function () {
-    $('.leaf-node').click(function () {
-        let tagName =  $(this).attr('tag');
-        if (tagName) {
-            renderMdPage(tagName, $(this), 'leaf');
-        }
-    });
-};
+// 目录激活
+let enableCatalogue = function () {
+    // 所有涉及掉文档跳转的节点，包括文档内锚点跳转和文档间跳转,是个a标签
+    $('.leaf, .sdk-node, .guide-node')
+        .filter('[data-md]')
+        .on(
+            'click',
+            function (e) {
+                const $currentTarget = $(e.currentTarget);
+                const $target = $(this);
 
-let renderMenuActive = function () {
-    $('.sidebar li').click(function () {
-        let thisElement = $(this);
-        $('.sidebar li.active').removeClass('active');
-        $(this).addClass('active');
-        let allParents = thisElement.parents();
-        for (let i = 0; i < allParents.length; i++) {
-            if ($(allParents[i]).hasClass('root')) {
-                $(allParents[i]).addClass('active');
-                break;
-            }
-        }
-        if (thisElement.hasClass('leaf') || thisElement.hasClass('sdk-node')) {
-            let breadcrumbList = [thisElement.find('>a').text()];
-            for (let i = 0; i < allParents.length; i++) {
-                if ($(allParents[i]).hasClass('non-leaf') || $(allParents[i]).hasClass('root')) {
-                    let text = $(allParents[i]).find('>a').text();
-                    breadcrumbList.splice(0, 0, text);
+                // 这个节点需要用到的md文件
+                const requestMd = $currentTarget.attr('data-md');
+
+                // 点击的节点高亮, 其他的节点取消高亮
+                $sideBarElement.removeClass('active');
+                $target.addClass('active');
+                // 上级的非叶子节点激活
+                $target.closest('.root').addClass('active');
+
+                const breadcrumbData = [];
+                $target
+                    .parents('.non-leaf, .root')
+                    .andSelf()
+                    .find('>a')
+                    .each(function (index, element) {
+                        breadcrumbData.push($(element).text().trim());
+                    });
+                renderBreadCrumb(breadcrumbData);
+
+                if (requestMd === previousMdFile) {
+                    // 如果是在同文档内跳转，那就是跳转锚点
+                    const anchorName = $target.text().trim();
+
+                    const $anchorTitle = $(`#${anchorName}`);
+                    if ($anchorTitle.length > 0) {
+                        $anchorTitle.first()[0].scrollIntoView({block: 'start', behavior: 'smooth'});
+                    }
+                }
+                else {
+                    renderMdPage(requestMd);
                 }
             }
-            let html = '';
-            for (let i = 0; i < breadcrumbList.length; i++) {
-                html += '<li><span class="divider">&gt;</span></li><li><span class="">'
-                    + breadcrumbList[i] + '</span></li>';
-            }
-            $('.doc-breadcrumb .crumb').hide().html(html);
-            $('.doc-breadcrumb .crumb li:eq(0)').remove();
-            $('.doc-breadcrumb .crumb').show();
-        }
-        else if (thisElement.parent().hasClass('beginner')) {
-            let html = '<li><span>' + thisElement.text() + '</span></li>';
-            $('.doc-breadcrumb .crumb').html(html);
-        }
-    });
+        );
 };
 
-let bindMinusPlus = function () {
+let initAccordion = function () {
     // 大类
     const $category = $('.sidebar > h1');
     // 大类别旁边的加减号
     const $categoryFolderIcon = $('.pm-button');
 
     $category.click(function (e) {
-        // TODO
+        // TODO html结构重新整理
         $categoryFolderIcon.toggleClass('active');
-        $(e.currentTarget).next().find('>ul').toggle(500);
+        $(e.currentTarget).next().find('>ul').toggle(300);
     });
 };
 
-let loadDefault = function () {
-    $('.doc-wrap .beginner > li:eq(0)').click();
+let unfoldSidebar = function (docName) {
+    // 文档在列表中对应的节点，注意取第一个是因为锚点的存在，一个文档可能在列表中有多个节点
+    // 如果是这种场景，则文档从头浏览，激活的也一定是第一个节点
+    const $docListNode = $(`[data-md=${docName}]`).first();
+
+    const breadCrumbData = [];
+    // 展开所有父级节点
+    $docListNode
+        .parents('.submenu')
+        .css({
+            display: 'block'
+        })
+        .end()
+        .parents('.non-leaf, .root')
+        .andSelf()
+        .find('>a')
+        .each((index, element) => {
+            // 记录下上层级路径名
+            breadCrumbData.push($(element).text().trim());
+        });
+    renderBreadCrumb(breadCrumbData);
+
+    // 对应的节点高亮
+    $docListNode.addClass('active');
+
+    // 顶层节点高亮
+    $docListNode.parents('.root').addClass('active');
 };
 
-let clickonce = true;
-let unfoldSidebar = function (id) {
-    let element = $('[name="' + id + '"]');
-    let parentUl = element.parent();
-    let parentLi = parentUl.parent();
-    let firstClickNode = element.find('.click-node:eq(0)');
-    let clickElement = function () {
-        if (clickonce) {
-            element.find('>a').click();
-            firstClickNode.click();
-            let subUl = firstClickNode.siblings().eq(0);
-            if (subUl.length) {
-                subUl.find('>li:eq(0)').click();
+// 加载文档, 如果有锚点则跳转到对应的锚点位置
+let loadDoc = function (docName, anchorId = null) {
+    docName = docName || defaultMd;
+
+    unfoldSidebar(docName);
+
+    renderMdPage(docName).then(() => {
+        if (anchorId) {
+            let questionElement = $(`#${anchorId}`);
+
+            if (questionElement.length > 0) {
+                questionElement[0].scrollIntoView();
             }
-            clickonce = false;
         }
-    };
-    clickElement();
-    if (!parentUl.hasClass('submenu')) {
-        clickonce = true;
-        return;
-    }
-    if (!parentUl.hasClass('level1')) {
-        parentUl.show();
-    }
-    else {
-        parentUl.show();
-    }
-    if (parentLi.attr('id') === 'jquery-accordion-menu') {
-        $('.pm-button:eq(1)').removeClass('active');
-    }
-    unfoldSidebar(parentLi.attr('name'));
-};
-
-let loadHashLocation = function () {
-    let  hashId = window.location.hash;
-    if (!hashId) {
-        return;
-    }
-    hashId = hashId.split('#')[1];
-    if (hashId.split('_').length === 1) {
-        unfoldSidebar(hashId);
-    }
-    else {
-        let hash = hashId.split('_')[0];
-        let questionId = hashId.split('_')[1];
-        // questionId = hash + '-' + questionId;
-        unfoldSidebar(hash);
-        setTimeout(function () {
-            let questionElement = $('#md_container>#' + questionId);
-            if (questionElement.length) {
-                let offset = questionElement.offset().top;
-                $('body').scrollTop(offset);
-            }
-        }, 500);
-    }
+    });
 };
 
 $('#jquery-accordion-menu').docAccordionMenu();
 
-bindMinusPlus();
-renderMenuActive();
-bindAllNodeClick();
-loadDefault();
-loadHashLocation();
+initAccordion();
+enableCatalogue();
+
+// 分析hash路径获取到需要加载的文档以及锚点
+const hashPath = window.location.hash.split('#')[1] || '';
+loadDoc(...hashPath.split('_'));

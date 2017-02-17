@@ -203,13 +203,13 @@
         <h1 style="width: 260px;cursor:default">常见问题</h1>
         <div class="toc jquery-accordion-menu" style="height:800px;width:260px">
             <ul class="level1 submenu faq-menu" style="border-bottom:1px solid #ebebeb">
-                <li tag="FAQ-Account" class="node root click-node" style="padding-left:5px">
+                <li data-md="FAQ-Account" class="node root doc-href" style="padding-left:5px">
                     <a href="javascript:void(0)">账号问题</a>
                 </li>
-                <li tag="FAQ-ApiUsage" class="node root click-node" style="padding-left:5px">
+                <li data-md="FAQ-ApiUsage" class="node root doc-href" style="padding-left:5px">
                     <a href="javascript:void(0)">接口调用</a>
                 </li>
-                <li tag="FAQ-Others" class="node root click-node" style="padding-left:5px">
+                <li data-md="FAQ-Others" class="node root doc-href" style="padding-left:5px">
                     <a href="javascript:void(0)">其他</a>
                 </li>
             </ul>

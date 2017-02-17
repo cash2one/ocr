@@ -99,8 +99,7 @@ module.exports = {
     entry: webpackEntries,
     resolve: {
         modules: [
-            path.resolve(__dirname, '..', 'node_modules'),
-            path.resolve(__dirname, '..', 'bower_components')
+            path.resolve(__dirname, '..', 'node_modules')
         ],
         alias: {
             // src别名,避免拼接glob返回值，如果出现冲突(如某模块包含src路径)修改这里

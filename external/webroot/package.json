@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "autoprefixer": "^6.7.2",
+    "code-prettify": "^0.1.0",
     "lodash.throttle": "^4.1.1",
     "moment": "^2.17.1"
   }
