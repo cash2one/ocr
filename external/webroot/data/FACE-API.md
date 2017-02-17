@@ -176,7 +176,7 @@ image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 | 参数 | 是否必选 | 类型 | 说明 |
 | --- | --- | --- | ---- |
 | image | 是 | string | base64编码后的图片数据，图片大小不超过2M。 |
-| max_face_num | 否 | uint32 | 最多处理人脸数目，默认值1 |
+| max_face_num | 否 | int | 最多处理人脸数目，默认值1 |
 | face_fields | 否 | string | 包括age、beauty、expression、faceshape、gender、glasses、landmark、race、qualities信息，逗号分隔，默认只返回人脸框、概率和旋转角度。 |
 
 
@@ -246,36 +246,36 @@ image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 
 | 参数 | 类型 | 是否必须 | 说明 |
 | --- | --- | --- | ---- |
-| log_id | uint64 | 是 | 日志id |
-| result_num | uint32 | 是 | 人脸数目 |
-| result | object[] | 是 | 人脸属性对象的集合 |
+| log_id | int | 是 | 日志id |
+| result_num | int | 是 | 人脸数目 |
+| result | object | 是 | 人脸属性对象的集合 |
 | +age | double | 否 | 年龄。face_fields包含age时返回 |
 | +beauty | double | 否 | 美丑打分，范围0-100，越大表示越美。face_fields包含beauty时返回 |
-| +cation | bject | 是 | 人脸在图片中的位置 |
-| ++left | uint32 | 是 | 人脸区域离左边界的距离 |
-| ++top | uint32 | 是 | 人脸区域离上边界的距离 |
-| ++width | uint32 | 是 | 人脸区域的宽度 |
-| ++height | uint32 | 是 | 人脸区域的高度 |
+| +cation | object | 是 | 人脸在图片中的位置 |
+| ++left | int | 是 | 人脸区域离左边界的距离 |
+| ++top | int | 是 | 人脸区域离上边界的距离 |
+| ++width | int | 是 | 人脸区域的宽度 |
+| ++height | int | 是 | 人脸区域的高度 |
 | +face_probability | double | 是 | 人脸置信度，范围0-1 |
-| +rotation_angle | int32 | 是 | 人脸框相对于竖直方向的顺时针旋转角，[-180,180] |
+| +rotation_angle | int | 是 | 人脸框相对于竖直方向的顺时针旋转角，[-180,180] |
 | +yaw | double | 是 | 三维旋转之左右旋转角[-90(左), 90(右)] |
 | +pitch | double | 是 | 三维旋转之俯仰角度[-90(上), 90(下)] |
 | +roll | double | 是 | 平面内旋转角[-180(逆时针), 180(顺时针)] |
-| +expression | uint32 | 否 | 表情，0，不笑；1，微笑；2，大笑。face_fields包含expression时返回 |
+| +expression | int | 否 | 表情，0，不笑；1，微笑；2，大笑。face_fields包含expression时返回 |
 | +expression_probability | double | 否 | 表情置信度，范围0~1。face_fields包含expression时返回 |
-| +faceshape | object[] | 否 | 脸型置信度。face_fields包含faceshape时返回 |
+| +faceshape | object | 否 | 脸型置信度。face_fields包含faceshape时返回 |
 | ++type | string | 是 | 脸型：square/triangle/oval/heart/round |
 | ++probability   | double | 是 | 置信度：0~1 |
 | +gender | string | 否 | male、female。face_fields包含gender时返回 |
 | +gender_probability | double | 否 | 性别置信度，范围0~1。face_fields包含gender时返回 |
-| +glasses | uint32 | 否 | 是否带眼镜，0-无眼镜，1-普通眼镜，2-墨镜。face_fields包含glasses时返回 |
+| +glasses | int | 否 | 是否带眼镜，0-无眼镜，1-普通眼镜，2-墨镜。face_fields包含glasses时返回 |
 | +glasses_probability | double | 否 | 眼镜置信度，范围0~1。face_fields包含glasses时返回 |
-| +landmark | object[] | 否 | 4个关键点位置，左眼中心、右眼中心、鼻尖、嘴中心。face_fields包含landmark时返回 |
-| ++x  | uint32 | 否 | x坐标 |
-| ++y | uint32 | 否 | y坐标 |
-| +landmark72 | object[] | 否 | 72个特征点位置，示例图 。face_fields包含landmark时返回 |
-| ++x | uint32 | 否 | x坐标 |
-| ++y | uint32 | 否 | y坐标 |
+| +landmark | object | 否 | 4个关键点位置，左眼中心、右眼中心、鼻尖、嘴中心。face_fields包含landmark时返回 |
+| ++x  | int | 否 | x坐标 |
+| ++y | int | 否 | y坐标 |
+| +landmark72 | object | 否 | 72个特征点位置，示例图 。face_fields包含landmark时返回 |
+| ++x | int | 否 | x坐标 |
+| ++y | int | 否 | y坐标 |
 | +race | string | 否 | yellow、white、black、arabs。face_fields包含race时返回 |
 | +race_probability | double | 否 | 人种置信度，范围0~1。face_fields包含race时返回 |
 | +qualities | object | 否 | 人脸质量信息。face_fields包含qualities时返回 |
@@ -376,9 +376,9 @@ images=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 
 | 字段         | 是否必选 | 类型            | 说明                                       |
 | ---------- | ---- | ------------- | ---------------------------------------- |
-| log_id     | 是    | uint64        | 请求标识码，随机数，唯一                             |
-| result_num | 是    | uint32        | 返回结果数目，即：result数组中元素个数                   |
+| log_id     | 是    | int        | 请求标识码，随机数，唯一                             |
+| result_num | 是    | int        | 返回结果数目，即：result数组中元素个数                   |
 | result     | 是    | array(object) | 结果数据，index和请求图片index对应。数组元素为每张图片的匹配得分数组，top n。 得分[0,100.0] |
-| +index_i | 是    | uint32        | 比对图片1的index                              |
-| +index_j | 是    | uint32        | 比对图片2的index                              |
+| +index_i | 是    | int        | 比对图片1的index                              |
+| +index_j | 是    | int        | 比对图片2的index                              |
 | +score   | 是    | double        | 比对得分                                     |
