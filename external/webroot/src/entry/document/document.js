@@ -85,13 +85,6 @@ let renderMdPage = function (mdName) {
 };
 
 let enableList = function () {
-    let scrollToLeafNodeH1 = function (index) {
-        let offset = Math.abs($('#md_container>h1').eq(0).offset().top
-            - $('#md_container>h1').eq(index).offset().top);
-
-        $mdContainer.scrollTop(offset);
-    };
-
     // 所有涉及掉文档跳转的节点，包括文档内锚点跳转和文档间跳转,是个a标签
     $('.leaf, .sdk-node, .guide-node')
         .filter('[data-md]')
@@ -113,12 +106,32 @@ let enableList = function () {
         );
 };
 
-/**
- * TODO
- *
- * *严格整理leaf,non-leaf太乱
- * *防止重复点击
- */
+const renderBreadCrumb = function (data) {
+    let htmlMakeup = [];
+
+    data.forEach((element, index) => {
+        // 屏蔽掉最左侧的箭头
+        if (index > 0) {
+            // 箭头
+            htmlMakeup = [
+                ...htmlMakeup,
+                '<li>',
+                '    <span class="divider">&gt;</span>',
+                '</li>'
+            ];
+        }
+
+        htmlMakeup = [
+            ...htmlMakeup,
+            '<li>',
+            `    <span>${element}</span>`,
+            '</li>'
+        ];
+    });
+
+    $breadcrumb.html(htmlMakeup.join('\r'));
+};
+
 let initBreadcrumb = function () {
     // 所有叶子，叶子的特点是加载新md，刷新breadcrumb
     const leaves = $('.sidebar')
@@ -135,34 +148,15 @@ let initBreadcrumb = function () {
         // 上级的非叶子节点激活
         $target.closest('.root').addClass('active');
 
-        // 拼接breadcrumb结构
-        let htmlMakeup = [];
-
+        const breadcrumbData = [];
         $target
             .parents('.non-leaf, .root')
             .andSelf()
+            .find('>a')
             .each(function (index, element) {
-                // 屏蔽掉最左侧的箭头
-                if (index > 0) {
-                    // 箭头
-                    htmlMakeup = [
-                        ...htmlMakeup,
-                        '<li>',
-                        '    <span class="divider">&gt;</span>',
-                        '</li>'
-                    ];
-                }
-
-                htmlMakeup = [
-                    ...htmlMakeup,
-                    '<li>',
-                    `    <span>${$(element).find('>a').text()}</span>`,
-                    '</li>'
-                ];
+                breadcrumbData.push($(element).text().trim());
             });
-
-        // 渲染breadcrumb
-        $breadcrumb.html(htmlMakeup.join('\r'));
+        renderBreadCrumb(breadcrumbData);
     });
 };
 
@@ -184,10 +178,22 @@ let unfoldSidebar = function (docName) {
     // 如果是这种场景，则文档从头浏览，激活的也一定是第一个节点
     const $docListNode = $(`[data-md=${docName}]`).first();
 
+    const breadCrumbData = [];
     // 展开所有父级节点
-    $docListNode.parents('.submenu').css({
-        display: 'block'
-    });
+    $docListNode
+        .parents('.submenu')
+        .css({
+            display: 'block'
+        })
+        .end()
+        .parents('.non-leaf, .root')
+        .andSelf()
+        .find('>a')
+        .each((index, element) => {
+            // 记录下上层级路径名
+            breadCrumbData.push($(element).text().trim());
+        });
+    renderBreadCrumb(breadCrumbData);
 
     // 对应的节点高亮
     $docListNode.addClass('active');
