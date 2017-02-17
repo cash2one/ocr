@@ -203,7 +203,7 @@
         <h1>黄反识别</h1>
         <p>依托全网海量优质数据和深度神经网络技术，智能鉴别色情图片内容，为您的产品保驾护航。</p>
         <div>
-            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">获取API Key</a>
+            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">立即使用</a>
             {%if $src eq Null%}
             <a role="button" class="btn-other media" href="/docs#Antiporn">技术文档</a>
             {%/if%}
@@ -246,7 +246,7 @@
                         <label id="demo-photo-upload"><input type="file">本地上传</label>
                     </div>
                     <p class="demo-desc">
-                        提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片，图片大小不超过2M。为保证正常识别效果，请保证需要识别部分为图片主体部分。</p>
+                        提示：可支持PNG、JPG、jpeg、BMP图片文件，不支持GIF图片，图片大小不超过2M。为保证正常识别效果，请保证需要识别部分为图片主体部分。</p>
                 </div>
                 <div class="data-view-container">
                     <div class="data-view" data-label="RESPONSE JSON" id="demo-json">

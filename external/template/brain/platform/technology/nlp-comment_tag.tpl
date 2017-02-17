@@ -203,7 +203,7 @@
         <h1>评论观点抽取</h1>
         <p>自动抽取和分析评论观点，帮助您实现舆情分析、用户理解，支持产品优化和营销决策。</p>
         <div>
-            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">获取API Key</a>
+            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">立即使用</a>
             {%if $src eq Null%}
             <a role="button" class="btn-other media" href="/docs#NLP">技术文档</a>
             {%/if%}

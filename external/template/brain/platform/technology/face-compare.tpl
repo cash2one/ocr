@@ -203,7 +203,7 @@
         <h1>人脸对比</h1>
         <p>根据两张人脸的特征给出相似度评分<br>为您提供高精度的1:1人脸比对服务</p>
         <div>
-            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">获取API Key</a>
+            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">立即使用</a>
             {%if $src eq Null%}
             <a role="button" class="btn-other media" href="/docs#FACE">技术文档</a>
             {%/if%}

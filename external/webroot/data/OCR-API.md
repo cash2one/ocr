@@ -21,7 +21,7 @@ OCR服务对图片格式、图片大小有限制，格式支持jpg、png，长�
 
 向API服务地址使用POST发送请求，必须在URL中带上参数：
 
-**access_token:** 必须参数，参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)”。
+**access_token:** 必须参数，参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)”。
 
 POST中参数按照API接口说明调用即可。
 
@@ -143,7 +143,7 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
-| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
+| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
 * Header如下：
 
@@ -275,7 +275,7 @@ Content-Type: application/json;charset=UTF-8
 
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
-| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
+| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
 * Header如下：
 
@@ -374,7 +374,7 @@ Content-Type: application/json;charset=UTF-8
 
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
-| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
+| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
 * Header如下：
 

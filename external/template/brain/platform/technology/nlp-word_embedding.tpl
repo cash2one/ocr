@@ -210,7 +210,7 @@
             <a role="button"
                class="btn-primary media"
                href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">
-                获取API Key
+                立即使用
             </a>
             {%if $src eq Null%}
             <a role="button"

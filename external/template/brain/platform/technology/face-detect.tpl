@@ -203,7 +203,7 @@
         <h1>人脸检测</h1>
         <p>快速检测人脸、定位五官关键点，准确识别多种人脸属性<br>为您提供多场景高精度的人脸识别服务。</p>
         <div>
-            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">获取API Key</a>
+            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">立即使用</a>
             {%if $src eq Null%}
             <a role="button" class="btn-other media" href="/docs#FACE">技术文档</a>
             {%/if%}
@@ -248,7 +248,7 @@
                         <label id="demo-photo-upload"><input type="file">本地上传</label>
                     </div>
                     <p class="demo-desc">
-                        提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片，图片大小不超过2M，长边不超过2048像素。为保证正常识别效果，请保证需要识别部分为图片主体部分。</p>
+                        提示：可支持PNG、JPG、jpeg、BMP图片文件，不支持GIF图片，图片大小不超过2M，长边不超过2048像素。为保证正常识别效果，请保证需要识别部分为图片主体部分。</p>
                 </div>
                 <div class="data-view-container">
                     <div class="data-view" data-label="RESPONSE JSON" id="demo-json">

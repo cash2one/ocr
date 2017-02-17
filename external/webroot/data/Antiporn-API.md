@@ -17,7 +17,7 @@ API服务均采用JSON格式的消息体作为响应返回的格式。
 
 向API服务地址使用POST发送请求，必须在URL中带上参数：
 
-**access_token:** 必须参数，参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)”。
+**access_token:** 必须参数，参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)”。
 
 POST中参数按照API接口说明调用即可。
 
@@ -71,7 +71,7 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 若请求错误，服务器将返回的JSON文本包含以下参数：
 
-* **error_code：**错误码；关于错误码的详细信息请参考“[通用错误码](#通用错误码)和[业务相关错误码](#业务相关错误码)”。
+* **error_code：**错误码；关于错误码的详细信息请参考“[通用错误码](#通用错误码)和业务相关错误码”。
 
 * **error_msg：**错误描述信息，帮助理解和解决发生的错误。
 
@@ -132,7 +132,7 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
-| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)” |
+| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
 * Header如下：
 

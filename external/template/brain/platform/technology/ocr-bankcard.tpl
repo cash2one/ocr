@@ -203,7 +203,7 @@
         <h1>银行卡识别</h1>
         <p>基于业界领先的深度学习技术<br>为用户提供银行卡卡号识别服务</p>
         <div>
-            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">获取API Key</a>
+            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">立即使用</a>
             {%if $src eq Null%}
             <a role="button" class="btn-other media" href="/docs#OCR">技术文档</a>
             {%/if%}
@@ -385,6 +385,7 @@
     </div>
 </section>
 {%/if%}
+
 </div>
 <aside class="aside-action">
     <ul>
