@@ -5,7 +5,7 @@
 
 import $ from 'jquery';
 import marked from 'marked';
-import {prettyPrint} from 'code-prettify/src/prettify';
+import 'code-prettify';
 
 import '../../component/widget/docAccordionMenu';
 
@@ -32,7 +32,7 @@ let setFaqAnchorId = function () {
 
 let enableInlineAnchor = function () {
     // 为每个标题添加id,为锚点跳转做准备
-    $('#md_container h1, #md_container h2').each(
+    $mdContainer.find('h1, h2').each(
         function (i, element) {
             const $element = $(element);
             // TODO id居然是中文的
@@ -66,7 +66,9 @@ let renderMdPage = function (mdName) {
 
             // 代码高亮
             $('code').addClass('prettyprint');
-            prettyPrint();
+            /* eslint-disable */
+            PR.prettyPrint();
+            /* eslint-enable */
 
             // md切换后滚至顶部
             $mdContainer.scrollTop(0);
@@ -143,7 +145,13 @@ let enableCatalogue = function () {
                 renderBreadCrumb(breadcrumbData);
 
                 if (requestMd === previousMdFile) {
-                    // scrollToLeafNodeH1(index);
+                    // 如果是在同文档内跳转，那就是跳转锚点
+                    const anchorName = $target.text().trim();
+
+                    const $anchorTitle = $(`#${anchorName}`);
+                    if ($anchorTitle.length > 0) {
+                        $anchorTitle.first()[0].scrollIntoView({block: 'start', behavior: 'smooth'});
+                    }
                 }
                 else {
                     renderMdPage(requestMd);
