@@ -71,9 +71,6 @@ let renderMdPage = function (mdName) {
             PR.prettyPrint();
             /* eslint-enable */
 
-            // md切换后滚至顶部
-            $mdContainer.scrollTop(0);
-
             // 激活所有文档内通过a标签完成文档内锚点跳转的链接
             enableInlineAnchor();
 
