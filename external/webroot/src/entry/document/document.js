@@ -125,6 +125,10 @@ let enableCatalogue = function () {
                 const $currentTarget = $(e.currentTarget);
                 const $target = $(this);
 
+                if ($target.hasClass('active')) {
+                    return;
+                }
+
                 // 这个节点需要用到的md文件
                 const requestMd = $currentTarget.attr('data-md');
 
