@@ -6,6 +6,7 @@
 import $ from 'jquery';
 import marked from 'marked';
 import 'code-prettify';
+import debounce from 'lodash.debounce';
 
 import '../../component/widget/docAccordionMenu';
 
@@ -170,11 +171,20 @@ let initAccordion = function () {
     // 大类别旁边的加减号
     const $categoryFolderIcon = $('.pm-button');
 
-    $category.click(function (e) {
-        // TODO html结构重新整理
-        $categoryFolderIcon.toggleClass('active');
-        $(e.currentTarget).next().find('>ul').toggle(300);
-    });
+    $category.click(
+        debounce(
+            e => {
+                // TODO html结构重新整理
+                $categoryFolderIcon.toggleClass('active');
+                $(e.currentTarget).next().find('>ul').toggle(300);
+            },
+            300,
+            {
+                leading: true,
+                tailing: false
+            }
+        )
+    );
 };
 
 let unfoldSidebar = function (docName) {
