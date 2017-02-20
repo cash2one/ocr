@@ -25,13 +25,13 @@ const $sideBarElement = $('.sidebar li');
 // 默认打开的markdown文档名
 const defaultMd = 'Beginner-AccessProcess';
 
-let setFaqAnchorId = function () {
+const setFaqAnchorId = function () {
     $mdContainer.find('p').each(function (i) {
         $(this).attr('id', 'Q' + (i + 1));
     });
 };
 
-let enableInlineAnchor = function () {
+const enableInlineAnchor = function () {
     // 为每个标题添加id,为锚点跳转做准备
     $mdContainer.find('h1, h2').each(
         function (i, element) {
@@ -112,8 +112,15 @@ const renderBreadCrumb = function (data) {
     $breadcrumb.html(htmlMakeup.join('\r'));
 };
 
+const moveToAnchor = function (anchorName) {
+    const $anchorTitle = $(`#${anchorName}`);
+    if ($anchorTitle.length > 0) {
+        $anchorTitle.first()[0].scrollIntoView({block: 'start', behavior: 'smooth'});
+    }
+};
+
 // 目录激活
-let enableCatalogue = function () {
+const enableCatalogue = function () {
     // 所有涉及掉文档跳转的节点，包括文档内锚点跳转和文档间跳转,是个a标签
     $('.leaf, .sdk-node, .guide-node')
         .filter('[data-md]')
@@ -146,23 +153,21 @@ let enableCatalogue = function () {
                     });
                 renderBreadCrumb(breadcrumbData);
 
-                if (requestMd === previousMdFile) {
-                    // 如果是在同文档内跳转，那就是跳转锚点
-                    const anchorName = $target.text().trim();
-
-                    const $anchorTitle = $(`#${anchorName}`);
-                    if ($anchorTitle.length > 0) {
-                        $anchorTitle.first()[0].scrollIntoView({block: 'start', behavior: 'smooth'});
-                    }
+                // 如果是在同文档内跳转，那就是跳转锚点
+                const anchorName = $target.text().trim();
+                if (requestMd !== previousMdFile) {
+                    renderMdPage(requestMd).then(() => {
+                        moveToAnchor(anchorName);
+                    });
                 }
                 else {
-                    renderMdPage(requestMd);
+                    moveToAnchor(anchorName);
                 }
             }
         );
 };
 
-let initAccordion = function () {
+const initAccordion = function () {
     // 大类
     const $category = $('.sidebar > h1');
     // 大类别旁边的加减号
@@ -184,7 +189,7 @@ let initAccordion = function () {
     );
 };
 
-let unfoldSidebar = function (docName) {
+const unfoldSidebar = function (docName) {
     // 文档在列表中对应的节点，注意取第一个是因为锚点的存在，一个文档可能在列表中有多个节点
     // 如果是这种场景，则文档从头浏览，激活的也一定是第一个节点
     const $docListNode = $(`[data-md=${docName}]`).first();
