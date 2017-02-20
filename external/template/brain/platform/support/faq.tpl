@@ -12,20 +12,20 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
+    <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="/ai_dist/1486524138/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1486524138/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="/ai_dist/1486524138/css/base.style.css">
-    <link rel="stylesheet" href="/ai_dist/1486524138/css/support/faq.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1486524138/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1486524138/css/support/faq.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="/ai_dist/1486524138/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1486524138/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -200,17 +200,26 @@
 <div class="ai-platform page-content">
     <div class="doc-wrap">
     <div class="sidebar sidebar-fixed">
-        <h1 style="width: 260px;cursor:default">常见问题</h1>
-        <div class="toc jquery-accordion-menu" style="height:800px;width:260px">
+        <h1 style="width: 260px;">常见问题<i class="nav-plus1 pm-button"></i></h1>
+        <div class="toc jquery-accordion-menu" style="width: 260px;">
             <ul class="level1 submenu faq-menu" style="border-bottom:1px solid #ebebeb">
-                <li data-md="FAQ-Account" class="node root doc-href" style="padding-left:5px">
-                    <a href="javascript:void(0)">账号问题</a>
+                <li data-md="FAQ-Account"
+                    class="node root guide-node active">
+                    <a href="javascript:void(0)">
+                        账号问题
+                    </a>
                 </li>
-                <li data-md="FAQ-ApiUsage" class="node root doc-href" style="padding-left:5px">
-                    <a href="javascript:void(0)">接口调用</a>
+                <li data-md="FAQ-ApiUsage"
+                    class="node root guide-node">
+                    <a href="javascript:void(0)">
+                        接口调用
+                    </a>
                 </li>
-                <li data-md="FAQ-Others" class="node root doc-href" style="padding-left:5px">
-                    <a href="javascript:void(0)">其他</a>
+                <li data-md="FAQ-Others"
+                    class="node root guide-node">
+                    <a href="javascript:void(0)">
+                        其他
+                    </a>
                 </li>
             </ul>
         </div>
@@ -358,7 +367,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="/ai_dist/1486524138/js/common.bundle.js"></script>
-<script src="/ai_dist/1486524138/js/support/faq.js"></script>
+<script src="//ai.bdstatic.com/dist/1486524138/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1486524138/js/support/faq.js"></script>
 </body>
 </html>

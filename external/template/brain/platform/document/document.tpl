@@ -12,20 +12,20 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
+    <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="/ai_dist/1486524138/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1486524138/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="/ai_dist/1486524138/css/base.style.css">
-    <link rel="stylesheet" href="/ai_dist/1486524138/css/document/document.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1486524138/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1486524138/css/document/document.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="/ai_dist/1486524138/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1486524138/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -578,7 +578,10 @@
                                     <a href="javascript:void(0)"><i></i>错误信息格式</a>
                                 </li>
                                 <li class="leaf" data-md="FACE-API">
-                                    <a href="javascript:void(0)"><i></i>识别接口</a>
+                                    <a href="javascript:void(0)"><i></i>人脸检测</a>
+                                </li>
+                                <li class="leaf" data-md="FACE-API">
+                                    <a href="javascript:void(0)"><i></i>人脸比对</a>
                                 </li>
                             </ul>
                         </li>
@@ -858,7 +861,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="/ai_dist/1486524138/js/common.bundle.js"></script>
-<script src="/ai_dist/1486524138/js/document/document.js"></script>
+<script src="//ai.bdstatic.com/dist/1486524138/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1486524138/js/document/document.js"></script>
 </body>
 </html>
