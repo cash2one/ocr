@@ -320,7 +320,7 @@ public void simnet(AipNlp client) {
 public void NLPCommentTag(AipNlp client) {
 
     // 获取美食评论情感属性
-    JSONObject response = client.commentTag("这家餐厅味道不错，环境很好");
+    JSONObject response = client.commentTag("这家餐馆味道不错", ESimnetType.FOOD");
     System.out.println(response.toString());
 
     // 获取酒店评论情感属性

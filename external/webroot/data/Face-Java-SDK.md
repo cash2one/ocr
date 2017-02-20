@@ -52,11 +52,11 @@ public class Sample {
     
     public static void main(String[] args) {
 
-        // 初始化一个BFRClient
+        // 初始化一个Client
         AipFace client = new AipFace(APP_ID, API_KEY, SECRET_KEY);
         
         String image = "test.jpg";
-        JSONObject res = face.detect(path, new HashMap<String, String>());
+        JSONObject res = client.detect(path, new HashMap<String, String>());
         System.out.println(res.toString(2));
     }
 }
@@ -180,7 +180,7 @@ public void faceRecognize(AipFace client) {
     String imagePath2 = "test2.jpg";
     ArrayList<String> pathArray = new ArrayList<String>();
     pathArray.add(imagePath1);
-    pathArray.add(imagePath1);
+    pathArray.add(imagePath2);
     JSONObject response = client.match(pathArray);
     System.out.println(response.toString());
 }

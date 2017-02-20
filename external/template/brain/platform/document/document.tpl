@@ -198,29 +198,28 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-    <div class="doc-wrap">
+    <!-- htmlcs-disable -->
+<div class="doc-wrap">
     <div class="sidebar sidebar-fixed">
         <h1 style="width: 260px;">新手指南<i class="nav-plus1 pm-button"></i></h1>
         <div class="toc jquery-accordion-menu" style="width: 260px;">
             <ul class="level1 submenu beginner"
                 style="border-bottom:1px solid #ebebeb">
-                <li name="Beginner-AccessProcess"
-                    data-md="Beginner-AccessProcess"
+                <li data-md="Beginner-AccessProcess"
                     class="node root guide-node">
                     <a href="javascript:void(0)">
                         <span class="icon icon-jieru"></span>
                         接入指南
                     </a>
                 </li>
-                <li name="Beginner-Auth"
-                    data-md="Beginner-Auth"
+                <li data-md="Beginner-Auth"
                     class="node root guide-node">
                     <a href="javascript:void(0)">
                         <span class="icon icon-jianquan"></span>
                         鉴权认证机制
                     </a>
                 </li>
-                <li name="" class="node root guide-node" style="display:none">
+                <li class="node root guide-node" style="display:none">
                     <a href="javascript:void(0)">
                         <span class="icon icon-fuwu"></span>
                         服务协议
@@ -230,375 +229,372 @@
         </div>
         <h1 style="width: 260px; ">技术文档<i class="nav-plus2 pm-button"></i></h1>
         <div class="toc jquery-accordion-menu"
-             style="width: 260px;height:641px;"
+             style="width: 260px"
              id="jquery-accordion-menu">
             <ul class="level1 submenu">
-                <li name="Speech" class="node root">
+                <li class="node root">
                     <a href="javascript:void(0)">
                         <span class="icon icon-yuyin"></span>
                         百度语音
                     </a>
                     <ul class="level2 submenu">
-                        <li name="Speech-Asr" class="non-leaf">
+                        <li class="non-leaf">
                             <a href="javascript:void(0)"><span class="icon-arrow-down"></span>语音识别</a>
                             <ul class="level3 submenu">
-                                <li name="Speech-Asr-O2OAndroidSDK" class="non-leaf">
+                                <li class="non-leaf">
                                     <a href="javascript:void(0)">
                                         <span class="icon-arrow-down"></span>
                                         离在线语音识别 Android SDK
                                     </a>
                                     <ul class="level4 submenu">
-                                        <li name="" class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
+                                        <li class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
                                             <a href="javascript:void(0)"><i></i>简介</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
+                                        <li class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
                                             <a href="javascript:void(0)"><i></i>集成指南</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
+                                        <li class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
                                             <a href="javascript:void(0)"><i></i>重要接口说明</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
+                                        <li class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
                                             <a href="javascript:void(0)"><i></i>参数和错误码说明</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
+                                        <li class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
                                             <a href="javascript:void(0)"><i></i>完整示例</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
+                                        <li class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
                                             <a href="javascript:void(0)"><i></i>语音唤醒</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
+                                        <li class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
                                             <a href="javascript:void(0)"><i></i>其他说明</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li name="Speech-Asr-O2OiOSSDK" class="non-leaf">
+                                <li class="non-leaf">
                                     <a href="javascript:void(0)">
                                         <span class="icon-arrow-down"></span>
                                         离在线语音识别 iOS SDK
                                     </a>
                                     <ul class="level4 submenu">
-                                        <li name="" class="leaf" data-md="Speech-Asr-O2OiOSSDK">
+                                        <li class="leaf" data-md="Speech-Asr-O2OiOSSDK">
                                             <a href="javascript:void(0)"><i></i>简介</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-O2OiOSSDK">
+                                        <li class="leaf" data-md="Speech-Asr-O2OiOSSDK">
                                             <a href="javascript:void(0)"><i></i>集成指南</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-O2OiOSSDK">
+                                        <li class="leaf" data-md="Speech-Asr-O2OiOSSDK">
                                             <a href="javascript:void(0)"><i></i>重要接口说明</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-O2OiOSSDK">
+                                        <li class="leaf" data-md="Speech-Asr-O2OiOSSDK">
                                             <a href="javascript:void(0)"><i></i>参数和错误码说明</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-O2OiOSSDK">
+                                        <li class="leaf" data-md="Speech-Asr-O2OiOSSDK">
                                             <a href="javascript:void(0)"><i></i>完整示例</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li name="Speech-Asr-OnlineAndroidSDK" class="non-leaf">
+                                <li class="non-leaf">
                                     <a href="javascript:void(0)">
                                         <span class="icon-arrow-down"></span>
                                         在线语音识别 Android SDK
                                     </a>
                                     <ul class="level4 submenu">
-                                        <li name="" class="leaf" data-md="Speech-Asr-OnlineAndroidSDK">
+                                        <li class="leaf" data-md="Speech-Asr-OnlineAndroidSDK">
                                             <a href="javascript:void(0)"><i></i>简介</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-OnlineAndroidSDK">
+                                        <li class="leaf" data-md="Speech-Asr-OnlineAndroidSDK">
                                             <a href="javascript:void(0)"><i></i>集成指南</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-OnlineAndroidSDK">
+                                        <li class="leaf" data-md="Speech-Asr-OnlineAndroidSDK">
                                             <a href="javascript:void(0)"><i></i>重要接口说明</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-OnlineAndroidSDK">
+                                        <li class="leaf" data-md="Speech-Asr-OnlineAndroidSDK">
                                             <a href="javascript:void(0)"><i></i>参数和错误码说明</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-OnlineAndroidSDK">
+                                        <li class="leaf" data-md="Speech-Asr-OnlineAndroidSDK">
                                             <a href="javascript:void(0)"><i></i>完整示例</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li name="Speech-Asr-OnlineiOSSDK" class="non-leaf">
+                                <li class="non-leaf">
                                     <a href="javascript:void(0)">
                                         <span class="icon-arrow-down"></span>
                                         在线语音识别 iOS SDK
                                     </a>
                                     <ul class="level4 submenu">
-                                        <li name="" class="leaf" data-md="Speech-Asr-OnlineiOSSDK">
+                                        <li class="leaf" data-md="Speech-Asr-OnlineiOSSDK">
                                             <a href="javascript:void(0)"><i></i>简介</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-OnlineiOSSDK">
+                                        <li class="leaf" data-md="Speech-Asr-OnlineiOSSDK">
                                             <a href="javascript:void(0)"><i></i>集成指南</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-OnlineiOSSDK">
+                                        <li class="leaf" data-md="Speech-Asr-OnlineiOSSDK">
                                             <a href="javascript:void(0)"><i></i>重要接口说明</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-OnlineiOSSDK">
+                                        <li class="leaf" data-md="Speech-Asr-OnlineiOSSDK">
                                             <a href="javascript:void(0)"><i></i>参数和错误码说明</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-OnlineiOSSDK">
+                                        <li class="leaf" data-md="Speech-Asr-OnlineiOSSDK">
                                             <a href="javascript:void(0)"><i></i>完整示例</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li name="Speech-Asr-RESTAPI" class="non-leaf">
+                                <li class="non-leaf">
                                     <a href="javascript:void(0)">
                                         <span class="icon-arrow-down"></span>
                                         语音识别 REST API
                                     </a>
                                     <ul class="level4 submenu">
-                                        <li name="" class="leaf" data-md="Speech-Asr-RESTAPI">
+                                        <li class="leaf" data-md="Speech-Asr-RESTAPI">
                                             <a href="javascript:void(0)"><i></i>概念解释</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-RESTAPI">
+                                        <li class="leaf" data-md="Speech-Asr-RESTAPI">
                                             <a href="javascript:void(0)"><i></i>简介</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-RESTAPI">
+                                        <li class="leaf" data-md="Speech-Asr-RESTAPI">
                                             <a href="javascript:void(0)"><i></i>集成指南</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-RESTAPI">
+                                        <li class="leaf" data-md="Speech-Asr-RESTAPI">
                                             <a href="javascript:void(0)"><i></i>API请求方式基本说明</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-RESTAPI">
+                                        <li class="leaf" data-md="Speech-Asr-RESTAPI">
                                             <a href="javascript:void(0)"><i></i>注意事项</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li name="Speech-Asr-Protocol" class="non-leaf">
+                                <li class="non-leaf">
                                     <a href="javascript:void(0)">
                                         <span class="icon-arrow-down"></span>
                                         语义理解协议
                                     </a>
                                     <ul class="level4 submenu">
-                                        <li name="" class="leaf" data-md="Speech-Asr-Protocol">
+                                        <li class="leaf" data-md="Speech-Asr-Protocol">
                                             <a href="javascript:void(0)"><i></i>前言</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-Protocol">
+                                        <li class="leaf" data-md="Speech-Asr-Protocol">
                                             <a href="javascript:void(0)"><i></i>意图表示协议</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Asr-Protocol">
+                                        <li class="leaf" data-md="Speech-Asr-Protocol">
                                             <a href="javascript:void(0)"><i></i>各领域意图表示</a>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                             <ul class="level3 submenu">
-                                <li name="Speech-Asr-FAQ" class="leaf" data-md="Speech-Asr-FAQ">
+                                <li class="leaf" data-md="Speech-Asr-FAQ">
                                     <a href="javascript:void(0)"><i></i>常见问题</a>
                                 </li>
                             </ul>
                         </li>
-                        <li name="Speech-Tts" class="non-leaf">
+                        <li class="non-leaf">
                             <a href="javascript:void(0)">
                                 <span class="icon-arrow-down"></span>
                                 语音合成
                             </a>
                             <ul class="level3 submenu">
-                                <li name="Speech-Tts-O2OAndroidSDK" class="non-leaf">
+                                <li class="non-leaf">
                                     <a href="javascript:void(0)">
                                         <span class="icon-arrow-down"></span>
                                         离线在线语音合成 Android SDK
                                     </a>
                                     <ul class="level4 submenu">
-                                        <li name="" class="leaf" data-md="Speech-Tts-O2OAndroidSDK">
+                                        <li class="leaf" data-md="Speech-Tts-O2OAndroidSDK">
                                             <a href="javascript:void(0)"><i></i>简介</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Tts-O2OAndroidSDK">
+                                        <li class="leaf" data-md="Speech-Tts-O2OAndroidSDK">
                                             <a href="javascript:void(0)"><i></i>集成指南</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Tts-O2OAndroidSDK">
+                                        <li class="leaf" data-md="Speech-Tts-O2OAndroidSDK">
                                             <a href="javascript:void(0)"><i></i>重要接口说明</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Tts-O2OAndroidSDK">
+                                        <li class="leaf" data-md="Speech-Tts-O2OAndroidSDK">
                                             <a href="javascript:void(0)"><i></i>参数和错误码说明</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Tts-O2OAndroidSDK">
+                                        <li class="leaf" data-md="Speech-Tts-O2OAndroidSDK">
                                             <a href="javascript:void(0)"><i></i>完整示例</a>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                             <ul class="level3 submenu">
-                                <li name="Speech-Tts-O2OiOSSDK" class="non-leaf">
+                                <li class="non-leaf">
                                     <a href="javascript:void(0)">
                                         <span class="icon-arrow-down"></span>
                                         离线在线语音合成 iOS SDK
                                     </a>
                                     <ul class="level4 submenu">
-                                        <li name="" class="leaf" data-md="Speech-Tts-O2OiOSSDK">
+                                        <li class="leaf" data-md="Speech-Tts-O2OiOSSDK">
                                             <a href="javascript:void(0)"><i></i>简介</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Tts-O2OiOSSDK">
+                                        <li class="leaf" data-md="Speech-Tts-O2OiOSSDK">
                                             <a href="javascript:void(0)"><i></i>集成指南</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Tts-O2OiOSSDK">
+                                        <li class="leaf" data-md="Speech-Tts-O2OiOSSDK">
                                             <a href="javascript:void(0)"><i></i>重要接口说明</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Tts-O2OiOSSDK">
+                                        <li class="leaf" data-md="Speech-Tts-O2OiOSSDK">
                                             <a href="javascript:void(0)"><i></i>参数和错误码说明</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Tts-O2OiOSSDK">
+                                        <li class="leaf" data-md="Speech-Tts-O2OiOSSDK">
                                             <a href="javascript:void(0)"><i></i>完整示例</a>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                             <ul class="level3 submenu">
-                                <li name="Speech-Tts-OnlineiOSSDK" class="non-leaf">
+                                <li class="non-leaf">
                                     <a href="javascript:void(0)">
                                         <span class="icon-arrow-down"></span>
                                         在线语音合成 iOS SDK
                                     </a>
                                     <ul class="level4 submenu">
-                                        <li name="" class="leaf" data-md="Speech-Tts-OnlineiOSSDK">
+                                        <li class="leaf" data-md="Speech-Tts-OnlineiOSSDK">
                                             <a href="javascript:void(0)"><i></i>概念解释</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Tts-OnlineiOSSDK">
+                                        <li class="leaf" data-md="Speech-Tts-OnlineiOSSDK">
                                             <a href="javascript:void(0)"><i></i>简介</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Tts-OnlineiOSSDK">
+                                        <li class="leaf" data-md="Speech-Tts-OnlineiOSSDK">
                                             <a href="javascript:void(0)"><i></i>集成指南</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Tts-OnlineiOSSDK">
+                                        <li class="leaf" data-md="Speech-Tts-OnlineiOSSDK">
                                             <a href="javascript:void(0)"><i></i>语音合成</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Tts-OnlineiOSSDK">
+                                        <li class="leaf" data-md="Speech-Tts-OnlineiOSSDK">
                                             <a href="javascript:void(0)"><i></i>日志</a>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                             <ul class="level3 submenu">
-                                <li name="Speech-Tts-RESTAPI" class="non-leaf">
+                                <li class="non-leaf">
                                     <a href="javascript:void(0)">
                                         <span class="icon-arrow-down"></span>
                                         语音合成 REST API
                                     </a>
                                     <ul class="level4 submenu">
-                                        <li name="" class="leaf" data-md="Speech-Tts-RESTAPI">
+                                        <li class="leaf" data-md="Speech-Tts-RESTAPI">
                                             <a href="javascript:void(0)"><i></i>概念解释</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Tts-RESTAPI">
+                                        <li class="leaf" data-md="Speech-Tts-RESTAPI">
                                             <a href="javascript:void(0)"><i></i>简介</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Tts-RESTAPI">
+                                        <li class="leaf" data-md="Speech-Tts-RESTAPI">
                                             <a href="javascript:void(0)"><i></i>集成指南</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Tts-RESTAPI">
+                                        <li class="leaf" data-md="Speech-Tts-RESTAPI">
                                             <a href="javascript:void(0)"><i></i>API请求方式基本说明</a>
                                         </li>
-                                        <li name="" class="leaf" data-md="Speech-Tts-RESTAPI">
+                                        <li class="leaf" data-md="Speech-Tts-RESTAPI">
                                             <a href="javascript:void(0)"><i></i>注意事项</a>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                             <ul class="level3 submenu">
-                                <li name="Speech-Tts-FAQ" class="leaf" data-md="Speech-Tts-FAQ">
+                                <li class="leaf" data-md="Speech-Tts-FAQ">
                                     <a href="javascript:void(0)"><i></i>常见问题</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li name="OCR" class="node root">
+                <li class="node root">
                     <a href="javascript:void(0)">
                         <span class="icon icon-wenzi"></span>
                         文字识别
                     </a>
                     <ul class="level2 submenu">
-                        <li name="OCR-API" class="non-leaf">
+                        <li class="non-leaf">
                             <a href="javascript:void(0)">
                                 <span class="icon-arrow-down"></span>
                                 API 文档
                             </a>
                             <ul class="level3 submenu">
-                                <li name="" class="leaf" data-md="OCR-API">
+                                <li class="leaf" data-md="OCR-API">
                                     <a href="javascript:void(0)"><i></i>简介</a>
                                 </li>
-                                <li name="" class="leaf" data-md="OCR-API">
+                                <li class="leaf" data-md="OCR-API">
                                     <a href="javascript:void(0)"><i></i>调用方式一</a>
                                 </li>
-                                <li name="" class="leaf" data-md="OCR-API">
+                                <li class="leaf" data-md="OCR-API">
                                     <a href="javascript:void(0)"><i></i>调用方式二</a>
                                 </li>
-                                <li name="" class="leaf" data-md="OCR-API">
+                                <li class="leaf" data-md="OCR-API">
                                     <a href="javascript:void(0)"><i></i>错误信息格式</a>
                                 </li>
-                                <li name="" class="leaf" data-md="OCR-API">
+                                <li class="leaf" data-md="OCR-API">
                                     <a href="javascript:void(0)"><i></i>识别接口</a>
                                 </li>
                             </ul>
                         </li>
-                        <li name="OCR-SDK" class="non-leaf">
+                        <li class="non-leaf">
                             <a href="javascript:void(0)">
                                 <span class="icon-arrow-down"></span>
                                 SDK 文档
                             </a>
                             <ul class="level3 submenu">
-                                <li name="OCR-Java-SDK"
-                                    class="non-leaf sdk-node"
+                                <li class="non-leaf sdk-node"
                                     data-md="OCR-Java-SDK">
                                     <a href="javascript:void(0)"><i></i>Java 语言</a>
                                 </li>
-                                <li name="OCR-PHP-SDK"
-                                    class="non-leaf sdk-node"
+                                <li class="non-leaf sdk-node"
                                     data-md="OCR-PHP-SDK">
                                     <a href="javascript:void(0)"><i></i>PHP 语言</a>
                                 </li>
-                                <li name="OCR-Python-SDK"
-                                    class="non-leaf sdk-node"
+                                <li class="non-leaf sdk-node"
                                     data-md="OCR-Python-SDK">
                                     <a href="javascript:void(0)"><i></i>Python 语言</a>
                                 </li>
                             </ul>
                         </li>
-                        <li name="OCR-FAQ" class="leaf" data-md="OCR-FAQ" >
+                        <li class="leaf" data-md="OCR-FAQ" >
                             <a href="javascript:void(0)"><i></i>常见问题</a>
                         </li>
                     </ul>
                 </li>
-                <li name="FACE" class="node root">
+                <li class="node root">
                     <a href="javascript:void(0)">
                         <span class="icon icon-renlian"></span>
                         人脸识别
                     </a>
                     <ul class="level2 submenu">
-                        <li name="FACE-API" class="non-leaf">
+                        <li class="non-leaf">
                             <a href="javascript:void(0)">
                                 <span class="icon-arrow-down"></span>
                                 API 文档
                             </a>
                             <ul class="level3 submenu">
-                                <li name="" class="leaf" data-md="FACE-API">
+                                <li class="leaf" data-md="FACE-API">
                                     <a href="javascript:void(0)"><i></i>简介</a>
                                 </li>
-                                <li name="" class="leaf" data-md="FACE-API">
+                                <li class="leaf" data-md="FACE-API">
                                     <a href="javascript:void(0)"><i></i>调用方式一</a>
                                 </li>
-                                <li name="" class="leaf" data-md="FACE-API">
+                                <li class="leaf" data-md="FACE-API">
                                     <a href="javascript:void(0)"><i></i>调用方式二</a>
                                 </li>
-                                <li name="" class="leaf" data-md="FACE-API">
+                                <li class="leaf" data-md="FACE-API">
                                     <a href="javascript:void(0)"><i></i>错误信息格式</a>
                                 </li>
-                                <li name="" class="leaf" data-md="FACE-API">
+                                <li class="leaf" data-md="FACE-API">
                                     <a href="javascript:void(0)"><i></i>识别接口</a>
                                 </li>
                             </ul>
                         </li>
-                        <li name="FACE-SDK" class="non-leaf">
+                        <li class="non-leaf">
                             <a href="javascript:void(0)"><span class="icon-arrow-down"></span>SDK 文档</a>
                             <ul class="level3 submenu">
-                                <li name="Face-Java-SDK" class="non-leaf sdk-node" data-md="Face-Java-SDK">
+                                <li class="non-leaf sdk-node" data-md="Face-Java-SDK">
                                     <a href="javascript:void(0)"><i></i>Java 语言</a>
                                 </li>
-                                <li name="Face-PHP-SDK" class="non-leaf sdk-node" data-md="Face-Java-SDK">
+                                <li class="non-leaf sdk-node" data-md="Face-Java-SDK">
                                     <a data-md="Face-PHP-SDK" href="javascript:void(0)">
                                         <i></i>
                                         PHP 语言
                                     </a>
                                 </li>
-                                <li name="Face-Python-SDK" class="non-leaf sdk-node" data-md="Face-Java-SDK">
+                                <li class="non-leaf sdk-node" data-md="Face-Java-SDK">
                                     <a data-md="Face-Python-SDK" href="javascript:void(0)">
                                         <i></i>
                                         Python 语言
@@ -606,112 +602,112 @@
                                 </li>
                             </ul>
                         </li>
-                        <li name="FACE-FAQ" class="leaf" data-md="FACE-FAQ">
+                        <li class="leaf" data-md="FACE-FAQ">
                             <a href="javascript:void(0)"><i></i>常见问题</a>
                         </li>
                     </ul>
                 </li>
-                <li name="NLP" class="node root">
+                <li class="node root">
                     <a href="javascript:void(0)"><span class="icon icon-yuyan"></span>自然语言处理</a>
                     <ul class="level2 submenu">
-                        <li name="NLP-API" class="non-leaf">
+                        <li class="non-leaf">
                             <a href="javascript:void(0)">
                                 <span class="icon-arrow-down"></span>
                                 API 文档
                             </a>
                             <ul class="level3 submenu">
-                                <li name="" class="leaf" data-md="NLP-API">
+                                <li class="leaf" data-md="NLP-API">
                                     <a href="javascript:void(0)"><i></i>简介</a>
                                 </li>
-                                <li name="" class="leaf" data-md="NLP-API">
+                                <li class="leaf" data-md="NLP-API">
                                     <a href="javascript:void(0)"><i></i>调用方式一</a>
                                 </li>
-                                <li name="" class="leaf" data-md="NLP-API">
+                                <li class="leaf" data-md="NLP-API">
                                     <a href="javascript:void(0)"><i></i>调用方式二</a>
                                 </li>
-                                <li name="" class="leaf" data-md="NLP-API">
+                                <li class="leaf" data-md="NLP-API">
                                     <a href="javascript:void(0)"><i></i>错误信息格式</a>
                                 </li>
-                                <li name="" class="leaf" data-md="NLP-API">
+                                <li class="leaf" data-md="NLP-API">
                                     <a href="javascript:void(0)"><i></i>分词接口</a>
                                 </li>
-                                <li name="" class="leaf" data-md="NLP-API">
+                                <li class="leaf" data-md="NLP-API">
                                     <a href="javascript:void(0)"><i></i>词性标注接口</a>
                                 </li>
-                                <li name="" class="leaf" data-md="NLP-API">
+                                <li class="leaf" data-md="NLP-API">
                                     <a href="javascript:void(0)"><i></i>词向量表示接口</a>
                                 </li>
-                                <li name="" class="leaf" data-md="NLP-API">
+                                <li class="leaf" data-md="NLP-API">
                                     <a href="javascript:void(0)"><i></i>中文DNN语言模型</a>
                                 </li>
-                                <li name="" class="leaf" data-md="NLP-API">
+                                <li class="leaf" data-md="NLP-API">
                                     <a href="javascript:void(0)"><i></i>短文本相似度接口</a>
                                 </li>
-                                <li name="" class="leaf" data-md="NLP-API">
+                                <li class="leaf" data-md="NLP-API">
                                     <a href="javascript:void(0)"><i></i>评论观点抽取接口</a>
                                 </li>
                             </ul>
                         </li>
-                        <li name="NLP-SDK" class="non-leaf">
+                        <li class="non-leaf">
                             <a href="javascript:void(0)"><span class="icon-arrow-down"></span>SDK 文档</a>
                             <ul class="level3 submenu">
-                                <li name="NLP-Java-SDK" class="non-leaf sdk-node" data-md="NLP-Java-SDK">
+                                <li class="non-leaf sdk-node" data-md="NLP-Java-SDK">
                                     <a href="javascript:void(0)"><i></i>Java 语言</a>
                                 </li>
-                                <li name="NLP-PHP-SDK" class="non-leaf sdk-node" data-md="NLP-PHP-SDK">
+                                <li class="non-leaf sdk-node" data-md="NLP-PHP-SDK">
                                     <a href="javascript:void(0)"><i></i>PHP 语言</a>
                                 </li>
-                                <li name="NLP-Python-SDK" class="non-leaf sdk-node" data-md="NLP-Python-SDK">
+                                <li class="non-leaf sdk-node" data-md="NLP-Python-SDK">
                                     <a href="javascript:void(0)"><i></i>Python 语言</a>
                                 </li>
                             </ul>
                         </li>
-                        <li name="NLP-FAQ" class="leaf" data-md="NLP-FAQ">
+                        <li class="leaf" data-md="NLP-FAQ">
                             <a href="javascript:void(0)"><i></i>常见问题</a>
                         </li>
                     </ul>
                 </li>
-                <li name="Antiporn" class="node root">
+                <li class="node root">
                     <a href="javascript:void(0)"><span class="icon icon-huangfan"></span>黄反识别</a>
                     <ul class="level2 submenu">
-                        <li name="Antiporn-API" class="non-leaf">
+                        <li class="non-leaf">
                             <a href="javascript:void(0)">
                                 <span class="icon-arrow-down"></span>
                                 API 文档
                             </a>
                             <ul class="level3 submenu">
-                                <li name="" class="leaf" data-md="Antiporn-API">
+                                <li class="leaf" data-md="Antiporn-API">
                                     <a href="javascript:void(0)"><i></i>简介</a>
                                 </li>
-                                <li name="" class="leaf" data-md="Antiporn-API">
+                                <li class="leaf" data-md="Antiporn-API">
                                     <a href="javascript:void(0)"><i></i>调用方式一</a>
                                 </li>
-                                <li name="" class="leaf" data-md="Antiporn-API">
+                                <li class="leaf" data-md="Antiporn-API">
                                     <a href="javascript:void(0)"><i></i>调用方式二</a>
                                 </li>
-                                <li name="" class="leaf" data-md="Antiporn-API">
+                                <li class="leaf" data-md="Antiporn-API">
                                     <a href="javascript:void(0)"><i></i>错误信息格式</a>
                                 </li>
-                                <li name="" class="leaf" data-md="Antiporn-API">
+                                <li class="leaf" data-md="Antiporn-API">
                                     <a href="javascript:void(0)"><i></i>黄反识别</a>
                                 </li>
                             </ul>
                         </li>
-                        <li name="Antiporn-SDK" class="non-leaf">
+                        <li class="non-leaf">
                             <a href="javascript:void(0)"><span class="icon-arrow-down"></span>SDK 文档</a>
                             <ul class="level3 submenu">
-                                <li name="Antiporn-Java-SDK" class="non-leaf sdk-node" data-md="Antiporn-Java-SDK">
+                                <li class="non-leaf sdk-node" data-md="Antiporn-Java-SDK">
                                     <a href="javascript:void(0)"><i></i>Java 语言</a>
                                 </li>
-                                <li name="Antiporn-PHP-SDK" class="non-leaf sdk-node" data-md="Antiporn-PHP-SDK">
+                                <li class="non-leaf sdk-node" data-md="Antiporn-PHP-SDK">
                                     <a href="javascript:void(0)"><i></i>PHP 语言</a>
                                 </li>
-                                <li name="Antiporn-Python-SDK" class="non-leaf sdk-node" data-md="Antiporn-Python-SDK">
+                                <li class="non-leaf sdk-node" data-md="Antiporn-Python-SDK">
                                     <a href="javascript:void(0)"><i></i>Python 语言</a>
                                 </li>
                             </ul>
                         </li>
-                        <li name="Antiporn-FAQ" class="leaf" data-md="Antiporn-FAQ">
+                        <li class="leaf" data-md="Antiporn-FAQ">
                             <a href="javascript:void(0)"><i></i>常见问题</a>
                         </li>
                     </ul>

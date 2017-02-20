@@ -50,7 +50,7 @@ public class Sample {
         // 初始化一个AntipornClient
         AipAntiporn client = new AipAntiporn(APP_ID, API_KEY, SECRET_KEY);
         String path = "test.jpg";
-        JSONObject res = antiporn.detect(path);
+        JSONObject res = client.detect(path);
         System.out.println(res);
     }
 }
