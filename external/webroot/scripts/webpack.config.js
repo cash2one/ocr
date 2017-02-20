@@ -10,6 +10,7 @@ const path = require('path');
 // 第三方模块
 const glob = require('glob');
 const webpack = require('webpack');
+const argv = require('minimist')(process.argv.slice(2));
 
 // webpack plugin
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -23,7 +24,9 @@ const getVersion = require('./lib/getVersion');
 /* eslint-enable */
 
 // 关键参数
-const publicPath = '/ai_dist/';
+const publicPath = argv.hasOwnProperty('o') || argv.hasOwnProperty('online')
+    ? '//ai.bdstatic.com/dist/'
+    : '/ai_dist/';
 
 // 获取版本号
 const versionPath = getVersion();
@@ -77,9 +80,9 @@ entries.forEach(entry => {
             // 以下是自定义属性, 注意这里不要补充后缀，后缀留在模板里，避免动态引入，无法使用html-loader
             mainContent: resourcePath,
             // 这个页面需要用到的css和js
-            jsCommonBundle: path.join(publicPath, versionPath + '', 'js', 'common.bundle.js'),
-            cssFile: path.join(publicPath, versionPath + '', 'css', `${resourcePath}.style.css`),
-            jsFile: path.join(publicPath, versionPath + '', 'js', `${resourcePath}.js`)
+            jsCommonBundle: `${publicPath}${versionPath}\/js\/common.bundle.js`,
+            cssFile: `${publicPath}${versionPath}\/css\/${resourcePath}.style.css`,
+            jsFile: `${publicPath}${versionPath}\/js\/${resourcePath}.js`
         })
     );
 
