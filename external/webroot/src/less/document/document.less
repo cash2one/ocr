@@ -648,14 +648,13 @@
         clear:both;
     }
     .doc-main {
-        display:inline-block;
-        background:#fff;
-        min-height:530px;
+        display: table-cell;
+        box-sizing: border-box;
+        background: #fff;
         position:relative;
-        width:872px;
-        padding-left:40px;
-        padding-bottom:12px;
-        margin-left: 262px;
+        width: 920px;
+        padding-left: 40px;
+        padding-bottom: 12px;
         border-right: 1px solid #ebebeb;
     }
     .crumb {
@@ -880,6 +879,7 @@
     }
 
     .doc-wrap {
+        display: table;
         margin-bottom:0;
         overflow:hidden;
         background:#f5f5f5;
@@ -897,26 +897,22 @@
         color:#666;
     }
     .sidebar {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        display:inline-block;
-        width:260px;
-        border-right:none;
+        display: table-cell;
+        width: 260px;
+        border-right: none;
         vertical-align: top;
-        background:white;
-        font-size:14px;
+        background: white;
+        font-size: 14px;
         overflow:hidden;
         border-left: 1px solid #ebebeb;
         border-right: 1px solid #ebebeb;
     }
     .sidebar-fixed {
         background-color: #FAFAFA;
-        top:0px;
-        bottom:0;
     }
 
     .sidebar h1 {
+        box-sizing: border-box;
         color:#666;
         font-size:18px;
         height:45px;
