@@ -250,7 +250,7 @@ image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 | result_num | uint32 | 是 | 人脸数目 |
 | result | object[] | 是 | 人脸属性对象的集合 |
 | +age | double | 否 | 年龄。face_fields包含age时返回 |
-| +beauty | double | 否 | 美丑打分，范围0-1，越大表示越美。face_fields包含beauty时返回 |
+| +beauty | double | 否 | 美丑打分，范围0-100，越大表示越美。face_fields包含beauty时返回 |
 | +cation | bject | 是 | 人脸在图片中的位置 |
 | ++left | uint32 | 是 | 人脸区域离左边界的距离 |
 | ++top | uint32 | 是 | 人脸区域离上边界的距离 |

@@ -2,7 +2,7 @@
 
 ![](../../../../ai_images/document/AccessFlow.jpg)
 ## 1. 成为开发者
-**STEP1**：点击百度大脑导航右侧的[登录](https://login.bce.baidu.com/?fromai=1&redirect=https%3A%2F%2Fai.baidu.com)，将会跳转到百度云登录界面，登录完毕后，将会返回百度大脑主页，点击「控制台」进入百度云控制台页面；您也可以直接点击[免费试用](https://login.bce.baidu.com?redirect=encodeURIComponent(https://console.bce.baidu.com/ai/)，登录完毕后将自动进入到百度云控制台。  
+**STEP1**：点击百度大脑导航右侧的[登录](https://login.bce.baidu.com/?fromai=1&redirect=https%3A%2F%2Fai.baidu.com)，将会跳转到百度云登录界面，登录完毕后，将会返回百度大脑主页，点击「控制台」进入百度云控制台页面；您也可以直接点击[免费试用](https://login.bce.baidu.com/?fromai=1&redirect=https%3A%2F%2Fai.baidu.com)，登录完毕后将自动进入到百度云控制台。  
 **STEP2**：使用百度账号完成登录，如您还未持有百度账户，可以点击此处[注册百度账户](https://passport.baidu.com/v2/?reg)。  
 **STEP3**：进入百度云欢迎页面，填写企业/个人基本信息，注册完毕，至此成为开发者。注：(如您之前已经是百度云用户或百度开发者中心用户，STEP3可略过。)  
 **STEP4**：进入百度云控制台，找到人工智能相关服务面板。
