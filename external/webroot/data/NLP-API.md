@@ -620,7 +620,7 @@ authorization: {bce-authorization-string}
 
 * HTTP方法： POST
 
-* 请求URL： `https://aip.baidubce.com/rest/2.0/nlp/v1/simnet`
+* 请求URL： `https://aip.baidubce.com/rpc/2.0/nlp/v1/simnet`
 
 * URL参数：<br>
 
@@ -728,7 +728,7 @@ authorization: {bce-authorization-string}
 
 * HTTP方法: POST
 
-* 请求URL: `https://aip.baidubce.com/rpc/2.0/nlp/v1/comment\_tag`
+* 请求URL: `https://aip.baidubce.com/rpc/2.0/nlp/v1/comment_tag`
 
 * URL参数：<br>
 

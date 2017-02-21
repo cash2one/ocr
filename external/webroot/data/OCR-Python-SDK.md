@@ -182,7 +182,7 @@ def get_file_content(filePath):
 aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
 # 调用银行卡识别接口
-result = apiOcr.bankcard(get_file_content('bankcard.jpg'))
+result = aipOcr.bankcard(get_file_content('bankcard.jpg'))
 ```
 
 **银行卡识别 请求参数详情**

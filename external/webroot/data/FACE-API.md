@@ -177,7 +177,7 @@ image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 | --- | --- | --- | ---- |
 | image | 是 | string | base64编码后的图片数据，图片大小不超过2M。 |
 | max_face_num | 否 | uint32 | 最多处理人脸数目，默认值1 |
-| face_fields | 否 | string | 包括age、beauty、expression、faceshape、gender、glasses、landmark、race、qualities信息，逗号分隔，默认只返回人脸框、概率和旋转角度。 |
+| face_fields | 否 | string | 包括age,beauty,expression,faceshape,gender,glasses,landmark,race,qualities信息，逗号分隔，默认只返回人脸框、概率和旋转角度。 |
 
 
 **返回示例**
