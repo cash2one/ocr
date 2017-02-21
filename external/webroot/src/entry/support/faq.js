@@ -12,5 +12,10 @@ const defaultMd = 'FAQ-Account';
 
 // 分析hash路径获取到需要加载的文档以及锚点
 const hashPath = window.location.hash.split('#')[1] || '';
-const [docName, anchorId] = hashPath;
+let docName = '';
+let anchorId = '';
+if (hashPath) {
+    [docName, anchorId] = hashPath.split('_');
+}
+
 loadDoc(docName || defaultMd, anchorId);
