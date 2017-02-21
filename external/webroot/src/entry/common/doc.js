@@ -26,6 +26,12 @@ const setFaqAnchorId = function () {
     });
 };
 
+// 处于开头的锚点，不需要跳转
+const titleAnchorList = [
+    '简介', '接入指南', '鉴权认证机制', '常见问题',
+    '账号问题', '接口调用', '其他'
+];
+
 const enableInlineAnchor = function () {
     // 为每个标题添加id,为锚点跳转做准备
     $mdContainer.find('h1, h2').each(
@@ -36,10 +42,10 @@ const enableInlineAnchor = function () {
         }
     );
 
-    // 处理文档内指定的本页面内锚点跳转
+    // 处理文档内指定的本页面内锚点跳转, TODO 实际上这个功能是挂的
     $mdContainer.find('a[href]').each(function (i, element) {
         const $aTag = $(element);
-        if ($aTag.attr('href').indexOf('#') >= 0) {
+        if ($aTag.attr('href').indexOf('#') !== 0) {
             $aTag.attr('target', '_blank');
         }
     });
@@ -152,7 +158,10 @@ const enableCatalogue = function () {
                 const anchorName = $target.text().trim();
                 if (requestMd !== previousMdFile) {
                     renderMdPage(requestMd).then(() => {
-                        moveToAnchor(anchorName);
+                        // 切换页面时，第一个锚点不需要跳转
+                        if (titleAnchorList.indexOf(anchorName) < 0) {
+                            moveToAnchor(anchorName);
+                        }
                     });
                 }
                 else {

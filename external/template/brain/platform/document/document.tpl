@@ -591,13 +591,13 @@
                                 <li class="non-leaf sdk-node" data-md="Face-Java-SDK">
                                     <a href="javascript:void(0)"><i></i>Java 语言</a>
                                 </li>
-                                <li class="non-leaf sdk-node" data-md="Face-Java-SDK">
+                                <li class="non-leaf sdk-node" data-md="Face-PHP-SDK">
                                     <a data-md="Face-PHP-SDK" href="javascript:void(0)">
                                         <i></i>
                                         PHP 语言
                                     </a>
                                 </li>
-                                <li class="non-leaf sdk-node" data-md="Face-Java-SDK">
+                                <li class="non-leaf sdk-node" data-md="Face-Python-SDK">
                                     <a data-md="Face-Python-SDK" href="javascript:void(0)">
                                         <i></i>
                                         Python 语言

@@ -15,7 +15,9 @@ const hashPath = window.location.hash.split('#')[1] || '';
 let docName = '';
 let anchorId = '';
 if (hashPath) {
-    [docName, anchorId] = hashPath.split('_');
+    const parseResult = hashPath.split('_');
+    docName = parseResult[0];
+    anchorId = parseResult[1];
 }
 
 loadDoc(docName || defaultMd, anchorId);
