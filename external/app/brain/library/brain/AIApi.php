@@ -564,6 +564,7 @@ class Brain_AIApi {
         $obj->setRedirectCount(5); //设置跳转次数
         $obj->setCrawlTimeout(3); //设置爬取超时
         $res = $obj->execute($url);
+        var_dump($res);
         if ($res['isValid']){
             $ret_data['data']['Content-Type'] = $res['http_content_type'];
             $ret_data['data']['Content-Length'] = max(0, intval($res['http_header']['Content-Length']));
