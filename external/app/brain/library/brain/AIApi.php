@@ -575,7 +575,13 @@ class Brain_AIApi {
             }
 
         } else{
-
+            $ret_data['errno'] = 106;
+            $ret_data['msg'] = '获取图片失败';
+            $ret_data['data'] = array(
+                'Content-Type' => null,
+                'Content-Length' => 0,
+                'image_data' => '',
+            );
         }
         unset($obj);
         Brain_Memcache::set($k, json_encode($ret_data, JSON_UNESCAPED_UNICODE), 60);
