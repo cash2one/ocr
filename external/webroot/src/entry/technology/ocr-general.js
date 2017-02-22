@@ -199,11 +199,11 @@ $(document).ready(function () {
         isScanning = true;
         $('.demo-card-list > li').removeClass('active');
         $(this).addClass('active');
-        let url = $(this).find('img').attr('src');
+        let url = `${window.location.protocol}${$(this).find('img').attr('src')}`;
         $('#demo-photo-upload, #scan-photo').addClass('disabled');
         new DemoCanvas({
             selector: '#demo-origin',
-            image: `${window.location.protocol}${url}`,
+            image: url,
             type: 'url',
             toCheck: false,
             success(imgSrc) {
