@@ -198,7 +198,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-    <section class="tech-section tech-banner">
+    <div class="tech-section tech-banner">
     <div class="ai-container">
         <div class="tech-banner-title">
             中文DNN词向量
@@ -221,8 +221,8 @@
             {%/if%}
         </div>
     </div>
-</section>
-<section class="tech-section tech-function">
+</div>
+<div class="tech-section tech-function">
     <div class="ai-container">
         <div class="tech-function-title">
             功能介绍
@@ -235,8 +235,8 @@
             <img width="500" src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/nlp-word_embedding/function-pic.png" >
         </div>
     </div>
-</section>
-<section class="ai-container tech-section tech-feature">
+</div>
+<div class="ai-container tech-section tech-feature">
     <div class="tech-feature-title">技术特色</div>
     <div class="tech-feature-list tech-clear">
         <div class="tech-feature-item tech-feature-shadow">
@@ -265,9 +265,9 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 <hr class="tech-section-border">
-<section class="ai-container tech-section tech-scenario">
+<div class="ai-container tech-section tech-scenario">
     <div class="tech-scenario-title">应用场景</div>
     <div class="tech-scenario-list tech-clear">
         <div class="tech-scenario-item tech-scenario-shadow">
@@ -289,8 +289,8 @@
             </div>
         </div>
     </div>
-</section>
-<section class="tech-section tech-case">
+</div>
+<div class="tech-section tech-case">
     <div class="tech-case-list">
         <div class="tech-case-item tech-case-item-1 tech-case-active">
             <div class="ai-container">
@@ -301,9 +301,9 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 {%if $userInfo eq Null%}
-<section class="tech-section get-started tech-free">
+<div class="tech-section get-started tech-free">
     <div class="ai-container">
         <div class="tech-free-title">立即获取免费API Key</div>
         <div class="tech-free-info">现在试用，获取免费API Key，免费调用各项开放能力API</div>
@@ -315,10 +315,10 @@
             </a>
         </div>
     </div>
-</section>
+</div>
 {%/if%}
 {%if $src eq Null%}
-<section class="tech-section tech-guide">
+<div class="tech-section tech-guide">
     <div class="ai-container">
         <div class="tech-guide-title">使用指南</div>
         <div class="tech-guide-link tech-clear">
@@ -338,7 +338,7 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 {%/if%}
 
 </div>
