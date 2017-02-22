@@ -174,15 +174,15 @@ const enableCatalogue = function () {
 const initAccordion = function () {
     // 大类
     const $category = $('.sidebar > h1');
-    // 大类别旁边的加减号
-    const $categoryFolderIcon = $('.pm-button');
 
     $category.click(
         debounce(
             e => {
+                const $currentTarget = $(e.currentTarget);
                 // TODO html结构重新整理
-                $categoryFolderIcon.toggleClass('active');
-                $(e.currentTarget).next().find('>ul').toggle(300);
+                // 大类别旁边的加减号
+                $currentTarget.find('.pm-button').toggleClass('active');
+                $currentTarget.next().find('>ul').toggle(300);
             },
             300,
             {
