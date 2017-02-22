@@ -87,7 +87,7 @@ class Action_AIDemo extends Ap_Action_Abstract {
                     } 
 
                     $ret_data = Brain_AIApi::getDataRetryByUrl($imageUrl);
-                    if($ret_data['errno'] != 0){
+                    if($ret_data['errno'] !== 0){
                         Brain_Output::jsonOutput($ret_data['errno'], $ret_data['msg']);
                         return;
                     }
