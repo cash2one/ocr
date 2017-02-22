@@ -575,9 +575,7 @@ class Brain_AIApi {
             }
 
         } else{
-            echo '[Error]:';
-            echo $res['info'];
-            print_r($res['url_route']);
+
         }
         unset($obj);
         Brain_Memcache::set($k, json_encode($ret_data, JSON_UNESCAPED_UNICODE), 60);
