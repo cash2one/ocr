@@ -45,7 +45,7 @@
         font-weight:bold;
     }
     blockquote {
-        margin: 0px;
+        margin: 0;
     }
     dfn {
         font-style:italic;
@@ -98,8 +98,7 @@
         padding:0 0 0 40px;
     }
     nav ul,nav ol {
-        list-style:none;
-        list-style-image:none;
+        list-style: none none;
     }
     img {
         border:0;
@@ -345,7 +344,6 @@
     }
     .common-advantage li h2 {
         font-size:18px;
-        font-weight:normal;
         color:#666;
         line-height:20px;
         margin:14px 0 15px 0;
@@ -660,7 +658,7 @@
     .crumb {
         font-size:12px;
         color:#666;
-        padding: 17.5px 0px;
+        padding: 17.5px 0;
         border-bottom:1px solid #ebebeb;
         background:#fff;
     }
@@ -744,9 +742,8 @@
     .markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6 {
         font-size:12px;
         padding:0;
-        margin:0;
         font-weight:200;
-        margin-bottom: 15px;
+        margin: 0 0 15px;
     }
     .markdown-body h1 {
         font-weight:200;
@@ -840,9 +837,10 @@
     }
     .markdown-body table {
         display:block;
-        overflow:auto;
-        word-break:normal;
-        margin-bottom:15px;
+        max-width: 810px;
+        overflow: auto;
+        word-break: normal;
+        margin-bottom: 15px;
     }
     .markdown-body table th {
         font-weight:200;
@@ -853,13 +851,14 @@
         background: #FAFAFA;
     }
     .markdown-body table th,.markdown-body table td {
-        font-size: 12px;
-        color: #666;
+        min-width: 70px;
         padding: 6px 20px;
-        border-left: 1px solid #EBEBEB;
-        border-right: 1px solid #EBEBEB;
+        border-left: 1px solid #ebebeb;
+        border-right: 1px solid #ebebeb;
         text-align: left;
-        min-width:70px;
+        font-size: 12px;
+        word-break: break-all;
+        color: #666;
     }
     .markdown-body table tr {
         background-color:#fff;
@@ -1033,7 +1032,7 @@
     }
     .toc li span.icon.icon-renlian {
         margin-right:10px;
-        background:url("../../../ai_images/document/doc-icons-2x.png") -80px 0px no-repeat;
+        background:url("../../../ai_images/document/doc-icons-2x.png") -80px 0 no-repeat;
     }
     .toc li.root.active > a > span.icon-renlian,
     .toc li.root:hover > a > span.icon-renlian {
@@ -1042,7 +1041,7 @@
     }
     .toc li span.icon.icon-wenzi {
         margin-right:10px;
-        background:url("../../../ai_images/document/doc-icons-2x.png") -64px -0px no-repeat;
+        background:url("../../../ai_images/document/doc-icons-2x.png") -64px 0 no-repeat;
     }
     .toc li.root.active > a > span.icon-wenzi,
     .toc li.root:hover > a > span.icon-wenzi {
@@ -1051,7 +1050,7 @@
     }
     .toc li span.icon.icon-yuyin {
         margin-right:10px;
-        background:url("../../../ai_images/document/doc-icons-2x.png") -48px -0px no-repeat;
+        background:url("../../../ai_images/document/doc-icons-2x.png") -48px 0 no-repeat;
     }
     .toc li.root.active > a > span.icon-yuyin,
     .toc li.root:hover > a > span.icon-yuyin {
@@ -1097,20 +1096,20 @@
         font-size:12px;
     }
     .toc .level1 > li > a{
-        padding:11px 0px 11px 30px;
+        padding:11px 0 11px 30px;
         font-size:14px;
     }
     .toc .level2 > li > a{
-        padding:11px 0px 11px 30px;
+        padding:11px 0 11px 30px;
         font-size:12px;
     }
 
     .toc .level3 > li > a {
-        padding:11px 0px 11px 40px;
+        padding:11px 0 11px 40px;
         font-size:12px;
     }
     .toc .level4 > li > a{
-        padding:11px 0px 11px 60px;
+        padding:11px 0 11px 60px;
         font-size:12px;
     }
 
@@ -1203,7 +1202,7 @@
     }
     p code.prettyprint {
         color: black;
-        padding: 0px !important;
+        padding: 0 !important;
         display: inline-block !important;
     }
 }
