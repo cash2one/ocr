@@ -15,7 +15,10 @@ const docRouter = function (name) {
         case 'nlp':
             return 'NLP-API';
         case 'speech':
+        case 'speech-asr':
             return 'Speech-Asr-O2OAndroidSDK';
+        case 'speech-tts':
+            return 'Speech-Tts-O2OAndroidSDK';
         case 'face':
             return 'FACE-API';
         case 'ocr':
