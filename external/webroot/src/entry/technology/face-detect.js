@@ -358,7 +358,7 @@ $(document).ready(function () {
     $demoImgContainer.each(function (index, element) {
         $(element)
             .find('img')
-            .attr('src', `${window.location.protocol}//${window.location.host}${demoImagePaths[index]}`);
+            .attr('src', `${window.location.host}${demoImagePaths[index]}`);
     });
 
     // 绑定实例图点击事件
