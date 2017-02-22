@@ -191,7 +191,7 @@ $(document).ready(function () {
     $demoCartList.each(function (index, item) {
         $(item)
             .find('img')
-            .attr('src', `${window.location.host}${demoImgPath[index]}`);
+            .attr('src', `${demoImgPath[index]}`);
     });
 
     // 绑定实例图点击事件

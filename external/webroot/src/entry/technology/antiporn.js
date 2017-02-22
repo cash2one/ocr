@@ -195,7 +195,7 @@ $(document).ready(function () {
     $demoImgContainer.each(function (index, item) {
         $(item)
             .find('img')
-            .attr('src', `${window.location.host}${demoImagePaths[index]}`);
+            .attr('src', `${demoImagePaths[index]}`);
     });
 
     // 绑定实例图点击事件
