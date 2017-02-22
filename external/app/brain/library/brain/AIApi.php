@@ -6,6 +6,7 @@
  * @brief 
  *  
  **/
+require_once 'SafeCurl.class.php';
 
 class Brain_AIApi {
     
