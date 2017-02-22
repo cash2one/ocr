@@ -207,6 +207,8 @@ class SafeCurl
     {
         $res = $this->checkURL($url);
         if($res['isValid'] === false){
+            $res['errorCode'] = 108;
+            $res['msg'] = "url is not valid";
             return false;
         } else{
             $scheme = @$res['parts']['scheme'];
