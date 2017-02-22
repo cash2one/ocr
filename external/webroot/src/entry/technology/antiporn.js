@@ -211,7 +211,7 @@ $(document).ready(function () {
         $('#demo-photo-upload, #scan-photo').addClass('disabled');
         new DemoCanvas({
             selector: '#demo-result .canvas-container',
-            image: url,
+            image: `${window.location.protocol}${url}`,
             type: 'url',
             toCheck: false,
             success(imgSrc) {
