@@ -183,7 +183,7 @@ BDSBuiltInPlayer *tempPlayer = [[BDSBuiltInPlayer alloc] init];
 通过`BDSBuiltInPlayerDelegate`监听接口对播放器状态进行监听，参见 BDSBuiltInPlayer.h 头文件。
 
 
-#日志
+# 日志
 
 为了方便调试，BDTTSClient 提供了对日志级别进行设置的接口，通过如下代码可以设置日志级别。
 

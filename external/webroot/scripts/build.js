@@ -28,7 +28,7 @@ if (isWatchMode) {
             plugins: [
                 ...webpackConfig.plugins,
                 // 增量构建时避免错误跳出，或输出错误结果代码
-                new webpack.NoErrorsPlugin()
+                new webpack.NoEmitOnErrorsPlugin()
             ]
         }
     );
@@ -43,7 +43,6 @@ if (isOnlineMode || isBumpBuild) {
             plugins: [
                 ...webpackConfig.plugins,
                 new webpack.optimize.OccurrenceOrderPlugin(true),
-                new webpack.optimize.DedupePlugin(),
                 // js和css双压缩
                 new webpack.optimize.UglifyJsPlugin({
                     warnings: false,

@@ -16,6 +16,12 @@ app.use(
     express.static(path.join(__dirname, 'dist'))
 );
 
+// 文档
+app.use(
+    '/data',
+    express.static(path.join(__dirname, 'data'))
+);
+
 app.get('/html/*', function (req, res, next) {
     var relativePath = path.relative('/html', req.path);
 

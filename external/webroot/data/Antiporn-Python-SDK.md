@@ -1,4 +1,4 @@
-#Python SDK文档
+# Python SDK文档
 
 本文档主要介绍黄反识别Python SDK的使用，在使用前请先确保已创建应用并具有相应权限。
 

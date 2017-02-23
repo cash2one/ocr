@@ -12,20 +12,20 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
+    <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="/ai_dist/1486524138/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="/ai_dist/1486524138/css/base.style.css">
-    <link rel="stylesheet" href="/ai_dist/1486524138/css/technology/nlp-word_embedding.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/technology/nlp-word_embedding.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="/ai_dist/1486524138/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1487644629/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -198,122 +198,147 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<section class="tech-section tech-banner">
-    <div class="container">
-        <h1>中文DNN词向量</h1>
-        <p>依托全网海量优质数据和深度神经网络技术，通过词语向量化实现文本的可计算，帮助您快速完成语义挖掘、相似度计算等应用。</p>
-        <div>
-            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">获取API Key</a>
+    <div class="tech-section tech-banner">
+    <div class="ai-container">
+        <div class="tech-banner-title">
+            中文DNN词向量
+        </div>
+        <div class="tech-banner-info">
+            依托全网海量优质数据和深度神经网络技术，通过词语向量化实现文本的可计算，帮助您快速完成语义挖掘、相似度计算等应用。
+        </div>
+        <div class="tech-banner-btn-list">
+            <a role="button"
+               class="btn-primary media"
+               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">
+                立即使用
+            </a>
             {%if $src eq Null%}
-            <a role="button" class="btn-other media" href="/docs#NLP">技术文档</a>
+            <a role="button"
+               class="btn-other media"
+               href="/docs#NLP">
+                技术文档
+            </a>
             {%/if%}
         </div>
     </div>
-</section>
-<div class="nlp-function">
-    <div class="container">
-        <div class="nlp-function-title">功能介绍</div>
-        <div class="nlp-function-intro">
+</div>
+<div class="tech-section tech-function">
+    <div class="ai-container">
+        <div class="tech-function-title">
+            功能介绍
+        </div>
+        <div class="tech-function-info">
             词向量计算是通过训练的方法，将语言词表中的词映射成一个长度固定的向量<br>
             词表中所有的词向量构成一个向量空间，每一个词都是这个词向量空间中的一个点，利用这种方法，实现文本的可计算
         </div>
-        <div class="nlp-function-pic">
-            <img src="/ai_dist/1486524138/ai_images/technology/nlp-word_embedding/function-pic.png" width="500px" >
+        <div class="tech-function-pic">
+            <img width="500" src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/nlp-word_embedding/function-pic.png" >
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="nlp-feature-container">
-        <div class="nlp-feature-title">技术特色</div>
-        <div class="nlp-feature-item-container">
-            <div class="nlp-feature-item">
-                <div class="nlp-feature-icon feature-1"></div>
-                <div class="nlp-feature-name">大数据</div>
-                <div class="nlp-feature-info">使用百度大规模网页数据进行模型训练，样本数据丰富</div>
+<div class="ai-container tech-section tech-feature">
+    <div class="tech-feature-title">技术特色</div>
+    <div class="tech-feature-list tech-clear">
+        <div class="tech-feature-item tech-feature-shadow">
+            <div class="tech-feature-icon tech-feature-icon-1"></div>
+            <div class="tech-feature-desc">
+                <div class="tech-feature-desc-title">大数据</div>
+                <div class="tech-feature-desc-info">
+                    使用百度大规模网页数据进行模型训练，样本数据丰富
+                </div>
             </div>
         </div>
-        <div class="nlp-feature-item-container">
-            <div class="nlp-feature-item">
-                <div class="nlp-feature-icon feature-2"></div>
-                <div class="nlp-feature-name">深度学习</div>
-                <div class="nlp-feature-info center">基于深度学习技术建立词向量表示模型</div>
+        <div class="tech-feature-item tech-feature-shadow">
+            <div class="tech-feature-icon tech-feature-icon-2"></div>
+            <div class="tech-feature-desc">
+                <div class="tech-feature-desc-title">深度学习</div>
+                <div class="tech-feature-desc-info" >基于深度学习技术建立词向量表示模型</div>
             </div>
         </div>
-        <div class="nlp-feature-item-container">
-            <div class="nlp-feature-item">
-                <div class="nlp-feature-icon feature-3"></div>
-                <div class="nlp-feature-name">精度高</div>
-                <div class="nlp-feature-info">词向量精度高，能够准确描述词和词之间的相似度</div>
+        <div class="tech-feature-item tech-feature-shadow">
+            <div class="tech-feature-icon tech-feature-icon-3"></div>
+            <div class="tech-feature-desc">
+                <div class="tech-feature-desc-title">精度高</div>
+                <div class="tech-feature-desc-info">
+                    词向量精度高，能够准确描述词和词之间的相似度
+                </div>
             </div>
         </div>
     </div>
 </div>
-<hr class="nlp-section-border">
-<div class="container nlp-scenario">
-    <div class="nlp-scenario-title">应用场景</div>
-    <div class="nlp-scenario-item">
-        <div class="nlp-scenario-icon-container">
-            <div class="nlp-scenario-icon-1"></div>
+<hr class="tech-section-border">
+<div class="ai-container tech-section tech-scenario">
+    <div class="tech-scenario-title">应用场景</div>
+    <div class="tech-scenario-list tech-clear">
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-1"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">标注数据比较少的DNN任务</div>
+                <div class="tech-scenario-desc-info">
+                    当DNN任务的标注数据量比较少的时候，可以用已训练好的词向量作为模型的初始化参数，模型效果一般会优于随机初始化的词向量。
+                </div>
+            </div>
         </div>
-        <div class="nlp-scenario-intro">
-            <div class="nlp-scenario-header">标注数据比较少的DNN任务</div>
-            <div class="nlp-scenario-detail">当DNN任务的标注数据量比较少的时候，可以用已训练好的词向量作为模型的初始化参数，模型效果一般会优于随机初始化的词向量。</div>
-        </div>
-    </div>
-    <div class="nlp-scenario-item">
-        <div class="nlp-scenario-icon-container">
-            <div class="nlp-scenario-icon-2"></div>
-        </div>
-        <div class="nlp-scenario-intro">
-            <div class="nlp-scenario-header">近似词挖掘</div>
-            <div class="nlp-scenario-detail">通过词向量中的空间距离可以判断两个词在语义、语法上的相似度，因此可以挖掘出当前词的近似词。</div>
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-2"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">近似词挖掘</div>
+                <div class="tech-scenario-desc-info">
+                    通过词向量中的空间距离可以判断两个词在语义、语法上的相似度，因此可以挖掘出当前词的近似词。
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
-<section class="tech-section tech-case">
-    <ul class="case-list">
-        <li class="case-item active">
-            <div class="container">
-                <h2>作为模型初始化参数应用于其他的模型中</h2>
-                <p>例如序列标注、标题党识别、图文匹配搜索等，用词向量作为模型的初始化参数，效果优于随机初始化参数</p>
+<div class="tech-section tech-case">
+    <div class="tech-case-list">
+        <div class="tech-case-item tech-case-item-1 tech-case-active">
+            <div class="ai-container">
+                <div class="tech-case-item-title">作为模型初始化参数应用于其他的模型中</div>
+                <div class="tech-case-item-info">
+                    例如序列标注、标题党识别、图文匹配搜索等，用词向量作为模型的初始化参数，效果优于随机初始化参数
+                </div>
             </div>
-        </li>
-    </ul>
-</section>
+        </div>
+    </div>
+</div>
 {%if $userInfo eq Null%}
-<section class="tech-section get-started">
-    <div class="container">
-        <h2>立即获取免费API Key</h2>
-        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
-        <div>
-            <a role="button" class="btn-primary large" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+<div class="tech-section get-started tech-free">
+    <div class="ai-container">
+        <div class="tech-free-title">立即获取免费API Key</div>
+        <div class="tech-free-info">现在试用，获取免费API Key，免费调用各项开放能力API</div>
+        <div class="tech-free-btn">
+            <a role="button"
+               class="btn-primary large"
+               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">
+                免费试用
+            </a>
         </div>
     </div>
-</section>
+</div>
 {%/if%}
 {%if $src eq Null%}
-<section class="tech-section tech-guide">
-    <div class="container">
-        <h2>使用指南</h2>
-        <div class="guide-link clear-float">
-            <h3>开发指南</h3>
-            <ul>
-                <li><a href="/docs#NLP">技术文档 ></a></li>
-                <li><a href="/sdk">SDK下载 ></a></li>
-            </ul>
+<div class="tech-section tech-guide">
+    <div class="ai-container">
+        <div class="tech-guide-title">使用指南</div>
+        <div class="tech-guide-link tech-clear">
+            <div class="tech-guide-link-title">开发指南</div>
+            <div class="tech-guide-link-list">
+                <a class="tech-link-btn" href="/docs#NLP">技术文档 &gt;</a>
+                <a class="tech-link-btn" href="/sdk">SDK下载 &gt;</a>
+            </div>
         </div>
-        <div class="question-link clear-float">
-            <h3>常见问题</h3>
-            <ul>
-                <li><a href="/docs#NLP-FAQ_Q1">输入编码是什么?</a></li>
-                <li><a href="/docs#NLP-FAQ_Q2">结果中的词性标注都是什么含义?</a></li>
-                <li><a href="/docs#NLP-FAQ_Q3">短文本相似度对文字字数有什么限制?</a></li>
-                <li><a href="/docs#NLP-FAQ_Q11">中文DNN语言模型对文本个数有什么限制？</a></li>
-            </ul>
+        <div class="tech-guide-question tech-clear">
+            <div class="tech-guide-question-title">常见问题</div>
+            <div class="tech-guide-question-list">
+                <a class="tech-link-btn" href="/docs#NLP-FAQ_Q1">输入编码是什么?</a>
+                <a class="tech-link-btn" href="/docs#NLP-FAQ_Q2">结果中的词性标注都是什么含义?</a>
+                <a class="tech-link-btn" href="/docs#NLP-FAQ_Q3">短文本相似度对文字字数有什么限制?</a>
+                <a class="tech-link-btn" href="/docs#NLP-FAQ_Q11">中文DNN语言模型对文本个数有什么限制？</a>
+            </div>
         </div>
     </div>
-</section>
+</div>
 {%/if%}
 
 </div>
@@ -386,7 +411,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {
@@ -446,7 +470,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="/ai_dist/1486524138/js/common.bundle.js"></script>
-<script src="/ai_dist/1486524138/js/technology/nlp-word_embedding.js"></script>
+<script src="//ai.bdstatic.com/dist/1487644629/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1487644629/js/technology/nlp-word_embedding.js"></script>
 </body>
 </html>

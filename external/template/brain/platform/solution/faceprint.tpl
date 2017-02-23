@@ -12,20 +12,20 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
+    <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="/ai_dist/1486524138/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="/ai_dist/1486524138/css/base.style.css">
-    <link rel="stylesheet" href="/ai_dist/1486524138/css/solution/faceprint.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/solution/faceprint.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="/ai_dist/1486524138/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1487644629/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -198,7 +198,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<section class="tech-section tech-banner">
+    <section class="tech-section tech-banner">
     <div class="container">
         <h1>人脸核身解决方案</h1>
         <p>提供完整的人脸身份核查解决方案，实现活体检测、拍照人脸识别、身份证人脸比对验证等多个业务环节，帮您规避业务风险，提升产品智能体验。</p>
@@ -216,7 +216,7 @@
         <div class="solution-container">
             <div class="solution-case shadow">
                 <div class="solution-icon">
-                    <img src="/ai_dist/1486524138/ai_images/solution/faceprint/solution-case-1.png">
+                    <img src="//ai.bdstatic.com/dist/1487644629/ai_images/solution/faceprint/solution-case-1.png">
                 </div>
                 <div class="solution-desc">
                     <h3>远程自助</h3>
@@ -225,7 +225,7 @@
             </div>
             <div class="solution-case shadow">
                 <div class="solution-icon">
-                    <img src="/ai_dist/1486524138/ai_images/solution/faceprint/solution-case-2.png">
+                    <img src="//ai.bdstatic.com/dist/1487644629/ai_images/solution/faceprint/solution-case-2.png">
                 </div>
                 <div class="solution-desc">
                     <h3>交互流畅</h3>
@@ -234,7 +234,7 @@
             </div>
             <div class="solution-case shadow">
                 <div class="solution-icon">
-                    <img src="/ai_dist/1486524138/ai_images/solution/faceprint/solution-case-3.png">
+                    <img src="//ai.bdstatic.com/dist/1487644629/ai_images/solution/faceprint/solution-case-3.png">
                 </div>
                 <div class="solution-desc">
                     <h3>行业定制</h3>
@@ -365,7 +365,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {
@@ -425,7 +424,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="/ai_dist/1486524138/js/common.bundle.js"></script>
-<script src="/ai_dist/1486524138/js/solution/faceprint.js"></script>
+<script src="//ai.bdstatic.com/dist/1487644629/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1487644629/js/solution/faceprint.js"></script>
 </body>
 </html>

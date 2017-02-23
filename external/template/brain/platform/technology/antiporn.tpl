@@ -12,20 +12,20 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
+    <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="/ai_dist/1486524138/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="/ai_dist/1486524138/css/base.style.css">
-    <link rel="stylesheet" href="/ai_dist/1486524138/css/technology/antiporn.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/technology/antiporn.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="/ai_dist/1486524138/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1487644629/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -198,12 +198,12 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<section class="tech-section tech-banner">
+    <section class="tech-section tech-banner">
     <div class="container">
         <h1>黄反识别</h1>
         <p>依托全网海量优质数据和深度神经网络技术，智能鉴别色情图片内容，为您的产品保驾护航。</p>
         <div>
-            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">获取API Key</a>
+            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">立即使用</a>
             {%if $src eq Null%}
             <a role="button" class="btn-other media" href="/docs#Antiporn">技术文档</a>
             {%/if%}
@@ -246,7 +246,7 @@
                         <label id="demo-photo-upload"><input type="file">本地上传</label>
                     </div>
                     <p class="demo-desc">
-                        提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片，图片大小不超过2M。为保证正常识别效果，请保证需要识别部分为图片主体部分。</p>
+                        提示：可支持PNG、JPG、jpeg、BMP图片文件，不支持GIF图片，图片大小不超过2M。为保证正常识别效果，请保证需要识别部分为图片主体部分。</p>
                 </div>
                 <div class="data-view-container">
                     <div class="data-view" data-label="RESPONSE JSON" id="demo-json">
@@ -257,28 +257,28 @@
             <div>
                 <ul class="demo-card-list clear-float">
                     <li>
-                        <img src="/ai_dist/1486524138/ai_images/technology/antiporn/demo-card-1.jpg">
+                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/antiporn/demo-card-1.jpg">
                     </li>
                     <li>
-                        <img src="/ai_dist/1486524138/ai_images/technology/antiporn/demo-card-2.jpg">
+                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/antiporn/demo-card-2.jpg">
                     </li>
                     <li>
-                        <img src="/ai_dist/1486524138/ai_images/technology/antiporn/demo-card-3.jpg">
+                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/antiporn/demo-card-3.jpg">
                     </li>
                     <li>
-                        <img src="/ai_dist/1486524138/ai_images/technology/antiporn/demo-card-4.jpg">
+                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/antiporn/demo-card-4.jpg">
                     </li>
                     <li>
-                        <img src="/ai_dist/1486524138/ai_images/technology/antiporn/demo-card-5.jpg">
+                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/antiporn/demo-card-5.jpg">
                     </li>
                     <li>
-                        <img src="/ai_dist/1486524138/ai_images/technology/antiporn/demo-card-6.jpg">
+                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/antiporn/demo-card-6.jpg">
                     </li>
                     <li>
-                        <img src="/ai_dist/1486524138/ai_images/technology/antiporn/demo-card-7.jpg">
+                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/antiporn/demo-card-7.jpg">
                     </li>
                     <li>
-                        <img src="/ai_dist/1486524138/ai_images/technology/antiporn/demo-card-8.jpg">
+                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/antiporn/demo-card-8.jpg">
                     </li>
                 </ul>
             </div>
@@ -470,7 +470,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {
@@ -530,7 +529,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="/ai_dist/1486524138/js/common.bundle.js"></script>
-<script src="/ai_dist/1486524138/js/technology/antiporn.js"></script>
+<script src="//ai.bdstatic.com/dist/1487644629/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1487644629/js/technology/antiporn.js"></script>
 </body>
 </html>

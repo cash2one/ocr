@@ -10,6 +10,7 @@ const path = require('path');
 // 第三方模块
 const glob = require('glob');
 const webpack = require('webpack');
+const argv = require('minimist')(process.argv.slice(2));
 
 // webpack plugin
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -23,7 +24,9 @@ const getVersion = require('./lib/getVersion');
 /* eslint-enable */
 
 // 关键参数
-const publicPath = '/ai_dist/';
+const publicPath = argv.hasOwnProperty('o') || argv.hasOwnProperty('online')
+    ? '//ai.bdstatic.com/dist/'
+    : '/ai_dist/';
 
 // 获取版本号
 const versionPath = getVersion();
@@ -33,7 +36,7 @@ const entries = glob.sync(
     '**/*.js',
     {
         cwd: path.join(__dirname, '..', 'src', 'entry'),
-        ignore: ['**/pager.js', '**/base.js']
+        ignore: ['**/pager.js', '**/base.js', '**/common/*.js']
     }
 );
 
@@ -77,11 +80,9 @@ entries.forEach(entry => {
             // 以下是自定义属性, 注意这里不要补充后缀，后缀留在模板里，避免动态引入，无法使用html-loader
             mainContent: resourcePath,
             // 这个页面需要用到的css和js
-            jsCommonBundle: path.join(publicPath, versionPath + '', 'js', 'common.bundle.js'),
-            cssFile: path.join(publicPath, versionPath + '', 'css', `${resourcePath}.style.css`),
-            jsFile: path.join(publicPath, versionPath + '', 'js', `${resourcePath}.js`),
-            // TODO 这个基础包应该是没用的，未来要下掉，有冗余
-            basicBundle: path.join(publicPath, versionPath + '', 'js', 'base.bundle.js')
+            jsCommonBundle: `${publicPath}${versionPath}\/js\/common.bundle.js`,
+            cssFile: `${publicPath}${versionPath}\/css\/${resourcePath}.style.css`,
+            jsFile: `${publicPath}${versionPath}\/js\/${resourcePath}.js`
         })
     );
 
@@ -89,10 +90,9 @@ entries.forEach(entry => {
     normalModules.push(resourcePath);
 });
 
-// 目前想到的只有jQuery是通用的，要单独打包的
-webpackEntries['common.bundle'] = ['jquery'];
-// 通用代码
-webpackEntries['base.bundle'] = 'src/entry/base.js';
+// jQuery和通用代码单独打包
+webpackEntries['common.bundle'] = ['jquery', 'src/entry/base.js'];
+// 两个单独引入的css，目前没有想好如何处理
 webpackEntries.base = ['src/less/base.less'];
 webpackEntries.ie9 = ['src/less/ie9.less'];
 
@@ -101,9 +101,8 @@ module.exports = {
     context: path.resolve(__dirname, '..'),
     entry: webpackEntries,
     resolve: {
-        root: [
-            path.resolve(__dirname, '..', 'node_modules'),
-            path.resolve(__dirname, '..', 'bower_components')
+        modules: [
+            path.resolve(__dirname, '..', 'node_modules')
         ],
         alias: {
             // src别名,避免拼接glob返回值，如果出现冲突(如某模块包含src路径)修改这里
@@ -126,46 +125,85 @@ module.exports = {
         jsonpFunction: 'duAI'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /(node_modules|bower_components)/
+                exclude: /(node_modules|bower_components)/,
+                use: [
+                    {
+                        loader: 'babel-loader'
+                    }
+                ]
             },
             {
                 test: /\.less$/,
-                loader: extractLESS.extract(
-                    'style-loader',
-                    'css-loader!postcss-loader!less-loader'
-                )
+                use: extractLESS.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                minimize: true
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader'
+                        },
+                        {
+                            loader: 'less-loader'
+                        }
+                    ]
+                })
             },
             {
                 // 模板拼接，通用资源替换
                 test: /\.html$/,
-                loader: 'html-loader',
-                query: {
-                    minimize: false,
-                    // 修改图片、视频缓存路径
-                    attrs: ['img:src', 'video:src']
-                }
+                use: [
+                    {
+                        loader: 'html-loader',
+                        options: {
+                            minimize: false,
+                            // 修改图片、视频缓存路径
+                            attrs: ['img:src', 'video:src']
+                        }
+                    }
+                ]
+            },
+            {
+                // icon转换base64
+                test: /sprite(\/|\\).+\.(jpe?g|png|gif)$/i,
+                use: [
+                    {
+                        loader: 'url-loader'
+                    }
+                ]
             },
             {
                 // TODO，小icon分单独文件夹管理，base64打包入css，省去拼接雪碧图
                 test: /\.(jpe?g|png|gif|mp4)$/i,
-                loader: 'file-loader',
-                query: {
-                    name: `${versionPath}/[path][name].[ext]`,
-                    publicPath
-                }
+                exclude: /sprite(\/|\\).+\.(jpe?g|png|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: `${versionPath}/[path][name].[ext]`,
+                            publicPath
+                        }
+                    }
+                ]
             },
             {
                 // 不需要缓存的静态资源
                 test: /\.ico$/,
-                loader: 'file-loader',
-                query: {
-                    name: '[path][name].[ext]',
-                    publicPath
-                }
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]',
+                            publicPath
+                        }
+                    }
+                ]
             }
         ]
     },
@@ -180,18 +218,10 @@ module.exports = {
         new CommonsChunkPlugin({
             name: ['common.bundle'],
             filename: `${versionPath}/js/[name].js`,
-            // TODO 暂时不尝试给base.bundle.js抽离通用代码,
             chunks: normalModules
         }),
         ...htmlWebpackPluginArr,
         // css文件单独打包
         extractLESS
-    ],
-    postcss: () => {
-        return [
-            autoprefixer({
-                browsers: ['ie > 1', 'chrome > 1', 'ff > 1']
-            })
-        ];
-    }
+    ]
 };

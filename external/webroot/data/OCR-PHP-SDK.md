@@ -1,4 +1,4 @@
-#PHP SDK文档
+# PHP SDK文档
 
 本文档主要介绍OCR PHP SDK的安装和使用。在使用本文档前，您需要先了解Optical Character Recognition(OCR)的基础知识，并已经开通了OCR服务。
 
