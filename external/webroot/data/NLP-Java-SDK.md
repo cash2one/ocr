@@ -1,4 +1,4 @@
-#Java SDK文档
+# Java SDK文档
 
 本文档主要介绍NLP Java SDK的安装和使用。在使用本文档前，您需要先了解自然语言处理（Natural Language Processing）的基础知识，并已经开通了服务。
 
@@ -320,7 +320,7 @@ public void simnet(AipNlp client) {
 public void NLPCommentTag(AipNlp client) {
 
     // 获取美食评论情感属性
-    JSONObject response = client.commentTag("这家餐厅味道不错，环境很好");
+    JSONObject response = client.commentTag("这家餐馆味道不错", ESimnetType.FOOD");
     System.out.println(response.toString());
 
     // 获取酒店评论情感属性

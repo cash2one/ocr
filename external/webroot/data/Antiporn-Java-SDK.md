@@ -1,4 +1,4 @@
-#Java SDK文档
+# Java SDK文档
 
 本文档主要介绍黄反识别服务。在使用本文档前，您需要先了解黄反识别服务。
 
@@ -50,7 +50,7 @@ public class Sample {
         // 初始化一个AntipornClient
         AipAntiporn client = new AipAntiporn(APP_ID, API_KEY, SECRET_KEY);
         String path = "test.jpg";
-        JSONObject res = antiporn.detect(path);
+        JSONObject res = client.detect(path);
         System.out.println(res);
     }
 }

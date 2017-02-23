@@ -7,24 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="{%$keyword%}">
     <meta name="description" content="{%$description%}">
+    <meta name="baidu-site-verification" content="GOPjfm49Yc" />
     <script src="https://hm.baidu.com/hm.js?fdad4351b2e90e0f489d7fbfc47c8acf"></script>
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
+    <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="/ai_dist/1486524138/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="/ai_dist/1486524138/css/base.style.css">
-    <link rel="stylesheet" href="/ai_dist/1486524138/css/sdk/sdk.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/sdk/sdk.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="/ai_dist/1486524138/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1487644629/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -197,7 +198,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-<div class="container sdk-download-container">
+    <div class="container sdk-download-container">
     <div class="sdk-aside">
         <div class="sdk-aside-header">SDK下载</div>
         <a href="#sdk-category-bs">
@@ -297,16 +298,16 @@
                         <i class="sdk-language-sprite sdk-android"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bs"></i>
-                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/DEMO-VoiceRecognition-2.0.1.apk">
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu-Voice-SDK-Android-1.6.2.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
                         <div class="sdk-info">
-                            <div class="sdk-item-name">语音识别Demo应用</div>
+                            <div class="sdk-item-name">在线识别SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.1</div>
-                                <div class="sdk-update-date">发布时间: 2015-07-28</div>
+                                <div class="sdk-version">版本: 1.6.2</div>
+                                <div class="sdk-update-date">发布时间: 2015-01-15</div>
                             </div>
                         </div>
                     </div>
@@ -326,25 +327,6 @@
                             <div class="sdk-bottom-info">
                                 <div class="sdk-version">版本: 1.6.4</div>
                                 <div class="sdk-update-date">发布时间: 2016-06-21</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sdk-item-container">
-                    <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-android"></i>
-                        <div class="sdk-item-aside">
-                            <i class="sdk-category-icon sdk-bs"></i>
-                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu-Voice-SDK-Android-1.6.2.zip">
-                                <div class="sdk-download-button">下载</div>
-                            </a>
-                        </div>
-                        <div class="sdk-info">
-                            <div class="sdk-item-name">在线识别SDK</div>
-                            <div class="sdk-description"></div>
-                            <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.6.2</div>
-                                <div class="sdk-update-date">发布时间: 2015-01-15</div>
                             </div>
                         </div>
                     </div>
@@ -910,7 +892,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1486524138/js/base.bundle.js"></script>
 <script type="text/javascript">
     (function () {
         function init_feedback() {
@@ -970,7 +951,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="/ai_dist/1486524138/js/common.bundle.js"></script>
-<script src="/ai_dist/1486524138/js/sdk/sdk.js"></script>
+<script src="//ai.bdstatic.com/dist/1487644629/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1487644629/js/sdk/sdk.js"></script>
 </body>
 </html>

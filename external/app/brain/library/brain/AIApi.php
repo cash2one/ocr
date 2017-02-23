@@ -6,6 +6,7 @@
  * @brief 
  *  
  **/
+require_once 'SafeCurl.class.php';
 
 class Brain_AIApi {
     
@@ -550,47 +551,39 @@ class Brain_AIApi {
             'Content-Type' => null, 
             'Content-Length' => 0,
             'image_data' => '', 
-        );  
-        
-        $isUrlValid = Brain_AIApi::checkUrl($url);
-        if(!$isUrlValid)
-        {
-            $ret_data['errno'] = 108;
-            $ret_data['msg'] = 'url is not valid';
-            return $ret_data;
+        );
+        $obj = new SafeCurl();
+        foreach (Brain_AIApi::$arrImageType as $imageType){
+            $obj->addWhitelist('content_type', $imageType); //设置 content-type
+        }
+        foreach (Brain_AIApi::$arrHostWhiteList as $host){
+            $obj->addWhitelist('ip:port', $host); //设置 ip:port
         }
 
-        $isUrlAvailable = Brain_AIApi::checkUrlAvailable($url, 1);
+        $obj->allowRedirect(); // 允许重定向
+        $obj->setRedirectCount(5); //设置跳转次数
+        $obj->setCrawlTimeout(3); //设置爬取超时
+        $res = $obj->execute($url);
+        if ($res['isValid']){
+            $ret_data['data']['Content-Type'] = $res['http_content_type'];
+            $ret_data['data']['Content-Length'] = max(0, intval($res['http_header']['Content-Length']));
 
-        if(!$isUrlAvailable && strripos($url, 'https') === 0)
-        {   
-            $url = 'http'.substr($url, 5); 
-            $isUrlAvailable = Brain_AIApi::checkUrlAvailable($url, 3);
-        }   
-
-        if(!$isUrlAvailable)
-        {
-            //Brain_Memcache::set($k, json_encode($ret_data, JSON_UNESCAPED_UNICODE), 60);
-            return $ret_data;
-        }
-
-        $image_header = Brain_AIApi::getHeaderByUrl($url);
-    
-        if(!empty($image_header))  
-        {
-            $ret_data['data']['Content-Type'] = $image_header['Content-Type']; 
-            $ret_data['data']['Content-Length'] = max(0, intval($image_header['Content-Length']));
-
-            if( $image_header['Content-Length'] <= Brain_AIApi::MAX_IMAGE_LIMIT &&
-                in_array($image_header['Content-Type'], Brain_AIApi::$arrImageType))
+            if( $res['http_header']['Content-Length'] <= Brain_AIApi::MAX_IMAGE_LIMIT &&
+                in_array($res['http_content_type'], Brain_AIApi::$arrImageType))
             {
-                $image_data = Brain_AIApi::getImageByUrl($url);
-    
-                $ret_data['data']['image_data'] = 'data:'.$image_header['Content-Type'].';base64,'.$image_data;
+                $ret_data['data']['image_data'] = 'data:'.$res['http_content_type'].';base64,'.$res['http_body'];
             }
 
-        }   
-    
+        } else{
+            $ret_data['errno'] = 106;
+            $ret_data['msg'] = '获取图片失败';
+            $ret_data['data'] = array(
+                'Content-Type' => null,
+                'Content-Length' => 0,
+                'image_data' => '',
+            );
+        }
+        unset($obj);
         Brain_Memcache::set($k, json_encode($ret_data, JSON_UNESCAPED_UNICODE), 60);
         return $ret_data;
     }

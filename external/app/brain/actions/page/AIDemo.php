@@ -87,7 +87,10 @@ class Action_AIDemo extends Ap_Action_Abstract {
                     } 
 
                     $ret_data = Brain_AIApi::getDataRetryByUrl($imageUrl);
-                    
+                    if($ret_data['errno'] !== 0){
+                        Brain_Output::jsonOutput($ret_data['errno'], $ret_data['msg']);
+                        return;
+                    }
                     if($ret_data['data']['Content-Length'] > Brain_AIApi::MAX_IMAGE_LIMIT)
                     {
                         Brain_Output::jsonOutput(105, '图片超过大小限制');

@@ -191,7 +191,7 @@ $(document).ready(function () {
     $demoCartList.each(function (index, item) {
         $(item)
             .find('img')
-            .attr('src', `${window.location.protocol}//${window.location.host}${demoImgPath[index]}`);
+            .attr('src', `${demoImgPath[index]}`);
     });
 
     // 绑定实例图点击事件
@@ -203,7 +203,7 @@ $(document).ready(function () {
         isScanning = true;
         $('.demo-card-list > li').removeClass('active');
         $(this).addClass('active');
-        let url = $(this).find('img').attr('src');
+        let url = `${window.location.protocol}${$(this).find('img').attr('src')}`;
         $('#demo-photo-upload, #scan-photo').addClass('disabled');
         new DemoCanvas({
             selector: '#demo-origin',
