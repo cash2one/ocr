@@ -37,26 +37,28 @@ backTop.click(
     }
 );
 
-// 渲染底部新闻
-new News({
-    selector: '.footer-nav .news-container',
-    newsCounter: 5
-}).render();
+if (window.location.hostname.indexOf('ai.baidu.com') > 0) {
+    // 渲染底部新闻
+    new News({
+        selector: '.footer-nav .news-container',
+        newsCounter: 5
+    }).render();
 
-// 绑定合作咨询模态框
-let consultationModal = new ConsultationModal();
-$('.consult').on('click',
-    e => {
-        e.stopPropagation();
-        consultationModal.show();
-    }
-);
+    // 绑定合作咨询模态框
+    let consultationModal = new ConsultationModal();
+    $('.consult').on('click',
+        e => {
+            e.stopPropagation();
+            consultationModal.show();
+        }
+    );
 
-// 绑定邮件订阅模态框
-let subscriptionModal = new SubscriptionModal();
-$('.email-subscribe').click(
-    e => {
-        e.stopPropagation();
-        subscriptionModal.show();
-    }
-);
+    // 绑定邮件订阅模态框
+    let subscriptionModal = new SubscriptionModal();
+    $('.email-subscribe').click(
+        e => {
+            e.stopPropagation();
+            subscriptionModal.show();
+        }
+    );
+}
