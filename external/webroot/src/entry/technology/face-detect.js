@@ -1,6 +1,7 @@
 /**
  * @file bfb-人脸检测脚本入口
  * @author shiliang@baidu.com
+ *         Franck Chen(chenfan02@baidu.com)
  */
 
 import $ from 'jquery';
@@ -35,7 +36,12 @@ const $multiFaceGallery = $('#result-gallery');
 const $multiFaceList = $multiFaceGallery.find('ul');
 // 功能动画容器
 const $techIntroDetail = $('.tech-intro-detail');
-const $canvasContainer = $('#demo-result').find('.canvas-container');
+// 结果区
+const $demoResult = $('#demo-result');
+const $canvasContainer = $demoResult.find('.canvas-container');
+// 用于上传文件的input, input[type='file']
+const $uploadFileInput = $('#demo-photo-upload').find('> input');
+const $demoPhotoUrl = $('#demo-photo-url');
 
 // case点击效果
 $('.case-indicator > li').click(function () {
@@ -75,7 +81,9 @@ let resetDemo = () => {
 
     $canvasContainer.attr('class', 'canvas-container');
     $('#demo-photo-upload, #scan-photo').removeClass('disabled');
-    $('#demo-photo-upload > input').val('');
+
+    // 清空用于输入图片地址的url
+    $uploadFileInput.val('');
 
     $multiFaceGallery.hide();
     $multiFaceList.empty();
@@ -85,56 +93,61 @@ let resetDemo = () => {
 
 // 画人脸结果区块
 let drawRect = function (data) {
-    let canvas = $('#demo-result canvas');
-    let scale = canvas.attr('data-scale');
-    let ctx = $('#demo-result canvas')[0].getContext('2d');
+    const $canvas = $demoResult.find('canvas');
+    const scale = $canvas.attr('data-scale');
+    const ctx = $canvas[0].getContext('2d');
 
+    // 处理每一张人脸
     for (let i = 0, len = data.length; i < len; i++) {
-        let record = data[i];
-        let location = record.location;
+        const record = data[i];
+        const location = record.location;
+
         ctx.save();
-        ctx.beginPath();
         ctx.lineWidth = 4 / scale;
-        ctx.fillStyle = 'transparent';
         ctx.strokeStyle = 'rgba(0, 115, 235, 0.8)';
         ctx.translate(location.left, location.top);
         ctx.rotate(record.rotation_angle / 180 * Math.PI);
         ctx.rect(
-            0, 0,
-            location.width, location.height
+            0,
+            0,
+            location.width,
+            location.height
         );
-        ctx.fill();
         ctx.stroke();
-        ctx.closePath();
         ctx.restore();
     }
 };
 
 // 画人脸结果Land Mark
-let drawLandMark = function (data, hasOffset) {
-    let canvas = $('#demo-result canvas');
-    let scale = canvas.attr('data-scale');
-    let ctx = $('#demo-result canvas')[0].getContext('2d');
+const drawLandMark = function (data, hasOffset) {
+    let $canvas = $demoResult.find('canvas');
+    let scale = $canvas.attr('data-scale');
+    let ctx = $canvas[0].getContext('2d');
+
     let offset = hasOffset
         ? {x: data.location.left, y: data.location.top}
         : {x: 0, y: 0};
     let rotatedAngel = hasOffset ? data.rotation_angle : 0;
 
-    let getAngle = function (x, y) {
+    const getAngle = function (x, y) {
         return 360 * Math.atan(y / x) / (2 * Math.PI);
     };
-    let getRadius = function (x, y) {
+
+    const getRadius = function (x, y) {
         return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
     };
 
     for (let i = 0, len = data.landmark72.length; i < len; i++) {
-        let record = data.landmark72[i];
+        const record = data.landmark72[i];
+
         ctx.beginPath();
         ctx.lineWidth = 1;
         ctx.fillStyle = 'rgba(0, 115, 235, 0.8)';
         ctx.strokeStyle = 'transparent';
-        let angle = (getAngle(record.x - offset.x, record.y - offset.y) - rotatedAngel)  / 180 * Math.PI;
-        let radius = getRadius(record.x - offset.x, record.y - offset.y);
+
+        const angle = (getAngle(record.x - offset.x, record.y - offset.y) - rotatedAngel) / 180 * Math.PI;
+        const radius = getRadius(record.x - offset.x, record.y - offset.y);
+
         ctx.arc(radius * Math.cos(angle), radius * Math.sin(angle), 2 / scale, 0, 2 * Math.PI);
         ctx.fill();
         ctx.stroke();
@@ -143,20 +156,22 @@ let drawLandMark = function (data, hasOffset) {
 };
 
 // 打开关闭结果画廊
-let toggleGallery = function (isOpen) {
+const toggleGallery = function (isOpen) {
     $multiFaceGallery.toggle(isOpen);
 };
 
 // 初始画廊
-let setGalleryContent = function (data) {
+const setGalleryContent = function (data) {
     let originalImage = new Image();
 
+    // 加载照片并填充进canvas区域
     originalImage.onload = function () {
         for (let i = 0, len = data.result.length; i < len; i++) {
-            let record = data.result[i];
-            let canvas = $('<canvas>').attr('width', record.location.width)
+            const record = data.result[i];
+            const canvas = $('<canvas>').attr('width', record.location.width)
                 .attr('height', record.location.height);
-            let ctx = canvas[0].getContext('2d');
+
+            const ctx = canvas[0].getContext('2d');
             ctx.rotate(-record.rotation_angle * Math.PI / 180);
             ctx.translate(-record.location.left, -record.location.top);
             ctx.drawImage(originalImage, 0, 0);
@@ -171,7 +186,7 @@ let setGalleryContent = function (data) {
 };
 
 // 初始画廊
-let initGallery = function (imgSrc, data) {
+const initGallery = function (imgSrc, data) {
     let galleryItem = $('<li class="active"><img src="' + imgSrc + '"></li>');
     galleryItem.data('face', data).data('isAll', true);
     $multiFaceList.empty().append(galleryItem);
@@ -227,13 +242,17 @@ const FACE_PROPERTY_DICT = {
 };
 
 // 显示人脸结果
-let showScanResult = function (data, isAll) {
+const showScanResult = function (data, isAll) {
     let details = $('#face-details');
+
     details.empty();
+
     if (isAll) {
         details.hide();
+
         return false;
     }
+
     details.show();
 
     Object.keys(FACE_PROPERTY_DICT).forEach(key => {
@@ -245,13 +264,17 @@ let showScanResult = function (data, isAll) {
     });
 };
 
-let startScan = function (type, imgSrc, url) {
+const startScan = function (type, imgSrc, url) {
     $jsonViewer.empty();
+
+    // 因为不见得所有图片都包含多张人脸，所以先隐藏多人脸部分
     toggleGallery(false);
+
     $canvasContainer.attr('class', 'canvas-container loading');
+
     $('#face-details').hide().empty();
 
-    let options = {
+    const options = {
         success(res) {
             $('#demo-photo-upload, #scan-photo').removeClass('disabled');
             $jsonViewer.html(JSON.stringify(res, null, '\t'));
@@ -309,50 +332,55 @@ let startScan = function (type, imgSrc, url) {
     scanFace(options);
 };
 
+// 用户上传图片的监测
+$uploadFileInput.change(function (e) {
+    const $target =  $(e.target);
 
-
-// 上传图片
-$('#demo-photo-upload > input').change(function (e) {
-    if ($(this).val() === '') {
+    if ($target.val() === '') {
         return false;
     }
+
+    // 如果正处于监测中，提示用户
     if (isScanning) {
         new AlertModal('操作正在进行中，请稍候再试！');
         return;
     }
+
     isScanning = true;
+
     $('#demo-photo-upload, #scan-photo').addClass('disabled');
-    let file = $(this)[0].files[0];
+    let file = $target[0].files[0];
+
     new DemoCanvas({
         selector: '#demo-result .canvas-container',
         image: file,
         type: 'stream',
-        lazyRender: true,
         success(imgSrc) {
-            $('#demo-photo-upload > input').val('');
+            $uploadFileInput.val('');
             startScan('stream', imgSrc);
         },
         fail: resetDemo
     });
 });
 
-// demo 检测输入框事件绑定
-$('#demo-photo-url').change(function () {
-    $('.demo-card-list > li').removeClass('active');
-});
+// 点击监测按键的处理
+$('#scan-photo').click(function (e) {
+    const $target = $(e.target);
 
-// 检测按钮事件
-$('#scan-photo').click(function () {
     if (isScanning) {
         new AlertModal('操作正在进行中，请稍候再试！');
         return;
     }
-    if ($(this).hasClass('disabled') || !$('#demo-photo-url').val()) {
-        return false;
+
+    if ($target.hasClass('disabled') || !$demoPhotoUrl.val()) {
+        return;
     }
+
     isScanning = true;
+
     $('#demo-photo-upload, #scan-photo').addClass('disabled');
-    let url = $('#demo-photo-url').val();
+    const url = $demoPhotoUrl.val();
+
     new DemoCanvas({
         selector: '#demo-result .canvas-container',
         image: url,
@@ -372,6 +400,7 @@ $('#demo-photo-upload').click(function () {
     }
 });
 
+// FIXME bug
 const $demoImgContainer = $('.demo-card-list > li');
 $demoImgContainer.each(function (index, element) {
     $(element)
@@ -385,16 +414,21 @@ $demoImgContainer.click(function () {
         new AlertModal('操作正在进行中，请稍候再试！');
         return;
     }
+
     isScanning = true;
+
     $('.demo-card-list > li').removeClass('active');
+
     $(this).addClass('active');
+
     let url = `${window.location.protocol}${$(this).find('img').attr('src')}`;
+
     $('#demo-photo-upload, #scan-photo').addClass('disabled');
+
     new DemoCanvas({
         selector: '#demo-result .canvas-container',
         image: url,
         type: 'url',
-        toCheck: false,
         success(imgSrc) {
             startScan('url', imgSrc, url);
         },
@@ -402,7 +436,7 @@ $demoImgContainer.click(function () {
     });
 });
 
-// 结果画廊点击事件
+// 多人脸展示窗点击处理
 $multiFaceGallery.on('click', 'li', function () {
     $multiFaceGallery.find('li').removeClass('active');
 
@@ -431,4 +465,4 @@ $multiFaceGallery.on('click', 'li', function () {
 });
 
 // 触发初始化效果
-$('.demo-card-list > li')[0].click();
+$demoImgContainer.click();

@@ -19,6 +19,7 @@ export default class DemoCanvas {
         if (!$(selector).context) {
             throw 'DemoCanvas：未寻找到容器!';
         }
+
         this.container = $(selector);
         this.type = type;
         this.scale = scale;
@@ -34,11 +35,11 @@ export default class DemoCanvas {
 
         if (toCheck) {
             let promise = {
-                'url': this.checkByUrl,
-                'stream': this.checkByStream
+                url: this.checkByUrl,
+                stream: this.checkByStream
             }[this.type](image, apiType);
 
-            $.when(promise).then(
+            promise.then(
                 resultImg => {
                     this.image.onload = () => {
                         this.render(true);
@@ -52,21 +53,22 @@ export default class DemoCanvas {
                     this.image.src = errorImg;
                 }
             );
-        } else {
+        }
+        else {
             this.image.onload = () => {
                 this.render(true);
             };
             this.image.src = image;
         }
-
     }
 
     checkByUrl(image, apiType) {
         let dfd = $.Deferred();
+
         getHeader({
             imageUrl: image,
             type: apiType,
-            success: function (res) {
+            success(res) {
                 let contentType = res.data['Content-Type'];
                 let contentSize = res.data['Content-Length'];
                 if ((!contentType && !contentSize) || res.errno !== 0) {
@@ -84,10 +86,11 @@ export default class DemoCanvas {
                 }
                 dfd.resolve(res.data.image_data);
             },
-            fail: function () {
+            fail() {
                 dfd.reject(notFoundImg);
             }
         });
+
         return dfd.promise();
     }
 
@@ -113,6 +116,7 @@ export default class DemoCanvas {
         reader.onerror = () => {
             dfd.reject(notFoundImg);
         };
+
         return dfd.promise();
     }
 
@@ -143,14 +147,15 @@ export default class DemoCanvas {
             '-o-transform': 'translate(-50%, -50%) scale(' + scaleRatio + ')',
             'transform': 'translate(-50%, -50%) scale(' + scaleRatio + ')'
         });
+
         canvas.attr('data-scale', scaleRatio);
         this.container.empty().append(canvas);
+
         if (isSuccessful) {
             this.success(this.image.src);
         }
         else {
             this.fail();
         }
-
     }
 }
