@@ -42,6 +42,8 @@ const $canvasContainer = $demoResult.find('.canvas-container');
 // 用于上传文件的input, input[type='file']
 const $uploadFileInput = $('#demo-photo-upload').find('> input');
 const $demoPhotoUrl = $('#demo-photo-url');
+// 用于盛放人脸分析数据的容器
+const $faceDetail = $('#face-details');
 
 // case点击效果
 $('.case-indicator > li').click(function () {
@@ -74,7 +76,7 @@ $techIntroDetail.one('demo', function () {
 let isScanning = false;
 
 // 重置demo相关dom
-let resetDemo = () => {
+const resetDemo = () => {
     isScanning = false;
 
     $jsonViewer.empty();
@@ -88,11 +90,11 @@ let resetDemo = () => {
     $multiFaceGallery.hide();
     $multiFaceList.empty();
 
-    $('#face-details').hide().empty();
+    $faceDetail.hide().empty();
 };
 
 // 画人脸结果区块
-let drawRect = function (data) {
+const drawRect = function (data) {
     const $canvas = $demoResult.find('canvas');
     const scale = $canvas.attr('data-scale');
     const ctx = $canvas[0].getContext('2d');
@@ -106,6 +108,7 @@ let drawRect = function (data) {
         ctx.lineWidth = 4 / scale;
         ctx.strokeStyle = 'rgba(0, 115, 235, 0.8)';
         ctx.translate(location.left, location.top);
+        // 区块追随人脸倾斜角度
         ctx.rotate(record.rotation_angle / 180 * Math.PI);
         ctx.rect(
             0,
@@ -160,15 +163,17 @@ const toggleGallery = function (isOpen) {
     $multiFaceGallery.toggle(isOpen);
 };
 
-// 初始画廊
+// 设置多人脸展示窗, 在图片中包含多张人脸时会调用这里
 const setGalleryContent = function (data) {
-    let originalImage = new Image();
+    const originalImage = new Image();
 
-    // 加载照片并填充进canvas区域
+    // 根据数据，从源图片中裁剪每一张人脸,生成小图，放入展示窗中
     originalImage.onload = function () {
         for (let i = 0, len = data.result.length; i < len; i++) {
             const record = data.result[i];
-            const canvas = $('<canvas>').attr('width', record.location.width)
+            // 利用canvas裁剪图片
+            const canvas = $('<canvas>')
+                .attr('width', record.location.width)
                 .attr('height', record.location.height);
 
             const ctx = canvas[0].getContext('2d');
@@ -176,7 +181,7 @@ const setGalleryContent = function (data) {
             ctx.translate(-record.location.left, -record.location.top);
             ctx.drawImage(originalImage, 0, 0);
 
-            let galleryItem = $('<li><img src="' + canvas[0].toDataURL() + '"></li>');
+            const galleryItem = $('<li><img src="' + canvas[0].toDataURL() + '"></li>');
             galleryItem.data('face', record).data('isAll', false);
             $multiFaceGallery.append(galleryItem);
         }
@@ -187,7 +192,7 @@ const setGalleryContent = function (data) {
 
 // 初始画廊
 const initGallery = function (imgSrc, data) {
-    let galleryItem = $('<li class="active"><img src="' + imgSrc + '"></li>');
+    const galleryItem = $('<li class="active"><img src="' + imgSrc + '"></li>');
     galleryItem.data('face', data).data('isAll', true);
     $multiFaceList.empty().append(galleryItem);
 };
@@ -241,24 +246,25 @@ const FACE_PROPERTY_DICT = {
     }
 };
 
-// 显示人脸结果
+// 显示人脸分析数据结果
 const showScanResult = function (data, isAll) {
-    let details = $('#face-details');
-
-    details.empty();
+    $faceDetail.empty();
 
     if (isAll) {
-        details.hide();
+        $faceDetail.hide();
 
         return false;
     }
 
-    details.show();
+    $faceDetail.show();
 
+    // 生成人脸数据分析
     Object.keys(FACE_PROPERTY_DICT).forEach(key => {
-        let label = FACE_PROPERTY_DICT[key].name;
-        let value = FACE_PROPERTY_DICT[key].transform(data[key]);
-        details.append(
+        const label = FACE_PROPERTY_DICT[key].name;
+        const value = FACE_PROPERTY_DICT[key].transform(data[key]);
+
+        // TODO 减少DOM操作次数
+        $faceDetail.append(
             $('<li></li>').html(label + ' : ' + value)
         );
     });
@@ -272,7 +278,7 @@ const startScan = function (type, imgSrc, url) {
 
     $canvasContainer.attr('class', 'canvas-container loading');
 
-    $('#face-details').hide().empty();
+    $faceDetail.hide().empty();
 
     const options = {
         success(res) {
@@ -280,37 +286,43 @@ const startScan = function (type, imgSrc, url) {
             $jsonViewer.html(JSON.stringify(res, null, '\t'));
             $canvasContainer.removeClass('loading');
 
-            if (res.errno !== 0 || !res.data.result_num) {
+            const {errno, msg, data} = res;
+
+            if (errno !== 0 || !data.result_num) {
                 $canvasContainer
-                    .toggleClass('error-upload-fail', res.errno === 107)
-                    .toggleClass('error-timeout', res.errno === 28)
-                    .toggleClass('error-image-format', res.errno === 106);
+                    .toggleClass('error-upload-fail', errno === 107)
+                    .toggleClass('error-timeout', errno === 28)
+                    .toggleClass('error-image-format', errno === 106);
 
                 $canvasContainer.toggleClass(
-                    'error-no-result', !res.data || !res.data.result_num
+                    'error-no-result',
+                    !data || !data.result_num
                 );
 
                 $canvasContainer.empty();
+
                 isScanning = false;
-                if ([106, 107, 28, 0].indexOf(res.errno) === -1) {
-                    new AlertModal(res.msg);
+
+                if ([106, 107, 28, 0].indexOf(errno) === -1) {
+                    new AlertModal(msg);
                 }
+
                 return isScanning;
             }
 
-            $canvasContainer.toggleClass('has-result', res.data.result_num >= 1);
+            $canvasContainer.toggleClass('has-result', data.result_num >= 1);
 
-            initGallery(imgSrc, res.data.result);
+            initGallery(imgSrc, data.result);
 
-            if (res.data.result_num === 1) {
+            if (data.result_num === 1) {
                 toggleGallery(false);
-                drawLandMark(res.data.result[0]);
-                showScanResult(res.data.result[0], false);
+                drawLandMark(data.result[0]);
+                showScanResult(data.result[0], false);
             }
             else {
                 toggleGallery(true);
-                setGalleryContent(res.data);
-                drawRect(res.data.result);
+                setGalleryContent(data);
+                drawRect(data.result);
                 showScanResult(null, true);
             }
 
@@ -329,6 +341,7 @@ const startScan = function (type, imgSrc, url) {
         options.image = imgSrc;
     }
 
+    // TODO 从名字完全看不出来是要调用ajax
     scanFace(options);
 };
 
@@ -465,4 +478,4 @@ $multiFaceGallery.on('click', 'li', function () {
 });
 
 // 触发初始化效果
-$demoImgContainer.click();
+$demoImgContainer.eq(0).click();
