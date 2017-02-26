@@ -134,7 +134,8 @@ export default class DemoCanvas {
         let wRatio = iWidth / cWidth;
         let hRatio = iHeight / cHeight;
 
-        let scaleRatio = this.scale * ((wRatio > 1 || hRatio > 1)
+        // 图片缩放
+        const scaleRatio = this.scale * ((wRatio > 1 || hRatio > 1)
                 ? (1 / (wRatio >= hRatio ? wRatio : hRatio))
                 : 1);
 

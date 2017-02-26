@@ -123,9 +123,9 @@ const drawRect = function (data) {
 
 // 画人脸结果Land Mark
 const drawLandMark = function (data, hasOffset) {
-    let $canvas = $demoResult.find('canvas');
-    let scale = $canvas.attr('data-scale');
-    let ctx = $canvas[0].getContext('2d');
+    const $canvas = $demoResult.find('canvas');
+    const scale = $canvas.attr('data-scale');
+    const ctx = $canvas[0].getContext('2d');
 
     let offset = hasOffset
         ? {x: data.location.left, y: data.location.top}
@@ -171,7 +171,7 @@ const setGalleryContent = function (data) {
     originalImage.onload = function () {
         for (let i = 0, len = data.result.length; i < len; i++) {
             const record = data.result[i];
-            // 利用canvas裁剪图片
+            // 利用canvas裁剪图片, 大小根据返回数据中人脸尺寸决定
             const canvas = $('<canvas>')
                 .attr('width', record.location.width)
                 .attr('height', record.location.height);
@@ -406,7 +406,7 @@ $('#scan-photo').click(function (e) {
     });
 });
 
-// 阻止多次上传
+// 阻止多次上传 TODO 通过disabled属性控制
 $('#demo-photo-upload').click(function () {
     if ($(this).hasClass('disabled')) {
         return false;
