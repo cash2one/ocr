@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 workspace=$(pwd)
-tgz=external.1486634500739211869.tgz
+tgz=
 file=$workspace/$tgz
 
 init(){
