@@ -12,20 +12,20 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
+    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/ie9.style.css">
+    <link rel="stylesheet" href="/ai_dist/1488185410/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/support/about-us.style.css">
+    <link rel="stylesheet" href="/ai_dist/1488185410/css/base.style.css">
+    <link rel="stylesheet" href="/ai_dist/1488185410/css/support/about-us.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="//ai.bdstatic.com/dist/1487644629/ai_images/logo.png" alt="百度大脑">
+                <img src="/ai_dist/1488185410/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -271,7 +271,7 @@
     <div class="about-list-two-title">2. SDK</div>
     <div class="about-list-info">移动端&服务端应用SDK：获得开放能力，适合离在线场景，支持java/php等语言，支持 Android / iOS等平台。</div>
     <div class="about-list-two-title">使用流程</div>
-    <img class="about-list-img"  src="//ai.bdstatic.com/dist/1487644629/ai_images/support/about-us/lc-pic.png">
+    <img class="about-list-img"  src="/ai_dist/1488185410/ai_images/support/about-us/lc-pic.png">
 </section>
 {%if $userInfo eq Null%}
 <section class="tech-section get-started">
@@ -414,7 +414,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="//ai.bdstatic.com/dist/1487644629/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1487644629/js/support/about-us.js"></script>
+<script src="/ai_dist/1488185410/js/common.bundle.js"></script>
+<script src="/ai_dist/1488185410/js/support/about-us.js"></script>
 </body>
 </html>
