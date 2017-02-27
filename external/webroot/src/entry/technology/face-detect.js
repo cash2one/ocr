@@ -183,7 +183,7 @@ const setGalleryContent = function (data) {
 
             const galleryItem = $('<li><img src="' + canvas[0].toDataURL() + '"></li>');
             galleryItem.data('face', record).data('isAll', false);
-            $multiFaceGallery.append(galleryItem);
+            $multiFaceList.append(galleryItem);
         }
     };
 
@@ -362,7 +362,7 @@ $uploadFileInput.change(function (e) {
     isScanning = true;
 
     $('#demo-photo-upload, #scan-photo').addClass('disabled');
-    let file = $target[0].files[0];
+    const file = $target[0].files[0];
 
     new DemoCanvas({
         selector: '#demo-result .canvas-container',
@@ -422,19 +422,26 @@ $demoImgContainer.each(function (index, element) {
 });
 
 // 绑定实例图点击事件
-$demoImgContainer.click(function () {
+$demoImgContainer.click(function (e) {
+    const $target = $(e.target);
+
     if (isScanning) {
         new AlertModal('操作正在进行中，请稍候再试！');
         return;
     }
 
+    if ($target.hasClass('active')) {
+        return;
+    }
+
     isScanning = true;
 
-    $('.demo-card-list > li').removeClass('active');
+    $target
+        .addClass('active')
+        .siblings()
+        .removeClass('active');
 
-    $(this).addClass('active');
-
-    let url = `${window.location.protocol}${$(this).find('img').attr('src')}`;
+    const url = `${window.location.protocol}${$(this).find('img').attr('src')}`;
 
     $('#demo-photo-upload, #scan-photo').addClass('disabled');
 
@@ -450,13 +457,20 @@ $demoImgContainer.click(function () {
 });
 
 // 多人脸展示窗点击处理
-$multiFaceGallery.on('click', 'li', function () {
-    $multiFaceGallery.find('li').removeClass('active');
+$multiFaceGallery.on('click', 'li', function (e) {
+    const $target = $(e.target);
 
-    let galleryItem = $(this);
-    galleryItem.addClass('active');
-    let faceData = galleryItem.data('face');
-    let isAll = galleryItem.data('isAll');
+    if ($target.hasClass('active')) {
+        return;
+    }
+
+    $target
+        .addClass('active')
+        .siblings()
+        .removeClass('active');
+
+    const faceData = $target.data('face');
+    const isAll = $target.data('isAll');
 
     new DemoCanvas({
         selector: '#demo-result .canvas-container',
