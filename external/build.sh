@@ -16,7 +16,7 @@ BUILD_SUB_DIRS="app conf data php template webroot scripts webserver"
 
 cp -rf ${BUILD_SUB_DIRS} ${output}
 
- cd ${OUTPUT_DIR}
+ cd ${output}
   _time=$(date +%s%N)
   tgz="$project.$_time.tgz"
   tar czf $tgz *
