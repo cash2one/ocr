@@ -1,116 +1,95 @@
-@import '../common/helper.less';
-@import '../common/global.less';
-@import '../common/modal.less';
+@import '../common/initialize.less';
+@import '../common/banner.less';
+@import '../common/tech-feature.less';
+@import '../common/tech-scenario.less';
+@import '../common/tech-case.less';
+@import '../common/tech-commom.less';
 
-@banner: url('../../../ai_images/technology/bfr-search/banner.png');
-@icons: url('../../../ai_images/technology/bfr-search/icons.png');
-@intro-bg: url('../../../ai_images/technology/bfr-search/intro-bg.png');
-@intro: url('../../../ai_images/technology/bfr-search/intro.png');
-@case-icons: url('../../../ai_images/technology/bfr-search/case-icons.png');
 
-@import '../common/tech-page.less';
+// 技术单页前缀
+@prefix : tech;
 
-.tech-section {
-    &.tech-intro {
-        height: 645px;
+// 调用通用的banner模块
+.@{prefix}-banner {
+    .banner(@page-name: face-search);
+}
 
-        .tech-intro-detail {
-            margin-top: 40px;
-            height: 500px;
-            position: relative;
-            .icon(@intro, center, center);
-        }
+// 调用通用的tech-feature模块
+.@{prefix}-feature {
+    .tech-feature(@page-name: face-search, @icon-num: 3)
+}
 
-        .face-list {
-            width: 751px;
-            position: absolute;
-            top: 36px;
-            left: 67px;
+// 调用通用的apply-scenario模块
+.@{prefix}-scenario {
+    .apply-scenario(@page-name: face-search, @icon-num: 3);
+}
 
-            & > li {
-                display: inline-block;
-                width: 179px;
-                height: 208px;
-                transition: all .3s ease;
-                border: 3px solid transparent;
-                float: left;
+// 调用通用的tech-case模块
+.@{prefix}-case {
+    .tech-case(@page-name: face-search; @num: 2; @case-logo: 0;)
+}
 
-                &.right.scanning {
-                    border-color: @blue;
-                    background-color: fadeOut(@blue, 80%);
-                }
+// 功能介绍
+.@{prefix}-function {
+    height: 735px;
+    background: url(../../../ai_images/technology/face-search/intro-bg.png) no-repeat top center;
+    background-size: cover;
+    text-align: center;
+    color: @white;
 
-                &.wrong.scanning {
-                    border-color: #fa0000;
-                    background-color: fadeOut(red, 80%);
-                }
-
-                &.right.scanned {
-                    border-color: @blue;
-                    background-color: transparent;
-                }
-
-                &.wrong.scanned {
-                    border-color: fadeOut(@black, 15%);
-                    background-color: fadeOut(@black, 15%);
-                }
-            }
-        }
+    // 功能介绍标题
+    &-title {
+        padding: 30px 0 20px;
+        font-size: @big-title-size;
     }
 
-    &.tech-feature {
-        .feature-item + .feature-item {
-            margin-left: 110px;
-        }
-        .feature-item .feature-icon {
-            background-size: 520px / 2 270px / 2;
-        }
-
-        .feature-item:nth-child(1) .feature-icon {
-            .icon(@icons, -5px, -5px);
-        }
-        .feature-item:nth-child(2) .feature-icon {
-            .icon(@icons, -90px, -5px);
-        }
-        .feature-item:nth-child(3) .feature-icon {
-            .icon(@icons, -175px, -5px);
-        }
-    }
-    &.tech-scene {
-        .scene-item + .scene-item {
-            margin-left: 50px;
-        }
-        .scene-item .scene-icon {
-            background-size: 520px / 2 270px / 2;
-        }
-
-        .scene-item:nth-child(1) .scene-icon {
-            .icon(@icons, -5px, -90px);
-        }
-        .scene-item:nth-child(2) .scene-icon {
-            .icon(@icons, -50px, -90px);
-        }
-        .scene-item:nth-child(3) .scene-icon {
-            .icon(@icons, -95px, -90px);
-        }
+    // 功能介绍简介
+    &-info {
+        width: 870px;
+        margin: 0 auto;
+        padding-bottom: 70px;
+        line-height: 25 / 14;
     }
 
-    &.tech-case {
-        .case-item:nth-child(1) {
-            .icon(url('../../../ai_images/technology/bfr-search/case-1.png'), center, center);
+    // demo
+    &-demo {
+        width: 1047px;
+        height: 428px;
+        margin: 0 auto;
+        background: url(../../../ai_images/technology/face-search/intro.png) no-repeat;
 
-        }
-        .case-item:nth-child(2) {
-            .icon(url('../../../ai_images/technology/bfr-search/case-2.png'), center, center);
+        &-list {
+            width: 740px;
+            float: left;
         }
 
-        .case-indicator {
-            & > li:nth-child(1) {
-                .icon(@case-icons, -10px, -10px);
-            }
-            & > li:nth-child(2) {
-                .icon(@case-icons, -210px, -10px);
-            }
+        &-item {
+            box-sizing: border-box;
+            width: 185px;
+            height: 214px;
+            transition: all .3s ease;
+            border: 3px solid transparent;
+            float: left;
+        }
+
+        &-wrong.tech-function-scanning {
+            border-color:#fa0000;
+            background-color:rgba(255,0,0,.2)
+        }
+
+        &-right.tech-function-scanning {
+            border-color:#0073eb;
+            background-color:rgba(0,115,235,.2)
+        }
+
+        &-wrong.tech-function-scanned {
+            border-color: rgba(0,0,0,.85);
+            background-color: rgba(0,0,0,.85);
+        }
+
+        &-right.tech-function-scanned {
+            border-color: #0073eb;
+            background-color: transparent;
         }
     }
 }

@@ -8,23 +8,16 @@ import $ from 'jquery';
 import throttle from 'lodash.throttle';
 import 'less/technology/face-search.less';
 
+import '../common/tech-case.js';
+
 $(document).ready(function () {
-    // case点击效果
-    $('.case-indicator > li').click(function () {
-        $('.case-indicator > li').each((i, e) => {
-            $(e).toggleClass('active', i === $(this).index());
-        });
-        $('.case-item').each((i, e) => {
-            $(e).toggleClass('active', i === $(this).index());
-        });
-    });
 
     // 触发功能介绍动画
     $(window).scroll(
         throttle(
             () => {
                 if ($(document).scrollTop() >= 100) {
-                    $('.tech-intro-detail').trigger('demo');
+                    $('.tech-function-demo').trigger('demo');
                 }
             },
             300
@@ -32,19 +25,19 @@ $(document).ready(function () {
     );
 
     // 绑定功能介绍动画
-    $('.tech-intro-detail').one('demo', function () {
+    $('.tech-function-demo').one('demo', function () {
         let counter = 0;
-        let faces = $('.face-list > li');
+        let faces = $('.tech-function-demo-item');
 
         let interval = setInterval(
             function () {
                 faces
-                    .removeClass('scanning')
+                    .removeClass('tech-function-scanning')
                     .eq(counter)
-                    .addClass('scanning');
+                    .addClass('tech-function-scanning');
 
                 if (counter++ === faces.length) {
-                    faces.addClass('scanned');
+                    faces.addClass('tech-function-scanned');
 
                     clearInterval(interval);
                 }

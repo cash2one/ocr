@@ -230,7 +230,6 @@
         <div class="tech-function-info">
             百度语音识别为开发者提供业界优质且免费的语音服务，通过场景识别优化，为车载导航，智能家居和社交聊天等行业提供语音解决方案<br>
             百度语音识别的准确率达到90%以上，让您的应用绘“声”绘色
-
         </div>
         <div class="tech-function-pic">
             <img width="670" src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/speech-asr/intro.png" >
@@ -273,7 +272,7 @@
             </div>
         </div>
         <div class="tech-feature-item tech-feature-shadow">
-            <div class="tech-feature-icon tech-feature-icon-3"></div>
+            <div class="tech-feature-icon tech-feature-icon-5"></div>
             <div class="tech-feature-desc">
                 <div class="tech-feature-desc-title">自定义上传语料，训练模型</div>
                 <div class="tech-feature-desc-info">

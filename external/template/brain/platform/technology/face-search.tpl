@@ -198,141 +198,186 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-    <section class="tech-section tech-banner">
-    <div class="container">
-        <h1>人脸查找</h1>
-        <p>为您提供1:N人脸查找匹配服务，帮助您轻松实现，从人脸库中识别用户身份或查找相似人脸</p>
-        <div class="consult">
+    <div class="tech-section tech-banner">
+    <div class="ai-container">
+        <div class="tech-banner-title">
+            人脸查找
+        </div>
+        <div class="tech-banner-info">
+            为您提供1:N人脸查找匹配服务，帮助您轻松实现，从人脸库中识别用户身份或查找相似人脸
+        </div>
+        <div class="tech-banner-btn-list">
+            <a role="button"
+               class="btn-primary media"
+               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">
+                立即使用
+            </a>
             {%if $src eq Null%}
-            <a role="button" class="btn-primary media">商务合作</a>
+            <a role="button"
+               class="btn-other media"
+               href="/docs#FACE">
+                技术文档
+            </a>
             {%/if%}
-            {%if $src !== Null%}
-            <a role="button" class="btn-primary media" href="mailto:ai@baidu.com">商务合作</a>
-            {%/if%}
         </div>
     </div>
-</section>
-<section class="tech-section tech-intro">
-    <div class="container">
-        <h2>功能介绍</h2>
-        <p>给定一张照片，和数据库中N个人脸进行比对，找出最相似的一张脸或多张人脸<br>
-            用于用户不需要声明身份的场景，跟据识别人脸与已经注册库中的人脸匹配程度，返回用户信息和匹配度，即1：N人脸检索</p>
-        <div class="tech-intro-detail">
-            <ul class="face-list">
-                <li class="wrong"></li>
-                <li class="wrong"></li>
-                <li class="right"></li>
-                <li class="wrong"></li>
-                <li class="wrong"></li>
-                <li class="right"></li>
-                <li class="wrong"></li>
-                <li class="wrong"></li>
-            </ul>
-        </div>
-    </div>
-</section>
+</div>
 
-<section class="tech-section tech-feature">
+<div class="tech-section tech-function">
     <div class="container">
-        <h2>技术特色</h2>
-        <div class="feature-list clear-float">
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>强大的人脸训练模型</h3>
-                    <p>通过海量人脸训练集，成功标注千万人脸数据</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>比对速度快</h3>
-                    <p>算法识别速度小于300ms，误识率低</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>处理能力强</h3>
-                    <p>系统可支持高库容比对任务，算法识别性能高，返回时间迅速</p>
-                </div>
+        <div class="tech-function-title">
+            功能介绍
+        </div>
+        <div class="tech-function-info">
+            给定一张照片，和数据库中N个人脸进行比对，找出最相似的一张脸或多张人脸<br>
+            用于用户不需要声明身份的场景，跟据识别人脸与已经注册库中的人脸匹配程度，返回用户信息和匹配度，即1：N人脸检索
+        </div>
+        <div class="tech-function-demo">
+            <div class="tech-function-demo-list">
+                <div class="tech-function-demo-item tech-function-demo-wrong"></div>
+                <div class="tech-function-demo-item tech-function-demo-wrong"></div>
+                <div class="tech-function-demo-item tech-function-demo-right"></div>
+                <div class="tech-function-demo-item tech-function-demo-wrong"></div>
+                <div class="tech-function-demo-item tech-function-demo-wrong"></div>
+                <div class="tech-function-demo-item tech-function-demo-right"></div>
+                <div class="tech-function-demo-item tech-function-demo-wrong"></div>
+                <div class="tech-function-demo-item tech-function-demo-wrong"></div>
             </div>
         </div>
     </div>
+</div>
 
-</section>
-<section class="tech-section tech-scene">
-    <div class="container">
-        <h2>应用场景</h2>
-        <div class="scene-list clear-float">
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>门禁系统</h3>
-                    <p>受安全保护的地区可以通过人脸识别辨识试图进入者的身份，比如小区，学校、企业等。敏感地点也可以使用人脸识别门禁，对于未登记人员访问将触发报警</p>
+<div class="ai-container tech-section tech-feature">
+    <div class="tech-feature-title">技术特色</div>
+    <div class="tech-feature-list tech-clear">
+        <div class="tech-feature-item tech-feature-shadow">
+            <div class="tech-feature-icon tech-feature-icon-1"></div>
+            <div class="tech-feature-desc">
+                <div class="tech-feature-desc-title">强大的人脸训练模型</div>
+                <div class="tech-feature-desc-info">
+                    通过海量人脸训练集，成功标注千万人脸数据
                 </div>
             </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>明星图库</h3>
-                    <p>娱乐场景使用。用户上传一张照片，比对出库中相似度最高的明星，达到娱乐效果</p>
-                </div>
+        </div>
+        <div class="tech-feature-item tech-feature-shadow">
+            <div class="tech-feature-icon tech-feature-icon-2"></div>
+            <div class="tech-feature-desc">
+                <div class="tech-feature-desc-title">比对速度快</div>
+                <div class="tech-feature-desc-info" >算法识别速度小于300ms，误识率低</div>
             </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>逃犯追缉</h3>
-                    <p>在银行、机场、商场、市场等人流密集的公共场所对人群进行监视，以达到身份识别的目的，并在获得疑犯识别后，触发报警</p>
+        </div>
+        <div class="tech-feature-item tech-feature-shadow">
+            <div class="tech-feature-icon tech-feature-icon-3"></div>
+            <div class="tech-feature-desc">
+                <div class="tech-feature-desc-title">处理能力强</div>
+                <div class="tech-feature-desc-info">
+                    系统可支持高库容比对任务，算法识别性能高，返回时间迅速
                 </div>
             </div>
         </div>
     </div>
-</section>
-<section class="tech-section tech-case">
-    <ul class="case-list">
-        <li class="case-item active">
-            <div class="container">
-                <h2>乌镇人脸闸机</h2>
-                <p>用户在购买门票时进行人像采集，就可以在景区通过人脸识别多次进出景区<br>
-                    在互联网大会前落地上线，期间电视台播出2期节目，品牌露出11次，为后续和景区闸机厂商合作提供了良好的基础调</p>
+</div>
+<hr class="tech-section-border">
+<div class="ai-container tech-section tech-scenario">
+    <div class="tech-scenario-title">应用场景</div>
+    <div class="tech-scenario-list tech-clear">
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-1"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">门禁系统</div>
+                <div class="tech-scenario-desc-info">
+                    受安全保护的地区可以通过人脸识别辨识试图进入者的身份，比如小区，学校、企业等。敏感地点也可以使用人脸识别门禁，对于未登记人员访问将触发报警
+                </div>
             </div>
-        </li>
-        <li class="case-item">
-            <div class="container">
-                <h2>百度识图</h2>
-                <p>全球第一个全网人脸搜索功能<br>
-                    可以自动检测用户上传图片中出现的人脸，并将其余数据库中索引的全网数亿人脸比对并按照人脸相似度排序展示，帮你找到更多相似的TA</p>
+        </div>
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-2"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">明星图库</div>
+                <div class="tech-scenario-desc-info">
+                    娱乐场景使用。用户上传一张照片，比对出库中相似度最高的明星，达到娱乐效果
+                </div>
             </div>
-        </li>
-    </ul>
-    <ul class="case-indicator">
-        <li class="active"><a>乌镇人脸闸机</a></li>
-        <li><a>百度识图</a></li>
-    </ul>
-</section>
+        </div>
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-3"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">逃犯追缉</div>
+                <div class="tech-scenario-desc-info">
+                    在银行、机场、商场、市场等人流密集的公共场所对人群进行监视，以达到身份识别的目的，并在获得疑犯识别后，触发报警
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tech-section tech-case">
+    <div class="tech-case-list">
+        <div class="tech-case-item tech-case-item-1 tech-case-active">
+            <div class="ai-container">
+                <div class="tech-case-item-title">乌镇人脸闸机</div>
+                <div class="tech-case-item-info">
+                    用户在购买门票时进行人像采集，就可以在景区通过人脸识别多次进出景区<br>
+                    在互联网大会前落地上线，期间电视台播出2期节目，品牌露出11次，为后续和景区闸机厂商合作提供了良好的基础调
+                </div>
+            </div>
+        </div>
+        <div class="tech-case-item tech-case-item-2">
+            <div class="ai-container">
+                <div class="tech-case-item-title">百度识图</div>
+                <div class="tech-case-item-info">
+                    全球第一个全网人脸搜索功能<br>
+                    可以自动检测用户上传图片中出现的人脸，并将其余数据库中索引的全网数亿人脸比对并按照人脸相似度排序展示，帮你找到更多相似的TA
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tech-case-option">
+        <div class="tech-case-option-btn tech-case-option-btn-1 tech-case-active">
+            乌镇人脸闸机
+        </div>
+        <div class="tech-case-option-btn tech-case-option-btn-2">
+            百度识图
+        </div>
+    </div>
+</div>
+
+{%if $userInfo eq Null%}
+<div class="tech-section get-started tech-free">
+    <div class="ai-container">
+        <div class="tech-free-title">立即获取免费API Key</div>
+        <div class="tech-free-info">现在试用，获取免费API Key，免费调用各项开放能力API</div>
+        <div class="tech-free-btn">
+            <a role="button"
+               class="btn-primary large"
+               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">
+                免费试用
+            </a>
+        </div>
+    </div>
+</div>
+{%/if%}
 {%if $src eq Null%}
-<section class="tech-section get-started">
-    <div class="container">
-        <h2>快速提交您的需求</h2>
-        <p>您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</p>
-        <div class="consult">
-            <a role="button" class="btn-primary large">商务合作</a>
+<div class="tech-section tech-guide">
+    <div class="ai-container">
+        <div class="tech-guide-title">使用指南</div>
+        <div class="tech-guide-link tech-clear">
+            <div class="tech-guide-link-title">开发指南</div>
+            <div class="tech-guide-link-list">
+                <a class="tech-link-btn" href="/docs#FACE">技术文档 &gt;</a>
+                <a class="tech-link-btn" href="/sdk">SDK下载 &gt;</a>
+            </div>
+        </div>
+        <div class="tech-guide-question tech-clear">
+            <div class="tech-guide-question-title">常见问题</div>
+            <div class="tech-guide-question-list">
+                <a class="tech-link-btn" href="/docs#FACE-FAQ_Q1">识别的图片支持怎样输入？</a>
+                <a class="tech-link-btn" href="/docs#FACE-FAQ_Q2">什么是base64编码，如何提供？</a>
+            </div>
         </div>
     </div>
-</section>
+</div>
 {%/if%}
-{%if $src !== Null%}
-<section class="tech-section get-started">
-    <div class="container">
-        <h2>快速提交您的需求</h2>
-        <p>您可以点击下方按钮向我们发送合作邮件，我们会尽快与您取得联系</p>
-        <div class="consult">
-            <a role="button" class="btn-primary large" href="mailto:ai@baidu.com">商务合作</a>
-        </div>
-    </div>
-</section>
-{%/if%}
+
 </div>
 <aside class="aside-action">
     <ul>
