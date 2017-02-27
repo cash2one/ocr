@@ -23,4 +23,6 @@ cp -rf ${BUILD_SUB_DIRS} ${output}
   mv $tgz $workspace/.
   rm -rf $output/*
   mv $workspace/$tgz $output/.
+  mv $workspace/deploy $output/.
+  sed -i "s/tgz=.*/&$tgz/g" $output/deploy
 echo "build all done!"

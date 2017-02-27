@@ -1,0 +1,98 @@
+#!/bin/bash
+set -x
+workspace=$(pwd)
+tgz=external.1486634500739211869.tgz
+file=$workspace/$tgz
+
+init(){
+    if ! [[ -f $file ]];then
+
+        cat<<EOF
+#################################################
+
+WAR:$file not exist"
+
+#################################################
+
+EOF
+        exit 1
+    fi
+    mkdir -p "${workspace}/bak"
+
+    rm -rf $workspace/app
+    rm -rf $workspace/data
+    rm -rf $workspace/php
+    rm -rf $workspace/template
+    rm -rf $workspace/webroot
+    rm -rf $workspace/scripts
+    rm -rf $workspace/webserver
+
+    if ! tar zxf $file -C $workspace;then
+        echo "unzip $file fail"
+        exit 1
+    fi
+}
+
+start() {
+    init
+}
+stop() {
+    if [ -f /home/work/orp/bin/tpl_vars.tmp ]
+    then
+       if [ -f $workspace/sbin/orp_control ]
+       then
+       sh $workspace/sbin/orp_control stop
+       fi
+    else
+       if [[ -f $workspace/sbin/control ]];then
+        $workspace/sbin/control stop
+       fi
+    fi
+    exit 0
+}
+rollback() {
+    if [ -f /home/work/orp/bin/tpl_vars.tmp ];then
+        if [ -f $workspace/sbin/orp_control ]
+        then
+            sh $workspace/sbin/orp_control stop
+        fi
+    else
+        if [[ -f $workspace/sbin/control ]];then
+            $workspace/sbin/control stop
+        fi
+    fi
+        if [[ -d $workspace/bak/rollback ]];then
+            $RSYNC_ROLLBACK_CMD
+        else
+            echo "rollback dir not exist."
+            exit 1
+        fi
+        if [ -f /home/work/orp/bin/tpl_vars.tmp ]
+        then
+            if [ -f $workspace/sbin/orp_control ]
+            then
+            sh $workspace/sbin/orp_control start $1
+            fi
+        else
+            if [[ -f $workspace/sbin/control ]];then
+            $workspace/sbin/control start $1
+            fi
+        fi
+}
+main() {
+    case $1 in
+        stop )
+        stop
+        ;;
+        start)
+        start $2
+        ;;
+        rollback )
+        rollback $2
+        ;;
+        *)
+        echo '(start|stop|rollback)'
+        ;;
+    esac
+}
+main "$@"
