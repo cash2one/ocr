@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488185410/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/technology/nlp-dnnlm_cn.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488185410/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488185410/css/technology/nlp-dnnlm_cn.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="//ai.bdstatic.com/dist/1487644629/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1488185410/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -494,7 +494,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="//ai.bdstatic.com/dist/1487644629/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1487644629/js/technology/nlp-dnnlm_cn.js"></script>
+<script src="//ai.bdstatic.com/dist/1488185410/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1488185410/js/technology/nlp-dnnlm_cn.js"></script>
 </body>
 </html>
