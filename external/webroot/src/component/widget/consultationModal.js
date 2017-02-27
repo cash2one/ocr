@@ -61,20 +61,27 @@ export default class ConsultationModal extends Modal {
 
         modal.on('click', 'button.submit', e => {
             e.preventDefault();
-            let form = $('#consult-form');
-            let inputsToCheck = [
-                'input[name=company]', 'input[name=username]', 'input[name=phone]', 'input[name=code]'
+
+            const form = $('#consult-form');
+            const inputsToCheck = [
+                'input[name=company]', 'input[name=username]',
+                'input[name=phone]', 'input[name=code]'
             ];
+
+            // 清楚错误提示
             form.find(inputsToCheck.join()).removeClass('has-error');
             form.find('.consult-info-warning').html('');
+
             for (let i = 0, len = inputsToCheck.length; i < len; i++) {
                 let input = form.find(inputsToCheck[i]);
+
                 if (!input.val()) {
                     input.addClass('has-error');
                     form.find('.info-warning').html(input.attr('placeholder'));
                     return false;
                 }
             }
+
             checkQRCode({
                 code: form.find('input[name=code]').val(),
                 success: res => {
@@ -85,6 +92,7 @@ export default class ConsultationModal extends Modal {
                         this.refreshQRCode();
                         return false;
                     }
+
                     sendConsultation({
                         data: {
                             tech: form.find('input[name=tech]:checked').val(),
@@ -105,6 +113,7 @@ export default class ConsultationModal extends Modal {
                         },
                         fail: () => this.applyFail()
                     });
+
                     this.apply();
                 },
                 fail: () => this.applyFail()

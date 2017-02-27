@@ -4,11 +4,10 @@
  */
 'use strict';
 
-import EJS from 'ejs';
 import $ from 'jquery';
 import {getNews} from '../../model/news';
-import {NEWS_TMPL} from '../../partials/news';
 
+import newsTpl from 'partials/news.hbs';
 
 export default class News {
     constructor({selector, newsCounter}) {
@@ -35,10 +34,9 @@ export default class News {
             success: res => {
                 if (res.errno !== 0) {
                     throw ('获取新闻数据接口发生错误，error msg: ' + res.msg);
-                    return;
                 }
                 res.data.forEach((e, i) => e.time = convertTimeFormat(e.time));
-                let html = EJS.render(NEWS_TMPL, {news: res.data});
+                const html = newsTpl({news: res.data});
                 $(this.selector).html(html);
             },
             fail: res => {throw ('获取新闻数据接口发生错误，error msg: ' + res.msg);}
