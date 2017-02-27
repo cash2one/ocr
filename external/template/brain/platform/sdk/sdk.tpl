@@ -575,7 +575,7 @@
                         <i class="sdk-language-sprite sdk-java"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-ocr"></i>
-                            <a href="http://ai.baidu.com/download/aip-ocr-java-sdk-1.1.zip">
+                            <a href="http://ai.baidu.com/download/aip-ocr-java-sdk-1.2.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -583,8 +583,8 @@
                             <div class="sdk-item-name">Java SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
+                                <div class="sdk-version">版本: 1.2.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-02</div>
                             </div>
                         </div>
                     </div>
@@ -594,7 +594,7 @@
                         <i class="sdk-language-sprite sdk-php"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-ocr"></i>
-                            <a href="http://ai.baidu.com/download/aip-ocr-php-sdk-1.1.zip">
+                            <a href="http://ai.baidu.com/download/aip-ocr-php-sdk-1.2.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -602,8 +602,8 @@
                             <div class="sdk-item-name">PHP SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
+                                <div class="sdk-version">版本: 1.2.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-02</div>
                             </div>
                         </div>
                     </div>
@@ -614,7 +614,7 @@
                         <i class="sdk-language-sprite sdk-python"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-ocr"></i>
-                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.1.zip">
+                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.2.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -622,8 +622,8 @@
                             <div class="sdk-item-name">Python SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
+                                <div class="sdk-version">版本: 1.2.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-02</div>
                             </div>
                         </div>
                     </div>
@@ -638,7 +638,7 @@
                         <i class="sdk-language-sprite sdk-java"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bfr"></i>
-                            <a href="http://ai.baidu.com/download/aip-face-java-sdk-1.1.zip">
+                            <a href="http://ai.baidu.com/download/aip-face-java-sdk-1.2.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -646,8 +646,8 @@
                             <div class="sdk-item-name">Java SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
+                                <div class="sdk-version">版本: 1.2.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-02</div>
                             </div>
                         </div>
                     </div>
@@ -657,7 +657,7 @@
                         <i class="sdk-language-sprite sdk-php"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bfr"></i>
-                            <a href="http://ai.baidu.com/download/aip-face-php-sdk-1.1.zip">
+                            <a href="http://ai.baidu.com/download/aip-face-php-sdk-1.2.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -665,8 +665,8 @@
                             <div class="sdk-item-name">PHP SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
+                                <div class="sdk-version">版本: 1.2.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-02</div>
                             </div>
                         </div>
                     </div>
@@ -677,7 +677,7 @@
                         <i class="sdk-language-sprite sdk-python"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bfr"></i>
-                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.1.zip">
+                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.2.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -685,8 +685,8 @@
                             <div class="sdk-item-name">Python SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
+                                <div class="sdk-version">版本: 1.2.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-02</div>
                             </div>
                         </div>
                     </div>
@@ -701,7 +701,7 @@
                         <i class="sdk-language-sprite sdk-java"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-nlp"></i>
-                            <a href="http://ai.baidu.com/download/aip-nlp-java-sdk-1.1.zip">
+                            <a href="http://ai.baidu.com/download/aip-nlp-java-sdk-1.2.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -709,8 +709,8 @@
                             <div class="sdk-item-name">Java SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
+                                <div class="sdk-version">版本: 1.2.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-02</div>
                             </div>
                         </div>
                     </div>
@@ -720,7 +720,7 @@
                         <i class="sdk-language-sprite sdk-php"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-nlp"></i>
-                            <a href="http://ai.baidu.com/download/aip-nlp-php-sdk-1.1.zip">
+                            <a href="http://ai.baidu.com/download/aip-nlp-php-sdk-1.2.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -728,8 +728,8 @@
                             <div class="sdk-item-name">PHP SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
+                                <div class="sdk-version">版本: 1.2.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-02</div>
                             </div>
                         </div>
                     </div>
@@ -740,7 +740,7 @@
                         <i class="sdk-language-sprite sdk-python"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-nlp"></i>
-                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.1.zip">
+                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.2.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -748,8 +748,8 @@
                             <div class="sdk-item-name">Python SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
+                                <div class="sdk-version">版本: 1.2.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-02</div>
                             </div>
                         </div>
                     </div>
@@ -764,7 +764,7 @@
                         <i class="sdk-language-sprite sdk-java"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-anti"></i>
-                            <a href="http://ai.baidu.com/download/aip-antiporn-java-sdk-1.1.zip">
+                            <a href="http://ai.baidu.com/download/aip-antiporn-java-sdk-1.2.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -772,8 +772,8 @@
                             <div class="sdk-item-name">Java SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
+                                <div class="sdk-version">版本: 1.2.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-02</div>
                             </div>
                         </div>
                     </div>
@@ -783,7 +783,7 @@
                         <i class="sdk-language-sprite sdk-php"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-anti"></i>
-                            <a href="http://ai.baidu.com/download/aip-antiporn-php-sdk-1.1.zip">
+                            <a href="http://ai.baidu.com/download/aip-antiporn-php-sdk-1.2.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -791,19 +791,18 @@
                             <div class="sdk-item-name">PHP SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
+                                <div class="sdk-version">版本: 1.2.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-02</div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="sdk-item-container">
                     <div class="sdk-item">
                         <i class="sdk-language-sprite sdk-python"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-anti"></i>
-                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.1.zip">
+                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.2.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -811,8 +810,8 @@
                             <div class="sdk-item-name">Python SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.1.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-01-19</div>
+                                <div class="sdk-version">版本: 1.2.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-02</div>
                             </div>
                         </div>
                     </div>
