@@ -4,10 +4,11 @@
 @import '../common/tech-scenario.less';
 @import '../common/tech-case.less';
 @import '../common/tech-commom.less';
+@import '../common/modal.less';
 
 
 // 技术单页前缀
-@prefix : tech;
+@prefix: tech;
 
 // 调用通用的banner模块
 .@{prefix}-banner {
@@ -26,7 +27,7 @@
 
 // 调用通用的tech-case模块
 .@{prefix}-case {
-    .tech-case(@page-name: face-search; @num: 2; @case-logo: 0;)
+    .tech-case(@page-name: face-search; @num: 2; @case-logo: false;)
 }
 
 // 功能介绍
@@ -73,18 +74,18 @@
         }
 
         &-wrong.tech-function-scanning {
-            border-color:#fa0000;
-            background-color:rgba(255,0,0,.2)
+            border-color: #fa0000;
+            background-color: rgba(255, 0, 0, .2)
         }
 
         &-right.tech-function-scanning {
-            border-color:#0073eb;
-            background-color:rgba(0,115,235,.2)
+            border-color: #0073eb;
+            background-color: rgba(0, 115, 235, .2)
         }
 
         &-wrong.tech-function-scanned {
-            border-color: rgba(0,0,0,.85);
-            background-color: rgba(0,0,0,.85);
+            border-color: rgba(0, 0, 0, .85);
+            background-color: rgba(0, 0, 0, .85);
         }
 
         &-right.tech-function-scanned {
