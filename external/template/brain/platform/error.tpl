@@ -12,20 +12,20 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
+    <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="/ai_dist/1488185410/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488185410/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="/ai_dist/1488185410/css/base.style.css">
-    <link rel="stylesheet" href="/ai_dist/1488185410/css/error.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488185410/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488185410/css/error.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="/ai_dist/1488185410/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1488185410/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -199,7 +199,7 @@
 </header>
 <div class="ai-platform page-content">
     <section class="site-error">
-    <img src="/ai_dist/1488185410/ai_images/error/site-error.png">
+    <img src="//ai.bdstatic.com/dist/1488185410/ai_images/error/site-error.png">
     <p>对不起，页面出错啦!</p>
     <div>
         <a role="button" class="btn-primary" href="//ai.baidu.com" id="error-back">5秒后返回</a>
@@ -335,7 +335,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="/ai_dist/1488185410/js/common.bundle.js"></script>
-<script src="/ai_dist/1488185410/js/error.js"></script>
+<script src="//ai.bdstatic.com/dist/1488185410/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1488185410/js/error.js"></script>
 </body>
 </html>
