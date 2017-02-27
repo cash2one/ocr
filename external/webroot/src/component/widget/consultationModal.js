@@ -4,15 +4,17 @@
  */
 'use strict';
 
-import EJS from 'ejs';
 import $ from 'jquery';
 
 import Modal from '../common/modal';
-import {CONSULTATION_TMPL} from '../../partials/consultation';
 import {sendConsultation} from '../../model/consultation';
 import {checkQRCode} from '../../model/qrCode';
 import {setPlaceHolder} from '../common/placeholder';
 
+import applyTpl from 'partials/consultation/apply.hbs';
+import failTpl from 'partials/consultation/fail.hbs';
+import successTpl from 'partials/consultation/success.hbs';
+import loadingTpl from 'partials/consultation/loading.hbs';
 
 export default class ConsultationModal extends Modal {
     constructor(container = 'body', id = 'consultation-modal', title = '合作咨询') {
@@ -32,20 +34,20 @@ export default class ConsultationModal extends Modal {
     }
 
     reset() {
-        this.setContent(EJS.render(CONSULTATION_TMPL.APPLY));
+        this.setContent(applyTpl({}));
         setPlaceHolder(this.getModal());
     }
 
     apply() {
-        this.setContent(EJS.render(CONSULTATION_TMPL.LOADING));
+        this.setContent(loadingTpl({}));
     }
 
     applySuccess() {
-        this.setContent(EJS.render(CONSULTATION_TMPL.SUCCESS));
+        this.setContent(successTpl({}));
     }
 
     applyFail() {
-        this.setContent(EJS.render(CONSULTATION_TMPL.FAIL));
+        this.setContent(failTpl({}));
     }
 
     refreshQRCode() {
