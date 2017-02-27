@@ -22,5 +22,5 @@ cp -rf ${BUILD_SUB_DIRS} ${output}
   tar czf $tgz *
   mv $tgz $workspace/.
   rm -rf $output/*
-
+  mv $workspace/$tgz $output/.
 echo "build all done!"
