@@ -21,6 +21,6 @@ cp -rf ${BUILD_SUB_DIRS} ${output}
   tgz="$project.$_time.tgz"
   tar czf $tgz *
   mv $tgz $workspace/.
-  rm -rf $output/*
+ # rm -rf $output/*
 
 echo "build all done!"
