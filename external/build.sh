@@ -7,7 +7,7 @@ prj_code="$workspace/$dir"
 output="$workspace/output"
 rm -rf $output
 
-cd $prj_code
+#cd $prj_code
 
 
 #sh invoke_jenkins_job.sh
