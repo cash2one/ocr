@@ -1,15 +1,20 @@
 #/bin/sh
 workspace=$(pwd)
 project=${workspace//*\//}
+dir=$(dirname $0)
+prj_code="$workspace/$dir"
 
-OUTPUT_DIR=output/
-mkdir -p ${OUTPUT_DIR}
+output="$workspace/output"
+rm -rf $output
+
+cd $prj_code
+
 
 #sh invoke_jenkins_job.sh
 
 BUILD_SUB_DIRS="app conf data template webroot scripts webserver"
 
-cp -rf ${BUILD_SUB_DIRS} ${OUTPUT_DIR}
+cp -rf ${BUILD_SUB_DIRS} ${output}
 
  cd ${OUTPUT_DIR}
   _time=$(date +%s%N)
@@ -17,8 +22,5 @@ cp -rf ${BUILD_SUB_DIRS} ${OUTPUT_DIR}
   tar czf $tgz *
   mv $tgz $workspace/.
   rm -rf $output/*
-  mv $workspace/$tgz $output/.
-
-mv ${OUTPUT_DIR}.tar ../
 
 echo "build all done!"
