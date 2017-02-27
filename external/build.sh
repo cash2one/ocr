@@ -5,14 +5,14 @@ dir=$(dirname $0)
 prj_code="$workspace/$dir"
 
 output="$workspace/output"
-rm -rf $output
 
+mkdir output
 #cd $prj_code
 
 
 #sh invoke_jenkins_job.sh
 
-BUILD_SUB_DIRS="app conf data template webroot scripts webserver"
+BUILD_SUB_DIRS="app conf data php template webroot scripts webserver"
 
 cp -rf ${BUILD_SUB_DIRS} ${output}
 
