@@ -41,6 +41,7 @@ rollback() {
         reload )
         sh $workspace/webserver/loadnginx reload
         ;;
+    esac
 }
 main() {
     case $1 in
