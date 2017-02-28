@@ -2,16 +2,16 @@
     <p>您希望咨询的技术：（单选）</p>
     <div>
         <label>
-            <select id="cf">
-                <option value="" selected>OCR文字识别</option>
-                <option value="">人脸识别</option>
-                <option value="">黄反识别</option>
-                <option value="">语音技术</option>
-                <option value="">NLP自然语言处理</option>
-                <option value="">用户画像</option>
-                <option value="">机器学习</option>
-                <option value="">AR增强现实</option>
-                <option value="">我不确定</option>
+            <select name="tech">
+                <option value="OCR文字识别" selected>OCR文字识别</option>
+                <option value="人脸识别">人脸识别</option>
+                <option value="黄反识别">黄反识别</option>
+                <option value="语音技术">语音技术</option>
+                <option value="NLP自然语言处理">NLP自然语言处理</option>
+                <option value="用户画像">用户画像</option>
+                <option value="机器学习">机器学习</option>
+                <option value="AR增强现实">AR增强现实</option>
+                <option value="我不确定">我不确定</option>
             </select>
         </label>
     </div>
@@ -28,13 +28,13 @@
         <input type="text" maxlength="50" placeholder="请输入其他联系方式：邮箱/QQ等（选填）" name="contactWay">
     </div>
     <div>
-        <input type="text" maxlength="100" placeholder="请输入您的公司/单位网址（必填）" name="site">
+        <input type="text" maxlength="100" placeholder="请输入您的公司/单位网址（必填）" name="siteUrl">
     </div>
     <div>
-        <textarea placeholder="您的公司的业务简要介绍" maxlength="500" name="content"></textarea>
+        <textarea placeholder="您的公司的业务简要介绍" maxlength="500" name="business"></textarea>
     </div>
     <div>
-        <textarea placeholder="您对AI的需求介绍（必填）" maxlength="500" name="content"></textarea>
+        <textarea placeholder="您对AI的需求介绍（必填）" maxlength="500" name="requirement"></textarea>
     </div>
     <div class="qr-code-input">
         <input type="text" maxlength="4" placeholder="请输入正确的验证码" name="code">

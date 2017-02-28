@@ -65,7 +65,9 @@ export default class ConsultationModal extends Modal {
             const form = $('#consult-form');
             const inputsToCheck = [
                 'input[name=company]', 'input[name=username]',
-                'input[name=phone]', 'input[name=code]'
+                'input[name=phone]', 'input[name="contactWay"]',
+                'input[name=siteUrl]', '[name=requirement]',
+                'input[name=code]'
             ];
 
             // 清楚错误提示
@@ -73,7 +75,7 @@ export default class ConsultationModal extends Modal {
             form.find('.consult-info-warning').html('');
 
             for (let i = 0, len = inputsToCheck.length; i < len; i++) {
-                let input = form.find(inputsToCheck[i]);
+                const input = form.find(inputsToCheck[i]);
 
                 if (!input.val()) {
                     input.addClass('has-error');
@@ -95,18 +97,21 @@ export default class ConsultationModal extends Modal {
 
                     sendConsultation({
                         data: {
-                            tech: form.find('input[name=tech]:checked').val(),
+                            tech: form.find('select[name=tech]').val(),
                             company: form.find('input[name=company]').val(),
                             username: form.find('input[name=username]').val(),
                             phone: form.find('input[name=phone]').val(),
                             contactWay: form.find('input[name=contactWay]').val(),
-                            content: form.find('textarea[name=content]').val(),
+                            siteUrl: form.find('input[name=siteUrl]').val(),
+                            business: form.find('textarea[name=business]').val(),
+                            requirement: form.find('textarea[name=requirement]').val(),
                             code: form.find('input[name=code]').val()
                         },
                         success: res => {
                             if (res.errno === 0) {
                                 this.applySuccess();
-                            } else {
+                            }
+                            else {
                                 this.applyFail();
                                 this.refreshQRCode();
                             }
