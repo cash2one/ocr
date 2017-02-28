@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488185410/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/technology/face-detect.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488185410/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488185410/css/technology/face-detect.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="//ai.bdstatic.com/dist/1487644629/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1488185410/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -245,7 +245,9 @@
                         <input type="text" id="demo-photo-url" placeholder="请输入网络图片URL">
                         <button type="button" class="btn-primary" id="scan-photo">检测</button>
                         <span>或</span>
-                        <label id="demo-photo-upload"><input type="file">本地上传</label>
+                        <label id="demo-photo-upload">
+                            <input type="file">本地上传
+                        </label>
                     </div>
                     <p class="demo-desc">
                         提示：可支持PNG、JPG、jpeg、BMP图片文件，不支持GIF图片，图片大小不超过2M，长边不超过2048像素。为保证正常识别效果，请保证需要识别部分为图片主体部分。</p>
@@ -259,28 +261,28 @@
             <div>
                 <ul class="demo-card-list clear-float">
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/bfr-detect/demo-card-1.jpg">
+                        <img src="//ai.bdstatic.com/dist/1488185410/ai_images/technology/bfr-detect/demo-card-1.jpg">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/bfr-detect/demo-card-2.jpg">
+                        <img src="//ai.bdstatic.com/dist/1488185410/ai_images/technology/bfr-detect/demo-card-2.jpg">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/bfr-detect/demo-card-3.jpg">
+                        <img src="//ai.bdstatic.com/dist/1488185410/ai_images/technology/bfr-detect/demo-card-3.jpg">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/bfr-detect/demo-card-4.png">
+                        <img src="//ai.bdstatic.com/dist/1488185410/ai_images/technology/bfr-detect/demo-card-4.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/bfr-detect/demo-card-5.png">
+                        <img src="//ai.bdstatic.com/dist/1488185410/ai_images/technology/bfr-detect/demo-card-5.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/bfr-detect/demo-card-6.jpg">
+                        <img src="//ai.bdstatic.com/dist/1488185410/ai_images/technology/bfr-detect/demo-card-6.jpg">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/bfr-detect/demo-card-7.jpg">
+                        <img src="//ai.bdstatic.com/dist/1488185410/ai_images/technology/bfr-detect/demo-card-7.jpg">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/bfr-detect/demo-card-8.jpg">
+                        <img src="//ai.bdstatic.com/dist/1488185410/ai_images/technology/bfr-detect/demo-card-8.jpg">
                     </li>
                 </ul>
             </div>
@@ -531,7 +533,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="//ai.bdstatic.com/dist/1487644629/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1487644629/js/technology/face-detect.js"></script>
+<script src="//ai.bdstatic.com/dist/1488185410/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1488185410/js/technology/face-detect.js"></script>
 </body>
 </html>
