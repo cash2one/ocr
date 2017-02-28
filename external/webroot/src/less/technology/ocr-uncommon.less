@@ -1,0 +1,35 @@
+@import '../common/initialize.less';
+
+// 技术单页前缀
+@prefix: tech;
+
+.data-view {
+    box-sizing: border-box;
+    width: 50%;
+    height: 350px;
+    float: left;
+    background: #fafafa;
+    border: 1px solid #000;
+}
+
+#demo-json p {
+    height: 350px;
+    white-space: pre-wrap;
+    overflow: scroll;
+}
+
+
+.@{prefix}-demo-examples {
+    font-size: 0;
+
+    &-item {
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+        width: 25%;
+        height: 120px;
+        padding: 10px;
+    }
+}
+
+
