@@ -38,6 +38,9 @@ const $getUrlType = (
                             const header = this.getAllResponseHeaders();
                             callback(header);
                         }
+                        else if (this.readyState === 4 && this.status !== 200) {
+                            console.log('shibai');
+                        }
                     };
                     this._xmlHttp.send(params);
                 }
@@ -51,25 +54,11 @@ const $getUrlType = (
 const startScan = function (imgUrl) {
     const options = {
         success(res) {
-            console.log(res);
             $('#demo-json').html(JSON.stringify(res, null, '\t'));
         }
     };
     options.imageUrl = imgUrl;
     scanGeneralText(options);
-};
-
-// 判断链接是否有效
-const todoUrl = function (demoUrl) {
-    $getUrlType.get(
-        demoUrl,
-        '',
-        function (data) {
-            if (data.indexOf('image') >= 0) {
-
-            }
-        }
-    );
 };
 
 // 获取图片
@@ -83,6 +72,22 @@ const getOriginImg = function (imgUrl) {
     startScan(imgUrl);
 };
 
+// 判断链接是否有效
+const todoUrl = function (demoUrl) {
+    $getUrlType.get(
+        demoUrl,
+        '',
+        function (data) {
+            if (data.indexOf('image') >= 0) {
+                getOriginImg(demoUrl);
+                startScan(demoUrl);
+            }
+        }
+    );
+};
+
+
+
 // Demo实例图片
 const $techDemoSelect = $('.tech-demo-card-item');
 
@@ -90,9 +95,10 @@ const $techDemoSelect = $('.tech-demo-card-item');
 $techDemoSelect.on('click', ({target}) => {
     const $target = $(target);
 
-    if ($target
-        .parent()
-        .hasClass('tech-demo-card-active')) {
+    if (
+        $target
+            .parent()
+            .hasClass('tech-demo-card-active')) {
         return;
     }
 
@@ -112,12 +118,35 @@ $monitorUrlBtn.on('click',
     () => {
         const demoUrl = $demoPhotoUrl.val();
         if (!/\.(jpe?g|png|gif)$/.test(demoUrl)) {
+            console.log('shibai');
             return;
         }
         todoUrl(demoUrl);
     }
 );
 
+// 本地上传图片
+const $demoPhotoUpload = $('#demo-photo-upload');
+
+const readFile = function () {
+    const $PhotoUploadFile = this.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL($PhotoUploadFile);
+    reader.onload = function () {
+        const $PhotoUploadUrl = this.result;
+        getOriginImg($PhotoUploadUrl);
+        startScan($PhotoUploadUrl);
+    };
+};
+if (typeof(FileReader) === 'undefined') {
+    alert('浏览器不支持');
+}
+else {
+    $demoPhotoUpload
+        .find('input')
+        .get(0)
+        .addEventListener('change', readFile, false);
+}
 
 
 
