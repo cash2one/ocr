@@ -217,9 +217,9 @@
                href="
                {%if $src eq Null%}
                /docs#FACE
-               <%else%>
+               {%else%}
                https://cloud.baidu.com/doc/FACE/index.html
-               <%/if%>">
+               {%/if%}">
                 技术文档
             </a>
         </div>

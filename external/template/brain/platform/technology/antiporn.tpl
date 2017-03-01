@@ -209,9 +209,9 @@
                href="
                {%if $src eq Null%}
                /docs#Antiporn
-               <%else%>
+               {%else%}
                https://cloud.baidu.com/doc/ANTIPORN/index.html
-               <%/if%>">
+               {%/if%}">
                 技术文档
             </a>
         </div>

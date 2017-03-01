@@ -217,9 +217,9 @@
                href="
                {%if $src eq Null%}
                /docs#Speech-Asr-O2OAndroidSDK
-               <%else%>
+               {%else%}
                https://cloud.baidu.com/doc/SPEECH/index.html
-               <%/if%>">
+               {%/if%}">
                 技术文档
             </a>
         </div>

@@ -213,9 +213,9 @@
                href="
                {%if $src eq Null%}
                /docs#NLP
-               <%else%>
+               {%else%}
                https://cloud.baidu.com/doc/NLP/index.html
-               <%/if%>">
+               {%/if%}">
                 技术文档
             </a>
         </div>
