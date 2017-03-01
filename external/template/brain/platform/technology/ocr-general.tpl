@@ -204,9 +204,16 @@
         <p>基于业界领先的深度学习技术<br>为您提供多场景、多语种、高精度的整体文字检测和识别服务</p>
         <div>
             <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">立即使用</a>
-            {%if $src eq Null%}
-            <a role="button" class="btn-other media" href="/docs#OCR">技术文档</a>
-            {%/if%}
+            <a role="button"
+               class="btn-other media"
+               href="
+               {%if $src eq Null%}
+               /docs#OCR
+               <%else%>
+               https://cloud.baidu.com/doc/OCR/index.html
+               <%/if%>">
+                技术文档
+            </a>
         </div>
     </div>
 </section>

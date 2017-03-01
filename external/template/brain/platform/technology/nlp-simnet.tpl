@@ -208,9 +208,16 @@
                href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">
                 立即使用
             </a>
-            {%if $src eq Null%}
-            <a role="button" class="btn-other media"  href="/docs#NLP">技术文档</a>
-            {%/if%}
+            <a role="button"
+               class="btn-other media"
+               href="
+               {%if $src eq Null%}
+               /docs#NLP
+               <%else%>
+               https://cloud.baidu.com/doc/NLP/index.html
+               <%/if%>">
+                技术文档
+            </a>
         </div>
     </div>
 </section>

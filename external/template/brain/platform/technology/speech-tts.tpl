@@ -204,9 +204,16 @@
         <p>基于业界领先的深度神经网络技术<br>提供流畅自然的语音合成服务，让您的应用开口说话</p>
         <div>
             <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">立即使用</a>
-            {%if $src eq Null%}
-            <a role="button" class="btn-other media" href="/docs#Speech-Tts">技术文档</a>
-            {%/if%}
+            <a role="button"
+               class="btn-other media"
+               href="
+               {%if $src eq Null%}
+               /docs#Speech-Tts-O2OAndroidSDK
+               <%else%>
+               https://cloud.baidu.com/doc/SPEECH/index.html
+               <%/if%>">
+                技术文档
+            </a>
         </div>
     </div>
 </section>

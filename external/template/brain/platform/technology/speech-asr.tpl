@@ -212,13 +212,16 @@
                href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">
                 立即使用
             </a>
-            {%if $src eq Null%}
             <a role="button"
                class="btn-other media"
-               href="/docs#NLP">
+               href="
+               {%if $src eq Null%}
+               /docs#Speech-Asr-O2OAndroidSDK
+               <%else%>
+               https://cloud.baidu.com/doc/SPEECH/index.html
+               <%/if%>">
                 技术文档
             </a>
-            {%/if%}
         </div>
     </div>
 </div>
