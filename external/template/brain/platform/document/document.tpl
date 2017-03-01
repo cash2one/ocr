@@ -583,6 +583,9 @@
                                 <li class="leaf" data-md="FACE-API">
                                     <a href="javascript:void(0)"><i></i>人脸比对</a>
                                 </li>
+                                <li class="leaf" data-md="FACE-API">
+                                    <a href="javascript:void(0)"><i></i>人脸查找</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="non-leaf">
