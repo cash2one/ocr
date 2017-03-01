@@ -92,38 +92,42 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 ## 通用错误码
 
-| 错误码 | 错误信息 | 描述 |
-| --- | --- | --- |
-| 216015 | module closed | 模块关闭 |
-| 216100 | invalid param | 非法参数 |
-| 216101 | not enough param | 参数数量不够 |
-| 216102 | service not support | 业务不支持 |
-| 216103 | param too long | 参数太长 |
-| 216110 | appid not exist | APP ID不存在 |
-| 216111 | invalid userid | 非法用户ID |
-| 216200 | empty image | 空的图片 |
-| 216201 | image format error | 图片格式错误 |
-| 216202 | image size error | 图片大小错误 |
-| 216300 | db error | DB错误 |
-| 216400 | backend error | 后端系统错误 |
-| 216401 | internal error | 内部错误 |
-| 216500 | unknown error | 未知错误 |
+| 错误码    | 错误信息                   | 描述            |
+| ------ | ---------------------- | ------------- |
+| 216015 | module closed          | 模块关闭          |
+| 216100 | invalid param          | 非法参数          |
+| 216101 | not enough param       | 参数数量不够        |
+| 216102 | service not support    | 业务不支持         |
+| 216103 | param too long         | 参数太长          |
+| 216110 | appid not exist        | APP ID不存在     |
+| 216111 | invalid userid         | 非法用户ID        |
+| 216200 | empty image            | 空的图片          |
+| 216201 | image format error     | 图片格式错误        |
+| 216202 | image size error       | 图片大小错误        |
+| 216300 | db error               | DB错误          |
+| 216400 | backend error          | 后端系统错误        |
+| 216401 | internal error         | 内部错误          |
+| 216500 | unknown error          | 未知错误          |
+| 216632 | ocr                    | unknown error |
+| 216633 | recognize idcard error | 识别身份证错误       |
+| 216634 | detect error           | 检测错误          |
+| 216635 | get mask error         | 获取mask图片错误    |
 
 ## 业务相关错误码
 
-| 错误码 | 错误信息 | 描述 |
-| --- | --- | --- |
-| 216600 | id number format error | 身份证的ID格式错误 |
+| 错误码    | 错误信息                         | 描述           |
+| ------ | ---------------------------- | ------------ |
+| 216600 | id number format error       | 身份证的ID格式错误   |
 | 216601 | id number and name not match | 身份证的ID和名字不匹配 |
-| 216611 | user not exist | 用户不存在 |
-| 216613 | user not found | 用户查找不到 |
-| 216614 | not enough images | 图片信息不完整 |
-| 216615 | fail to process images | 处理图片信息失败 |
-| 216616 | image existed | 图片已存在 |
-| 216617 | fail to add user | 添加用户失败 |
-| 216618 | no user in group | 群组里没有用户 |
-| 216630 | recognize error | 识别错误 |
-| 216631 | recognize bank card error | 识别银行卡错误 |
+| 216611 | user not exist               | 用户不存在        |
+| 216613 | user not found               | 用户查找不到       |
+| 216614 | not enough images            | 图片信息不完整      |
+| 216615 | fail to process images       | 处理图片信息失败     |
+| 216616 | image existed                | 图片已存在        |
+| 216617 | fail to add user             | 添加用户失败       |
+| 216618 | no user in group             | 群组里没有用户      |
+| 216630 | recognize error              | 识别错误         |
+| 216631 | recognize bank card error    | 识别银行卡错误      |
 
 # 识别接口
 
@@ -141,8 +145,8 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 * URL参数：<br>
 
-| 参数           | 值                                 |
-| ------------ | --------------------------------- |
+| 参数           | 值                                        |
+| ------------ | ---------------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
 * Header如下：
@@ -175,16 +179,16 @@ image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 
 **请求参数**
 
-| 参数 | 是否必选 | 类型 | 可选值范围 | 说明 |
-| --- | --- | --- | ---- | ---- |
-| image | true | string | - | 图像数据，base64编码 |
-| recognize_granularity | false | string | big、small | 是否定位单字符位置，big：不定位单字符位置，默认值；small：定位单字符位置  |
-| mask | false | string | - | 表示mask区域的黑白灰度图片，白色代表选中, base64编码 |
-| language_type | false | string | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
-| detect_direction | false | boolean | true、false | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
-| detect_language | FALSE | string | true、false | 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语） |
-| classify_dimension | FALSE | string | lottery | 分类维度（根据OCR结果进行分类），逗号分隔，当前只支持lottery。<br/>lottery：彩票分类，设置detect_direction有助于提升精度 |
-| vertexes_location | FALSE | string | true、false | 是否返回文字外接多边形顶点位置，不支持单字位置。默认为false |
+| 参数                    | 是否必选  | 类型      | 可选值范围                                   | 说明                                       |
+| --------------------- | ----- | ------- | --------------------------------------- | ---------------------------------------- |
+| image                 | true  | string  | -                                       | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
+| recognize_granularity | false | string  | big、small                               | 是否定位单字符位置，big：不定位单字符位置，默认值；small：定位单字符位置 |
+| mask                  | false | string  | -                                       | 表示mask区域的黑白灰度图片，白色代表选中, base64编码         |
+| language_type         | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
+| detect_direction      | false | boolean | true、false                              | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
+| detect_language       | FALSE | string  | true、false                              | 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）           |
+| classify_dimension    | FALSE | string  | lottery                                 | 分类维度（根据OCR结果进行分类），逗号分隔，当前只支持lottery。<br/>lottery：彩票分类，设置detect_direction有助于提升精度 |
+| vertexes_location     | FALSE | string  | true、false                              | 是否返回文字外接多边形顶点位置，不支持单字位置。默认为false         |
 
 **返回示例**
 
@@ -235,28 +239,28 @@ Content-Type: application/json;charset=UTF-8
 ```
 **返回参数**
 
-| 字段 | 必选 | 类型 | 说明 |
-| --- | --- | --- | ---- |
-| direction | 否 | int32 | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
-| log_id | 是 | uint64 | 唯一的log id，用于问题定位 |
-| words_result | 是 | array() | 定位和识别结果数组 |
-| words_result_num | 是 | uint32 | 识别结果数，表示words_result的元素个数 |
-| +vertexes_location | 否 | array() | 当前为四个顶点: 左上，右上，右下，左下。当vertexes_location=true时存在 |
-| ++x | 是 | uint32 | 水平坐标（坐标0点为左上角） |
-| ++y | 是 | uint32 | 垂直坐标（坐标0点为左上角） |
-| +location | 是 | array() | 位置数组（坐标0点为左上角） |
-| ++left | 是 | uint32 | 表示定位位置的长方形左上顶点的水平坐标 |
-| ++top | 是 | uint32 | 表示定位位置的长方形左上顶点的垂直坐标 |
-| ++width | 是 | uint32 | 表示定位位置的长方形的宽度 |
-| ++height | 是 | uint32 | 表示定位位置的长方形的高度 |
-| +words | 否 | string | 识别结果字符串 |
-| +chars | 否 | array() | 单字符结果，recognize_granularity=small时存在 |
-| ++location | 是 | array() | 位置数组（坐标0点为左上角） |
-| +++left | 是 | uint32 | 表示定位位置的长方形左上顶点的水平坐标 |
-| +++top | 是 | uint32 | 表示定位位置的长方形左上顶点的垂直坐标 |
-| +++width | 是 | uint32 | 表示定位定位位置的长方形的宽度 |
-| +++height | 是 | uint32 | 表示位置的长方形的高度 |
-| ++char | 是 | string | 单字符识别结果 |
+| 字段                 | 必选   | 类型      | 说明                                       |
+| ------------------ | ---- | ------- | ---------------------------------------- |
+| direction          | 否    | int32   | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
+| log_id             | 是    | uint64  | 唯一的log id，用于问题定位                         |
+| words_result       | 是    | array() | 定位和识别结果数组                                |
+| words_result_num   | 是    | uint32  | 识别结果数，表示words_result的元素个数                |
+| +vertexes_location | 否    | array() | 当前为四个顶点: 左上，右上，右下，左下。当vertexes_location=true时存在 |
+| ++x                | 是    | uint32  | 水平坐标（坐标0点为左上角）                           |
+| ++y                | 是    | uint32  | 垂直坐标（坐标0点为左上角）                           |
+| +location          | 是    | array() | 位置数组（坐标0点为左上角）                           |
+| ++left             | 是    | uint32  | 表示定位位置的长方形左上顶点的水平坐标                      |
+| ++top              | 是    | uint32  | 表示定位位置的长方形左上顶点的垂直坐标                      |
+| ++width            | 是    | uint32  | 表示定位位置的长方形的宽度                            |
+| ++height           | 是    | uint32  | 表示定位位置的长方形的高度                            |
+| +words             | 否    | string  | 识别结果字符串                                  |
+| +chars             | 否    | array() | 单字符结果，recognize_granularity=small时存在     |
+| ++location         | 是    | array() | 位置数组（坐标0点为左上角）                           |
+| +++left            | 是    | uint32  | 表示定位位置的长方形左上顶点的水平坐标                      |
+| +++top             | 是    | uint32  | 表示定位位置的长方形左上顶点的垂直坐标                      |
+| +++width           | 是    | uint32  | 表示定位定位位置的长方形的宽度                          |
+| +++height          | 是    | uint32  | 表示位置的长方形的高度                              |
+| ++char             | 是    | string  | 单字符识别结果                                  |
 
 
 ## 身份证识别
@@ -273,8 +277,8 @@ Content-Type: application/json;charset=UTF-8
 
 * URL参数：<br>
 
-| 参数           | 值                                 |
-| ------------ | --------------------------------- |
+| 参数           | 值                                        |
+| ------------ | ---------------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
 * Header如下：
@@ -307,11 +311,12 @@ id_card_side=front&image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK...
 
 **请求参数**
 
-| 参数 | 是否必选 | 类型 | 可选值范围 | 说明 |
-| --- | --- | --- | ---- | ---- |
+| 参数               | 是否必选  | 类型      | 可选值范围      | 说明                                       |
+| ---------------- | ----- | ------- | ---------- | ---------------------------------------- |
 | detect_direction | false | boolean | true、false | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
-| id_card_side | true | string | front、back | front：身份证正面；back：身份证背面 |
-| image | true | string | - | 图像数据，base64编码 |
+| id_card_side     | true  | string  | front、back | front：身份证正面；back：身份证背面                   |
+| image            | true  | string  | -          | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
+
 
 
 **返回示例**
@@ -344,18 +349,18 @@ Content-Type: application/json;charset=UTF-8
 
 **返回参数**
 
-| 字段 | 必选 | 类型 | 说明 |
-| --- | --- | --- | ---- |
-| direction | 否 | int32 | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
-| log_id | 是 | uint64 | 唯一的log id，用于问题定位 |
-| words_result | 是 | array() | 定位和识别结果数组 |
-| words_result_num | 是 | uint32 | 识别结果数，表示words_result的元素个数 |
-| +location | 是 | array() | 位置数组（坐标0点为左上角） |
-| ++left | 是 | uint32 | 表示定位位置的长方形左上顶点的水平坐标 |
-| ++top | 是 | uint32 | 表示定位位置的长方形左上顶点的垂直坐标 |
-| ++width | 是 | uint32 | 表示定位位置的长方形的宽度 |
-| ++height | 是 | uint32 | 表示定位位置的长方形的高度 |
-| +words | 否 | string | 识别结果字符串 |
+| 字段               | 必选   | 类型      | 说明                                       |
+| ---------------- | ---- | ------- | ---------------------------------------- |
+| direction        | 否    | int32   | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
+| log_id           | 是    | uint64  | 唯一的log id，用于问题定位                         |
+| words_result     | 是    | array() | 定位和识别结果数组                                |
+| words_result_num | 是    | uint32  | 识别结果数，表示words_result的元素个数                |
+| +location        | 是    | array() | 位置数组（坐标0点为左上角）                           |
+| ++left           | 是    | uint32  | 表示定位位置的长方形左上顶点的水平坐标                      |
+| ++top            | 是    | uint32  | 表示定位位置的长方形左上顶点的垂直坐标                      |
+| ++width          | 是    | uint32  | 表示定位位置的长方形的宽度                            |
+| ++height         | 是    | uint32  | 表示定位位置的长方形的高度                            |
+| +words           | 否    | string  | 识别结果字符串                                  |
 
 
 ## 银行卡识别
@@ -372,8 +377,8 @@ Content-Type: application/json;charset=UTF-8
 
 * URL参数：<br>
 
-| 参数           | 值                                 |
-| ------------ | --------------------------------- |
+| 参数           | 值                                        |
+| ------------ | ---------------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
 * Header如下：
@@ -405,9 +410,10 @@ image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 
 **请求参数**
 
-| 参数    | 类型     | 是否必须 | 说明             |
-| ----- | ------ | ---- | -------------- |
-| image | string | 是    | 图像数据，base64编码。 |
+| 参数    | 类型     | 是否必须 | 说明                                       |
+| ----- | ------ | ---- | ---------------------------------------- |
+| image | string | true | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
+
 
 
 **返回示例**

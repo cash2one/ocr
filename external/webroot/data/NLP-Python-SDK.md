@@ -22,14 +22,12 @@
         │   └── ocr.md
         └── setup.py            //setuptools安装
 
-**支持 Python版本：2.7.+ **
+**支持 Python版本：2.7.+ ,3.+**
 
-**安装使用SDK有如下三种方式：**
+**安装使用SDK有如下方式：**
 
-* 如果已安装pip，执行`pip install baidu-aip`即可。
-* 如果已安装setuptools，执行`python setup.py install`即可。
-* 下载[Python SDK](http://ai.baidu.com/sdk)解压，将aip目录复制到您的项目中即可。
-
+- 如果已安装pip，执行`pip install baidu-aip`即可。
+- 如果已安装setuptools，执行`python setup.py install`即可。
 
 # 快速入门
 
@@ -37,18 +35,18 @@
 
 AipNlp类提供给开发者一系列的自然语言处理方法，参考如下代码新建一个AipNlp对象：
 
-```Python
-# 引入NLP SDK
-from aip import AipNlp
 
-# 定义常量
-APP_ID = '你的 App ID'
-API_KEY = '你的 API Key'
-SECRET_KEY = '你的 Secret Key'
+    # 引入NLP SDK
+    from aip import AipNlp
+    
+    # 定义常量
+    APP_ID = '你的 App ID'
+    API_KEY = '你的 API Key'
+    SECRET_KEY = '你的 Secret Key'
+    
+    # 初始化AipNlp对象
+    aipNlp = AipNlp(APP_ID, API_KEY, SECRET_KEY)
 
-# 初始化AipNlp对象
-aipNlp = AipNlp(APP_ID, API_KEY, SECRET_KEY)
-```
 
 
 在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是由系统分配给用户的，均为字符串，用于标识用户，为访问服务做签名验证。获取方式请参考[获取AK/SK](../Reference/GetAKSK)。
@@ -58,21 +56,21 @@ aipNlp = AipNlp(APP_ID, API_KEY, SECRET_KEY)
 
 举例，要对字符串'你好百度'进行分词：
 
-```Python
-# 引入NLP SDK
-from aip import AipNlp
 
-# 定义常量
-APP_ID = '你的 App ID'
-API_KEY = '你的 API Key'
-SECRET_KEY = '你的 Secret Key'
+    # 引入NLP SDK
+    from aip import AipNlp
+    
+    # 定义常量
+    APP_ID = '你的 App ID'
+    API_KEY = '你的 API Key'
+    SECRET_KEY = '你的 Secret Key'
+    
+    # 初始化AipNlp对象
+    aipNlp = AipNlp(APP_ID, API_KEY, SECRET_KEY)
+    
+    # 调用分词接口
+    result = aipNlp.wordseg('你好百度')
 
-# 初始化AipNlp对象
-aipNlp = AipNlp(APP_ID, API_KEY, SECRET_KEY)
-
-# 调用分词接口
-result = aipNlp.wordseg('你好百度')
-```
 **中文分词 请求参数详情**
 
 | 参数      | 类型     | 描述                                     | 是否必须 |
@@ -102,24 +100,24 @@ result = aipNlp.wordseg('你好百度')
 
 举例，传入一个词计算词的的词向量，或者传入两个词计算两者相似度：
 
-```Python
-# 引入NLP SDK
-from aip import AipNlp
 
-# 定义常量
-APP_ID = '你的 App ID'
-API_KEY = '你的 API Key'
-SECRET_KEY = '你的 Secret Key'
+    # 引入NLP SDK
+    from aip import AipNlp
+    
+    # 定义常量
+    APP_ID = '你的 App ID'
+    API_KEY = '你的 API Key'
+    SECRET_KEY = '你的 Secret Key'
+    
+    # 初始化AipNlp对象
+    aipNlp = AipNlp(APP_ID, API_KEY, SECRET_KEY)
+    
+    # 调用词向量接口计算词向量
+    result = aipNlp.wordembedding('百度')
+    
+    # 调用词向量接口计算两个词的相似度
+    result = aipNlp.wordembedding('百度', '谷歌')
 
-# 初始化AipNlp对象
-aipNlp = AipNlp(APP_ID, API_KEY, SECRET_KEY)
-
-# 调用词向量接口计算词向量
-result = aipNlp.wordembedding('百度')
-
-# 调用词向量接口计算两个词的相似度
-result = aipNlp.wordembedding('百度', '谷歌')
-```
 
 **中文词向量表示 请求参数详情**
 
@@ -143,21 +141,21 @@ result = aipNlp.wordembedding('百度', '谷歌')
 
 举例，传入短语，计算中文DNN语言模型：
 
-```Python
-# 引入NLP SDK
-from aip import AipNlp
 
-# 定义常量
-APP_ID = '你的 App ID'
-API_KEY = '你的 API Key'
-SECRET_KEY = '你的 Secret Key'
+    # 引入NLP SDK
+    from aip import AipNlp
+    
+    # 定义常量
+    APP_ID = '你的 App ID'
+    API_KEY = '你的 API Key'
+    SECRET_KEY = '你的 Secret Key'
+    
+    # 初始化AipNlp对象
+    aipNlp = AipNlp(APP_ID, API_KEY, SECRET_KEY)
+    
+    # 调用中文DNN语言模型接口
+    result = aipNlp.dnnlm('百度是个搜索公司')
 
-# 初始化AipNlp对象
-aipNlp = AipNlp(APP_ID, API_KEY, SECRET_KEY)
-
-# 调用中文DNN语言模型接口
-result = aipNlp.dnnlm('百度是个搜索公司')
-```
 
 **中文DNN语言模型 请求参数详情**
 
@@ -180,21 +178,21 @@ result = aipNlp.dnnlm('百度是个搜索公司')
 
 举例，传入两个短文本，计算相似度：
 
-```Python
-# 引入NLP SDK
-from aip import AipNlp
 
-# 定义常量
-APP_ID = '你的 App ID'
-API_KEY = '你的 API Key'
-SECRET_KEY = '你的 Secret Key'
+    # 引入NLP SDK
+    from aip import AipNlp
+    
+    # 定义常量
+    APP_ID = '你的 App ID'
+    API_KEY = '你的 API Key'
+    SECRET_KEY = '你的 Secret Key'
+    
+    # 初始化AipNlp对象
+    aipNlp = AipNlp(APP_ID, API_KEY, SECRET_KEY)
+    
+    # 调用短文本相似度接口
+    result = aipNlp.simnet('百度是个搜索公司', '谷歌是个搜索公司')
 
-# 初始化AipNlp对象
-aipNlp = AipNlp(APP_ID, API_KEY, SECRET_KEY)
-
-# 调用短文本相似度接口
-result = aipNlp.simnet('百度是个搜索公司', '谷歌是个搜索公司')
-```
 
 **短文本相似度 请求参数详情**
 
@@ -217,45 +215,45 @@ result = aipNlp.simnet('百度是个搜索公司', '谷歌是个搜索公司')
 
 举例，传入评论文本，获取情感属性：
 
-```Python
-# 引入NLP SDK
-from aip import AipNlp
 
-# 定义常量
-APP_ID = '你的 App ID'
-API_KEY = '你的 API Key'
-SECRET_KEY = '你的 Secret Key'
+    # 引入NLP SDK
+    from aip import AipNlp
+    
+    # 定义常量
+    APP_ID = '你的 App ID'
+    API_KEY = '你的 API Key'
+    SECRET_KEY = '你的 Secret Key'
+    
+    # 初始化AipNlp对象
+    aipNlp = AipNlp(APP_ID, API_KEY, SECRET_KEY)
+    
+    # 调用评论观点抽取接口
+    result = aipNlp.commentTag('面包很好吃')
 
-# 初始化AipNlp对象
-aipNlp = AipNlp(APP_ID, API_KEY, SECRET_KEY)
-
-# 调用评论观点抽取接口
-result = aipNlp.commentTag('面包很好吃')
-```
 
 如果还想增加一些自定义参数配置：
 
 
-```Python
-# 引入NLP SDK
-from aip import AipNlp
 
-# 定义常量
-APP_ID = '你的 App ID'
-API_KEY = '你的 API Key'
-SECRET_KEY = '你的 Secret Key'
+    # 引入NLP SDK
+    from aip import AipNlp
+    
+    # 定义常量
+    APP_ID = '你的 App ID'
+    API_KEY = '你的 API Key'
+    SECRET_KEY = '你的 Secret Key'
+    
+    # 初始化AipNlp对象
+    aipNlp = AipNlp(APP_ID, API_KEY, SECRET_KEY)
+    
+    # 定义参数变量
+    options = {
+        'type': 10, #汽车分类
+    }
+    
+    # 调用情感观点抽取接口
+    result = aipNlp.commentTag('特斯拉外观很漂亮', options)
 
-# 初始化AipNlp对象
-aipNlp = AipNlp(APP_ID, API_KEY, SECRET_KEY)
-
-# 定义参数变量
-options = {
-    'type': 10, #汽车分类
-}
-
-# 调用情感观点抽取接口
-result = aipNlp.commentTag('特斯拉外观很漂亮', options)
-```
 
 **评论观点抽取 请求参数详情**
 

@@ -22,13 +22,12 @@
         │   └── ocr.md
         └── setup.py            //setuptools安装
 
-**支持 Python版本：2.7.+ **
+**支持 Python版本：2.7.+ ,3.+**
 
-**安装使用SDK有如下三种方式：**
+**安装使用SDK有如下方式：**
 
-* 如果已安装pip，执行`pip install baidu-aip`即可。
-* 如果已安装setuptools，执行`python setup.py install`即可。
-* 下载[Python SDK](http://ai.baidu.com/sdk)解压，将aip目录复制到您的项目中即可。
+- 如果已安装pip，执行`pip install baidu-aip`即可。
+- 如果已安装setuptools，执行`python setup.py install`即可。
 
 # 快速入门
 
@@ -38,18 +37,18 @@
 
 用户可以参考如下代码初始化一个AipAntiPorn对象：
 
-```Python
-# 引入AntiPorn SDK
-from aip import AipAntiPorn
 
-# 定义常量
-APP_ID = '你的 App ID'
-API_KEY = '你的 API Key'
-SECRET_KEY = '你的 Secret Key'
+    # 引入AntiPorn SDK
+    from aip import AipAntiPorn
+    
+    # 定义常量
+    APP_ID = '你的 App ID'
+    API_KEY = '你的 API Key'
+    SECRET_KEY = '你的 Secret Key'
+    
+    # 初始化AipAntiPorn对象
+    aipAntiPorn = AipAntiPorn(APP_ID, API_KEY, SECRET_KEY)
 
-# 初始化AipAntiPorn对象
-aipAntiPorn = AipAntiPorn(APP_ID, API_KEY, SECRET_KEY)
-```
 
 在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是由系统分配给用户的，均为字符串，用于标识用户，为访问服务做签名验证。获取方式请参考[获取AK/SK](../Reference/GetAKSK)。
 
@@ -58,26 +57,26 @@ aipAntiPorn = AipAntiPorn(APP_ID, API_KEY, SECRET_KEY)
 
 检测一张图片是否是黄反图片，示例代码如下：
 
-```Python
-# 引入AntiPorn SDK
-from aip import AipAntiPorn
 
-# 定义常量
-APP_ID = '你的 App ID'
-API_KEY = '你的 API Key'
-SECRET_KEY = '你的 Secret Key'
+    # 引入AntiPorn SDK
+    from aip import AipAntiPorn
+    
+    # 定义常量
+    APP_ID = '你的 App ID'
+    API_KEY = '你的 API Key'
+    SECRET_KEY = '你的 Secret Key'
+    
+    # 初始化AipAntiPorn对象
+    aipAntiPorn = AipAntiPorn(APP_ID, API_KEY, SECRET_KEY)
+    
+    # 读取图片
+    def get_file_content(filePath):
+        with open(filePath, 'rb') as fp:
+            return fp.read()
+    
+    # 调用黄反识别接口
+    result = aipAntiPorn.detect(get_file_content('antiporn.jpg'))
 
-# 初始化AipAntiPorn对象
-aipAntiPorn = AipAntiPorn(APP_ID, API_KEY, SECRET_KEY)
-
-# 读取图片
-def get_file_content(filePath):
-    with open(filePath, 'rb') as fp:
-    	return fp.read()
-
-# 调用黄反识别接口
-result = aipAntiPorn.detect(get_file_content('antiporn.jpg'))
-```
 
 
 

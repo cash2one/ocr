@@ -56,12 +56,43 @@ public class Sample {
     public static void main(String[] args) {
         // 初始化一个NLPClient
         AipNlp client = new AipNlp(APP_ID, API_KEY, SECRET_KEY);
+        
+        // 可选：设置网络连接参数
+        client.setConnectionTimeoutInMillis(2000);
+        client.setSocketTimeoutInMillis(60000);
     }
 }
 ```
+
 在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是在创建完毕应用后，系统分配给用户的，均为字符串，用于标识用户，为访问做签名验证，可在AI服务控制台中的**应用列表**中查看。  
 
 **注意：**如您以前是百度云的老用户，其中`API_KEY`对应百度云的“Access Key ID”，`SECRET_KEY`对应百度云的“Access Key Secret”。
+
+
+## 配置AipNlpClient
+
+如果用户需要配置AipNlpClient的一些细节参数，可以在构造AipNlp之后调用接口设置参数，目前只支持以下参数：
+
+| 接口                           | 说明                      |
+| ---------------------------- | ----------------------- |
+| setConnectionTimeoutInMillis | 建立连接的超时时间（单位：毫秒）        |
+| setSocketTimeoutInMillis     | 通过打开的连接传输数据的超时时间（单位：毫秒） |
+
+# 错误信息格式
+
+若请求错误，服务器将返回的JSON文本包含以下参数：
+
+* **error_code：**错误码；关于错误码的详细信息请参考**通用错误码**和**业务相关错误码**。
+* **error_msg：**错误描述信息，帮助理解和解决发生的错误。
+
+**服务端返回的错误码**
+
+| error_code  | error_msg                             | 说明       |
+| ----------- | ------------------------------------- | -------- |
+| FormatError | [param]:[param]=[Validation criteria] | 请求格式错误   |
+| Forbidden   | authentication failed                 | 认证失败或无权限 |
+| Unavailable | Service internal error occurred       | 内部服务发生错误 |
+
 
 # 中文分词
 
@@ -320,7 +351,7 @@ public void simnet(AipNlp client) {
 public void NLPCommentTag(AipNlp client) {
 
     // 获取美食评论情感属性
-    JSONObject response = client.commentTag("这家餐馆味道不错", ESimnetType.FOOD");
+    JSONObject response = client.commentTag("这家餐馆味道不错", ESimnetType.FOOD);
     System.out.println(response.toString());
 
     // 获取酒店评论情感属性
@@ -364,3 +395,10 @@ public void NLPCommentTag(AipNlp client) {
 
 
 
+# 版本更新记录
+
+| 上线日期      | 版本号  | 更新内容                                     |
+| --------- | ---- | ---------------------------------------- |
+| 2017.3.2  | 1.2  | 增加设置超时接口                                 |
+| 2017.1.20 | 1.1  | 对部分云用户调用不成功的错误修复                         |
+| 2017.1.6  | 1.0  | 初始版本，上线中文分词、词性标注、词向量表示、中文DNN语言模型、短文本相似度和评论观点抽取接口 |
