@@ -215,8 +215,8 @@
         </li>
         <li>
             <a href="/tech/face/detect">
-                <h1>人脸识别</h1>
-                <p>快速检测人脸、定位五官关键点，准确识别多种人脸属性<br>为您提供多场景高精度的人脸识别服务。</p>
+                <h1>人脸查找</h1>
+                <p>为您提供1:N人脸查找匹配服务，帮助您轻松实现，从人脸库中<br>识别用户身份或查找相似人脸</p>
                 <div>
                     <button type="button" class="get-started">了解详情</button>
                 </div>
