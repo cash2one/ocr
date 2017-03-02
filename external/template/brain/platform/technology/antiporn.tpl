@@ -410,7 +410,9 @@
 </div>
 <aside class="aside-action">
     <ul>
-        <li class="consult"><a data-spec="合作咨询"></a></li>
+        <li class="consult">
+            <a id="ai-consult" data-spec="合作咨询"></a>
+        </li>
         <li class="feedback"><a data-spec="我要反馈" id="feedback-btn"></a></li>
         <li class="back-top"><a data-spec="返回顶部"></a></li>
     </ul>
