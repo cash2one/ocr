@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488185410/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488425849/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488185410/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488185410/css/technology/nlp-comment_tag.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488425849/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488425849/css/technology/nlp-comment_tag.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="//ai.bdstatic.com/dist/1488185410/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1488425849/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -228,14 +228,14 @@
         <div class="nlp-function-list">
             <h2>单条评论观点抽取</h2>
             <p class="list-title">输入单条用户评论</p>
-            <img src="//ai.bdstatic.com/dist/1488185410/ai_images/technology/nlp-comment/list-1.png">
+            <img src="//ai.bdstatic.com/dist/1488425849/ai_images/technology/nlp-comment/list-1.png">
             <p class="list-intro">该形式需要用户或者准备demo中一次提供单条评论，评论观点挖掘工具通过对其中的情感观点抽取进行单独的标签展示</p>
             <p class="list-intro">评论观点标签极性包含好评和差评两个极性，不同极性的标签展示可适当通过颜色或其他形式进行区分</p>
         </div>
         <div class="nlp-function-list">
             <h2>产品评论观点挖掘</h2>
             <p class="list-title">输入实体评论集</p>
-            <img src="//ai.bdstatic.com/dist/1488185410/ai_images/technology/nlp-comment/list-2.png" >
+            <img src="//ai.bdstatic.com/dist/1488425849/ai_images/technology/nlp-comment/list-2.png" >
             <p class="list-intro">该形式需要用户或者准备demo中一次提供单个实体的若干条评论，通过评论观点抽取工具对每一条评论进行抽取，并最终进行汇总得到实体的总体标签结果进行展示</p>
             <p class="list-intro">评论观点标签极性包含好评和差评两个极性，不同极性的标签展示可适当通过颜色或其他形式进行区分</p>
         </div>
@@ -503,7 +503,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="//ai.bdstatic.com/dist/1488185410/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1488185410/js/technology/nlp-comment_tag.js"></script>
+<script src="//ai.bdstatic.com/dist/1488425849/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1488425849/js/technology/nlp-comment_tag.js"></script>
 </body>
 </html>
