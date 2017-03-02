@@ -49,16 +49,16 @@ public class Sample {
     public static final String APP_ID = "你的 App ID";
     public static final String API_KEY = "你的 Api ID";
     public static final String SECRET_KEY = "你的 Secret Key";
-    
+
     public static void main(String[] args) {
 
         // 初始化一个FaceClient
         AipFace client = new AipFace(APP_ID, API_KEY, SECRET_KEY);
-        
+
         // 可选：设置网络连接参数
         client.setConnectionTimeoutInMillis(2000);
         client.setSocketTimeoutInMillis(60000);
-        
+
         // 调用API
         String image = "test.jpg";
         JSONObject res = client.detect(path, new HashMap<String, String>());
@@ -66,7 +66,7 @@ public class Sample {
     }
 }
 ```
-在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是在创建完毕应用后，系统分配给用户的，均为字符串，用于标识用户，为访问做签名验证，可在AI服务控制台中的**应用列表**中查看。  
+在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是在创建完毕应用后，系统分配给用户的，均为字符串，用于标识用户，为访问做签名验证，可在AI服务控制台中的**应用列表**中查看。
 
 **注意：**如您以前是百度云的老用户，其中`API_KEY`对应百度云的“Access Key ID”，`SECRET_KEY`对应百度云的“Access Key Secret”。
 
@@ -298,7 +298,7 @@ public void faceRecognize(AipFace client) {
 
 # 人脸查找
 
-##人脸注册
+## 人脸注册
 
 人脸注册接口提供了使用上传图片进行注册新用户的功能，需要指定注册用户的id和描述信息，所在组id以及本地用户人脸图片。
 
@@ -343,7 +343,7 @@ public void facesetAddUser(AipFace client) {
 }
 ```
 
-##人脸更新
+## 人脸更新
 
 人脸更新接口提供了为已有用户更新人脸图像的功能，**新上传的图片将覆盖原有图像**。
 
@@ -388,7 +388,7 @@ uid需要在库中已存在，且组成为字母/数字/下划线，长度不超
 }
 ```
 
-##人脸删除
+## 人脸删除
 
 人脸删除接口提供了从库中彻底删除一个用户的功能，包括用户所有图像和身份信息，同时也将从各个组中把用户删除。
 
@@ -427,7 +427,7 @@ uid需要在库中已存在，且组成为字母/数字/下划线，长度不超
 }
 ```
 
-##人脸删除
+## 人脸删除
 
 人脸删除接口提供了从库中彻底删除一个用户的功能，包括用户所有图像和身份信息，同时也将从各个组中把用户删除。
 
@@ -466,7 +466,7 @@ uid需要在库中已存在，且组成为字母/数字/下划线，长度不超
 }
 ```
 
-##人脸认证
+## 人脸认证
 
 人脸认证接口用于识别上传的图片是否为指定用户。
 
@@ -516,7 +516,7 @@ public void verifyUser(AipFace client) {
 }
 ```
 
-##人脸识别
+## 人脸识别
 
 人脸识别接口用于计算指定组内用户与上传图像的相似度。
 
@@ -578,7 +578,7 @@ public void identifyUser(AipFace client) {
 ```
 
 
-##用户信息查询
+## 用户信息查询
 
 用户信息查询接口用于查询某用户的详细信息。
 
@@ -622,7 +622,7 @@ uid需要在库中已存在，且组成为字母/数字/下划线，长度不超
 }
 ```
 
-##组列表查询
+## 组列表查询
 
 组列表查询接口用于查询一个app下所有组的列表。
 
@@ -665,7 +665,7 @@ public void getGroupList(AipFace client) {
 }
 ```
 
-##组内用户列表查询
+## 组内用户列表查询
 
 组内用户列表查询接口用于查询一个用户组内所有的用户信息。
 
@@ -717,7 +717,7 @@ public void getGroupUsers(AipFace client) {
 }
 ```
 
-##组内添加用户
+## 组内添加用户
 
 组内添加用户接口用于把一个已经存在于库中的用户添加到新的用户组中。
 
@@ -745,11 +745,11 @@ public void addGroupUser(AipFace client) {
 **返回样例：**
 
 ```json
-// 正确返回值 
+// 正确返回值
 {
     "log_id": 3314921889,
 }
-// 发生错误时返回值 
+// 发生错误时返回值
 {
   "error_code": 216100,
   "log_id": 3111284097,
@@ -757,7 +757,7 @@ public void addGroupUser(AipFace client) {
 }
 ```
 
-##组内删除用户
+## 组内删除用户
 
 组内删除用户接口用于把一个用户从某个组中删除，但不会删除用户在其它组内的信息。当用户仅属于单个分组时，本接口将返回错误。
 
@@ -785,11 +785,11 @@ public void deleteGroupUser(AipFace client) {
 **返回样例：**
 
 ```json
-// 正确返回值 
+// 正确返回值
 {
     "log_id": 3314921889,
 }
-// 发生错误时返回值 
+// 发生错误时返回值
 {
   "error_code": 216619,
   "log_id": 815967402,
