@@ -58,7 +58,7 @@ let renderMdPage = function (mdName) {
 
     $.ajax({
         type: 'GET',
-        url: `/data/${mdName}.md?v=${Date.now}`,
+        url: `/data/${mdName}.md?v=${Date.now()}`,
         // TODO fail处理
         success(markdownContent) {
             previousMdFile = mdName;
