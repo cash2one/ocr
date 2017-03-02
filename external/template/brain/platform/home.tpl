@@ -214,7 +214,7 @@
             </video>
         </li>
         <li>
-            <a href="/tech/face/detect">
+            <a href="/tech/face/search">
                 <h1>人脸查找</h1>
                 <p>为您提供1:N人脸查找匹配服务，帮助您轻松实现，从人脸库中<br>识别用户身份或查找相似人脸</p>
                 <div>
