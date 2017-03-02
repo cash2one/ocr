@@ -1,0 +1,62 @@
+#!/bin/bash
+set -x
+workspace=$(pwd)
+tgz=
+file=$workspace/$tgz
+BUILD_SUB_DIRS=
+init(){
+    if ! [[ -f $file ]];then
+
+        cat<<EOF
+#################################################
+
+WAR:$file not exist"
+
+#################################################
+
+EOF
+        exit 1
+    fi
+    rm -rf ${workspace}/bak
+    mkdir -p "${workspace}/bak"
+    mv  $BUILD_SUB_DIRS bak
+
+    if ! tar zxf $file -C $workspace;then
+        echo "unzip $file fail"
+        exit 1
+    fi
+}
+
+start() {
+    init
+}
+reload() {
+    init
+    sh $workspace/webserver/loadnginx reload
+}
+rollback() {
+    rm -rf $BUILD_SUB_DIRS
+    mv bak/* $workspace
+    case $1 in
+        reload )
+        sh $workspace/webserver/loadnginx reload
+        ;;
+    esac
+}
+main() {
+    case $1 in
+        stop )
+        stop
+        ;;
+        start)
+        start $2
+        ;;
+        rollback )
+        rollback $2
+        ;;
+        *)
+        echo '(start|stop|rollback)'
+        ;;
+    esac
+}
+main "$@"
