@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488523517/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488528241/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488523517/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488523517/css/technology/face-search.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488528241/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488528241/css/technology/face-search.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="//ai.bdstatic.com/dist/1488523517/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1488528241/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -209,7 +209,7 @@
         <div class="tech-banner-btn-list">
             <a role="button"
                class="btn-primary media"
-               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">
+               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">
                 立即使用
             </a>
             <a role="button"
@@ -512,7 +512,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="//ai.bdstatic.com/dist/1488523517/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1488523517/js/technology/face-search.js"></script>
+<script src="//ai.bdstatic.com/dist/1488528241/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1488528241/js/technology/face-search.js"></script>
 </body>
 </html>
