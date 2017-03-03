@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488425849/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/technology/ocr-uncommon.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488425849/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488425849/css/technology/ocr-uncommon.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="//ai.bdstatic.com/dist/1487644629/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1488425849/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -201,10 +201,10 @@
     <div class="tech-section tech-banner">
     <div class="ai-container">
         <div class="tech-banner-title">
-            语音识别
+            通用生僻字
         </div>
         <div class="tech-banner-info">
-            为您提供高精度的语音识别服务，融合百度领先的自然语言处理技术支持多场景智能语音交互
+            还没提供文案
         </div>
         <div class="tech-banner-btn-list">
             <a role="button"
@@ -216,10 +216,10 @@
                class="btn-other media"
                href="
                {%if $src eq Null%}
-               /docs#Speech-Asr-O2OAndroidSDK
-               <%else%>
-               https://cloud.baidu.com/doc/SPEECH/index.html
-               <%/if%>">
+               /docs#OCR
+               {%else%}
+               https://cloud.baidu.com/doc/OCR/index.html
+               {%/if%}">
                 技术文档
             </a>
         </div>
@@ -231,11 +231,13 @@
             功能介绍
         </div>
         <div class="tech-function-info">
-            百度语音识别为开发者提供业界优质且免费的语音服务，通过场景识别优化，为车载导航，智能家居和社交聊天等行业提供语音解决方案<br>
-            百度语音识别的准确率达到90%以上，让您的应用绘“声”绘色
+            依托全网海量优质数据和业界领先的深度学习技术<br>
+            支持2W+大字库识别，能够覆盖大部分生僻字
         </div>
-        <div class="tech-function-pic">
-            <img width="670" src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/speech-asr/intro.png" >
+        <div class="tech-function-detail tech-clear">
+            <div class="tech-function-original-card"></div>
+            <div class="tech-function-arrow"></div>
+            <div class="tech-function-scan-result"></div>
         </div>
     </div>
 </div>
@@ -258,71 +260,34 @@
                 <div class="tech-demo-desc">提示：可支持PNG、JPG、JPEG、BMP图片文件，不支持GIF图片，图片大小不超过2M，长边不超过2048像素。为保证正常识别效果，请保证需要识别部分为图片主体部分。</div>
                 <div class="tech-demo-card-list">
                     <div class="tech-demo-card-item tech-demo-card-active">
-                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/ocr-general/demo-card-1.png">
+                        <img src="//ai.bdstatic.com/dist/1488425849/ai_images/technology/ocr-uncommon/demo-card-1.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/ocr-general/demo-card-2.png">
+                        <img src="//ai.bdstatic.com/dist/1488425849/ai_images/technology/ocr-uncommon/demo-card-2.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/ocr-general/demo-card-3.png">
+                        <img src="//ai.bdstatic.com/dist/1488425849/ai_images/technology/ocr-uncommon/demo-card-3.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/ocr-general/demo-card-4.png">
+                        <img src="//ai.bdstatic.com/dist/1488425849/ai_images/technology/ocr-uncommon/demo-card-4.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/ocr-general/demo-card-5.png">
+                        <img src="//ai.bdstatic.com/dist/1488425849/ai_images/technology/ocr-uncommon/demo-card-5.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/ocr-general/demo-card-6.jpg">
+                        <img src="//ai.bdstatic.com/dist/1488425849/ai_images/technology/ocr-uncommon/demo-card-6.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/ocr-general/demo-card-7.png">
+                        <img src="//ai.bdstatic.com/dist/1488425849/ai_images/technology/ocr-uncommon/demo-card-7.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1487644629/ai_images/technology/ocr-general/demo-card-8.png">
+                        <img src="//ai.bdstatic.com/dist/1488425849/ai_images/technology/ocr-uncommon/demo-card-8.png">
                     </div>
                 </div>
             </div>
             <div class="tech-demo-data-view tech-demo-json" id="demo-json" data-label="RESPONSE JSON"></div>
         </div>
     </div>
-    <!--<div claser clear-float">-->
-        <!--<div class="data-view" data-label="原始图片" id="demo-origin"></div>-->
-        <!--<div class="data-view" data-label="识别结果" id="demo-result">-->
-            <!--<table>-->
-                <!--<tbody class="demo-result-table">-->
-
-                <!--</tbody>-->
-            <!--</table>-->
-        <!--</div>-->
-        <!--<div class="data-view tech-demo-examples">-->
-            <!--<div class="tech-demo-examples-item">-->
-                <!--<img src="../../../ai_images/technology/ocr-general/demo-card-1.png">-->
-            <!--</div>-->
-            <!--<div class="tech-demo-examples-item">-->
-                <!--<img src="../../../ai_images/technology/ocr-general/demo-card-2.png">-->
-            <!--</div>-->
-            <!--<div class="tech-demo-examples-item">-->
-                <!--<img src="../../../ai_images/technology/ocr-general/demo-card-3.png">-->
-            <!--</div>-->
-            <!--<div class="tech-demo-examples-item">-->
-                <!--<img src="../../../ai_images/technology/ocr-general/demo-card-4.png">-->
-            <!--</div>-->
-            <!--<div class="tech-demo-examples-item">-->
-                <!--<img src="../../../ai_images/technology/ocr-general/demo-card-5.png">-->
-            <!--</div>-->
-            <!--<div class="tech-demo-examples-item">-->
-                <!--<img src="../../../ai_images/technology/ocr-general/demo-card-6.jpg">-->
-            <!--</div>-->
-            <!--<div class="tech-demo-examples-item">-->
-                <!--<img src="../../../ai_images/technology/ocr-general/demo-card-7.png">-->
-            <!--</div>-->
-            <!--<div class="tech-demo-examples-item">-->
-                <!--<img src="../../../ai_images/technology/ocr-general/demo-card-8.png">-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="data-view" data-label="RESPONSE JSON" id="demo-json"></div>-->
-    <!--</div>-->
 </div>
 
 <div class="ai-container tech-section tech-feature">
@@ -331,41 +296,25 @@
         <div class="tech-feature-item tech-feature-shadow">
             <div class="tech-feature-icon tech-feature-icon-1"></div>
             <div class="tech-feature-desc">
-                <div class="tech-feature-desc-title">全平台REST API</div>
+                <div class="tech-feature-desc-title">精准度高</div>
                 <div class="tech-feature-desc-info">
-                    行业率先推出语音识别REST API，采用HTTP方式请求，可适用于任何平台的语音识别
+                    国内首个公有云OCR产品，基于百度深度学习研究院（IDL）强大的深度学习算法和中文检测识别技术，整图中文识别准确率达85%以上，英文91%以上
                 </div>
             </div>
         </div>
         <div class="tech-feature-item tech-feature-shadow">
             <div class="tech-feature-icon tech-feature-icon-2"></div>
             <div class="tech-feature-desc">
-                <div class="tech-feature-desc-title">离线在线融合模式</div>
-                <div class="tech-feature-desc-info" >SDK可以根据当前网络状况及指令的类型，自动判断使用本地引擎还是云端引擎进行语音识别</div>
+                <div class="tech-feature-desc-title">成熟稳定</div>
+                <div class="tech-feature-desc-info" >经过百度词典，手机百度等多款重量级产品实践检验，产品成熟稳定。支持实时文字识别能力、弹性灵活的高并发承载及99.95%的可用性保证</div>
             </div>
         </div>
         <div class="tech-feature-item tech-feature-shadow">
             <div class="tech-feature-icon tech-feature-icon-3"></div>
             <div class="tech-feature-desc">
-                <div class="tech-feature-desc-title">深度语义解析</div>
+                <div class="tech-feature-desc-title">简单易用</div>
                 <div class="tech-feature-desc-info">
-                    支持多达35个垂类领域的语义理解定制，如：交通，社交，娱乐等领域。以及支持自定义指令集和问答对设置，让你的应用理解用户的意图
-                </div>
-            </div>
-        </div>
-        <div class="tech-feature-item tech-feature-shadow">
-            <div class="tech-feature-icon tech-feature-icon-4"></div>
-            <div class="tech-feature-desc">
-                <div class="tech-feature-desc-title">场景识别定制</div>
-                <div class="tech-feature-desc-info" >开发者可根据使用场景，自定义设置识别垂类模型。有音乐、视频、地图、游戏、电商共17个垂类可供选择，一步设置，精确到位</div>
-            </div>
-        </div>
-        <div class="tech-feature-item tech-feature-shadow">
-            <div class="tech-feature-icon tech-feature-icon-5"></div>
-            <div class="tech-feature-desc">
-                <div class="tech-feature-desc-title">自定义上传语料，训练模型</div>
-                <div class="tech-feature-desc-info">
-                    开发者可以自行上传词库，训练专属识别模型。提交的语料越多、越全，语音识别的效果提升也会越明显
+                    提供符合RESTful规范的API访问接口及服务端SDK，使用便捷
                 </div>
             </div>
         </div>
@@ -378,45 +327,27 @@
         <div class="tech-scenario-item tech-scenario-shadow">
             <div class="tech-scenario-icon tech-scenario-icon-1"></div>
             <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">交通出行</div>
+                <div class="tech-scenario-desc-name">通用自然场景</div>
                 <div class="tech-scenario-desc-info">
-                    全程语音导航，结合地图指示，方便安全
+                    印刷文档和自然场景有生僻字识别需求的场景下，进行生僻字识别。
                 </div>
             </div>
         </div>
         <div class="tech-scenario-item tech-scenario-shadow">
             <div class="tech-scenario-icon tech-scenario-icon-2"></div>
             <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">应用助手</div>
+                <div class="tech-scenario-desc-name">搜索场景</div>
                 <div class="tech-scenario-desc-info">
-                    通过语音与应用交互，来搜索内容，播放歌曲
+                    需要对某些生僻字进行搜索的场景下，进行生僻字识别。
                 </div>
             </div>
         </div>
         <div class="tech-scenario-item tech-scenario-shadow">
             <div class="tech-scenario-icon tech-scenario-icon-3"></div>
             <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">智能家居</div>
+                <div class="tech-scenario-desc-name">教育场景</div>
                 <div class="tech-scenario-desc-info">
-                    通过专名识别识别多轮对话中的核心实体，智慧语音控制家电家具，让家更智能
-                </div>
-            </div>
-        </div>
-        <div class="tech-scenario-item tech-scenario-shadow">
-            <div class="tech-scenario-icon tech-scenario-icon-4"></div>
-            <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">社交聊天</div>
-                <div class="tech-scenario-desc-info">
-                    社交聊天发送实时语音，支持中文，英文，中英文混杂识别，方言支持粤语，四川话等。让沟通交流更准确快捷
-                </div>
-            </div>
-        </div>
-        <div class="tech-scenario-item tech-scenario-shadow">
-            <div class="tech-scenario-icon tech-scenario-icon-5"></div>
-            <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">游戏娱乐</div>
-                <div class="tech-scenario-desc-info">
-                    即时语音聊天，边玩边聊
+                    教育行业生僻字识别，可应用在汉语词典，语文课本，文言文批改等场景。
                 </div>
             </div>
         </div>
@@ -427,41 +358,29 @@
         <div class="tech-case-item tech-case-item-1 tech-case-active">
             <div class="ai-container">
                 <div class="tech-case-item-logo"></div>
-                <div class="tech-case-item-title">手机百度</div>
+                <div class="tech-case-item-title">百度词典</div>
                 <div class="tech-case-item-info">
-                    手机百度可以通过语音输入用户的搜索关键词<br>
-                    直接匹配出相应搜索结果，利用百度语音识别技术进行搜索的效率是拼音输入搜索的183.46%
+                    百度词典app是百度官方推出的手机词典软件<br>
+                    用户可以用摄像头拍摄的方式，调用百度生僻字OCR进行生僻字识别，有效的增强了应用的文字输入能力
                 </div>
             </div>
         </div>
         <div class="tech-case-item tech-case-item-2">
             <div class="ai-container">
                 <div class="tech-case-item-logo"></div>
-                <div class="tech-case-item-title">陌陌</div>
+                <div class="tech-case-item-title">手机百度</div>
                 <div class="tech-case-item-info">
                     发送实时语音，畅快聊天
-                </div>
-            </div>
-        </div>
-        <div class="tech-case-item tech-case-item-3">
-            <div class="ai-container">
-                <div class="tech-case-item-logo"></div>
-                <div class="tech-case-item-title">百度输入法</div>
-                <div class="tech-case-item-info">
-                    百度输入法利用百度语音识别技术实时将用户的字句转换成文字，提升输入效率
                 </div>
             </div>
         </div>
     </div>
     <div class="tech-case-option">
         <div class="tech-case-option-btn tech-case-option-btn-1 tech-case-active">
-            手机百度
+            百度词典
         </div>
         <div class="tech-case-option-btn tech-case-option-btn-2">
-            陌陌
-        </div>
-        <div class="tech-case-option-btn tech-case-option-btn-3">
-            百度输入法
+            手机百度
         </div>
     </div>
 </div>
@@ -488,16 +407,18 @@
         <div class="tech-guide-link tech-clear">
             <div class="tech-guide-link-title">开发指南</div>
             <div class="tech-guide-link-list">
-                <a class="tech-link-btn" href="/docs#Speech-Asr">技术文档 &gt;</a>
+                <a class="tech-link-btn" href="/docs#Speech-OCR">技术文档 &gt;</a>
                 <a class="tech-link-btn" href="/sdk">SDK下载 &gt;</a>
             </div>
         </div>
         <div class="tech-guide-question tech-clear">
             <div class="tech-guide-question-title">常见问题</div>
             <div class="tech-guide-question-list">
-                <a class="tech-link-btn" href="/docs#Speech-Asr-FAQ_Q2">语音识别REST API支持的音频格式、采样率有哪些？</a>
-                <a class="tech-link-btn" href="/docs#Speech-Asr-FAQ_Q3">语音识别REST API最长支持多长的录音？</a>
-                <a class="tech-link-btn" href="/docs#Speech-Asr-FAQ_Q4">语音识别SDK支持的音频格式、采样率有哪些？</a>
+                <a class="tech-link-btn" href="/docs#Speech-OCR-FAQ_Q1">图片格式和分辨率有限制吗?</a>
+                <a class="tech-link-btn" href="/docs#Speech-OCR-FAQ_Q8">字体有要求吗？</a>
+                <a class="tech-link-btn" href="/docs#Speech-OCR-FAQ_Q9">支持哪些语言识别？</a>
+                <a class="tech-link-btn" href="/docs#Speech-OCR-FAQ_Q10">支持文档扫描图片的文字识别吗？</a>
+                <a class="tech-link-btn" href="/docs#Speech-OCR-FAQ_Q7">怎么提高文字识别的准确率和识别速度？</a>
             </div>
         </div>
     </div>
@@ -508,7 +429,9 @@
 </div>
 <aside class="aside-action">
     <ul>
-        <li class="consult"><a data-spec="合作咨询"></a></li>
+        <li class="consult">
+            <a id="ai-consult" data-spec="合作咨询"></a>
+        </li>
         <li class="feedback"><a data-spec="我要反馈" id="feedback-btn"></a></li>
         <li class="back-top"><a data-spec="返回顶部"></a></li>
     </ul>
@@ -634,7 +557,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="//ai.bdstatic.com/dist/1487644629/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1487644629/js/technology/ocr-uncommon.js"></script>
+<script src="//ai.bdstatic.com/dist/1488425849/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1488425849/js/technology/ocr-uncommon.js"></script>
 </body>
 </html>
