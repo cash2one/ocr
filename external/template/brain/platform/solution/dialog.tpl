@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488425849/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488523517/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488425849/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488425849/css/solution/dialog.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488523517/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488523517/css/solution/dialog.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="//ai.bdstatic.com/dist/1488425849/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1488523517/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -215,7 +215,7 @@
         <div class="solution-container">
             <div class="solution-case shadow">
                 <div class="solution-icon">
-                    <img src="//ai.bdstatic.com/dist/1488425849/ai_images/solution/dialog/solution-case-1.png">
+                    <img src="//ai.bdstatic.com/dist/1488523517/ai_images/solution/dialog/solution-case-1.png">
                 </div>
                 <div class="solution-desc">
                     <ul>
@@ -454,7 +454,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="//ai.bdstatic.com/dist/1488425849/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1488425849/js/solution/dialog.js"></script>
+<script src="//ai.bdstatic.com/dist/1488523517/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1488523517/js/solution/dialog.js"></script>
 </body>
 </html>
