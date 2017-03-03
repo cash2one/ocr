@@ -1,4 +1,4 @@
-
+# API参考
 # 简介
 
 本文档主要针对API开发者，调用AI服务相关的API接口有两种调用方式，两种不同的调用方式采用相同的接口URL，区别在于请求方式和鉴权方法不一样，请求参数和返回结果一致。
@@ -89,11 +89,11 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 ## 公共错误码
 
-| Code  |  Message  |  HTTP Status Code  |  说明 |
-| --- | --- | --- | ---- |
-| FormatError  |  [param]:[param]=[Validation criteria]  |  400  |  请求格式错误 |
-| Forbidden  |  authentication failed  |  403  |  认证失败或无权限 |
-| Unavailable  |  Service internal error occurred  |  500  |  内部服务发生错误 |
+| Code        | Message                               | HTTP Status Code | 说明       |
+| ----------- | ------------------------------------- | ---------------- | -------- |
+| FormatError | [param]:[param]=[Validation criteria] | 400              | 请求格式错误   |
+| Forbidden   | authentication failed                 | 403              | 认证失败或无权限 |
+| Unavailable | Service internal error occurred       | 500              | 内部服务发生错误 |
 
 
 # 分词接口
@@ -110,14 +110,14 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 * URL参数：<br>
 
-| 参数           | 值                                 |
-| ------------ | --------------------------------- |
+| 参数           | 值                                        |
+| ------------ | ---------------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
 * Header如下：
 
-| 参数           | 值                                 |
-| ------------ | --------------------------------- |
+| 参数           | 值                |
+| ------------ | ---------------- |
 | Content-Type | application/json |
 
 * body请求示例:
@@ -154,7 +154,7 @@ authorization: {bce-authorization-string}
 
 | 参数名称     | 类型     | 详细说明                                     |
 | -------- | ------ | ---------------------------------------- |
-| query    | String | 必须，待分词的文本                   |
+| query    | String | 必须，待分词的文本                                |
 | lang\_id | Int    | 非必须，默认为1，输入字符串的语言对应的id，简体中文设置为1（目前不支持其他语言） |
 
 **返回示例**
@@ -307,14 +307,14 @@ authorization: {bce-authorization-string}
 
 * URL参数：<br>
 
-| 参数           | 值                                 |
-| ------------ | --------------------------------- |
+| 参数           | 值                                        |
+| ------------ | ---------------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
 * Header如下：
 
-| 参数           | 值                                 |
-| ------------ | --------------------------------- |
+| 参数           | 值                |
+| ------------ | ---------------- |
 | Content-Type | application/json |
 
 * body请求示例:
@@ -430,19 +430,19 @@ authorization: {bce-authorization-string}
 
 * URL参数：<br>
 
-| 参数           | 值                                 |
-| ------------ | --------------------------------- |
+| 参数           | 值                                        |
+| ------------ | ---------------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
 * Header如下：
 
-| 参数           | 值                                 |
-| ------------ | --------------------------------- |
+| 参数           | 值                |
+| ------------ | ---------------- |
 | Content-Type | application/json |
 
 * body请求示例:
 
-  - 输入两个词
+    - 输入两个词
 
   ```
   {
@@ -452,7 +452,7 @@ authorization: {bce-authorization-string}
   }
   ```
 
-  - 输入一个词
+    - 输入一个词
 
   ```
   {
@@ -550,14 +550,14 @@ authorization: {bce-authorization-string}
 
 * URL参数：<br>
 
-| 参数           | 值                                 |
-| ------------ | --------------------------------- |
+| 参数           | 值                                        |
+| ------------ | ---------------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
 * Header如下：
 
-| 参数           | 值                                 |
-| ------------ | --------------------------------- |
+| 参数           | 值                |
+| ------------ | ---------------- |
 | Content-Type | application/json |
 
 * body请求示例:
@@ -624,14 +624,14 @@ authorization: {bce-authorization-string}
 
 * URL参数：<br>
 
-| 参数           | 值                                 |
-| ------------ | --------------------------------- |
+| 参数           | 值                                        |
+| ------------ | ---------------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
 * Header如下：
 
-| 参数           | 值                                 |
-| ------------ | --------------------------------- |
+| 参数           | 值                |
+| ------------ | ---------------- |
 | Content-Type | application/json |
 
 * body请求示例:
@@ -732,14 +732,14 @@ authorization: {bce-authorization-string}
 
 * URL参数：<br>
 
-| 参数           | 值                                 |
-| ------------ | --------------------------------- |
+| 参数           | 值                                        |
+| ------------ | ---------------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
 * Header如下：
 
-| 参数           | 值                                 |
-| ------------ | --------------------------------- |
+| 参数           | 值                |
+| ------------ | ---------------- |
 | Content-Type | application/json |
 
 * body请求示例:
@@ -773,11 +773,11 @@ authorization: {bce-authorization-string}
 
 **请求参数**
 
-| 参数      | 类型 |说明                  |
-| ------- | ------- | ------------ |
-| comment | string |评论内容                |
-| entity  | string |实体名，当前取值为NULL，暂时不生效 |
-| type    | string |类别,默认类别为4（餐厅）       |
+| 参数      | 类型     | 说明                  |
+| ------- | ------ | ------------------- |
+| comment | string | 评论内容                |
+| entity  | string | 实体名，当前取值为NULL，暂时不生效 |
+| type    | string | 类别,默认类别为4（餐厅）       |
 
 其中type包含12个类别，具体取值说明如下：
 

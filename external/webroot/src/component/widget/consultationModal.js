@@ -4,15 +4,17 @@
  */
 'use strict';
 
-import EJS from 'ejs';
 import $ from 'jquery';
 
 import Modal from '../common/modal';
-import {CONSULTATION_TMPL} from '../../partials/consultation';
 import {sendConsultation} from '../../model/consultation';
 import {checkQRCode} from '../../model/qrCode';
 import {setPlaceHolder} from '../common/placeholder';
 
+import applyTpl from 'partials/consultation/apply.hbs';
+import failTpl from 'partials/consultation/fail.hbs';
+import successTpl from 'partials/consultation/success.hbs';
+import loadingTpl from 'partials/consultation/loading.hbs';
 
 export default class ConsultationModal extends Modal {
     constructor(container = 'body', id = 'consultation-modal', title = '合作咨询') {
@@ -32,20 +34,20 @@ export default class ConsultationModal extends Modal {
     }
 
     reset() {
-        this.setContent(EJS.render(CONSULTATION_TMPL.APPLY));
+        this.setContent(applyTpl({}));
         setPlaceHolder(this.getModal());
     }
 
     apply() {
-        this.setContent(EJS.render(CONSULTATION_TMPL.LOADING));
+        this.setContent(loadingTpl({}));
     }
 
     applySuccess() {
-        this.setContent(EJS.render(CONSULTATION_TMPL.SUCCESS));
+        this.setContent(successTpl({}));
     }
 
     applyFail() {
-        this.setContent(EJS.render(CONSULTATION_TMPL.FAIL));
+        this.setContent(failTpl({}));
     }
 
     refreshQRCode() {
@@ -59,20 +61,29 @@ export default class ConsultationModal extends Modal {
 
         modal.on('click', 'button.submit', e => {
             e.preventDefault();
-            let form = $('#consult-form');
-            let inputsToCheck = [
-                'input[name=company]', 'input[name=username]', 'input[name=phone]', 'input[name=code]'
+
+            const form = $('#consult-form');
+            const inputsToCheck = [
+                'input[name=company]', 'input[name=username]',
+                'input[name=phone]', 'input[name="contactWay"]',
+                'input[name=siteUrl]', '[name=requirement]',
+                'input[name=code]'
             ];
+
+            // 清楚错误提示
             form.find(inputsToCheck.join()).removeClass('has-error');
             form.find('.consult-info-warning').html('');
+
             for (let i = 0, len = inputsToCheck.length; i < len; i++) {
-                let input = form.find(inputsToCheck[i]);
+                const input = form.find(inputsToCheck[i]);
+
                 if (!input.val()) {
                     input.addClass('has-error');
                     form.find('.info-warning').html(input.attr('placeholder'));
                     return false;
                 }
             }
+
             checkQRCode({
                 code: form.find('input[name=code]').val(),
                 success: res => {
@@ -83,26 +94,31 @@ export default class ConsultationModal extends Modal {
                         this.refreshQRCode();
                         return false;
                     }
+
                     sendConsultation({
                         data: {
-                            tech: form.find('input[name=tech]:checked').val(),
+                            tech: form.find('select[name=tech]').val(),
                             company: form.find('input[name=company]').val(),
                             username: form.find('input[name=username]').val(),
                             phone: form.find('input[name=phone]').val(),
                             contactWay: form.find('input[name=contactWay]').val(),
-                            content: form.find('textarea[name=content]').val(),
+                            siteUrl: form.find('input[name=siteUrl]').val(),
+                            business: form.find('textarea[name=business]').val(),
+                            requirement: form.find('textarea[name=requirement]').val(),
                             code: form.find('input[name=code]').val()
                         },
                         success: res => {
                             if (res.errno === 0) {
                                 this.applySuccess();
-                            } else {
+                            }
+                            else {
                                 this.applyFail();
                                 this.refreshQRCode();
                             }
                         },
                         fail: () => this.applyFail()
                     });
+
                     this.apply();
                 },
                 fail: () => this.applyFail()

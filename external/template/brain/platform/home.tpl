@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488425849/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/home.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488425849/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488425849/css/home.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="//ai.bdstatic.com/dist/1487644629/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1488425849/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -210,13 +210,13 @@
                     免费试用
                 </a>
             </div>
-            <video src="//ai.bdstatic.com/dist/1487644629/ai_images/home/banner-1.mp4">
+            <video src="//ai.bdstatic.com/dist/1488425849/ai_images/home/banner-1.mp4">
             </video>
         </li>
         <li>
-            <a href="/tech/face/detect">
-                <h1>人脸识别</h1>
-                <p>快速检测人脸、定位五官关键点，准确识别多种人脸属性<br>为您提供多场景高精度的人脸识别服务。</p>
+            <a href="/tech/face/search">
+                <h1>人脸查找</h1>
+                <p>为您提供1:N人脸查找匹配服务，帮助您轻松实现，从人脸库中<br>识别用户身份或查找相似人脸</p>
                 <div>
                     <button type="button" class="get-started">了解详情</button>
                 </div>
@@ -589,7 +589,7 @@
                     <img alt="百度语音基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1487644629/ai_images/home/video-1.png">
+                         src="//ai.bdstatic.com/dist/1488425849/ai_images/home/video-1.png">
                 </a>
                 <h5>百度语音基础介绍及应用场景</h5>
             </li>
@@ -599,7 +599,7 @@
                     <img alt="百度OCR基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1487644629/ai_images/home/video-2.png">
+                         src="//ai.bdstatic.com/dist/1488425849/ai_images/home/video-2.png">
                 </a>
                 <h5>百度OCR基础介绍及应用场景</h5>
             </li>
@@ -609,7 +609,7 @@
                     <img alt="百度人脸技术基础介绍及引用场景"
                         width="500"
                         height="280"
-                        src="//ai.bdstatic.com/dist/1487644629/ai_images/home/video-3.png">
+                        src="//ai.bdstatic.com/dist/1488425849/ai_images/home/video-3.png">
                 </a>
                 <h5>百度人脸技术基础介绍及引用场景</h5>
             </li>
@@ -620,7 +620,7 @@
                     <img alt="百度翻译产品介绍"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1487644629/ai_images/home/video-4.png">
+                         src="//ai.bdstatic.com/dist/1488425849/ai_images/home/video-4.png">
                 </a>
                 <h5>百度翻译产品介绍</h5>
             </li>
@@ -666,7 +666,9 @@
 </div>
 <aside class="aside-action">
     <ul>
-        <li class="consult"><a data-spec="合作咨询"></a></li>
+        <li class="consult">
+            <a id="ai-consult" data-spec="合作咨询"></a>
+        </li>
         <li class="feedback"><a data-spec="我要反馈" id="feedback-btn"></a></li>
         <li class="back-top"><a data-spec="返回顶部"></a></li>
     </ul>
@@ -792,7 +794,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="//ai.bdstatic.com/dist/1487644629/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1487644629/js/home.js"></script>
+<script src="//ai.bdstatic.com/dist/1488425849/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1488425849/js/home.js"></script>
 </body>
 </html>

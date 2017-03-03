@@ -26,7 +26,7 @@
 
 2.将下载的`aip-ocr-php-sdk-version.zip`解压后，复制AipOrc.php以及lib/*到工程文件夹中。
 
-3.引入AipOcr.php
+3.引入AipOcr.php。
 
 
 # 快速入门
@@ -78,6 +78,7 @@ $apiOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
 // 调用通用文字识别接口
 $result = $apiOcr->general(file_get_contents('general.jpg'));
 ```
+
 传入图片时还想增加一些自定义参数配置：
 
 ```php

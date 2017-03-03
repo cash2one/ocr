@@ -37,7 +37,7 @@ backTop.click(
     }
 );
 
-if (window.location.hostname.indexOf('ai.baidu.com') >= 0) {
+if (window.location.hostname.indexOf('cloud.baidu.com') < 0) {
     // 渲染底部新闻
     new News({
         selector: '.footer-nav .news-container',

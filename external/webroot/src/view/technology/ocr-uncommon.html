@@ -1,7 +1,7 @@
 <div class="tech-section tech-banner">
     <div class="ai-container">
         <div class="tech-banner-title">
-            语音识别
+            通用生僻字
         </div>
         <div class="tech-banner-info">
             为您提供高精度的语音识别服务，融合百度领先的自然语言处理技术支持多场景智能语音交互
@@ -17,9 +17,9 @@
                href="
                {%if $src eq Null%}
                /docs#Speech-Asr-O2OAndroidSDK
-               <%else%>
-               https://cloud.baidu.com/doc/SPEECH/index.html
-               <%/if%>">
+               {%else%}
+               /doc/SPEECH/index.html
+               {%/if%}">
                 技术文档
             </a>
         </div>
@@ -86,43 +86,6 @@
             <div class="tech-demo-data-view tech-demo-json" id="demo-json" data-label="RESPONSE JSON"></div>
         </div>
     </div>
-    <!--<div claser clear-float">-->
-        <!--<div class="data-view" data-label="原始图片" id="demo-origin"></div>-->
-        <!--<div class="data-view" data-label="识别结果" id="demo-result">-->
-            <!--<table>-->
-                <!--<tbody class="demo-result-table">-->
-
-                <!--</tbody>-->
-            <!--</table>-->
-        <!--</div>-->
-        <!--<div class="data-view tech-demo-examples">-->
-            <!--<div class="tech-demo-examples-item">-->
-                <!--<img src="../../../ai_images/technology/ocr-general/demo-card-1.png">-->
-            <!--</div>-->
-            <!--<div class="tech-demo-examples-item">-->
-                <!--<img src="../../../ai_images/technology/ocr-general/demo-card-2.png">-->
-            <!--</div>-->
-            <!--<div class="tech-demo-examples-item">-->
-                <!--<img src="../../../ai_images/technology/ocr-general/demo-card-3.png">-->
-            <!--</div>-->
-            <!--<div class="tech-demo-examples-item">-->
-                <!--<img src="../../../ai_images/technology/ocr-general/demo-card-4.png">-->
-            <!--</div>-->
-            <!--<div class="tech-demo-examples-item">-->
-                <!--<img src="../../../ai_images/technology/ocr-general/demo-card-5.png">-->
-            <!--</div>-->
-            <!--<div class="tech-demo-examples-item">-->
-                <!--<img src="../../../ai_images/technology/ocr-general/demo-card-6.jpg">-->
-            <!--</div>-->
-            <!--<div class="tech-demo-examples-item">-->
-                <!--<img src="../../../ai_images/technology/ocr-general/demo-card-7.png">-->
-            <!--</div>-->
-            <!--<div class="tech-demo-examples-item">-->
-                <!--<img src="../../../ai_images/technology/ocr-general/demo-card-8.png">-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="data-view" data-label="RESPONSE JSON" id="demo-json"></div>-->
-    <!--</div>-->
 </div>
 
 <div class="ai-container tech-section tech-feature">
@@ -178,45 +141,27 @@
         <div class="tech-scenario-item tech-scenario-shadow">
             <div class="tech-scenario-icon tech-scenario-icon-1"></div>
             <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">交通出行</div>
+                <div class="tech-scenario-desc-name">通用自然场景</div>
                 <div class="tech-scenario-desc-info">
-                    全程语音导航，结合地图指示，方便安全
+                    印刷文档和自然场景有生僻字识别需求的场景下，进行生僻字识别。
                 </div>
             </div>
         </div>
         <div class="tech-scenario-item tech-scenario-shadow">
             <div class="tech-scenario-icon tech-scenario-icon-2"></div>
             <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">应用助手</div>
+                <div class="tech-scenario-desc-name">搜索场景</div>
                 <div class="tech-scenario-desc-info">
-                    通过语音与应用交互，来搜索内容，播放歌曲
+                    需要对某些生僻字进行搜索的场景下，进行生僻字识别。
                 </div>
             </div>
         </div>
         <div class="tech-scenario-item tech-scenario-shadow">
             <div class="tech-scenario-icon tech-scenario-icon-3"></div>
             <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">智能家居</div>
+                <div class="tech-scenario-desc-name">教育场景</div>
                 <div class="tech-scenario-desc-info">
-                    通过专名识别识别多轮对话中的核心实体，智慧语音控制家电家具，让家更智能
-                </div>
-            </div>
-        </div>
-        <div class="tech-scenario-item tech-scenario-shadow">
-            <div class="tech-scenario-icon tech-scenario-icon-4"></div>
-            <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">社交聊天</div>
-                <div class="tech-scenario-desc-info">
-                    社交聊天发送实时语音，支持中文，英文，中英文混杂识别，方言支持粤语，四川话等。让沟通交流更准确快捷
-                </div>
-            </div>
-        </div>
-        <div class="tech-scenario-item tech-scenario-shadow">
-            <div class="tech-scenario-icon tech-scenario-icon-5"></div>
-            <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">游戏娱乐</div>
-                <div class="tech-scenario-desc-info">
-                    即时语音聊天，边玩边聊
+                    教育行业生僻字识别，可应用在汉语词典，语文课本，文言文批改等场景。
                 </div>
             </div>
         </div>
@@ -227,28 +172,19 @@
         <div class="tech-case-item tech-case-item-1 tech-case-active">
             <div class="ai-container">
                 <div class="tech-case-item-logo"></div>
-                <div class="tech-case-item-title">手机百度</div>
+                <div class="tech-case-item-title">百度词典</div>
                 <div class="tech-case-item-info">
-                    手机百度可以通过语音输入用户的搜索关键词<br>
-                    直接匹配出相应搜索结果，利用百度语音识别技术进行搜索的效率是拼音输入搜索的183.46%
+                    百度词典app是百度官方推出的手机词典软件<br>
+                    用户可以用摄像头拍摄的方式，调用百度生僻字OCR进行生僻字识别，有效的增强了应用的文字输入能力
                 </div>
             </div>
         </div>
         <div class="tech-case-item tech-case-item-2">
             <div class="ai-container">
                 <div class="tech-case-item-logo"></div>
-                <div class="tech-case-item-title">陌陌</div>
+                <div class="tech-case-item-title">手机百度</div>
                 <div class="tech-case-item-info">
                     发送实时语音，畅快聊天
-                </div>
-            </div>
-        </div>
-        <div class="tech-case-item tech-case-item-3">
-            <div class="ai-container">
-                <div class="tech-case-item-logo"></div>
-                <div class="tech-case-item-title">百度输入法</div>
-                <div class="tech-case-item-info">
-                    百度输入法利用百度语音识别技术实时将用户的字句转换成文字，提升输入效率
                 </div>
             </div>
         </div>
@@ -259,9 +195,6 @@
         </div>
         <div class="tech-case-option-btn tech-case-option-btn-2">
             陌陌
-        </div>
-        <div class="tech-case-option-btn tech-case-option-btn-3">
-            百度输入法
         </div>
     </div>
 </div>

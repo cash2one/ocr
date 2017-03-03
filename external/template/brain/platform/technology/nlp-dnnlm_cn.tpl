@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488425849/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1487644629/css/technology/nlp-dnnlm_cn.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488425849/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488425849/css/technology/nlp-dnnlm_cn.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com" href="_self">
-                <img src="//ai.bdstatic.com/dist/1487644629/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1488425849/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -209,9 +209,9 @@
                href="
                {%if $src eq Null%}
                /docs#NLP
-               <%else%>
+               {%else%}
                https://cloud.baidu.com/doc/NLP/index.html
-               <%/if%>">
+               {%/if%}">
                 技术文档
             </a>
         </div>
@@ -375,7 +375,9 @@
 </div>
 <aside class="aside-action">
     <ul>
-        <li class="consult"><a data-spec="合作咨询"></a></li>
+        <li class="consult">
+            <a id="ai-consult" data-spec="合作咨询"></a>
+        </li>
         <li class="feedback"><a data-spec="我要反馈" id="feedback-btn"></a></li>
         <li class="back-top"><a data-spec="返回顶部"></a></li>
     </ul>
@@ -501,7 +503,7 @@
         document.body.appendChild(script);
     }
 </script>
-<script src="//ai.bdstatic.com/dist/1487644629/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1487644629/js/technology/nlp-dnnlm_cn.js"></script>
+<script src="//ai.bdstatic.com/dist/1488425849/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1488425849/js/technology/nlp-dnnlm_cn.js"></script>
 </body>
 </html>

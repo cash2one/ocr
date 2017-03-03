@@ -22,14 +22,12 @@
         │   └── ocr.md
         └── setup.py            //setuptools安装
 
-**支持 Python版本：2.7.+ **
+**支持 Python版本：2.7.+ ,3.+**
 
-**安装使用SDK有如下三种方式：**
+**安装使用SDK有如下方式：**
 
-* 如果已安装pip，执行`pip install baidu-aip`即可。
-* 如果已安装setuptools，执行`python setup.py install`即可。
-* 下载[Python SDK](http://ai.baidu.com/sdk)解压，将aip目录复制到您的项目中即可。
-
+- 如果已安装pip，执行`pip install baidu-aip`即可。
+- 如果已安装setuptools，执行`python setup.py install`即可。
 
 # 快速入门
 
@@ -37,18 +35,18 @@
 
 AipOcr类提供给开发这一系列的图像识别方法，参考如下代码新建一个AipOcr对象：
 
-```python
-# 引入文字识别OCR SDK
-from aip import AipOcr
 
-# 定义常量
-APP_ID = '你的 App ID'
-API_KEY = '你的 API Key'
-SECRET_KEY = '你的 Secret Key'
+    # 引入文字识别OCR SDK
+    from aip import AipOcr
+    
+    # 定义常量
+    APP_ID = '你的 App ID'
+    API_KEY = '你的 API Key'
+    SECRET_KEY = '你的 Secret Key'
+    
+    # 初始化ApiOcr对象
+    aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
-# 初始化ApiOcr对象
-aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
-```
 
 在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是由系统分配给用户的，均为字符串，用于标识用户，为访问服务做签名验证。获取方式请参考[获取AK/SK](../Reference/GetAKSK)。
 
@@ -59,54 +57,54 @@ aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
 举例，对一张图片进行文字识别，示例代码如下：
 
-```python
-# 引入文字识别OCR SDK
-from aip import AipOcr
 
-# 定义常量
-APP_ID = '你的 App ID'
-API_KEY = '你的 API Key'
-SECRET_KEY = '你的 Secret Key'
+    # 引入文字识别OCR SDK
+    from aip import AipOcr
+    
+    # 定义常量
+    APP_ID = '你的 App ID'
+    API_KEY = '你的 API Key'
+    SECRET_KEY = '你的 Secret Key'
+    
+    # 读取图片
+    def get_file_content(filePath):
+        with open(filePath, 'rb') as fp:
+            return fp.read()
+    
+    # 初始化ApiOcr对象
+    aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
+    
+    # 调用通用文字识别接口
+    result = aipOcr.general(get_file_content('general.jpg'))
 
-# 读取图片
-def get_file_content(filePath):
-    with open(filePath, 'rb') as fp:
-    	return fp.read()
-
-# 初始化ApiOcr对象
-aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
-
-# 调用通用文字识别接口
-result = aipOcr.general(get_file_content('general.jpg'))
-```
 传入图片时还想增加一些自定义参数配置：
 
-```python
-# 引入文字识别OCR SDK
-from aip import AipOcr
 
-# 定义常量
-APP_ID = '你的 App ID'
-API_KEY = '你的 API Key'
-SECRET_KEY = '你的 Secret Key'
+    # 引入文字识别OCR SDK
+    from aip import AipOcr
+    
+    # 定义常量
+    APP_ID = '你的 App ID'
+    API_KEY = '你的 API Key'
+    SECRET_KEY = '你的 Secret Key'
+    
+    # 读取图片
+    def get_file_content(filePath):
+        with open(filePath, 'rb') as fp:
+            return fp.read()
+    
+    # 初始化ApiOcr对象
+    aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
+    
+    # 定义参数变量
+    options = {
+      'detect_direction': False,
+      'language_type': 'CHN_ENG',
+    }
+    
+    # 调用通用文字识别接口
+    result = aipOcr.general(get_file_content('general.jpg'), options)
 
-# 读取图片
-def get_file_content(filePath):
-    with open(filePath, 'rb') as fp:
-    	return fp.read()
-
-# 初始化ApiOcr对象
-aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
-
-# 定义参数变量
-options = {
-  'detect_direction': False,
-  'language_type': 'CHN_ENG',
-}
-
-# 调用通用文字识别接口
-result = aipOcr.general(get_file_content('general.jpg'), options)
-```
 
 **通用文字识别options参数详情**
 
@@ -164,26 +162,26 @@ result = aipOcr.general(get_file_content('general.jpg'), options)
 
 举例，对一张银行卡进行识别，示例代码如下：
 
-```python
-# 引入文字识别OCR SDK
-from aip import AipOcr
 
-# 定义常量
-APP_ID = '你的 App ID'
-API_KEY = '你的 API Key'
-SECRET_KEY = '你的 Secret Key'
+    # 引入文字识别OCR SDK
+    from aip import AipOcr
+    
+    # 定义常量
+    APP_ID = '你的 App ID'
+    API_KEY = '你的 API Key'
+    SECRET_KEY = '你的 Secret Key'
+    
+    # 读取图片
+    def get_file_content(filePath):
+        with open(filePath, 'rb') as fp:
+            return fp.read()
+    
+    # 初始化ApiOcr对象
+    aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
+    
+    # 调用银行卡识别接口
+    result = aipOcr.bankcard(get_file_content('bankcard.jpg'))
 
-# 读取图片
-def get_file_content(filePath):
-    with open(filePath, 'rb') as fp:
-    	return fp.read()
-
-# 初始化ApiOcr对象
-aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
-
-# 调用银行卡识别接口
-result = aipOcr.bankcard(get_file_content('bankcard.jpg'))
-```
 
 **银行卡识别 请求参数详情**
 
@@ -219,60 +217,60 @@ result = aipOcr.bankcard(get_file_content('bankcard.jpg'))
 
 举例，对一张身份证正面进行文字识别，示例代码如下：
 
-```python
-# 引入文字识别OCR SDK
-from aip import AipOcr
 
-# 定义常量
-APP_ID = '你的 App ID'
-API_KEY = '你的 API Key'
-SECRET_KEY = '你的 Secret Key'
+    # 引入文字识别OCR SDK
+    from aip import AipOcr
+    
+    # 定义常量
+    APP_ID = '你的 App ID'
+    API_KEY = '你的 API Key'
+    SECRET_KEY = '你的 Secret Key'
+    
+    # 读取图片
+    def get_file_content(filePath):
+        with open(filePath, 'rb') as fp:
+            return fp.read()
+    
+    # 初始化ApiOcr对象
+    aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
+    
+    # 设置识别身份证正面参数
+    isFront = False
+    
+    # 调用身份证识别接口
+    result = aipOcr.idcard(get_file_content('idcard.jpg'), isFront)
 
-# 读取图片
-def get_file_content(filePath):
-    with open(filePath, 'rb') as fp:
-    	return fp.read()
-
-# 初始化ApiOcr对象
-aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
-
-# 设置识别身份证正面参数
-isFront = False
-
-# 调用身份证识别接口
-result = aipOcr.idcard(get_file_content('idcard.jpg'), isFront)
-```
 传入图片时还想增加一些自定义参数配置：
 
-```python
-# 引入文字识别OCR SDK
-from aip import AipOcr
 
-# 定义常量
-APP_ID = '你的 App ID'
-API_KEY = '你的 API Key'
-SECRET_KEY = '你的 Secret Key'
+    # 引入文字识别OCR SDK
+    from aip import AipOcr
+    
+    # 定义常量
+    APP_ID = '你的 App ID'
+    API_KEY = '你的 API Key'
+    SECRET_KEY = '你的 Secret Key'
+    
+    # 读取图片
+    def get_file_content(filePath):
+        with open(filePath, 'rb') as fp:
+            return fp.read()
+    
+    # 初始化ApiOcr对象
+    aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
+    
+    # 设置识别身份证正面参数
+    isFront = False
+    
+    # 定义参数变量
+    options = {
+        'detect_direction': False,
+        'accuracy': 'high'
+    }
+    
+    # 调用身份证识别接口
+    result = aipOcr.idcard(get_file_content('idcard.jpg'), isFront, options)
 
-# 读取图片
-def get_file_content(filePath):
-    with open(filePath, 'rb') as fp:
-    	return fp.read()
-
-# 初始化ApiOcr对象
-aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
-
-# 设置识别身份证正面参数
-isFront = False
-
-# 定义参数变量
-options = {
-    'detect_direction': False,
-    'accuracy': 'high'
-}
-
-# 调用身份证识别接口
-result = aipOcr.idcard(get_file_content('idcard.jpg'), isFront, options)
-```
 
 **身份证识别 请求参数详情**
 

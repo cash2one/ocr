@@ -23,8 +23,12 @@ const autoprefixer = require('autoprefixer');
 const getVersion = require('./lib/getVersion');
 /* eslint-enable */
 
+const isOnlineBuild = argv.hasOwnProperty('o')
+    || argv.hasOwnProperty('online')
+    || argv.hasOwnProperty('new');
+
 // 关键参数
-const publicPath = argv.hasOwnProperty('o') || argv.hasOwnProperty('online')
+const publicPath = isOnlineBuild
     ? '//ai.bdstatic.com/dist/'
     : '/ai_dist/';
 
@@ -111,6 +115,8 @@ module.exports = {
             view: path.resolve(__dirname, '..', 'src', 'view'),
             // less快捷路径
             less: path.resolve(__dirname, '..', 'src', 'less'),
+            // 模板partials
+            partials: path.resolve(__dirname, '..', 'src', 'partials'),
             // for 老古董ejs
             ejs: 'ejs/ejs.js'
         }
@@ -202,6 +208,14 @@ module.exports = {
                             name: '[path][name].[ext]',
                             publicPath
                         }
+                    }
+                ]
+            },
+            {
+                test: /\.hbs$/,
+                use: [
+                    {
+                        loader: 'handlebars-loader'
                     }
                 ]
             }
