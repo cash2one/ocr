@@ -8,6 +8,7 @@
 class Action_BankCard extends Ap_Action_Abstract {
 
     public function execute() {
+        Bd_log::addNotice("BackCard");
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
 
