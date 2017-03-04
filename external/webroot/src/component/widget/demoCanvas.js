@@ -2,7 +2,6 @@
  * @file 用于绘制根据图片识别返回数据绘制图片的插件
  * @author shiliang@baidu.com
  */
-'use strict';
 
 import $ from 'jquery';
 import {getHeader} from '../../model/demoAPI';
