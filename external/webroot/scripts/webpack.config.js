@@ -40,7 +40,10 @@ const entries = glob.sync(
     '**/*.js',
     {
         cwd: path.join(__dirname, '..', 'src', 'entry'),
-        ignore: ['**/pager.js', '**/base.js', '**/common/*.js']
+        ignore: [
+            '**/pager.js', '**/base.js',
+            '**/common/*.js', '**/util/*.js'
+        ]
     }
 );
 
