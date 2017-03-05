@@ -6,7 +6,6 @@
 @import '../common/tech-commom.less';
 @import '../common/modal.less';
 
-
 // 技术单页前缀
 @prefix: tech;
 
@@ -117,6 +116,7 @@
     }
 }
 
+// fixme less写的太烂了
 
 // demo演示(未详细)
 .@{prefix}-demo {
@@ -287,6 +287,15 @@
     }
 }
 
+@keyframes uploading {
+    0% {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 #demo-result {
     table {
         border: 1px solid #eee;
@@ -347,5 +356,29 @@
         overflow: auto;
         height: 100%;
         margin: 0;
+    }
+}
+
+#result-loading {
+    position: absolute;
+    left: 277px;
+    top: 115px;
+    width: 32px;
+    height: 32px;
+    line-height: 348px;
+    color: #666;
+    text-align: center;
+    background: url(../../../ai_images/loading.png) center;
+    .animate(uploading, 0.8s, 0, infinite, ease-in);
+}
+
+#demo-result {
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }

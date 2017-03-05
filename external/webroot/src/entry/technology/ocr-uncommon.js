@@ -16,6 +16,7 @@ const notFoundImg = require('../../../ai_images/error/not-found.png');
 const formatImg = require('../../../ai_images/error/image-format.png');
 const tooLargeImg = require('../../../ai_images/error/too-large.png');
 const noResult = require('../../../ai_images/error/no-general-result.png');
+const timeoutImg = require('../../../ai_images/error/timeout.png');
 /* eslint-enable */
 
 const $window = $(window);
@@ -27,6 +28,10 @@ const $jsonViewer = $('#demo-json').find('> p');
 // 识别结果容器
 const $demoResult = $('#demo-result');
 const $fileUpload = $('#img-upload');
+// 检查按键(点击后扫描url中的图片)
+const $scanUrlBtn = $('#scan-url');
+// 使用url上传图片
+const $scanPhotoUrl = $('#demo-photo-url');
 
 // 常量
 const FILE_TYPE_ERROR = 1;
@@ -83,12 +88,22 @@ const showImage = imgUrl => {
     demoOrigin.html(`<img class="tech-demo-origin-img" src="${imgUrl}">`);
 };
 
+const showLoading = () => {
+    $demoResult.html('<div id="result-loading"></div>');
+};
+
 /**
  * 展示识别结果
  *
- * @param {Object} data 文字识别接口返回的数据
+ * @param {Object=} data 文字识别接口返回的数据
  */
-const showResult = (data = {}) => {
+const showResult = data => {
+    if (!data) {
+        $demoResult.html('');
+
+        return;
+    }
+
     const wordsResult = data.words_result || [];
 
     const htmlArr = [];
@@ -138,6 +153,43 @@ const showResult = (data = {}) => {
 };
 
 /**
+ * 报告错误结果
+ *
+ * @param {number=} errno 错误码
+ */
+const showError = function (errno) {
+    showResult();
+    setJsonViewer('');
+
+    if (!errno) {
+        showImage(formatImg);
+
+        return;
+    }
+
+    switch (errno) {
+        // 图片格式错误
+        case 104:
+        case FILE_TYPE_ERROR:
+            showImage(formatImg);
+
+            return;
+        case FILE_OVER_SIZE:
+            showImage(tooLargeImg);
+
+            return;
+        // 接口超时
+        // 上传失败
+        case 107:
+        case 28:
+        default:
+            showImage(timeoutImg);
+
+            return;
+    }
+};
+
+/**
  * 通过提交图片url的方式扫描生僻字
  *
  * @param {string} imageUrl 图片地址
@@ -148,6 +200,17 @@ const scan = function (imageUrl, base64) {
     /* eslint-disable */
     const dfd = $.Deferred();
     /* eslint-enable */
+
+    // 屏蔽扫面
+    isScanning = true;
+
+    showImage(imageUrl || base64);
+    showLoading();
+    setJsonViewer('');
+
+    // 按键置灰
+    $scanUrlBtn.prop('disabled', true);
+    $fileUpload.prop('disabled', true);
 
     // 不能一次提供两个参数
     if (imageUrl && base64) {
@@ -165,6 +228,11 @@ const scan = function (imageUrl, base64) {
         }
     ).then(
         ({errno, msg, data}) => {
+            isScanning = false;
+
+            $scanUrlBtn.prop('disabled', false);
+            $fileUpload.prop('disabled', false);
+
             // 无误的情况下返回文字识别结果JSON
             if (errno === 0) {
                 dfd.resolve(data);
@@ -175,7 +243,12 @@ const scan = function (imageUrl, base64) {
             dfd.reject(errno, msg);
         },
         () => {
-            dfd.reject(9999, '网络错误');
+            isScanning = false;
+
+            $scanUrlBtn.prop('disabled', false);
+            $fileUpload.prop('disabled', false);
+
+            dfd.reject(28, '网络错误');
         }
     );
 
@@ -183,14 +256,11 @@ const scan = function (imageUrl, base64) {
 };
 
 /**
- * 填充demo展示区，主要是3处内容 -- 图片、核心数据、原始json返回
+ * 填充demo展示区，主要是2处内容 -- 核心数据、原始json返回
  *
- * @param {string} imgUrl 图片地址
  * @param {string=} JSONData JSON数据
  */
-const showDemo = (imgUrl, JSONData) => {
-    // 填充图片
-    showImage(imgUrl);
+const showDemoResult = JSONData => {
     // 格式化JSON
     setJsonViewer(JSONData ? JSON.stringify(JSONData, null, '\t') : '');
     // 显示识别结果
@@ -229,7 +299,7 @@ const getBase64ByRemote = demoUrl => {
 
                     return;
                 // 图片格式错误
-                case 106:
+                case 104:
                     dfd.resolve(formatImg);
 
                     return;
@@ -300,24 +370,15 @@ $techDemoSelect.on('click', e => {
     // const demoUrl = `${window.location.protocol}${$currentTarget.find('img').eq(0).attr('src')}`;
     const demoUrl = 'http://ai.bdstatic.com/dist/1488185410/ai_images/technology/ocr-general/demo-card-3.png';
 
-    isScanning = true;
-
     scan(demoUrl)
         .then(
             data => {
-                showDemo(demoUrl, data);
-                isScanning = false;
+                showDemoResult(data);
             },
-            () => {
-                showDemo(notFoundImg);
-                isScanning = false;
-            }
+            showError
         );
 });
 
-// 使用url上传图片
-const $scanUrlBtn = $('#scan-photo');
-const $scanPhotoUrl = $('#demo-photo-url');
 $scanUrlBtn.on(
     'click',
     () => {
@@ -329,7 +390,7 @@ $scanUrlBtn.on(
         }
 
         if (!/\.(jpe?g|png|gif|bmp)$/i.test(demoUrl)) {
-            showDemo(formatImg);
+            showError(FILE_TYPE_ERROR);
 
             return;
         }
@@ -337,13 +398,9 @@ $scanUrlBtn.on(
         scan(demoUrl)
             .then(
                 data => {
-                    showDemo(demoUrl, data);
-                    isScanning = false;
+                    showDemoResult(data);
                 },
-                () => {
-                    showDemo(notFoundImg);
-                    isScanning = false;
-                }
+                showError
             );
     }
 );
@@ -362,10 +419,10 @@ $fileUpload.on('change', e => {
     if (!validateResult.isValid) {
         switch (validateResult.reason) {
             case FILE_TYPE_ERROR:
-                showDemo(formatImg);
+                showError(FILE_TYPE_ERROR);
                 return;
             case FILE_OVER_SIZE:
-                showDemo(tooLargeImg);
+                showError(FILE_OVER_SIZE);
                 return;
         }
     }
@@ -377,15 +434,21 @@ $fileUpload.on('change', e => {
                 scan('', base64)
                     .then(
                         data => {
-                            showDemo(base64, data);
-                            isScanning = false;
+                            showDemoResult(data);
                         },
-                        () => {
-
-                        }
+                        showError
                     );
             },
-            () => {
-            }
+            showError
         );
 });
+
+// 页面加载后，分析第一张demo图片
+const firstImg = $techDemoSelect.eq(0).find('img').attr('src');
+scan(firstImg)
+    .then(
+        data => {
+            showDemoResult(data);
+        },
+        showError
+    );
