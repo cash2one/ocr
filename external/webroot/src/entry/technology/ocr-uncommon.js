@@ -268,60 +268,6 @@ const showDemoResult = JSONData => {
 };
 
 /**
- * 调用后端接口，将一个图片转换为base64编码，因为canvas无法将跨域图片转换为base64编码
- * TODO 后端接口优化
- *
- * @param {string} demoUrl 需要转换的图片的地址
- * @return {Promise} jQuery promise
- */
-const getBase64ByRemote = demoUrl => {
-    /* eslint-disable */
-    const dfd = $.Deferred();
-    /* eslint-enable */
-
-    $.post(
-        {
-            url: '/aiDemo',
-            data: {
-                // 以下两个参数是后端帮忙将图片转base64的参数 TODO 重构优化
-                'action': 'getHeader',
-                'type': 'commontext',
-                'image_url': demoUrl
-            }
-        }
-    ).done(
-        res => {
-            const {errno, data} = JSON.parse(res);
-
-            switch (errno) {
-                case 0:
-                    dfd.resolve(data.image_data);
-
-                    return;
-                // 图片格式错误
-                case 104:
-                    dfd.resolve(formatImg);
-
-                    return;
-                // 接口超时
-                // 上传失败
-                case 107:
-                case 28:
-                default:
-                    dfd.resolve(notFoundImg);
-
-                    return;
-            }
-        }
-    ).fail(
-        // TODO 网络错误背景图
-        () => dfd.reject(notFoundImg)
-    );
-
-    return dfd.promise();
-};
-
-/**
  * 校验图片文件是否符合demo要求
  *
  * @param {File} file 文件
