@@ -422,7 +422,7 @@ class Brain_AIApi {
     public static function getImageByUrl($image_url) {
 
 
-        $obj = new SafeCurl();
+        $obj = new \SafeCurl();
         foreach (Brain_AIApi::$arrImageType as $imageType){
             $obj->addWhitelist('content_type', $imageType); //设置 content-type
         }
