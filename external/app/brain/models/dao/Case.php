@@ -49,7 +49,7 @@ class Dao_Case extends Dao_Base {
      * @access public
      * @return void
      */
-    public function insertCase($strUsername, $strCompany, $strPhone, $strContent, $strContactway, $strTech) {
+    public function insertCase($strUsername, $strCompany, $strPhone, $strContent, $strContactway, $strTech, $jsonContent) {
         $arrRow = array(
             'username' => $strUsername,
             'company' => $strCompany,
@@ -58,6 +58,7 @@ class Dao_Case extends Dao_Base {
             'contactway' => $strContactway,
             'tech' => $strTech,
             'create_time' => date('Y-m-d H:i:s',time()),
+            'json_content' =>$jsonContent,
         );  
         $arrOptions = null;
         $arrOnDup = $arrRow;
