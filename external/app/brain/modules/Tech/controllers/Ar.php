@@ -13,4 +13,12 @@ class Controller_Ar extends Ap_Controller_Abstract
         '' => 'actions/tech/ar/Ar.php',
     );
 
+    public function indexAction(){
+        $arrPageInfo['page'] = "ar";
+        Brain_Output::htmlOutput(
+            $arrPageInfo,
+            "brain/platform/technology/ar.tpl"
+        );
+    }
+
 }
