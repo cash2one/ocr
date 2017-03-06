@@ -49,6 +49,12 @@ class Brain_AIApi {
                 'detect_direction' => 'true',
             ),
         ),
+        "general_enhanced" => array(
+            'url' => 'https://openapi.baidu.com/rest/2.0/vis-ocr/v1/ocr/general',
+            'params' => array(
+                'detect_direction' => 'true',
+            ),
+        ),
         "idcard" => array(
             'url' => 'https://openapi.baidu.com/rest/2.0/vis-ocr/v1/ocr/idcard',
             'params' => array(
