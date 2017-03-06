@@ -8,15 +8,26 @@ import $ from 'jquery';
 import throttle from 'lodash.throttle';
 
 import '../common/tech-case';
-import '../../less/technology/ocr-uncommon.less';
+import '../../less/technology/ocr-general_enhanced.less';
 import getBase64ByFileReader from '../util/getBase64ByFileReader';
 
 /* eslint-disable */
-const notFoundImg = require('../../../ai_images/error/not-found.png');
 const formatImg = require('../../../ai_images/error/image-format.png');
 const tooLargeImg = require('../../../ai_images/error/too-large.png');
 const noResult = require('../../../ai_images/error/no-general-result.png');
 const timeoutImg = require('../../../ai_images/error/timeout.png');
+// fixme 很不合理
+const demoImagePaths = [
+    // 静态引入，不要尝试些变量！
+    require('../../../ai_images/technology/ocr-general_enhanced/demo-card-1.png'),
+    require('../../../ai_images/technology/ocr-general_enhanced/demo-card-2.png'),
+    require('../../../ai_images/technology/ocr-general_enhanced/demo-card-3.png'),
+    require('../../../ai_images/technology/ocr-general_enhanced/demo-card-4.png'),
+    require('../../../ai_images/technology/ocr-general_enhanced/demo-card-5.png'),
+    require('../../../ai_images/technology/ocr-general_enhanced/demo-card-6.png'),
+    require('../../../ai_images/technology/ocr-general_enhanced/demo-card-7.png'),
+    require('../../../ai_images/technology/ocr-general_enhanced/demo-card-8.png')
+];
 /* eslint-enable */
 
 const $window = $(window);
@@ -219,9 +230,9 @@ const scan = function (imageUrl, base64) {
 
     $.post(
         {
-            url: 'http://ai.baidu.com/aidemo',
+            url: '/aidemo',
             data: {
-                'type': 'commontext',
+                'type': 'general_enhanced',
                 'image': base64,
                 'image_url': imageUrl
             }
@@ -299,6 +310,10 @@ const validateImgFile = file => {
     };
 };
 
+// fixme
+$techDemoSelect.each((index, element) => {
+    $(element).find('img').attr('src', demoImagePaths[index]);
+});
 // 实例图片点击点击
 $techDemoSelect.on('click', e => {
     const $currentTarget = $(e.currentTarget);
@@ -313,8 +328,7 @@ $techDemoSelect.on('click', e => {
         .removeClass('tech-demo-card-active');
 
     // TODO demo结构不合理
-    // const demoUrl = `${window.location.protocol}${$currentTarget.find('img').eq(0).attr('src')}`;
-    const demoUrl = 'http://ai.bdstatic.com/dist/1488185410/ai_images/technology/ocr-general/demo-card-3.png';
+    const demoUrl = `${window.location.protocol}${$currentTarget.find('img').eq(0).attr('src')}`;
 
     scan(demoUrl)
         .then(

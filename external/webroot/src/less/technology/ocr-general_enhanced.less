@@ -11,21 +11,21 @@
 
 // 调用通用的banner模块
 .@{prefix}-banner {
-    .banner(@page-name: ocr-uncommon);
+    .banner(@page-name: ocr-general_enhanced);
 }
 // 调用通用的tech-feature模块
 .@{prefix}-feature {
-    .tech-feature(@page-name: ocr-uncommon, @icon-num: 3)
+    .tech-feature(@page-name: ocr-general_enhanced, @icon-num: 3)
 }
 
 // 调用通用的apply-scenario模块
 .@{prefix}-scenario {
-    .apply-scenario(@page-name: ocr-uncommon, @icon-num: 3);
+    .apply-scenario(@page-name: ocr-general_enhanced, @icon-num: 3);
 }
 
 // 调用通用的tech-case模块
 .@{prefix}-case {
-    .tech-case(@page-name: ocr-uncommon; @num: 2; @case-logo: ture;);
+    .tech-case(@page-name: ocr-general_enhanced; @num: 2; @case-logo: ture;);
 
     &-item-1 {
         .tech-case-item-logo {
@@ -38,7 +38,7 @@
 // 功能介绍
 .@{prefix}-function {
     height: 450px;
-    background: url(../../../ai_images/technology/ocr-uncommon/intro-bg.png) no-repeat top center;
+    background: url(../../../ai_images/technology/ocr-general_enhanced/intro-bg.png) no-repeat top center;
     background-size: cover;
     text-align: center;
     color: @white;
@@ -67,7 +67,7 @@
         vertical-align: top;
         width: 400px;
         height: 250px;
-        background: url(../../../ai_images/technology/ocr-uncommon/tech-function-original-card.png) no-repeat;
+        background: url(../../../ai_images/technology/ocr-general_enhanced/tech-function-original-card.png) no-repeat;
         overflow: hidden;
 
         &:before {
@@ -75,7 +75,7 @@
             display: block;
             width: 400px;
             height: 132px;
-            background: url(../../../ai_images/technology/ocr-uncommon/tech-function-mask.png) no-repeat;
+            background: url(../../../ai_images/technology/ocr-general_enhanced/tech-function-mask.png) no-repeat;
             transform: translate(0, -132px);
         }
 
@@ -98,7 +98,7 @@
         width: 130px;
         height: 160px;
         margin-top: 55px;
-        background: url(../../../ai_images/technology/ocr-uncommon/sprite/tech-function-arrow.png) no-repeat;
+        background: url(../../../ai_images/technology/ocr-general_enhanced/sprite/tech-function-arrow.png) no-repeat;
     }
 
     &-scan-result {
@@ -106,7 +106,7 @@
         vertical-align: top;
         width: 400px;
         height: 250px;
-        background: url(../../../ai_images/technology/ocr-uncommon/tech-function-scan-result.png) no-repeat;
+        background: url(../../../ai_images/technology/ocr-general_enhanced/tech-function-scan-result.png) no-repeat;
         opacity: 0;
         transition: opacity 1.5s ease-out;
 

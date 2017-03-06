@@ -7,7 +7,7 @@
 import $ from 'jquery';
 
 export function scanIDCard({image = null, imageUrl = null, success = $.noop, fail = $.noop}) {
-    $.post('http://ai.baidu.com/aidemo', {
+    $.post('/aidemo', {
         type: 'idcard',
         image: image,
         'image_url': imageUrl
@@ -15,7 +15,7 @@ export function scanIDCard({image = null, imageUrl = null, success = $.noop, fai
 }
 
 export function scanBankCard({image = null, imageUrl = null, success = $.noop, fail = $.noop}) {
-    $.post('http://ai.baidu.com/aidemo', {
+    $.post('/aidemo', {
         type: 'bankcard',
         image: image,
         'image_url': imageUrl
@@ -23,16 +23,15 @@ export function scanBankCard({image = null, imageUrl = null, success = $.noop, f
 }
 
 export function scanGeneralText({image = null, imageUrl = null, success = $.noop, fail = $.noop}) {
-    $.post('http://ai.baidu.com/aidemo', {
+    $.post('/aidemo', {
         type: 'commontext',
         image: image,
-        'image_url' : 'http://ai.bdstatic.com/dist/1488185410/ai_images/technology/ocr-general/demo-card-3.png'
-        // 'image_url': imageUrl
+        'image_url': imageUrl
     }).success(success).fail(fail);
 }
 
 export function scanFace({image = null, imageUrl = null, success = $.noop, fail = $.noop}) {
-    $.post('http://ai.baidu.com/aidemo', {
+    $.post('/aidemo', {
         type: 'face',
         image: image,
         'image_url': imageUrl
@@ -40,7 +39,7 @@ export function scanFace({image = null, imageUrl = null, success = $.noop, fail 
 }
 
 export function scanPornography({image = null, imageUrl = null, success = $.noop, fail = $.noop}) {
-    $.post('http://ai.baidu.com/aidemo', {
+    $.post('/aidemo', {
         type: 'pornography',
         image: image,
         'image_url': imageUrl
@@ -48,7 +47,7 @@ export function scanPornography({image = null, imageUrl = null, success = $.noop
 }
 
 export function getHeader({imageUrl = null, type, success = $.noop, fail = $.noop}) {
-    $.post('http://ai.baidu.com/aidemo', {
+    $.post('/aidemo', {
         action: 'getHeader',
         type: type,
         'image_url': imageUrl
@@ -56,7 +55,7 @@ export function getHeader({imageUrl = null, type, success = $.noop, fail = $.noo
 }
 
 export function evaluateWakeWords({words = null, success = $.noop, fail = $.noop}) {
-    $.post('http://ai.baidu.com/aidemo', {
+    $.post('/aidemo', {
         type: 'wakescore',
         kw: words
     }).success(success).fail(fail);
@@ -68,7 +67,7 @@ export function exportWakeWords({words = null, success = $.noop}) {
 }
 
 export function synthesizeSpeech({data = {}, success = $.noop, fail = $.noop}) {
-    $.post('http://ai.baidu.com/aidemo', {
+    $.post('/aidemo', {
         type: 'tts',
         speed: data.speed,
         vol: data.vol,
