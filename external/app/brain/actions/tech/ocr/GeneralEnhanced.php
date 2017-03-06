@@ -5,7 +5,7 @@
  * Date: 2017/3/6
  * Time: 下午3:16
  */
-class Action_General_Enhance extends Ap_Action_Abstract{
+class Action_General_Enhanced extends Ap_Action_Abstract{
     public function execute(){
         $arrPageInfo['page'] = "ocr_general_enhanced";
         Brain_Output::htmlOutput(
