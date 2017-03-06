@@ -436,6 +436,7 @@ class Brain_AIApi {
         $obj->setCrawlTimeout(3); //设置爬取超时
         $res = $obj->execute($image_url);
         unset($obj);
+        Bd_Log::addNotice('res', $res);
         if ($res['isValid']){
            return $res['http_body'];
 
