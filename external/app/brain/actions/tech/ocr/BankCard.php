@@ -10,7 +10,7 @@ class Action_BankCard extends Ap_Action_Abstract{
         $arrPageInfo['page'] = "ocr_bankcard";
         Brain_Output::htmlOutput(
             $arrPageInfo,
-            "brain/platform/technology/ocr_bankcard.tpl"
+            "brain/platform/technology/ocr-bankcard.tpl"
         );
     }
 }

@@ -10,7 +10,7 @@ class Action_General extends Ap_Action_Abstract{
         $arrPageInfo['page'] = "ocr_idcard";
         Brain_Output::htmlOutput(
             $arrPageInfo,
-            "brain/platform/technology/ocr_idcard.tpl"
+            "brain/platform/technology/ocr-idcard.tpl"
         );
     }
 }

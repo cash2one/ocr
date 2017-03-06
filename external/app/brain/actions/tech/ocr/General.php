@@ -10,7 +10,7 @@ class Action_General extends Ap_Action_Abstract{
         $arrPageInfo['page'] = "ocr_General";
         Brain_Output::htmlOutput(
             $arrPageInfo,
-            "brain/platform/technology/ocr_general.tpl"
+            "brain/platform/technology/ocr-general.tpl"
         );
     }
 }
