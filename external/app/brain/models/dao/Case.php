@@ -23,6 +23,7 @@ class Dao_Case extends Dao_Base {
         'content',
         'tech',
         'create_time',
+        'json_content',
     );
 
     /**
