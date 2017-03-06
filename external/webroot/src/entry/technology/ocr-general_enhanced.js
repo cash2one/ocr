@@ -194,7 +194,7 @@ const showError = function (errno) {
         case 107:
         case 28:
         default:
-            showImage(timeoutImg);
+            showImage(formatImg);
 
             return;
     }
