@@ -438,7 +438,7 @@ class Brain_AIApi {
         unset($obj);
         Bd_Log::addNotice('res', $res);
         if ($res['isValid']){
-           return $res['http_body'];
+           return base64_encode($res['http_body']);
 
         } else{
             return "";
