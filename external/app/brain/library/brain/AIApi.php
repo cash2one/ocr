@@ -50,7 +50,7 @@ class Brain_AIApi {
             ),
         ),
         "general_enhanced" => array(
-            'url' => 'https://openapi.baidu.com/rest/2.0/vis-ocr/v1/ocr/general',
+            'url' => 'https://openapi.baidu.com/rest/2.0/vis-ocr/v1/ocr/general_enhanced',
             'params' => array(
                 'detect_direction' => 'true',
             ),
