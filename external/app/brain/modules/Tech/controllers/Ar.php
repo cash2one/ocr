@@ -10,15 +10,6 @@ class Controller_Ar extends Ap_Controller_Abstract
 {
     public $actions = array(
 
-        '' => 'actions/tech/ar/Ar.php',
+        'index' => 'actions/tech/ar/Ar.php',
     );
-
-    public function indexAction(){
-        $arrPageInfo['page'] = "ar";
-        Brain_Output::htmlOutput(
-            $arrPageInfo,
-            "brain/platform/technology/ar.tpl"
-        );
-    }
-
 }

@@ -15,7 +15,7 @@
 class Action_Ar extends Ap_Action_Abstract {
 
     public function execute() {
-        $arrPageInfo['page'] = substr(strtolower(__CLASS__), 7);
+        $arrPageInfo['page'] = "ar";
         Brain_Output::htmlOutput(
             $arrPageInfo, 
             'brain/platform/technology/ar.tpl'
