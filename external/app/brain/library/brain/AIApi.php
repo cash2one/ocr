@@ -421,10 +421,26 @@ class Brain_AIApi {
      */ 
     public static function getImageByUrl($image_url) {
 
-        @$image_data = file_get_contents(
-            $image_url, false, null, 0, Brain_AIApi::MAX_IMAGE_LIMIT
-        );
-        return base64_encode($image_data);
+
+        $obj = new SafeCurl();
+        foreach (Brain_AIApi::$arrImageType as $imageType){
+            $obj->addWhitelist('content_type', $imageType); //设置 content-type
+        }
+        foreach (Brain_AIApi::$arrHostWhiteList as $host){
+            $obj->addWhitelist('ip:port', $host); //设置 ip:port
+        }
+
+        $obj->allowRedirect(); // 允许重定向
+        $obj->setRedirectCount(5); //设置跳转次数
+        $obj->setCrawlTimeout(3); //设置爬取超时
+        $res = $obj->execute($image_url);
+        unset($obj);
+        if ($res['isValid']){
+           return $res['http_body'];
+
+        } else{
+            return "";
+        }
     }
 
     /**
