@@ -6,7 +6,7 @@
  * Date: 2017/3/3
  * Time: 下午6:54
  */
-class Controller_Ar extends Ap_Controller_Abstract
+class Controller_Main extends Ap_Controller_Abstract
 {
     public $actions = array(
 
