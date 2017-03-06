@@ -53,9 +53,11 @@
             <div class="tech-demo-choose">
                 <div class="tech-demo-upload tech-clear">
                     <input type="text" class="ocr-demo-photo-url" id="demo-photo-url" placeholder="请输入网络图片URL">
-                    <button type="button" class="btn-primary" id="scan-photo">检测</button>
+                    <button type="button" class="btn-primary" id="scan-url">检测</button>
                     <div class="ocr-demo-huo">或</div>
-                    <label class="ocr-demo-local" id="demo-photo-upload"><input type="file">本地上传</label>
+                    <label class="ocr-demo-local" id="demo-photo-upload">
+                        <input type="file" id="img-upload">本地上传
+                    </label>
                 </div>
                 <div class="tech-demo-desc">提示：可支持PNG、JPG、JPEG、BMP图片文件，不支持GIF图片，图片大小不超过2M，长边不超过2048像素。为保证正常识别效果，请保证需要识别部分为图片主体部分。</div>
                 <div class="tech-demo-card-list">
@@ -85,7 +87,9 @@
                     </div>
                 </div>
             </div>
-            <div class="tech-demo-data-view tech-demo-json" id="demo-json" data-label="RESPONSE JSON"></div>
+            <div class="tech-demo-data-view tech-demo-json" id="demo-json" data-label="RESPONSE JSON">
+                <p></p>
+            </div>
         </div>
     </div>
 </div>

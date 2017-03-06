@@ -6,7 +6,6 @@
 @import '../common/tech-commom.less';
 @import '../common/modal.less';
 
-
 // 技术单页前缀
 @prefix: tech;
 
@@ -69,13 +68,27 @@
         width: 400px;
         height: 250px;
         background: url(../../../ai_images/technology/ocr-uncommon/tech-function-original-card.png) no-repeat;
+        overflow: hidden;
 
         &:before {
             content: '';
             display: block;
             width: 400px;
             height: 132px;
-            background:url(../../../ai_images/technology/ocr-uncommon/tech-function-mask.png) no-repeat;
+            background: url(../../../ai_images/technology/ocr-uncommon/tech-function-mask.png) no-repeat;
+            transform: translate(0, -132px);
+        }
+
+
+        &.tech-function-scanning {
+            &:before {
+                transition: 3s linear;
+                transform: translate(0, 250px);
+            }
+        }
+
+        &.tech-function-scanned {
+            // background: url(../../../ai_images/technology/ocr-uncommon/tech-function-original-scanned.png) no-repeat;
         }
     }
 
@@ -94,9 +107,16 @@
         width: 400px;
         height: 250px;
         background: url(../../../ai_images/technology/ocr-uncommon/tech-function-scan-result.png) no-repeat;
+        opacity: 0;
+        transition: opacity 1.5s ease-out;
+
+        &.tech-function-scanned {
+            opacity: 1;
+        }
     }
 }
 
+// fixme less写的太烂了
 
 // demo演示(未详细)
 .@{prefix}-demo {
@@ -151,7 +171,6 @@
         }
     }
 
-
     &-choose {
         display: inline-block;
         vertical-align: top;
@@ -161,7 +180,6 @@
     }
 
     &-upload {
-
         * {
             float: left;
         }
@@ -211,8 +229,7 @@
             }
 
             input {
-                width: 0;
-                height: 0;
+                display: none;
             }
         }
     }
@@ -230,6 +247,7 @@
     }
 
     &-card-item {
+        position: relative;
         display: inline-block;
         vertical-align: top;
         box-sizing: border-box;
@@ -248,20 +266,119 @@
         }
 
         img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
             max-width: 100%;
             max-height: 100%;
+            transform: translate(-50%, -50%);
         }
     }
 
     &-json {
+        position: relative;
         box-sizing: border-box;
-        padding: 40px 20px;
         height: 345px;
         font-size: 14px;
         color: #666;
         white-space: pre-wrap;
         text-align: left;
-        overflow: auto;
+        overflow: hidden;
     }
 }
 
+@keyframes uploading {
+    0% {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#demo-result {
+    table {
+        border: 1px solid #eee;
+        width: 100%;
+
+        thead > tr > th,
+        tbody > tr > td {
+            border-right: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 3px 8px;
+        }
+
+        thead > tr > th:last-child,
+        tbody > tr > td:last-child {
+            border-right: none;
+        }
+
+        tbody > tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody > tr > td {
+            text-align: center;
+        }
+
+        tbody > tr > td:nth-child(2) {
+            text-align: left;
+        }
+    }
+
+    &.has-result {
+        &::after {
+            display: none;
+        }
+        &> table {
+            display: table;
+        }
+    }
+}
+
+#json-table {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 40px 10px 10px;
+    overflow: auto;
+    font-size: 14px;
+}
+
+#demo-json {
+    p {
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding: 40px 20px;
+        overflow: auto;
+        height: 100%;
+        margin: 0;
+    }
+}
+
+#result-loading {
+    position: absolute;
+    left: 277px;
+    top: 115px;
+    width: 32px;
+    height: 32px;
+    line-height: 348px;
+    color: #666;
+    text-align: center;
+    background: url(../../../ai_images/loading.png) center;
+    .animate(uploading, 0.8s, 0, infinite, ease-in);
+}
+
+#demo-result {
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
