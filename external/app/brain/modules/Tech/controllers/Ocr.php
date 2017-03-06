@@ -10,10 +10,10 @@ class Controller_Ocr extends Ap_Controller_Abstract
 {
     public $actions = array(
 
-        'bankcard' => '../actions/ocr/Bankcard.php',
-        'general' => 'actions/ocr/General.php',
-        'idcard' => 'actions/ocr/IdCard.php',
-        'general_enhanced' => 'actions/ocr/GeneralEnhanced.php',
+        'bankcard' => 'actions/tech/ocr/Bankcard.php',
+        'general' => 'actions/tech/ocr/General.php',
+        'idcard' => 'actions/tech/ocr/IdCard.php',
+        'general_enhanced' => 'actions/tech/ocr/GeneralEnhanced.php',
     );
 
 }
