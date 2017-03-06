@@ -10,6 +10,6 @@ class Controller_Ar extends Ap_Controller_Abstract
 {
     public $actions = array(
 
-        'index' => 'actions/tech/ar/Ar.php',
+        'index' => 'actions/tech/ar/Index.php',
     );
 }

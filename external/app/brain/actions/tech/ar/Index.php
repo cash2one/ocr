@@ -5,12 +5,12 @@
  * Date: 2017/3/6
  * Time: 下午3:09
  */
-class Action_Antiporn extends Ap_Action_Abstract{
+class Action_Index extends Ap_Action_Abstract{
     public function execute(){
-        $arrPageInfo['page'] = "antiporn";
+        $arrPageInfo['page'] = "ar";
         Brain_Output::htmlOutput(
             $arrPageInfo,
-            "brain/platform/technology/antiporn.tpl"
+            "brain/platform/technology/ar.tpl"
         );
     }
 }
