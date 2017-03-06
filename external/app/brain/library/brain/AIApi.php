@@ -421,6 +421,7 @@ class Brain_AIApi {
      */ 
     public static function getImageByUrl($image_url) {
 
+        require_once ("SafeCurl.class.php");
 
         $obj = new \SafeCurl();
         foreach (Brain_AIApi::$arrImageType as $imageType){
