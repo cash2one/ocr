@@ -10,7 +10,7 @@ class Action_General_Enhance extends Ap_Action_Abstract{
         $arrPageInfo['page'] = "ocr_general_enhance";
         Brain_Output::htmlOutput(
             $arrPageInfo,
-            "brain/platform/technology/ocr_general_enhance.tpl"
+            "brain/platform/technology/ocr-general_enhance.tpl"
         );
     }
 }
