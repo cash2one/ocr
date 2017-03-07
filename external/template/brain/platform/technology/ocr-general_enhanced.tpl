@@ -210,10 +210,11 @@
         </div>
         <div class="tech-banner-btn-list">
             <a role="button"
-               class="btn-primary media"
                {%if $src eq Null%}
+               class="btn-primary media consult"
                data-operation="cooperation"
                {%else%}
+               class="btn-primary media"
                href="mailto://ai@baidu.com"
                {%/if%}>
                 商务合作
@@ -397,10 +398,11 @@
         <div class="tech-free-info">您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</div>
         <div class="tech-free-btn">
             <a role="button"
-               class="btn-primary large"
                {%if $src eq Null%}
+               class="btn-primary large consult"
                data-operation="cooperation"
                {%else%}
+               class="btn-primary large"
                href="mailto://ai@baidu.com"
                {%/if%}>
                 商务合作
@@ -437,6 +439,7 @@
         <li class="feedback">
             <a data-spec="我要反馈"
                href="https://ikefu.baidu.com/web/ai-platform"
+               target="_blank"
                id="feedback-btn"></a>
         </li>
         <li class="back-top">

@@ -382,6 +382,7 @@
         <li class="feedback">
             <a data-spec="我要反馈"
                href="https://ikefu.baidu.com/web/ai-platform"
+               target="_blank"
                id="feedback-btn"></a>
         </li>
         <li class="back-top">
