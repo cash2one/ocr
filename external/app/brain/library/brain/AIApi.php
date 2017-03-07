@@ -431,8 +431,6 @@ class Brain_AIApi {
             $obj->addWhitelist('ip:port', $host); //设置 ip:port
         }
 
-        $obj->allowRedirect(); // 允许重定向
-        $obj->setRedirectCount(5); //设置跳转次数
         $obj->setCrawlTimeout(3); //设置爬取超时
         $res = $obj->execute($image_url);
         unset($obj);
