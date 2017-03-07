@@ -29,17 +29,22 @@ class Action_Case extends Ap_Action_Abstract {
         $dbCase = new Dao_Case();
 
         if ('add' === $strAction) {
-            
-            
-            $strUsername = Brain_Util::getParamAsString($arrInput, 'username');
-            $strCompany = Brain_Util::getParamAsString($arrInput, 'company');
-            $strPhone = Brain_Util::getParamAsString($arrInput, 'phone');
-            $strContent = Brain_Util::getParamAsString($arrInput, 'content');
-            $strContactway= Brain_Util::getParamAsString($arrInput, 'contactWay');
-            $strTech = Brain_Util::getParamAsString($arrInput, 'tech');
+
+            $dataContent = array();
+            $strUsername = $dataContent['username'] = Brain_Util::getParamAsString($arrInput, 'username');
+            $strCompany = $dataContent['company'] =  Brain_Util::getParamAsString($arrInput, 'company');
+            $strPhone = $dataContent['phone'] =  Brain_Util::getParamAsString($arrInput, 'phone');
+            $strContent = $dataContent['content'] =  Brain_Util::getParamAsString($arrInput, 'content');
+            $strContactway= $dataContent['contactway'] =  Brain_Util::getParamAsString($arrInput, 'contactWay');
+            $strTrade= $dataContent['trade'] =  Brain_Util::getParamAsString($arrInput, 'trade');
+            $strTech = $dataContent['tech'] =  Brain_Util::getParamAsString($arrInput, 'tech');
             
             $strCode = strtoupper(Brain_Util::getParamAsString($arrInput, 'code'));
-            
+
+            $strSiteUrl = $dataContent['siteUrl'] =  Brain_Util::getParamAsString($arrInput, "siteUrl");
+            $business = $dataContent['business'] = Brain_Util::getParamAsString($arrInput, "business");
+            $requirement = $dataContent['requirement'] = Brain_Util::getParamAsString($arrInput, "requirement");
+
             $seccode = Brain_Seccode::getSeccode();
             //echo $seccode, "<br>", $strCode;
             
@@ -47,8 +52,9 @@ class Action_Case extends Ap_Action_Abstract {
             {
                 $caseId = null;
                 try {
+                    $jsonContent = Bd_String::json_encode($dataContent);
                     $caseId = $dbCase->insertCase($strUsername, $strCompany, $strPhone,
-                        $strContent, $strContactway, $strTech);
+                        $strContent, $strContactway, $strTech, $jsonContent);
                 } catch (Exception $e) {
                     Bd_Log::warning('Db operate fail: '.$e->getMessage());
                     Brain_Output::jsonOutput(1, 'Db operate fail');

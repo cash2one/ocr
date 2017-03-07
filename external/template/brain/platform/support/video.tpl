@@ -63,6 +63,7 @@
                                 <li><a href="/tech/ocr/general">通用文字识别</a></li>
                                 <li><a href="/tech/ocr/idcard">身份证识别</a></li>
                                 <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
+                                <li><a href="/tech/ocr/general_enhanced">生僻字识别</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>人脸识别</span>
@@ -328,8 +329,15 @@
         <li class="consult">
             <a id="ai-consult" data-spec="合作咨询"></a>
         </li>
-        <li class="feedback"><a data-spec="我要反馈" id="feedback-btn"></a></li>
-        <li class="back-top"><a data-spec="返回顶部"></a></li>
+        <li class="feedback">
+            <a data-spec="我要反馈"
+               href="https://ikefu.baidu.com/web/ai-platform"
+               target="_blank"
+               id="feedback-btn"></a>
+        </li>
+        <li class="back-top">
+            <a data-spec="返回顶部"></a>
+        </li>
     </ul>
 </aside>
 <footer class="footer-nav">
@@ -394,65 +402,6 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script type="text/javascript">
-    (function () {
-        function init_feedback() {
-            if (bds && bds.qa && bds.qa.ShortCut && bds.qa.ShortCut.initRightBar) {
-                var fb_options = {
-                    appid: 215714
-                };
-                var pro_data = {
-                    appid: 215714
-                };
-                bds.qa.ShortCut.initRightBar(fb_options);
-            }
-        }
-
-        function loadRightBar() {
-            if (window.bds && window.bds.qa && window.bds.qa.ShortCut) {
-                init_feedback();
-            } else {
-                loadScript('https://ufosdk.baidu.com/Public/feedback/js/feedback_plugin_1.0.js', function () {
-                    init_feedback();
-                }, {
-                    charset: 'utf-8',
-                    id: 'feedback_script'
-                });
-            }
-            return false;
-        }
-        document.getElementById('feedback-btn').onclick = function () {
-            loadRightBar();
-        };
-    })();
-
-    function loadScript(url, callback, opt) {
-        var script = document.createElement('script');
-        var opt = opt || {};
-        script.type = 'text/javascript';
-        if (opt.charset) {
-            script.charset = opt.charset;
-        }
-        if (opt.id) {
-            script.id = opt.id;
-        }
-
-        if (script.readyState) {
-            script.onreadystatechange = function () {
-                if (script.readyState === 'loaded' || script.readyState === 'complete') {
-                    script.onreadystatechange = null;
-                    callback();
-                }
-            };
-        } else {
-            script.onload = function () {
-                callback();
-            };
-        }
-        script.src = url;
-        document.body.appendChild(script);
-    }
-</script>
 <script src="//ai.bdstatic.com/dist/1488528241/js/common.bundle.js"></script>
 <script src="//ai.bdstatic.com/dist/1488528241/js/support/video.js"></script>
 </body>

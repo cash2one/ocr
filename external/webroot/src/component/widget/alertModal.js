@@ -4,11 +4,10 @@
  */
 'use strict';
 
-import EJS from 'ejs';
 import $ from 'jquery';
 import Modal from '../common/modal';
-import {ALERT_MODAL_TMPL} from '../../partials/modal';
 
+import alertModalTpl from 'partials/modal/alert.hbs';
 
 export default class AlertModal extends Modal {
     constructor(content) {
@@ -19,8 +18,7 @@ export default class AlertModal extends Modal {
     }
 
     init() {
-        let html = EJS.render(
-            ALERT_MODAL_TMPL,
+        const html = alertModalTpl(
             {
                 id: this.id,
                 title: this.title,

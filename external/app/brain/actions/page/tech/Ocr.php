@@ -19,7 +19,7 @@ class Action_Ocr extends Ap_Action_Abstract {
         $arrInput = $arrRequest['request_param'];
 
         $class_name = substr(strtolower(__CLASS__), strlen('action_'));
-        $techList = array('bankcard', 'general', 'idcard');
+        $techList = array('bankcard', 'general', 'idcard', 'general_enhanced');
 
         $inputKeys = array_keys($arrInput);
         $tech = $inputKeys[0];

@@ -49,6 +49,12 @@ class Brain_AIApi {
                 'detect_direction' => 'true',
             ),
         ),
+        "general_enhanced" => array(
+            'url' => 'https://openapi.baidu.com/rest/2.0/vis-ocr/v1/ocr/enhance_classnum',
+            'params' => array(
+                'detect_direction' => 'true',
+            ),
+        ),
         "idcard" => array(
             'url' => 'https://openapi.baidu.com/rest/2.0/vis-ocr/v1/ocr/idcard',
             'params' => array(
@@ -415,10 +421,28 @@ class Brain_AIApi {
      */ 
     public static function getImageByUrl($image_url) {
 
-        @$image_data = file_get_contents(
-            $image_url, false, null, 0, Brain_AIApi::MAX_IMAGE_LIMIT
-        );
-        return base64_encode($image_data);
+        require_once ("SafeCurl.class.php");
+
+        $obj = new \SafeCurl();
+        foreach (Brain_AIApi::$arrImageType as $imageType){
+            $obj->addWhitelist('content_type', $imageType); //设置 content-type
+        }
+        foreach (Brain_AIApi::$arrHostWhiteList as $host){
+            $obj->addWhitelist('ip:port', $host); //设置 ip:port
+        }
+
+        $obj->allowRedirect(); // 允许重定向
+        $obj->setRedirectCount(5); //设置跳转次数
+        $obj->setCrawlTimeout(3); //设置爬取超时
+        $res = $obj->execute($image_url);
+        unset($obj);
+        Bd_Log::addNotice('res', $res);
+        if ($res['isValid']){
+           return base64_encode($res['http_body']);
+
+        } else{
+            return "";
+        }
     }
 
     /**
