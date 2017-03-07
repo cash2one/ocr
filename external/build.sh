@@ -1,6 +1,6 @@
 #/bin/sh
 workspace=$(pwd)
-project=${workspace//*\//}
+project="aip-platform-ext"
 output="$workspace/output"
 
 mkdir -p $output
@@ -12,7 +12,7 @@ BUILD_SUB_DIRS="app conf data template webroot scripts webserver"
 cp -rf ${BUILD_SUB_DIRS} ${output}
 cd ${output}
   _time=$(date +%s%N)
-    tgz="$project.$_time.tgz"
+    tgz="$project.tgz"
   tar czf $tgz *
 mv $tgz $workspace/.
   rm -rf $output/*
