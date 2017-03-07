@@ -202,7 +202,7 @@
     <div class="tech-section tech-banner">
     <div class="ai-container">
         <div class="tech-banner-title">
-            通用生僻字
+            生僻字识别
         </div>
         <div class="tech-banner-info">
             <p>依托全网海量优质数据和业界领先的深度学习技术</p>
