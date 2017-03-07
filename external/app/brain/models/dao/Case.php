@@ -144,8 +144,8 @@ class Dao_Case extends Dao_Base {
                 <tr>
                     <th>联系电话:</th>
                     <td>{$data_content['phone']}</td>
-                    <th>其他联系方式:</th>
-                    <td>{$data_content['contactway']}</td>
+                    <th>行业:</th>
+                    <td>{$data_content['trade']}</td>
                 </tr>
                 <tr>
                     <td colspan='4'>
