@@ -1,5 +1,8 @@
 .ai-platform {
     .ai-consult-form {
+        .has-error {
+            border:1px solid #ff0000;
+        }
 
         &-title {
             display: inline-block;
@@ -15,9 +18,11 @@
             &-list {
                 width: 370px;
                 height: 30px;
+                border: 1px solid #ebebeb;
                 font-size: 14px;
                 color: #000;
             }
+
             option {
                 padding: 0;
             }
@@ -31,9 +36,9 @@
         }
 
         &-input,
-        &-text,
-        &-select {
+        &-text {
             border: 1px solid #ebebeb;
+            color: #000;
         }
 
         &-input {
