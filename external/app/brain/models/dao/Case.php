@@ -167,7 +167,9 @@ class Dao_Case extends Dao_Base {
         ";
         $smtp = new Bd_Smtp();
         $smtp->setFrom('ai-news@baidu.com');
-        $smtp->addAddress('ai@baidu.com');
+        $case_send_mail = Bd_Conf::getAppConf('case_send_mail');
+        $address = isset($case_send_mail) ? $case_send_mail['address'] : 'ai@baidu.com';
+        $smtp->addAddress($address);
         $smtp->send($title, $subject);
     }
 
