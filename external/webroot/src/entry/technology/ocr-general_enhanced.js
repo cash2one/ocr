@@ -412,3 +412,9 @@ scan(firstImg)
         },
         showError
     );
+
+// fixme 咨询表单非常不合理,只能暂时这么搞
+const $consultBtn = $('#ai-consult');
+$('[data-operation="cooperation"]').on('click', () => {
+    $consultBtn.click();
+});

@@ -63,6 +63,7 @@
                                 <li><a href="/tech/ocr/general">通用文字识别</a></li>
                                 <li><a href="/tech/ocr/idcard">身份证识别</a></li>
                                 <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
+                                <li><a href="/tech/ocr/general_enhanced">生僻字识别</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>人脸识别</span>

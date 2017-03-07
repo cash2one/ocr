@@ -63,6 +63,7 @@
                                 <li><a href="/tech/ocr/general">通用文字识别</a></li>
                                 <li><a href="/tech/ocr/idcard">身份证识别</a></li>
                                 <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
+                                <li><a href="/tech/ocr/general_enhanced">生僻字识别</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>人脸识别</span>
@@ -210,7 +211,11 @@
         <div class="tech-banner-btn-list">
             <a role="button"
                class="btn-primary media"
-               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">
+               {%if $src eq Null%}
+               data-operation="cooperation"
+               {%else%}
+               href="mailto://ai@baidu.com"
+               {%/if%}>
                 商务合作
             </a>
         </div>
@@ -393,7 +398,11 @@
         <div class="tech-free-btn">
             <a role="button"
                class="btn-primary large"
-               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">
+               {%if $src eq Null%}
+               data-operation="cooperation"
+               {%else%}
+               href="mailto://ai@baidu.com"
+               {%/if%}>
                 商务合作
             </a>
         </div>
