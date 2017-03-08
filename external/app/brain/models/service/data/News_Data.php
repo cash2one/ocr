@@ -14,12 +14,18 @@ class Service_Data_News{
         $this ->newsDao = new Dao_NewsExt();
     }
 
+    /**
+     * 获取最新的新闻ID
+     * @param
+     * @return int 最新的新闻ID
+     * @author songqingyun
+     */
     public function getNewsLastId(){
         $news = $this->newsDao->getNewsList(0,1);
         if (empty($news)){
             return 1;
         }
-        return $news[0][id];
+        return $news[0]['id'];
     }
 
 }

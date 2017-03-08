@@ -12,6 +12,10 @@ class Service_Page_News{
         $this->newsData = new Service_Data_News();
     }
 
+    /**
+     * @param null $data
+     * @return string
+     */
     public function execute($data=null){
 
         $siteMapUrls =Bd_Conf::getConf('/sitemap/site_map_page/url');
