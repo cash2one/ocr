@@ -349,7 +349,7 @@ $scanUrlBtn.on(
             return;
         }
 
-        if (!/\.(jpe?g|png|gif|bmp)$/i.test(demoUrl)) {
+        if (!/\.(jpe?g|png|gif|bmp)(\?.*)?(#.*)?$/i.test(demoUrl)) {
             showError(FILE_TYPE_ERROR);
 
             return;
