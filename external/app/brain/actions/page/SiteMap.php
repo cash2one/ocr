@@ -11,14 +11,15 @@
  **/
 class Action_SiteMap extends Ap_Action_Abstract {
 
+    private $newsPage;
+
+    public function __construct()
+    {
+        $this->newsPage = new Service_Page_News();
+    }
+
     public function execute() {
-        $siteMapUrls =Bd_Conf::getConf('/sitemap/site_map_page/url');
-       // var_dump($siteMapConf['url']);
-        $txt = '';
-        foreach ($siteMapUrls as $url)
-        {
-            $txt .= $url ."\n";
-        }
+        $txt = $this->newsPage->execute();
         Brain_Output::txtOutput(
             $txt
         );
