@@ -12,12 +12,9 @@
 class Action_SiteMap extends Ap_Action_Abstract
 {
 
-    private $newsPage;
-
-
     public function execute()
-    {   $this->newsPage = new Service_Page_News();
-        $txt = $this->newsPage->execute();
+    {   $newsPage =Factory::getInstance('Service_Page_News');
+        $txt = $newsPage->execute();
         Brain_Output::txtOutput(
             $txt
         );
