@@ -68,5 +68,10 @@ class Brain_Output {
         }
         echo $strRet;
     }
+
+    public function txtOutput($txt){
+        header('Content-Type: text/txt; charset=UTF-8');
+        echo $txt;
+    }
 }
 /* vim: set expandtab ts=4 sw=4 sts=4 tw=80: */
