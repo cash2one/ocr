@@ -12,10 +12,15 @@
 class Action_SiteMap extends Ap_Action_Abstract {
 
     public function execute() {
-        $siteMapConf =Bd_Conf::getConf();
-var_dump($siteMapConf);
+        $siteMapConf =Bd_Conf::getConf('/sitemap/');
+       // var_dump($siteMapConf['url']);
+        $txt = '';
+        foreach ($siteMapConf['url'] as $url)
+        {
+            $txt .= $url ."/n";
+        }
         Brain_Output::txtOutput(
-            $siteMapConf
+            $txt
         );
     }
 }
