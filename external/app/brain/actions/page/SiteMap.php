@@ -15,7 +15,7 @@ class Action_SiteMap extends Ap_Action_Abstract {
         $siteMapConf =Bd_Conf::getConf("/sitemap/");
 
         Brain_Output::txtOutput(
-            $siteMapConf
+            $siteMapConf['page']
         );
     }
 }
