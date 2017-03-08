@@ -65,7 +65,7 @@
                                 <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
                                 <li>
                                     <a href="/tech/ocr/general_enhanced" id="ocr-enhanced-link">
-                                    通用文字识别（含生僻字版
+                                    通用文字识别（含生僻字版）
                                     </a>
                                 </li>
                             </ul>
@@ -747,7 +747,7 @@
             <a id="ai-consult" data-spec="合作咨询"></a>
         </li>
         <li class="feedback">
-            <a data-spec="我要反馈"
+            <a data-spec="在线咨询"
                href="https://ikefu.baidu.com/web/ai-platform"
                target="_blank"
                id="feedback-btn"></a>
