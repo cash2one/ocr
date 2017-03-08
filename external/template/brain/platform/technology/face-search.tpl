@@ -24,7 +24,7 @@
 <header class="header-nav">
     <div class="container">
         <div class="logo">
-            <a href="https://ai.baidu.com" href="_self">
+            <a href="https://ai.baidu.com">
                 <img src="//ai.bdstatic.com/dist/1488528241/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
@@ -63,7 +63,11 @@
                                 <li><a href="/tech/ocr/general">通用文字识别</a></li>
                                 <li><a href="/tech/ocr/idcard">身份证识别</a></li>
                                 <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
-                                <li><a href="/tech/ocr/general_enhanced">生僻字识别</a></li>
+                                <li>
+                                    <a href="/tech/ocr/general_enhanced" id="ocr-enhanced-link">
+                                    通用文字识别（含生僻字版
+                                    </a>
+                                </li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>人脸识别</span>
@@ -454,6 +458,10 @@
                 <li><a href="http://recsys.baidu.com/" target="_blank">Recsys推荐云平台</a></li>
                 <li><a href="https://cloud.baidu.com/?t=cp:online-media%7Cci:%7Ccn:ai" target="_blank">百度云</a></li>
                 <li><a href="http://www.chuanke.com/" target="_blank">百度传课</a></li>
+                <li><a href="http://app.baidu.com" target="_blank">百度开发者平台</a></li>
+                <li><a href="http://zhongbao.baidu.com" target="_blank">百度数据众包</a></li>
+                <li><a href="http://union.baidu.com" target="_blank">百度联盟</a></li>
+                <li><a href="http://tongji.baidu.com" target="_blank">百度统计</a></li>
             </ul>
         </nav>
     </div>
