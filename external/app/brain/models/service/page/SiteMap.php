@@ -5,7 +5,7 @@
  * Date: 2017/3/8
  * Time: 下午5:49
  */
-class Service_Page_News{
+class Service_Page_SiteMap{
     private $newsData;
     public function __construct()
     {

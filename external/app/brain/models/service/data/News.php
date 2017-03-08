@@ -11,7 +11,8 @@ class Service_Data_News{
 
     public function __construct()
     {
-        $this ->newsDao = new Dao_NewsExt();
+        parent::__construct();
+        $this ->newsDao = new Dao_News();
     }
 
     /**
