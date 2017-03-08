@@ -24,7 +24,7 @@
 <header class="header-nav">
     <div class="container">
         <div class="logo">
-            <a href="https://ai.baidu.com" href="_self">
+            <a href="https://ai.baidu.com">
                 <img src="//ai.bdstatic.com/dist/1488528241/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
@@ -63,7 +63,11 @@
                                 <li><a href="/tech/ocr/general">通用文字识别</a></li>
                                 <li><a href="/tech/ocr/idcard">身份证识别</a></li>
                                 <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
-                                <li><a href="/tech/ocr/general_enhanced">生僻字识别</a></li>
+                                <li>
+                                    <a href="/tech/ocr/general_enhanced" id="ocr-enhanced-link">
+                                    通用文字识别（含生僻字版
+                                    </a>
+                                </li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>人脸识别</span>
@@ -201,8 +205,8 @@
 <div class="ai-platform page-content">
     <div class="tech-section tech-banner">
     <div class="ai-container">
-        <div class="tech-banner-title">
-            生僻字识别
+        <div class="tech-banner-title" id="orc-enhanced-title">
+            通用文字识别（含生僻字版）
         </div>
         <div class="tech-banner-info">
             <p>依托全网海量优质数据和业界领先的深度学习技术
@@ -367,7 +371,7 @@
                 <div class="tech-case-item-logo"></div>
                 <div class="tech-case-item-title">百度词典</div>
                 <div class="tech-case-item-info">
-                    百度词典app是百度官方推出的手机词典软件；用户可以用摄像头拍摄的方式，调用百度生僻字OCR进行生僻字识别，有效的增强了应用的文字输入能力。
+                    百度词典app是百度官方推出的手机词典软件；用户可以用摄像头拍摄的方式，调用百度通用文字识别（含生僻字版）OCR进行生僻字识别，有效的增强了应用的文字输入能力。
                 </div>
             </div>
         </div>
@@ -376,7 +380,7 @@
                 <div class="tech-case-item-logo"></div>
                 <div class="tech-case-item-title">手机百度</div>
                 <div class="tech-case-item-info">
-                    手机百度是百度推出的一款方便手机用户随时随地使用百度搜索服务的应用；手机百度调用百度生僻字OCR接口进行拍照生僻字识别，可以方便的进行生僻字搜索等操作。
+                    手机百度是百度推出的一款方便手机用户随时随地使用百度搜索服务的应用；手机百度调用百度通用文字识别（含生僻字版）OCR接口进行拍照生僻字识别，可以方便的进行生僻字搜索等操作。
                 </div>
             </div>
         </div>
@@ -502,6 +506,10 @@
                 <li><a href="http://recsys.baidu.com/" target="_blank">Recsys推荐云平台</a></li>
                 <li><a href="https://cloud.baidu.com/?t=cp:online-media%7Cci:%7Ccn:ai" target="_blank">百度云</a></li>
                 <li><a href="http://www.chuanke.com/" target="_blank">百度传课</a></li>
+                <li><a href="http://app.baidu.com" target="_blank">百度开发者平台</a></li>
+                <li><a href="http://zhongbao.baidu.com" target="_blank">百度数据众包</a></li>
+                <li><a href="http://union.baidu.com" target="_blank">百度联盟</a></li>
+                <li><a href="http://tongji.baidu.com" target="_blank">百度统计</a></li>
             </ul>
         </nav>
     </div>
