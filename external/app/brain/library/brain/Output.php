@@ -99,5 +99,17 @@ class Brain_Output {
         }
         echo $strRet;
     }
+    /**
+     * @brief jsonp输出
+     *
+     * @param [in] $txt   : 待输出内容
+     *
+     * @author songqingyun
+     * @date 2017/03/08 14:20:21
+     **/
+    public function txtOutput($txt){
+        header('Content-Type: text/txt; charset=UTF-8');
+        echo $txt;
+    }
 }
 /* vim: set expandtab ts=4 sw=4 sts=4 tw=80: */

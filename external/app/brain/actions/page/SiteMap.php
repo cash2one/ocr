@@ -13,7 +13,7 @@ class Action_SiteMap extends Ap_Action_Abstract {
 
     public function execute() {
 
-        Brain_Output::txtOupput(
+        Brain_Output::txtOutput(
             'brain/platform/document/document.tpl'
         );
     }
