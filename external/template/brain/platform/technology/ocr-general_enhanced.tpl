@@ -205,8 +205,8 @@
             生僻字识别
         </div>
         <div class="tech-banner-info">
-            <p>依托全网海量优质数据和业界领先的深度学习技术</p>
-            <p>在通用OCR基础上，扩展支持2W+大字库，能识别所有常用字和大多数生僻字。</p>
+            <p>依托全网海量优质数据和业界领先的深度学习技术
+                在通用OCR基础上，扩展支持2W+大字库，能识别所有常用字和大多数生僻字。</p>
         </div>
         <div class="tech-banner-btn-list">
             <a role="button"
