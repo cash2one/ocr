@@ -28,7 +28,7 @@ class Controller_Main extends Ap_Controller_Abstract {
         'antiporn'     => 'actions/page/tech/Antiporn.php',
 
         'error'     => 'actions/page/Error.php',
-        'siteMap'     => 'actions/page/SiteMap.php',
+        'sitemap'     => 'actions/page/SiteMap.php',
 
     );
 }
