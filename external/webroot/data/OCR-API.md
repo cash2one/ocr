@@ -422,18 +422,22 @@ image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 {
     "log_id": 1447188951,
     "result": {
-        "bank_card_number": "622262 0110024275769"
+        "bank_card_number": "622500000000000",
+        "bank_name": "招商银行",
+        "bank_card_type": 1
     }
 }
 ```
 
 **返回参数**
 
-| 参数                | 类型     | 是否必须 | 说明            |
-| ----------------- | ------ | ---- | ------------- |
-| log_id            | uint64 | 是    | 请求标识码，随机数，唯一。 |
-| result            | object | 是    | 返回结果          |
-| +bank_card_number | string | 是    | 银行卡卡号         |
+| 参数                | 类型     | 是否必须 | 说明                           |
+| ----------------- | ------ | ---- | ---------------------------- |
+| log_id            | uint64 | 是    | 请求标识码，随机数，唯一。                |
+| result            | object | 是    | 返回结果                         |
+| +bank_card_number | string | 是    | 银行卡卡号                        |
+| +bank_name        | string | 是    | 银行名，不能识别时为空                |
+| +bank_card_type   | uint32 | 是    | 银行卡类型，0:不能识别; 1: 借记卡; 2: 信用卡 |
 
 
 ​
