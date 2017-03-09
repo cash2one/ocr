@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489043769/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489053522/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489043769/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489043769/css/technology/nlp-simnet.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489053522/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489053522/css/technology/nlp-simnet.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1489043769/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1489053522/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -479,8 +479,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1489043769/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1489043769/js/technology/nlp-simnet.js"></script>
+<script src="//ai.bdstatic.com/dist/1489053522/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1489053522/js/technology/nlp-simnet.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');
