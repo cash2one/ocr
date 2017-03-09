@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488528241/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489043769/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488528241/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488528241/css/technology/ar.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489043769/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489043769/css/technology/ar.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1488528241/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1489043769/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -298,7 +298,7 @@
         <h2>产品与服务</h2>
         <div class="clear-float">
             <div class="flow-chart">
-                <img src="//ai.bdstatic.com/dist/1488528241/ai_images/technology/ar/process-flow.png">
+                <img src="//ai.bdstatic.com/dist/1489043769/ai_images/technology/ar/process-flow.png">
             </div>
             <div class="product-desc-list">
                 <div class="product-desc">
@@ -450,8 +450,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1488528241/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1488528241/js/technology/ar.js"></script>
+<script src="//ai.bdstatic.com/dist/1489043769/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1489043769/js/technology/ar.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');
