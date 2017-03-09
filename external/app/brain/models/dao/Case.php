@@ -86,7 +86,7 @@ class Dao_Case extends Dao_Base {
         $data_con = $data_case[0]['json_content'];
         $data_content = Bd_String::json_decode($data_con, true);
         Bd_Log::addNotice('data_content', $data_content);
-        $title = 'AI官网客户咨询（No.'. str_pad($caseId, 4, "0", STR_PAD_LEFT) .'）';
+        $title = '[No.-'. str_pad($caseId, 4, "0", STR_PAD_LEFT) .'-'.$data_content["company"].']';
         $subject = " 
             <style type=\"text/css\">
 
