@@ -23,6 +23,7 @@ class Dao_Case extends Dao_Base {
         'content',
         'tech',
         'create_time',
+        'json_content',
     );
 
     /**
@@ -49,7 +50,7 @@ class Dao_Case extends Dao_Base {
      * @access public
      * @return void
      */
-    public function insertCase($strUsername, $strCompany, $strPhone, $strContent, $strContactway, $strTech) {
+    public function insertCase($strUsername, $strCompany, $strPhone, $strContent, $strContactway, $strTech, $jsonContent) {
         $arrRow = array(
             'username' => $strUsername,
             'company' => $strCompany,
@@ -58,6 +59,7 @@ class Dao_Case extends Dao_Base {
             'contactway' => $strContactway,
             'tech' => $strTech,
             'create_time' => date('Y-m-d H:i:s',time()),
+            'json_content' =>$jsonContent,
         );  
         $arrOptions = null;
         $arrOnDup = $arrRow;
@@ -81,7 +83,10 @@ class Dao_Case extends Dao_Base {
      */
     public function sendCase($caseId) {
         $data_case = $this->getSubscribe($caseId);
-        $title = 'AI官网客户咨询（No.'. str_pad($caseId, 4, "0", STR_PAD_LEFT) .'）';
+        $data_con = $data_case[0]['json_content'];
+        $data_content = Bd_String::json_decode($data_con, true);
+        Bd_Log::addNotice('data_content', $data_content);
+        $title = '[No.-'. str_pad($caseId, 4, "0", STR_PAD_LEFT) .'-'.$data_content["company"].']';
         $subject = " 
             <style type=\"text/css\">
 
@@ -122,27 +127,39 @@ class Dao_Case extends Dao_Base {
                 </tr>
                 <tr>
                     <th>意向技术:</th>
-                    <td>{$data_case[0]['tech']}</td>
+                    <td>{$data_content['tech']}</td>
                     <th>咨询时间:</th>
                     <td>{$data_case[0]['create_time']}</td>
                 </tr>
                 <tr>
                     <th>客户公司:</th>
-                    <td>{$data_case[0]['company']}</td>
+                    <td>{$data_content['company']}</td>
                     <th>客户称呼:</th>
-                    <td>{$data_case[0]['username']}</td>
+                    <td>{$data_content['username']}</td>
+                </tr>
+                <tr>
+                    <th>公司网址:</th>
+                    <td colspan='3'>{$data_content['siteUrl']}</td>
                 </tr>
                 <tr>
                     <th>联系电话:</th>
-                    <td>{$data_case[0]['phone']}</td>
-                    <th>其他联系方式:</th>
-                    <td>{$data_case[0]['contactway']}</td>
+                    <td>{$data_content['phone']}</td>
+                    <th>行业:</th>
+                    <td>{$data_content['trade']}</td>
                 </tr>
                 <tr>
                     <td colspan='4'>
-                        <p><strong><span style=\"font-family:宋体\">咨询内容：</span></strong></p>
+                        <p><strong><span style=\"font-family:宋体\">业务介绍：</span></strong></p>
                         <p><span>
-                            {$data_case[0]['content']}
+                            {$data_content['business']}
+                        </span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan='4'>
+                        <p><strong><span style=\"font - family:宋体\">需求介绍：</span></strong></p>
+                        <p><span>
+                            {$data_content['requirement']}
                         </span></p>
                     </td>
                 </tr>
@@ -150,7 +167,9 @@ class Dao_Case extends Dao_Base {
         ";
         $smtp = new Bd_Smtp();
         $smtp->setFrom('ai-news@baidu.com');
-        $smtp->addAddress('ai@baidu.com');
+        $case_send_mail = Bd_Conf::getAppConf('case_send_mail');
+        $address = isset($case_send_mail) ? $case_send_mail['address'] : 'ai@baidu.com';
+        $smtp->addAddress($address);
         $smtp->send($title, $subject);
     }
 

@@ -6,3 +6,5 @@
 /internal/webroot/node_modules/
 service.log.*
 /external/webroot/bower_components/
+/.idea*
+.DS_Store

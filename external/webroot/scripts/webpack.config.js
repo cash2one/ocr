@@ -40,7 +40,10 @@ const entries = glob.sync(
     '**/*.js',
     {
         cwd: path.join(__dirname, '..', 'src', 'entry'),
-        ignore: ['**/pager.js', '**/base.js', '**/common/*.js']
+        ignore: [
+            '**/pager.js', '**/base.js',
+            '**/common/*.js', '**/util/*.js'
+        ]
     }
 );
 
@@ -109,7 +112,6 @@ module.exports = {
             path.resolve(__dirname, '..', 'node_modules')
         ],
         alias: {
-            // src别名,避免拼接glob返回值，如果出现冲突(如某模块包含src路径)修改这里
             src: path.resolve(__dirname, '..', 'src'),
             // 模板路径
             view: path.resolve(__dirname, '..', 'src', 'view'),
@@ -135,11 +137,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
-                use: [
-                    {
-                        loader: 'babel-loader'
-                    }
-                ]
+                use: 'babel-loader'
             },
             {
                 test: /\.less$/,
@@ -152,12 +150,8 @@ module.exports = {
                                 minimize: true
                             }
                         },
-                        {
-                            loader: 'postcss-loader'
-                        },
-                        {
-                            loader: 'less-loader'
-                        }
+                        'postcss-loader',
+                        'less-loader'
                     ]
                 })
             },
@@ -177,17 +171,13 @@ module.exports = {
             },
             {
                 // icon转换base64
-                test: /sprite(\/|\\).+\.(jpe?g|png|gif)$/i,
-                use: [
-                    {
-                        loader: 'url-loader'
-                    }
-                ]
+                test: /sprite|icons(\/|\\).+\.(jpe?g|png|gif)$/i,
+                use: 'url-loader'
             },
             {
                 // TODO，小icon分单独文件夹管理，base64打包入css，省去拼接雪碧图
                 test: /\.(jpe?g|png|gif|mp4)$/i,
-                exclude: /sprite(\/|\\).+\.(jpe?g|png|gif)$/i,
+                exclude: /sprite|icons(\/|\\).+\.(jpe?g|png|gif)$/i,
                 use: [
                     {
                         loader: 'file-loader',
@@ -213,11 +203,7 @@ module.exports = {
             },
             {
                 test: /\.hbs$/,
-                use: [
-                    {
-                        loader: 'handlebars-loader'
-                    }
-                ]
+                use: 'handlebars-loader'
             }
         ]
     },

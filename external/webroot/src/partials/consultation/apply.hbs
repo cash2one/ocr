@@ -1,0 +1,43 @@
+<form id="consult-form" class="ai-consult-form">
+    <div class="ai-consult-form-title">您希望咨询的技术：</div>
+    <div class="ai-consult-form-select">
+        <label>
+            <select class="ai-consult-form-select-list" name="tech">
+                <option value="OCR文字识别" selected>OCR文字识别</option>
+                <option value="人脸识别">人脸识别</option>
+                <option value="黄反识别">黄反识别</option>
+                <option value="语音技术">语音技术</option>
+                <option value="NLP自然语言处理">NLP自然语言处理</option>
+                <option value="用户画像">用户画像</option>
+                <option value="机器学习">机器学习</option>
+                <option value="AR增强现实">AR增强现实</option>
+                <option value="我不确定">我不确定</option>
+            </select>
+        </label>
+    </div>
+    <input class="ai-consult-form-enter ai-consult-form-input"
+           type="text" maxlength="50" placeholder="请输入您的公司/单位名称（必填）" name="company">
+    <input class="ai-consult-form-enter ai-consult-form-input"
+           type="text" maxlength="50" placeholder="请输入您的姓名/称呼（必填）" name="username">
+    <input class="ai-consult-form-enter ai-consult-form-input"
+           type="text" maxlength="50" placeholder="请输入您的联系电话：手机/固定电话（必填）" name="phone">
+    <input class="ai-consult-form-enter ai-consult-form-input"
+           type="text" maxlength="50" placeholder="请输入您的行业（选填）" name="trade">
+    <input class="ai-consult-form-enter ai-consult-form-input"
+           type="text" maxlength="100" placeholder="请输入您的公司/单位网址（必填）" name="siteUrl">
+    <textarea class="ai-consult-form-enter ai-consult-form-text"
+              placeholder="您的公司的业务简要介绍（选填）" maxlength="500" name="business"></textarea>
+    <textarea class="ai-consult-form-enter ai-consult-form-text"
+              placeholder="您对AI的需求介绍（必填）" maxlength="500" name="requirement"></textarea>
+    <div class="qr-code-input">
+        <input type="text" maxlength="4" placeholder="请输入正确的验证码" name="code">
+        <a>
+            <img alt="点击刷新验证码" src="/index/seccode?action=show">
+        </a>
+    </div>
+    <div class="info-warning"></div>
+    <div class="form-actions">
+        <button type="submit" class="btn-primary submit">提交需求</button>
+        <button type="button" class="btn-normal cancel">取消</button>
+    </div>
+</form>
