@@ -1,21 +1,62 @@
-.consult-modal {
-    form {
-        .tech-list {
-            margin-bottom: 10px;
+.ai-platform {
+    .ai-consult-form {
+        .has-error {
+            border:1px solid #ff0000;
+        }
 
-            & > li {
-                display: inline-block;
-                width: 28%;
-                margin-bottom: 10px;
+        &-title {
+            display: inline-block;
+            padding: 2px 0 7px;
+            font-size: 12px;
+            color: #666;
+        }
 
-                input[type="radio"] {
-                    margin-top: 2px;
-                    margin-right: 5px;
-                    float: left;
-                }
+        &-select {
+            box-sizing: border-box;
+            width: 370px;
+            border: 1px solid #ebebeb;
+            margin-bottom: 5px;
+
+
+            &-list {
+                box-sizing: border-box;
+                width: 368px;
+                height: 30px;
+                font-size: 12px;
+                border: 0;
+                background-color: #fff;
+                color: #666;
+            }
+
+            option {
+                padding: 0;
             }
         }
+
+        &-enter {
+            box-sizing: border-box;
+            width: 370px;
+            padding: 5px 10px;
+            margin-bottom: 5px;
+        }
+
+        &-input,
+        &-text {
+            border: 1px solid #ebebeb;
+            color: #000;
+        }
+
+        &-input {
+            height: 30px;
+        }
+
+        &-text {
+            height: 60px;
+            resize: none;
+        }
     }
+
+    // 还需要改
     .consult-success {
         & > p {
             margin: 0 0 30px 0 !important;
@@ -23,7 +64,7 @@
 
         .qr-code-alert {
             text-align: center;
-            font-size: @font-size-1;
+            font-size: 12px;
             background: #f7f7f7;
             padding: 30px 0 20px;
             margin: 0 -40px -30px;
@@ -38,8 +79,9 @@
                 margin: 0 auto;
                 width: 100px;
                 height: 100px;
-                .icon(@template-png, -10px, -50px);
+                background: url('../../../ai_images/template.png') no-repeat -10px -50px;
             }
         }
     }
 }
+

@@ -4,15 +4,17 @@
  */
 'use strict';
 
-import EJS from 'ejs';
 import $ from 'jquery';
 
 import Modal from '../common/modal';
-import {SUBSCRIPTION_TMPL} from '../../partials/subscription';
 import {subscribe} from '../../model/subscription';
 import {checkQRCode} from '../../model/qrCode';
 import {setPlaceHolder} from '../common/placeholder';
 
+import subscriptionTpl from 'partials/subscription/apply.hbs';
+import loadingTpl from 'partials/subscription/loading.hbs';
+import successTpl from 'partials/subscription/success.hbs';
+import failTpl from 'partials/subscription/fail.hbs';
 
 export default class SubscriptionModal extends Modal {
     constructor(container = 'body', id = 'subscription-modal', title = '订阅百度大脑最新消息') {
@@ -32,20 +34,20 @@ export default class SubscriptionModal extends Modal {
     }
 
     reset() {
-        this.setContent(EJS.render(SUBSCRIPTION_TMPL.APPLY));
+        this.setContent(subscriptionTpl({}));
         setPlaceHolder(this.getModal());
     }
 
     apply() {
-        this.setContent(EJS.render(SUBSCRIPTION_TMPL.LOADING));
+        this.setContent(loadingTpl({}));
     }
 
     applySuccess() {
-        this.setContent(EJS.render(SUBSCRIPTION_TMPL.SUCCESS));
+        this.setContent(successTpl({}));
     }
 
     applyFail() {
-        this.setContent(EJS.render(SUBSCRIPTION_TMPL.FAIL));
+        this.setContent(failTpl({}));
     }
 
     refreshQRCode() {
@@ -127,6 +129,5 @@ export default class SubscriptionModal extends Modal {
             e.preventDefault();
             this.refreshQRCode();
         });
-
     }
 }

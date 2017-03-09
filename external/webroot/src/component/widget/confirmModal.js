@@ -4,11 +4,10 @@
  */
 'use strict';
 
-import EJS from 'ejs';
 import $ from 'jquery';
 import Modal from '../common/modal';
-import {CONFIRM_MODAL_TMPL} from '../../partials/modal';
 
+import confirmModalTpl from 'partials/modal/confirm.hbs';
 
 export default class ConfirmModal extends Modal {
     constructor(title, content, confirm = $.noop) {
@@ -20,8 +19,7 @@ export default class ConfirmModal extends Modal {
     }
 
     init() {
-        let html = EJS.render(
-            CONFIRM_MODAL_TMPL,
+        const html = confirmModalTpl(
             {
                 id: this.id,
                 title: this.title,

@@ -49,16 +49,16 @@ public class Sample {
     public static final String APP_ID = "你的 App ID";
     public static final String API_KEY = "你的 Api ID";
     public static final String SECRET_KEY = "你的 Secret Key";
-
+    
     public static void main(String[] args) {
 
         // 初始化一个FaceClient
         AipFace client = new AipFace(APP_ID, API_KEY, SECRET_KEY);
-
+        
         // 可选：设置网络连接参数
         client.setConnectionTimeoutInMillis(2000);
         client.setSocketTimeoutInMillis(60000);
-
+        
         // 调用API
         String image = "test.jpg";
         JSONObject res = client.detect(path, new HashMap<String, String>());
@@ -66,7 +66,7 @@ public class Sample {
     }
 }
 ```
-在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是在创建完毕应用后，系统分配给用户的，均为字符串，用于标识用户，为访问做签名验证，可在AI服务控制台中的**应用列表**中查看。
+在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是在创建完毕应用后，系统分配给用户的，均为字符串，用于标识用户，为访问做签名验证，可在AI服务控制台中的**应用列表**中查看。  
 
 **注意：**如您以前是百度云的老用户，其中`API_KEY`对应百度云的“Access Key ID”，`SECRET_KEY`对应百度云的“Access Key Secret”。
 
@@ -301,6 +301,7 @@ public void faceRecognize(AipFace client) {
 ## 人脸注册
 
 人脸注册接口提供了使用上传图片进行注册新用户的功能，需要指定注册用户的id和描述信息，所在组id以及本地用户人脸图片。
+**注：每个用户（uid）所能注册的最大人脸数量为5张。** 
 
 举例，要注册一个新用户，用户id为uid1，加入组id为group1, 注册成功后服务端会返回操作的logid：
 
@@ -319,7 +320,7 @@ public void facesetAddUser(AipFace client) {
 
 **人脸注册请求参数要求**：
 
-所有图片经base64编码后的图片数据总和不超过20M。
+所有图片经base64编码后的图片数据总和不超过10M。
 
 **人脸注册返回数据参数详情**：
 
@@ -364,7 +365,7 @@ public void facesetUpdateUser(AipFace client) {
 
 **人脸更新请求参数要求**：
 
-uid需要在库中已存在，且组成为字母/数字/下划线，长度不超过128B。所有图片经base64编码后的图片数据总和不超过20M。
+uid需要在库中已存在，且组成为字母/数字/下划线，长度不超过128B。所有图片经base64编码后的图片数据总和不超过10M。
 
 **人脸注册返回数据参数详情**：
 
@@ -542,7 +543,7 @@ public void identifyUser(AipFace client) {
 | 参数           | 是否必选 | 类型     | 说明                            |
 | ------------ | ---- | ------ | ----------------------------- |
 | group_id     | 是    | string | 用户组id（由数字、字母、下划线组成），长度限制128B  |
-| images       | 是    | string | 图像base64编码,多张图片半角逗号分隔，总共最大20M |
+| images       | 是    | string | 图像base64编码,多张图片半角逗号分隔，总共最大10M |
 | user_top_num | 否    | uint32 | 返回用户top数，默认为1                 |
 | face_top_num | 否    | uint32 | 单用户人脸匹配得分top数，默认为1            |
 
@@ -745,11 +746,11 @@ public void addGroupUser(AipFace client) {
 **返回样例：**
 
 ```json
-// 正确返回值
+// 正确返回值 
 {
     "log_id": 3314921889,
 }
-// 发生错误时返回值
+// 发生错误时返回值 
 {
   "error_code": 216100,
   "log_id": 3111284097,
@@ -785,11 +786,11 @@ public void deleteGroupUser(AipFace client) {
 **返回样例：**
 
 ```json
-// 正确返回值
+// 正确返回值 
 {
     "log_id": 3314921889,
 }
-// 发生错误时返回值
+// 发生错误时返回值 
 {
   "error_code": 216619,
   "log_id": 815967402,

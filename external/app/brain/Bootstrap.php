@@ -18,6 +18,12 @@ class Bootstrap extends Ap_Bootstrap_Abstract{
     **/
     public function _initRoute(Ap_Dispatcher $dispatcher) {
         //在这里注册自己的路由协议,默认使用static路由
+        $dispatcher->getRouter()->addRoute('tech_Ar', new Ap_Route_Rewrite('tech/ar',
+            array("module"=>"tech", "controller"=>"ar", "action"=>"index")
+            ));
+        $dispatcher->getRouter()->addRoute('tech_Antiporn', new Ap_Route_Rewrite('tech/antiporn',
+            array("module"=>"tech", "controller"=>"antiporn", "action"=>"index")
+        ));
     }
 
     /**

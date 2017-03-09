@@ -89,7 +89,6 @@ $(document).ready(function () {
                     return false;
                 }
                 let hasNoResult = !res.data.words_result_num;
-
                 for (let i = 0, len = res.data.words_result_num; i < len; i++) {
                     let record = res.data.words_result[i];
                     $('#demo-result tbody').append([

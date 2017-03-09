@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488528241/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489043769/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488528241/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1488528241/css/solution/dialog.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489043769/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489043769/css/solution/dialog.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
-            <a href="https://ai.baidu.com" href="_self">
-                <img src="//ai.bdstatic.com/dist/1488528241/ai_images/logo.png" alt="百度大脑">
+            <a href="https://ai.baidu.com">
+                <img src="//ai.bdstatic.com/dist/1489043769/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -63,6 +63,11 @@
                                 <li><a href="/tech/ocr/general">通用文字识别</a></li>
                                 <li><a href="/tech/ocr/idcard">身份证识别</a></li>
                                 <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
+                                <li>
+                                    <a href="/tech/ocr/general_enhanced" id="ocr-enhanced-link">
+                                    通用文字识别（含生僻字版）
+                                    </a>
+                                </li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>人脸识别</span>
@@ -215,7 +220,7 @@
         <div class="solution-container">
             <div class="solution-case shadow">
                 <div class="solution-icon">
-                    <img src="//ai.bdstatic.com/dist/1488528241/ai_images/solution/dialog/solution-case-1.png">
+                    <img src="//ai.bdstatic.com/dist/1489043769/ai_images/solution/dialog/solution-case-1.png">
                 </div>
                 <div class="solution-desc">
                     <ul>
@@ -329,8 +334,15 @@
         <li class="consult">
             <a id="ai-consult" data-spec="合作咨询"></a>
         </li>
-        <li class="feedback"><a data-spec="我要反馈" id="feedback-btn"></a></li>
-        <li class="back-top"><a data-spec="返回顶部"></a></li>
+        <li class="feedback">
+            <a data-spec="在线咨询"
+               href="https://ikefu.baidu.com/web/ai-platform"
+               target="_blank"
+               id="feedback-btn"></a>
+        </li>
+        <li class="back-top">
+            <a data-spec="返回顶部"></a>
+        </li>
     </ul>
 </aside>
 <footer class="footer-nav">
@@ -388,6 +400,10 @@
                 <li><a href="http://recsys.baidu.com/" target="_blank">Recsys推荐云平台</a></li>
                 <li><a href="https://cloud.baidu.com/?t=cp:online-media%7Cci:%7Ccn:ai" target="_blank">百度云</a></li>
                 <li><a href="http://www.chuanke.com/" target="_blank">百度传课</a></li>
+                <li><a href="http://app.baidu.com" target="_blank">百度开发者平台</a></li>
+                <li><a href="http://zhongbao.baidu.com" target="_blank">百度数据众包</a></li>
+                <li><a href="http://union.baidu.com" target="_blank">百度联盟</a></li>
+                <li><a href="http://tongji.baidu.com" target="_blank">百度统计</a></li>
             </ul>
         </nav>
     </div>
@@ -395,66 +411,21 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script type="text/javascript">
-    (function () {
-        function init_feedback() {
-            if (bds && bds.qa && bds.qa.ShortCut && bds.qa.ShortCut.initRightBar) {
-                var fb_options = {
-                    appid: 215714
-                };
-                var pro_data = {
-                    appid: 215714
-                };
-                bds.qa.ShortCut.initRightBar(fb_options);
-            }
+<script src="//ai.bdstatic.com/dist/1489043769/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1489043769/js/solution/dialog.js"></script>
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https'){
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
         }
-
-        function loadRightBar() {
-            if (window.bds && window.bds.qa && window.bds.qa.ShortCut) {
-                init_feedback();
-            } else {
-                loadScript('https://ufosdk.baidu.com/Public/feedback/js/feedback_plugin_1.0.js', function () {
-                    init_feedback();
-                }, {
-                    charset: 'utf-8',
-                    id: 'feedback_script'
-                });
-            }
-            return false;
+        else{
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
         }
-        document.getElementById('feedback-btn').onclick = function () {
-            loadRightBar();
-        };
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
     })();
-
-    function loadScript(url, callback, opt) {
-        var script = document.createElement('script');
-        var opt = opt || {};
-        script.type = 'text/javascript';
-        if (opt.charset) {
-            script.charset = opt.charset;
-        }
-        if (opt.id) {
-            script.id = opt.id;
-        }
-
-        if (script.readyState) {
-            script.onreadystatechange = function () {
-                if (script.readyState === 'loaded' || script.readyState === 'complete') {
-                    script.onreadystatechange = null;
-                    callback();
-                }
-            };
-        } else {
-            script.onload = function () {
-                callback();
-            };
-        }
-        script.src = url;
-        document.body.appendChild(script);
-    }
 </script>
-<script src="//ai.bdstatic.com/dist/1488528241/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1488528241/js/solution/dialog.js"></script>
 </body>
 </html>

@@ -2,11 +2,10 @@
  * @file 基础模态框容器
  * @author shiliang@baidu.com
  */
-'use strict';
 
-import {MODAL_TMPL} from '../../partials/modal';
-import EJS from 'ejs';
 import $ from 'jquery';
+
+import modalTpl from 'partials/modal/modal.hbs';
 
 export default class Modal {
     constructor(container = 'body', id, title = '') {
@@ -17,7 +16,7 @@ export default class Modal {
     }
 
     init() {
-        let html = EJS.render(MODAL_TMPL, {id: this.id, title: this.title});
+        const html = modalTpl({id: this.id, title: this.title});
         $(this.container).append(html);
         this.bindEvent();
     }
