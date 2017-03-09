@@ -13,8 +13,16 @@ class Action_SiteMap extends Ap_Action_Abstract
 {
 
     public function execute()
-    {   $newsPage =Factory::getInstance('Service_Page_News');
-        $txt = $newsPage->execute();
+    {
+        $siteMapUrls =Bd_Conf::getConf('/sitemap/site_map_page/url');
+
+        // var_dump($siteMapConf['url']);
+        $txt = '';
+        foreach ($siteMapUrls as $url)
+        {
+            $txt .= $url ."\n";
+        }
+
         Brain_Output::txtOutput(
             $txt
         );
