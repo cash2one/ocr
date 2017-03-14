@@ -61,7 +61,7 @@ class Dao_News extends Dao_Base
     {
         $arrFields = $this->arrDefaultFields2;
         $arrConds = array(
-            "place" => 1
+            "place=" => 1
         );
         $arrOptions = null;
         $arrAppends = array(
