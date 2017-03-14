@@ -72,7 +72,7 @@ public class Sample {
     }
 }
 ```
-在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是在创建完毕应用后，系统分配给用户的，均为字符串，用于标识用户，为访问做签名验证，可在AI服务控制台中的**应用列表**中查看。  
+在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是在创建完毕应用后，系统分配给用户的，均为字符串，用于标识用户，为访问做签名验证，可在AI服务控制台中的**应用列表**中查看。
 
 **注意：**如您以前是百度云的老用户，其中`API_KEY`对应百度云的“Access Key ID”，`SECRET_KEY`对应百度云的“Access Key Secret”。
 
@@ -244,6 +244,8 @@ public void bankcardRecognition(AipOcr client) {
 | log_id             | Uint64 | 唯一的log id，用于问题定位 |
 | result             | Object | 定位和识别结果数组        |
 | \+bank_card_number | String | 银行卡识别结果          |
+| +bank_name         | string | 银行名，不能识别时为空               |
+| +bank_card_type    | uint32 | 银行卡类型，0:不能识别; 1: 借记卡; 2: 信用卡                |
 
 # 身份证识别
 
