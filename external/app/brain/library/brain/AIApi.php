@@ -63,7 +63,7 @@ class Brain_AIApi {
             ),
         ),
         "bankcard" => array(
-            'url' => 'https://openapi.baidu.com/rest/2.0/vis-ocr/v1/ocr/bankcard',
+            'url' => 'http://inner.openapi.baidu.com/rest/2.0/brain/v1/ocr/bankcard',
             'params' => array(),
         ),
         "face" => array(
