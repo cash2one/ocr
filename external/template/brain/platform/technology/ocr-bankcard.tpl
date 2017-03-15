@@ -225,7 +225,7 @@
 <section class="tech-section tech-intro">
     <div class="container">
         <h2>功能介绍</h2>
-        <p>支持主流银行卡卡号识别，识别率高达98%，
+        <p>支持主流银行卡卡号识别，识别率高达98%以上，
             并支持根据卡号返回发卡行和卡片性质</p>
         <div class="tech-intro-detail">
             <div class="original-card"></div>
