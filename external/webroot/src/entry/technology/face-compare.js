@@ -2,7 +2,6 @@
  * @file bfb-人脸对比脚本入口
  * @author shiliang@baidu.com
  */
-'use strict';
 
 import $ from 'jquery';
 import throttle from 'lodash.throttle';

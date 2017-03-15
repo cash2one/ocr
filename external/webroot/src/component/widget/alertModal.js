@@ -2,7 +2,6 @@
  * @file 提示模态框容器
  * @author shiliang@baidu.com
  */
-'use strict';
 
 import $ from 'jquery';
 import Modal from '../common/modal';

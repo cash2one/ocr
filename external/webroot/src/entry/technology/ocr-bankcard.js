@@ -2,7 +2,6 @@
  * @file ocr-银行卡识别脚本入口
  * @author shiliang@baidu.com
  */
-'use strict';
 
 import $ from 'jquery';
 import throttle from 'lodash.throttle';

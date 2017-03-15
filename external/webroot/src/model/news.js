@@ -2,7 +2,6 @@
  * @file 新闻接口定义
  * @author shiliang@baidu.com
  */
-'use strict';
 
 import $ from 'jquery';
 

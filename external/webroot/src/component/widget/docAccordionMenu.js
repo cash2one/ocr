@@ -2,7 +2,6 @@
  * @file 模板脚本入口
  * @author wangjiedong@baidu.com
  */
-'use strict';
 
 import $ from 'jquery';
 
