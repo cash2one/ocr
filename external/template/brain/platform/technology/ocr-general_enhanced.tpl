@@ -219,7 +219,7 @@
                data-operation="cooperation"
                {%else%}
                class="btn-primary media"
-               href="mailto://ai@baidu.com"
+               href="mailto:ai@baidu.com"
                {%/if%}>
                 商务合作
             </a>
@@ -407,7 +407,7 @@
                data-operation="cooperation"
                {%else%}
                class="btn-primary large"
-               href="mailto://ai@baidu.com"
+               href="mailto:ai@baidu.com"
                {%/if%}>
                 商务合作
             </a>
