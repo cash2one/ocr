@@ -2,7 +2,6 @@
  * @file 人脸闸机方案脚本入口
  * @author shiliang@baidu.com
  */
-'use strict';
 
 import $ from 'jquery';
 

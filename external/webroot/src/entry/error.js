@@ -2,7 +2,6 @@
 * @file 错误页面脚本入口
 * @author shiliang@baidu.com
 */
-'use strict';
 
 import $ from 'jquery';
 

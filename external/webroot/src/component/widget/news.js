@@ -2,7 +2,6 @@
  * @file 最新新闻容器
  * @author shiliang@baidu.com
  */
-'use strict';
 
 import $ from 'jquery';
 import {getNews} from '../../model/news';

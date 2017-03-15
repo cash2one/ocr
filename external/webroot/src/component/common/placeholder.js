@@ -2,7 +2,6 @@
  * @file 对IE9的placeholder进行兼容
  * @author shiliang@baidu.com
  */
-'use strict';
 
 import $ from 'jquery';
 

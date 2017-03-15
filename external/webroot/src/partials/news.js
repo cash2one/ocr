@@ -2,7 +2,6 @@
  * @file 最新新闻模板
  * @author shiliang@baidu.com
  */
-'use strict';
 
 export const NEWS_TMPL = [
     '<ul>',
