@@ -50,7 +50,7 @@ iOS SDK提供了一个可快速运行的Demo工程，建议首先运行一下Dem
 
 百度AIP开放平台使用OAuth2.0授权调用开放API，调用API时必须在URL中带上accesss_token参数。AccessToken可用AK/SK或者授权文件的方式获得。
 
-OCR iOS SDK提供了以下3种AccessToken管理方法.
+OCR iOS SDK提供了以下3种AccessToken管理方法. 
 
 ### API Key /  Secret Key
 
@@ -64,10 +64,10 @@ OCR iOS SDK提供了以下3种AccessToken管理方法.
  2. 复制应用的Api Key（简称AK） 和 Secret Key（简称SK），初始化`AipOcrService`单例：
 
 ```
-	// 接口
-	- (instancetype) authWithAK: (NSString *)ak andSK: (NSString *)sk;
-	// 示例
-	[[AipOcrService shardService] authWithAK:@"Api Key" andSK:@"Secret Key"];
+// 接口
+- (instancetype) authWithAK: (NSString *)ak andSK: (NSString *)sk;
+// 示例
+[[AipOcrService shardService] authWithAK:@"Api Key" andSK:@"Secret Key"];
 
 ```
 
@@ -84,15 +84,17 @@ OCR iOS SDK提供了以下3种AccessToken管理方法.
  2. 下载对应应用的授权文件（默认名字为aip.license）
  3. 将授权文件添加至XCode工程（配置为资源并拷贝，Target -> Build Phases -> Copy Bundle Resource 中添加该文件）
  4. 读取授权文件原始字节，`NSData`格式，初始化`AipOcrService`单例：
-
-		// 接口
-		- (instancetype) authWithLicenseFileData: (NSData *)licenseFileContent;
-
-		// 示例
-		// 若未添加至主工程，则[NSBundle mainBundle]修改为对应bundle
-		NSString *licenseFile = [[NSBundle mainBundle] pathForResource:@"aip" ofType:@"license"];
-		NSData *licenseFileData = [NSData dataWithContentsOfFile:licenseFile];
-		[[AipOcrService shardService] authWithLicenseFileData:licenseFileData];
+ 
+```
+// 接口
+- (instancetype) authWithLicenseFileData: (NSData *)licenseFileContent;
+	
+// 示例
+// 若未添加至主工程，则[NSBundle mainBundle]修改为对应bundle
+NSString *licenseFile = [[NSBundle mainBundle] pathForResource:@"aip" ofType:@"license"]; 
+NSData *licenseFileData = [NSData dataWithContentsOfFile:licenseFile];
+[[AipOcrService shardService] authWithLicenseFileData:licenseFileData];
+```
 
 ### 自助AccessToken管理
 
@@ -103,24 +105,22 @@ OCR iOS SDK提供了以下3种AccessToken管理方法.
 使用步骤：
 
  1. 将您需要使用的token传入对应的构造函数，初始化`AipOcrService`单例：
-
-		// 接口
-		- (instancetype) authWithToken: (NSString *)token;
-		// 示例
-		[[AipOcrService shardService] authWithToken:@"Token here"];
-
+ 
+```
+// 接口
+- (instancetype) authWithToken: (NSString *)token;
+// 示例
+[[AipOcrService shardService] authWithToken:@"Token here"];
+```
 
 
 注意：此种方式下，SDK不再缓存token，开发者需自行处理token过期问题。
 
 
 
-
 # SDK集成与接口调用
 
-使用SDK时，需要将AipBase.framework和AipOcrSdk.framework嵌入工程（Embed Binary方式，可参考AipOcrDemo工程）,并导入相关头文件
-
-	#import <AipOcrSdk/AipOcrSdk.h>
+使用SDK时，需要将AipBase.framework和AipOcrSdk.framework嵌入工程（Embed Binary方式，可参考AipOcrDemo工程）,并导入相关头文件`<AipOcrSdk/AipOcrSdk.h>`。
 
 在调用接口前，请确认已经进行过身份验证。见[身份验证与安全](#身份验证与安全)。
 
@@ -150,8 +150,8 @@ OCR iOS SDK提供了以下3种AccessToken管理方法.
 5. 在合适的地方启动ViewController: 如`[self presentViewController:vc animated:YES completion:nil]`
 
 AipOcrSdk.framework，即AipOcr工程包含了相机相关操作代码，如开发者想直接使用，无需引用AipOcrSdk工程，直接引入AipOcrSdk.framework即可。若需要修改相机操作相关UI，可引入AipOcrSdk工程，编辑相关UI代码即可。
-
-
+    	
+    	
 ## 数据接口
 
 该调用方法传入需要识别的UIImage，异步识别，识别完成之后，回调返回识别结果。
@@ -173,17 +173,17 @@ AipOcrSdk.framework，即AipOcr工程包含了相机相关操作代码，如开�
 ### 通用文字识别
 
  * 调用示例
-
+ 
 ```
-	NSDictionary *options = @{@"language_type": @"CHN_ENG", @"detect_direction": @"true"};
-	[[AipOcrService shardService] detectTextFromImage:finalImage withOptions:options successHandler:^(id result) {
-        // 成功识别的后续逻辑
-    } failHandler:^(NSError *err) {
-        // 失败的后续逻辑
-    }];
+NSDictionary *options = @{@"language_type": @"CHN_ENG", @"detect_direction": @"true"};
+[[AipOcrService shardService] detectTextFromImage:finalImage withOptions:options successHandler:^(id result) {
+	// 成功识别的后续逻辑
+} failHandler:^(NSError *err) {
+	// 失败的后续逻辑
+}];
 ```
 
-***options参数详情***
+**options参数详情**
 
 | 参数                    | 是否必选  | 类型      | 可选值范围                                   | 说明                                       |
 | --------------------- | ----- | ------- | --------------------------------------- | ---------------------------------------- |
@@ -224,7 +224,7 @@ AipOcrSdk.framework，即AipOcr工程包含了相机相关操作代码，如开�
 | ++char             | 是    | string  | 单字符识别结果                                  |
 ```json
 // 示例
-{
+{    
     direction : 2,
     log_id : 676709620,
     words_result : [ {
@@ -265,11 +265,11 @@ AipOcrSdk.framework，即AipOcr工程包含了相机相关操作代码，如开�
 ```json
  // 示例
  {
-    "log_id" = 2742598501;
-    "result" = {
-        "bank_card_number" = "622202 0200046230377";
-        "bank_card_type" = 1;
-        "bank_name" = "\U5de5\U5546\U94f6\U884c";
+    "log_id": 2742598501;
+    "result": {
+        "bank_card_number": "622202 0200046230377";
+        "bank_card_type": 1;
+        "bank_name": "\U5de5\U5546\U94f6\U884c";
     };
 }
 ```
@@ -277,16 +277,17 @@ AipOcrSdk.framework，即AipOcr工程包含了相机相关操作代码，如开�
 ### 身份证识别
 
 * 调用示例
+
 ```
 // 正面
- [[AipOcrService shardService] detectIdCardFrontFromImage:finalImage withOptions:nil successHandler:^(id result) {
-     // 成功
+[[AipOcrService shardService] detectIdCardFrontFromImage:finalImage withOptions:nil successHandler:^(id result) {
+   // 成功
 } failHandler:^(NSError *err) {
-    // 失败
+   // 失败
 }];
 ```
 
-***options参数***
+**options参数**
 
 | 参数               | 必选    | 范围               | 类型      | 说明                                       |
 | ---------------- | ----- | ---------------- | ------- | ---------------------------------------- |
@@ -332,16 +333,54 @@ AipOcrSdk.framework，即AipOcr工程包含了相机相关操作代码，如开�
 }
 
 ```
-### 错误码表
 
-***验证错误***
+## 特殊配置
+
+### 截图分辨率系数
+
+该系数影响到拍摄照片之后截取的图片大小
+
+在AipOcrSdk/AipOcrSdk/View/AipCutImageView.m 中
+
+```
+//截图的分辨率系数 开发者可自行配置
+static CGFloat const scale = 1.0;
+```
+
+### 图片放大/缩小系数
+
+在AipOcrSdk/AipOcrSdk/View/AipCutImageView.m 中
+
+```
+//捏合操作最大/最小系数
+static CGFloat const pinchMaxscale = 10.0;
+static CGFloat const pinchMinscale = 0.5;
+```
+
+### 自动重试
+
+识别失败后，自动重试一次。
+
+在AipOcrSdk/AipOcrSdk/AipOcrService 中，配置属性 retry即可
+	
+```	
+/**
+ * 是否重试。默认为NO。YES会在失败时自动重试一次。
+ */
+@property (atomic, assign) bool retry;
+```
+
+
+# 错误码表
+
+**验证错误**
 
 
 |错误码 | 错误信息 | 说明 | 备注 |
 |---|---|---|---|
 |110 |	Access token invalid or no longer valid	|Access Token过期失效| 请重新获得有效的Token |
 |283501 | License file check error| 授权文件不匹配 |请在[官网](http://ai.baidu.com)中配置正确的包名，并确认使用了正确的授权文件|
-|283502 | App identifier unmatch | BundleId不匹配 |请在[官网](http://ai.baidu.com)中配置正确的包名，并确认使用了正确的授权文件|
+|283502 | App identifier unmatch | BundleId不匹配 |请在[官网](http://ai.baidu.com)中配置正确的包名，并确认使用了正确的授权文件| 
 |283504 | Network error | 网络请求失败|  请授权App网络权限并保证网络通畅|
 |283505 | Server illegal response | 服务器返回数据异常 | |
 |283601 | Server authentication error |身份验证错误。| 请在[官网](http://ai.baidu.com)中配置应用，并确认填写了正确的AK/SK，或使用了正确的授权文件|
@@ -350,7 +389,7 @@ AipOcrSdk.framework，即AipOcr工程包含了相机相关操作代码，如开�
 |283700 | Server internal error |  服务器内部错误 | |
 
 
-***服务错误***
+**服务错误**
 
 | 错误码    | 错误信息                         | 描述            |
 | ------ | ---------------------------- | ------------- |
@@ -377,38 +416,8 @@ AipOcrSdk.framework，即AipOcr工程包含了相机相关操作代码，如开�
 | 216634 | detect error                 | 检测错误          |
 | 216635 | get mask error               | 获取mask图片错误    |
 
-# 3. 特殊配置
 
-## 截图分辨率系数
-
-该系数影响到拍摄照片之后截取的图片大小
-
-在AipOcrSdk/AipOcrSdk/View/AipCutImageView.m 中
-
-	//截图的分辨率系数 开发者可自行配置
-	static CGFloat const scale = 1.0;
-
-## 图片放大/缩小系数
-
-在AipOcrSdk/AipOcrSdk/View/AipCutImageView.m 中
-
-	//捏合操作最大/最小系数
-	static CGFloat const pinchMaxscale = 10.0;
-	static CGFloat const pinchMinscale = 0.5;
-
-## 自动重试
-
-识别失败后，自动重试一次。
-
-在AipOcrSdk/AipOcrSdk/AipOcrService 中，配置属性 retry即可
-
-	/**
-	 * 是否重试。默认为NO。YES会在失败时自动重试一次。
-	 */
-	@property (atomic, assign) bool retry;
-
-
-# Relese Notes
+# 版本更新记录
 
 | 上线日期      | 版本号  | 更新内容                        |
 | --------- | ---- | --------------------------- |

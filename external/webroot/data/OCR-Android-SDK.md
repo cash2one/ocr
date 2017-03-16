@@ -14,18 +14,18 @@
 
 ## 开发包说明
 
-	aip-ocr-android-sdk.zip               // OCR SDK包，包括文档，demo工程，SDK核心库
-	    |-libs                            // lib 库,包括各平台的so库及 jar包。
-	    |-OCRDemo                         // demo工程
-	    |-ocr-ui                          // ocr UI模块
-	    |-百度OCR识别Android接入文档.docx    // 使用文档 
+    aip-ocr-android-sdk.zip               // OCR SDK包，包括文档，demo工程，SDK核心库
+        |-libs                            // lib 库,包括各平台的so库及 jar包。
+        |-OCRDemo                         // demo工程
+        |-ocr-ui                          // ocr UI模块
+        |-百度OCR识别Android接入文档.docx    // 使用文档
 
 sdk的包含的UI部分和demo工程以Android Studio方式提供，sdk部分则可以较方便的集成到eclipse工程中。
 
  1. 在官网下载Android SDK压缩包。
  2. (必须)将下载包libs目录中的ocr-sdk.jar文件拷贝到工程libs目录中，并加入工程依赖。
  3. (必须）ocr-sdk依赖了okhttp:3.5.0以上版本
-	 * gradle中添加 依赖`compile 'com.squareup.okhttp3:okhttp:3.5.0' `；或着您可以手动导入工程附带的Okhttp.jar，Okio.jar文件作为依赖
+     * gradle中添加 依赖`compile 'com.squareup.okhttp3:okhttp:3.5.0' `；或着您可以手动导入工程附带的Okhttp.jar，Okio.jar文件作为依赖
  4. (必须)将libs目录下armeabi，arm64-v8a，armeabi-v7a文件夹按需添加到android studio工程`src/main/jniLibs`目录中， eclipse用户默认为libs目录。
  5. (可选)如果需要使用UI模块，请在Android studio中以模块方式导入下载包中的ocr-ui文件夹。
 
@@ -41,7 +41,7 @@ Andoird SDK提供了一个可快速运行的demo工程，直接在Android Studio
 在工程AndroidManifest.xml文件中添加如下权限：
 各个权限的用途说明见下表：
 
-|名称 | 用途 | 
+|名称 | 用途 |
 |---|---|
 |INTERNET|应用联网，发送请求数据至服务器，获得识别结果。|
 |CAMERA|调用相机进行拍照（仅UI部分需要）|
@@ -57,7 +57,7 @@ Andoird SDK提供了一个可快速运行的demo工程，直接在Android Studio
 
 百度AI开放平台使用OAuth2.0授权调用开放API，调用API时必须在URL中带上accesss_token参数。AccessToken可用AK/SK或者授权文件的方式获得。
 
-OCR Android SDK提供了以下3种AccessToken管理方法. 
+OCR Android SDK提供了以下3种AccessToken管理方法.
 
 ### API Key / Secret Key
 
@@ -72,14 +72,14 @@ OCR Android SDK提供了以下3种AccessToken管理方法.
 
 ```
 OCR.getInstance().initAccessTokenWithAkSk(new OnResultListener<AccessToken>() {
-	@Override
+    @Override
     public void onResult(AccessToken result) {
-        // 调用成功，返回AccessToken对象   
+        // 调用成功，返回AccessToken对象
         String token = result.getAccessToken();
     }
     @Override
     public void onError(OCRError error) {
-    	// 调用失败，返回OCRError子类SDKError对象
+        // 调用失败，返回OCRError子类SDKError对象
     }
 }, getApplicationContext(), "您的应用AK", "您的应用SK");
 ```
@@ -94,21 +94,21 @@ OCR.getInstance().initAccessTokenWithAkSk(new OnResultListener<AccessToken>() {
 
 使用步骤：
 
-1. 在[官网](https://console.bce.baidu.com/ai/?fromai=1&_=1488766023093#/ai/ocr/app/list)中配置应用
-2. 下载对应应用的授权文件
-3. 将授权文件添加至工程asserts文件夹，文件名必须为`aip.license`
-4. 调用initAccessToken方法，初始化OCR单例：
+ 1. 在[官网](https://console.bce.baidu.com/ai/?fromai=1&_=1488766023093#/ai/ocr/app/list)中配置应用
+ 2. 下载对应应用的授权文件
+ 3. 将授权文件添加至工程asserts文件夹，文件名必须为`aip.license`
+ 4. 调用initAccessToken方法，初始化OCR单例：
 
 ```
 OCR.getInstance().initAccessToken(new OnResultListener<AccessToken>() {
-	@Override
+    @Override
     public void onResult(AccessToken result) {
-        // 调用成功，返回AccessToken对象   
+        // 调用成功，返回AccessToken对象
         String token = result.getAccessToken();
     }
     @Override
     public void onError(OCRError error) {
-		// 调用失败，返回OCRError子类SDKError对象
+        // 调用失败，返回OCRError子类SDKError对象
     }
 }, getApplicationContext());
 ```
@@ -157,14 +157,14 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     // 获取调用参数
     String contentType = data.getStringExtra(CameraActivity.KEY_CONTENT_TYPE);
     // 通过临时文件获取拍摄的图片
-    String filePath = FileUtil.getSaveFile(getApplicationContext()).getAbsolutePath(); 
+    String filePath = FileUtil.getSaveFile(getApplicationContext()).getAbsolutePath();
     // 判断拍摄类型（通用，身份证，银行卡）
     if (requestCode == REQUEST_CODE_CAMERA && resultCode == Activity.RESULT_OK) {
     // 判断是否是身份证正面
-    	if (CameraActivity.CONTENT_TYPE_ID_CARD_FRONT.equals(contentType)){
-    	// 获取图片文件调用sdk数据接口，见数据接口说明
-    	}
-    }   
+        if (CameraActivity.CONTENT_TYPE_ID_CARD_FRONT.equals(contentType)){
+        // 获取图片文件调用sdk数据接口，见数据接口说明
+        }
+    }
 }
 ```
 
@@ -173,27 +173,27 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 ### 通用文字识别
 
 * 调用示例
- 
+
 ```
-	// 通用文字识别参数设置
-	GeneralParams param = new GeneralParams();
-	param.setDetectDirection(true);
-	param.setImageFile(new File(filePath));
-	
-	// 调用通用文字识别服务
-	OCR.getInstance().recognizeGeneral(param, new OnResultListener<GeneralResult>() {
-		@Override
-		public void onResult(GeneralResult result) {
-			// 调用成功，返回GeneralResult对象       
-		} 
-		@Override
-		public void onError(OCRError error) {
-		    // 调用失败，返回OCRError对象                 
-		}
-	});
+// 通用文字识别参数设置
+GeneralParams param = new GeneralParams();
+param.setDetectDirection(true);
+param.setImageFile(new File(filePath));
+
+// 调用通用文字识别服务
+OCR.getInstance().recognizeGeneral(param, new OnResultListener<GeneralResult>() {
+    @Override
+    public void onResult(GeneralResult result) {
+        // 调用成功，返回GeneralResult对象
+    }
+    @Override
+    public void onError(OCRError error) {
+        // 调用失败，返回OCRError对象
+    }
+});
 ```
 
-***options参数详情***
+**options参数详情**
 
 | 参数                    | 是否必选  | 类型      | 可选值范围                                   | 说明                                       |
 | --------------------- | ----- | ------- | --------------------------------------- | ---------------------------------------- |
@@ -205,7 +205,6 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 | detect_language       | false | string  | true、false                              | 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）           |
 | classify_dimension    | false | string  | lottery                                 | 分类维度（根据OCR结果进行分类），逗号分隔，当前只支持lottery。<br/>lottery：彩票分类，设置detect_direction有助于提升精度 |
 | vertexes_location     | false | string  | true、false                              | 是否返回文字外接多边形顶点位置，不支持单字位置。默认为false         |
-
 
 
 * 结果返回
@@ -235,7 +234,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 ```json
 // 示例
-{    
+{
     direction : 2,
     log_id : 676709620,
     words_result : [ {
@@ -256,22 +255,21 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 * 调用示例
 
-
 ```
 // 银行卡识别参数设置
 BankCardParams param = new BankCardParams();
 param.setImageFile(new File(filePath));
-	
+
 // 调用银行卡识别服务
 OCR.getInstance().recognizeBankCard(param, new OnResultListener<BankCardResult>() {
-	@Override
-	public void onResult(BankCardResult result) {
-		// 调用成功，返回BankCardResult对象       
-	} 
-	@Override
-	public void onError(OCRError error) {
-	    // 调用失败，返回OCRError对象            
-	}
+    @Override
+    public void onResult(BankCardResult result) {
+        // 调用成功，返回BankCardResult对象
+    }
+    @Override
+    public void onError(OCRError error) {
+        // 调用失败，返回OCRError对象
+    }
 });
 ```
 
@@ -300,26 +298,26 @@ OCR.getInstance().recognizeBankCard(param, new OnResultListener<BankCardResult>(
 ### 身份证识别
 
 * 调用示例
- 
+
 ```
 // 身份证识别参数设置
 IDCardParams param = new IDCardParams();
 param.setImageFile(new File(filePath));
-	
+
 // 调用身份证识别服务
 OCR.getInstance().recognizeIDCard(param, new OnResultListener<IDCardResult>() {
-	@Override
-	public void onResult(IDCardResult result) {
-		// 调用成功，返回IDCardResult对象       
-	} 
-	@Override
-	public void onError(OCRError error) {
-	    // 调用失败，返回OCRError对象            
-	}
+    @Override
+    public void onResult(IDCardResult result) {
+        // 调用成功，返回IDCardResult对象
+    }
+    @Override
+    public void onError(OCRError error) {
+        // 调用失败，返回OCRError对象
+    }
 });
 ```
 
-***options参数***
+**options参数**
 
 | 参数               | 必选    | 范围               | 类型      | 说明                                       |
 | ---------------- | ----- | ---------------- | ------- | ---------------------------------------- |
@@ -366,25 +364,25 @@ OCR.getInstance().recognizeIDCard(param, new OnResultListener<IDCardResult>() {
 
 ```
 
-### 错误码表
+# 错误码表
 
-***验证错误***
-
+**验证错误**
 
 |错误码 | 错误信息 | 说明 | 备注 |
 |---|---|---|---|
-|110 |	Access token invalid or no longer valid	|Access Token过期失效| 请重新获得有效的Token |
+|110 | Access token invalid or no longer valid |Access Token过期失效| 请重新获得有效的Token |
 |283501 | License file check error| 授权文件不匹配 |请在[官网](http://ai.baidu.com)中配置正确的包名，并确认使用了正确的授权文件|
-|283502 | App identifier unmatch | BundleId不匹配 |请在[官网](http://ai.baidu.com)中配置正确的包名，并确认使用了正确的授权文件| 
-|283504 | Network error | 网络请求失败|  请授权App网络权限并保证网络通畅|
+|283502 | App identifier unmatch | BundleId不匹配 |请在[官网](http://ai.baidu.com)中配置正确的包名，并确认使用了正确的授权文件|
+|283504 | Network error | 网络请求失败| 请授权App网络权限并保证网络通畅|
 |283505 | Server illegal response | 服务器返回数据异常 | |
 |283601 | Server authentication error |身份验证错误。| 请在[官网](http://ai.baidu.com)中配置应用，并确认填写了正确的AK/SK，或使用了正确的授权文件|
-|283602 | Authentication time error | 时间戳不正确，可能是设备时间异常。 |
-|283604 | App identifier unmatch | 错误的PackageName或者BundleId | 
-|283700 | Server internal error |  服务器内部错误 | |
+|283602 | Authentication time error | 时间戳不正确，可能是设备时间异常。 | |
+|283604 | App identifier unmatch | 错误的PackageName或者BundleId | |
+|283700 | Server internal error | 服务器内部错误 | |
 
 
-***服务错误***
+
+**服务错误**
 
 | 错误码    | 错误信息                         | 描述            |
 | ------ | ---------------------------- | ------------- |
@@ -411,7 +409,7 @@ OCR.getInstance().recognizeIDCard(param, new OnResultListener<IDCardResult>() {
 | 216634 | detect error                 | 检测错误          |
 | 216635 | get mask error               | 获取mask图片错误    |
 
-# Relese Notes
+# 版本更新记录
 
 | 上线日期      | 版本号  | 更新内容                        |
 | --------- | ---- | --------------------------- |
