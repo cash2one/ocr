@@ -120,28 +120,7 @@ class Action_News extends Ap_Action_Abstract {
             }
             Brain_Output::jsonOutput($arrRet);
             //Brain_Output::htmlOutput($arrRet, 'brain/page/news/detail.tpl');
-        } else if ('delete' === $strAction) {
-            $strId = Brain_Util::getParamAsString($arrInput, 'id');
-            // source: int 内网, ext 外网
-            $source = Brain_Util::getParamAsString($arrInput, 'source', 'int');
-
-            if ($source == 'ext') {
-                $dbNewsExt = new Dao_NewsExt();
-                try {
-                    $dbNewsExt->deleteNews($strId);
-                } catch (Exception $e) {
-                }
-            } else if ($source == 'int') {
-                try {
-                    $dbNews->deleteNews($strId);
-                } catch (Exception $e) {
-                }
-            } else {
-
-            }
-            //$dbNews->deleteNews($strId);
-            Brain_Output::jsonOutput($arrRet);
-        } else if ('update' === $strAction) {
+        } else  if ('update' === $strAction) {
             $strTitle = Brain_Util::getParamAsString($arrInput, 'title');
             $strTime = Brain_Util::getParamAsString($arrInput, 'time');
             $strAuthor = Brain_Util::getParamAsString($arrInput, 'author');
