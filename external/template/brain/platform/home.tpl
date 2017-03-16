@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489057874/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489057874/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489057874/css/home.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/home.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1489057874/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1489655127/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -206,17 +206,18 @@
     <section class="banner">
     <ul class="banner-content">
         <li class="active video-bg">
-            <h1>让 AI 变革发生</h1>
-            <p>更全面、优质、易用的人工智能服务<br>即刻开启AI发现之旅</p>
+            <h1>OCR SDK上线 iOS/Android</h1>
+            <p>
+                OCR iOS SDK，Android SDK全新上线，让您的应用快速集成<br>
+                通用文字识别、身份证识别、银行卡卡号识别的能力
+            </p>
             <div>
                 <a role="button"
                    class="get-started"
-                   href="https://console.bce.baidu.com/?fromai=1#/aip/overview">
-                    免费试用
+                   href="http://ai.baidu.com/sdk#sdk-category-ocr">
+                    立即下载
                 </a>
             </div>
-            <video src="//ai.bdstatic.com/dist/1489057874/ai_images/home/banner-1.mp4">
-            </video>
         </li>
         <li>
             <a href="/tech/face/search">
@@ -257,7 +258,27 @@
             </a>
         </li>
         <li>
-            <a href="/activity/zuiqiangdanao/"></a>
+            <a href="http://duer.baidu.com">
+                <h1></h1>
+                <p>只要搭载DuerOS系统的智能设备都能够直接与用户开口对话<br>
+                    让用户获取所求</p>
+                <div>
+                    <button type="button" class="get-started">了解详情</button>
+                </div>
+            </a>
+        </li>
+        <li class="video-bg">
+            <h1>让 AI 变革发生</h1>
+            <p>更全面、优质、易用的人工智能服务<br>即刻开启AI发现之旅</p>
+            <div>
+                <a role="button"
+                   class="get-started"
+                   href="https://console.bce.baidu.com/?fromai=1#/aip/overview">
+                    免费试用
+                </a>
+            </div>
+            <video src="//ai.bdstatic.com/dist/1489655127/ai_images/home/banner-1.mp4">
+            </video>
         </li>
     </ul>
     <ul class="banner-indicator">
@@ -594,7 +615,7 @@
                     <img alt="百度语音基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1489057874/ai_images/home/video-1.png">
+                         src="//ai.bdstatic.com/dist/1489655127/ai_images/home/video-1.png">
                 </a>
                 <h5>百度语音基础介绍及应用场景</h5>
             </li>
@@ -604,7 +625,7 @@
                     <img alt="百度OCR基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1489057874/ai_images/home/video-2.png">
+                         src="//ai.bdstatic.com/dist/1489655127/ai_images/home/video-2.png">
                 </a>
                 <h5>百度OCR基础介绍及应用场景</h5>
             </li>
@@ -614,7 +635,7 @@
                     <img alt="百度人脸技术基础介绍及引用场景"
                         width="500"
                         height="280"
-                        src="//ai.bdstatic.com/dist/1489057874/ai_images/home/video-3.png">
+                        src="//ai.bdstatic.com/dist/1489655127/ai_images/home/video-3.png">
                 </a>
                 <h5>百度人脸技术基础介绍及引用场景</h5>
             </li>
@@ -625,7 +646,7 @@
                     <img alt="百度翻译产品介绍"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1489057874/ai_images/home/video-4.png">
+                         src="//ai.bdstatic.com/dist/1489655127/ai_images/home/video-4.png">
                 </a>
                 <h5>百度翻译产品介绍</h5>
             </li>
@@ -751,8 +772,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1489057874/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1489057874/js/home.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/home.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');
