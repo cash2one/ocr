@@ -259,7 +259,7 @@
         </li>
         <li>
             <a href="http://duer.baidu.com">
-                <h1></h1>
+                <h1>&nbsp;</h1>
                 <p>只要搭载DuerOS系统的智能设备都能够直接与用户开口对话<br>
                     让用户获取所求</p>
                 <div>
@@ -283,6 +283,7 @@
     </ul>
     <ul class="banner-indicator">
         <li class="active"></li>
+        <li></li>
         <li></li>
         <li></li>
         <li></li>
