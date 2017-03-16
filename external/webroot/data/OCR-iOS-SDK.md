@@ -50,7 +50,7 @@ iOS SDK提供了一个可快速运行的Demo工程，建议首先运行一下Dem
 
 百度AIP开放平台使用OAuth2.0授权调用开放API，调用API时必须在URL中带上accesss_token参数。AccessToken可用AK/SK或者授权文件的方式获得。
 
-OCR iOS SDK提供了以下3种AccessToken管理方法. 
+OCR iOS SDK提供了以下3种AccessToken管理方法.
 
 ### API Key /  Secret Key
 
@@ -84,13 +84,13 @@ OCR iOS SDK提供了以下3种AccessToken管理方法.
  2. 下载对应应用的授权文件（默认名字为aip.license）
  3. 将授权文件添加至XCode工程（配置为资源并拷贝，Target -> Build Phases -> Copy Bundle Resource 中添加该文件）
  4. 读取授权文件原始字节，`NSData`格式，初始化`AipOcrService`单例：
- 
+
 		// 接口
 		- (instancetype) authWithLicenseFileData: (NSData *)licenseFileContent;
-	
+
 		// 示例
 		// 若未添加至主工程，则[NSBundle mainBundle]修改为对应bundle
-		NSString *licenseFile = [[NSBundle mainBundle] pathForResource:@"aip" ofType:@"license"]; 
+		NSString *licenseFile = [[NSBundle mainBundle] pathForResource:@"aip" ofType:@"license"];
 		NSData *licenseFileData = [NSData dataWithContentsOfFile:licenseFile];
 		[[AipOcrService shardService] authWithLicenseFileData:licenseFileData];
 
@@ -150,8 +150,8 @@ OCR iOS SDK提供了以下3种AccessToken管理方法.
 5. 在合适的地方启动ViewController: 如`[self presentViewController:vc animated:YES completion:nil]`
 
 AipOcrSdk.framework，即AipOcr工程包含了相机相关操作代码，如开发者想直接使用，无需引用AipOcrSdk工程，直接引入AipOcrSdk.framework即可。若需要修改相机操作相关UI，可引入AipOcrSdk工程，编辑相关UI代码即可。
-    	
-    	
+
+
 ## 数据接口
 
 该调用方法传入需要识别的UIImage，异步识别，识别完成之后，回调返回识别结果。
@@ -173,7 +173,7 @@ AipOcrSdk.framework，即AipOcr工程包含了相机相关操作代码，如开�
 ### 通用文字识别
 
  * 调用示例
- 
+
 ```
 	NSDictionary *options = @{@"language_type": @"CHN_ENG", @"detect_direction": @"true"};
 	[[AipOcrService shardService] detectTextFromImage:finalImage withOptions:options successHandler:^(id result) {
@@ -224,7 +224,7 @@ AipOcrSdk.framework，即AipOcr工程包含了相机相关操作代码，如开�
 | ++char             | 是    | string  | 单字符识别结果                                  |
 ```json
 // 示例
-{    
+{
     direction : 2,
     log_id : 676709620,
     words_result : [ {
@@ -341,12 +341,12 @@ AipOcrSdk.framework，即AipOcr工程包含了相机相关操作代码，如开�
 |---|---|---|---|
 |110 |	Access token invalid or no longer valid	|Access Token过期失效| 请重新获得有效的Token |
 |283501 | License file check error| 授权文件不匹配 |请在[官网](http://ai.baidu.com)中配置正确的包名，并确认使用了正确的授权文件|
-|283502 | App identifier unmatch | BundleId不匹配 |请在[官网](http://ai.baidu.com)中配置正确的包名，并确认使用了正确的授权文件| 
+|283502 | App identifier unmatch | BundleId不匹配 |请在[官网](http://ai.baidu.com)中配置正确的包名，并确认使用了正确的授权文件|
 |283504 | Network error | 网络请求失败|  请授权App网络权限并保证网络通畅|
 |283505 | Server illegal response | 服务器返回数据异常 | |
 |283601 | Server authentication error |身份验证错误。| 请在[官网](http://ai.baidu.com)中配置应用，并确认填写了正确的AK/SK，或使用了正确的授权文件|
-|283602 | Authentication time error | 时间戳不正确，可能是设备时间异常。 |
-|283604 | App identifier unmatch | 错误的PackageName或者BundleId | 
+|283602 | Authentication time error | 时间戳不正确，可能是设备时间异常。 | |
+|283604 | App identifier unmatch | 错误的PackageName或者BundleId | |
 |283700 | Server internal error |  服务器内部错误 | |
 
 
@@ -401,7 +401,7 @@ AipOcrSdk.framework，即AipOcr工程包含了相机相关操作代码，如开�
 识别失败后，自动重试一次。
 
 在AipOcrSdk/AipOcrSdk/AipOcrService 中，配置属性 retry即可
-	
+
 	/**
 	 * 是否重试。默认为NO。YES会在失败时自动重试一次。
 	 */
