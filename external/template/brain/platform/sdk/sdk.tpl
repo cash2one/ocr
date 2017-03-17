@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489057874/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489057874/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489057874/css/sdk/sdk.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/sdk/sdk.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1489057874/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1489655127/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -633,6 +633,44 @@
                         </div>
                     </div>
                 </div>
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite sdk-android"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-ocr"></i>
+                            <a href="http://ai.baidu.com/download/aip-ocr-android-sdk-1.0.0.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">Android SDK</div>
+                            <div class="sdk-description"></div>
+                            <div class="sdk-bottom-info">
+                                <div class="sdk-version">版本: 1.0.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-16</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sdk-item-container">
+                    <div class="sdk-item">
+                        <i class="sdk-language-sprite sdk-apple"></i>
+                        <div class="sdk-item-aside">
+                            <i class="sdk-category-icon sdk-ocr"></i>
+                            <a href="http://ai.baidu.com/download/aip-ocr-ios-sdk-1.0.0.zip">
+                                <div class="sdk-download-button">下载</div>
+                            </a>
+                        </div>
+                        <div class="sdk-info">
+                            <div class="sdk-item-name">iOS SDK</div>
+                            <div class="sdk-description"></div>
+                            <div class="sdk-bottom-info">
+                                <div class="sdk-version">版本: 1.0.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-16</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="sdk-category">
@@ -909,8 +947,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1489057874/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1489057874/js/sdk/sdk.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/sdk/sdk.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');
