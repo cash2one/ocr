@@ -11,6 +11,7 @@ import DemoCanvas from '../../component/widget/demoCanvas';
 import {scanFace} from '../../model/demoAPI';
 import AlertModal from '../../component/widget/alertModal';
 
+import '../../view/technology/face-detect.html';
 import 'less/technology/face-detect.less';
 
 /* eslint-disable */

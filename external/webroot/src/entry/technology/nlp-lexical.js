@@ -2,7 +2,9 @@
  * @file 词法分析demo
  * @author Franck Chen(chenfan02@baidu.com)
  */
+
 import $ from 'jquery';
+import '../../view/technology/nlp-lexical.html';
 
 import 'less/technology/nlp-lexical.less';
 

@@ -180,6 +180,14 @@ module.exports = {
                 test: /\.html$/,
                 use: [
                     {
+                        loader: 'file-loader',
+                        options: {
+                            // external路径下的view文件夹
+                            name: '../../view/[name].html'
+                        }
+                    },
+                    'extract-loader',
+                    {
                         loader: 'html-loader',
                         options: {
                             minimize: false,
@@ -240,7 +248,7 @@ module.exports = {
             filename: `${versionPath}/js/[name].js`,
             chunks: normalModules
         }),
-        ...htmlWebpackPluginArr,
+        // ...htmlWebpackPluginArr,
         // css文件单独打包
         extractLESS
     ]

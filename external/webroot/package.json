@@ -49,6 +49,7 @@
   "dependencies": {
     "autoprefixer": "^6.7.7",
     "code-prettify": "^0.1.0",
+    "extract-loader": "^0.1.0",
     "handlebars": "^4.0.6",
     "handlebars-loader": "^1.4.0",
     "lodash.debounce": "^4.0.8",
