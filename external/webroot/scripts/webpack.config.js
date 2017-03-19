@@ -122,6 +122,7 @@ webpackEntries['common.bundle'] = ['jquery', 'src/entry/base.js'];
 // 两个单独引入的css，目前没有想好如何处理
 webpackEntries.base = ['src/less/base.less'];
 webpackEntries.ie9 = ['src/less/ie9.less'];
+webpackEntries.template = ['src/view/common/template.html'];
 
 module.exports = {
     // 注意基准路径是webroot
@@ -192,7 +193,9 @@ module.exports = {
                         options: {
                             minimize: false,
                             // 修改图片、视频缓存路径
-                            attrs: ['img:src', 'video:src']
+                            attrs: ['img:src', 'video:src', 'link:href'],
+                            // 忽略值是变量的静态资源
+                            ignoreCustomFragments: [/\{%.*%}/]
                         }
                     }
                 ]
