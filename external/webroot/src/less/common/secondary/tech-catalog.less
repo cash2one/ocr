@@ -1,0 +1,89 @@
+/**
+ * @file ai二级页,产品功能部分通用样式
+ * @author FranckChen(chenfan02@baidu.com)
+ */
+
+.tech-catalog(@page-name: speech; @product-num;) {
+    .tech-catalog {
+        padding: 40px 0 20px;
+        background-color: #fafafa;
+
+        &-title {
+            padding: 15px 0;
+            font-size: 30px;
+            text-align: center;
+            color: #333;
+        }
+
+        &-intro {
+            padding: 20px 0 40px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        &-gallery {
+            margin: 0 -30px;
+            font-size: 0;
+        }
+    }
+
+    .tech-catalog-prods(@product-num);
+    .tech-catalog-prods(@n, @i: 1) when (@i <= @n) {
+        .tech-catalog-prod-@{i} {
+        }
+    }
+}
+
+@prods-width: (1180px / 2) - 30px;
+.tech-prod {
+    &-container {
+        position: relative;
+        box-sizing: border-box;
+        display: inline-block;
+        width: @prods-width;
+        margin: 0 30px 35px;
+        height: 200px;
+        vertical-align: top;
+        background-color: #fff;
+        font-size: 0;
+
+        &:hover {
+            box-shadow: 1px 1px 5px #888;
+        }
+    }
+
+    &-info,
+    &-poster {
+        display: inline-block;
+        width: 50%;
+    }
+
+    &-info {
+        box-sizing: border-box;
+        height: 100%;
+        padding: 15px 25px;
+    }
+
+    &-name {
+        padding: 15px 0;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    &-intro {
+        padding: 6px 0;
+        font-size: 16px;
+    }
+
+    &-panel {
+        position: absolute;
+        left: 25px;
+        bottom: 35px;
+        font-size: 14px;
+        color: #097ef1;
+
+        a:first-child {
+            margin-right: 15px;
+        }
+    }
+}

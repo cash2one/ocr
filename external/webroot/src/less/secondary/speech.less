@@ -2,10 +2,12 @@
 @import '../common/banner.less';
 @import '../common/tech-feature.less';
 @import '../common/tech-scenario.less';
-@import '../common/tech-case.less';
 @import '../common/tech-commom.less';
 @import '../common/modal.less';
-@import "../common/tech-guid.less";
+@import "../common/secondary/tech-catalog.less";
+
+@import "../common/secondary/scenarios.less";
+@import "../common/secondary/guid.less";
 
 // 技术单页前缀
 @prefix: tech;
@@ -25,10 +27,9 @@
     .apply-scenario(@page-name: speech-asr, @icon-num: 5);
 }
 
-// 调用通用的tech-case模块
-.@{prefix}-case {
-    .tech-case(@page-name: speech-asr; @num: 3; @case-logo: ture;)
-}
+.tech-case(@page-name: speech-asr; @num: 3; @case-logo: ture;);
+
+.tech-catalog(@page-name: speech; @product-num: 3);
 
 // 功能介绍
 .@{prefix}-function {
