@@ -9,7 +9,7 @@
 .tech-case(@page-name: nlp-word_embedding; @num: 2; @case-logo: ture;) {
     .tech-case {
         position: relative;
-        height: 370px;
+        height: 470px;
 
         // 循环生成案例背景图
         .case-big-bg(@num);
@@ -31,17 +31,13 @@
 
         &-item {
             box-sizing: border-box;
-            height: 370px;
-            margin-top: -370px;
-            padding-top: 5px;
+            height: 470px;
+            margin-top: -470px;
+            padding-top: 25px;
             text-align: left;
             transition: all 1s ease;
             opacity: 0;
             color: #fff;
-
-            & when (@case-logo = ture) {
-                padding-top: 60px;
-            }
 
             &:first-child {
                 margin-top: 0;
@@ -52,7 +48,6 @@
                 padding: 15px 0;
                 font-size: 30px;
             }
-
 
             &.tech-case-active {
                 opacity: 1;
@@ -116,6 +111,8 @@
         }
 
         &-coop {
+            padding-top: 30px;
+
             * {
                 display: inline-block;
                 vertical-align: middle;

@@ -29,8 +29,12 @@
 
     .tech-catalog-prods(@product-num);
     .tech-catalog-prods(@n, @i: 1) when (@i <= @n) {
-        .tech-catalog-prod-@{i} {
+        .tech-prod-poster-@{i} {
+            background: url("../../../../ai_images/technology/speech/sprite/prod-poster-@{i}.png") center center;
+            background-size: 300px 210px;
         }
+
+        .tech-catalog-prods(@n, (@i + 1));
     }
 }
 
@@ -42,20 +46,24 @@
         display: inline-block;
         width: @prods-width;
         margin: 0 30px 35px;
-        height: 200px;
+        height: 210px;
         vertical-align: top;
         background-color: #fff;
         font-size: 0;
 
         &:hover {
             box-shadow: 1px 1px 5px #888;
+
+            [class^="tech-prod-poster"] {
+                background-size: 450px 315px;
+            }
         }
     }
 
-    &-info,
-    &-poster {
+    &-info {
         display: inline-block;
         width: 50%;
+        vertical-align: top;
     }
 
     &-info {
@@ -72,7 +80,8 @@
 
     &-intro {
         padding: 6px 0;
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 25px;
     }
 
     &-panel {
@@ -86,4 +95,12 @@
             margin-right: 15px;
         }
     }
+}
+
+[class^="tech-prod-poster"] {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    vertical-align: top;
+    transition: all .3s linear;
 }
