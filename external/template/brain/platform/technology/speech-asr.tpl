@@ -388,8 +388,8 @@
 {%if $userInfo eq Null%}
 <div class="tech-section get-started tech-free">
     <div class="ai-container">
-        <div class="tech-free-title">立即获取免费API Key</div>
-        <div class="tech-free-info">现在试用，获取免费API Key，免费调用各项开放能力API</div>
+        <div class="tech-free-title">现在注册，即享免费试用</div>
+        <div class="tech-free-info">结合百度人工智能技术为您提供免费的技术应用，结合百度人工智能技术为您提供免费的技术应用</div>
         <div class="tech-free-btn">
             <a role="button"
                class="btn-primary large"
