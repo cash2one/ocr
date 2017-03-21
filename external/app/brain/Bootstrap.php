@@ -24,6 +24,9 @@ class Bootstrap extends Ap_Bootstrap_Abstract{
         $dispatcher->getRouter()->addRoute('tech_Antiporn', new Ap_Route_Rewrite('tech/antiporn',
             array("module"=>"tech", "controller"=>"antiporn", "action"=>"index")
         ));
+        $dispatcher->getRouter()->addRoute('tech_Speech', new Ap_Route_Rewrite('tech/speech',
+            array("module"=>"tech", "controller"=>"speech", "action"=>"index")
+        ));
     }
 
     /**
