@@ -304,7 +304,7 @@
     </div>
 </div>
 
-{literal}
+{%literal%}
 <div class="tech-section tech-case">
     <div class="tech-case-list">
         <div class="tech-case-item tech-case-item-1 tech-case-active">
@@ -386,7 +386,7 @@
         </div>
     </div>
 </div>
-{/literal}
+{%/literal%}
 
 <div class="ai-container tech-section tech-feature">
     <div class="tech-feature-title">产品优势</div>
