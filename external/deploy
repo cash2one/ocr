@@ -29,7 +29,7 @@ start() {
 }
 reload() {
     init
-    sh $workspace/webserver/loadnginx reload
+    sh $workspace/webserver/loadnginx.sh reload
 }
 
 main() {

@@ -398,7 +398,8 @@ $fileUpload.on('change', e => {
 });
 
 // 页面加载后，分析第一张demo图片
-const firstImg = $techDemoSelect.eq(0).find('img').attr('src');
+const firstImg = `${window.location.protocol}${$techDemoSelect.eq(0).find('img').attr('src')}`;
+
 scan(firstImg)
     .then(
         data => {
