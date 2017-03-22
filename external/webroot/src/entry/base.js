@@ -70,7 +70,7 @@ $('a.ai-redirect').on('click', e => {
     let url = '';
     let originUrl = $target.attr('href');
     if (location.hostname.indexOf('ai.baidu.com') >= 0) {
-        url = `http://ai.baidu.com/redirect?${encodeURI(originUrl)}`;
+        url = `http://ai.baidu.com/redirect?url=${encodeURI(originUrl)}`;
     }
     else {
         url = originUrl;
