@@ -189,7 +189,7 @@
                        target="_blank">登录</a>
                 </li>
                 <li>
-                    <a class="btn-primary free-demo"
+                    <a class="btn-primary free-demo ai-redirect"
                        role="button"
                        target="_blank"
                        href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
@@ -205,7 +205,7 @@
                 </li>
                 {%/if%}
                 <li>
-                    <a class="console"
+                    <a class="console ai-redirect"
                        target="_blank"
                        href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
@@ -231,7 +231,7 @@
         <div>
             <a role="button"
                target="_blank"
-               class="btn-primary media"
+               class="btn-primary media ai-redirect"
                href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">立即使用</a>
             <a role="button"
                class="btn-other media"
@@ -376,7 +376,7 @@
         <div>
             <a role="button"
                target="_blank"
-               class="btn-primary large"
+               class="btn-primary large ai-redirect"
                href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
         </div>
     </div>
@@ -430,23 +430,28 @@
                 <h3>控制台入口</h3>
                 <ul>
                     <li>
-                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
+                        <a class="ai-redirect"
+                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
                            target="_blank">百度语音</a>
                     </li>
                     <li>
-                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index"
+                        <a class="ai-redirect"
+                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index"
                            target="_blank">文字识别</a>
                     </li>
                     <li>
-                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index"
+                        <a class="ai-redirect"
+                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index"
                            target="_blank">人脸识别</a>
                     </li>
                     <li>
-                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index"
+                        <a class="ai-redirect"
+                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index"
                            target="_blank">自然语言处理</a>
                     </li>
                     <li>
-                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
+                        <a class="ai-redirect"
+                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
                            target="_blank">黄反识别</a>
                     </li>
                 </ul>
