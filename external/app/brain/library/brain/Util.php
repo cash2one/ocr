@@ -96,6 +96,11 @@ class Brain_Util
         return $intValue;
     }
 
+    /**
+     * @param $url
+     * @param $param
+     * @return string
+     */
     public static function appendUrl($url, $param)
     {
         $url = Bd_Str::urldecode($url);
