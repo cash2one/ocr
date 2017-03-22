@@ -30,8 +30,8 @@ class Action_Redirect extends Ap_Action_Abstract
         if (empty($url)) {
             $url = "https://ai.baidu.com";
         }
-        if (!Bd_Str::exist($url, "http://")) {
-            $url = "http://" . $url;
+        if (!Bd_Str::exist($url, "http")) {
+            $url = "https://" . $url;
         }
         $url = Bd_Str::urldecode($url);
 
