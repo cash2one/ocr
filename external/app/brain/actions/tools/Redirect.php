@@ -19,9 +19,9 @@ class Action_Redirect extends Ap_Action_Abstract
     {
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
-
         $url = Brain_Util::getParamAsString($arrInput, 'url');
         $param = array(
+            "aibaiduid" => $_COOKIE['BAIDUID'],
             "aibduss" => $_COOKIE['BDUSS'],
             "fromai" => 1,
             "aiucid" => $_COOKIE['uc_login_unique']
