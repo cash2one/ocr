@@ -27,6 +27,9 @@ class Action_Redirect extends Ap_Action_Abstract
             "aiucid" => $_COOKIE['uc_login_unique']
         );
         $url = Brain_Util::appendUrl($url, $param);
+        if (empty($url)){
+            $url = "https://ai.baidu.com";
+        }
         header("Location: $url");
     }
 }
