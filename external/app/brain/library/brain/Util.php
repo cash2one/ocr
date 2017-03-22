@@ -110,7 +110,7 @@ class Brain_Util
         if (Bd_Str::exist($url, "?")) {
             $url .= "&";
         } else {
-            $url .= "&";
+            $url .= "?";
         }
 
         foreach ($param as $k => $v) {

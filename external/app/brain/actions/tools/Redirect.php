@@ -34,6 +34,7 @@ class Action_Redirect extends Ap_Action_Abstract
             $url = "http://" . $url;
         }
         $url = Bd_Str::urldecode($url);
+
         header("Location: $url");
     }
 }
