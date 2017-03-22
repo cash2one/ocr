@@ -2,7 +2,6 @@
  * @file 二维码接口定义
  * @author shiliang@baidu.com
  */
-'use strict';
 
 import $ from 'jquery';
 

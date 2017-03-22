@@ -2,7 +2,6 @@
  * @file 主页脚本入口
  * @author shiliang@baidu.com
  */
-'use strict';
 
 import $ from 'jquery';
 import News from '../component/widget/news';

@@ -2,7 +2,6 @@
  * @file AR脚本入口
  * @author shiliang@baidu.com
  */
-'use strict';
 
 import $ from 'jquery';
 import 'less/technology/ar.less';

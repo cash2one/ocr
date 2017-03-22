@@ -23,6 +23,7 @@ const autoprefixer = require('autoprefixer');
 const getVersion = require('./lib/getVersion');
 /* eslint-enable */
 
+// 判断是开发构建还是测试构建
 const isOnlineBuild = argv.hasOwnProperty('o')
     || argv.hasOwnProperty('online')
     || argv.hasOwnProperty('new');
@@ -35,18 +36,37 @@ const publicPath = isOnlineBuild
 // 获取版本号
 const versionPath = getVersion();
 
-// 项目主体以js为着眼点
-const entries = glob.sync(
-    '**/*.js',
-    {
-        cwd: path.join(__dirname, '..', 'src', 'entry'),
-        ignore: [
-            '**/pager.js', '**/base.js',
-            '**/common/*.js', '**/util/*.js'
-        ]
-    }
-);
+// glob选项
+const globConfig = {
+    cwd: path.join(__dirname, '..', 'src', 'entry'),
+    ignore: [
+        '**/pager.js', '**/base.js',
+        '**/common/*.js', '**/util/*.js'
+    ]
+};
 
+const moduleName = argv['module'];
+
+let entries = [];
+if (!moduleName) {
+    entries = glob.sync(
+        '**/*.js',
+        globConfig
+    );
+}
+else {
+    entries = glob.sync(
+        `**/${moduleName}.js`,
+        globConfig
+    );
+
+    if (entries.length === 0) {
+        console.log(`未找到名为${moduleName}的模块`);
+        process.exit();
+    }
+}
+
+// 移除文件扩展名
 const removeExtension = function (filename) {
     return filename.substr(0, filename.lastIndexOf('.') || filename);
 };

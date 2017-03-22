@@ -2,7 +2,6 @@
  * @file nlp-短文本相似度脚本入口
  * @author shiliang@baidu.com
  */
-'use strict';
 
 import $ from 'jquery';
 import throttle from 'lodash.throttle';
