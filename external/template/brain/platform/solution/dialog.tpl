@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/solution/dialog.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/solution/dialog.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490250326/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1489655127/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -172,10 +172,7 @@
                         <li><a href="/support/video">教学视频</a></li>
                         <li><a href="/support/faq">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
-                        <li>
-                            <a href="http://developer.baidu.com/forum#ai"
-                               target="_blank">技术论坛</a>
-                        </li>
+                        <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
                     </ul>
                 </li>
@@ -184,38 +181,20 @@
         <div class="login">
             <ul>
                 {%if $userInfo eq Null%}
-                <li>
-                    <a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com"
-                       target="_blank">登录</a>
-                </li>
-                <li>
-                    <a class="btn-primary free-demo ai-redirect"
-                       role="button"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
-                </li>
+                <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 {%if $userInfo.internalLink !== Null%}
-                <li>
-                    <a class="btn-other internal-link"
-                       target="_blank"
-                       role="button"
-                       href="{%$userInfo.internalLink%}">内部版本 </a>
-                </li>
+                <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
                 {%/if%}
                 <li>
-                    <a class="console ai-redirect"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
+                    <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li>
-                            <a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com"
-                               target="_blank">退出</a>
-                        </li>
+                        <li><a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -224,131 +203,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-    <section class="tech-section tech-banner">
-    <div class="container">
-        <h1>百御-手机号风险识别</h1>
-        <p>基于百度大数据能力和语音识别技术<br>为您提供行业领先的手机号风险识别服务</p>
-        <div class="consult">
-            <a role="button" class="btn-primary media">商务合作</a>
-        </div>
-    </div>
-</section>
-
-<section class="tech-section tech-intro solution clear-float">
-    <div class="container">
-        <h2>功能介绍</h2>
-        <p>基于大数据+语音识别技术，能够自动精准识别用户（手机号）对应的风险等级，可有效的应用在营销反作弊、反欺诈等黑产领域</p>
-        <div class="solution-container">
-            <div class="solution-case shadow">
-                <div class="solution-icon">
-                    <img src="//ai.bdstatic.com/dist/1490250326/ai_images/solution/dialog/solution-case-1.png">
-                </div>
-                <div class="solution-desc">
-                    <ul>
-                        <li>经过百度系业务多年与黑产动态对抗的经验，沉淀出海量黑产交易数据以及技术积累</li>
-                        <li>结合百度大数据能力与语音识别技术，识别出号码对应的风险等级</li>
-                        <li>接入方可根据风险等级配置不同的业务措施，用于事前防止或事后挽回营销补贴损失，提升营销效率与安全</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-feature">
-    <div class="container">
-        <h2>技术特色</h2>
-        <div class="feature-list clear-float">
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>准确率高</h3>
-                    <p>通过DNN语音识别技术，识别异常手机号准确率高达99%，业内领先</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>免打扰</h3>
-                    <p>通过百度大数据与风险信息库，能够确保大部分用户无感知，免打扰</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>快速便捷</h3>
-                    <p>提供API服务接口，无需额外开发，能够快速接入</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-scene">
-    <div class="container">
-        <h2>应用场景</h2>
-        <div class="scene-list clear-float">
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>电商营销反作弊</h3>
-                    <p>获取注册用户的手机号风险，避免作弊用户刷取营销补贴</p>
-                </div>
-            </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>虚假恶意注册</h3>
-                    <p>获取注册用户的手机号风险等级，提前避免黑产发生</p>
-                </div>
-            </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>渠道激活反作弊</h3>
-                    <p>获取渠道注册用户的手机号风险等级，来判断渠道激活用户的有效性，避免渠道佣金损失</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-case">
-    <ul class="case-list">
-        <li class="case-item active">
-            <div class="container">
-                <div class="case-icon"></div>
-                <h2>某P2P金融网站</h2>
-                <p>基于手机号风险识别，过滤高达32%的作弊用户，防止巨额营销费用损失</p>
-            </div>
-        </li>
-        <li class="case-item">
-            <div class="container">
-                <div class="case-icon"></div>
-                <h2>某促销电商网站</h2>
-                <p>通过手机号风险识别，能够甄别44%虚假作弊下单用户，对其订单进行取消，挽回补贴损失</p>
-            </div>
-        </li>
-        <li class="case-item">
-            <div class="container">
-                <div class="case-icon"></div>
-                <h2>某知名视频网站</h2>
-                <p>上线营销活动，但是事后发现作弊情况，之后使用手机号风险等级，识别并挽回了14%的作弊号码及营销费用损失</p>
-            </div>
-        </li>
-    </ul>
-    <ul class="case-indicator">
-        <li class="active"><a>某P2P金融网站</a></li>
-        <li><a>某促销电商网站</a></li>
-        <li><a>某知名视频网站</a></li>
-    </ul>
-</section>
-<section class="tech-section get-started">
-    <div class="container">
-        <h2>快速提交您的需求</h2>
-        <p>您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</p>
-        <div class="consult">
-            <a role="button" class="btn-primary large">商务合作</a>
-        </div>
-    </div>
-</section>
+    //ai.bdstatic.com/dist/../../view/dialog.html
 </div>
 <aside class="aside-action">
     <ul>
@@ -372,31 +227,11 @@
             <nav class="quick-path">
                 <h3>控制台入口</h3>
                 <ul>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
-                           target="_blank">百度语音</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index"
-                           target="_blank">文字识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index"
-                           target="_blank">人脸识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index"
-                           target="_blank">自然语言处理</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
-                           target="_blank">黄反识别</a>
-                    </li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
                 </ul>
             </nav>
             <nav class="resource">
@@ -452,8 +287,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490250326/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490250326/js/solution/dialog.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/solution/dialog.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');

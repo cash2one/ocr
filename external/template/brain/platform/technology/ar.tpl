@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/technology/ar.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/technology/ar.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490250326/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1489655127/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -172,10 +172,7 @@
                         <li><a href="/support/video">教学视频</a></li>
                         <li><a href="/support/faq">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
-                        <li>
-                            <a href="http://developer.baidu.com/forum#ai"
-                               target="_blank">技术论坛</a>
-                        </li>
+                        <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
                     </ul>
                 </li>
@@ -184,38 +181,20 @@
         <div class="login">
             <ul>
                 {%if $userInfo eq Null%}
-                <li>
-                    <a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com"
-                       target="_blank">登录</a>
-                </li>
-                <li>
-                    <a class="btn-primary free-demo ai-redirect"
-                       role="button"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
-                </li>
+                <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 {%if $userInfo.internalLink !== Null%}
-                <li>
-                    <a class="btn-other internal-link"
-                       target="_blank"
-                       role="button"
-                       href="{%$userInfo.internalLink%}">内部版本 </a>
-                </li>
+                <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
                 {%/if%}
                 <li>
-                    <a class="console ai-redirect"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
+                    <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li>
-                            <a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com"
-                               target="_blank">退出</a>
-                        </li>
+                        <li><a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -224,170 +203,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-    <section class="tech-section tech-banner">
-    <div class="container">
-        <h1>AR增强现实</h1>
-        <p>增强现实(Augmented Reality，简称AR)技术，包含了多媒体、三维建模、<br>
-            实时视频显示及控制、多传感器融合、实时跟踪及注册、场景融合等新技<br>
-            术与新手段，从而提供了一般情况下不同于人类可感知的信息。</p>
-        <div class="consult">
-            {%if $src eq Null%}
-            <a role="button" class="btn-primary media">商务合作</a>
-            {%/if%}
-            {%if $src !== Null%}
-            <a role="button" class="btn-primary media" href="mailto:ai@baidu.com">商务合作</a>
-            {%/if%}
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-intro">
-    <div class="container">
-        <h2>技术介绍</h2>
-        <div class="intro-item">
-            <div class="intro-icon"></div>
-            <h3>触发机制</h3>
-            <p>业界领先的识图技术，支持2D图像AR、3D物体AR、手部AR、脸部AR、LBS-AR等丰富触发机制</p>
-        </div>
-        <div class="intro-item">
-            <div class="intro-icon"></div>
-            <h3>三维感知</h3>
-            <p>实现2D/3D物体跟踪, SLAM/VO，大规模三维重建等。10毫秒级跟踪速度，抗遮挡、快速重定位、抗运动模糊</p>
-        </div>
-        <div class="intro-item">
-            <div class="intro-icon"></div>
-            <h3>渲染引擎</h3>
-            <p>自主研发的跨平台渲染引擎，引擎算法侧重于虚拟物体和现实环境的融合</p>
-        </div>
-        <div class="intro-item">
-            <div class="intro-icon"></div>
-            <h3>人机交互</h3>
-            <p>核心技术有语音识别和手势识别与交互跟踪，其中语音识别可以达到很高的准确率</p>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-scene">
-    <div class="container">
-        <h2>AR+应用场景</h2>
-        <div class="scene-list clear-float">
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>营销</h3>
-                    <p>AR新广告形式，借助百度强大的渠道资源，使营销不再是难事</p>
-                </div>
-            </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>娱乐</h3>
-                    <p>基于人脸识别等技术制作的趣味小应用，满足更多商家与用户的娱乐需求</p>
-                </div>
-            </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>游戏</h3>
-                    <p>基于AR虚拟现实技术开发制作的大型游戏，可满足玩家更强的互动性和游戏真实性体验</p>
-                </div>
-            </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>LBS生活服务</h3>
-                    <p>结合百度AR与百度LBS技术实现的，满足用户更快捷、更方便的找到生活服务类的需求</p>
-                </div>
-            </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>教育</h3>
-                    <p>结合AR增强现实技术，使原本枯燥的文字、语音或视频灵动起来，寓教于乐，让学习变得更加轻松有趣</p>
-                </div>
-            </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>更多场景探索</h3>
-                    <p>更多业务场景，期待您的加入……</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-product">
-    <div class="container">
-        <h2>产品与服务</h2>
-        <div class="clear-float">
-            <div class="flow-chart">
-                <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ar/process-flow.png">
-            </div>
-            <div class="product-desc-list">
-                <div class="product-desc">
-                    <h3>百度AR业务流程</h3>
-                    <p>百度AR平台提供高效灵活的一站式的AR行业解决方案，贯穿各行业AR的内容创作、内容管理全流程服务</p>
-                </div>
-                <div class="product-desc">
-                    <h3>AR体验指南</h3>
-                    <p>带『M』标识的图片均可以触发百度AR神奇效果</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-case">
-    <ul class="case-list">
-        <li class="case-item active">
-            <div class="container">
-                <h2>品牌营销</h2>
-                <p>在品牌营销场景，百度AR已联手日化行业、汽车行业、旅游行业、食品饮料行业等<br>
-                    在品牌推广中，融入更多的科技元素，打造品牌营销新体验。</p>
-            </div>
-        </li>
-        <li class="case-item">
-            <div class="container">
-                <h2>互动游戏</h2>
-                <p>最适合AR技术的互动游戏场景，针对品牌需求进行游戏定制，打造新的互动体验。<br>
-                    让品牌主收获更多品牌关注与好感度。</p>
-            </div>
-        </li>
-        <li class="case-item">
-            <div class="container">
-                <h2>更多场景应用</h2>
-                <p>百度AR正在探索教育、娱乐、LBS生活服务等更多业务场景<br>
-                    针对行业进行定制，让用户体验到最新的技术，敬请期待！</p>
-            </div>
-        </li>
-    </ul>
-    <ul class="case-indicator">
-        <li class="active"><a>品牌营销</a></li>
-        <li><a>互动游戏</a></li>
-        <li><a>更多场景应用</a></li>
-    </ul>
-</section>
-{%if $src eq Null%}
-<section class="tech-section get-started">
-    <div class="container">
-        <h2>快速提交您的需求</h2>
-        <p>欢迎大体量用户app运营者、优秀的媒体渠道、硬件厂商、以及各行业优秀的技术合作伙伴与我们联系<br>
-            一起携手探索更多AR带给我们的便捷可能性！</p>
-        <div class="consult">
-            <a role="button" class="btn-primary large">商务合作</a>
-        </div>
-    </div>
-</section>
-{%/if%}
-{%if $src !== Null%}
-<section class="tech-section get-started">
-    <div class="container">
-        <h2>快速提交您的需求</h2>
-        <p>欢迎大体量用户app运营者、优秀的媒体渠道、硬件厂商、以及各行业优秀的技术合作伙伴与我们联系<br>
-            一起携手探索更多AR带给我们的便捷可能性！</p>
-        <div class="consult">
-            <a role="button" class="btn-primary large" href="mailto:ai@baidu.com">商务合作</a>
-        </div>
-    </div>
-</section>
-{%/if%}
+    //ai.bdstatic.com/dist/../../view/ar.html
 </div>
 <aside class="aside-action">
     <ul>
@@ -411,31 +227,11 @@
             <nav class="quick-path">
                 <h3>控制台入口</h3>
                 <ul>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
-                           target="_blank">百度语音</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index"
-                           target="_blank">文字识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index"
-                           target="_blank">人脸识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index"
-                           target="_blank">自然语言处理</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
-                           target="_blank">黄反识别</a>
-                    </li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
                 </ul>
             </nav>
             <nav class="resource">
@@ -491,8 +287,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490250326/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490250326/js/technology/ar.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/technology/ar.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');

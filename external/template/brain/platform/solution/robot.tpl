@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/solution/robot.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/solution/robot.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490250326/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1489655127/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -172,10 +172,7 @@
                         <li><a href="/support/video">教学视频</a></li>
                         <li><a href="/support/faq">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
-                        <li>
-                            <a href="http://developer.baidu.com/forum#ai"
-                               target="_blank">技术论坛</a>
-                        </li>
+                        <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
                     </ul>
                 </li>
@@ -184,38 +181,20 @@
         <div class="login">
             <ul>
                 {%if $userInfo eq Null%}
-                <li>
-                    <a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com"
-                       target="_blank">登录</a>
-                </li>
-                <li>
-                    <a class="btn-primary free-demo ai-redirect"
-                       role="button"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
-                </li>
+                <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 {%if $userInfo.internalLink !== Null%}
-                <li>
-                    <a class="btn-other internal-link"
-                       target="_blank"
-                       role="button"
-                       href="{%$userInfo.internalLink%}">内部版本 </a>
-                </li>
+                <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
                 {%/if%}
                 <li>
-                    <a class="console ai-redirect"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
+                    <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li>
-                            <a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com"
-                               target="_blank">退出</a>
-                        </li>
+                        <li><a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -224,102 +203,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-    <section class="tech-section tech-banner">
-    <div class="container">
-        <h1>机器人解决方案</h1>
-        <p>为您提供完整的语音交互，精确理解用户意图并进行智能对话<br>基于场景化训练学习，打造更聪明的服务机器人</p>
-        <div class="consult">
-            <a role="button" class="btn-primary media">商务合作</a>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-intro solution clear-float">
-    <div class="container">
-        <h2>功能介绍</h2>
-        <p>服务型机器人提供语音交互及智能会话方案，支持多领域的语义解析及问答对话<br>
-            满足家庭陪护、医疗、教育、政务机关、酒店、餐饮、旅游景区等行业场景需求</p>
-        <div class="solution-container">
-            <div class="solution-case shadow">
-                <div class="solution-icon">
-                    <img src="//ai.bdstatic.com/dist/1490250326/ai_images/solution/robot/solution-case-1.jpg">
-                </div>
-                <div class="solution-desc">
-                    <h3>家庭场景方案</h3>
-                    <p>轻松搭建家庭陪护机器人产品，语音闲聊、个性对话、还可扩展对接更多第三方内容及服务。家里的新成员，孩子和老人的好伙伴。</p>
-                </div>
-            </div>
-            <div class="solution-case shadow">
-                <div class="solution-icon">
-                    <img src="//ai.bdstatic.com/dist/1490250326/ai_images/solution/robot/solution-case-2.jpg">
-                </div>
-                <div class="solution-desc">
-                    <h3>商用场景方案</h3>
-                    <p>通过对业务知识、客服话术的自动学习，建立场景化的语义理解能力及知识库，以语音及图像的形式轻松高效服务顾客。</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="tech-section tech-feature">
-    <div class="container">
-        <h2>技术特色</h2>
-        <div class="feature-list clear-float">
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>流畅的语音会话交互</h3>
-                    <p>识别精度高，合成效果流畅自然，支持自定义唤醒词，多音色情感合成</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>先进的语义分析引擎</h3>
-                    <p>支持多个垂直领域意图分析，可自由扩展私有指令集和问答对</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>灵活可定制的知识库</h3>
-                    <p>支持自有内容服务对接，可以基于行业知识，搭建自有知识库及知识图谱</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section>
-<section class="tech-section tech-scene">
-    <div class="container">
-        <h2>应用场景</h2>
-        <div class="scene-list clear-float">
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>家庭服务机器人</h3>
-                    <p>和孩子、老人轻松对话，实现寓教于乐及情感陪护，可对接多种生活信息查询及知识查询，成为实用生活助手</p>
-                </div>
-            </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>商用机器人</h3>
-                    <p>通过行业领域知识的学习训练，形成行业服务能力，可用于迎宾互动、导购指引、问询回复、快捷查询、投诉受理等</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="tech-section get-started">
-    <div class="container">
-        <h2>快速提交您的需求</h2>
-        <p>您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</p>
-        <div class="consult">
-            <a role="button" class="btn-primary large">商务合作</a>
-        </div>
-    </div>
-</section>
+    //ai.bdstatic.com/dist/../../view/robot.html
 </div>
 <aside class="aside-action">
     <ul>
@@ -343,31 +227,11 @@
             <nav class="quick-path">
                 <h3>控制台入口</h3>
                 <ul>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
-                           target="_blank">百度语音</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index"
-                           target="_blank">文字识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index"
-                           target="_blank">人脸识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index"
-                           target="_blank">自然语言处理</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
-                           target="_blank">黄反识别</a>
-                    </li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
                 </ul>
             </nav>
             <nav class="resource">
@@ -423,8 +287,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490250326/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490250326/js/solution/robot.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/solution/robot.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');

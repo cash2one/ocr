@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/technology/ocr-bankcard.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/technology/ocr-bankcard.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490250326/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1489655127/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -172,10 +172,7 @@
                         <li><a href="/support/video">教学视频</a></li>
                         <li><a href="/support/faq">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
-                        <li>
-                            <a href="http://developer.baidu.com/forum#ai"
-                               target="_blank">技术论坛</a>
-                        </li>
+                        <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
                     </ul>
                 </li>
@@ -184,38 +181,20 @@
         <div class="login">
             <ul>
                 {%if $userInfo eq Null%}
-                <li>
-                    <a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com"
-                       target="_blank">登录</a>
-                </li>
-                <li>
-                    <a class="btn-primary free-demo ai-redirect"
-                       role="button"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
-                </li>
+                <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 {%if $userInfo.internalLink !== Null%}
-                <li>
-                    <a class="btn-other internal-link"
-                       target="_blank"
-                       role="button"
-                       href="{%$userInfo.internalLink%}">内部版本 </a>
-                </li>
+                <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
                 {%/if%}
                 <li>
-                    <a class="console ai-redirect"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
+                    <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li>
-                            <a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com"
-                               target="_blank">退出</a>
-                        </li>
+                        <li><a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -224,210 +203,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-    <section class="tech-section tech-banner">
-    <div class="container">
-        <h1>银行卡识别</h1>
-        <p>基于业界领先的深度学习技术<br>为用户提供银行卡卡号识别服务</p>
-        <div>
-            <a role="button"
-               target="_blank"
-               class="btn-primary media ai-redirect"
-               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">立即使用</a>
-            <a role="button"
-               class="btn-other media"
-               href="
-               {%if $src eq Null%}
-               /docs#OCR
-               {%else%}
-               https://cloud.baidu.com/doc/OCR/index.html
-               {%/if%}">
-                技术文档
-            </a>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-intro">
-    <div class="container">
-        <h2>功能介绍</h2>
-        <p>支持主流银行卡卡号识别，识别率高达98%以上，
-            并支持根据卡号返回发卡行和卡片性质</p>
-        <div class="tech-intro-detail">
-            <div class="original-card"></div>
-            <div class="arrow"></div>
-            <div class="scan-result"></div>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-demo">
-    <div class="container">
-        <h2>功能演示</h2>
-        <div class="demo-container clear-float">
-            <div class="data-view" data-label="原始图片" id="demo-origin"></div>
-            <div class="data-view" data-label="识别结果" id="demo-result">
-                <div class="result-background">
-                    <span class="bank-card-num"></span>
-                    <span class="issuing-bank" id="issuing-bank"></span>
-                    <span class="card-type" id="card-type"></span>
-                </div>
-            </div>
-            <div class="data-view">
-                <div class="demo-data">
-                    <label for="demo-photo-url" style="display:none"></label>
-                    <input type="text" id="demo-photo-url" placeholder="请输入网络图片URL">
-                    <button type="button" class="btn-primary" id="scan-photo">检测</button>
-                    <span>或</span>
-                    <label id="demo-photo-upload"><input type="file" >本地上传</label>
-                </div>
-                <p class="demo-desc">提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片，图片大小不超过2M，长边不超过2048像素。为保证正常识别效果，请保持银行卡正面向上，并为图片主体部分。</p>
-                <ul class="demo-card-list clear-float">
-                    <li>
-                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-bankcard/demo-card-1.png">
-                    </li>
-                    <li>
-                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-bankcard/demo-card-2.png">
-                    </li>
-                    <li>
-                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-bankcard/demo-card-3.png">
-                    </li>
-                    <li>
-                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-bankcard/demo-card-4.png">
-                    </li>
-                    <li>
-                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-bankcard/demo-card-5.png">
-                    </li>
-                    <li>
-                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-bankcard/demo-card-6.png">
-                    </li>
-                </ul>
-            </div>
-            <div class="data-view" data-label="RESPONSE JSON" id="demo-json">
-                <p></p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="tech-section tech-feature">
-    <div class="container">
-        <h2>技术特色</h2>
-        <div class="feature-list clear-float">
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>准确性高</h3>
-                    <p>国内首个公有云OCR产品，基于百度深度学习研究院（IDL）强大的深度学习算法和中文检测识别技术，银行卡识别率98%以上</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>成熟稳定</h3>
-                    <p>经过百度钱包等重量级产品实践检验，产品成熟稳定。支持实时文字识别能力、弹性灵活的高并发承载及99.95%的可用性保证</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>简单易用</h3>
-                    <p>提供符合RESTful规范的API访问接口，兼容性强，使用方便</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section>
-<section class="tech-section tech-scene">
-    <div class="container">
-        <h2>应用场景</h2>
-        <div class="scene-list clear-float">
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>金融场景</h3>
-                    <p>提供银行卡扫描识别的功能，减少用户的输入，提高用户的体验</p>
-                </div>
-            </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>电子商务场景</h3>
-                    <p>提供银行卡扫描识别的功能，减少用户的输入，提高用户的体验</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-case">
-    <ul class="case-list">
-        <li class="case-item active">
-            <div class="container">
-                <div class="case-icon"></div>
-                <h2>百度钱包</h2>
-                <p>百度钱包是中国领先的在线支付应用和服务平台<br>
-                    调用百度银行卡OCR接口进行用户身份证识别，识别速度快，准确率高<br>
-                    减少了用户的输入操作，有效的提高了用户的体验</p>
-            </div>
-        </li>
-        <li class="case-item">
-            <div class="container">
-                <div class="case-icon"></div>
-                <h2>手机百度</h2>
-                <p>手机百度是百度推出的一款方便手机用户随时随地使用百度搜索服务的应用<br>
-                    调用百度银行卡OCR接口进行用户银行卡的识别与绑定，减少了用户操作，提高了用户体验</p>
-            </div>
-        </li>
-        <li class="case-item">
-            <div class="container">
-                <div class="case-icon"></div>
-                <h2>百度糯米</h2>
-                <p>百度糯米是百度出品的一款移动团购软件，集合了一系列本地生活服务<br>
-                    调用百度银行卡OCR接口进行用户、商户的银行卡的识别绑定，减少了用户操作，提高了用户体验</p>
-            </div>
-        </li>
-    </ul>
-    <ul class="case-indicator">
-        <li class="active"><a>百度钱包</a></li>
-        <li><a>手机百度</a></li>
-        <li><a>百度糯米</a></li>
-    </ul>
-</section>
-{%if $userInfo eq Null%}
-<section class="tech-section get-started">
-    <div class="container">
-        <h2>立即获取免费API Key</h2>
-        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
-        <div>
-            <a role="button"
-               target="_blank"
-               class="btn-primary large ai-redirect"
-               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
-        </div>
-    </div>
-</section>
-{%/if%}
-{%if $src eq Null%}
-<section class="tech-section tech-guide">
-    <div class="container">
-        <h2>使用指南</h2>
-        <div class="guide-link clear-float">
-            <h3>开发指南</h3>
-            <ul>
-                <li><a href="/docs#OCR">技术文档 ></a></li>
-                <li><a href="/sdk">SDK下载 ></a></li>
-            </ul>
-        </div>
-        <div class="question-link clear-float">
-            <h3>常见问题</h3>
-            <ul>
-                <li><a href="/docs#OCR-FAQ_Q1">图片格式和分辨率有限制么？</a></li>
-                <li><a href="/docs#OCR-FAQ_Q2">图片大小有限制么？</a></li>
-                <li><a href="/docs#OCR-FAQ_Q7">怎么提高识别的准确率和识别速度？</a></li>
-            </ul>
-        </div>
-    </div>
-</section>
-{%/if%}
-
+    //ai.bdstatic.com/dist/../../view/ocr-bankcard.html
 </div>
 <aside class="aside-action">
     <ul>
@@ -451,31 +227,11 @@
             <nav class="quick-path">
                 <h3>控制台入口</h3>
                 <ul>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
-                           target="_blank">百度语音</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index"
-                           target="_blank">文字识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index"
-                           target="_blank">人脸识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index"
-                           target="_blank">自然语言处理</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
-                           target="_blank">黄反识别</a>
-                    </li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
                 </ul>
             </nav>
             <nav class="resource">
@@ -531,8 +287,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490250326/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490250326/js/technology/ocr-bankcard.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/technology/ocr-bankcard.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');

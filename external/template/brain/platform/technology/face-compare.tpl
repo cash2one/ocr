@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/technology/face-compare.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/technology/face-compare.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490250326/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1489655127/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -172,10 +172,7 @@
                         <li><a href="/support/video">教学视频</a></li>
                         <li><a href="/support/faq">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
-                        <li>
-                            <a href="http://developer.baidu.com/forum#ai"
-                               target="_blank">技术论坛</a>
-                        </li>
+                        <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
                     </ul>
                 </li>
@@ -184,38 +181,20 @@
         <div class="login">
             <ul>
                 {%if $userInfo eq Null%}
-                <li>
-                    <a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com"
-                       target="_blank">登录</a>
-                </li>
-                <li>
-                    <a class="btn-primary free-demo ai-redirect"
-                       role="button"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
-                </li>
+                <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 {%if $userInfo.internalLink !== Null%}
-                <li>
-                    <a class="btn-other internal-link"
-                       target="_blank"
-                       role="button"
-                       href="{%$userInfo.internalLink%}">内部版本 </a>
-                </li>
+                <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
                 {%/if%}
                 <li>
-                    <a class="console ai-redirect"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
+                    <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li>
-                            <a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com"
-                               target="_blank">退出</a>
-                        </li>
+                        <li><a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -224,153 +203,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-    <section class="tech-section tech-banner">
-    <div class="container">
-        <h1>人脸对比</h1>
-        <p>根据两张人脸的特征给出相似度评分<br>为您提供高精度的1:1人脸比对服务</p>
-        <div>
-            <a role="button"
-               target="_blank"
-               class="btn-primary media ai-redirect"
-               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">立即使用</a>
-            <a role="button"
-               class="btn-other media"
-               href="
-               {%if $src eq Null%}
-               /docs#FACE
-               {%else%}
-               https://cloud.baidu.com/doc/FACE/index.html
-               {%/if%}">
-                技术文档
-            </a>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-intro">
-    <div class="container">
-        <h2>功能介绍</h2>
-        <p>通过提取人脸的特征，计算两张人脸的相似度，从而判断是否同一个人，并给出相似度评分<br>已知用户ID的情况下帮助确认是否为用户本人的检测，即1：1身份验证</p>
-        <div class="tech-intro-detail">
-            <div class="compare-group">
-                <div class="scan-line left"></div>
-                <div class="scan-line right"></div>
-                <div class="scan-result good"></div>
-            </div>
-            <div class="compare-group">
-                <div class="scan-line left"></div>
-                <div class="scan-line right"></div>
-                <div class="scan-result bad"></div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-feature">
-    <div class="container">
-        <h2>技术特色</h2>
-        <div class="feature-list clear-float">
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>稳定可靠</h3>
-                    <p>依托百度深度学习实验室的技术实力，提供稳定、精确的大流量服务</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>识别精度高</h3>
-                    <p>人脸识别技术国际领先，识别准确率超过百分之九十九</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>活体检测技术</h3>
-                    <p>可抵御照片、视频等各类攻击，精确区分活体，安全可靠</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-scene">
-    <div class="container">
-        <h2>应用场景</h2>
-        <div class="scene-list clear-float">
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>金融在线身份认证</h3>
-                    <p>为解决金融等高风险行业复杂的身份验证流程，通过自拍照和身份证照之间的人脸识别确认用户身份是否本人</p>
-                </div>
-            </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>酒店登入验证</h3>
-                    <p>入住酒店时，判断入住者是否为身份证持有人</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-case">
-    <ul class="case-list">
-        <li class="case-item active">
-            <div class="container">
-                <div class="case-icon"></div>
-                <h2>泰康人寿</h2>
-                <p>用于微信投保的回执和回访环节，通过人脸验证来在线校验客户身份</p>
-            </div>
-        </li>
-        <li class="case-item">
-            <div class="container">
-                <div class="case-icon"></div>
-                <h2>百度钱包</h2>
-                <p>百度金融实名认证，通过人脸识别校验用户身份证件真实性</p>
-            </div>
-        </li>
-    </ul>
-    <ul class="case-indicator">
-        <li class="active"><a>泰康人寿</a></li>
-        <li><a>百度钱包</a></li>
-    </ul>
-</section>
-{%if $userInfo eq Null%}
-<section class="tech-section get-started">
-    <div class="container">
-        <h2>立即获取免费API Key</h2>
-        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
-        <div>
-            <a role="button"
-               target="_blank"
-               class="btn-primary large ai-redirect"
-               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
-        </div>
-    </div>
-</section>
-{%/if%}
-{%if $src eq Null%}
-<section class="tech-section tech-guide">
-    <div class="container">
-        <h2>使用指南</h2>
-        <div class="guide-link clear-float">
-            <h3>开发指南</h3>
-            <ul>
-                <li><a href="/docs#FACE">技术文档 ></a></li>
-                <li><a href="/sdk">SDK下载 ></a></li>
-            </ul>
-        </div>
-        <div class="question-link clear-float">
-            <h3>常见问题</h3>
-            <ul>
-                <li><a href="/docs#FACE-FAQ_Q1">识别的图片支持怎样输入?</a></li>
-                <li><a href="/docs#FACE-FAQ_Q2">什么是base64编码，如何提供？</a></li>
-            </ul>
-        </div>
-    </div>
-</section>
-{%/if%}
-
+    //ai.bdstatic.com/dist/../../view/face-compare.html
 </div>
 <aside class="aside-action">
     <ul>
@@ -394,31 +227,11 @@
             <nav class="quick-path">
                 <h3>控制台入口</h3>
                 <ul>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
-                           target="_blank">百度语音</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index"
-                           target="_blank">文字识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index"
-                           target="_blank">人脸识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index"
-                           target="_blank">自然语言处理</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
-                           target="_blank">黄反识别</a>
-                    </li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
                 </ul>
             </nav>
             <nav class="resource">
@@ -474,8 +287,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490250326/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490250326/js/technology/face-compare.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/technology/face-compare.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');

@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/solution/faceprint.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/solution/faceprint.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490250326/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1489655127/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -172,10 +172,7 @@
                         <li><a href="/support/video">教学视频</a></li>
                         <li><a href="/support/faq">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
-                        <li>
-                            <a href="http://developer.baidu.com/forum#ai"
-                               target="_blank">技术论坛</a>
-                        </li>
+                        <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
                     </ul>
                 </li>
@@ -184,38 +181,20 @@
         <div class="login">
             <ul>
                 {%if $userInfo eq Null%}
-                <li>
-                    <a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com"
-                       target="_blank">登录</a>
-                </li>
-                <li>
-                    <a class="btn-primary free-demo ai-redirect"
-                       role="button"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
-                </li>
+                <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 {%if $userInfo.internalLink !== Null%}
-                <li>
-                    <a class="btn-other internal-link"
-                       target="_blank"
-                       role="button"
-                       href="{%$userInfo.internalLink%}">内部版本 </a>
-                </li>
+                <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
                 {%/if%}
                 <li>
-                    <a class="console ai-redirect"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
+                    <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li>
-                            <a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com"
-                               target="_blank">退出</a>
-                        </li>
+                        <li><a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -224,103 +203,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-    <section class="tech-section tech-banner">
-    <div class="container">
-        <h1>人脸核身解决方案</h1>
-        <p>提供完整的人脸身份核查解决方案，实现活体检测、拍照人脸识别、身份证人脸比对验证等多个业务环节，帮您规避业务风险，提升产品智能体验。</p>
-        <div class="consult">
-            <a role="button" class="btn-primary media">商务合作</a>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-intro solution clear-float">
-    <div class="container">
-        <h2>功能介绍</h2>
-        <p>解决金融等高风险行业线下复杂的身份验证流程<br>
-            通过用户自拍照、身份证照等，在线人脸识别以确认用户身份<br>
-            从而极大缩短业务办理时间，提升业务的便捷性和安全性</p>
-        <div class="solution-container">
-            <div class="solution-case shadow">
-                <div class="solution-icon">
-                    <img src="//ai.bdstatic.com/dist/1490250326/ai_images/solution/faceprint/solution-case-1.png">
-                </div>
-                <div class="solution-desc">
-                    <h3>远程自助</h3>
-                    <p>远程在线人脸验证服务，增强验证效率及安全性</p>
-                </div>
-            </div>
-            <div class="solution-case shadow">
-                <div class="solution-icon">
-                    <img src="//ai.bdstatic.com/dist/1490250326/ai_images/solution/faceprint/solution-case-2.png">
-                </div>
-                <div class="solution-desc">
-                    <h3>交互流畅</h3>
-                    <p>流畅的前端交互体验，显著提升用户使用满意度</p>
-                </div>
-            </div>
-            <div class="solution-case shadow">
-                <div class="solution-icon">
-                    <img src="//ai.bdstatic.com/dist/1490250326/ai_images/solution/faceprint/solution-case-3.png">
-                </div>
-                <div class="solution-desc">
-                    <h3>行业定制</h3>
-                    <p>拥有行业深度合作经验，为企业量身定制解决方案</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-feature">
-    <div class="container">
-        <h2>技术特色</h2>
-        <div class="feature-list clear-float">
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>真实安全</h3>
-                    <p style="text-align: center;">提供真实可靠的身份数据信息，增强验证效率和体验的同时，保障验证信息安全准确</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>活体检测</h3>
-                    <p style="text-align: center;">提供领先的活体检测技术，有效分辨高清图片、三维模型、视频等仿冒欺诈手段</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-scene">
-    <div class="container">
-        <h2>应用场景</h2>
-        <div class="scene-list clear-float">
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>金融场景</h3>
-                    <p>解决线下复杂的身份验证流程，缩短业务办理时间，提升业务的便捷性和安全性，降低风险</p>
-                </div>
-            </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>直播平台</h3>
-                    <p>使用人脸核身技术，为直播平台主播和观众提供在线真人身份验证，为后续对用户进行智能化管理提供基础</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="tech-section get-started">
-    <div class="container">
-        <h2>快速提交您的需求</h2>
-        <p>您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</p>
-        <div class="consult">
-            <a role="button" class="btn-primary large">商务合作</a>
-        </div>
-    </div>
-</section>
+    //ai.bdstatic.com/dist/../../view/faceprint.html
 </div>
 <aside class="aside-action">
     <ul>
@@ -344,31 +227,11 @@
             <nav class="quick-path">
                 <h3>控制台入口</h3>
                 <ul>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
-                           target="_blank">百度语音</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index"
-                           target="_blank">文字识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index"
-                           target="_blank">人脸识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index"
-                           target="_blank">自然语言处理</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
-                           target="_blank">黄反识别</a>
-                    </li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
                 </ul>
             </nav>
             <nav class="resource">
@@ -424,8 +287,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490250326/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490250326/js/solution/faceprint.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/solution/faceprint.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');

@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/technology/speech-tts.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/technology/speech-tts.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490250326/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1489655127/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -172,10 +172,7 @@
                         <li><a href="/support/video">教学视频</a></li>
                         <li><a href="/support/faq">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
-                        <li>
-                            <a href="http://developer.baidu.com/forum#ai"
-                               target="_blank">技术论坛</a>
-                        </li>
+                        <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
                     </ul>
                 </li>
@@ -184,38 +181,20 @@
         <div class="login">
             <ul>
                 {%if $userInfo eq Null%}
-                <li>
-                    <a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com"
-                       target="_blank">登录</a>
-                </li>
-                <li>
-                    <a class="btn-primary free-demo ai-redirect"
-                       role="button"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
-                </li>
+                <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 {%if $userInfo.internalLink !== Null%}
-                <li>
-                    <a class="btn-other internal-link"
-                       target="_blank"
-                       role="button"
-                       href="{%$userInfo.internalLink%}">内部版本 </a>
-                </li>
+                <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
                 {%/if%}
                 <li>
-                    <a class="console ai-redirect"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
+                    <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li>
-                            <a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com"
-                               target="_blank">退出</a>
-                        </li>
+                        <li><a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -224,193 +203,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-    <section class="tech-section tech-banner">
-    <div class="container">
-        <h1>语音合成</h1>
-        <p>基于业界领先的深度神经网络技术<br>提供流畅自然的语音合成服务，让您的应用开口说话</p>
-        <div>
-            <a role="button"
-               class="btn-primary media ai-redirect"
-               target="_blank"
-               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">立即使用</a>
-            <a role="button"
-               class="btn-other media"
-               href="
-               {%if $src eq Null%}
-               /docs#Speech-Tts-O2OAndroidSDK
-               {%else%}
-               https://cloud.baidu.com/doc/SPEECH/index.html
-               {%/if%}">
-                技术文档
-            </a>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-intro">
-    <div class="container">
-        <h2>功能介绍</h2>
-        <p>百度语音合成技术能将用户制定的文字，输出成流畅自然的语音，甚至支持在合成的语音中加入语音和语调<br>
-            打破传统文字式人机交互的方式，让人机沟通更自然，方便</p>
-        <div class="tech-intro-detail"></div>
-    </div>
-</section>
-<section class="tech-section tech-demo" id="tts-demo">
-    <div class="container">
-        <h2>功能演示</h2>
-        <div class="demo-container">
-            <div class="demo-input">
-                <div>
-                    <div class="demo-text" data-counter="200" >
-                        <textarea id="demo-text-content" maxlength="200" placeholder="百度语音，面向广大开发者永久免费开放语音合成技术。所采用的离在线融合技术，根据当前网络状况，自动判断使用本地引擎或者云端引擎，进行语音合成，再也不用担心流量消耗了！"></textarea>
-                    </div>
-                    <div class="demo-settings">
-                        <div class="demo-settings-standard">
-                            <div class="demo-setting-title">标准合成</div>
-                            <div>
-                                <a role="button" data-per="2" class="btn-normal small selected" data>男声</a>
-                                <a role="button" data-per="0" class="btn-normal small">女声</a>
-                            </div>
-                        </div>
-                        <div class="demo-settings-emotion">
-                            <div class="demo-setting-title">情感合成</div>
-                            <div>
-                                <a role="button" data-per="3" class="btn-normal small">度逍遥</a>
-                                <a role="button" data-per="4" class="btn-normal small">度丫丫</a>
-                            </div>
-                        </div>
-                        <div class="demo-control">
-                            <a class="player play"></a>
-                            <span class="demo-speed">
-                                <a class="decrease"><</a>
-                                <span data-speed="5" class="demo-current-speed"></span>
-                                <a class="increase">></a>
-                            </span>
-                            <span class="demo-volume">
-                                <span class="icon"></span>
-                                <span class="volume-slider"></span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="demo-icon">
-                <span>语音识别</span>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-feature">
-    <div class="container">
-        <h2>技术特色</h2>
-        <div class="feature-list clear-float">
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>多语言多音色可选</h3>
-                    <p>中文普通话、中英文混读、男声、女声任你选，更支持语速、音调、音量、音频码率设置，让你的应用拥有最甜美和最磁性的声音</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>离线在线融合模式</h3>
-                    <p>SDK可以根据当前网络状况，自动判断使用本地引擎还是云端引擎进行语音合成，再也不用担心流量消耗</p>
-                </div>
-            </div>
-            <div class="feature-item shadow">
-                <div class="feature-icon"></div>
-                <div class="feature-desc">
-                    <h3>流畅自然的合成效果</h3>
-                    <p>语音合成技术业界领先，合成效果接近真人发声，流畅自然，且极具表现力，给你最舒适的听觉体验</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="tech-section tech-scene">
-    <div class="container">
-        <h2>应用场景</h2>
-        <div class="scene-list clear-float">
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>文学阅读</h3>
-                    <p>文学小说类软件，可以利用百度语音合成技术将文学小说作品进行高质量的朗读，流畅清晰，解放双眼，畅听世界</p>
-                </div>
-            </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>应用助手</h3>
-                    <p>通过语音与应用交互，来搜索内容，播放歌曲</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="tech-section tech-case">
-    <ul class="case-list">
-        <li class="case-item active">
-            <div class="container">
-                <div class="case-icon"></div>
-                <h2>百度地图</h2>
-                <p>百度地图利用百度语音合成技术生成流畅自然的语音导航<br>
-                    导航时驾驶员无需时刻紧盯屏幕，解放双眼，方便安全
-                </p>
-            </div>
-        </li>
-        <li class="case-item">
-            <div class="container">
-                <div class="case-icon"></div>
-                <h2>iReader</h2>
-                <p>掌阅iReader利用百度语音合成技术将小说等文学作品以语音朗读的方式传达给用户<br>
-                    随时随地在有声世界里感受“书”适生活</p>
-            </div>
-        </li>
-    </ul>
-    <ul class="case-indicator">
-        <li class="active"><a>百度地图</a></li>
-        <li><a>iReader</a></li>
-    </ul>
-</section>
-{%if $userInfo eq Null%}
-<section class="tech-section get-started">
-    <div class="container">
-        <h2>立即获取免费API Key</h2>
-        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
-        <div>
-            <a role="button"
-               target="_blank"
-               class="btn-primary large ai-redirect"
-               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
-        </div>
-    </div>
-</section>
-{%/if%}
-{%if $src eq Null%}
-<section class="tech-section tech-guide">
-    <div class="container">
-        <h2>使用指南</h2>
-        <div class="guide-link clear-float">
-            <h3>开发指南</h3>
-            <ul>
-                <li><a href="/docs#Speech-Tts">技术文档 ></a></li>
-                <li><a href="/sdk">SDK下载 ></a></li>
-            </ul>
-        </div>
-        <div class="question-link clear-float">
-            <h3>常见问题</h3>
-            <ul>
-                <li><a href="/docs#Speech-Tts-FAQ_Q2">语音合成提供REST API吗？</a></li>
-                <li><a href="/docs#Speech-Tts-FAQ_Q3">语音合成支持那些语言和音色的播报？</a></li>
-                <li><a href="/docs#Speech-Tts-FAQ_Q4">有离线语音合成可以提供吗？</a></li>
-            </ul>
-        </div>
-    </div>
-</section>
-{%/if%}
-
+    //ai.bdstatic.com/dist/../../view/speech-tts.html
 </div>
 <aside class="aside-action">
     <ul>
@@ -434,31 +227,11 @@
             <nav class="quick-path">
                 <h3>控制台入口</h3>
                 <ul>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
-                           target="_blank">百度语音</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index"
-                           target="_blank">文字识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index"
-                           target="_blank">人脸识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index"
-                           target="_blank">自然语言处理</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
-                           target="_blank">黄反识别</a>
-                    </li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
                 </ul>
             </nav>
             <nav class="resource">
@@ -514,8 +287,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490250326/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490250326/js/technology/speech-tts.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/technology/speech-tts.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');

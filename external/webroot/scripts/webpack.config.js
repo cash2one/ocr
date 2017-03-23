@@ -251,7 +251,7 @@ module.exports = {
             filename: `${versionPath}/js/[name].js`,
             chunks: normalModules
         }),
-        // ...htmlWebpackPluginArr,
+        ...htmlWebpackPluginArr,
         // css文件单独打包
         extractLESS
     ]

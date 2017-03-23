@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/technology/ocr-general_enhanced.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/technology/ocr-general_enhanced.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490250326/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1489655127/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -172,10 +172,7 @@
                         <li><a href="/support/video">教学视频</a></li>
                         <li><a href="/support/faq">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
-                        <li>
-                            <a href="http://developer.baidu.com/forum#ai"
-                               target="_blank">技术论坛</a>
-                        </li>
+                        <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
                     </ul>
                 </li>
@@ -184,38 +181,20 @@
         <div class="login">
             <ul>
                 {%if $userInfo eq Null%}
-                <li>
-                    <a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com"
-                       target="_blank">登录</a>
-                </li>
-                <li>
-                    <a class="btn-primary free-demo ai-redirect"
-                       role="button"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
-                </li>
+                <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 {%if $userInfo.internalLink !== Null%}
-                <li>
-                    <a class="btn-other internal-link"
-                       target="_blank"
-                       role="button"
-                       href="{%$userInfo.internalLink%}">内部版本 </a>
-                </li>
+                <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
                 {%/if%}
                 <li>
-                    <a class="console ai-redirect"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
+                    <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li>
-                            <a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com"
-                               target="_blank">退出</a>
-                        </li>
+                        <li><a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -224,237 +203,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-    <div class="tech-section tech-banner">
-    <div class="ai-container">
-        <div class="tech-banner-title" id="orc-enhanced-title">
-            通用文字识别（含生僻字版）
-        </div>
-        <div class="tech-banner-info">
-            <p>依托全网海量优质数据和业界领先的深度学习技术
-                在通用OCR基础上，扩展支持2W+大字库，能识别所有常用字和大多数生僻字。</p>
-        </div>
-        <div class="tech-banner-btn-list">
-            <a role="button"
-               {%if $src eq Null%}
-               class="btn-primary media consult"
-               data-operation="cooperation"
-               {%else%}
-               class="btn-primary media"
-               href="mailto://ai@baidu.com"
-               {%/if%}>
-                商务合作
-            </a>
-        </div>
-    </div>
-</div>
-<div class="tech-section tech-function">
-    <div class="ai-container">
-        <div class="tech-function-title">
-            功能介绍
-        </div>
-        <div class="tech-function-info">
-            支持多场景下针对常用字和生僻字的识别，2W+的字库比辞海收录的单字还多，能覆盖99%的文字场景，在图片文字清晰，小幅度倾斜，无明显背光等良好条件下，识别准确率高达90%。
-        </div>
-        <div class="tech-function-detail tech-clear">
-            <div class="tech-function-original-card"></div>
-            <div class="tech-function-arrow"></div>
-            <div class="tech-function-scan-result"></div>
-        </div>
-    </div>
-</div>
-
-<div class="tech-section tech-demo">
-    <div class="ai-container">
-        <div class="tech-demo-title">
-            功能演示
-        </div>
-        <div class="tech-demo-container">
-            <div class="tech-demo-data-view tech-demo-origin" data-label="原始图片" id="demo-origin"></div>
-            <div class="tech-demo-data-view" data-label="识别结果" id="demo-result"></div>
-            <div class="tech-demo-choose">
-                <div class="tech-demo-upload tech-clear">
-                    <input type="text" class="ocr-demo-photo-url" id="demo-photo-url" placeholder="请输入网络图片URL">
-                    <button type="button" class="btn-primary" id="scan-url">检测</button>
-                    <div class="ocr-demo-huo">或</div>
-                    <label class="ocr-demo-local" id="demo-photo-upload">
-                        <input type="file" id="img-upload">本地上传
-                    </label>
-                </div>
-                <div class="tech-demo-desc">
-                    提示：可支持PNG、JPG、JPEG、BMP图片文件，不支持GIF图片，图片大小不超过2M，长边不超过2048像素。
-                    为保证正常识别效果，请保证需要识别部分为图片主体部分。
-                </div>
-                <div class="tech-demo-card-list">
-                    <div class="tech-demo-card-item tech-demo-card-active">
-                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-general_enhanced/demo-card-1.png">
-                    </div>
-                    <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-general_enhanced/demo-card-2.png">
-                    </div>
-                    <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-general_enhanced/demo-card-3.png">
-                    </div>
-                    <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-general_enhanced/demo-card-4.png">
-                    </div>
-                    <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-general_enhanced/demo-card-5.png">
-                    </div>
-                    <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-general_enhanced/demo-card-6.png">
-                    </div>
-                    <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-general_enhanced/demo-card-7.png">
-                    </div>
-                    <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-general_enhanced/demo-card-8.png">
-                    </div>
-                </div>
-            </div>
-            <div class="tech-demo-data-view tech-demo-json" id="demo-json" data-label="RESPONSE JSON">
-                <p></p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="ai-container tech-section tech-feature">
-    <div class="tech-feature-title">技术特色</div>
-    <div class="tech-feature-list tech-clear">
-        <div class="tech-feature-item tech-feature-shadow">
-            <div class="tech-feature-icon tech-feature-icon-1"></div>
-            <div class="tech-feature-desc">
-                <div class="tech-feature-desc-title">准确性高</div>
-                <div class="tech-feature-desc-info">
-                    国内首个公有云OCR产品，基于百度深度学习研究院（IDL）强大的深度学习算法和中文检测识别技术，
-                    整图中文识别准确率达85%以上，英文91%以上。
-                </div>
-            </div>
-        </div>
-        <div class="tech-feature-item tech-feature-shadow">
-            <div class="tech-feature-icon tech-feature-icon-2"></div>
-            <div class="tech-feature-desc">
-                <div class="tech-feature-desc-title">成熟稳定</div>
-            <div class="tech-feature-desc-info">
-                经过手机百度词典，手机百度等多款重量级产品实践检验，产品成熟稳定。
-                支持实时文字识别能力、弹性灵活的高并发承载及99.95%的可用性保证
-            </div>
-            </div>
-        </div>
-        <div class="tech-feature-item tech-feature-shadow">
-            <div class="tech-feature-icon tech-feature-icon-3"></div>
-            <div class="tech-feature-desc">
-                <div class="tech-feature-desc-title">简单易用</div>
-                <div class="tech-feature-desc-info">
-                    提供符合RESTful规范的API访问接口及服务端SDK，使用便捷
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<hr class="tech-section-border">
-<div class="ai-container tech-section tech-scenario">
-    <div class="tech-scenario-title">应用场景</div>
-    <div class="tech-scenario-list tech-clear">
-        <div class="tech-scenario-item tech-scenario-shadow">
-            <div class="tech-scenario-icon tech-scenario-icon-1"></div>
-            <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">通用自然场景</div>
-                <div class="tech-scenario-desc-info">
-                    印刷文档和自然场景有生僻字识别需求的场景下，进行生僻字识别。
-                </div>
-            </div>
-        </div>
-        <div class="tech-scenario-item tech-scenario-shadow">
-            <div class="tech-scenario-icon tech-scenario-icon-2"></div>
-            <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">搜索场景</div>
-                <div class="tech-scenario-desc-info">
-                    需要对某些生僻字进行搜索的情况下，进行生僻字识别。
-                </div>
-            </div>
-        </div>
-        <div class="tech-scenario-item tech-scenario-shadow">
-            <div class="tech-scenario-icon tech-scenario-icon-3"></div>
-            <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">教育场景</div>
-                <div class="tech-scenario-desc-info">
-                    教育行业生僻字识别，可以应用在汉语词典，语文课本识别，文言文批改等场景。
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="tech-section tech-case">
-    <div class="tech-case-list">
-        <div class="tech-case-item tech-case-item-1 tech-case-active">
-            <div class="ai-container">
-                <div class="tech-case-item-logo"></div>
-                <div class="tech-case-item-title">百度词典</div>
-                <div class="tech-case-item-info">
-                    百度词典app是百度官方推出的手机词典软件；用户可以用摄像头拍摄的方式，调用百度通用文字识别（含生僻字版）OCR进行生僻字识别，有效的增强了应用的文字输入能力。
-                </div>
-            </div>
-        </div>
-        <div class="tech-case-item tech-case-item-2">
-            <div class="ai-container">
-                <div class="tech-case-item-logo"></div>
-                <div class="tech-case-item-title">手机百度</div>
-                <div class="tech-case-item-info">
-                    手机百度是百度推出的一款方便手机用户随时随地使用百度搜索服务的应用；手机百度调用百度通用文字识别（含生僻字版）OCR接口进行拍照生僻字识别，可以方便的进行生僻字搜索等操作。
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="tech-case-option">
-        <div class="tech-case-option-btn tech-case-option-btn-1 tech-case-active">
-            百度词典
-        </div>
-        <div class="tech-case-option-btn tech-case-option-btn-2">
-            手机百度
-        </div>
-    </div>
-</div>
-
-{%if $userInfo eq Null%}
-<div class="tech-section get-started tech-free">
-    <div class="ai-container">
-        <div class="tech-free-title">快速提交您的需求</div>
-        <div class="tech-free-info">您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</div>
-        <div class="tech-free-btn">
-            <a role="button"
-               {%if $src eq Null%}
-               class="btn-primary large consult"
-               data-operation="cooperation"
-               {%else%}
-               class="btn-primary large"
-               href="mailto://ai@baidu.com"
-               {%/if%}>
-                商务合作
-            </a>
-        </div>
-    </div>
-</div>
-{%/if%}
-{%if $src eq Null%}
-<div class="tech-section tech-guide">
-    <div class="ai-container">
-        <div class="tech-guide-title">使用指南</div>
-        <div class="tech-guide-question tech-clear">
-            <div class="tech-guide-question-title">常见问题</div>
-            <div class="tech-guide-question-list">
-                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q1">图片格式和分辨率有限制吗?</a>
-                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q8">字体有要求吗？</a>
-                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q9">支持哪些语言识别？</a>
-                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q10">支持文档扫描图片的文字识别吗？</a>
-                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q7">怎么提高文字识别的准确率和识别速度？</a>
-            </div>
-        </div>
-    </div>
-</div>
-{%/if%}
-
-
+    //ai.bdstatic.com/dist/../../view/ocr-general_enhanced.html
 </div>
 <aside class="aside-action">
     <ul>
@@ -478,31 +227,11 @@
             <nav class="quick-path">
                 <h3>控制台入口</h3>
                 <ul>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
-                           target="_blank">百度语音</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index"
-                           target="_blank">文字识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index"
-                           target="_blank">人脸识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index"
-                           target="_blank">自然语言处理</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
-                           target="_blank">黄反识别</a>
-                    </li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
                 </ul>
             </nav>
             <nav class="resource">
@@ -558,8 +287,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490250326/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490250326/js/technology/ocr-general_enhanced.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1489655127/js/technology/ocr-general_enhanced.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');
