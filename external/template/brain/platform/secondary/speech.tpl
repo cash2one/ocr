@@ -281,9 +281,6 @@
                         基于业界领先的深度神经网络技术将文字转为声音，让您的应用开口说话
                     </div>
                     <div class="tech-prod-panel">
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
-                           target="_blank">立即使用</a>
                         <a href="http://ai.baidu.com/tech/speech/tts">了解详情</a>
                     </div>
                 </div>
