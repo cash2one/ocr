@@ -12,20 +12,20 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
+    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/ie9.style.css">
+    <link rel="stylesheet" href="/ai_dist/1489655127/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/technology/nlp-lexical.style.css">
+    <link rel="stylesheet" href="/ai_dist/1489655127/css/base.style.css">
+    <link rel="stylesheet" href="/ai_dist/1489655127/css/technology/nlp-lexical.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1489655127/ai_images/logo.png" alt="百度大脑">
+                <img src="/ai_dist/1489655127/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -203,7 +203,207 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-    //ai.bdstatic.com/dist/../../view/nlp-lexical.html
+    <section class="tech-section tech-banner">
+    <div class="container">
+        <h1>词法分析</h1>
+        <p>基于大数据和用户行为的分词、词性标注、命名实体识别<br>定位基本语言元素，消除歧义，支撑自然语言的准确理解</p>
+        <div>
+            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">立即使用</a>
+            <a role="button"
+               class="btn-other media"
+               href="
+               {%if $src eq Null%}
+               /docs#NLP
+               {%else%}
+               https://cloud.baidu.com/doc/NLP/index.html
+               {%/if%}">
+                技术文档
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="nlp-function">
+    <div class="nlp-function-title">功能介绍</div>
+    <div class="nlp-function-intro">
+        百度词法分析向用户提供分词、词性标注、命名实体识别三大功能<br>
+        该服务能够识别出文本串中的基本词汇（分词），对这些词汇进行重组、标注组合后词汇的词性，并进一步识别出命名实体<br>
+        百度词法分析的算法效果大幅领先已公开的主流中文词法分析模型<br>
+    </div>
+    <div class="nlp-function-item-container">
+        <div class="nlp-function-item">
+            <div class="nlp-function-icon function-1"></div>
+            <div class="nlp-function-name">中文分词</div>
+            <div class="nlp-function-info">中文分词是将连续的自然语言文本，切分成具有语义合理性和完整性的词汇序列的过程</div>
+        </div>
+        <div class="nlp-function-item">
+            <div class="nlp-function-icon function-2"></div>
+            <div class="nlp-function-name">词性标注</div>
+            <div class="nlp-function-info">词性标注（Part-of-Speech tagging 或POS tagging）是指为自然语言文本中的每个词汇赋予一个词性的过程</div>
+        </div>
+        <div class="nlp-function-item">
+            <div class="nlp-function-icon function-3"></div>
+            <div class="nlp-function-name">专有名词</div>
+            <div class="nlp-function-info">命名实体识别（Named Entity Recognition，简称NER），又称作“专名识别”，是指识别自然语言文本中具有特定意义的实体，主要包括人名、地名、机构名、时间日期，等等</div>
+        </div>
+    </div>
+</div>
+
+<div class="lexer-demo">
+    <div class="lexer-demo-title">功能演示</div>
+    <div class="lexer-demo-switch" id="demo-switch">
+        <div class="lexer-demo-switch-icon"></div>
+        <div class="lexer-demo-switch-txt">换一个实例</div>
+    </div>
+    <div class="lexer-demo-case" id="demo-case"></div>
+    <div class="lexer-demo-tab" id="lexer-demo-tab">
+        <div class="lexer-demo-tab-label label-selected" data-tab-for="word-type">词性识别</div>
+        <div class="lexer-demo-tab-label" data-tab-for="term">专有名词</div>
+    </div>
+    <div class="lexer-demo-result">
+        <div class="lexer-demo-tab-content tab-show" data-tab-id="word-type">
+            <div class="lexer-demo-segmentation" id="segmentation">
+            </div>
+            <hr class="lexer-demo-split">
+            <div class="lexer-demo-word-type" id="word-type">
+            </div>
+        </div>
+        <div class="lexer-demo-tab-content lexer-demo-term-tab" data-tab-id="term">
+        </div>
+    </div>
+</div>
+<hr class="nlp-section-border">
+<div class="container">
+    <div class="nlp-feature-container">
+        <div class="nlp-feature-title">技术特色</div>
+        <div class="nlp-feature-item-container">
+            <div class="nlp-feature-item">
+                <div class="nlp-feature-icon feature-1"></div>
+                <div class="nlp-feature-name">粒度更灵活</div>
+                <div class="nlp-feature-info">分词输出混排和基本词两种粒度，用户可以根据具体应用场景选择对应粒度；词性标注结合了字模型与词模型的优势，能够进一步优化分词粒度，从而既保证了基本词汇的原子性，又保证了大粒度词汇，对领域新词、专有名词的识别尤其有效</div>
+            </div>
+        </div>
+        <div class="nlp-feature-item-container">
+            <div class="nlp-feature-item">
+                <div class="nlp-feature-icon feature-2"></div>
+                <div class="nlp-feature-name">海量数据建模</div>
+                <div class="nlp-feature-info">词性标注通过互联网用户行为挖掘海量训练样本，提高了算法在复杂多变的应用场景下的效果稳定性和适配性;命名实体识别引入了百亿级的远距离监督学习与点击反馈，在上下文较少时仍能基于先验得到较好处理效果</div>
+            </div>
+        </div>
+        <div class="nlp-feature-item-container">
+            <div class="nlp-feature-item">
+                <div class="nlp-feature-icon feature-3"></div>
+                <div class="nlp-feature-name">用户定制</div>
+                <div class="nlp-feature-info">可根据用户需求，自主干预和定制分词效果，自由定制专名实体类目，打造个性化的分词和专名识别系统（暂未开放）</div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="nlp-section-border">
+<div class="container nlp-scenario">
+    <div class="nlp-scenario-title">应用场景</div>
+    <div class="nlp-scenario-item">
+        <div class="nlp-scenario-icon-container">
+            <div class="nlp-scenario-icon-1"></div>
+        </div>
+        <div class="nlp-scenario-intro">
+            <div class="nlp-scenario-header">情感分析</div>
+            <div class="nlp-scenario-detail">输入的文本内容首先进行分词处理，然后通过词性标注识别带有感情色彩的关键词、辅助情感分析算法用户评论的极性，最终得到用户对事物的观点和褒贬分类</div>
+        </div>
+    </div>
+    <div class="nlp-scenario-item">
+        <div class="nlp-scenario-icon-container">
+            <div class="nlp-scenario-icon-2"></div>
+        </div>
+        <div class="nlp-scenario-intro">
+            <div class="nlp-scenario-header">语音助手</div>
+            <div class="nlp-scenario-detail">用于客户身份认证，直播实名认证等场景，通过分词和词性标注，分析语音命令中的关键名词、动词、数量、时间，准确理解命令的含义，提高用户体验</div>
+        </div>
+    </div>
+    <div class="nlp-scenario-item">
+        <div class="nlp-scenario-icon-container">
+            <div class="nlp-scenario-icon-3"></div>
+        </div>
+        <div class="nlp-scenario-intro">
+            <div class="nlp-scenario-header">多轮交互式搜索</div>
+            <div class="nlp-scenario-detail">通过专名识别定位多轮对话中的核心实体，自动判断后续对话中对该实体的进一步信息需求</div>
+        </div>
+    </div>
+    <div class="nlp-scenario-item">
+        <div class="nlp-scenario-icon-container">
+            <div class="nlp-scenario-icon-4"></div>
+        </div>
+        <div class="nlp-scenario-intro">
+            <div class="nlp-scenario-header">生活服务</div>
+            <div class="nlp-scenario-detail">识别查询串中的生活基础设施词汇，如导航POI、酒店、娱乐场所，判断查询意图，调起对应的生活服务类App</div>
+        </div>
+    </div>
+    <div class="nlp-scenario-item">
+        <div class="nlp-scenario-icon-container">
+            <div class="nlp-scenario-icon-5"></div>
+        </div>
+        <div class="nlp-scenario-intro">
+            <div class="nlp-scenario-header">实体数据库构建</div>
+            <div class="nlp-scenario-detail">通过挖掘实体之间、实体与关键词之间的关联，构建实体信息（如人物、机构）数据库</div>
+        </div>
+    </div>
+</div>
+
+<section class="tech-section tech-case">
+    <ul class="case-list">
+        <li class="case-item active">
+            <div class="container">
+                <h2>百度语音搜索</h2>
+                <p>语音搜索区别于传统搜索的一种全新搜索形式是多轮交互式搜索 命名实体识别算法引入百度语音搜索后，多轮交互搜索的目标集合召回提升2%，实现了典型多轮句式的稳定召回</p>
+            </div>
+        </li>
+        <li class="case-item">
+            <div class="container">
+                <h2>度秘服务</h2>
+                <p>对文档和query进行分词，得到query与文档的初步召回结果，再结合query得词性标注和专名识别结果，优化排序系统的最终召回结果</p>
+            </div>
+        </li>
+    </ul>
+    <ul class="case-indicator">
+        <li class="active"><a>百度语音搜索</a></li>
+        <li><a>度秘服务</a></li>
+    </ul>
+</section>
+{%if $userInfo eq Null%}
+<section class="tech-section get-started">
+    <div class="container">
+        <h2>立即获取免费API Key</h2>
+        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
+        <div>
+            <a role="button" class="btn-primary large" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+        </div>
+    </div>
+</section>
+{%/if%}
+{%if $src eq Null%}
+<section class="tech-section tech-guide">
+    <div class="container">
+        <h2>使用指南</h2>
+        <div class="guide-link clear-float">
+            <h3>开发指南</h3>
+            <ul>
+                <li><a href="/docs#NLP">技术文档 ></a></li>
+                <li><a href="/sdk">SDK下载 ></a></li>
+            </ul>
+        </div>
+        <div class="question-link clear-float">
+            <h3>常见问题</h3>
+            <ul>
+                <li><a href="/docs#NLP-FAQ_Q1">输入编码是什么?</a></li>
+                <li><a href="/docs#NLP-FAQ_Q2">结果中的词性标注都是什么含义?</a></li>
+                <li><a href="/docs#NLP-FAQ_Q3">短文本相似度对文字字数有什么限制?</a></li>
+                <li><a href="/docs#NLP-FAQ_Q11">中文DNN语言模型对文本个数有什么限制？</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+{%/if%}
+
 </div>
 <aside class="aside-action">
     <ul>
@@ -287,8 +487,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1489655127/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1489655127/js/technology/nlp-lexical.js"></script>
+<script src="/ai_dist/1489655127/js/common.bundle.js"></script>
+<script src="/ai_dist/1489655127/js/technology/nlp-lexical.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');

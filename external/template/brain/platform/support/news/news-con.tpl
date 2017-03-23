@@ -203,7 +203,48 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-    //ai.bdstatic.com/dist/../../view/news-con.html
+    <section class="news-banner">
+    <div class="container">
+        <h1>新闻动态</h1>
+    </div>
+</section>
+<section class="container news-main">
+    <div class="news-title">{%$data.title%}</div>
+    <div class="news-info-container">
+        <div class="news-date" id="news-date"></div>
+        <div class="news-author">{%$data.author%}</div>
+        <div class="news-view-count">{%$data.pv%}次浏览</div>
+    </div>
+    <hr class="news-info-split">
+    <div class="news-content">
+        {%$data.content%}
+    </div>
+</section>
+{%if $userInfo eq Null%}
+<section class="tech-section get-started">
+    <div class="container">
+        <h2>立即获取免费API Key</h2>
+        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
+        <div>
+            <a role="button" class="btn-primary large" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+        </div>
+    </div>
+</section>
+{%/if%}
+<script>
+    (function () {
+        var newsDateContainer = document.getElementById('news-date');
+        /* eslint-disable */
+        var dateObj = new Date(+{%$data.time%}000);
+        /* eslint-enable */
+        var year = dateObj.getFullYear();
+        var month = dateObj.getMonth() + 1;
+        var date = dateObj.getDate();
+
+        newsDateContainer.innerHTML = '[' + year + '-' + month + '-' + date + ']';
+    })();
+</script>
+
 </div>
 <aside class="aside-action">
     <ul>

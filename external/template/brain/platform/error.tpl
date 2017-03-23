@@ -203,7 +203,14 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-    //ai.bdstatic.com/dist/../../view/error.html
+    <section class="site-error">
+    <img src="//ai.bdstatic.com/dist/1489655127/ai_images/error/site-error.png">
+    <p>对不起，页面出错啦!</p>
+    <div>
+        <a role="button" class="btn-primary" href="//ai.baidu.com" id="error-back">5秒后返回</a>
+    </div>
+</section>
+
 </div>
 <aside class="aside-action">
     <ul>

@@ -4,7 +4,8 @@
  */
 
 import $ from 'jquery';
-import '../../view/technology/nlp-lexical.html';
+
+import '!!file-loader?name=./../../view/[name].html!extract-loader!html-loader!../../view/technology/nlp-lexical.html';
 
 import 'less/technology/nlp-lexical.less';
 

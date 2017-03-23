@@ -203,7 +203,147 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-    //ai.bdstatic.com/dist/../../view/face-compare.html
+    <section class="tech-section tech-banner">
+    <div class="container">
+        <h1>人脸对比</h1>
+        <p>根据两张人脸的特征给出相似度评分<br>为您提供高精度的1:1人脸比对服务</p>
+        <div>
+            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">立即使用</a>
+            <a role="button"
+               class="btn-other media"
+               href="
+               {%if $src eq Null%}
+               /docs#FACE
+               {%else%}
+               https://cloud.baidu.com/doc/FACE/index.html
+               {%/if%}">
+                技术文档
+            </a>
+        </div>
+    </div>
+</section>
+<section class="tech-section tech-intro">
+    <div class="container">
+        <h2>功能介绍</h2>
+        <p>通过提取人脸的特征，计算两张人脸的相似度，从而判断是否同一个人，并给出相似度评分<br>已知用户ID的情况下帮助确认是否为用户本人的检测，即1：1身份验证</p>
+        <div class="tech-intro-detail">
+            <div class="compare-group">
+                <div class="scan-line left"></div>
+                <div class="scan-line right"></div>
+                <div class="scan-result good"></div>
+            </div>
+            <div class="compare-group">
+                <div class="scan-line left"></div>
+                <div class="scan-line right"></div>
+                <div class="scan-result bad"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tech-section tech-feature">
+    <div class="container">
+        <h2>技术特色</h2>
+        <div class="feature-list clear-float">
+            <div class="feature-item shadow">
+                <div class="feature-icon"></div>
+                <div class="feature-desc">
+                    <h3>稳定可靠</h3>
+                    <p>依托百度深度学习实验室的技术实力，提供稳定、精确的大流量服务</p>
+                </div>
+            </div>
+            <div class="feature-item shadow">
+                <div class="feature-icon"></div>
+                <div class="feature-desc">
+                    <h3>识别精度高</h3>
+                    <p>人脸识别技术国际领先，识别准确率超过百分之九十九</p>
+                </div>
+            </div>
+            <div class="feature-item shadow">
+                <div class="feature-icon"></div>
+                <div class="feature-desc">
+                    <h3>活体检测技术</h3>
+                    <p>可抵御照片、视频等各类攻击，精确区分活体，安全可靠</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tech-section tech-scene">
+    <div class="container">
+        <h2>应用场景</h2>
+        <div class="scene-list clear-float">
+            <div class="scene-item shadow">
+                <div class="scene-icon"></div>
+                <div class="scene-desc">
+                    <h3>金融在线身份认证</h3>
+                    <p>为解决金融等高风险行业复杂的身份验证流程，通过自拍照和身份证照之间的人脸识别确认用户身份是否本人</p>
+                </div>
+            </div>
+            <div class="scene-item shadow">
+                <div class="scene-icon"></div>
+                <div class="scene-desc">
+                    <h3>酒店登入验证</h3>
+                    <p>入住酒店时，判断入住者是否为身份证持有人</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tech-section tech-case">
+    <ul class="case-list">
+        <li class="case-item active">
+            <div class="container">
+                <div class="case-icon"></div>
+                <h2>泰康人寿</h2>
+                <p>用于微信投保的回执和回访环节，通过人脸验证来在线校验客户身份</p>
+            </div>
+        </li>
+        <li class="case-item">
+            <div class="container">
+                <div class="case-icon"></div>
+                <h2>百度钱包</h2>
+                <p>百度金融实名认证，通过人脸识别校验用户身份证件真实性</p>
+            </div>
+        </li>
+    </ul>
+    <ul class="case-indicator">
+        <li class="active"><a>泰康人寿</a></li>
+        <li><a>百度钱包</a></li>
+    </ul>
+</section>
+{%if $userInfo eq Null%}
+<section class="tech-section get-started">
+    <div class="container">
+        <h2>立即获取免费API Key</h2>
+        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
+        <div>
+            <a role="button" class="btn-primary large" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+        </div>
+    </div>
+</section>
+{%/if%}
+{%if $src eq Null%}
+<section class="tech-section tech-guide">
+    <div class="container">
+        <h2>使用指南</h2>
+        <div class="guide-link clear-float">
+            <h3>开发指南</h3>
+            <ul>
+                <li><a href="/docs#FACE">技术文档 ></a></li>
+                <li><a href="/sdk">SDK下载 ></a></li>
+            </ul>
+        </div>
+        <div class="question-link clear-float">
+            <h3>常见问题</h3>
+            <ul>
+                <li><a href="/docs#FACE-FAQ_Q1">识别的图片支持怎样输入?</a></li>
+                <li><a href="/docs#FACE-FAQ_Q2">什么是base64编码，如何提供？</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+{%/if%}
+
 </div>
 <aside class="aside-action">
     <ul>
