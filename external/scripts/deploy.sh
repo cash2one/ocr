@@ -5,4 +5,4 @@ wget ftp://cp01-zhanghongguang-dev.epc.baidu.com/1.3/aip-ocr-java-sdk-1.2.zip
 wget ftp://cp01-zhanghongguang-dev.epc.baidu.com/1.3/aip-antiporn-java-sdk-1.3.zip
 wget ftp://cp01-zhanghongguang-dev.epc.baidu.com/1.3/aip-face-java-sdk-1.3.zip
 wget ftp://cp01-zhanghongguang-dev.epc.baidu.com/1.3/aip-nlp-java-sdk-1.3.zip
-wget ftp://cp01-zhanghongguang-dev.epc.baidu.com/pdf/2017年语音交互体验蓝皮书.pdf
+wget ftp://cp01-zhanghongguang-dev.epc.baidu.com/pdf/2017-Speech-Interaction-Experience-Blue-Book.pdf
