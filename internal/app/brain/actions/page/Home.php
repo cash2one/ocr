@@ -19,6 +19,7 @@ class Action_Home extends Ap_Action_Abstract {
 
         !Brain_User::checkInternalUser() && exit(0);
 //        $arrPageInfo['messagelist'] = Bd_Conf::getAppConf('messagelist');
+
         Brain_Output::htmlOutput(
             $arrPageInfo, 
             'views/home.html'
