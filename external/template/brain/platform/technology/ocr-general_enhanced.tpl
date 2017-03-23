@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/technology/ocr-general_enhanced.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/technology/ocr-general_enhanced.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1489655127/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1490250326/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -286,28 +286,28 @@
                 </div>
                 <div class="tech-demo-card-list">
                     <div class="tech-demo-card-item tech-demo-card-active">
-                        <img src="//ai.bdstatic.com/dist/1489655127/ai_images/technology/ocr-general_enhanced/demo-card-1.png">
+                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-general_enhanced/demo-card-1.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1489655127/ai_images/technology/ocr-general_enhanced/demo-card-2.png">
+                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-general_enhanced/demo-card-2.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1489655127/ai_images/technology/ocr-general_enhanced/demo-card-3.png">
+                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-general_enhanced/demo-card-3.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1489655127/ai_images/technology/ocr-general_enhanced/demo-card-4.png">
+                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-general_enhanced/demo-card-4.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1489655127/ai_images/technology/ocr-general_enhanced/demo-card-5.png">
+                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-general_enhanced/demo-card-5.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1489655127/ai_images/technology/ocr-general_enhanced/demo-card-6.png">
+                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-general_enhanced/demo-card-6.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1489655127/ai_images/technology/ocr-general_enhanced/demo-card-7.png">
+                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-general_enhanced/demo-card-7.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1489655127/ai_images/technology/ocr-general_enhanced/demo-card-8.png">
+                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/ocr-general_enhanced/demo-card-8.png">
                     </div>
                 </div>
             </div>
@@ -558,8 +558,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1489655127/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1489655127/js/technology/ocr-general_enhanced.js"></script>
+<script src="//ai.bdstatic.com/dist/1490250326/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1490250326/js/technology/ocr-general_enhanced.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');

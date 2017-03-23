@@ -154,6 +154,46 @@ class Dao_NewsExt extends Dao_Base {
     }
 
     /**
+     * insertNews
+     *
+     * @param mixed $strTitle
+     * @param mixed $strTime
+     * @param mixed $strAuthor
+     * @param mixed $strContent
+     * @param mixed $strLink
+     * @param mixed $strAbs
+     * @access public
+     * @return void
+     */
+    public function insertNewsPlace($strTitle, $strTime, $strAuthor, $strContent, $strLink, $strAbs, $place, $ts, $pv) {
+        $arrRow = array(
+            'title' => $strTitle,
+            'time' => $strTime,
+            'author' => $strAuthor,
+            'content' => $strContent,
+            'abs' => $strAbs,
+            'link' => $strLink,
+            'place' => $place,
+            'ts' => $ts,
+            'pv' => $pv,
+
+        );
+        $arrOptions = null;
+        $arrOnDup = $arrRow;
+        $strSQL = $this->objSQLAssember->getInsert($this->strTable, $arrRow, $arrOptions, $arrOnDup);
+        Bd_Log::addNotice('insert', $strSQL);
+        $arrDBRet = $this->objDB->query($strSQL);
+        if ($arrDBRet === false) {
+            throw new Exception('query failed', Lib_Const::ERRORNO_DB_QUERY_FAILED);
+        } else {
+            $strConnId = '' . $this->objDB->getInsertId();
+            return $strConnId;
+        }
+    }
+
+
+
+    /**
      * updateNews 
      * 
      * @param mixed $strId 
