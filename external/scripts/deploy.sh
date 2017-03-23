@@ -5,4 +5,9 @@ wget ftp://cp01-zhanghongguang-dev.epc.baidu.com/1.3/aip-ocr-java-sdk-1.2.zip
 wget ftp://cp01-zhanghongguang-dev.epc.baidu.com/1.3/aip-antiporn-java-sdk-1.3.zip
 wget ftp://cp01-zhanghongguang-dev.epc.baidu.com/1.3/aip-face-java-sdk-1.3.zip
 wget ftp://cp01-zhanghongguang-dev.epc.baidu.com/1.3/aip-nlp-java-sdk-1.3.zip
+wget ftp://cp01-zhanghongguang-dev.epc.baidu.com/1.3/aip-antiporn-php-sdk-1.3.zip
+wget ftp://cp01-zhanghongguang-dev.epc.baidu.com/1.3/aip-face-php-sdk-1.3.zip
+wget ftp://cp01-zhanghongguang-dev.epc.baidu.com/1.3/aip-nlp-php-sdk-1.3.zip
+wget ftp://cp01-zhanghongguang-dev.epc.baidu.com/1.3/aip-ocr-php-sdk-1.3.zip
+wget ftp://cp01-zhanghongguang-dev.epc.baidu.com/1.3/aip-python-sdk-1.3.zip
 wget ftp://cp01-zhanghongguang-dev.epc.baidu.com/pdf/2017-Speech-Interaction-Experience-Blue-Book.pdf
