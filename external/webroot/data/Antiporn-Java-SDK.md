@@ -4,7 +4,7 @@
 
 # 安装黄反识别服务 Java SDK
 
-** Java SDK目录结构**
+**Java SDK目录结构**
 
     com.baidu.aip
            ├── auth                                //签名相关类
