@@ -35,6 +35,18 @@ class Dao_News extends Dao_Base
         'abs',
         'link',
     );
+    // 默认字段2
+    private $arrDefaultFields3 = array(
+        'id',
+        'title',
+        'time',
+        'author',
+        'pv',
+        'abs',
+        'link',
+        'ts',
+        'content'
+    );
 
     /**
      * @brief 连接db，表名初始化
@@ -68,6 +80,21 @@ class Dao_News extends Dao_Base
             'order by id desc',
             'limit ' . intval($strStart) . ', ' . intval($strCount),
         );
+
+        $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
+        $arrDBRet = $this->query($strSQL);
+
+        return $arrDBRet;
+    }
+
+    /**
+     * 获取所有新闻
+     */
+    public function getAllNews(){
+        $arrFields = $this->arrDefaultFields3;
+        $arrConds = null;
+        $arrOptions = null;
+        $arrAppends = null;
 
         $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
         $arrDBRet = $this->query($strSQL);

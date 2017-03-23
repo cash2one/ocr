@@ -120,68 +120,18 @@ class Action_News extends Ap_Action_Abstract {
             }
             Brain_Output::jsonOutput($arrRet);
             //Brain_Output::htmlOutput($arrRet, 'brain/page/news/detail.tpl');
-        } else  if ('update' === $strAction) {
-            $strTitle = Brain_Util::getParamAsString($arrInput, 'title');
-            $strTime = Brain_Util::getParamAsString($arrInput, 'time');
-            $strAuthor = Brain_Util::getParamAsString($arrInput, 'author');
-            $strContent = Brain_Util::getParamAsString($arrInput, 'content');
-            $strAbs = Brain_Util::getParamAsString($arrInput, 'abs');
-            $strLink = Brain_Util::getParamAsString($arrInput, 'link');
-            $strId = Brain_Util::getParamAsString($arrInput, 'id');
+        }  else if ('sync' === $strAction) {
             $pwd = Brain_Util::getParamAsString($arrInput, 'pwd');
-            $realPwd = Bd_Conf::getAppConf('news/pwd');
-            if ($pwd !== $realPwd) {
-                $arrRet['errno'] = 1;
-                $arrRet['msg'] = '权限不足';
-                Brain_Output::jsonOutput($arrRet);
-                exit;
+            if (empty($psw) || "MhxzKhl"!==$pwd){
+                exit("参数错误");
             }
-            // source: int 内网, ext 外网
-            $source = Brain_Util::getParamAsString($arrInput, 'source', 'int');
-
-            if ($source == 'ext') {
                 $dbNewsExt = new Dao_NewsExt();
-                try {
-                   $dbNewsExt->updateNews($strId, $strTitle, $strTime, $strAuthor, $strContent, $strLink, $strAbs);
-                } catch (Exception $e) {
+                $newsAll = $dbNews->getAllNews();
+                foreach ($newsAll as $news){
+                    $dbNewsExt->insertNewsPlace($news['title'], $news['time'], $news['author'], $news['content'], $news['link'], $news['abs'], 1,$news['ts'], $news['pv'])
                 }
-            } else if ($source == 'int') {
-                try {
-                    $dbNews->updateNews($strId, $strTitle, $strTime, $strAuthor, $strContent, $strLink, $strAbs);
-                } catch (Exception $e) {
-                }
-            } else {
-
-            }
-            //$dbNews->updateNews($strId, $strTitle, $strTime, $strAuthor, $strContent, $strLink, $strAbs);
             Brain_Output::jsonOutput($arrRet);
-        } else if ('add' === $strAction) {
-            $strTitle = Brain_Util::getParamAsString($arrInput, 'title');
-            $strTime = Brain_Util::getParamAsString($arrInput, 'time');
-            $strAuthor = Brain_Util::getParamAsString($arrInput, 'author');
-            $strContent = Brain_Util::getParamAsString($arrInput, 'content');
-            $strAbs = Brain_Util::getParamAsString($arrInput, 'abs');
-            $strLink = Brain_Util::getParamAsString($arrInput, 'link');
-            // source: int 内网, ext 外网
-            $source = Brain_Util::getParamAsString($arrInput, 'source', 'int');
-            if ($source == 'ext') {
-                $dbNewsExt = new Dao_NewsExt();
-                try {
-                    $dbNewsExt->insertNews($strTitle, $strTime, $strAuthor, $strContent, $strLink, $strAbs);
-                } catch (Exception $e) {
-                }
-            } else if ($source == 'int') {
-                try {
-                    $dbNews->insertNews($strTitle, $strTime, $strAuthor, $strContent, $strLink, $strAbs);
-                } catch (Exception $e) {
-                }
-            } else {
-
-            }
-            Brain_Output::jsonOutput($arrRet);
-        } else if ('edit' === $strAction) {
-            Brain_Output::htmlOutput(array(), 'brain/page/editnews/editnews.tpl');
-        } else if ('pic' === $strAction) {
+        }  else if ('pic' === $strAction) {
             $strRet = '';
             if (isset($_FILES['upload']['tmp_name'])) {
                 $strPicFile = $_FILES['upload']['tmp_name'];
