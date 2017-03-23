@@ -123,7 +123,7 @@ class Action_News extends Ap_Action_Abstract
             //Brain_Output::htmlOutput($arrRet, 'brain/page/news/detail.tpl');
         } else if ('sync' === $strAction) {
             $pwd = Brain_Util::getParamAsString($arrInput, 'pwd');
-            if (empty($psw) || "MhxzKhl" != $pwd) {
+            if (empty($pwd) || "MhxzKhl" != $pwd) {
                 exit("参数错误");
             }
             $dbNewsExt = new Dao_NewsExt();
