@@ -2,7 +2,6 @@
  * @file nlp-中文DNN模型脚本入口
  * @author shiliang@baidu.com
  */
-'use strict';
 
 import $ from 'jquery';
 import throttle from 'lodash.throttle';

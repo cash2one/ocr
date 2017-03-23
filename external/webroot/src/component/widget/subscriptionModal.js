@@ -2,7 +2,6 @@
  * @file 邮件订阅模态框容器
  * @author shiliang@baidu.com
  */
-'use strict';
 
 import $ from 'jquery';
 

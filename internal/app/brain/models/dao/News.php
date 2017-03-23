@@ -1,13 +1,14 @@
 <?php
+
 /**
  * @file News.php
  * @author 朴红吉(piaohongji@baidu.com)
  * @date 2015/07/20 19:58:15
- * @brief 
- *  
+ * @brief
+ *
  **/
-
-class Dao_News extends Dao_Base {
+class Dao_News extends Dao_Base
+{
 
     // 表名
     private $strTable;
@@ -34,6 +35,18 @@ class Dao_News extends Dao_Base {
         'abs',
         'link',
     );
+    // 默认字段2
+    private $arrDefaultFields3 = array(
+        'id',
+        'title',
+        'time',
+        'author',
+        'pv',
+        'abs',
+        'link',
+        'ts',
+        'content'
+    );
 
     /**
      * @brief 连接db，表名初始化
@@ -42,42 +55,64 @@ class Dao_News extends Dao_Base {
      *
      * @date 2015/07/20 20:00:24
      **/
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
         $this->strTable = 't_news';
     }
 
     /**
-     * getNewsList 
-     * 
-     * @param mixed $strStart 
-     * @param mixed $strCount 
+     * getNewsList
+     *
+     * @param mixed $strStart
+     * @param mixed $strCount
      * @access public
      * @return void
      */
-    public function getNewsList($strStart, $strCount) {
+    public function getNewsList($strStart, $strCount)
+    {
         $arrFields = $this->arrDefaultFields2;
-        $arrConds = null;
+        $arrConds = array(
+            "place=" => 1
+        );
         $arrOptions = null;
         $arrAppends = array(
             'order by id desc',
             'limit ' . intval($strStart) . ', ' . intval($strCount),
-        );  
+        );
 
         $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
         $arrDBRet = $this->query($strSQL);
-        
+
         return $arrDBRet;
     }
 
     /**
-     * getNews 
-     * 
-     * @param mixed $strId 
+     * @param
+     * @return newsAll
+     * 获取所有新闻
+     */
+    public function getAllNews(){
+        $arrFields = $this->arrDefaultFields3;
+        $arrConds = null;
+        $arrOptions = null;
+        $arrAppends = null;
+
+        $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
+        $arrDBRet = $this->query($strSQL);
+
+        return $arrDBRet;
+    }
+
+    /**
+     * getNews
+     *
+     * @param mixed $strId
      * @access public
      * @return void
      */
-    public function getNews($strId) {
+    public function getNews($strId)
+    {
         $arrFields = $this->arrDefaultFields;
         $arrConds = array(
             'id=' => $strId,
@@ -85,7 +120,7 @@ class Dao_News extends Dao_Base {
         $arrOptions = null;
         $arrAppends = array(
             'limit 1',
-        );  
+        );
 
         $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
 
@@ -95,19 +130,20 @@ class Dao_News extends Dao_Base {
     }
 
     /**
-     * addPv 
-     * 
-     * @param mixed $strId 
+     * addPv
+     *
+     * @param mixed $strId
      * @access public
      * @return void
      */
-    public function addPv($strId) {
+    public function addPv($strId)
+    {
         $arrRow = array(
             'pv = pv + 1',
         );
         $arrConds = array(
             'id=' => $strId,
-        );  
+        );
         $arrOptions = null;
         $strSQL = $this->objSQLAssember->getUpdate($this->strTable, $arrRow, $arrConds);
         Bd_Log::addNotice('update', $strSQL);
@@ -120,18 +156,19 @@ class Dao_News extends Dao_Base {
     }
 
     /**
-     * insertNews 
-     * 
-     * @param mixed $strTitle 
-     * @param mixed $strTime 
-     * @param mixed $strAuthor 
-     * @param mixed $strContent 
-     * @param mixed $strLink 
-     * @param mixed $strAbs 
+     * insertNews
+     *
+     * @param mixed $strTitle
+     * @param mixed $strTime
+     * @param mixed $strAuthor
+     * @param mixed $strContent
+     * @param mixed $strLink
+     * @param mixed $strAbs
      * @access public
      * @return void
      */
-    public function insertNews($strTitle, $strTime, $strAuthor, $strContent, $strLink, $strAbs) {
+    public function insertNews($strTitle, $strTime, $strAuthor, $strContent, $strLink, $strAbs)
+    {
         $arrRow = array(
             'title' => $strTitle,
             'time' => $strTime,
@@ -139,7 +176,7 @@ class Dao_News extends Dao_Base {
             'content' => $strContent,
             'abs' => $strAbs,
             'link' => $strLink,
-        );  
+        );
         $arrOptions = null;
         $arrOnDup = $arrRow;
         $strSQL = $this->objSQLAssember->getInsert($this->strTable, $arrRow, $arrOptions, $arrOnDup);
@@ -150,23 +187,24 @@ class Dao_News extends Dao_Base {
         } else {
             $strConnId = '' . $this->objDB->getInsertId();
             return $strConnId;
-        } 
+        }
     }
 
     /**
-     * updateNews 
-     * 
-     * @param mixed $strId 
-     * @param mixed $strTitle 
-     * @param mixed $strTime 
-     * @param mixed $strAuthor 
-     * @param mixed $strContent 
-     * @param mixed $strLink 
-     * @param mixed $strAbs 
+     * updateNews
+     *
+     * @param mixed $strId
+     * @param mixed $strTitle
+     * @param mixed $strTime
+     * @param mixed $strAuthor
+     * @param mixed $strContent
+     * @param mixed $strLink
+     * @param mixed $strAbs
      * @access public
      * @return void
      */
-    public function updateNews($strId, $strTitle, $strTime, $strAuthor, $strContent, $strLink, $strAbs) {
+    public function updateNews($strId, $strTitle, $strTime, $strAuthor, $strContent, $strLink, $strAbs)
+    {
         $arrRow = array(
             'title' => $strTitle,
             'time' => $strTime,
@@ -177,7 +215,7 @@ class Dao_News extends Dao_Base {
         );
         $arrConds = array(
             'id=' => '' . intval($strId),
-        );  
+        );
         $arrOptions = null;
         $strSQL = $this->objSQLAssember->getUpdate($this->strTable, $arrRow, $arrConds);
         Bd_Log::addNotice('update', $strSQL);
@@ -190,15 +228,16 @@ class Dao_News extends Dao_Base {
     }
 
     /**
-     * deleteNews 
-     * 
-     * @param mixed $strId 
+     * deleteNews
+     *
+     * @param mixed $strId
      * @access public
      * @return void
      */
-    public function deleteNews($strId) {
+    public function deleteNews($strId)
+    {
         $arrConds = array(
-            'id ='  => '' . intval($strId),
+            'id =' => '' . intval($strId),
         );
         $arrOptions = null;
         $arrAppends = null;

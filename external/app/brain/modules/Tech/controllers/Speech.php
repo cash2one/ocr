@@ -9,7 +9,7 @@
 class Controller_Speech extends Ap_Controller_Abstract
 {
     public $actions = array(
-
+        'index' => 'actions/tech/speech/Index.php',
         'asr' => 'actions/tech/speech/Asr.php',
         'tts' => 'actions/tech/speech/Tts.php',
         'wake' => 'actions/tech/speech/Wake.php',

@@ -397,7 +397,7 @@ images=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 **接口描述**
 
 该请求用于从人脸库中新增用户，包括指定用户所在组和上传用户人脸图片。
-**注：每个用户（uid）所能注册的最大人脸数量为5张。**
+**注：每个用户（uid）所能注册的最大人脸数量为5张。** 
 
 **调用方式一请求头**
 
@@ -435,7 +435,7 @@ x-bce-date: {utc-date-string}
 connection: keep-alive
 accept: */*
 host: aip.baidubce.com
-content-type: application/x-www-form-urlencoded
+content-type: application/x-www-form-urlencoded 
 authorization: {bce-authorization-string}
 
 uid=testuid&user_info=test_userinfo&group_id=test_groupid&images=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
@@ -735,7 +735,7 @@ x-bce-date: {utc-date-string}
 connection: keep-alive
 accept: */*
 host: aip.baidubce.com
-content-type: application/x-www-form-urlencoded
+content-type: application/x-www-form-urlencoded 
 authorization: {bce-authorization-string}
 
 group_id=testuid&images=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
@@ -820,7 +820,7 @@ x-bce-date: {utc-date-string}
 connection: keep-alive
 accept: */*
 host: aip.baidubce.com
-content-type: application/x-www-form-urlencoded
+content-type: application/x-www-form-urlencoded 
 authorization: {bce-authorization-string}
 
 uid=testuid
@@ -900,7 +900,7 @@ x-bce-date: {utc-date-string}
 connection: keep-alive
 accept: */*
 host: aip.baidubce.com
-content-type: application/x-www-form-urlencoded
+content-type: application/x-www-form-urlencoded 
 authorization: {bce-authorization-string}
 
 start=0&num=100
@@ -976,7 +976,7 @@ x-bce-date: {utc-date-string}
 connection: keep-alive
 accept: */*
 host: aip.baidubce.com
-content-type: application/x-www-form-urlencoded
+content-type: application/x-www-form-urlencoded 
 authorization: {bce-authorization-string}
 
 group_id=gid&start=0&num=100
@@ -1060,7 +1060,7 @@ x-bce-date: {utc-date-string}
 connection: keep-alive
 accept: */*
 host: aip.baidubce.com
-content-type: application/x-www-form-urlencoded
+content-type: application/x-www-form-urlencoded 
 authorization: {bce-authorization-string}
 
 group_id=gid&start=0&uid=test_uid
@@ -1076,11 +1076,11 @@ group_id=gid&start=0&uid=test_uid
 **返回示例**
 
 ```json
-// 正确返回值
+// 正确返回值 
 {
     "log_id": 3314921889,
 }
-// 发生错误时返回值
+// 发生错误时返回值 
 {
   "error_code": 216100,
   "log_id": 3111284097,
@@ -1136,7 +1136,7 @@ x-bce-date: {utc-date-string}
 connection: keep-alive
 accept: */*
 host: aip.baidubce.com
-content-type: application/x-www-form-urlencoded
+content-type: application/x-www-form-urlencoded 
 authorization: {bce-authorization-string}
 
 group_id=gid&start=0&uid=test_uid
@@ -1152,11 +1152,11 @@ group_id=gid&start=0&uid=test_uid
 **返回示例**
 
 ```json
-// 正确返回值
+// 正确返回值 
 {
     "log_id": 3314921889,
 }
-// 发生错误时返回值
+// 发生错误时返回值 
 {
   "error_code": 216619,
   "log_id": 815967402,

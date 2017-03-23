@@ -38,12 +38,12 @@ AipOcr类提供给开发这一系列的图像识别方法，参考如下代码�
 
     # 引入文字识别OCR SDK
     from aip import AipOcr
-
+    
     # 定义常量
     APP_ID = '你的 App ID'
     API_KEY = '你的 API Key'
     SECRET_KEY = '你的 Secret Key'
-
+    
     # 初始化ApiOcr对象
     aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
@@ -60,20 +60,20 @@ AipOcr类提供给开发这一系列的图像识别方法，参考如下代码�
 
     # 引入文字识别OCR SDK
     from aip import AipOcr
-
+    
     # 定义常量
     APP_ID = '你的 App ID'
     API_KEY = '你的 API Key'
     SECRET_KEY = '你的 Secret Key'
-
+    
     # 读取图片
     def get_file_content(filePath):
         with open(filePath, 'rb') as fp:
             return fp.read()
-
+    
     # 初始化ApiOcr对象
     aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
-
+    
     # 调用通用文字识别接口
     result = aipOcr.general(get_file_content('general.jpg'))
 
@@ -82,26 +82,26 @@ AipOcr类提供给开发这一系列的图像识别方法，参考如下代码�
 
     # 引入文字识别OCR SDK
     from aip import AipOcr
-
+    
     # 定义常量
     APP_ID = '你的 App ID'
     API_KEY = '你的 API Key'
     SECRET_KEY = '你的 Secret Key'
-
+    
     # 读取图片
     def get_file_content(filePath):
         with open(filePath, 'rb') as fp:
             return fp.read()
-
+    
     # 初始化ApiOcr对象
     aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
-
+    
     # 定义参数变量
     options = {
       'detect_direction': False,
       'language_type': 'CHN_ENG',
     }
-
+    
     # 调用通用文字识别接口
     result = aipOcr.general(get_file_content('general.jpg'), options)
 
@@ -165,20 +165,20 @@ AipOcr类提供给开发这一系列的图像识别方法，参考如下代码�
 
     # 引入文字识别OCR SDK
     from aip import AipOcr
-
+    
     # 定义常量
     APP_ID = '你的 App ID'
     API_KEY = '你的 API Key'
     SECRET_KEY = '你的 Secret Key'
-
+    
     # 读取图片
     def get_file_content(filePath):
         with open(filePath, 'rb') as fp:
             return fp.read()
-
+    
     # 初始化ApiOcr对象
     aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
-
+    
     # 调用银行卡识别接口
     result = aipOcr.bankcard(get_file_content('bankcard.jpg'))
 
@@ -193,10 +193,10 @@ AipOcr类提供给开发这一系列的图像识别方法，参考如下代码�
 
 | 参数                 | 类型     | 描述               |
 | :----------------- | :----- | :--------------- |
-| log_id             | Uint64 | 唯一的log id，用于问题定位 |
+| log_id             | Unit64 | 唯一的log id，用于问题定位 |
 | result             | Object | 定位和识别结果数组        |
 | \+bank_card_number | String | 银行卡识别结果          |
-| +bank_name         | string | 银行名，不能识别时为空               |
+| +bank_name         | string | 银行名，不能识别时为空                |
 | +bank_card_type    | uint32 | 银行卡类型，0:不能识别; 1: 借记卡; 2: 信用卡                |
 
 **返回样例：**
@@ -224,23 +224,23 @@ AipOcr类提供给开发这一系列的图像识别方法，参考如下代码�
 
     # 引入文字识别OCR SDK
     from aip import AipOcr
-
+    
     # 定义常量
     APP_ID = '你的 App ID'
     API_KEY = '你的 API Key'
     SECRET_KEY = '你的 Secret Key'
-
+    
     # 读取图片
     def get_file_content(filePath):
         with open(filePath, 'rb') as fp:
             return fp.read()
-
+    
     # 初始化ApiOcr对象
     aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
-
+    
     # 设置识别身份证正面参数
     isFront = False
-
+    
     # 调用身份证识别接口
     result = aipOcr.idcard(get_file_content('idcard.jpg'), isFront)
 
@@ -249,29 +249,29 @@ AipOcr类提供给开发这一系列的图像识别方法，参考如下代码�
 
     # 引入文字识别OCR SDK
     from aip import AipOcr
-
+    
     # 定义常量
     APP_ID = '你的 App ID'
     API_KEY = '你的 API Key'
     SECRET_KEY = '你的 Secret Key'
-
+    
     # 读取图片
     def get_file_content(filePath):
         with open(filePath, 'rb') as fp:
             return fp.read()
-
+    
     # 初始化ApiOcr对象
     aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
-
+    
     # 设置识别身份证正面参数
     isFront = False
-
+    
     # 定义参数变量
     options = {
         'detect_direction': False,
         'accuracy': 'high'
     }
-
+    
     # 调用身份证识别接口
     result = aipOcr.idcard(get_file_content('idcard.jpg'), isFront, options)
 

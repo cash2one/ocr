@@ -12,7 +12,7 @@
            │      ├── AipHttpClient.php        //内部http请求类
            │      ├── AipBCEUtil.php           //内部工具类
            │      ├── AipBase                  //Aip基类
-           └── demo
+           └── demo     
                   ├── DemoAipOcr.php           //OCR服务示例
                   ├── idcard.jpg               //身份证图片示例
                   ├── bankcard.jpg             //银行卡图片示例
@@ -24,7 +24,7 @@
 
 1.在[官方网站](http://ai.baidu.com/sdk)下载PHP SDK压缩工具包。
 
-2.将下载的`aip-ocr-php-sdk-version.zip`解压后，复制AipOrc.php以及lib/*到工程文件夹中。
+2.将下载的`aip-ocr-php-sdk-version.zip`解压后，复制AipOcr.php以及lib/*到工程文件夹中。
 
 3.引入AipOcr.php。
 
@@ -50,7 +50,7 @@ const SECRET_KEY = '你的 Secret Key';
 $aipOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
 ```
 
-在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是在创建完毕应用后，系统分配给用户的，均为字符串，用于标识用户，为访问做签名验证，可在AI服务控制台中的**应用列表**中查看。
+在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是在创建完毕应用后，系统分配给用户的，均为字符串，用于标识用户，为访问做签名验证，可在AI服务控制台中的**应用列表**中查看。  
 
 **注意：**如您以前是百度云的老用户，其中`API_KEY`对应百度云的“Access Key ID”，`SECRET_KEY`对应百度云的“Access Key Secret”。
 
@@ -172,7 +172,7 @@ $result = $apiOcr->bankcard(file_get_contents('bankcard.jpg'));
 
 | 参数                 | 类型     | 描述               |
 | :----------------- | :----- | :--------------- |
-| log_id             | Uint64 | 唯一的log id，用于问题定位 |
+| log_id             | Unit64 | 唯一的log id，用于问题定位 |
 | result             | Object | 定位和识别结果数组        |
 | \+bank_card_number | String | 银行卡识别结果          |
 | +bank_name         | string | 银行名，不能识别时为空               |

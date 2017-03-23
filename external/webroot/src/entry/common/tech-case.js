@@ -2,7 +2,6 @@
  * @file tech-case点击切换
  * @author chenweiwei01@baidu.com
  */
-'use strict';
 
 import $ from 'jquery';
 
