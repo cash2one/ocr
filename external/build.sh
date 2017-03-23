@@ -20,3 +20,4 @@ BUILD_SUB_DIRS="app conf data template webroot scripts webserver"
   sed -i "s/tgz=.*/&$tgz/g" $output/deploy
   sed -i "s/BUILD_SUB_DIRS=.*/&\"$BUILD_SUB_DIRS\"/g" $output/deploy
 echo "build all done!"
+
