@@ -88,6 +88,8 @@ class Dao_News extends Dao_Base
     }
 
     /**
+     * @param
+     * @return newsAll
      * 获取所有新闻
      */
     public function getAllNews(){

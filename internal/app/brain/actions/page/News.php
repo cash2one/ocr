@@ -128,7 +128,8 @@ class Action_News extends Ap_Action_Abstract {
                 $dbNewsExt = new Dao_NewsExt();
                 $newsAll = $dbNews->getAllNews();
                 foreach ($newsAll as $news){
-                    $dbNewsExt->insertNewsPlace($news['title'], $news['time'], $news['author'], $news['content'], $news['link'], $news['abs'], 1,$news['ts'], $news['pv'])
+                    $dbNewsExt->insertNewsPlace($news['title'], $news['time'], $news['author'], $news['content'],
+                        $news['link'], $news['abs'], 1,$news['ts'], $news['pv']);
                 }
             Brain_Output::jsonOutput($arrRet);
         }  else if ('pic' === $strAction) {
