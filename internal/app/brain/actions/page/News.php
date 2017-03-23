@@ -1,27 +1,28 @@
 <?php
 /***************************************************************************
- * 
+ *
  * Copyright (c) 2016 Baidu.com, Inc. All Rights Reserved
- * 
+ *
  **************************************************************************/
- 
+
 /**
  * @file News.php
  * @author piaohongji(piaohongji@baidu.com)
  * @date 2016/07/29 14:33:00
- * @brief 
- *  
+ * @brief
+ *
  **/
-
-class Action_News extends Ap_Action_Abstract {
+class Action_News extends Ap_Action_Abstract
+{
 
     /**
-     * execute 
-     * 
+     * execute
+     *
      * @access public
      * @return void
      */
-    public function execute() {
+    public function execute()
+    {
         !Brain_User::checkInternalUser() && exit(0);
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
@@ -30,7 +31,7 @@ class Action_News extends Ap_Action_Abstract {
         $arrRet = array(
             'errno' => 0,
             'msg' => 'success',
-            'data' => (object) array(),
+            'data' => (object)array(),
         );
         $dbNews = new Dao_News();
 
@@ -63,7 +64,7 @@ class Action_News extends Ap_Action_Abstract {
             Brain_Output::htmlOutput(array(), 'brain/page/modifynews/modifynewslist.tpl');
         } else if ('modifynews' === $strAction) {
             Brain_Output::htmlOutput(array(), 'brain/page/modifynews/modifynews.tpl');
-        }else if ('top3' === $strAction) {
+        } else if ('top3' === $strAction) {
             $arrNews = $dbNews->getNewsList('0', '3');
             if (is_array($arrNews) && count($arrNews) > 0) {
                 $arrRet['data'] = $arrNews;
@@ -95,7 +96,7 @@ class Action_News extends Ap_Action_Abstract {
             }
             //Brain_Output::jsonOutput($arrRet);
             Brain_Output::htmlOutput($arrRet, 'brain/page/news/detail.tpl');
-        }  else if ('detail2' === $strAction) {
+        } else if ('detail2' === $strAction) {
             $strId = Brain_Util::getParamAsString($arrInput, 'id');
             // source: int 内网, ext 外网
             $source = Brain_Util::getParamAsString($arrInput, 'source', 'int');
@@ -116,23 +117,23 @@ class Action_News extends Ap_Action_Abstract {
             //$arrNews = $dbNews->getNews($strId);
             if (is_array($arrNews) && count($arrNews) > 0) {
                 $arrRet['data'] = $arrNews[0];
-            //    $dbNews->addPv($strId);
+                //    $dbNews->addPv($strId);
             }
             Brain_Output::jsonOutput($arrRet);
             //Brain_Output::htmlOutput($arrRet, 'brain/page/news/detail.tpl');
-        }  else if ('sync' === $strAction) {
+        } else if ('sync' === $strAction) {
             $pwd = Brain_Util::getParamAsString($arrInput, 'pwd');
-            if (empty($psw) || "MhxzKhl"!==$pwd){
+            if (empty($psw) || "MhxzKhl" !== $pwd) {
                 exit("参数错误");
             }
-                $dbNewsExt = new Dao_NewsExt();
-                $newsAll = $dbNews->getAllNews();
-                foreach ($newsAll as $news){
-                    $dbNewsExt->insertNewsPlace($news['title'], $news['time'], $news['author'], $news['content'],
-                        $news['link'], $news['abs'], 1,$news['ts'], $news['pv']);
-                }
+            $dbNewsExt = new Dao_NewsExt();
+            $newsAll = $dbNews->getAllNews();
+            foreach ($newsAll as $news) {
+                $dbNewsExt->insertNewsPlace($news['title'], $news['time'], $news['author'], $news['content'],
+                    $news['link'], $news['abs'], 1, $news['ts'], $news['pv']);
+            }
             Brain_Output::jsonOutput($arrRet);
-        }  else if ('pic' === $strAction) {
+        } else if ('pic' === $strAction) {
             $strRet = '';
             if (isset($_FILES['upload']['tmp_name'])) {
                 $strPicFile = $_FILES['upload']['tmp_name'];
