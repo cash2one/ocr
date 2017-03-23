@@ -240,7 +240,7 @@
                 立即使用
             </a>
             <a role="button"
-               class="btn-other media ai-redirect"
+               class="btn-other media"
                href="
                {%if $src eq Null%}
                /docs#NLP
