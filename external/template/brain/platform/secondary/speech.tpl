@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1489655127/css/secondary/speech.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490250326/css/secondary/speech.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1489655127/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1490250326/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -319,15 +319,15 @@
                     <div>主要服务：语音合成</div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1489655127/ai_images/technology/speech/customer-1-1.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/speech/customer-1-1.png" alt="">
                         <div>
                             百度地图
                         </div>
-                        <img src="//ai.bdstatic.com/dist/1489655127/ai_images/technology/speech/customer-1-2.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/speech/customer-1-2.png" alt="">
                         <div>
                             Baidu Carlife
                         </div>
-                        <img src="//ai.bdstatic.com/dist/1489655127/ai_images/technology/speech/customer-1-3.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/speech/customer-1-3.png" alt="">
                     </div>
                 </div>
             </div>
@@ -344,9 +344,9 @@
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
                         <div>阅读书城</div>
-                        <img src="//ai.bdstatic.com/dist/1489655127/ai_images/technology/speech/customer-2-1.png" alt="百度地图">
+                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/speech/customer-2-1.png" alt="百度地图">
                         <div>iReader</div>
-                        <img src="//ai.bdstatic.com/dist/1489655127/ai_images/technology/speech/customer-2-2.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/speech/customer-2-2.png" alt="">
                         <div>塔读文学</div>
                     </div>
                 </div>
@@ -363,12 +363,12 @@
                     <div>主要服务：语音识别</div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1489655127/ai_images/technology/speech/customer-3-1.png" alt="">
-                        <img src="//ai.bdstatic.com/dist/1489655127/ai_images/technology/speech/customer-3-2.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/speech/customer-3-1.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/speech/customer-3-2.png" alt="">
                         <div>去哪儿旅行</div>
-                        <img src="//ai.bdstatic.com/dist/1489655127/ai_images/technology/speech/customer-3-3.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/speech/customer-3-3.png" alt="">
                         <div>乐视语音助手</div>
-                        <img src="//ai.bdstatic.com/dist/1489655127/ai_images/technology/speech/customer-3-4.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1490250326/ai_images/technology/speech/customer-3-4.png" alt="">
                         <div>陌陌</div>
                     </div>
                 </div>
@@ -580,8 +580,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1489655127/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1489655127/js/secondary/speech.js"></script>
+<script src="//ai.bdstatic.com/dist/1490250326/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1490250326/js/secondary/speech.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');
