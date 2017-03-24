@@ -20,6 +20,8 @@ const demoImgPath = [
     require('../../../ai_images/technology/ocr-bankcard/demo-card-5.png'),
     require('../../../ai_images/technology/ocr-bankcard/demo-card-6.png')
 ];
+
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/ocr-bankcard.html';
 /* eslint-enable */
 
 // case点击效果

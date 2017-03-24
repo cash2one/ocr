@@ -7,6 +7,10 @@ import $ from 'jquery';
 import throttle from 'lodash.throttle';
 import 'less/technology/face-compare.less';
 
+/* eslint-disable */
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/face-compare.html';
+/* eslint-enable */
+
 $(document).ready(function () {
     // case点击效果
     $('.case-indicator > li').click(function () {

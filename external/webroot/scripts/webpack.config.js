@@ -181,14 +181,6 @@ module.exports = {
                 // 模板拼接，通用资源替换
                 test: /\.html$/,
                 use: [
-                    // {
-                    //     loader: 'file-loader',
-                    //     options: {
-                    //         // external路径下的view文件夹
-                    //         name: '../../view/[name].html'
-                    //     }
-                    // },
-                    // 'extract-loader',
                     {
                         loader: 'html-loader',
                         options: {
