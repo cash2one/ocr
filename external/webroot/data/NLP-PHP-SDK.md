@@ -368,8 +368,7 @@ const SECRET_KEY = '你的 Secret Key';
 $aipNlp = new AipNlp(APP_ID, API_KEY, SECRET_KEY);
 
 // 调用评论观点抽取接口
-$result = $aipNlp->commentTag('百度是个搜索公司');
-
+$result = $aipNlp->commentTag('面包很好吃'); // 默认为美食分类
 ```
 
 如果还想增加一些自定义参数配置：
@@ -388,10 +387,10 @@ const SECRET_KEY = '你的 Secret Key';
 $aipNlp = new AipNlp(APP_ID, API_KEY, SECRET_KEY);
 
 // 定义参数变量
-$option = array('type' => 2);
+$option = array('type' => 10); // 汽车分类
 
 // 调用情感观点抽取接口
-$result = $aipNlp->commentTag('你好百度', $option);
+$result = $aipNlp->commentTag('特斯拉外观很漂亮', $option);
 ```
 
 **评论观点抽取 请求参数详情**
@@ -426,3 +425,4 @@ $result = $aipNlp->commentTag('你好百度', $option);
 | +raw_adj_begin_pos  | Int      | 词向量结果                 |
 | +degree_adv         | String   | 原始副词                  |
 | +degree_adv_pos     | Int      | 词向量结果                 |
+
