@@ -93,58 +93,8 @@ public class Sample {
 | Forbidden   | authentication failed                 | 认证失败或无权限 |
 | Unavailable | Service internal error occurred       | 内部服务发生错误 |
 
-
-# 词法分析
-
-词法分析接口包含了中文分词和词性标注的功能，若需要使用中文分词或词性标注的功能，建议使用此接口。
-举例，传入文本，获取词法分析结果：
-
-```java
-public void NLPLexer(AipNlp client) {
-
-	ArrayList<String> texts = new ArrayList<String>(3);
-    texts.add("百度是一家高科技公司");
-    texts.add("我是百度的工程师");
-    texts.add("今天天气真好");
-    
-    JSONObject response = client.lexer(texts);
-    System.out.println(response.toString());
-
-```
-
-**词法分析 请求参数详情**
-
-| 参数    | 类型            | 描述                                  | 是否必须 |
-| :---- | :------------ | :---------------------------------- | :--- |
-| texts | Array<String> | 待解析文本集合，每条文本长度不超过2048字节，总共不超过100条文本 | 是    |
-
-**词法分析 返回数据参数详情**
-
-| 参数            | 类型                | 是否必需 | 描述                                       |
-| ------------- | ----------------- | ---- | ---------------------------------------- |
-| status        | int               |是 | 整体返回状态码  0=全部成功  401=部分成功  402=全部失败  403=拒绝，批量请求数量过多（一个批次最多请求100条文本） |
-| version       | string            |是 | 算法版本号                                    |
-| results       | array  of objects |是 | 结果数组，每个元素形如{text, retcode, items}，对应一个单条请求 |
-| +text         | string            |是 | 原始单条请求文本                                 |
-| +retcode      | int               |是 | 单条结果状态码  0=分析成功  401=拒绝，请求文本过长（最长65536字节）  402=拒绝，请求文本编码不正确（要求GB编码）  403=算法内部失败，需要联系客服排查 |
-| +items        | array  of objects |是 | 词汇数组，每个元素对应结果中的一个词                       |
-| ++item        | string            |是 | 词汇的字符串                                   |
-| ++ne          | string            |是 | 命名实体类型，命名实体识别算法使用。词性标注算法中，此项为空串          |
-| ++pos         | string            | 是 |词性，词性标注算法使用。命名实体识别算法中，此项为空串              |
-| ++offset      | int               | 是 |在text中的字节级offset                         |
-| ++length      | int               | 是 |字节级length                                |
-| ++uri         | string            | 否 |链指到知识库的URI，只对命名实体有效。对于非命名实体和链接不到知识库的命名实体，此项为空串 |
-| ++formal      | string            | 否 |词汇的标准化表达，主要针对时间、数字单位，没有归一化表达的，此项为空串      |
-| ++basic_words | array of strings  | 是 |基本词成分                                    |
-| +++word       | string            | 是 |基本词的字符串                                  |
-| ++loc_details | array  of objects | 否 |地址成分，非必需，仅对地址型命名实体有效，没有地址成分的，此项为空数组。     |
-| +++type       | string            | 是 |成分类型，如省、市、区、县                            |
-| +++offset     | int               | 是 |在item中的字节级offset                         |
-| +++length     | int               | 是 |字节级length                                |
-
 # 中文分词
 
-此接口功能已合并到词法分析中，将逐步下线，请移步使用[词法分析](#词法分析)接口。
 举例，要对字符串'你好百度'进行分词：
 
 ```java
@@ -185,8 +135,6 @@ public void wordseg(AipNlp client) {
 | spbtermpos     | Int[]  | 参数值为列表，元素值为对应切分出来的短语在 subphrbuf的字节偏移以及长度，整数的低24bit为偏移，高8bit为长度 |
 
 # 词性标注
-
-此接口功能已合并到词法分析中，将逐步下线，请移步使用[词法分析](#词法分析)接口。
 
 词性标注接口为分词结果中的每个单词标注一个正确的词性的程序，也标注每个词是名词、动词、形容词或其他词性。
 
@@ -444,62 +392,11 @@ public void NLPCommentTag(AipNlp client) {
 | +degree_adv         | String   | 原始副词                  |
 | +degree_adv_pos     | Int      | 词向量结果                 |
 
-
-# 词法分析
-
-词法分析接口包含了中文分词和词性标注的功能，若需要使用中文分词或词性标注的功能，建议使用此接口。
-举例，传入文本，获取词法分析结果：
-
-```java
-public void NLPLexer(AipNlp client) {
-
-	ArrayList<String> texts = new ArrayList<String>(3);
-    texts.add("百度是一家高科技公司");
-    texts.add("我是百度的工程师");
-    texts.add("今天天气真好");
-    
-    JSONObject response = client.lexer(texts);
-    System.out.println(response.toString());
-
-```
-
-**词法分析 请求参数详情**
-
-| 参数    | 类型            | 描述                                  | 是否必须 |
-| :---- | :------------ | :---------------------------------- | :--- |
-| texts | Array<String> | 待解析文本集合，每条文本长度不超过2048字节，总共不超过100条文本 | 是    |
-
-**词法分析 返回数据参数详情**
-
-| 参数            | 类型                | 是否必需 | 描述                                       |
-| ------------- | ----------------- | ---- | ---------------------------------------- |
-| status        | int               | 是    | 整体返回状态码  0=全部成功  401=部分成功  402=全部失败  403=拒绝，批量请求数量过多 |
-| version       | string            | 是    | 算法版本号                                    |
-| results       | array  of objects | 是    | 结果数组，每个元素形如{text, retcode, items}，对应一个单条请求 |
-| +text         | string            | 是    | 原始单条请求文本                                 |
-| +retcode      | int               | 是    | 单条结果状态码  0=分析成功  401=拒绝，请求文本过长  402=拒绝，请求文本编码不正确  403=分析失败 |
-| +items        | array  of objects | 是    | 词汇数组，每个元素对应结果中的一个词                       |
-| ++Type        | string            | 是    | 词汇类型  plain_word=普通词  named_entity=NE  linked_named_entity=链指到了知识库的NE |
-| ++tag         | string            | 是    | 词汇tag，普通词填充词性，NE填充NE类型（NE一定是名词）          |
-| ++offset      | int               | 是    | 字节级offset                                |
-| ++length      | int               | 是    | 字节级length                                |
-| ++uri         | string            | 否    | 链指到知识库的URI，非必需                           |
-| ++formal      | string            | 否    | 词汇的标准化表达，主要针对时间、数字单位，非必需                 |
-| ++basic_words | array  of objects | 是    | 基本词成分                                    |
-| +++offset     | int               | 是    | 字节级offset，在item内部计数                      |
-| +++length     | int               | 是    | 字节级length                                |
-| ++loc_details | array  of objects | 否    | 地址成分，非必需，仅对地址型NE有效                       |
-| +++type       | string            | 是    | 成分类型，如省、市、区、县                            |
-| +++offset     | int               | 是    | 字节级offset，在item内部计数                      |
-| +++length     | int               | 是    | 字节级length                                |
-
-
-
 # 版本更新记录
 
 | 上线日期      | 版本号  | 更新内容                                     |
 | --------- | ---- | ---------------------------------------- |
-| 2017.3.23 | 1.3  | 增加词法分析接口，对安卓环境兼容问题进行修复                   |
+| 2017.3.23 | 1.3  | 对安卓环境兼容问题进行修复                            |
 | 2017.3.2  | 1.2  | 增加设置超时接口                                 |
 | 2017.1.20 | 1.1  | 对部分云用户调用不成功的错误修复                         |
 | 2017.1.6  | 1.0  | 初始版本，上线中文分词、词性标注、词向量表示、中文DNN语言模型、短文本相似度和评论观点抽取接口 |
