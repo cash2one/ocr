@@ -39,7 +39,8 @@ const globConfig = {
     cwd: path.join(__dirname, '..', 'src', 'entry'),
     ignore: [
         '**/pager.js', '**/base.js',
-        '**/common/*.js', '**/util/*.js'
+        '**/common/*.js', '**/util/*.js',
+        '**/lib/*.js', '**/mixin/*.js'
     ]
 };
 

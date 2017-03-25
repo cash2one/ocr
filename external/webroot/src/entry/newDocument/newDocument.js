@@ -35,6 +35,6 @@ new Vue({
         routes
     }),
     render(h) {
-        h(main);
+        return h(main);
     }
 });
