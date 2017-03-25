@@ -1,0 +1,60 @@
+.tree-node {
+    box-sizing: border-box;
+    height: 48px;
+    line-height: 48px;
+    cursor: pointer;
+
+    &:hover {
+        color: #0073eb;
+    }
+}
+
+.level-1.tree-node {
+    padding-left: 1 * 20px;
+}
+
+.level-2.tree-node {
+    padding-left: 2 * 20px;
+}
+
+.level-3.tree-node {
+    padding-left: 3 * 20px;
+}
+
+.node-selected {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    color: #0073eb;
+}
+
+.leaf-dot,
+.leaf-text {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.leaf-node {
+}
+
+.leaf-text {
+    font-size: 14px;
+}
+
+// 叶子节点前的小点，左右垂直居中
+.leaf-dot {
+    position: relative;
+    width: 20px;
+    height: 100%;
+
+    &:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        content: "";
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: #000;
+    }
+}

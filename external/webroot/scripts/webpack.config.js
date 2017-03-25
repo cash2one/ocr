@@ -17,9 +17,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
-// postcss
-const autoprefixer = require('autoprefixer');
-
 const getVersion = require('./lib/getVersion');
 const getTemplate = require('./lib/getTemplate');
 /* eslint-enable */
@@ -46,7 +43,7 @@ const globConfig = {
     ]
 };
 
-const moduleName = argv['module'];
+const moduleName = argv.module;
 
 let entries = [];
 if (!moduleName) {
@@ -142,7 +139,9 @@ module.exports = {
             // 模板partials
             partials: path.resolve(__dirname, '..', 'src', 'partials'),
             // for 老古董ejs
-            ejs: 'ejs/ejs.js'
+            ejs: 'ejs/ejs.js',
+            // 方便文档模块快速找到文档目录
+            docCategory: path.resolve(__dirname, 'markdown', 'category.json')
         }
     },
     output: {
@@ -158,8 +157,15 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /(node_modules|bower_components)/,
+                exclude: /node_modules|bower_components/,
                 use: 'babel-loader'
+            },
+            {
+                // 没有用到css文件做入口，所以只需要css-loader
+                test: /\.css$/,
+                use: [
+                    'css-loader'
+                ]
             },
             {
                 test: /\.less$/,
@@ -199,7 +205,6 @@ module.exports = {
                 use: 'url-loader'
             },
             {
-                // TODO，小icon分单独文件夹管理，base64打包入css，省去拼接雪碧图
                 test: /\.(jpe?g|png|gif|mp4)$/i,
                 exclude: /sprite|icons([\/\\]).+\.(jpe?g|png|gif)$/i,
                 use: [
@@ -228,6 +233,10 @@ module.exports = {
             {
                 test: /\.hbs$/,
                 use: 'handlebars-loader'
+            },
+            {
+                test: /\.vue$/,
+                use: 'vue-loader'
             }
         ]
     },

@@ -1,0 +1,90 @@
+@category-width: 280px;
+@anchor-list-width: 190px;
+@anchor-list-lite-width: 60px;
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+}
+
+.app {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0;
+}
+
+.category,
+.anchor-list,
+.anchor-list-lite,
+.main-content {
+    position: absolute;
+    height: 100%;
+    overflow: auto;
+    font-size: 14px;
+}
+
+.anchor-list {
+}
+
+// 几个主要部分的宽度, 没有分拆到单独文件中
+.category {
+    left: 0;
+    width: @category-width;
+    background-color: #fafafa;
+}
+
+.anchor-list {
+    left: @category-width;
+    width: @anchor-list-width;
+    transition: all.2s linear;
+}
+
+.anchor-list-lite {
+    left: @category-width;
+    width: @anchor-list-lite-width;
+}
+
+.main-content {
+    top: 0;
+    right: 0;
+    transition: left .2s linear;
+
+    // 目录展开时主体内容
+    &.doc-shrink {
+        left: @anchor-list-width + @category-width;
+    }
+
+    // 目录收缩时主体内容
+    &.doc-expand {
+        left: @anchor-list-lite-width + @category-width;
+    }
+}
+
+.anchor-mode-switch {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 40px;
+    background-color: red;
+    cursor: pointer;
+}
+
+@import "./accordion";
+@import "./tree";
+@import "./anchorList";
+@import "./anchorListLite";
+@import "./doc";
+@import "./breadCrumb";
+@import "./codeBlock";

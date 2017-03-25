@@ -1,0 +1,35 @@
+.code-block {
+    p {
+        display: none;
+    }
+
+    pre{
+        margin: 0;
+    }
+}
+
+.code-block-tab-container {
+    background-color: #e6f1fd;
+    font-size: 0;
+}
+
+.code-block-title {
+    display: inline-block;
+    min-width: 60px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: top;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-right: 0;
+    cursor: pointer;
+
+    &:last-child {
+        border-right: 1px solid #ccc;
+    }
+}
+
+.block-active {
+    background-color: red;
+}

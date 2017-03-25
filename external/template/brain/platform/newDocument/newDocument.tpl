@@ -12,20 +12,20 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="<%= require('../../../ai_images/favicon-32.ico') %>">
+    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.ie9.css[0] %>">
+    <link rel="stylesheet" href="/ai_dist/1490342487/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.base.css[0] %>">
-    <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.cssFile %>">
+    <link rel="stylesheet" href="/ai_dist/1490342487/css/base.style.css">
+    <link rel="stylesheet" href="/ai_dist/1490342487/css/newDocument/newDocument.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="<%= require('../../../ai_images/logo.png') %>" alt="百度大脑">
+                <img src="/ai_dist/1490342487/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -202,8 +202,8 @@
         </div>
     </div>
 </header>
-<script src="<%= htmlWebpackPlugin.options.jsCommonBundle %>"></script>
-<script src="<%= htmlWebpackPlugin.options.jsFile %>"></script>
+<script src="/ai_dist/1490342487/js/common.bundle.js"></script>
+<script src="/ai_dist/1490342487/js/newDocument/newDocument.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');

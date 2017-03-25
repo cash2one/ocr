@@ -1,0 +1,105 @@
+{
+  "beginnerDoc": [
+    {
+      "text": "接入指南",
+      "md": "Beginner-AccessProcess"
+    },
+    {
+      "text": "鉴权认证机制",
+      "md": "Beginner-Auth"
+    }
+  ],
+  "techDoc": [
+    {
+      "text": "百度语音",
+      "children": [
+        {
+          "text": "语音识别",
+          "children": [
+            {
+              "text": "离在线语音识别Android SDK",
+              "md": "Speech-Asr-O2OAndroidSDK"
+            },
+            {
+              "text": "离在线语音识别iOS SDK",
+              "md": "Speech-Asr-O2OiOSSDK"
+            },
+            {
+              "text": "在线语音识别Android SDK",
+              "md": "Speech-Asr-OnlineAndroidSDK"
+            }
+          ]
+        },
+        {
+          "text": "语音合成",
+          "children": [
+            {
+              "text": "离线在线语音合成 Android SDK",
+              "md": "Speech-Tts-O2OAndroidSDK"
+            },
+            {
+              "text": "离线在线语音合成 iOS SDK",
+              "md": "Speech-Tts-O2OiOSSDK"
+            },
+            {
+              "text": "常见问题",
+              "md": "Speech-Tts-FAQ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "文字识别",
+      "children": [
+        {
+          "text": "API文档",
+          "md": "OCR-API"
+        },
+        {
+          "text": "SDK文档",
+          "children": [
+            {
+              "text": "JAVA语言",
+              "md": "OCR-Java-SDK"
+            },
+            {
+              "text": "PHP语言",
+              "md": "OCR-PHP-SDK"
+            }
+          ]
+        },
+        {
+          "text": "常见问题",
+          "md": "OCR-FAQ"
+        }
+      ]
+    },
+    {
+      "text": "人脸识别",
+      "children": [
+        {
+          "text": "API文档",
+          "md": "FACE-API"
+        },
+        {
+          "text": "SDK文档",
+          "children": [
+            {
+              "text": "JAVA语言",
+              "md": "Face-Java-SDK"
+            },
+            {
+              "text": "Python语言",
+              "md": "Face-Python-SDK"
+            }
+          ]
+        },
+        {
+          "text": "常见问题",
+          "md": "FACE-FAQ"
+        }
+      ]
+    }
+  ]
+}

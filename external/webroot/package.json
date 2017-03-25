@@ -48,12 +48,24 @@
   },
   "dependencies": {
     "autoprefixer": "^6.7.7",
+    "cheerio": "^0.22.0",
     "code-prettify": "^0.1.0",
     "extract-loader": "^0.1.0",
+    "fs-extra": "^2.1.2",
     "handlebars": "^4.0.6",
     "handlebars-loader": "^1.4.0",
+    "highlight.js": "^9.10.0",
+    "html-minifier": "^3.4.2",
+    "is-url": "^1.2.2",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
-    "moment": "^2.18.1"
+    "lodash.unescape": "^4.0.1",
+    "moment": "^2.18.1",
+    "request": "^2.81.0",
+    "superagent": "^3.5.2",
+    "vue": "^2.2.5",
+    "vue-loader": "^11.3.3",
+    "vue-router": "^2.3.0",
+    "vue-template-compiler": "^2.2.5"
   }
 }

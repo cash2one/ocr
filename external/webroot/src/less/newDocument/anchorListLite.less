@@ -1,0 +1,44 @@
+.lite-index,
+.lite-spot {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.lite-index {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.lite-spot {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        content: "";
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ccc;
+        transition: all .3s linear;
+    }
+}
+
+.lite-anchor-reached {
+    .lite-index {
+        background-color: #0073eb;
+        color: #fff;
+    }
+
+    .lite-spot {
+        &:after {
+            width: 10px;
+            height: 10px;
+            background-color:#0073eb;
+        }
+    }
+}
