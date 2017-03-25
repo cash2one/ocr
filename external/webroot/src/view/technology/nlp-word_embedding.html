@@ -15,11 +15,11 @@
             <a role="button"
                class="btn-other media"
                href="
-               {%if $src eq Null%}
+               {if $src eq Null}
                /docs#NLP
-               {%else%}
+               {else}
                https://cloud.baidu.com/doc/NLP/index.html
-               {%/if%}">
+               {/if}">
                 技术文档
             </a>
         </div>
@@ -105,7 +105,7 @@
         </div>
     </div>
 </div>
-{%if $userInfo eq Null%}
+{if $userInfo eq Null}
 <div class="tech-section get-started tech-free">
     <div class="ai-container">
         <div class="tech-free-title">立即获取免费API Key</div>
@@ -119,8 +119,8 @@
         </div>
     </div>
 </div>
-{%/if%}
-{%if $src eq Null%}
+{/if}
+{if $src eq Null}
 <div class="tech-section tech-guide">
     <div class="ai-container">
         <div class="tech-guide-title">使用指南</div>
@@ -142,4 +142,4 @@
         </div>
     </div>
 </div>
-{%/if%}
+{/if}

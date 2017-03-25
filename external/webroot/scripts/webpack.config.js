@@ -165,6 +165,7 @@ module.exports = {
                 // 没有用到css文件做入口，所以只需要css-loader
                 test: /\.css$/,
                 use: [
+                    'style-loader',
                     'css-loader'
                 ]
             },

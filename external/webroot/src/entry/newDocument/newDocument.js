@@ -16,7 +16,7 @@ const routes = [
     {
         // 在这里设置默认打开的文档
         path: '/',
-        redirect: '/FACE-API/top'
+        redirect: '/Beginner-AccessProcess/top'
     },
     {
         path: '/:doc/:anchor',

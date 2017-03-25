@@ -5,12 +5,12 @@
             实时视频显示及控制、多传感器融合、实时跟踪及注册、场景融合等新技<br>
             术与新手段，从而提供了一般情况下不同于人类可感知的信息。</p>
         <div class="consult">
-            {%if $src eq Null%}
+            {if $src eq Null}
             <a role="button" class="btn-primary media">商务合作</a>
-            {%/if%}
-            {%if $src !== Null%}
+            {/if}
+            {if $src !== Null}
             <a role="button" class="btn-primary media" href="mailto:ai@baidu.com">商务合作</a>
-            {%/if%}
+            {/if}
         </div>
     </div>
 </section>
@@ -138,7 +138,7 @@
         <li><a>更多场景应用</a></li>
     </ul>
 </section>
-{%if $src eq Null%}
+{if $src eq Null}
 <section class="tech-section get-started">
     <div class="container">
         <h2>快速提交您的需求</h2>
@@ -149,8 +149,8 @@
         </div>
     </div>
 </section>
-{%/if%}
-{%if $src !== Null%}
+{/if}
+{if $src !== Null}
 <section class="tech-section get-started">
     <div class="container">
         <h2>快速提交您的需求</h2>
@@ -161,4 +161,4 @@
         </div>
     </div>
 </section>
-{%/if%}
+{/if}
