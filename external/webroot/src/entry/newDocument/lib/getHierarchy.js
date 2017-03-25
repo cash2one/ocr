@@ -39,4 +39,4 @@ export default function (treeData, md) {
     find(coll, md);
 
     return hierarchy;
-};
+}
