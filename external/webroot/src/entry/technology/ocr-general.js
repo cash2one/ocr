@@ -22,6 +22,9 @@ const demoImgPath = [
     require('../../../ai_images/technology/ocr-general/demo-card-7.png'),
     require('../../../ai_images/technology/ocr-general/demo-card-8.png')
 ];
+
+
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/ocr-general.html';
 /* eslint-enable */
 
 $(document).ready(function () {

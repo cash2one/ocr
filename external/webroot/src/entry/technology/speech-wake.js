@@ -11,6 +11,10 @@ import ConfirmModal from '../../component/widget/confirmModal';
 
 import 'less/technology/speech-wake.less';
 
+/* eslint-disable */
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/speech-wake.html';
+/* eslint-enable */
+
 $(document).ready(function () {
     // case点击效果
     $('.case-indicator > li').click(function () {

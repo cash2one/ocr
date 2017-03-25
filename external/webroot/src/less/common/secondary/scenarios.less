@@ -9,7 +9,7 @@
 .tech-case(@page-name: nlp-word_embedding; @num: 2; @case-logo: ture;) {
     .tech-case {
         position: relative;
-        height: 470px;
+        height: 370px;
 
         // 循环生成案例背景图
         .case-big-bg(@num);
@@ -23,21 +23,25 @@
         }
 
         &-heading {
-            padding: 15px 0 20px;
-            font-size: 30px;
+            padding: 15px 0;
+            font-size: 35px;
             text-align: center;
-            border-bottom: 1px solid rgba(255, 255, 255, .1);
+            border-bottom: 1px solid black;
         }
 
         &-item {
             box-sizing: border-box;
-            height: 470px;
-            margin-top: -470px;
-            padding-top: 25px;
+            height: 370px;
+            margin-top: -370px;
+            padding-top: 5px;
             text-align: left;
             transition: all 1s ease;
             opacity: 0;
             color: #fff;
+
+            & when (@case-logo = ture) {
+                padding-top: 60px;
+            }
 
             &:first-child {
                 margin-top: 0;
@@ -45,9 +49,10 @@
 
             &-title {
                 margin: 0 auto;
-                padding: 35px 0 15px;
-                font-size: 24px;
+                padding: 15px 0;
+                font-size: 30px;
             }
+
 
             &.tech-case-active {
                 opacity: 1;
@@ -55,7 +60,6 @@
 
             &-info {
                 font-size: 16px;
-                color: rgba(255, 255, 255, .8);
                 line-height: 1.8;
             }
         }
@@ -95,7 +99,7 @@
                     padding: 17px 10px;
 
                     &:after {
-                        background: rgba(0, 115, 235, .7)
+                        background: rgba(0,115,235,.7)
                     }
                 }
             }
@@ -112,22 +116,9 @@
         }
 
         &-coop {
-
-
-            padding-top: 30px;
-
             * {
                 display: inline-block;
                 vertical-align: middle;
-            }
-
-            div {
-                padding-right: 30px;
-
-                // 合作案例文字
-                &:first-child {
-                    padding-right: 15px;
-                }
             }
 
             img {

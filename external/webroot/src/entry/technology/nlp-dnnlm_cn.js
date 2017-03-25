@@ -9,6 +9,10 @@ import {DNN_DATA} from '../../data/dnn-data';
 
 import 'less/technology/nlp-dnnlm_cn.less';
 
+/* eslint-disable */
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/nlp-dnnlm_cn.html';
+/* eslint-enable */
+
 $(document).ready(function () {
     // case点击效果
     $('.case-indicator > li').click(function () {

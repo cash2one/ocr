@@ -20,6 +20,7 @@ const demoImgPath = [
     require('../../../ai_images/technology/ocr-idcard/demo-card-5.png'),
     require('../../../ai_images/technology/ocr-idcard/demo-card-6.png')
 ];
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/ocr-idcard.html';
 /* eslint-enable */
 
 $(document).ready(function () {

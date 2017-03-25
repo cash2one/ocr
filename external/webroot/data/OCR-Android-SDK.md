@@ -371,16 +371,14 @@ OCR.getInstance().recognizeIDCard(param, new OnResultListener<IDCardResult>() {
 |错误码 | 错误信息 | 说明 | 备注 |
 |---|---|---|---|
 |110 | Access token invalid or no longer valid |Access Token过期失效| 请重新获得有效的Token |
-|283501 | License file check error| 授权文件不匹配 |请在[控制台](https://console.bce.baidu.com/ai/#/ai/ocr/overview/index)中配置正确的包名，并确认使用了正确的授权文件|
-|283502 | App identifier unmatch | BundleId不匹配 |请在[控制台](https://console.bce.baidu.com/ai/#/ai/ocr/overview/index)中配置正确的包名，并确认使用了正确的授权文件|
-|283503 | License file not exists | 请确认aip.licence文件存在于assets文件夹中| 
+|283501 | License file check error| 授权文件不匹配 |请在[官网](http://ai.baidu.com)中配置正确的包名，并确认使用了正确的授权文件|
+|283502 | App identifier unmatch | BundleId不匹配 |请在[官网](http://ai.baidu.com)中配置正确的包名，并确认使用了正确的授权文件|
 |283504 | Network error | 网络请求失败| 请授权App网络权限并保证网络通畅|
 |283505 | Server illegal response | 服务器返回数据异常 | |
-|283506 | Load jni so library error | JNI加载异常| 请确认开发包中的so库被正确加载 |
-|283601 | Server authentication error |身份验证错误。| 请在[控制台](https://console.bce.baidu.com/ai/#/ai/ocr/overview/index)中配置应用，并确认填写了正确的AK/SK，或使用了正确的授权文件|
-|283602 | Authentication time error | 时间戳不正确，可能是设备时间异常。 | 请确保不要改变调用设备的本地时间|
-|283604 | App identifier unmatch | 错误的PackageName或者BundleId |请在[控制台](https://console.bce.baidu.com/ai/#/ai/ocr/overview/index)中配置正确的包名，并确认使用了正确的授权文件 |
-|283700 | Server internal error | 服务器内部错误 | 您可以在工单系统中提交错误信息中的logId，我们将尝试帮您排查错误原因|
+|283601 | Server authentication error |身份验证错误。| 请在[官网](http://ai.baidu.com)中配置应用，并确认填写了正确的AK/SK，或使用了正确的授权文件|
+|283602 | Authentication time error | 时间戳不正确，可能是设备时间异常。 | |
+|283604 | App identifier unmatch | 错误的PackageName或者BundleId | |
+|283700 | Server internal error | 服务器内部错误 | |
 
 
 
@@ -415,7 +413,4 @@ OCR.getInstance().recognizeIDCard(param, new OnResultListener<IDCardResult>() {
 
 | 上线日期      | 版本号  | 更新内容                        |
 | --------- | ---- | --------------------------- |
-| 2017.3.23  | 1.0.1  | 更新demo获取token失败的错误提示的交互|
 | 2017.3.16  | 1.0.0  | 在线OCR第一版！|
-
-

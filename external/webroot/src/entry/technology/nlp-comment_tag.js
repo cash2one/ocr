@@ -7,6 +7,10 @@ import $ from 'jquery';
 
 import 'less/technology/nlp-comment_tag.less';
 
+/* eslint-disable */
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/nlp-comment_tag.html';
+/* eslint-enable */
+
 const ATTITUDE = {
     NEGATIVE: 0,
     POSITIVE: 1,

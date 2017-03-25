@@ -98,28 +98,23 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 ## 通用错误码
 
-| 错误码    | 错误信息                    | 描述        |
-| ------ | ----------------------- | --------- |
-| 216015 | module closed           | 模块关闭      |
-| 216100 | invalid param           | 非法参数      |
-| 216101 | not enough param        | 参数数量不够    |
-| 216102 | service not support     | 业务不支持     |
-| 216103 | param too long          | 参数太长      |
-| 216110 | appid not exist         | APP ID不存在 |
-| 216111 | invalid userid          | 非法用户ID    |
-| 216200 | empty image             | 空的图片      |
-| 216201 | image format error      | 图片格式错误    |
-| 216202 | image size error        | 图片大小错误    |
-| 216300 | db error                | DB错误      |
-| 216400 | backend error           | 后端系统错误    |
-| 216401 | internal error          | 内部错误      |
-| 216500 | unknown error           | 未知错误      |
-| 282200 | internal error          | 业务逻辑层内部错误 |
-| 282201 | backend error           | 后端服务错误    |
-| 282202 | antiporn detect timeout | 检测超时      |
-| 282203 | image frame size error  | gif单帧大小超限 |
-| 282204 | image frames limit 500  | gif总帧数超限  |
-| 282205 | image fromat must gif   | 图片格式错误    |
+| 错误码 | 错误信息 | 描述 |
+| --- | --- | --- |
+| 216015 | module closed | 模块关闭 |
+| 216100 | invalid param | 非法参数 |
+| 216101 | not enough param | 参数数量不够 |
+| 216102 | service not support | 业务不支持 |
+| 216103 | param too long | 参数太长 |
+| 216110 | appid not exist | APP ID不存在 |
+| 216111 | invalid userid | 非法用户ID |
+| 216200 | empty image | 空的图片 |
+| 216201 | image format error | 图片格式错误 |
+| 216202 | image size error | 图片大小错误 |
+| 216300 | db error | DB错误 |
+| 216400 | backend error | 后端系统错误 |
+| 216401 | internal error | 内部错误 |
+| 216402 | face not found | 没有找到人脸 |
+| 216500 | unknown error | 未知错误 |
 
 # 黄反识别
 
@@ -135,8 +130,8 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 * URL参数：<br>
 
-| 参数           | 值                                        |
-| ------------ | ---------------------------------------- |
+| 参数           | 值                                 |
+| ------------ | --------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
 * Header如下：
@@ -198,100 +193,5 @@ result: [
 | class_name  | string | 是    | 分类结果名称  | 色情               |
 | probability | double | 是    | 分类结果置信度 | 0.89471650123596 |
 
-# GIF色情图像识别
-
-**接口描述**
-
-该请求用于鉴定GIF图片的色情度，对于非gif接口，请使用[黄反识别接口](#黄反识别)。接口会对图片中每一帧进行识别，并返回所有检测结果中色情值最大的为结果。目前支持三个维度：色情、性感、正常。
-
-**调用方式一请求示例**
-
-* HTTP 方法： POST
-
-* 请求URL： `https://aip.baidubce.com/rest/2.0/antiporn/v1/detect_gif`
-
-* URL参数：<br>
-
-| 参数           | 值                                        |
-| ------------ | ---------------------------------------- |
-| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
-
-* Header如下：
-
-| 参数           | 值                                 |
-| ------------ | --------------------------------- |
-| Content-Type | application/x-www-form-urlencoded |
-
-* Body中数据如下：
-
-| 参数    | 值          |
-| ----- | ---------- |
-| image | 图像base64编码 |
-
-
-
-**调用方式二请求示例**
-
-```http
-POST /rest/2.0/antiporn/v1/detect_gif HTTP/1.1
-
-x-bce-date: 2016-10-18T02: 20: 01Z,
-host: aip.baidubce.com,
-accept: */*,
-authorization: bce-auth-v1/fbf9f7889585498d8ba8a68da26cbb2e/2016-10-18T02: 20: 01Z/1800/host/6c7cb35358b5c870666d14588af648e8c941a8b2300becd97831803198ee7a6d
-
-image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
-```
-
-**请求参数**
-
-| 参数    | 类型     | 是否必须 | 说明             |
-| ----- | ------ | ---- | -------------- |
-| image | string | 是    | 图像数据，base64编码。 |
-
-**访问限制**
-| 检查项       | 限制条件            |
-| --------- | --------------- |
-| 图片格式      | gif             |
-| 每帧编码后大小   | < 4M            |
-| 帧数        | 不超过500          |
-| GIF图片整体大小 | base64编码后不超过20M |
-
-**返回示例**
-
-```
-{
-   "frame_count":9,
-   "result":[
-      {
-         "probability":0.006611,
-         "class_name":"色情"
-      },
-      {
-         "probability":0.100528,
-         "class_name":"性感"
-      },
-      {
-         "probability":0.89286,
-         "class_name":"正常"
-      }
-   ],
-   "result_num":3,
-   "porn_probability":0.006611,
-   "logid":616892616
-}
-```
-
-**返回参数**
-
-| 参数               | 类型            | 是否必须 | 描述                          |
-| :--------------- | :------------ | :--- | :-------------------------- |
-| log_id           | uint64        | 是    | 请求标识码，随机数，唯一                |
-| frame_count      | uint64        | 是    | gif总帧数                      |
-| porn_probability | double        | 是    | 色情识别置信度                     |
-| result_num       | Int           | 是    | 返回结果数目，即：result数组中元素个数      |
-| result           | Array[Object] | 是    | 结果数组，每项内容对应一个分类维度的结果        |
-| +class_name      | String        | 是    | 分类结果名称，示例：色情                |
-| +probability     | double        | 是    | 分类结果置信度，示例：0.89471650123596 |
 
 
