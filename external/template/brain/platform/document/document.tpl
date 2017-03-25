@@ -65,7 +65,7 @@
                                 <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
                                 <li>
                                     <a href="/tech/ocr/general_enhanced" id="ocr-enhanced-link">
-                                    通用文字识别（含生僻字版）
+                                        通用文字识别（含生僻字版）
                                     </a>
                                 </li>
                             </ul>
@@ -172,10 +172,7 @@
                         <li><a href="/support/video">教学视频</a></li>
                         <li><a href="/support/faq">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
-                        <li>
-                            <a href="http://developer.baidu.com/forum#ai"
-                               target="_blank">技术论坛</a>
-                        </li>
+                        <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
                     </ul>
                 </li>
@@ -184,38 +181,20 @@
         <div class="login">
             <ul>
                 {%if $userInfo eq Null%}
-                <li>
-                    <a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com"
-                       target="_blank">登录</a>
-                </li>
-                <li>
-                    <a class="btn-primary free-demo ai-redirect"
-                       role="button"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
-                </li>
+                <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 {%if $userInfo.internalLink !== Null%}
-                <li>
-                    <a class="btn-other internal-link"
-                       target="_blank"
-                       role="button"
-                       href="{%$userInfo.internalLink%}">内部版本 </a>
-                </li>
+                <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
                 {%/if%}
                 <li>
-                    <a class="console ai-redirect"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
+                    <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li>
-                            <a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com"
-                               target="_blank">退出</a>
-                        </li>
+                        <li><a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -223,8 +202,7 @@
         </div>
     </div>
 </header>
-<div class="ai-platform page-content">
-    <!-- htmlcs-disable -->
+<!-- htmlcs-disable -->
 <div class="doc-wrap">
     <div class="sidebar sidebar-fixed">
         <h1 style="width: 260px;">新手指南<i class="nav-plus1 pm-button"></i></h1>
@@ -769,109 +747,6 @@
     </div>
 </div>
 
-</div>
-<aside class="aside-action">
-    <ul>
-        <li class="consult">
-            <a id="ai-consult" data-spec="合作咨询"></a>
-        </li>
-        <li class="feedback">
-            <a data-spec="在线咨询"
-               href="https://ikefu.baidu.com/web/ai-platform"
-               target="_blank"
-               id="feedback-btn"></a>
-        </li>
-        <li class="back-top">
-            <a data-spec="返回顶部"></a>
-        </li>
-    </ul>
-</aside>
-<footer class="footer-nav">
-    <div class="container clear-float">
-        <div class="footer-links">
-            <nav class="quick-path">
-                <h3>控制台入口</h3>
-                <ul>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
-                           target="_blank">百度语音</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index"
-                           target="_blank">文字识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index"
-                           target="_blank">人脸识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index"
-                           target="_blank">自然语言处理</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
-                           target="_blank">黄反识别</a>
-                    </li>
-                </ul>
-            </nav>
-            <nav class="resource">
-                <h3>资源</h3>
-                <ul>
-                    <li><a href="/docs">新手指南</a></li>
-                    <li><a href="/docs">技术文档</a></li>
-                    <li><a href="/sdk">SDK下载</a></li>
-                </ul>
-            </nav>
-            <nav class="support">
-                <h3>支持与帮助</h3>
-                <ul>
-                    <li><a href="/support/video">教学视频</a></li>
-                    <li><a href="/support/faq">常见问题</a></li>
-                    <li><a href="/support/news">新闻中心</a></li>
-                    <li><a href="/support/about">关于我们</a></li>
-                </ul>
-            </nav>
-            <nav class="focus">
-                <h3>关注百度大脑</h3>
-                <div class="qr-code"></div>
-                <p>扫码关注官方公众号</p>
-                <a class="email-subscribe">邮件订阅</a>
-            </nav>
-        </div>
-        <div class="news">
-            <h3>新闻动态</h3>
-            <div class="news-container"></div>
-        </div>
-    </div>
-    <div class="container">
-        <nav class="friendly-links">
-            <h3>友情链接</h3>
-            <ul>
-                <li><a href="http://www.paddlepaddle.org/cn/index.html" target="_blank">PaddlePaddle机器学习平台</a></li>
-                <li><a href="http://yuyin.baidu.com/" target="_blank">百度语音</a></li>
-                <li><a href="http://fanyi.baidu.com/" target="_blank">百度翻译</a></li>
-                <li><a href="http://idl.baidu.com/" target="_blank">百度深度学习实验室</a></li>
-                <li><a href="http://bdp.baidu.com/" target="_blank">百度大数据+</a></li>
-                <li><a href="http://datamart.baidu.com/" target="_blank">百度大数据+数据开放平台</a></li>
-                <li><a href="http://recsys.baidu.com/" target="_blank">Recsys推荐云平台</a></li>
-                <li><a href="https://cloud.baidu.com/?t=cp:online-media%7Cci:%7Ccn:ai" target="_blank">百度云</a></li>
-                <li><a href="http://www.chuanke.com/" target="_blank">百度传课</a></li>
-                <li><a href="http://app.baidu.com" target="_blank">百度开发者平台</a></li>
-                <li><a href="http://zhongbao.baidu.com" target="_blank">百度数据众包</a></li>
-                <li><a href="http://union.baidu.com" target="_blank">百度联盟</a></li>
-                <li><a href="http://tongji.baidu.com" target="_blank">百度统计</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="container">
-        <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
-    </div>
-</footer>
 <script src="//ai.bdstatic.com/dist/1490342487/js/common.bundle.js"></script>
 <script src="//ai.bdstatic.com/dist/1490342487/js/document/document.js"></script>
 <script>

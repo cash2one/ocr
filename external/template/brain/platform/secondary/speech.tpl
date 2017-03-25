@@ -172,10 +172,7 @@
                         <li><a href="/support/video">教学视频</a></li>
                         <li><a href="/support/faq">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
-                        <li>
-                            <a href="http://developer.baidu.com/forum#ai"
-                               target="_blank">技术论坛</a>
-                        </li>
+                        <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
                     </ul>
                 </li>
@@ -184,38 +181,20 @@
         <div class="login">
             <ul>
                 {%if $userInfo eq Null%}
-                <li>
-                    <a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com"
-                       target="_blank">登录</a>
-                </li>
-                <li>
-                    <a class="btn-primary free-demo ai-redirect"
-                       role="button"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
-                </li>
+                <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 {%if $userInfo.internalLink !== Null%}
-                <li>
-                    <a class="btn-other internal-link"
-                       target="_blank"
-                       role="button"
-                       href="{%$userInfo.internalLink%}">内部版本 </a>
-                </li>
+                <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
                 {%/if%}
                 <li>
-                    <a class="console ai-redirect"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
+                    <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li>
-                            <a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com"
-                               target="_blank">退出</a>
-                        </li>
+                        <li><a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -235,8 +214,7 @@
         </div>
         <div class="tech-banner-btn-list">
             <a role="button"
-               class="btn-primary media ai-redirect"
-               target="_blank"
+               class="btn-primary media"
                href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">
                 立即使用
             </a>
@@ -266,13 +244,11 @@
                         将声音转为文字，精度高速度快支持多场景智能语音交互
                     </div>
                     <div class="tech-prod-panel">
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
-                           target="_blank">立即使用</a>
-                        <a href="http://ai.baidu.com/tech/speech/asr">了解详情</a>
+                        <a href="">立即使用</a>
+                        <a href="">了解详情</a>
                     </div>
                 </div>
-                <div class="tech-prod-poster tech-prod-poster-1"></div>
+                <div class="tech-prod-poster-1"></div>
             </div>
             <div class="tech-prod-container">
                 <div class="tech-prod-info">
@@ -281,10 +257,8 @@
                         基于业界领先的深度神经网络技术将文字转为声音，让您的应用开口说话
                     </div>
                     <div class="tech-prod-panel">
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
-                           target="_blank">立即使用</a>
-                        <a href="http://ai.baidu.com/tech/speech/tts">了解详情</a>
+                        <a href="">立即使用</a>
+                        <a href="">了解详情</a>
                     </div>
                 </div>
                 <div class="tech-prod-poster-2"></div>
@@ -296,7 +270,8 @@
                         支持特定语音多指令操作轻量级，低功耗，快速唤醒您的应用，打造流畅对话
                     </div>
                     <div class="tech-prod-panel">
-                        <a href="http://ai.baidu.com/tech/speech/wake">了解详情</a>
+                        <a href="">立即使用</a>
+                        <a href="">了解详情</a>
                     </div>
                 </div>
                 <div class="tech-prod-poster-3"></div>
@@ -304,8 +279,6 @@
         </div>
     </div>
 </div>
-
-{%literal%}
 <div class="tech-section tech-case">
     <div class="tech-case-list">
         <div class="tech-case-item tech-case-item-1 tech-case-active">
@@ -319,15 +292,14 @@
                     <div>主要服务：语音合成</div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/speech/customer-1-1.png" alt="">
                         <div>
+                            <img src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/exp/whcrop=160,120/sign=91a57bcff303918fd7846b883e4d1ba6/8718367adab44aeddcf192cbb71c8701a18bfb66.jpg" alt="">
                             百度地图
                         </div>
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/speech/customer-1-2.png" alt="">
                         <div>
-                            Baidu Carlife
+                            <img src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/exp/whcrop=160,120/sign=91a57bcff303918fd7846b883e4d1ba6/8718367adab44aeddcf192cbb71c8701a18bfb66.jpg" alt="">
+                            百度地图
                         </div>
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/speech/customer-1-3.png" alt="">
                     </div>
                 </div>
             </div>
@@ -341,14 +313,6 @@
                     <div>业务痛点：阅读文章久了，眼睛会疲劳；也希望能在运动或者家务等过程中，还可以进行阅读，有效利用时间</div>
                     <div>如何解决：利用百度语音合成技术进行高质量朗读，解放双眼，畅听世界</div>
                     <div>主要服务：语音合成</div>
-                    <div class="tech-case-coop">
-                        <div>合作案例:</div>
-                        <div>阅读书城</div>
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/speech/customer-2-1.png" alt="百度地图">
-                        <div>iReader</div>
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/speech/customer-2-2.png" alt="">
-                        <div>塔读文学</div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -361,16 +325,6 @@
                     <div>业务痛点：很多老人不会使用拼音输入</div>
                     <div>如何解决：可以通过语音输入用户的搜索关键词，直接匹配出搜索结果，利用百度语音识别技术进行搜索的效率是拼音输入搜索的183.46%</div>
                     <div>主要服务：语音识别</div>
-                    <div class="tech-case-coop">
-                        <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/speech/customer-3-1.png" alt="">
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/speech/customer-3-2.png" alt="">
-                        <div>去哪儿旅行</div>
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/speech/customer-3-3.png" alt="">
-                        <div>乐视语音助手</div>
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/speech/customer-3-4.png" alt="">
-                        <div>陌陌</div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -387,7 +341,6 @@
         </div>
     </div>
 </div>
-{%/literal%}
 
 <div class="ai-container tech-section tech-feature">
     <div class="tech-feature-title">产品优势</div>
@@ -431,9 +384,9 @@
     <div class="tech-guide-title">使用指南</div>
     <div class="ai-container">
         <div class="tech-guide-links">
-            <a href="http://ai.baidu.com/docs">新手指南</a>
-            <a href="http://ai.baidu.com/docs#Speech-Asr-O2OAndroidSDK">技术文档</a>
-            <a href="http://ai.baidu.com/sdk#sdk-category-bs">SDK下载</a>
+            <a href="">新手指南</a>
+            <a href="">技术文档</a>
+            <a href="">SDK下载</a>
         </div>
         <div class="tech-guide-route">
             <div class="tech-guide-step">
@@ -460,22 +413,19 @@
     </div>
 </div>
 
-{%if $userInfo eq Null%}
 <div class="tech-section get-started tech-free">
     <div class="ai-container">
         <div class="tech-free-title">立即获取免费API Key</div>
         <div class="tech-free-info">现在试用，获取免费API Key，免费调用各项开放能力API</div>
         <div class="tech-free-btn">
             <a role="button"
-               class="btn-primary large ai-redirect"
-               target="_blank"
-               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">
+               class="btn-primary large"
+               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">
                 免费试用
             </a>
         </div>
     </div>
 </div>
-{%/if%}
 
 </div>
 <aside class="aside-action">
@@ -500,31 +450,11 @@
             <nav class="quick-path">
                 <h3>控制台入口</h3>
                 <ul>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
-                           target="_blank">百度语音</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index"
-                           target="_blank">文字识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index"
-                           target="_blank">人脸识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index"
-                           target="_blank">自然语言处理</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
-                           target="_blank">黄反识别</a>
-                    </li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
                 </ul>
             </nav>
             <nav class="resource">
