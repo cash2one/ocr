@@ -2,30 +2,30 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{%$title%}</title>
+    <title>{$title}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="{%$keyword%}">
-    <meta name="description" content="{%$description%}">
+    <meta name="keywords" content="{$keyword}">
+    <meta name="description" content="{$description}">
     <meta name="baidu-site-verification" content="GOPjfm49Yc" />
     <script src="https://hm.baidu.com/hm.js?fdad4351b2e90e0f489d7fbfc47c8acf"></script>
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
+    <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="/ai_dist/1490342487/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490342487/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="/ai_dist/1490342487/css/base.style.css">
-    <link rel="stylesheet" href="/ai_dist/1490342487/css/newDocument/newDocument.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490342487/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490342487/css/newDocument/newDocument.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="/ai_dist/1490342487/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1490342487/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -180,30 +180,31 @@
         </nav>
         <div class="login">
             <ul>
-                {%if $userInfo eq Null%}
+                {if $userInfo eq Null}
                 <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
                 <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
-                {%/if%}
-                {%if $userInfo != Null%}
-                {%if $userInfo.internalLink !== Null%}
-                <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
-                {%/if%}
+                {/if}
+                {if $userInfo != Null}
+                {if $userInfo.internalLink !== Null}
+                <li><a class="btn-other internal-link" role="button" href="{$userInfo.internalLink}">内部版本</a></li>
+                {/if}
                 <li>
                     <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
-                    <a>{%$userInfo.uname%}</a>
+                    <a>{$userInfo.uname}</a>
                     <ul class="sub-top-nav">
                         <li><a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
-                {%/if%}
+                {/if}
             </ul>
         </div>
     </div>
 </header>
-<script src="/ai_dist/1490342487/js/common.bundle.js"></script>
-<script src="/ai_dist/1490342487/js/newDocument/newDocument.js"></script>
+<div id="app"></div>
+<script src="//ai.bdstatic.com/dist/1490342487/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1490342487/js/newDocument/newDocument.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');
