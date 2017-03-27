@@ -5,8 +5,7 @@
              @click="$emit('clickanchor', anchorData.id)">
             <div v-if="anchorData.level === 1"
                  class="lite-index">
-                {{anchorData.index|prefixIndex}}
-            </div>
+                {{anchorData.index|prefixIndex}}</div>
             <div v-if="anchorData.level === 2"
                  class="lite-spot">·</div>
         </div>

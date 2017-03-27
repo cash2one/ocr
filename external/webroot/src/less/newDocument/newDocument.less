@@ -35,7 +35,14 @@ body {
     font-size: 14px;
 }
 
-.anchor-list {
+.category,
+.anchor-list,
+.anchor-list-lite {
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 // 几个主要部分的宽度, 没有分拆到单独文件中

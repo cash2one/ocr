@@ -8,8 +8,8 @@ const fs = require('fs');
 
 const express = require('express');
 
-const renderSmarty = require('./lib/renderSmarty');
-const getMockData = require('./lib/getMockData');
+const renderSmarty = require('./util/renderSmarty');
+const getMockData = require('./util/getMockData');
 
 const app = express();
 const port = 8088;

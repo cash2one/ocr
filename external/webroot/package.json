@@ -64,9 +64,9 @@
     "request": "^2.81.0",
     "smarty.js": "^3.2.0",
     "superagent": "^3.5.2",
-    "vue": "^2.2.5",
+    "vue": "^2.2.6",
     "vue-loader": "^11.3.3",
     "vue-router": "^2.3.0",
-    "vue-template-compiler": "^2.2.5"
+    "vue-template-compiler": "^2.2.6"
   }
 }
