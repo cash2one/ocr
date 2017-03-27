@@ -3,6 +3,8 @@
     height: 48px;
     line-height: 48px;
     cursor: pointer;
+    // 为了选中遮盖右侧边框效果
+    z-index: 2;
 
     &:hover {
         color: #0073eb;
@@ -11,20 +13,37 @@
 
 .level-1.tree-node {
     padding-left: 1 * 20px;
+    color: #333;
 }
 
 .level-2.tree-node {
     padding-left: 2 * 20px;
+    font-size: 12px;
+    color: #666;
 }
 
 .level-3.tree-node {
     padding-left: 3 * 20px;
+    font-size: 12px;
+    color: #999;
 }
 
 .node-selected {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    position: relative;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    background-color: #fff;
     color: #0073eb;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -1px;
+        width: 1px;
+        background-color: #fff;
+    }
 }
 
 .leaf-dot,
@@ -33,28 +52,21 @@
     vertical-align: top;
 }
 
-.leaf-node {
-}
-
-.leaf-text {
-    font-size: 14px;
-}
-
 // 叶子节点前的小点，左右垂直居中
 .leaf-dot {
     position: relative;
-    width: 20px;
+    width: 15px;
     height: 100%;
 
     &:after {
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 8px;
-        height: 8px;
+        width: 4px;
+        height: 4px;
         content: "";
         transform: translate(-50%, -50%);
         border-radius: 50%;
-        background-color: #000;
+        background-color: #ccc;
     }
 }

@@ -20,7 +20,7 @@
                  @click="selectNode(item.md)"
                  class="tree-node leaf-node"
                  :class="getLeafNodeClass(item.md)">
-                <div class="leaf-dot"></div>
+                <div class="leaf-dot" v-if="level === 3"></div>
                 <div class="leaf-text">{{item.text}}</div>
             </div>
         </template>

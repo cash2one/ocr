@@ -1,5 +1,5 @@
-@category-width: 280px;
-@anchor-list-width: 190px;
+@category-width: 240px;
+@anchor-list-width: 150px;
 @anchor-list-lite-width: 60px;
 
 html,
@@ -50,6 +50,18 @@ body {
     left: 0;
     width: @category-width;
     background-color: #fafafa;
+
+    // 不使用border，为了选中后遮盖border的效果
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 1px;
+        background-color: #ebebeb;
+        z-index: 1;
+    }
 }
 
 .anchor-list {

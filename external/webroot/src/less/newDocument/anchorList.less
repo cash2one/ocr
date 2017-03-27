@@ -40,12 +40,14 @@
     }
 
     .anchor-text {
+        color: #666;
     }
 }
 
 .anchor-level-2 {
     box-sizing: border-box;
     padding-left: 1 * @level-padding;
+    color: #999;
 
     .anchor-dot,
     .anchor-text {
@@ -62,11 +64,11 @@
             position: absolute;
             left: 50%;
             top: 50%;
-            width: 8px;
-            height: 8px;
+            width: 5px;
+            height: 5px;
             content: "";
             transform: translate(-50%, -50%);
-            background-color: #000;
+            background-color: #999;
             border-radius: 50%;
         }
     }
@@ -74,17 +76,21 @@
     .anchor-text {
         // 1px是border
         max-width: @anchor-list-width - @level-padding - @dot-width - 1;
+        color: #999;
     }
 }
 
 // 当前阅读的标题的样式
 .anchor-reached {
     background-color: #0073eb;
-    color: #fff;
 
     .anchor-dot {
         &:after {
             background-color: #fff;
         }
+    }
+
+    .anchor-text {
+        color: #fff;
     }
 }
