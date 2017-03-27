@@ -8,7 +8,7 @@ import $ from 'jquery';
 import throttle from 'lodash.throttle';
 
 import '../common/tech-case';
-import '../../less/technology/ocr-general_enhanced.less';
+import '../../less/technology/ocr-general_location.less';
 import getBase64ByFileReader from '../util/getBase64ByFileReader';
 
 /* eslint-disable */
@@ -16,8 +16,8 @@ const formatImg = require('../../../ai_images/error/image-format.png');
 const tooLargeImg = require('../../../ai_images/error/too-large.png');
 const noResult = require('../../../ai_images/error/no-general-result.png');
 const timeoutImg = require('../../../ai_images/error/timeout.png');
-import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/ocr-general_enhanced.html';
 // fixme 很不合理
+
 /* eslint-enable */
 
 const $window = $(window);
@@ -134,10 +134,10 @@ const showResult = data => {
             '    <thead>',
             '        <tr>',
             '            <th rowspan="2" style="width:20px;">编号</th>',
-            '            <th colspan="5">识别结果</th>',
+            '            <th rowspan="2" style="width:250px;">识别结果</th>',
+            '            <th colspan="4">识别结果</th>',
             '        </tr>',
             '        <tr>',
-            '            <th style="width:250px;">文字</th>',
             '            <th>left</th>',
             '            <th>top</th>',
             '            <th>width</th>',

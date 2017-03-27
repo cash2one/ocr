@@ -12,16 +12,6 @@ import AlertModal from '../../component/widget/alertModal';
 import 'less/technology/ocr-general.less';
 
 /* eslint-disable */
-const demoImgPath = [
-    require('../../../ai_images/technology/ocr-general/demo-card-1.png'),
-    require('../../../ai_images/technology/ocr-general/demo-card-2.png'),
-    require('../../../ai_images/technology/ocr-general/demo-card-3.png'),
-    require('../../../ai_images/technology/ocr-general/demo-card-4.png'),
-    require('../../../ai_images/technology/ocr-general/demo-card-5.png'),
-    require('../../../ai_images/technology/ocr-general/demo-card-6.jpg'),
-    require('../../../ai_images/technology/ocr-general/demo-card-7.png'),
-    require('../../../ai_images/technology/ocr-general/demo-card-8.png')
-];
 
 
 import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/ocr-general.html';
@@ -97,10 +87,6 @@ $(document).ready(function () {
                         '<tr>',
                             '<td>' + (i + 1) + '</td>',
                             '<td>' + record.words + '</td>',
-                            '<td>' + record.location.left + '</td>',
-                            '<td>' + record.location.top + '</td>',
-                            '<td>' + record.location.width + '</td>',
-                            '<td>' + record.location.height + '</td>',
                         '</tr>'
                     ].join(''));
                 }
@@ -185,11 +171,6 @@ $(document).ready(function () {
     });
 
     const $demoCardImgList = $('.demo-card-list > li');
-    $demoCardImgList.each(function (index, item) {
-        $(item)
-            .find('img')
-            .attr('src', `${demoImgPath[index]}`);
-    });
 
     // 绑定实例图点击事件
     $demoCardImgList.click(function () {

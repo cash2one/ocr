@@ -6,27 +6,31 @@
 @import '../common/tech-commom.less';
 @import '../common/tech-guid.less';
 @import '../common/modal.less';
+@import '../common/helper.less';
 
 // 技术单页前缀
 @prefix: tech;
-
+@intro: url('../../../ai_images/technology/ocr-general_location/intro.png');
 // 调用通用的banner模块
 .@{prefix}-banner {
-    .banner(@page-name: ocr-general_enhanced);
+    .banner(@page-name: ocr-general_location);
+    &-title {
+        width: 500px;
+    }
 }
 // 调用通用的tech-feature模块
 .@{prefix}-feature {
-    .tech-feature(@page-name: ocr-general_enhanced, @icon-num: 3)
+    .tech-feature(@page-name: ocr-general_location, @icon-num: 3)
 }
 
 // 调用通用的apply-scenario模块
 .@{prefix}-scenario {
-    .apply-scenario(@page-name: ocr-general_enhanced, @icon-num: 3);
+    .apply-scenario(@page-name: ocr-general_location, @icon-num: 6);
 }
 
 // 调用通用的tech-case模块
 .@{prefix}-case {
-    .tech-case(@page-name: ocr-general_enhanced; @num: 2; @case-logo: ture;);
+    .tech-case(@page-name: ocr-general_location; @num: 6; @case-logo: ture;);
 
     &-item-1 {
         .tech-case-item-logo {
@@ -39,7 +43,7 @@
 // 功能介绍
 .@{prefix}-function {
     height: 450px;
-    background: url(../../../ai_images/technology/ocr-general_enhanced/intro-bg.png) no-repeat top center;
+    background: url(../../../ai_images/technology/ocr-general_location/intro-bg.png) no-repeat top center;
     background-size: cover;
     text-align: center;
     color: @white;
@@ -52,7 +56,7 @@
 
     // 功能介绍简介
     &-info {
-        width: 870px;
+        width: 685px;
         margin: 0 auto;
         line-height: 25 / 14;
     }
@@ -68,16 +72,16 @@
         vertical-align: top;
         width: 400px;
         height: 250px;
-        background: url(../../../ai_images/technology/ocr-general_enhanced/tech-function-original-card.png) no-repeat;
         overflow: hidden;
+        .icon(@intro, -10px, -310px);
 
         &:before {
             content: '';
             display: block;
             width: 400px;
             height: 132px;
-            background: url(../../../ai_images/technology/ocr-general_enhanced/tech-function-mask.png) no-repeat;
             transform: translate(0, -132px);
+            .icon(@intro, -552px, -310px);
         }
 
 
@@ -89,7 +93,7 @@
         }
 
         &.tech-function-scanned {
-            // background: url(../../../ai_images/technology/ocr-uncommon/tech-function-original-scanned.png) no-repeat;
+            .icon(@intro, -10px, -11px);
         }
     }
 
@@ -99,7 +103,7 @@
         width: 130px;
         height: 160px;
         margin-top: 55px;
-        background: url(../../../ai_images/technology/ocr-general_enhanced/sprite/tech-function-arrow.png) no-repeat;
+        .icon(@intro, -410px, -66px);
     }
 
     &-scan-result {
@@ -107,10 +111,9 @@
         vertical-align: top;
         width: 400px;
         height: 250px;
-        background: url(../../../ai_images/technology/ocr-general_enhanced/tech-function-scan-result.png) no-repeat;
         opacity: 0;
         transition: opacity 1.5s ease-out;
-
+        background: url(../../../ai_images/technology/ocr-general_location/tech-function-scan-result.png) no-repeat;
         &.tech-function-scanned {
             opacity: 1;
         }
@@ -390,4 +393,107 @@
 
 #orc-enhanced-title {
     font-size: 35px;
+}
+
+.@{prefix}-free-product {
+    padding: 50px 0 40px;
+    background-color: #ffffff;
+    text-align: center;
+    .ai-container-product {
+        display: block;
+        width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+    &-title {
+        padding-bottom: 20px;
+        color: #333;
+        font-size: 30px;
+    }
+    &-info {
+        padding-bottom: 30px;
+        font-size: 16px;
+        color: #666;
+    }
+    &-wrapper {
+        position: relative;
+        width: 1200px;
+        height: 240px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 20px;
+        .product-box-1 {
+            position: absolute;
+            height: 240px;
+            width: 595px;
+            .product-box-body-header {
+                display: inline-block;
+                width: 50%;
+                float: left;
+            }
+            .product-box-body-connent {
+                display: inline-block;
+                width: 50%;
+                float: left;
+                // font-weight: bold;
+                color: rgba(0, 0, 0, 0.6);
+            }
+            .product-box-body-foot {
+                float: left;
+            }
+        }
+        .product-box-2 {
+            position: absolute;
+            right: 0;
+            height: 120px;
+            width: 595px;
+            .product-box-body-header {
+                display: inline-block;
+                width: 25%;
+                float: left;
+            }
+            .product-box-body-connent {
+                display: inline-block;
+                width: 25%;
+                float: left;
+                // font-weight: bold;
+                color: rgba(0, 0, 0, 0.6);
+            }
+        }
+        .product-box-3 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 100px;
+            width: 595px;
+            .product-box-body-connent {
+                height: 65px;
+                padding-top: 5px;
+            }
+            .product-error-query {
+                color: #0073eb;
+            }
+        }
+        .product-box-head {
+            height: 30px;
+            font-size: 16px;
+            text-align: left;
+            padding-left: 20px;
+            line-height: 30px;
+            font-weight: bold;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+        }
+        .product-box-body {
+            text-align: left;
+            padding-left: 20px;
+            display: inline-block;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            border-top: 0;
+            div {
+                height: 30px;
+                line-height: 30px;
+            }
+        }
+    }
 }
