@@ -93,11 +93,33 @@ body {
 
 .anchor-mode-switch {
     position: absolute;
+    top: 15px;
     left: 0;
-    width: 20px;
-    height: 40px;
-    background-color: red;
+    width: 18px;
+    height: 25px;
+    border: 1px solid #ebebeb;
+    background-color: #fafafa;
     cursor: pointer;
+}
+
+.switch-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    transform-origin: 50% 50%;
+    background: url(../../../ai_images/newDocument/icons/arrow.png);
+    background-size: contain;
+    transition: transform .2s linear;
+
+    &.arrow-left {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+
+    &.arrow-right {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
 }
 
 @import "./accordion";

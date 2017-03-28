@@ -9,6 +9,9 @@ import VueRouter from 'vue-router';
 // route container
 import main from './route/main.vue';
 
+// highlight.js皮肤
+import 'highlight.js/styles/color-brewer.css';
+
 Vue.use(VueRouter);
 
 // 挂载路由

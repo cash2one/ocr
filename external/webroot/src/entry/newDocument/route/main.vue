@@ -35,7 +35,9 @@
             </keep-alive>
         </div>
         <div class="main-content" :class="getMainContentClass()" ref="mainContent">
-            <div class="anchor-mode-switch" @click="changeAnchorListMode()"></div>
+            <div class="anchor-mode-switch" @click="changeAnchorListMode()">
+                <div class="switch-arrow" :class="arrowClass"></div>
+            </div>
             <breadCrumb class="bread-crumb"
                         :path="breadCrumbPath"></breadCrumb>
             <docView class="doc-container"
@@ -51,9 +53,6 @@
 <script>
     import request from 'superagent';
     import debounce from 'lodash.debounce';
-
-    // highlight.js皮肤
-    import 'highlight.js/styles/default.css';
 
     // 组件
     import treeMenu from '../component/treeMenu.vue';
@@ -139,6 +138,16 @@
                     case 'full':
                     default:
                         return 'anchorList';
+                }
+            },
+            // 文档目录折展控制按键的class
+            arrowClass() {
+                switch (this.anchorListMode) {
+                    case 'lite':
+                        return 'arrow-left';
+                    case 'full':
+                    default:
+                        return 'arrow-right';
                 }
             }
         },

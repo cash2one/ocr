@@ -9,40 +9,50 @@
     &:hover {
         color: #0073eb;
     }
-}
 
-.level-1.tree-node {
-    padding-left: 20px;
-    color: #333;
-}
-
-.level-2.tree-node {
-    padding-left: 35px;
-    font-size: 12px;
-    color: #666;
-}
-
-.level-3.tree-node {
-    padding-left: 50px;
-    font-size: 12px;
-    color: #999;
-}
-
-.node-selected {
-    position: relative;
-    border-top: 1px solid #ebebeb;
-    border-bottom: 1px solid #ebebeb;
-    background-color: #fff;
-    color: #0073eb;
-
-    &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: -1px;
-        width: 1px;
+    &.node-selected {
+        position: relative;
+        border-top: 1px solid #ebebeb;
+        border-bottom: 1px solid #ebebeb;
         background-color: #fff;
+        color: #0073eb;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -1px;
+            width: 1px;
+            background-color: #fff;
+        }
+    }
+}
+
+.level-1 {
+    color: #333;
+
+    &.tree-node {
+        padding-left: 20px;
+    }
+}
+
+
+.level-2 {
+    color: #666;
+
+    &.tree-node {
+        padding-left: 35px;
+        font-size: 12px;
+    }
+}
+
+.level-3 {
+    color: #999;
+
+    &.tree-node {
+        padding-left: 50px;
+        font-size: 12px;
     }
 }
 
@@ -68,5 +78,29 @@
         transform: translate(-50%, -50%);
         border-radius: 50%;
         background-color: #ccc;
+    }
+}
+
+.non-leaf-node {
+    // 非叶子节点，为箭头做位置参考
+    position: relative;
+}
+
+.non-leaf-arrow {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 8px;
+    height: 8px;
+    transform: translateY(-50%) rotateZ(90deg);
+    transform-origin: 50% 50%;
+    background: url(../../../ai_images/newDocument/icons/arrow.png);
+    background-size: contain;
+    transition: transform .2s linear;
+}
+
+.non-leaf-collapsed {
+    .non-leaf-arrow {
+        transform: translateY(-50%) rotateZ(0);
     }
 }

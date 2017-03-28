@@ -1,21 +1,22 @@
 <template>
     <div>
         <template v-for="(item, index) of items">
-            <div v-if="item.children"
-                 class="tree-node"
-                 :class="componentClass"
-                 @click="toggleAccordion(item.id)">
-                {{item.text}}
-            </div>
-            <treeMenu :items="item.children"
-                      v-if="item.children"
-                      v-show="openedId.indexOf(item.id) >= 0"
-                      :level="level + 1"
-                      :selectedNode="selectedNode"
-                      :openedId="openedId"
-                      @requestopen="toggleAccordion"
-                      @requestcollapse="toggleAccordion"
-                      @selectnode="selectNode"></treeMenu>
+            <template v-if="item.children">
+                <div class="tree-node non-leaf-node"
+                     :class="getNonLeafClass(item.id)"
+                     @click="toggleAccordion(item.id)">
+                    {{item.text}}
+                    <div class="non-leaf-arrow"></div>
+                </div>
+                <treeMenu :items="item.children"
+                          v-show="openedId.indexOf(item.id) >= 0"
+                          :level="level + 1"
+                          :selectedNode="selectedNode"
+                          :openedId="openedId"
+                          @requestopen="toggleAccordion"
+                          @requestcollapse="toggleAccordion"
+                          @selectnode="selectNode"></treeMenu>
+            </template>
             <div v-else
                  @click="selectNode(item.md)"
                  class="tree-node leaf-node"
@@ -49,12 +50,6 @@
                 }
             }
         },
-        data() {
-            return {
-                // 记录目录层级level的class
-                componentClass: [`level-${this.level}`]
-            };
-        },
         methods: {
             // 折展一个手风琴
             toggleAccordion(id) {
@@ -83,6 +78,14 @@
                         md
                     );
                 }
+            },
+            // 获取非叶子节点的class
+            getNonLeafClass(id) {
+                return {
+                    [`level-${this.level}`]: true,
+                    // 代表非叶子节点收起
+                    'non-leaf-collapsed': this.openedId.indexOf(id) < 0
+                };
             }
         }
     }

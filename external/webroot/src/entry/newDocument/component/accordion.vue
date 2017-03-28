@@ -1,6 +1,9 @@
 <template>
     <div>
-        <div class="accordion-title" @click="clickTitle()">{{title}}</div>
+        <div class="accordion-title" @click="clickTitle()">
+            {{title}}
+            <div class="accordion-arrow" :class="arrowClass"></div>
+        </div>
         <div v-show="!collapsed">
             <slot></slot>
         </div>
@@ -19,6 +22,14 @@
             collapsed: {
                 type: Boolean,
                 required: true
+            }
+        },
+        computed: {
+            // 折展箭头的class
+            arrowClass() {
+                return {
+                    'arrow-collapsed': this.collapsed
+                };
             }
         },
         methods: {
