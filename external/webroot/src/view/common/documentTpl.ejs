@@ -180,24 +180,24 @@
         </nav>
         <div class="login">
             <ul>
-                {if $userInfo eq Null}
+                {%if $userInfo eq Null%}
                 <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
                 <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
-                {/if}
-                {if $userInfo != Null}
-                {if $userInfo.internalLink !== Null}
-                <li><a class="btn-other internal-link" role="button" href="{$userInfo.internalLink}">内部版本</a></li>
-                {/if}
+                {%/if%}
+                {%if $userInfo != Null%}
+                {%if $userInfo.internalLink !== Null%}
+                <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
+                {%/if%}
                 <li>
                     <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
-                    <a>{$userInfo.uname}</a>
+                    <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
                         <li><a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
-                {/if}
+                {%/if%}
             </ul>
         </div>
     </div>
