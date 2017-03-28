@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{$title}</title>
+    <title>{%$title%}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="{$keyword}">
-    <meta name="description" content="{$description}">
+    <meta name="keywords" content="{%$keyword%}">
+    <meta name="description" content="{%$description%}">
     <meta name="baidu-site-verification" content="GOPjfm49Yc" />
     <script src="https://hm.baidu.com/hm.js?fdad4351b2e90e0f489d7fbfc47c8acf"></script>
     <!--[if lt IE 9]>

@@ -7,11 +7,11 @@
             <a role="button"
                class="btn-other media"
                href="
-               {if $src eq Null}
+               {%if $src eq Null%}
                /docs#OCR
-               {else}
+               {%else%}
                https://cloud.baidu.com/doc/OCR/index.html
-               {/if}">
+               {%/if%}">
                 技术文档
             </a>
         </div>
@@ -153,7 +153,7 @@
         <li class="active"><a>百度钱包</a></li>
     </ul>
 </section>
-{if $userInfo eq Null}
+{%if $userInfo eq Null%}
 <section class="tech-section get-started">
     <div class="container">
         <h2>立即获取免费API Key</h2>
@@ -163,8 +163,8 @@
         </div>
     </div>
 </section>
-{/if}
-{if $src eq Null}
+{%/if%}
+{%if $src eq Null%}
 <section class="tech-section tech-guide">
     <div class="container">
         <h2>使用指南</h2>
@@ -185,4 +185,4 @@
         </div>
     </div>
 </section>
-{/if}
+{%/if%}

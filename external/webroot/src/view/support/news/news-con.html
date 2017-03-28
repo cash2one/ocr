@@ -4,18 +4,18 @@
     </div>
 </section>
 <section class="container news-main">
-    <div class="news-title">{$data.title}</div>
+    <div class="news-title">{%$data.title%}</div>
     <div class="news-info-container">
         <div class="news-date" id="news-date"></div>
-        <div class="news-author">{$data.author}</div>
-        <div class="news-view-count">{$data.pv}次浏览</div>
+        <div class="news-author">{%$data.author%}</div>
+        <div class="news-view-count">{%$data.pv%}次浏览</div>
     </div>
     <hr class="news-info-split">
     <div class="news-content">
-        {$data.content}
+        {%$data.content%}
     </div>
 </section>
-{if $userInfo eq Null}
+{%if $userInfo eq Null%}
 <section class="tech-section get-started">
     <div class="container">
         <h2>立即获取免费API Key</h2>
@@ -25,7 +25,7 @@
         </div>
     </div>
 </section>
-{/if}
+{%/if%}
 <script>
     (function () {
         var newsDateContainer = document.getElementById('news-date');
