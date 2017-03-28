@@ -8,21 +8,30 @@
     box-sizing: border-box;
     overflow: auto;
 
+    a {
+        border-bottom: 1px solid rgba(0, 115, 235, .2);
+        color: #0073eb;
+
+        &:hover {
+            border-bottom: 1px solid #0073eb;
+        }
+    }
+
     h1 {
-        margin-bottom: 15px;
-        margin-top: 26px;
-        padding-bottom: 15px;
-        font-size: 18px;
+        // 注意是用margin,不要用padding,为了bfc
+        margin: 40px 0 30px 0;
+        font-size: 24px;
         color: #333;
-        border-bottom: 1px solid #ebebeb;
     }
 
     h2 {
+        margin: 20px 0;
         font-size: 16px;
         color: #666;
     }
 
     h3 {
+        margin: 10px 0;
         font-size: 14px;
         color: #666;
     }
@@ -75,7 +84,7 @@
     }
 
     thead {
-        background-color: #e6f1fd;
+        background-color: #e6f2fd;
         font-size: 12px;
         color: #666;
     }
@@ -86,5 +95,9 @@
         border: 1px solid #ebebeb;
         font-size: 12px;
         color: #666;
+    }
+
+    tr:nth-child(2n) {
+        background-color: #fafafa;
     }
 }
