@@ -9,13 +9,13 @@
         </div>
         <div class="tech-banner-btn-list">
             <a role="button"
-               {%if $src eq Null%}
+               {if $src eq Null}
                class="btn-primary media consult"
                data-operation="cooperation"
-               {%else%}
+               {else}
                class="btn-primary media"
                href="https://cloud.baidu.com/doc/OCR/index.html"
-               {%/if%}>
+               {/if}>
                 免费使用
             </a>
         </div>
@@ -105,7 +105,7 @@
                 <div class="tech-feature-desc-title">准确性高</div>
                 <div class="tech-feature-desc-info">
                     国内首个公有云OCR产品，基于百度深度学习研究院（IDL）强大的深度学习算法和中文检测识别技术，
-                    整图中文识别准确率达85%以上，英文91%以上,文字定位精准。
+                    整图中文识别准确率达85以上，英文91以上,文字定位精准。
                 </div>
             </div>
         </div>
@@ -115,7 +115,7 @@
                 <div class="tech-feature-desc-title">成熟稳定</div>
             <div class="tech-feature-desc-info">
                 经过手机百度词典，手机百度等多款重量级产品实践检验，产品成熟稳定。
-                支持实时文字识别能力、弹性灵活的高并发承载及99.95%的可用性保证
+                支持实时文字识别能力、弹性灵活的高并发承载及99.95的可用性保证
             </div>
             </div>
         </div>
@@ -208,7 +208,7 @@
                 <div class="tech-case-item-title">涂书笔记</div>
                 <div class="tech-case-item-info">
                     涂书笔记是一款纸质书文字摘录APP，入选了“App store 2014年度精选”<br>
-                    用户拍摄书中感兴趣的内容，涂抹要摘录的文字，即可使用OCR技术进行实时识别、记录读书笔记，识别准确率95%以上<br>
+                    用户拍摄书中感兴趣的内容，涂抹要摘录的文字，即可使用OCR技术进行实时识别、记录读书笔记，识别准确率95以上<br>
                     识别速度快，准确率高，减少了用户的输入操作，有效的提高了用户的体验
                 </div>
             </div>
@@ -285,16 +285,16 @@
                 <div class="product-box-body">
                     <div class="product-box-body-header">月调用量</div>
                     <div class="product-box-body-header">单价</div>
-                    <div class="product-box-body-connent">0&lt;调用量&lt;=5w</div>
-                    <div class="product-box-body-connent">0.040元/次</div>
-                    <div class="product-box-body-connent">5w&lt;调用量&lt;=10w</div>
-                    <div class="product-box-body-connent">0.035元/次</div>
-                    <div class="product-box-body-connent">10w&lt;调用量&lt;=20w</div>
-                    <div class="product-box-body-connent">0.030元/次</div>
-                    <div class="product-box-body-connent">20w&lt;调用量&lt;=50w</div>
-                    <div class="product-box-body-connent">0.025元/次</div>
-                    <div class="product-box-body-connent">50w&lt;调用量</div>
-                    <div class="product-box-body-connent">0.20元/次</div>
+                    <div class="product-box-body-connent item">0&lt;调用量&lt;=5w</div>
+                    <div class="product-box-body-connent item">0.040元/次</div>
+                    <div class="product-box-body-connent item">5w&lt;调用量&lt;=10w</div>
+                    <div class="product-box-body-connent item">0.035元/次</div>
+                    <div class="product-box-body-connent item">10w&lt;调用量&lt;=20w</div>
+                    <div class="product-box-body-connent item">0.030元/次</div>
+                    <div class="product-box-body-connent item">20w&lt;调用量&lt;=50w</div>
+                    <div class="product-box-body-connent item">0.025元/次</div>
+                    <div class="product-box-body-connent item">50w&lt;调用量</div>
+                    <div class="product-box-body-connent item">0.20元/次</div>
                     <div class="product-box-body-foot">
                         免费配额：每日500次免费调用次数，超出免费配额，开始计算
                     </div>
@@ -330,39 +330,39 @@
         </div>
         <div class="tech-free-product-btn">
             <a role="button"
-               {%if $src eq Null%}
+               {if $src eq Null}
                class="btn-primary large consult"
                data-operation="cooperation"
-               {%else%}
+               {else}
                class="btn-primary large"
                href="https://cloud.baidu.com/doc/OCR/index.html"
-               {%/if%}>
+               {/if}>
                 免费使用
             </a>
         </div>
     </div>
 </div>
-{%if $userInfo eq Null%}
+{if $userInfo eq Null}
 <div class="tech-section get-started tech-free">
     <div class="ai-container">
         <div class="tech-free-title">快速提交您的需求</div>
         <div class="tech-free-info">您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</div>
         <div class="tech-free-btn">
             <a role="button"
-               {%if $src eq Null%}
+               {if $src eq Null}
                class="btn-primary large consult"
                data-operation="cooperation"
-               {%else%}
+               {else}
                class="btn-primary large"
                href="mailto://ai@baidu.com"
-               {%/if%}>
+               {/if}>
                 商务合作
             </a>
         </div>
     </div>
 </div>
-{%/if%}
-{%if $src eq Null%}
+{/if}
+{if $src eq Null}
 <div class="tech-section tech-guide">
     <div class="ai-container">
         <div class="tech-guide-title">使用指南</div>
@@ -386,5 +386,5 @@
         </div>
     </div>
 </div>
-{%/if%}
+{/if}
 
