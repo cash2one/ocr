@@ -141,7 +141,8 @@ class Action_AIDemo extends Ap_Action_Abstract {
                  * 2. 逻辑处理 
                  * */
                 $ret_data = Brain_AIApi::callImageApi($demoType, $filter_image);
-                
+                $this->filterLocation($demoType, $ret_data['data']);
+ 
                 Brain_Output::jsonOutput($ret_data['errno'], $ret_data['msg'], $ret_data['data']);
                 return;
             }
@@ -160,6 +161,24 @@ class Action_AIDemo extends Ap_Action_Abstract {
             {
                 Brain_Output::jsonOutput(104, '图片地址格式错误');
                 return;
+            }
+        }
+    }
+
+    /**
+     * 通用文字识别去掉坐标信息
+     *
+     * @param $demoType 模型名
+     * @param $data 输出数据
+     */
+    public function filterLocation($demoType, &$data){
+        if($demoType == 'commontext'){
+            if(!empty($data['words_result']) && is_array($data['words_result'])){
+                foreach($data['words_result'] as &$word){
+                    if(isset($word['location'])){
+                        unset($word['location']);
+                    }
+                }
             }
         }
     }
