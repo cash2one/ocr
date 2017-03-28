@@ -26,7 +26,7 @@ class Brain_Cloud {
         $odpDir = dirname(dirname(dirname(dirname(dirname(__FILE__)))));
         
         $templateDir = $odpDir . '/template/brain/cloud/';
-        $templateFile = $templateDir . "/$tech.tpl";
+        $templateFile = $templateDir . "$tech.tpl";
 
         if (!is_dir($templateDir))
         {
