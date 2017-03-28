@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490342487/css/ie9.style.css">
     <![endif]-->
     <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490342487/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490342487/css/technology/nlp-word_embedding.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490342487/css/technology/ocr-general_location.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
@@ -210,27 +210,23 @@
 <div class="ai-platform page-content">
     <div class="tech-section tech-banner">
     <div class="ai-container">
-        <div class="tech-banner-title">
-            中文DNN词向量
+        <div class="tech-banner-title" id="orc-enhanced-title">
+            通用文字识别（含位置信息版）
         </div>
         <div class="tech-banner-info">
-            依托全网海量优质数据和深度神经网络技术，通过词语向量化实现文本的可计算，帮助您快速完成语义挖掘、相似度计算等应用。
+            <p>依托全网海量优质数据和业界领先的深度学习技术<br>
+                在通用文字识别基础上，支持扩展返回每行及每个文字的位置信息</p>
         </div>
         <div class="tech-banner-btn-list">
             <a role="button"
-               class="btn-primary media"
-               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">
-                立即使用
-            </a>
-            <a role="button"
-               class="btn-other media"
-               href="
                {if $src eq Null}
-               /docs#NLP
+               class="btn-primary media consult"
+               data-operation="cooperation"
                {else}
-               https://cloud.baidu.com/doc/NLP/index.html
-               {/if}">
-                技术文档
+               class="btn-primary media"
+               href="https://cloud.baidu.com/doc/OCR/index.html"
+               {/if}>
+                免费使用
             </a>
         </div>
     </div>
@@ -241,39 +237,104 @@
             功能介绍
         </div>
         <div class="tech-function-info">
-            词向量计算是通过训练的方法，将语言词表中的词映射成一个长度固定的向量<br>
-            词表中所有的词向量构成一个向量空间，每一个词都是这个词向量空间中的一个点，利用这种方法，实现文本的可计算
+            支持多场景下正图文字检测、定位、识别。支持任意场景、复杂背景、任意版面识别，
+            支持10多种语言的识别能准确定位并返回文字位置信息，方便客户进行二次处理。
         </div>
-        <div class="tech-function-pic">
-            <img width="500" src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/nlp-word_embedding/function-pic.png" >
+        <div class="tech-function-detail tech-clear">
+            <div class="tech-function-original-card"></div>
+            <div class="tech-function-arrow"></div>
+            <div class="tech-function-scan-result"></div>
         </div>
     </div>
 </div>
+
+<div class="tech-section tech-demo">
+    <div class="ai-container">
+        <div class="tech-demo-title">
+            功能演示
+        </div>
+        <div class="tech-demo-container">
+            <div class="tech-demo-data-view tech-demo-origin" data-label="原始图片" id="demo-origin"></div>
+            <div class="tech-demo-data-view" data-label="识别结果" id="demo-result"></div>
+            <div class="tech-demo-choose">
+                <div class="tech-demo-upload tech-clear">
+                    <input type="text" class="ocr-demo-photo-url" id="demo-photo-url" placeholder="请输入网络图片URL">
+                    <button type="button" class="btn-primary" id="scan-url">检测</button>
+                    <div class="ocr-demo-huo">或</div>
+                    <label class="ocr-demo-local" id="demo-photo-upload">
+                        <input type="file" id="img-upload">本地上传
+                    </label>
+                </div>
+                <div class="tech-demo-desc">
+                    提示：可支持PNG、JPG、JPEG、BMP图片文件，不支持GIF图片，
+                    图片大小不超过2M，长边不超过2048像素。
+                    为保证正常识别效果，请保证需要识别部分为图片主体部分。
+                </div>
+                <div class="tech-demo-card-list">
+                    <div class="tech-demo-card-item tech-demo-card-active">
+                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_location/demo-card-1.png" alt=" ">
+                    </div>
+                    <div class="tech-demo-card-item">
+                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_location/demo-card-2.png" alt=" ">
+                    </div>
+                    <div class="tech-demo-card-item">
+                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_location/demo-card-3.png" alt=" ">
+                    </div>
+                    <div class="tech-demo-card-item">
+                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_location/demo-card-4.png" alt=" ">
+                    </div>
+                    <div class="tech-demo-card-item">
+                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_location/demo-card-5.png" alt=" ">
+                    </div>
+                    <div class="tech-demo-card-item">
+                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_location/demo-card-6.png" alt=" ">
+                    </div>
+                    <div class="tech-demo-card-item">
+                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_location/demo-card-7.png" alt=" ">
+                    </div>
+                    <div class="tech-demo-card-item">
+                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_location/demo-card-8.png" alt=" ">
+                    </div>
+                </div>
+            </div>
+            <div class="tech-demo-data-view tech-demo-json"
+                 id="demo-json"
+                 data-label="RESPONSE JSON">
+                <p></p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="ai-container tech-section tech-feature">
     <div class="tech-feature-title">技术特色</div>
     <div class="tech-feature-list tech-clear">
         <div class="tech-feature-item tech-feature-shadow">
             <div class="tech-feature-icon tech-feature-icon-1"></div>
             <div class="tech-feature-desc">
-                <div class="tech-feature-desc-title">大数据</div>
+                <div class="tech-feature-desc-title">准确性高</div>
                 <div class="tech-feature-desc-info">
-                    使用百度大规模网页数据进行模型训练，样本数据丰富
+                    国内首个公有云OCR产品，基于百度深度学习研究院（IDL）强大的深度学习算法和中文检测识别技术，
+                    整图中文识别准确率达85以上，英文91以上,文字定位精准。
                 </div>
             </div>
         </div>
         <div class="tech-feature-item tech-feature-shadow">
             <div class="tech-feature-icon tech-feature-icon-2"></div>
             <div class="tech-feature-desc">
-                <div class="tech-feature-desc-title">深度学习</div>
-                <div class="tech-feature-desc-info" >基于深度学习技术建立词向量表示模型</div>
+                <div class="tech-feature-desc-title">成熟稳定</div>
+            <div class="tech-feature-desc-info">
+                经过手机百度词典，手机百度等多款重量级产品实践检验，产品成熟稳定。
+                支持实时文字识别能力、弹性灵活的高并发承载及99.95的可用性保证
+            </div>
             </div>
         </div>
         <div class="tech-feature-item tech-feature-shadow">
             <div class="tech-feature-icon tech-feature-icon-3"></div>
             <div class="tech-feature-desc">
-                <div class="tech-feature-desc-title">精度高</div>
+                <div class="tech-feature-desc-title">简单易用</div>
                 <div class="tech-feature-desc-info">
-                    词向量精度高，能够准确描述词和词之间的相似度
+                    提供符合RESTful规范的API访问接口及服务端SDK，使用便捷
                 </div>
             </div>
         </div>
@@ -286,18 +347,54 @@
         <div class="tech-scenario-item tech-scenario-shadow">
             <div class="tech-scenario-icon tech-scenario-icon-1"></div>
             <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">标注数据比较少的DNN任务</div>
+                <div class="tech-scenario-desc-name">通用自然场景</div>
                 <div class="tech-scenario-desc-info">
-                    当DNN任务的标注数据量比较少的时候，可以用已训练好的词向量作为模型的初始化参数，模型效果一般会优于随机初始化的词向量。
+                    印刷文档识别，翻译文字识别，搜索识别，涂抹识别等通用自然场景
                 </div>
             </div>
         </div>
         <div class="tech-scenario-item tech-scenario-shadow">
             <div class="tech-scenario-icon tech-scenario-icon-2"></div>
             <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">近似词挖掘</div>
+                <div class="tech-scenario-desc-name">图片反作弊</div>
                 <div class="tech-scenario-desc-info">
-                    通过词向量中的空间距离可以判断两个词在语义、语法上的相似度，因此可以挖掘出当前词的近似词。
+                    识别图像和视频中的违规文字，进行违规处理和风险管控
+                </div>
+            </div>
+        </div>
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-3"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">医疗场景</div>
+                <div class="tech-scenario-desc-info">
+                    提升医疗行业的票据识别功能，减少人工输入过程，提高输入效率
+                </div>
+            </div>
+        </div>
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-4"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">金融场景</div>
+                <div class="tech-scenario-desc-info">
+                    用于企业证照、年报、财报等识别
+                </div>
+            </div>
+        </div>
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-5"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">视频场景</div>
+                <div class="tech-scenario-desc-info">
+                    用于视频字幕识别，视频标题识别，视频反作弊，头像反作弊，评论反作弊等
+                </div>
+            </div>
+        </div>
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-6"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">交通场景</div>
+                <div class="tech-scenario-desc-info">
+                    基于图像技术识别道路标示牌，文字信息，提升地图数据生产效率与质量助力高精地图基础数据生产
                 </div>
             </div>
         </div>
@@ -307,24 +404,169 @@
     <div class="tech-case-list">
         <div class="tech-case-item tech-case-item-1 tech-case-active">
             <div class="ai-container">
-                <div class="tech-case-item-title">作为模型初始化参数应用于其他的模型中</div>
+                <div class="tech-case-item-logo"></div>
+                <div class="tech-case-item-title">百度翻译</div>
                 <div class="tech-case-item-info">
-                    例如序列标注、标题党识别、图文匹配搜索等，用词向量作为模型的初始化参数，效果优于随机初始化参数
+                    百度翻译手机版提供中英日韩等10多个语种的文本互译<br>
+                    使用OCR技术实现拍照整屏实时翻译、菜单翻译、涂抹翻译、取词翻译等功能，无需键盘输入，提升用户体验
                 </div>
             </div>
+        </div>
+        <div class="tech-case-item tech-case-item-2">
+            <div class="ai-container">
+                <div class="tech-case-item-logo"></div>
+                <div class="tech-case-item-title">涂书笔记</div>
+                <div class="tech-case-item-info">
+                    涂书笔记是一款纸质书文字摘录APP，入选了“App store 2014年度精选”<br>
+                    用户拍摄书中感兴趣的内容，涂抹要摘录的文字，即可使用OCR技术进行实时识别、记录读书笔记，识别准确率95以上<br>
+                    识别速度快，准确率高，减少了用户的输入操作，有效的提高了用户的体验
+                </div>
+            </div>
+        </div>
+        <div class="tech-case-item tech-case-item-3">
+            <div class="ai-container">
+                <div class="tech-case-item-logo"></div>
+                <div class="tech-case-item-title">快手</div>
+                <div class="tech-case-item-info">
+                    快手是中国领先的短视频共享平台<br>
+                    快手调用百度OCR接口对短视频进行识别并进行是否作弊判断。有效的监测了短视频违规情况
+                </div>
+            </div>
+        </div>
+        <div class="tech-case-item tech-case-item-4">
+            <div class="ai-container">
+                <div class="tech-case-item-logo"></div>
+                <div class="tech-case-item-title">手机百度</div>
+                <div class="tech-case-item-info">
+                    手机百度是百度推出的一款方便手机用户随时随地使用百度搜索服务的应用<br>
+                    手机百度调用百度通用OCR接口进行多模拍照文字识别，发现题目，翻译文字等功能
+                </div>
+            </div>
+        </div>
+        <div class="tech-case-item tech-case-item-5">
+            <div class="ai-container">
+                <div class="tech-case-item-logo"></div>
+                <div class="tech-case-item-title">百度地图</div>
+                <div class="tech-case-item-info">
+                    百度地图是百度提供的一项网络地图搜索服务<br>
+                    百度地图调用百度通用OCR接口进行地图街景路牌，指示牌，商户招牌，门牌等街景文字信息的识别，进行地图信息标注和处理
+                </div>
+            </div>
+        </div>
+        <div class="tech-case-item tech-case-item-6">
+            <div class="ai-container">
+                <div class="tech-case-item-logo"></div>
+                <div class="tech-case-item-title">百度外卖</div>
+                <div class="tech-case-item-info">
+                    百度外卖，是由百度打造的专业外卖服务平台<br>
+                    百度外卖调用百度通用OCR接口进行外卖票据的识别服务，包括拍小票送餐等
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tech-case-option">
+        <div class="tech-case-option-btn tech-case-option-btn-1 tech-case-active">
+            百度翻译
+        </div>
+        <div class="tech-case-option-btn tech-case-option-btn-2">
+            涂书笔记
+        </div>
+        <div class="tech-case-option-btn tech-case-option-btn-3">
+            快手
+        </div>
+        <div class="tech-case-option-btn tech-case-option-btn-4">
+            手机百度
+        </div>
+        <div class="tech-case-option-btn tech-case-option-btn-5">
+            百度地图
+        </div>
+        <div class="tech-case-option-btn tech-case-option-btn-6">
+            百度外卖
+        </div>
+    </div>
+</div>
+<div class="tech-section get-started tech-free-product">
+    <div class="ai-container-product">
+        <div class="tech-free-product-title">产品定价</div>
+        <div class="tech-free-product-info">本产品为按调用量计费的后付费产品，定价采取分段式阶定价方式</div>
+        <div class="tech-free-product-wrapper">
+            <div class="product-box-1">
+                <div class="product-box-head">价目表</div>
+                <div class="product-box-body">
+                    <div class="product-box-body-header">月调用量</div>
+                    <div class="product-box-body-header">单价</div>
+                    <div class="product-box-body-connent item">0&lt;调用量&lt;=5w</div>
+                    <div class="product-box-body-connent item">0.040元/次</div>
+                    <div class="product-box-body-connent item">5w&lt;调用量&lt;=10w</div>
+                    <div class="product-box-body-connent item">0.035元/次</div>
+                    <div class="product-box-body-connent item">10w&lt;调用量&lt;=20w</div>
+                    <div class="product-box-body-connent item">0.030元/次</div>
+                    <div class="product-box-body-connent item">20w&lt;调用量&lt;=50w</div>
+                    <div class="product-box-body-connent item">0.025元/次</div>
+                    <div class="product-box-body-connent item">50w&lt;调用量</div>
+                    <div class="product-box-body-connent item">0.20元/次</div>
+                    <div class="product-box-body-foot">
+                        免费配额：每日500次免费调用次数，超出免费配额，开始计算
+                    </div>
+                </div>
+            </div>
+            <div class="product-box-2">
+                <div class="product-box-head">付费配置</div>
+                <div class="product-box-body">
+                    <div class="product-box-body-header"></div>
+                    <div class="product-box-body-header">500/日免费配额</div>
+                    <div class="product-box-body-header">超过免费配额</div>
+                    <div class="product-box-body-header">QPS限制</div>
+                    <div class="product-box-body-header">免费</div>
+                    <div class="product-box-body-connent">拥有</div>
+                    <div class="product-box-body-connent">不响应请求</div>
+                    <div class="product-box-body-connent">不保证并发</div>
+                    <div class="product-box-body-header">付费</div>
+                    <div class="product-box-body-connent">拥有</div>
+                    <div class="product-box-body-connent">响应请求</div>
+                    <div class="product-box-body-connent">保证10次并发</div>
+                </div>
+            </div>
+            <div class="product-box-3">
+                <div class="product-box-head">调用失败如何计费？</div>
+                <div class="product-box-body">
+                    <div class="product-box-body-connent">
+                        支付失败类型共分两种：服务错误和业务操作错误导致的调用失败。超出免配额后，
+                        因服务错误导致的调用失败不计费，相关错误码请查询
+                        <a class="product-error-query" href="/docs">错误码详情</a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="tech-free-product-btn">
+            <a role="button"
+               {if $src eq Null}
+               class="btn-primary large consult"
+               data-operation="cooperation"
+               {else}
+               class="btn-primary large"
+               href="https://cloud.baidu.com/doc/OCR/index.html"
+               {/if}>
+                免费使用
+            </a>
         </div>
     </div>
 </div>
 {if $userInfo eq Null}
 <div class="tech-section get-started tech-free">
     <div class="ai-container">
-        <div class="tech-free-title">立即获取免费API Key</div>
-        <div class="tech-free-info">现在试用，获取免费API Key，免费调用各项开放能力API</div>
+        <div class="tech-free-title">快速提交您的需求</div>
+        <div class="tech-free-info">您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</div>
         <div class="tech-free-btn">
             <a role="button"
+               {if $src eq Null}
+               class="btn-primary large consult"
+               data-operation="cooperation"
+               {else}
                class="btn-primary large"
-               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">
-                免费试用
+               href="mailto://ai@baidu.com"
+               {/if}>
+                商务合作
             </a>
         </div>
     </div>
@@ -334,25 +576,28 @@
 <div class="tech-section tech-guide">
     <div class="ai-container">
         <div class="tech-guide-title">使用指南</div>
-        <div class="tech-guide-link tech-clear">
-            <div class="tech-guide-link-title">开发指南</div>
-            <div class="tech-guide-link-list">
-                <a class="tech-link-btn" href="/docs#NLP">技术文档 &gt;</a>
-                <a class="tech-link-btn" href="/sdk">SDK下载 &gt;</a>
-            </div>
-        </div>
         <div class="tech-guide-question tech-clear">
+            <div class="tech-guide-question-title">开发指南</div>
+            <div class="tech-guide-question-list">
+                <a class="tech-link-btn" href="/docs#OCR">技术文档&nbsp;&gt;</a>
+                <a class="tech-link-btn" href="/sdk">SDK下载&nbsp;&gt;</a>
+                <a class="tech-link-btn" href="#">教学视频&nbsp;&gt;</a>
+            </div>
+            </div>
+            <div class="tech-guide-question tech-clear">
             <div class="tech-guide-question-title">常见问题</div>
             <div class="tech-guide-question-list">
-                <a class="tech-link-btn" href="/docs#NLP-FAQ_Q1">输入编码是什么?</a>
-                <a class="tech-link-btn" href="/docs#NLP-FAQ_Q2">结果中的词性标注都是什么含义?</a>
-                <a class="tech-link-btn" href="/docs#NLP-FAQ_Q3">短文本相似度对文字字数有什么限制?</a>
-                <a class="tech-link-btn" href="/docs#NLP-FAQ_Q11">中文DNN语言模型对文本个数有什么限制？</a>
+                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q1">图片格式和分辨率有限制吗?</a>
+                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q8">字体有要求吗？</a>
+                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q9">支持哪些语言识别？</a>
+                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q10">支持文档扫描图片的文字识别吗？</a>
+                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q7">怎么提高文字识别的准确率和识别速度？</a>
             </div>
         </div>
     </div>
 </div>
 {/if}
+
 
 </div>
 <aside class="aside-action">
@@ -438,7 +683,7 @@
     </div>
 </footer>
 <script src="//ai.bdstatic.com/dist/1490342487/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490342487/js/technology/nlp-word_embedding.js"></script>
+<script src="//ai.bdstatic.com/dist/1490342487/js/technology/ocr-general_location.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');

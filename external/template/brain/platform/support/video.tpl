@@ -68,6 +68,11 @@
                                     通用文字识别（含生僻字版）
                                     </a>
                                 </li>
+                                 <li>
+                                    <a href="/tech/ocr/general_location" id="ocr-location-link">
+                                    通用文字识别（含位置信息版）
+                                    </a>
+                                </li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>人脸识别</span>

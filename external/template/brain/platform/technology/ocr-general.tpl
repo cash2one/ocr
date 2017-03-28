@@ -68,6 +68,11 @@
                                     通用文字识别（含生僻字版）
                                     </a>
                                 </li>
+                                 <li>
+                                    <a href="/tech/ocr/general_location" id="ocr-location-link">
+                                    通用文字识别（含位置信息版）
+                                    </a>
+                                </li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>人脸识别</span>
@@ -245,15 +250,15 @@
                         <thead>
                             <tr>
                                 <th rowspan="2" style="width:20px;">编号</th>
-                                <th colspan="5">识别结果</th>
+                                <th rowspan="2" style="width:420px">识别结果</th>
                             </tr>
-                            <tr>
+                            <!--<tr>
                                 <th style="width:250px;">文字</th>
                                 <th>left</th>
                                 <th>top</th>
                                 <th>width</th>
                                 <th>height</th>
-                            </tr>
+                            </tr>-->
                         </thead>
                         <tbody></tbody>
                     </table>
@@ -451,8 +456,8 @@
         <div class="guide-link clear-float">
             <h3>开发指南</h3>
             <ul>
-                <li><a href="/docs#OCR">技术文档 ></a></li>
-                <li><a href="/sdk">SDK下载 ></a></li>
+                <li><a href="/docs#OCR">技术文档&nbsp;&gt;</a></li>
+                <li><a href="/sdk">SDK下载&nbsp;&gt;</a></li>
             </ul>
         </div>
         <div class="question-link clear-float">
