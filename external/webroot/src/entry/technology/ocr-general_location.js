@@ -16,7 +16,7 @@ const formatImg = require('../../../ai_images/error/image-format.png');
 const tooLargeImg = require('../../../ai_images/error/too-large.png');
 const noResult = require('../../../ai_images/error/no-general-result.png');
 const timeoutImg = require('../../../ai_images/error/timeout.png');
-import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/ocr-general_location.html';
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/ocr-general.html';
 // fixme 很不合理
 
 /* eslint-enable */
