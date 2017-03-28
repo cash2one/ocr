@@ -60,7 +60,7 @@ class Brain_Cloud {
 
                 $content = str_ireplace('<main>', '<main class="ai-platform">', $content);
                 $content = str_ireplace('{{body}}', $tech_content, $content);
-                $content = str_ireplace('{{title}}', '{$title}', $content);
+                $content = str_ireplace('{{title}}', '{%$title%}', $content);
                 $content = str_ireplace('</head>', "$css</head>", $content);
                 $content = str_ireplace('</body>', "$js</body>", $content);
                 
