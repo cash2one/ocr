@@ -165,7 +165,12 @@ class Action_AIDemo extends Ap_Action_Abstract {
         }
     }
 
-    //通用文字识别去掉坐标信息
+    /**
+     * 通用文字识别去掉坐标信息
+     *
+     * @param $demoType 模型名
+     * @param $data 输出数据
+     */
     public function filterLocation($demoType, &$data){
         if($demoType == 'commontext'){
             if(!empty($data['words_result']) && is_array($data['words_result'])){
