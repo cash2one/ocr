@@ -272,28 +272,28 @@
                 </div>
                 <div class="tech-demo-card-list">
                     <div class="tech-demo-card-item tech-demo-card-active">
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_location/demo-card-1.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general/demo-card-1.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_location/demo-card-2.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general/demo-card-2.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_location/demo-card-3.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general/demo-card-3.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_location/demo-card-4.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general/demo-card-4.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_location/demo-card-5.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general/demo-card-5.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_location/demo-card-6.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general/demo-card-6.jpg" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_location/demo-card-7.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general/demo-card-7.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_location/demo-card-8.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general/demo-card-8.png" alt=" ">
                     </div>
                 </div>
             </div>
