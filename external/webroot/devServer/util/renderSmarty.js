@@ -8,6 +8,9 @@ const fs = require('fs');
 
 const Smarty = require('smarty.js');
 
+Smarty.prototype.left_delimiter = '{%';
+Smarty.prototype.right_delimiter = '%}';
+
 // 项目模板存放的路径
 const tplDir = path.resolve(__dirname, '..', '..', '..', 'template', 'brain', 'platform');
 
