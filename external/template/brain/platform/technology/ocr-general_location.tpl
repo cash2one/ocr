@@ -259,7 +259,7 @@
             <div class="tech-demo-choose">
                 <div class="tech-demo-upload tech-clear">
                     <label>
-                         <input type="text" class="ocr-demo-photo-url" id="demo-photo-url" placeholder="请输入网络图片URL">
+                        <input type="text" class="ocr-demo-photo-url" id="demo-photo-url" placeholder="请输入网络图片URL">
                     </label>
                     <button type="button" class="btn-primary" id="scan-url">检测</button>
                     <div class="ocr-demo-huo">或</div>
