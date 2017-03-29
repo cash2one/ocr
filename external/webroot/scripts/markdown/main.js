@@ -27,7 +27,7 @@ const readMdFile = mdFiles => {
                     filePath,
                     (err, data) => {
                         if (err) {
-                            reject(`无法找到md文件 -- ${mdFiles}\r`);
+                            reject(`无法找到md文件 -- ${filePath}\r\n`);
 
                             return;
                         }
