@@ -272,6 +272,15 @@
                 </div>
             </a>
         </li>
+        <li>
+            <a href="http://app.baidu.com/impel/showBanner?mainkey=introagent&frompos=000022">
+                <h1>独家合作&nbsp;应用免费推广服务</h1>
+                <p>百度手机助手&百度开发者平台</p>
+                <div>
+                    <button type="button" class="get-started">了解详情</button>
+                </div>
+            </a>
+        </li>
         <li class="video-bg">
             <h1>让 AI 变革发生</h1>
             <p>更全面、优质、易用的人工智能服务<br>即刻开启AI发现之旅</p>
@@ -288,6 +297,7 @@
     </ul>
     <ul class="banner-indicator">
         <li class="active"></li>
+        <li></li>
         <li></li>
         <li></li>
         <li></li>

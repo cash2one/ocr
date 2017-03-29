@@ -395,11 +395,11 @@
     font-size: 35px;
 }
 
-.@{prefix}-free-product {
+.@{prefix}-product {
     padding: 50px 0 40px;
-    background-color: #ffffff;
+    background-color: #fff;
     text-align: center;
-    .ai-container-product {
+    .container-product {
         display: block;
         width: 1180px;
         height: 100%;
@@ -424,50 +424,46 @@
         font-size: 0;
         transform: translateX(-50%);
         margin-bottom: 20px;
-        .product-box-1 {
+        [class^='product-box-'] {
             position: absolute;
+        }
+        [class^='box-body-'] {
+            display: inline-block;
+            font-size: 15px;
+        }
+        .product-box-1 {
             height: 240px;
             width: 585px;
-            .product-box-body-header {
+            .box-body-header {
                 width: 50%;
-                display: inline-block;
-                font-size:15px;
             }
-            .product-box-body-connent {
+            .box-body-connent {
                 width: 50%;
-                display: inline-block;
-                font-size:15px;
                 color: rgba(0, 0, 0, 0.6);
             }
-            .product-box-body-foot {
-                font-size:15px;
+            .box-body-foot {
+                font-size: 15px;
             }
         }
         .product-box-2 {
-            position: absolute;
             right: 0;
             height: 120px;
             width: 585px;
-            .product-box-body-header {
-                display: inline-block;
-                font-size:15px;
+            .box-body-header {
                 width: 25%;
             }
-            .product-box-body-connent {
-                display: inline-block;
-                font-size:15px;
+            .box-body-connent {
                 width: 25%;
                 color: rgba(0, 0, 0, 0.6);
             }
         }
         .product-box-3 {
-            position: absolute;
             right: 0;
             bottom: 0;
             height: 100px;
             width: 585px;
-            font-size:15px;
-            .product-box-body-connent {
+            font-size: 15px;
+            .box-body-connent {
                 height: 65px;
                 padding-top: 5px;
             }
@@ -475,7 +471,7 @@
                 color: #0073eb;
             }
         }
-        .product-box-head {
+        .box-head {
             height: 30px;
             font-size: 16px;
             text-align: left;
@@ -484,7 +480,7 @@
             font-weight: bold;
             border: 1px solid rgba(0, 0, 0, 0.5);
         }
-        .product-box-body {
+        .box-body {
             text-align: left;
             padding-left: 20px;
             border: 1px solid rgba(0, 0, 0, 0.5);
