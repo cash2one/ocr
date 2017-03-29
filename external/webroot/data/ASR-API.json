@@ -1,0 +1,60 @@
+{
+  "html": "<h1 id=\"b23815b9\">概念解释</h1><p>对本文中将提到的名词约定如下：</p><p><strong>语音识别：</strong>也被称为自动语音识别 Automatic Speech Recognition（ASR），其目标是将人类的语音中的词汇内容转换为计算机可读的输入，例如按键、二进制编码或者字符序列。</p><p><strong>Nbest 识别结果：</strong>指识别结果的 N 候选。</p><p><strong>应用程序：</strong>在开发中调用了 API、具有语音识别功能的产品线产品。</p><p><strong>开发者：</strong>想在应用程序中使用 API、正在阅读本文档的开发人员。</p><h1 id=\"de07b7c1\">简介</h1><p>百度语音识别通过 REST API 的方式给开发者提供一个通用的 HTTP 接口，基于该接口，开发者可以轻松的获取语音识别能力，本文档描述了使用语音识别服务 REST API 的方法。</p><h2 id=\"39f5baa9\">功能介绍</h2><p>REST API 支持整段录音文件的识别，对录音格式有一定的要求，支持语音识别控件：集成提示音、音量反馈动效整套交互的对话框控件，方便开发者快速集成。</p><p>本文档适用使用 HTTP 接口的开发人员。</p><h2 id=\"39430ee4\">支持的语音格式</h2><p>原始 PCM 的录音参数必须符合 8k/16k 采样率、16bit 位深、单声道，支持的压缩格式有：pcm（不压缩）、wav、opus、amr、x-flac。</p><h1 id=\"892e54ca\">集成指南</h1><h2 id=\"3b2db202\">获取 Access Token</h2><p>使用语音识别 REST API 需要获取 Access Token。Access Token 是用户身份验证和授权的凭证，语音识别采用的是Client Credentials授权方式，即采用应用公钥、密钥获取Access Token，适用于任何带server类型应用，通过此授权方式获取Access Token仅可访问平台授权类的接口，详见百度 OAuth 授权“<a href=\"http://developer.baidu.com/wiki/index.php?title=docs/oauth/client\" target=\"_blank\">Client Credentials授权</a>”部分。</p><p>使用Client Credentials获取Access Token需要应用在其服务端发送请求（推荐用POST方法）到百度OAuth2.0授权服务的“ <a href=\"https://openapi.baidu.com/oauth/2.0/token\" target=\"_blank\">https://openapi.baidu.com/oauth/2.0/token</a> ”地址上，并带上以下参数：</p><ul><li>grant_type：必须参数，固定为“client_credentials”；</li><li>client_id：必须参数，应用的 API Key；</li><li>client_secret：必须参数，应用的 Secret Key;</li></ul><p><strong>例如：</strong></p><pre>\n<code class=\"hljs\" lang=\"\">    https://openapi.baidu.com/oauth/<span class=\"hljs-number\">2.0</span>/token?\n    <span class=\"hljs-attr\">grant_type=client_credentials&amp;</span>\n    <span class=\"hljs-attr\">client_id=Va5yQRHl********LT0vuXV4&amp;</span>\n    <span class=\"hljs-attr\">client_secret=</span> <span class=\"hljs-number\">0</span>rDSjzQ20XUj5i********PQSzr5pVw2&amp;</code>\n</pre><p>响应数据包如下所示，其中 “access_token” 字段即为请求 REST API 所需的令牌, 默认情况下，Access Token 有效期为一个月，开发者需要对 Access Token的有效性进行判断，如果Access Token过期可以重新获取。</p><p><strong>例如：</strong></p><pre>\n<code class=\"hljs\" lang=\"\">    HTTP/1.1 200 OK\n    Content-Type: application/json\n    <span class=\"hljs-keyword\">Cache</span>-Control: <span class=\"hljs-keyword\">no</span>-<span class=\"hljs-keyword\">store</span>\n\n    {\n        <span class=\"hljs-string\">\"access_token\"</span>: <span class=\"hljs-string\">\"1.a6b7dbd428f731035f771b8d********.86400.1292922000-2346678-124328\"</span>,\n        <span class=\"hljs-string\">\"expires_in\"</span>: <span class=\"hljs-number\">86400</span>,\n        <span class=\"hljs-string\">\"refresh_token\"</span>: <span class=\"hljs-string\">\"2.385d55f8615fdfd9edb7c4b********.604800.1293440400-2346678-124328\"</span>,\n        <span class=\"hljs-string\">\"scope\"</span>: <span class=\"hljs-string\">\"public\"</span>,\n        <span class=\"hljs-string\">\"session_key\"</span>: <span class=\"hljs-string\">\"ANXxSNjwQDugf8615Onqeik********CdlLxn\"</span>,\n        <span class=\"hljs-string\">\"session_secret\"</span>: <span class=\"hljs-string\">\"248APxvxjCZ0VEC********aK4oZExMB\"</span>,\n    }</code>\n</pre><h1 id=\"acd36b26\">API请求方式基本说明</h1><ul><li>语音识别接口支持 POST 方式</li><li>目前 API 仅支持整段语音识别的模式，即需要上传整段语音进行识别</li><li>语音数据上传方式有两种：隐示发送和显示发送</li><li>原始语音的录音格式目前只支持评测 8k/16k 采样率 16bit 位深的单声道语音</li><li>压缩格式支持：pcm（不压缩）、wav、opus、speex、amr、x-flac</li><li>系统支持语言种类：中文（zh）、粤语（ct）、英文（en）</li><li>正式地址：<a href=\"http://vop.baidu.com/server_api\" target=\"_blank\">http://vop.baidu.com/server_api</a></li></ul><h2 id=\"55f46bdd\">语音上传模式</h2><p>语音数据和其他参数通过标准 JSON 格式串行化 POST 上传， JSON 里包括的参数：</p><table><thead><tr><th>字段名</th><th>数据类型</th><th>可需</th><th>描述</th></tr></thead><tbody><tr><td>format</td><td>sting</td><td>必填</td><td>语音压缩的格式，请填写上述格式之一，不区分大小写</td></tr><tr><td>rate</td><td>int</td><td>必填</td><td>采样率，支持 8000 或者 16000</td></tr><tr><td>channel</td><td>int</td><td>必填</td><td>声道数，仅支持单声道，请填写 1</td></tr><tr><td>cuid</td><td>string</td><td>必填</td><td>用户唯一标识，用来区分用户，填写机器 MAC 地址或 IMEI 码，长度为60以内</td></tr><tr><td>token</td><td>string</td><td>必填</td><td>开放平台获取到的开发者<a href=\"http://yuyin.baidu.com/docs/tts/135.html#%E8%8E%B7%E5%8F%96%20Access%20Token\" target=\"_blank\"> access_token</a></td></tr><tr><td>ptc</td><td>int</td><td>选填</td><td>协议号，下行识别结果选择，默认 nbest 结果</td></tr><tr><td>lan</td><td>string</td><td>选填</td><td>语种选择，中文=zh、粤语=ct、英文=en，不区分大小写，默认中文</td></tr><tr><td>url</td><td>string</td><td>选填</td><td>语音下载地址</td></tr><tr><td>callback</td><td>string</td><td>选填</td><td>识别结果回调地址</td></tr><tr><td>speech</td><td>string</td><td>选填</td><td>真实的语音数据 ，需要进行base64 编码</td></tr><tr><td>len</td><td>int</td><td>选填</td><td>原始语音长度，单位字节</td></tr></tbody></table><p>其中，开发者可以把语音数据放在 JSON 序列的“speech”字段中，需要将语音先进行 base64编码，并标明语音数据的原始长度，填写“len”字段；也可以直接提供语音下载地址放在“url”字段中，并且提供识别结果的回调地址，放在“callback”参数中。因此“speech”和“len”参数绑定，“url”和“callback”参数绑定，这两组参数二选一填写，如果都填，默认处理第一种。</p><ul><li>表单类型在 HTTP-HEADER 里的 content-type 表明，例：</li></ul><pre>\n<code class=\"hljs\" lang=\"\">Content-<span class=\"hljs-keyword\">Type</span>:application/json</code>\n</pre><p>Content-length 请填写 JSON 串的长度。</p><ul><li>上传实例：</li></ul><pre>\n<code class=\"hljs\" lang=\"\">{\n    <span class=\"hljs-attr\">\"format\"</span>:<span class=\"hljs-string\">\"speex\"</span>,\n    <span class=\"hljs-attr\">\"rate\"</span>:<span class=\"hljs-number\">8000</span>,\n    <span class=\"hljs-attr\">\"channel\"</span>:<span class=\"hljs-number\">1</span>,\n    <span class=\"hljs-attr\">\"token\"</span>:xxx,\n    <span class=\"hljs-attr\">\"cuid\"</span>:<span class=\"hljs-string\">\"baidu_workshop\"</span>,\n    <span class=\"hljs-attr\">\"len\"</span>:<span class=\"hljs-number\">4096</span>,\n    <span class=\"hljs-attr\">\"speech\"</span>:<span class=\"hljs-string\">\"xxx\"</span>,\n}</code>\n</pre><blockquote><p><strong>注意事项：</strong></p><ol><li>len 字段表示原始语音长度，不是 base64 编码之后的长度。</li><li>speech 和 len 字段绑定验证，url 和 callback 绑定验证，两组参数二选一必填，如果都填，默认第一种方式。</li><li>如果采用 base64 编码语音数据，数据量会增大 1/3。</li></ol></blockquote><p>语音数据直接放在 HTTP-BODY 中，控制参数以及相关统计信息通过 REST 参数传递，REST参数说明：</p><table><thead><tr><th>字段名</th><th>数据类型</th><th>可需</th><th>描述</th></tr></thead><tbody><tr><td>cuid</td><td>string</td><td>必填</td><td>用户 ID，推荐使用设备mac 地址/手机IMEI 等设备唯一性参数</td></tr><tr><td>token</td><td>string</td><td>必填</td><td>开发者身份验证密钥</td></tr><tr><td>lan</td><td>string</td><td>选填</td><td>语种选择，中文=zh、粤语=ct、英文=en，不区分大小写，默认中文</td></tr><tr><td>ptc</td><td>int</td><td>选填</td><td>协议号，下行识别结果选择，默认 nbest 结果</td></tr></tbody></table><ul><li>语音数据的采样率和压缩格式在 HTTP-HEADER 里的 content-type 表明，例：</li></ul><pre>\n<code class=\"hljs\" lang=\"\">Content-<span class=\"hljs-keyword\">Type</span>:audio/amr;rate=<span class=\"hljs-number\">8000</span></code>\n</pre><p>Content-length 请填写原始语音长度。</p><ul><li>URL 示例：</li></ul><pre>\n<code class=\"hljs\" lang=\"\"><span class=\"hljs-symbol\">http:</span>//vop.baidu.com/server_api?lan=<span class=\"hljs-built_in\">zh</span>&amp;cuid=***&amp;token=***</code>\n</pre><h2 id=\"1b5e1dc3\">下行接口定义</h2><p>两种上传方式都返回统一的结果，采用 JSON 格式封装，如果识别成功，识别结果放在 JSON的“result”字段中，统一采用 utf-8 方式编码。</p><table><thead><tr><th>字段名</th><th>数据类型</th><th>可需</th><th>描述</th></tr></thead><tbody><tr><td>err_no</td><td>int</td><td>必填</td><td>错误码</td></tr><tr><td>err_msg</td><td>string</td><td>必填</td><td>错误码描述</td></tr><tr><td>sn</td><td>string</td><td>必填</td><td>语音数据唯一标识，系统内部产生，用于 debug</td></tr><tr><td>result</td><td>array ( [string,string,…])</td><td>选填</td><td>识别结果数组，提供1-5 个候选结果，<br>string 类型为识别的字符串， utf-8 编码</td></tr></tbody></table><ul><li><strong>识别成功返回 case</strong></li></ul><pre>\n<code class=\"hljs\" lang=\"\">{<span class=\"hljs-symbol\">\\\"</span>err_no<span class=\"hljs-symbol\">\\\"</span>:0,<span class=\"hljs-symbol\">\\\"</span>err_msg<span class=\"hljs-symbol\">\\\"</span>:<span class=\"hljs-symbol\">\\\"</span>success.<span class=\"hljs-symbol\">\\\"</span>,<span class=\"hljs-symbol\">\\\"</span>corpus_no<span class=\"hljs-symbol\">\\\"</span>:<span class=\"hljs-symbol\">\\\"</span>15984125203285346378<span class=\"hljs-symbol\">\\\"</span>,<span class=\"hljs-symbol\">\\\"</span>sn<span class=\"hljs-symbol\">\\\"</span>:<span class=\"hljs-symbol\">\\\"</span>481D633F-73BA-726F-49EF-8659ACCC2F3D<span class=\"hljs-symbol\">\\\"</span>,<span class=\"hljs-symbol\">\\\"</span>result<span class=\"hljs-symbol\">\\\"</span>:[<span class=\"hljs-symbol\">\\\"</span>北京天气<span class=\"hljs-symbol\">\\\"</span>]}</code>\n</pre><ul><li><strong>识别错误返回 case</strong></li></ul><pre>\n<code class=\"hljs\" lang=\"\">{<span class=\"hljs-attr\">\"err_no\"</span>:<span class=\"hljs-number\">2000</span>,<span class=\"hljs-attr\">\"err_msg\"</span>:<span class=\"hljs-string\">\"data empty.\"</span>,<span class=\"hljs-attr\">\"sn\"</span>:<span class=\"hljs-literal\">null</span>}</code>\n</pre><h2 id=\"58ed319e\">错误码解释</h2><table><thead><tr><th>错误码</th><th>含义</th></tr></thead><tbody><tr><td>3300</td><td>输入参数不正确</td></tr><tr><td>3301</td><td>识别错误</td></tr><tr><td>3302</td><td>验证失败</td></tr><tr><td>3303</td><td>语音服务器后端问题</td></tr><tr><td>3304</td><td>请求 GPS 过大，超过限额</td></tr><tr><td>3305</td><td>产品线当前日请求数超过限额</td></tr></tbody></table><h1 id=\"5e75d085\">注意事项</h1><ol><li><p>请严格按照文档里描述的参数进行开发，特别请关注原始录音参数以及语音压缩格式的建议，否则会影响识别率，进而影响到产品的用户体验。</p></li><li><p>目前系统支持的语音时长上限为60s，请不要超过这个长度，否则会返回错误。</p></li></ol>",
+  "headings": [
+    {
+      "level": 1,
+      "text": "概念解释",
+      "id": "b23815b9"
+    },
+    {
+      "level": 1,
+      "text": "简介",
+      "id": "de07b7c1"
+    },
+    {
+      "level": 2,
+      "text": "功能介绍",
+      "id": "39f5baa9"
+    },
+    {
+      "level": 2,
+      "text": "支持的语音格式",
+      "id": "39430ee4"
+    },
+    {
+      "level": 1,
+      "text": "集成指南",
+      "id": "892e54ca"
+    },
+    {
+      "level": 2,
+      "text": "获取 Access Token",
+      "id": "3b2db202"
+    },
+    {
+      "level": 1,
+      "text": "API请求方式基本说明",
+      "id": "acd36b26"
+    },
+    {
+      "level": 2,
+      "text": "语音上传模式",
+      "id": "55f46bdd"
+    },
+    {
+      "level": 2,
+      "text": "下行接口定义",
+      "id": "1b5e1dc3"
+    },
+    {
+      "level": 2,
+      "text": "错误码解释",
+      "id": "58ed319e"
+    },
+    {
+      "level": 1,
+      "text": "注意事项",
+      "id": "5e75d085"
+    }
+  ]
+}
