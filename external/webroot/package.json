@@ -6,7 +6,8 @@
   "scripts": {
     "build": "node scripts/build.js --online",
     "watch": "node scripts/build.js --watch",
-    "bump": "node scripts/build.js --new"
+    "bump": "node scripts/build.js --new",
+    "buildrd": "node scripts/build.js"
   },
   "keywords": [
     "Baidu",
