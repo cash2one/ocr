@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490342487/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490786085/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490342487/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490342487/css/document/document.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490786085/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490786085/css/document/document.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490342487/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1490786085/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -203,8 +203,8 @@
     </div>
 </header>
 <div id="app"></div>
-<script src="//ai.bdstatic.com/dist/1490342487/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490342487/js/document/document.js"></script>
+<script src="//ai.bdstatic.com/dist/1490786085/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1490786085/js/document/document.js"></script>
 <script>
     (function(){
         var bp = document.createElement('script');
