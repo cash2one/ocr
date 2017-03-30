@@ -61,3 +61,20 @@ if (window.location.hostname.indexOf('cloud.baidu.com') < 0) {
         }
     );
 }
+
+// FIXME 临时方案，很脏，有风险
+$('a.ai-redirect').on('click', e => {
+    const $target = $(e.target);
+    e.preventDefault();
+
+    let url = '';
+    let originUrl = $target.attr('href');
+    if (location.hostname.indexOf('ai.baidu.com') >= 0) {
+        url = `http://ai.baidu.com/redirect?url=${encodeURI(originUrl)}`;
+    }
+    else {
+        url = originUrl;
+    }
+
+    window.open(url);
+});
