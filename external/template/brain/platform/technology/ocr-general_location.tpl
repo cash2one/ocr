@@ -535,7 +535,7 @@
                     <div class="box-body-connent">
                         支付失败类型共分两种：服务错误和业务操作错误导致的调用失败。超出免配额后，
                         因服务错误导致的调用失败不计费，相关错误码请查询
-                        <a class="product-error-query" href="/docs#通用错误码">错误码详情</a>
+                        <a class="product-error-query" href="/docs#OCR-API">错误码详情</a>
                     </div> 
                 </div>
             </div>

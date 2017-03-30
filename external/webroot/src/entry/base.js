@@ -50,7 +50,7 @@ if (window.location.hostname.indexOf('cloud.baidu.com') < 0) {
     if (query.hasOwnProperty('t') || query.hasOwnProperty('track')) {
         const iframe = $('<iframe class="ai-track"></iframe>');
         const iframeURL = 'https://cloud.baidu.com/helper/x.html' + location.search + '&stamp=' + new Date().getTime();
-        iframe.src = iframeURL;
+        iframe.attr('src', iframeURL);
         $('body').append(iframe);
     }
     // 渲染底部新闻
