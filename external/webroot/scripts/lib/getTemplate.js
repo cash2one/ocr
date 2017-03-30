@@ -7,8 +7,6 @@ const path = require('path');
 
 module.exports = function (moduleName) {
     switch (moduleName) {
-        case 'document/document':
-            return path.resolve(__dirname, '..', '..', 'src', 'view', 'common', 'documentTpl.ejs');
         case 'newDocument/newDocument':
             return path.resolve(__dirname, '..', '..', 'src', 'view', 'common', 'documentTpl.ejs');
         default:

@@ -65,7 +65,12 @@
                                 <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
                                 <li>
                                     <a href="/tech/ocr/general_enhanced" id="ocr-enhanced-link">
-                                        通用文字识别（含生僻字版）
+                                    通用文字识别（含生僻字版）
+                                    </a>
+                                </li>
+                                 <li>
+                                    <a href="/tech/ocr/general_location" id="ocr-location-link">
+                                    通用文字识别（含位置信息版）
                                     </a>
                                 </li>
                             </ul>
@@ -202,20 +207,649 @@
         </div>
     </div>
 </header>
-<div id="app"></div>
+<div class="ai-platform page-content">
+    <!-- htmlcs-disable -->
+<div class="doc-wrap">
+    <div class="sidebar sidebar-fixed">
+        <h1 style="width: 260px;">新手指南<i class="nav-plus1 pm-button"></i></h1>
+        <div class="toc jquery-accordion-menu" style="width: 260px;">
+            <ul class="level1 submenu beginner"
+                style="border-bottom:1px solid #ebebeb">
+                <li data-md="Beginner-AccessProcess"
+                    class="node root guide-node">
+                    <a href="javascript:void(0)">
+                        <span class="icon icon-jieru"></span>
+                        接入指南
+                    </a>
+                </li>
+                <li data-md="Beginner-Auth"
+                    class="node root guide-node">
+                    <a href="javascript:void(0)">
+                        <span class="icon icon-jianquan"></span>
+                        鉴权认证机制
+                    </a>
+                </li>
+                <li class="node root guide-node" style="display:none">
+                    <a href="javascript:void(0)">
+                        <span class="icon icon-fuwu"></span>
+                        服务协议
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <h1 style="width: 260px; ">技术文档<i class="nav-plus2 pm-button"></i></h1>
+        <div class="toc jquery-accordion-menu"
+             style="width: 260px"
+             id="jquery-accordion-menu">
+            <ul class="level1 submenu">
+                <li class="node root">
+                    <a href="javascript:void(0)">
+                        <span class="icon icon-yuyin"></span>
+                        百度语音
+                    </a>
+                    <ul class="level2 submenu">
+                        <li class="non-leaf">
+                            <a href="javascript:void(0)"><span class="icon-arrow-down"></span>语音识别</a>
+                            <ul class="level3 submenu">
+                                <li class="non-leaf">
+                                    <a href="javascript:void(0)">
+                                        <span class="icon-arrow-down"></span>
+                                        离在线语音识别 Android SDK
+                                    </a>
+                                    <ul class="level4 submenu">
+                                        <li class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
+                                            <a href="javascript:void(0)"><i></i>简介</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
+                                            <a href="javascript:void(0)"><i></i>集成指南</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
+                                            <a href="javascript:void(0)"><i></i>重要接口说明</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
+                                            <a href="javascript:void(0)"><i></i>参数和错误码说明</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
+                                            <a href="javascript:void(0)"><i></i>完整示例</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
+                                            <a href="javascript:void(0)"><i></i>语音唤醒</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-O2OAndroidSDK">
+                                            <a href="javascript:void(0)"><i></i>其他说明</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="non-leaf">
+                                    <a href="javascript:void(0)">
+                                        <span class="icon-arrow-down"></span>
+                                        离在线语音识别 iOS SDK
+                                    </a>
+                                    <ul class="level4 submenu">
+                                        <li class="leaf" data-md="Speech-Asr-O2OiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>简介</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-O2OiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>集成指南</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-O2OiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>重要接口说明</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-O2OiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>参数和错误码说明</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-O2OiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>完整示例</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="non-leaf">
+                                    <a href="javascript:void(0)">
+                                        <span class="icon-arrow-down"></span>
+                                        在线语音识别 Android SDK
+                                    </a>
+                                    <ul class="level4 submenu">
+                                        <li class="leaf" data-md="Speech-Asr-OnlineAndroidSDK">
+                                            <a href="javascript:void(0)"><i></i>简介</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-OnlineAndroidSDK">
+                                            <a href="javascript:void(0)"><i></i>集成指南</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-OnlineAndroidSDK">
+                                            <a href="javascript:void(0)"><i></i>重要接口说明</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-OnlineAndroidSDK">
+                                            <a href="javascript:void(0)"><i></i>参数和错误码说明</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-OnlineAndroidSDK">
+                                            <a href="javascript:void(0)"><i></i>完整示例</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="non-leaf">
+                                    <a href="javascript:void(0)">
+                                        <span class="icon-arrow-down"></span>
+                                        在线语音识别 iOS SDK
+                                    </a>
+                                    <ul class="level4 submenu">
+                                        <li class="leaf" data-md="Speech-Asr-OnlineiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>简介</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-OnlineiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>集成指南</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-OnlineiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>重要接口说明</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-OnlineiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>参数和错误码说明</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-OnlineiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>完整示例</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="non-leaf">
+                                    <a href="javascript:void(0)">
+                                        <span class="icon-arrow-down"></span>
+                                        语音识别 REST API
+                                    </a>
+                                    <ul class="level4 submenu">
+                                        <li class="leaf" data-md="Speech-Asr-RESTAPI">
+                                            <a href="javascript:void(0)"><i></i>概念解释</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-RESTAPI">
+                                            <a href="javascript:void(0)"><i></i>简介</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-RESTAPI">
+                                            <a href="javascript:void(0)"><i></i>集成指南</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-RESTAPI">
+                                            <a href="javascript:void(0)"><i></i>API请求方式基本说明</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-RESTAPI">
+                                            <a href="javascript:void(0)"><i></i>注意事项</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="non-leaf">
+                                    <a href="javascript:void(0)">
+                                        <span class="icon-arrow-down"></span>
+                                        语义理解协议
+                                    </a>
+                                    <ul class="level4 submenu">
+                                        <li class="leaf" data-md="Speech-Asr-Protocol">
+                                            <a href="javascript:void(0)"><i></i>前言</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-Protocol">
+                                            <a href="javascript:void(0)"><i></i>意图表示协议</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Asr-Protocol">
+                                            <a href="javascript:void(0)"><i></i>各领域意图表示</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="level3 submenu">
+                                <li class="leaf" data-md="Speech-Asr-FAQ">
+                                    <a href="javascript:void(0)"><i></i>常见问题</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="non-leaf">
+                            <a href="javascript:void(0)">
+                                <span class="icon-arrow-down"></span>
+                                语音合成
+                            </a>
+                            <ul class="level3 submenu">
+                                <li class="non-leaf">
+                                    <a href="javascript:void(0)">
+                                        <span class="icon-arrow-down"></span>
+                                        离线在线语音合成 Android SDK
+                                    </a>
+                                    <ul class="level4 submenu">
+                                        <li class="leaf" data-md="Speech-Tts-O2OAndroidSDK">
+                                            <a href="javascript:void(0)"><i></i>简介</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Tts-O2OAndroidSDK">
+                                            <a href="javascript:void(0)"><i></i>集成指南</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Tts-O2OAndroidSDK">
+                                            <a href="javascript:void(0)"><i></i>重要接口说明</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Tts-O2OAndroidSDK">
+                                            <a href="javascript:void(0)"><i></i>参数和错误码说明</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Tts-O2OAndroidSDK">
+                                            <a href="javascript:void(0)"><i></i>完整示例</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="level3 submenu">
+                                <li class="non-leaf">
+                                    <a href="javascript:void(0)">
+                                        <span class="icon-arrow-down"></span>
+                                        离线在线语音合成 iOS SDK
+                                    </a>
+                                    <ul class="level4 submenu">
+                                        <li class="leaf" data-md="Speech-Tts-O2OiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>简介</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Tts-O2OiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>集成指南</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Tts-O2OiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>重要接口说明</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Tts-O2OiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>参数和错误码说明</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Tts-O2OiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>完整示例</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="level3 submenu">
+                                <li class="non-leaf">
+                                    <a href="javascript:void(0)">
+                                        <span class="icon-arrow-down"></span>
+                                        在线语音合成 iOS SDK
+                                    </a>
+                                    <ul class="level4 submenu">
+                                        <li class="leaf" data-md="Speech-Tts-OnlineiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>概念解释</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Tts-OnlineiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>简介</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Tts-OnlineiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>集成指南</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Tts-OnlineiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>语音合成</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Tts-OnlineiOSSDK">
+                                            <a href="javascript:void(0)"><i></i>日志</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="level3 submenu">
+                                <li class="non-leaf">
+                                    <a href="javascript:void(0)">
+                                        <span class="icon-arrow-down"></span>
+                                        语音合成 REST API
+                                    </a>
+                                    <ul class="level4 submenu">
+                                        <li class="leaf" data-md="Speech-Tts-RESTAPI">
+                                            <a href="javascript:void(0)"><i></i>概念解释</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Tts-RESTAPI">
+                                            <a href="javascript:void(0)"><i></i>简介</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Tts-RESTAPI">
+                                            <a href="javascript:void(0)"><i></i>集成指南</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Tts-RESTAPI">
+                                            <a href="javascript:void(0)"><i></i>API请求方式基本说明</a>
+                                        </li>
+                                        <li class="leaf" data-md="Speech-Tts-RESTAPI">
+                                            <a href="javascript:void(0)"><i></i>注意事项</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="level3 submenu">
+                                <li class="leaf" data-md="Speech-Tts-FAQ">
+                                    <a href="javascript:void(0)"><i></i>常见问题</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="node root">
+                    <a href="javascript:void(0)">
+                        <span class="icon icon-wenzi"></span>
+                        文字识别
+                    </a>
+                    <ul class="level2 submenu">
+                        <li class="non-leaf">
+                            <a href="javascript:void(0)">
+                                <span class="icon-arrow-down"></span>
+                                API 文档
+                            </a>
+                            <ul class="level3 submenu">
+                                <li class="leaf" data-md="OCR-API">
+                                    <a href="javascript:void(0)"><i></i>简介</a>
+                                </li>
+                                <li class="leaf" data-md="OCR-API">
+                                    <a href="javascript:void(0)"><i></i>调用方式一</a>
+                                </li>
+                                <li class="leaf" data-md="OCR-API">
+                                    <a href="javascript:void(0)"><i></i>调用方式二</a>
+                                </li>
+                                <li class="leaf" data-md="OCR-API">
+                                    <a href="javascript:void(0)"><i></i>错误信息格式</a>
+                                </li>
+                                <li class="leaf" data-md="OCR-API">
+                                    <a href="javascript:void(0)"><i></i>识别接口</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="non-leaf">
+                            <a href="javascript:void(0)">
+                                <span class="icon-arrow-down"></span>
+                                SDK 文档
+                            </a>
+                            <ul class="level3 submenu">
+                                <li class="non-leaf sdk-node"
+                                    data-md="OCR-Java-SDK">
+                                    <a href="javascript:void(0)"><i></i>Java 语言</a>
+                                </li>
+                                <li class="non-leaf sdk-node"
+                                    data-md="OCR-PHP-SDK">
+                                    <a href="javascript:void(0)"><i></i>PHP 语言</a>
+                                </li>
+                                <li class="non-leaf sdk-node"
+                                    data-md="OCR-Python-SDK">
+                                    <a href="javascript:void(0)"><i></i>Python 语言</a>
+                                </li>
+                                <li class="non-leaf sdk-node"
+                                    data-md="OCR-Android-SDK">
+                                    <a href="javascript:void(0)"><i></i>Android</a>
+                                </li>
+                                <li class="non-leaf sdk-node"
+                                    data-md="OCR-iOS-SDK">
+                                    <a href="javascript:void(0)"><i></i>iOS</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="leaf" data-md="OCR-FAQ" >
+                            <a href="javascript:void(0)"><i></i>常见问题</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="node root">
+                    <a href="javascript:void(0)">
+                        <span class="icon icon-renlian"></span>
+                        人脸识别
+                    </a>
+                    <ul class="level2 submenu">
+                        <li class="non-leaf">
+                            <a href="javascript:void(0)">
+                                <span class="icon-arrow-down"></span>
+                                API 文档
+                            </a>
+                            <ul class="level3 submenu">
+                                <li class="leaf" data-md="FACE-API">
+                                    <a href="javascript:void(0)"><i></i>简介</a>
+                                </li>
+                                <li class="leaf" data-md="FACE-API">
+                                    <a href="javascript:void(0)"><i></i>调用方式一</a>
+                                </li>
+                                <li class="leaf" data-md="FACE-API">
+                                    <a href="javascript:void(0)"><i></i>调用方式二</a>
+                                </li>
+                                <li class="leaf" data-md="FACE-API">
+                                    <a href="javascript:void(0)"><i></i>错误信息格式</a>
+                                </li>
+                                <li class="leaf" data-md="FACE-API">
+                                    <a href="javascript:void(0)"><i></i>人脸检测</a>
+                                </li>
+                                <li class="leaf" data-md="FACE-API">
+                                    <a href="javascript:void(0)"><i></i>人脸比对</a>
+                                </li>
+                                <li class="leaf" data-md="FACE-API">
+                                    <a href="javascript:void(0)"><i></i>人脸查找</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="non-leaf">
+                            <a href="javascript:void(0)"><span class="icon-arrow-down"></span>SDK 文档</a>
+                            <ul class="level3 submenu">
+                                <li class="non-leaf sdk-node" data-md="Face-Java-SDK">
+                                    <a href="javascript:void(0)"><i></i>Java 语言</a>
+                                </li>
+                                <li class="non-leaf sdk-node" data-md="Face-PHP-SDK">
+                                    <a data-md="Face-PHP-SDK" href="javascript:void(0)">
+                                        <i></i>
+                                        PHP 语言
+                                    </a>
+                                </li>
+                                <li class="non-leaf sdk-node" data-md="Face-Python-SDK">
+                                    <a data-md="Face-Python-SDK" href="javascript:void(0)">
+                                        <i></i>
+                                        Python 语言
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="leaf" data-md="FACE-FAQ">
+                            <a href="javascript:void(0)"><i></i>常见问题</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="node root">
+                    <a href="javascript:void(0)"><span class="icon icon-yuyan"></span>自然语言处理</a>
+                    <ul class="level2 submenu">
+                        <li class="non-leaf">
+                            <a href="javascript:void(0)">
+                                <span class="icon-arrow-down"></span>
+                                API 文档
+                            </a>
+                            <ul class="level3 submenu">
+                                <li class="leaf" data-md="NLP-API">
+                                    <a href="javascript:void(0)"><i></i>简介</a>
+                                </li>
+                                <li class="leaf" data-md="NLP-API">
+                                    <a href="javascript:void(0)"><i></i>调用方式一</a>
+                                </li>
+                                <li class="leaf" data-md="NLP-API">
+                                    <a href="javascript:void(0)"><i></i>调用方式二</a>
+                                </li>
+                                <li class="leaf" data-md="NLP-API">
+                                    <a href="javascript:void(0)"><i></i>错误信息格式</a>
+                                </li>
+                                <li class="leaf" data-md="NLP-API">
+                                    <a href="javascript:void(0)"><i></i>分词接口</a>
+                                </li>
+                                <li class="leaf" data-md="NLP-API">
+                                    <a href="javascript:void(0)"><i></i>词性标注接口</a>
+                                </li>
+                                <li class="leaf" data-md="NLP-API">
+                                    <a href="javascript:void(0)"><i></i>词向量表示接口</a>
+                                </li>
+                                <li class="leaf" data-md="NLP-API">
+                                    <a href="javascript:void(0)"><i></i>中文DNN语言模型</a>
+                                </li>
+                                <li class="leaf" data-md="NLP-API">
+                                    <a href="javascript:void(0)"><i></i>短文本相似度接口</a>
+                                </li>
+                                <li class="leaf" data-md="NLP-API">
+                                    <a href="javascript:void(0)"><i></i>评论观点抽取接口</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="non-leaf">
+                            <a href="javascript:void(0)"><span class="icon-arrow-down"></span>SDK 文档</a>
+                            <ul class="level3 submenu">
+                                <li class="non-leaf sdk-node" data-md="NLP-Java-SDK">
+                                    <a href="javascript:void(0)"><i></i>Java 语言</a>
+                                </li>
+                                <li class="non-leaf sdk-node" data-md="NLP-PHP-SDK">
+                                    <a href="javascript:void(0)"><i></i>PHP 语言</a>
+                                </li>
+                                <li class="non-leaf sdk-node" data-md="NLP-Python-SDK">
+                                    <a href="javascript:void(0)"><i></i>Python 语言</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="leaf" data-md="NLP-FAQ">
+                            <a href="javascript:void(0)"><i></i>常见问题</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="node root">
+                    <a href="javascript:void(0)"><span class="icon icon-huangfan"></span>黄反识别</a>
+                    <ul class="level2 submenu">
+                        <li class="non-leaf">
+                            <a href="javascript:void(0)">
+                                <span class="icon-arrow-down"></span>
+                                API 文档
+                            </a>
+                            <ul class="level3 submenu">
+                                <li class="leaf" data-md="Antiporn-API">
+                                    <a href="javascript:void(0)"><i></i>简介</a>
+                                </li>
+                                <li class="leaf" data-md="Antiporn-API">
+                                    <a href="javascript:void(0)"><i></i>调用方式一</a>
+                                </li>
+                                <li class="leaf" data-md="Antiporn-API">
+                                    <a href="javascript:void(0)"><i></i>调用方式二</a>
+                                </li>
+                                <li class="leaf" data-md="Antiporn-API">
+                                    <a href="javascript:void(0)"><i></i>错误信息格式</a>
+                                </li>
+                                <li class="leaf" data-md="Antiporn-API">
+                                    <a href="javascript:void(0)"><i></i>黄反识别</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="non-leaf">
+                            <a href="javascript:void(0)"><span class="icon-arrow-down"></span>SDK 文档</a>
+                            <ul class="level3 submenu">
+                                <li class="non-leaf sdk-node" data-md="Antiporn-Java-SDK">
+                                    <a href="javascript:void(0)"><i></i>Java 语言</a>
+                                </li>
+                                <li class="non-leaf sdk-node" data-md="Antiporn-PHP-SDK">
+                                    <a href="javascript:void(0)"><i></i>PHP 语言</a>
+                                </li>
+                                <li class="non-leaf sdk-node" data-md="Antiporn-Python-SDK">
+                                    <a href="javascript:void(0)"><i></i>Python 语言</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="leaf" data-md="Antiporn-FAQ">
+                            <a href="javascript:void(0)"><i></i>常见问题</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="doc-main">
+        <nav class="doc-breadcrumb">
+            <ul class="crumb" >
+                <li><span>文档中心</span></li>
+            </ul>
+            <div class="more">
+                <i class="iconfont icon-sdktool"></i>
+            </div>
+        </nav>
+        <div id="md_container" class="markdown-body">
+        </div>
+    </div>
+</div>
+
+</div>
+<aside class="aside-action">
+    <ul>
+        <li class="consult">
+            <a id="ai-consult" data-spec="合作咨询"></a>
+        </li>
+        <li class="feedback">
+            <a data-spec="在线咨询"
+               href="https://ikefu.baidu.com/web/ai-platform"
+               target="_blank"
+               id="feedback-btn"></a>
+        </li>
+        <li class="back-top">
+            <a data-spec="返回顶部"></a>
+        </li>
+    </ul>
+</aside>
+<footer class="footer-nav">
+    <div class="container clear-float">
+        <div class="footer-links">
+            <nav class="quick-path">
+                <h3>控制台入口</h3>
+                <ul>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
+                </ul>
+            </nav>
+            <nav class="resource">
+                <h3>资源</h3>
+                <ul>
+                    <li><a href="/docs">新手指南</a></li>
+                    <li><a href="/docs">技术文档</a></li>
+                    <li><a href="/sdk">SDK下载</a></li>
+                </ul>
+            </nav>
+            <nav class="support">
+                <h3>支持与帮助</h3>
+                <ul>
+                    <li><a href="/support/video">教学视频</a></li>
+                    <li><a href="/support/faq">常见问题</a></li>
+                    <li><a href="/support/news">新闻中心</a></li>
+                    <li><a href="/support/about">关于我们</a></li>
+                </ul>
+            </nav>
+            <nav class="focus">
+                <h3>关注百度大脑</h3>
+                <div class="qr-code"></div>
+                <p>扫码关注官方公众号</p>
+                <a class="email-subscribe">邮件订阅</a>
+            </nav>
+        </div>
+        <div class="news">
+            <h3>新闻动态</h3>
+            <div class="news-container"></div>
+        </div>
+    </div>
+    <div class="container">
+        <nav class="friendly-links">
+            <h3>友情链接</h3>
+            <ul>
+                <li><a href="http://www.paddlepaddle.org/cn/index.html" target="_blank">PaddlePaddle机器学习平台</a></li>
+                <li><a href="http://yuyin.baidu.com/" target="_blank">百度语音</a></li>
+                <li><a href="http://fanyi.baidu.com/" target="_blank">百度翻译</a></li>
+                <li><a href="http://idl.baidu.com/" target="_blank">百度深度学习实验室</a></li>
+                <li><a href="http://bdp.baidu.com/" target="_blank">百度大数据+</a></li>
+                <li><a href="http://datamart.baidu.com/" target="_blank">百度大数据+数据开放平台</a></li>
+                <li><a href="http://recsys.baidu.com/" target="_blank">Recsys推荐云平台</a></li>
+                <li><a href="https://cloud.baidu.com/?t=cp:online-media%7Cci:%7Ccn:ai" target="_blank">百度云</a></li>
+                <li><a href="http://www.chuanke.com/" target="_blank">百度传课</a></li>
+                <li><a href="http://app.baidu.com" target="_blank">百度开发者平台</a></li>
+                <li><a href="http://zhongbao.baidu.com" target="_blank">百度数据众包</a></li>
+                <li><a href="http://union.baidu.com" target="_blank">百度联盟</a></li>
+                <li><a href="http://tongji.baidu.com" target="_blank">百度统计</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
+    </div>
+</footer>
 <script src="//ai.bdstatic.com/dist/1490786085/js/common.bundle.js"></script>
 <script src="//ai.bdstatic.com/dist/1490786085/js/document/document.js"></script>
+
 <script>
-    (function(){
+    (function () {
         var bp = document.createElement('script');
         var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https'){
+        if (curProtocol === 'https') {
             bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
         }
-        else{
+        else {
             bp.src = 'http://push.zhanzhang.baidu.com/push.js';
         }
-        var s = document.getElementsByTagName("script")[0];
+        var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(bp, s);
     })();
 </script>
