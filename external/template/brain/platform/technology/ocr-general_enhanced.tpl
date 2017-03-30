@@ -321,7 +321,7 @@
             <div class="tech-feature-desc">
                 <div class="tech-feature-desc-title">成熟稳定</div>
             <div class="tech-feature-desc-info">
-                经过手机百度词典，手机百度等多款重量级产品实践检验，产品成熟稳定
+                经过手机百度，百度翻译，涂书笔记，百度糯米等多款重量级产品实践检验，产品成熟稳定
                 支持实时文字识别能力、弹性灵活的高并发承载及99.95%的可用性保证
             </div>
             </div>

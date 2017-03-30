@@ -37,6 +37,22 @@ backTop.click(
 );
 
 if (window.location.hostname.indexOf('cloud.baidu.com') < 0) {
+    // 种track
+    const searchStr = window.location.search.split('?')[1];
+    const query = {};
+    if (searchStr) {
+        const temp = searchStr.split('&');
+        temp.forEach(data => {
+            const [key, value] = data.split('=');
+            query[key] = value || '';
+        });
+    }
+    if (query.hasOwnProperty('t') || query.hasOwnProperty('track')) {
+        const iframe = $('<iframe class="ai-track"></iframe>');
+        const iframeURL = 'https://cloud.baidu.com/helper/x.html' + location.search + '&stamp=' + new Date().getTime();
+        iframe.src = iframeURL;
+        $('body').append(iframe);
+    }
     // 渲染底部新闻
     new News({
         selector: '.footer-nav .news-container',
