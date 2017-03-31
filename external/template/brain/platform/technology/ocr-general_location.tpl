@@ -243,7 +243,7 @@
             功能介绍
         </div>
         <div class="tech-function-info">
-            支持多场景下正图文字检测、定位、识别。支持任意场景、复杂背景、任意版面识别，
+            支持多场景下整图文字检测、定位、识别。支持任意场景、复杂背景、任意版面识别，
             支持10多种语言的识别能准确定位并返回文字位置信息，方便客户进行二次处理
         </div>
         <div class="tech-function-detail tech-clear">
@@ -332,7 +332,7 @@
             <div class="tech-feature-desc">
                 <div class="tech-feature-desc-title">成熟稳定</div>
             <div class="tech-feature-desc-info">
-                经过手机百度，百度翻译，涂书笔记，百度糯米等多款重量级产品实践检验，产品成熟稳定
+                经过手机百度，百度翻译，涂书笔记，百度糯米等多款重量级产品实践检验，产品成熟稳定。
                 支持实时文字识别能力、弹性灵活的高并发承载及99.95%的可用性保证
             </div>
             </div>
@@ -437,7 +437,7 @@
                 <div class="tech-case-item-title">快手</div>
                 <div class="tech-case-item-info">
                     快手是中国领先的短视频共享平台<br>
-                    快手调用百度OCR接口对短视频进行识别并进行是否作弊判断有效的监测了短视频违规情况
+                    快手调用百度OCR接口对短视频进行识别并进行是否作弊判断。有效的监测了短视频违规情况
                 </div>
             </div>
         </div>
