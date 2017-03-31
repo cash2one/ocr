@@ -9,6 +9,9 @@ import DemoCanvas from '../../component/widget/demoCanvas';
 import {scanPornography} from '../../model/demoAPI';
 import AlertModal from '../../component/widget/alertModal';
 
+/* eslint-disable */
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/antiporn.html';
+/* eslint-enable */
 import '../../less/technology/antiporn.less';
 
 /* eslint-disable */

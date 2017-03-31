@@ -9,6 +9,9 @@ import 'less/technology/face-search.less';
 
 import '../common/tech-case.js';
 
+/* eslint-disable */
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/face-search.html';
+/* eslint-enable */
 
 const $demo = $('.tech-function-demo');
 // 触发功能介绍动画

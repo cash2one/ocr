@@ -11,6 +11,10 @@ import AlertModal from '../../component/widget/alertModal';
 
 import 'less/technology/speech-tts.less';
 
+/* eslint-disable */
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/speech-tts.html';
+/* eslint-enable */
+
 $(document).ready(function () {
     // case点击效果
     $('.case-indicator > li').click(function () {

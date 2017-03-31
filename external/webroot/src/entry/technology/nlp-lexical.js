@@ -2,11 +2,14 @@
  * @file 词法分析demo
  * @author Franck Chen(chenfan02@baidu.com)
  */
+
 import $ from 'jquery';
 
 import 'less/technology/nlp-lexical.less';
 
 /* eslint-disable */
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/nlp-lexical.html';
+
 const sentences = [
     '2003年10月15日，杨利伟乘由长征二号F火箭运载的神舟五号飞船首次进入太空，象征着中国太空事业向前迈进一大步，起到了里程碑的作用。',
     '1996年，曾经是微软员工的加布·纽维尔和麦克·哈灵顿一同创建了Valve软件公司。他们在1996年下半年从id software取得了雷神之锤引擎的使用许可，用来开发半条命系列。',

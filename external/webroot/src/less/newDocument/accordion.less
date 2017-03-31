@@ -1,0 +1,27 @@
+.accordion-title {
+    position: relative;
+    height: 48px;
+    line-height: 48px;
+    padding-left: 20px;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    color: #666;
+    cursor: pointer;
+}
+
+.accordion-arrow {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    transform: translateY(-50%) rotateZ(90deg);
+    transform-origin: 50% 50%;
+    background: url(../../../ai_images/newDocument/icons/arrow.png);
+    background-size: contain;
+    transition: transform .2s linear;
+
+    &.arrow-collapsed {
+        transform: translateY(-50%) rotateZ(0);
+    }
+}

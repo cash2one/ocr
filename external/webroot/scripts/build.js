@@ -17,9 +17,10 @@ let webpackConfig = require('./webpack.config');
 const isWatchMode = argv.hasOwnProperty('w') || argv.hasOwnProperty('watch');
 const isOnlineMode = argv.hasOwnProperty('o') || argv.hasOwnProperty('online');
 const isBumpBuild = argv.hasOwnProperty('new');
+const isRDBuild = argv.hasOwnProperty('rd');
 
 // 增量观察构建模式
-if (isWatchMode) {
+if (isWatchMode || isRDBuild) {
     webpackConfig = Object.assign(
         {},
         webpackConfig,

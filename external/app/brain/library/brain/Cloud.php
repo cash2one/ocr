@@ -26,7 +26,7 @@ class Brain_Cloud {
         $odpDir = dirname(dirname(dirname(dirname(dirname(__FILE__)))));
         
         $templateDir = $odpDir . '/template/brain/cloud/';
-        $templateFile = $templateDir . "/$tech.tpl";
+        $templateFile = $templateDir . "$tech.tpl";
 
         if (!is_dir($templateDir))
         {
@@ -46,7 +46,7 @@ class Brain_Cloud {
             if (!empty($content))
             {
 
-                $tech_content = file_get_contents($odpDir."/webroot/src/view/technology/$tech.html");
+                $tech_content = file_get_contents($odpDir."/template/cloud/$tech.html");
 
                 //get fe version
                 $versionContent = json_decode(file_get_contents($odpDir."/webroot/version.json"), true);

@@ -14,6 +14,10 @@ import AlertModal from '../../component/widget/alertModal';
 import 'less/technology/face-detect.less';
 
 /* eslint-disable */
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/face-detect.html';
+/* eslint-enable */
+
+/* eslint-disable */
 // demo图片路径集合，TODO 后填充图片地址，略不合理
 const demoImagePaths = [
     // 静态引入，不要尝试些变量！

@@ -17,10 +17,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
-// postcss
-const autoprefixer = require('autoprefixer');
-
 const getVersion = require('./lib/getVersion');
+const getTemplate = require('./lib/getTemplate');
 /* eslint-enable */
 
 // 判断是开发构建还是测试构建
@@ -41,11 +39,12 @@ const globConfig = {
     cwd: path.join(__dirname, '..', 'src', 'entry'),
     ignore: [
         '**/pager.js', '**/base.js',
-        '**/common/*.js', '**/util/*.js'
+        '**/common/*.js', '**/util/*.js',
+        '**/lib/*.js', '**/mixin/*.js'
     ]
 };
 
-const moduleName = argv['module'];
+const moduleName = argv.module;
 
 let entries = [];
 if (!moduleName) {
@@ -102,8 +101,8 @@ entries.forEach(entry => {
                 'common.bundle', resourcePath, `${resourcePath}.style`
             ],
             chunksSortMode: 'dependency',
-            // 模板
-            template: path.resolve(__dirname, '..', 'src', 'view', 'common', 'template.ejs'),
+            // 模板, 不同的模块用不同的头和尾，所以写个函数获取对应的头尾
+            template: getTemplate(resourcePath),
             // 以下是自定义属性, 注意这里不要补充后缀，后缀留在模板里，避免动态引入，无法使用html-loader
             mainContent: resourcePath,
             // 这个页面需要用到的css和js
@@ -122,6 +121,7 @@ webpackEntries['common.bundle'] = ['jquery', 'src/entry/base.js'];
 // 两个单独引入的css，目前没有想好如何处理
 webpackEntries.base = ['src/less/base.less'];
 webpackEntries.ie9 = ['src/less/ie9.less'];
+webpackEntries.template = ['src/view/common/template.html'];
 
 module.exports = {
     // 注意基准路径是webroot
@@ -140,7 +140,9 @@ module.exports = {
             // 模板partials
             partials: path.resolve(__dirname, '..', 'src', 'partials'),
             // for 老古董ejs
-            ejs: 'ejs/ejs.js'
+            ejs: 'ejs/ejs.js',
+            // 方便文档模块快速找到文档目录
+            docCategory: path.resolve(__dirname, 'markdown', 'category.json')
         }
     },
     output: {
@@ -156,8 +158,16 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /(node_modules|bower_components)/,
+                exclude: /node_modules|bower_components/,
                 use: 'babel-loader'
+            },
+            {
+                // 没有用到css文件做入口，所以只需要css-loader
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
             },
             {
                 test: /\.less$/,
@@ -184,20 +194,21 @@ module.exports = {
                         options: {
                             minimize: false,
                             // 修改图片、视频缓存路径
-                            attrs: ['img:src', 'video:src']
+                            attrs: ['img:src', 'video:src', 'link:href'],
+                            // 忽略值是变量的静态资源
+                            ignoreCustomFragments: [/{%.*%}/]
                         }
                     }
                 ]
             },
             {
                 // icon转换base64
-                test: /sprite|icons(\/|\\).+\.(jpe?g|png|gif)$/i,
+                test: /sprite|icons([\/\\]).+\.(jpe?g|png|gif)$/i,
                 use: 'url-loader'
             },
             {
-                // TODO，小icon分单独文件夹管理，base64打包入css，省去拼接雪碧图
                 test: /\.(jpe?g|png|gif|mp4)$/i,
-                exclude: /sprite|icons(\/|\\).+\.(jpe?g|png|gif)$/i,
+                exclude: /sprite|icons([\/\\]).+\.(jpe?g|png|gif)$/i,
                 use: [
                     {
                         loader: 'file-loader',
@@ -224,6 +235,10 @@ module.exports = {
             {
                 test: /\.hbs$/,
                 use: 'handlebars-loader'
+            },
+            {
+                test: /\.vue$/,
+                use: 'vue-loader'
             }
         ]
     },

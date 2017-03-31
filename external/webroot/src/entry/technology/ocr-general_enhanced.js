@@ -16,18 +16,8 @@ const formatImg = require('../../../ai_images/error/image-format.png');
 const tooLargeImg = require('../../../ai_images/error/too-large.png');
 const noResult = require('../../../ai_images/error/no-general-result.png');
 const timeoutImg = require('../../../ai_images/error/timeout.png');
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/ocr-general_enhanced.html';
 // fixme 很不合理
-const demoImagePaths = [
-    // 静态引入，不要尝试些变量！
-    require('../../../ai_images/technology/ocr-general_enhanced/demo-card-1.png'),
-    require('../../../ai_images/technology/ocr-general_enhanced/demo-card-2.png'),
-    require('../../../ai_images/technology/ocr-general_enhanced/demo-card-3.png'),
-    require('../../../ai_images/technology/ocr-general_enhanced/demo-card-4.png'),
-    require('../../../ai_images/technology/ocr-general_enhanced/demo-card-5.png'),
-    require('../../../ai_images/technology/ocr-general_enhanced/demo-card-6.png'),
-    require('../../../ai_images/technology/ocr-general_enhanced/demo-card-7.png'),
-    require('../../../ai_images/technology/ocr-general_enhanced/demo-card-8.png')
-];
 /* eslint-enable */
 
 const $window = $(window);
@@ -311,9 +301,6 @@ const validateImgFile = file => {
 };
 
 // fixme
-$techDemoSelect.each((index, element) => {
-    $(element).find('img').attr('src', demoImagePaths[index]);
-});
 // 实例图片点击点击
 $techDemoSelect.on('click', e => {
     const $currentTarget = $(e.currentTarget);

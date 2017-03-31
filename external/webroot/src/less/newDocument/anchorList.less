@@ -1,0 +1,96 @@
+// 每个层级的padding
+@level-padding: 35px;
+@dot-width: 15px;
+
+@import "./newDocument";
+
+.anchor-list {
+    box-sizing: border-box;
+    overflow: auto;
+    font-size: 14px;
+    box-shadow: 2px 0 3px 2px rgba(204, 204, 204, .3);
+}
+
+.anchor-item {
+    height: 40px;
+    line-height: 40px;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.anchor-text {
+    overflow: hidden;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.anchor-level-1 {
+    .anchor-index,
+    .anchor-text {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .anchor-index {
+        width: 35px;
+        color: #ccc;
+    }
+
+    .anchor-text {
+        color: #666;
+    }
+}
+
+.anchor-level-2 {
+    box-sizing: border-box;
+    padding-left: 1 * @level-padding;
+    color: #999;
+
+    .anchor-dot,
+    .anchor-text {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .anchor-dot {
+        position: relative;
+        width: @dot-width;
+        height: 100%;
+
+        &:after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 5px;
+            height: 5px;
+            content: "";
+            transform: translate(-50%, -50%);
+            background-color: #999;
+            border-radius: 50%;
+        }
+    }
+
+    .anchor-text {
+        // 1px是border
+        max-width: @anchor-list-width - @level-padding - @dot-width - 1;
+        color: #999;
+    }
+}
+
+// 当前阅读的标题的样式
+.anchor-reached {
+    background-color: #0073eb;
+
+    .anchor-dot {
+        &:after {
+            background-color: #fff;
+        }
+    }
+
+    .anchor-text {
+        color: #fff;
+    }
+}

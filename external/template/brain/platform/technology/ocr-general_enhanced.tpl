@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490342487/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490786085/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490342487/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490342487/css/technology/ocr-general_enhanced.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490786085/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490786085/css/technology/ocr-general_enhanced.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490342487/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1490786085/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -66,6 +66,11 @@
                                 <li>
                                     <a href="/tech/ocr/general_enhanced" id="ocr-enhanced-link">
                                     通用文字识别（含生僻字版）
+                                    </a>
+                                </li>
+                                 <li>
+                                    <a href="/tech/ocr/general_location" id="ocr-location-link">
+                                    通用文字识别（含位置信息版）
                                     </a>
                                 </li>
                             </ul>
@@ -172,10 +177,7 @@
                         <li><a href="/support/video">教学视频</a></li>
                         <li><a href="/support/faq">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
-                        <li>
-                            <a href="http://developer.baidu.com/forum#ai"
-                               target="_blank">技术论坛</a>
-                        </li>
+                        <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
                     </ul>
                 </li>
@@ -184,38 +186,20 @@
         <div class="login">
             <ul>
                 {%if $userInfo eq Null%}
-                <li>
-                    <a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com"
-                       target="_blank">登录</a>
-                </li>
-                <li>
-                    <a class="btn-primary free-demo ai-redirect"
-                       role="button"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
-                </li>
+                <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
+                <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 {%if $userInfo.internalLink !== Null%}
-                <li>
-                    <a class="btn-other internal-link"
-                       target="_blank"
-                       role="button"
-                       href="{%$userInfo.internalLink%}">内部版本 </a>
-                </li>
+                <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
                 {%/if%}
                 <li>
-                    <a class="console ai-redirect"
-                       target="_blank"
-                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
+                    <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
-                        <li>
-                            <a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com"
-                               target="_blank">退出</a>
-                        </li>
+                        <li><a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com">退出</a></li>
                     </ul>
                 </li>
                 {%/if%}
@@ -231,7 +215,7 @@
         </div>
         <div class="tech-banner-info">
             <p>依托全网海量优质数据和业界领先的深度学习技术
-                在通用OCR基础上，扩展支持2W+大字库，能识别所有常用字和大多数生僻字。</p>
+                在通用OCR基础上，扩展支持2W+大字库，能识别所有常用字和大多数生僻字</p>
         </div>
         <div class="tech-banner-btn-list">
             <a role="button"
@@ -253,7 +237,8 @@
             功能介绍
         </div>
         <div class="tech-function-info">
-            支持多场景下针对常用字和生僻字的识别，2W+的字库比辞海收录的单字还多，能覆盖99%的文字场景，在图片文字清晰，小幅度倾斜，无明显背光等良好条件下，识别准确率高达90%。
+            支持多场景下针对常用字和生僻字的识别，2W+的字库比辞海收录的单字还多，能覆盖99%的文字场景<br>
+            在图片文字清晰，小幅度倾斜，无明显背光等良好条件下，识别准确率高达90%
         </div>
         <div class="tech-function-detail tech-clear">
             <div class="tech-function-original-card"></div>
@@ -281,33 +266,33 @@
                     </label>
                 </div>
                 <div class="tech-demo-desc">
-                    提示：可支持PNG、JPG、JPEG、BMP图片文件，不支持GIF图片，图片大小不超过2M，长边不超过2048像素。
-                    为保证正常识别效果，请保证需要识别部分为图片主体部分。
+                    提示：可支持PNG、JPG、JPEG、BMP图片文件，不支持GIF图片，图片大小不超过2M，长边不超过2048像素
+                    为保证正常识别效果，请保证需要识别部分为图片主体部分
                 </div>
                 <div class="tech-demo-card-list">
                     <div class="tech-demo-card-item tech-demo-card-active">
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_enhanced/demo-card-1.png">
+                        <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/ocr-general_enhanced/demo-card-1.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_enhanced/demo-card-2.png">
+                        <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/ocr-general_enhanced/demo-card-2.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_enhanced/demo-card-3.png">
+                        <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/ocr-general_enhanced/demo-card-3.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_enhanced/demo-card-4.png">
+                        <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/ocr-general_enhanced/demo-card-4.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_enhanced/demo-card-5.png">
+                        <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/ocr-general_enhanced/demo-card-5.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_enhanced/demo-card-6.png">
+                        <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/ocr-general_enhanced/demo-card-6.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_enhanced/demo-card-7.png">
+                        <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/ocr-general_enhanced/demo-card-7.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490342487/ai_images/technology/ocr-general_enhanced/demo-card-8.png">
+                        <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/ocr-general_enhanced/demo-card-8.png">
                     </div>
                 </div>
             </div>
@@ -327,7 +312,7 @@
                 <div class="tech-feature-desc-title">准确性高</div>
                 <div class="tech-feature-desc-info">
                     国内首个公有云OCR产品，基于百度深度学习研究院（IDL）强大的深度学习算法和中文检测识别技术，
-                    整图中文识别准确率达85%以上，英文91%以上。
+                    整图中文识别准确率达85%以上，英文91%以上
                 </div>
             </div>
         </div>
@@ -336,7 +321,7 @@
             <div class="tech-feature-desc">
                 <div class="tech-feature-desc-title">成熟稳定</div>
             <div class="tech-feature-desc-info">
-                经过手机百度词典，手机百度等多款重量级产品实践检验，产品成熟稳定。
+                经过手机百度，百度翻译，涂书笔记，百度糯米等多款重量级产品实践检验，产品成熟稳定
                 支持实时文字识别能力、弹性灵活的高并发承载及99.95%的可用性保证
             </div>
             </div>
@@ -361,7 +346,7 @@
             <div class="tech-scenario-desc">
                 <div class="tech-scenario-desc-name">通用自然场景</div>
                 <div class="tech-scenario-desc-info">
-                    印刷文档和自然场景有生僻字识别需求的场景下，进行生僻字识别。
+                    印刷文档和自然场景有生僻字识别需求的场景下，进行生僻字识别
                 </div>
             </div>
         </div>
@@ -370,7 +355,7 @@
             <div class="tech-scenario-desc">
                 <div class="tech-scenario-desc-name">搜索场景</div>
                 <div class="tech-scenario-desc-info">
-                    需要对某些生僻字进行搜索的情况下，进行生僻字识别。
+                    需要对某些生僻字进行搜索的情况下，进行生僻字识别
                 </div>
             </div>
         </div>
@@ -379,7 +364,7 @@
             <div class="tech-scenario-desc">
                 <div class="tech-scenario-desc-name">教育场景</div>
                 <div class="tech-scenario-desc-info">
-                    教育行业生僻字识别，可以应用在汉语词典，语文课本识别，文言文批改等场景。
+                    教育行业生僻字识别，可以应用在汉语词典，语文课本识别，文言文批改等场景
                 </div>
             </div>
         </div>
@@ -392,7 +377,8 @@
                 <div class="tech-case-item-logo"></div>
                 <div class="tech-case-item-title">百度词典</div>
                 <div class="tech-case-item-info">
-                    百度词典app是百度官方推出的手机词典软件；用户可以用摄像头拍摄的方式，调用百度通用文字识别（含生僻字版）OCR进行生僻字识别，有效的增强了应用的文字输入能力。
+                    百度词典app是百度官方推出的手机词典软件<br>
+                    用户可以用摄像头拍摄的方式,调用百度通用文字识别（含生僻字版）OCR进行生僻字识别，有效的增强了应用的文字输入能力
                 </div>
             </div>
         </div>
@@ -401,7 +387,8 @@
                 <div class="tech-case-item-logo"></div>
                 <div class="tech-case-item-title">手机百度</div>
                 <div class="tech-case-item-info">
-                    手机百度是百度推出的一款方便手机用户随时随地使用百度搜索服务的应用；手机百度调用百度通用文字识别（含生僻字版）OCR接口进行拍照生僻字识别，可以方便的进行生僻字搜索等操作。
+                    手机百度是百度推出的一款方便手机用户随时随地使用百度搜索服务的应用<br>
+                    手机百度调用百度通用文字识别（含生僻字版）OCR接口进行拍照生僻字识别，可以方便的进行生僻字搜索等操作
                 </div>
             </div>
         </div>
@@ -478,31 +465,11 @@
             <nav class="quick-path">
                 <h3>控制台入口</h3>
                 <ul>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
-                           target="_blank">百度语音</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index"
-                           target="_blank">文字识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index"
-                           target="_blank">人脸识别</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index"
-                           target="_blank">自然语言处理</a>
-                    </li>
-                    <li>
-                        <a class="ai-redirect"
-                           href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
-                           target="_blank">黄反识别</a>
-                    </li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
+                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
                 </ul>
             </nav>
             <nav class="resource">
@@ -558,19 +525,20 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490342487/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490342487/js/technology/ocr-general_enhanced.js"></script>
+<script src="//ai.bdstatic.com/dist/1490786085/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1490786085/js/technology/ocr-general_enhanced.js"></script>
+
 <script>
-    (function(){
+    (function () {
         var bp = document.createElement('script');
         var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https'){
+        if (curProtocol === 'https') {
             bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
         }
-        else{
+        else {
             bp.src = 'http://push.zhanzhang.baidu.com/push.js';
         }
-        var s = document.getElementsByTagName("script")[0];
+        var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(bp, s);
     })();
 </script>

@@ -9,3 +9,6 @@ import 'less/technology/speech-asr.less';
 
 import '../common/tech-case.js';
 
+/* eslint-disable */
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/speech-asr.html';
+/* eslint-enable */

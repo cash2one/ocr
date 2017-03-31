@@ -5,10 +5,10 @@
 // @column: 每列栏目数
 
 .tech-feature(@page-name: nlp-word_embedding; @icon-num: 3; @width: 320px; @column: 3) {
-    @margin: (1180px - @width * @column) / (2 * (@column - 1) );
+    @margin: (1180px - @width * @column) / (2 * (@column) );
     // 技术特色标题
     &-title {
-        padding: 30px 0 60px;
+        padding: 50px 0 60px;
         font-size: @big-title-size;
         text-align: center;
         color: @deep-black;
@@ -16,7 +16,7 @@
 
     // 技术特色list
     &-list {
-        margin: 0 -@margin;
+        // margin: 0 -@margin;
     }
 
     // 技术特色模块
