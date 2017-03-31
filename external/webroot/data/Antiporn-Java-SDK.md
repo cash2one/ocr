@@ -4,7 +4,7 @@
 
 # 安装黄反识别服务 Java SDK
 
-** Java SDK目录结构**
+**Java SDK目录结构**
 
     com.baidu.aip
            ├── auth                                //签名相关类
@@ -25,9 +25,9 @@
 
 3.在Eclipse右键“工程 -> Properties -> Java Build Path -z> Add JARs”。
 
-4.添加SDK工具包`antiporn_sdk-version.jar`和第三方依赖工具包`third-party/*.jar`。
+4.添加SDK工具包`antiporn_sdk-version.jar`和第三方依赖工具包`json-20160810.jar`。
 
-其中，`version`为版本号，添加完成后，用户就可以在工程中使用BFR Java SDK。
+其中，`version`为版本号，添加完成后，用户就可以在工程中使用Antiporn Java SDK。
 
 
 # 快速入门
@@ -93,23 +93,29 @@ public class Sample {
 
 **服务端返回的错误码**
 
-| 错误码    | 错误信息                | 描述        |
-| ------ | ------------------- | --------- |
-| 216015 | module closed       | 模块关闭      |
-| 216100 | invalid param       | 非法参数      |
-| 216101 | not enough param    | 参数数量不够    |
-| 216102 | service not support | 业务不支持     |
-| 216103 | param too long      | 参数太长      |
-| 216110 | appid not exist     | APP ID不存在 |
-| 216111 | invalid userid      | 非法用户ID    |
-| 216200 | empty image         | 空的图片      |
-| 216201 | image format error  | 图片格式错误    |
-| 216202 | image size error    | 图片大小错误    |
-| 216300 | db error            | DB错误      |
-| 216400 | backend error       | 后端系统错误    |
-| 216401 | internal error      | 内部错误      |
-| 216402 | face not found      | 没有找到人脸    |
-| 216500 | unknown error       | 未知错误      |
+| 错误码    | 错误信息                     | 描述          |
+| ------ | ------------------------ | ----------- |
+| 216015 | module closed            | 模块关闭        |
+| 216100 | invalid param            | 非法参数        |
+| 216101 | not enough param         | 参数数量不够      |
+| 216102 | service not support      | 业务不支持       |
+| 216103 | param too long           | 参数太长        |
+| 216110 | appid not exist          | APP ID不存在   |
+| 216111 | invalid userid           | 非法用户ID      |
+| 216200 | empty image              | 空的图片        |
+| 216201 | image format error       | 图片格式错误      |
+| 216202 | image size error         | 图片大小错误      |
+| 216300 | db error                 | DB错误        |
+| 216400 | backend error            | 后端系统错误      |
+| 216401 | internal error           | 内部错误        |
+| 216402 | face not found           | 没有找到人脸      |
+| 216500 | unknown error            | 未知错误        |
+| 282000 | logic internal error     | 业务逻辑层内部错误   |
+| 282001 | logic backend error      | 业务逻辑层后端服务错误 |
+| 282202 | antiporn detect timeout  | 检测超时        |
+| 282203 | image frame size error   | gif单帧大小超限   |
+| 282204 | image frames limit error | gif总帧数超限    |
+| 282205 | image fromat must gif    | 图片格式错误      |
 
 # 黄反识别
 
@@ -145,13 +151,83 @@ public void antiPorn(AipAntiporn client) {
 | +class_name  | String        | 分类结果名称，示例：色情                |
 | +probability | double        | 分类结果置信度，示例：0.89471650123596 |
 
+# GIF色情图像识别
+
+图片接受类型支持本地图片路径字符串，图片文件二进制数组，此接口只支持gif识别，若非gif接口，请使用[黄反识别](#黄反识别)接口。接口会对图片中每一帧进行识别，并返回所有检测结果中色情值最大的为结果。
+
+```java
+public void antiPornGif(AipAntiporn client) {
+    // 参数为本地图片路径
+    String imagePath = "porn.gif";
+    JSONObject response = client.detectGif(imagePath);
+    System.out.println(response.toString());
+
+    // 参数为本地图片文件二进制数组
+    byte[] file = readImageFile(imagePath);  // 此函数仅为示例
+    JSONObject response = client.detectGif(file);
+    System.out.println(response.toString());
+}
+```
+
+**GIF色情图像识别 请求参数详情**
+
+| 参数    | 类型     | 描述                        | 是否必须 |
+| :---- | :----- | :------------------------ | :--- |
+| image | String | 图像数据，支持本地图像文件路径，图像文件二进制数组 | 是    |
+
+**GIF色情图像识别 访问限制**
+
+| 检查项       | 限制条件            |
+| --------- | --------------- |
+| 图片格式      | gif             |
+| 每帧编码后大小   | < 4M            |
+| 帧数        | 不超过50           |
+| GIF图片整体大小 | base64编码后不超过20M |
+
+**GIF色情图像识别 返回数据参数详情**
+
+| 参数               | 类型            | 描述                          |
+| :--------------- | :------------ | :-------------------------- |
+| log_id           | uint64        | 请求标识码，随机数，唯一                |
+| frame_count      | uint64        | gif总帧数                      |
+| porn_probability | double        | 色情识别置信度                     |
+| result_num       | Int           | 返回结果数目，即：result数组中元素个数      |
+| result           | Array[Object] | 结果数组，每项内容对应一个分类维度的结果        |
+| +class_name      | String        | 分类结果名称，示例：色情                |
+| +probability     | double        | 分类结果置信度，示例：0.89471650123596 |
+
+**返回示例**
+```json
+{
+    "log_id": 1744190292,
+    "frame_count": 9,
+    "porn_probability":0.41608
+    "result_num": 3,
+    "result": [
+        {
+            "class_name": "色情",
+            "probability": 0.41608
+        },
+        {
+            "class_name": "性感",
+            "probability": 0.249851
+        },
+        {
+            "class_name": "正常",
+            "probability": 0.334069
+        }
+    ]
+}
+```
+
 # 版本更新记录
 
-| 上线日期      | 版本号  | 更新内容                 |
-| --------- | ---- | -------------------- |
-| 2017.3.2  | 1.2  | 上线对图片参数要求限制，增加设置超时接口 |
-| 2017.1.20 | 1.1  | 对部分云用户调用不成功的错误修复     |
-| 2017.1.6  | 1.0  | 初始版本，上线黄反接口          |
+| 上线日期      | 版本号  | 更新内容                      |
+| --------- | ---- | ------------------------- |
+| 2017.3.23 | 1.3  | 新增GIF色情图像识别接口，兼容Android环境 |
+| 2017.3.2  | 1.2  | 上线对图片参数要求限制，增加设置超时接口      |
+| 2017.1.20 | 1.1  | 对部分云用户调用不成功的错误修复          |
+| 2017.1.6  | 1.0  | 初始版本，上线黄反接口               |
 
 
 
