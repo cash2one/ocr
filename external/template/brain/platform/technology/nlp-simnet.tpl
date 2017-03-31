@@ -187,14 +187,17 @@
             <ul>
                 {%if $userInfo eq Null%}
                 <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
+                <li><a class="btn-primary free-demo ai-redirect"
+                       role="button"
+                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 {%if $userInfo.internalLink !== Null%}
                 <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
                 {%/if%}
                 <li>
-                    <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
+                    <a class="console ai-redirect"
+                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
@@ -214,7 +217,7 @@
         <p>依托全网海量优质数据和深度神经网络技术，为您提供高精度的短文本相似度服务，帮助快速实现推荐、检索、排序等应用。</p>
         <div>
             <a role="button"
-               class="btn-primary media"
+               class="btn-primary media ai-redirect"
                href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">
                 立即使用
             </a>
@@ -361,7 +364,7 @@
         <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
         <div>
             <a role="button"
-               class="btn-primary large"
+               class="btn-primary large ai-redirect"
                href="https://console.bce.baidu.com/?fromai=1#/aip/overview">
                 免费试用
             </a>
@@ -424,11 +427,26 @@
             <nav class="quick-path">
                 <h3>控制台入口</h3>
                 <ul>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
+                           class="ai-redirect">百度语音</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index"
+                           class="ai-redirect">文字识别</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index"
+                           class="ai-redirect">人脸识别</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index"
+                           class="ai-redirect">自然语言处理</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
+                           class="ai-redirect">黄反识别</a>
+                    </li>
                 </ul>
             </nav>
             <nav class="resource">
