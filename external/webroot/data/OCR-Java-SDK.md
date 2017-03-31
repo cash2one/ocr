@@ -66,13 +66,18 @@ public class Sample {
         System.out.println(bankRes.toString(2));
 
         // 调用通用识别接口
-        String genFilePath = "test_general.jpg";
+        String genFilePath = "test_basic_general.jpg";
+        JSONObject genRes = client.basicGeneral(genFilePath, new HashMap<String, String>());
+        System.out.println(genRes.toString(2));
+
+		// 调用通用识别（含位置信息）接口
+		String genFilePath = "test_general.jpg";
         JSONObject genRes = client.general(genFilePath, new HashMap<String, String>());
         System.out.println(genRes.toString(2));
     }
 }
 ```
-在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是在创建完毕应用后，系统分配给用户的，均为字符串，用于标识用户，为访问做签名验证，可在AI服务控制台中的**应用列表**中查看。
+在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是在创建完毕应用后，系统分配给用户的，均为字符串，用于标识用户，为访问做签名验证，可在AI服务控制台中的**应用列表**中查看。  
 
 **注意：**如您以前是百度云的老用户，其中`API_KEY`对应百度云的“Access Key ID”，`SECRET_KEY`对应百度云的“Access Key Secret”。
 
@@ -128,10 +133,79 @@ public class Sample {
 | 216633 | recognize idcard error       | 识别身份证错误       |
 | 216634 | detect error                 | 检测错误          |
 | 216635 | get mask error               | 获取mask图片错误    |
+| 282000 | logic internal error    	| 业务逻辑层内部错误 |
+| 282001 | logic backend error     	| 业务逻辑层后端服务错误 |
+| 282100 | image transcode error	| 图片压缩转码错误 		|
 
 # 通用文字识别
 
 通用文字识别可以接受任意图片，并识别出图片中的文字以及全部文字串。
+
+图片接受参数类型：支持本地图片路径字符串，图片文件二进制数组。
+
+举例，要对一张图片进行文字识别，具体的文字的内容和信息在返回的words_result字段中：
+
+```java
+public void generalRecognition(AipOcr client) {
+    // 参数为本地图片路径
+    String imagePath = "general.jpg";
+    JSONObject response = client.basicGeneral(imagePath);
+    System.out.println(response.toString());
+
+    // 参数为本地图片文件二进制数组
+    byte[] file = readImageFile(imagePath);
+    JSONObject response = client.basicGeneral(file);
+    System.out.println(response.toString());
+}
+```
+传入图片时还想增加一些自定义参数配置：
+
+```java
+public void generalRecognition(AipOcr client) {
+    // 自定义参数定义
+    HashMap<String, String> options = new HashMap<String, String>();
+    options.put("detect_direction", "false");
+    options.put("language_type", "CHN_ENG");
+
+    // 参数为本地图片路径
+    String imagePath = "general.jpg";
+    JSONObject response = client.basicGeneral(imagePath, options);
+    System.out.println(response.toString());
+
+    // 参数为本地图片文件二进制数组
+    byte[] file = readImageFile(imagePath);
+    JSONObject response = client.basicGeneral(file, options);
+    System.out.println(response.toString());
+}
+```
+
+**通用文字识别 请求参数详情**
+
+| 参数                    | 是否必选  | 类型      | 可选值范围                                   | 说明                                       |
+| --------------------- | ----- | ------- | --------------------------------------- | ---------------------------------------- |
+| image                 | true  | string  | -                                       | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
+| mask                  | false | string  | -                                       | 表示mask区域的黑白灰度图片，白色代表选中, base64编码         |
+| language_type         | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
+| detect_direction      | false | boolean | true、false                              | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
+| detect_language       | FALSE | string  | true、false                              | 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）           |
+| classify_dimension    | FALSE | string  | lottery                                 | 分类维度（根据OCR结果进行分类），逗号分隔，当前只支持lottery。<br/>lottery：彩票分类，设置detect_direction有助于提升精度 |
+
+
+**通用文字识别 返回数据参数详情**
+
+| 字段                 | 必选   | 类型      | 说明                                       |
+| ------------------ | ---- | ------- | ---------------------------------------- |
+| direction          | 否    | int32   | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
+| log_id             | 是    | uint64  | 唯一的log id，用于问题定位                         |
+| words_result_num   | 是    | uint32  | 识别结果数，表示words_result的元素个数                |
+| words_result       | 是    | array() | 定位和识别结果数组                                |
+| +words             | 否    | string  | 识别结果字符串                                  |
+
+
+
+# 通用文字识别（含位置信息版）
+
+通用文字识别（含位置信息版）可以接受任意图片，并识别出图片中的文字以及全部文字串，以及字符在图片中的位置信息。
 
 图片接受参数类型：支持本地图片路径字符串，图片文件二进制数组。
 
@@ -171,20 +245,19 @@ public void generalRecognition(AipOcr client) {
 }
 ```
 
-**通用文字识别 请求参数详情**
+**通用文字识别（含位置信息版） 请求参数详情**
 
 | 参数                    | 是否必选  | 类型      | 可选值范围                                   | 说明                                       |
 | --------------------- | ----- | ------- | --------------------------------------- | ---------------------------------------- |
 | image                 | true  | string  | -                                       | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
-| recognize_granularity | false | string  | big、small                               | 是否定位单字符位置，big：不定位单字符位置，默认值；small：定位单字符位置 |
 | mask                  | false | string  | -                                       | 表示mask区域的黑白灰度图片，白色代表选中, base64编码         |
 | language_type         | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
 | detect_direction      | false | boolean | true、false                              | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
 | detect_language       | FALSE | string  | true、false                              | 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）           |
 | classify_dimension    | FALSE | string  | lottery                                 | 分类维度（根据OCR结果进行分类），逗号分隔，当前只支持lottery。<br/>lottery：彩票分类，设置detect_direction有助于提升精度 |
-| vertexes_location     | FALSE | string  | true、false                              | 是否返回文字外接多边形顶点位置，不支持单字位置。默认为false         |
 
-**通用文字识别 返回数据参数详情**
+
+**通用文字识别（含位置信息版） 返回数据参数详情**
 
 | 字段                 | 必选   | 类型      | 说明                                       |
 | ------------------ | ---- | ------- | ---------------------------------------- |
@@ -208,6 +281,7 @@ public void generalRecognition(AipOcr client) {
 | +++width           | 是    | uint32  | 表示定位定位位置的长方形的宽度                          |
 | +++height          | 是    | uint32  | 表示位置的长方形的高度                              |
 | ++char             | 是    | string  | 单字符识别结果                                  |
+
 
 # 银行卡识别
 
@@ -239,13 +313,13 @@ public void bankcardRecognition(AipOcr client) {
 
 **银行卡识别 返回数据参数详情**
 
-| 参数                 | 类型     | 描述               |
-| :----------------- | :----- | :--------------- |
-| log_id             | Uint64 | 唯一的log id，用于问题定位 |
-| result             | Object | 定位和识别结果数组        |
-| \+bank_card_number | String | 银行卡识别结果          |
-| +bank_name         | string | 银行名，不能识别时为空               |
-| +bank_card_type    | uint32 | 银行卡类型，0:不能识别; 1: 借记卡; 2: 信用卡                |
+| 参数                 | 类型     | 描述                           |
+| :----------------- | :----- | :--------------------------- |
+| log_id             | Uint64 | 唯一的log id，用于问题定位             |
+| result             | Object | 定位和识别结果数组                    |
+| \+bank_card_number | String | 银行卡识别结果                      |
+| +bank_name         | string | 银行名，不能识别时为空                  |
+| +bank_card_type    | uint32 | 银行卡类型，0:不能识别; 1: 借记卡; 2: 信用卡 |
 
 # 身份证识别
 
@@ -326,6 +400,8 @@ public void idcardRecognition(AipOcr client) {
 
 | 上线日期      | 版本号  | 更新内容                        |
 | --------- | ---- | --------------------------- |
+| 2017.3.31 | 1.3.1 | 新增通用文字识别（含位置信息版） |
+| 2017.3.23 | 1.3 | 兼容Android环境 |
 | 2017.3.2  | 1.2  | 上线对图片参数要求限制，增加设置超时接口        |
 | 2017.1.20 | 1.1  | 对部分云用户调用不成功的错误修复            |
 | 2017.1.6  | 1.0  | 初始版本，上线身份证识别、银行卡识别和通用文字识别接口 |

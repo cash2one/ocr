@@ -27,8 +27,8 @@ AipOcrDemo工程依赖了AipOcrSdk工程以及AipBase.framework框架。（Dynam
 
 其中
 
- * AipBase.framework中包含了OCR服务相关基础类，必须引入。
- * AipOcrSdk工程包含了相机相关操作，如果需要相机接口，需要引入
+* AipBase.framework中包含了OCR服务相关基础类，必须引入。
+* AipOcrSdk工程包含了相机相关操作，如果需要相机接口，需要引入
    * 如果只需直接调用相机接口，直接引入AipOcrSdk工程生成的AipOcrSdk.framework即可。
    * 如果需要修改相机界面和和逻辑，可像demo工程一样引入AipOcrSdk工程，添加为依赖。
 
@@ -84,7 +84,7 @@ OCR iOS SDK提供了以下3种AccessToken管理方法.
  2. 下载对应应用的授权文件（默认名字为aip.license）
  3. 将授权文件添加至XCode工程（配置为资源并拷贝，Target -> Build Phases -> Copy Bundle Resource 中添加该文件）
  4. 读取授权文件原始字节，`NSData`格式，初始化`AipOcrService`单例：
- 
+
 ```
 // 接口
 - (instancetype) authWithLicenseFileData: (NSData *)licenseFileContent;
@@ -105,7 +105,7 @@ NSData *licenseFileData = [NSData dataWithContentsOfFile:licenseFile];
 使用步骤：
 
  1. 将您需要使用的token传入对应的构造函数，初始化`AipOcrService`单例：
- 
+
 ```
 // 接口
 - (instancetype) authWithToken: (NSString *)token;
@@ -136,22 +136,22 @@ NSData *licenseFileData = [NSData dataWithContentsOfFile:licenseFile];
 
 1. 身份验证：调用 `[[AipOcrService shardService] authWithAK:SK` 或其他验证方法；
 2. 在需要回调的类中实现AipOcrDelegate的接口（按需实现即可）。可在这些方法中pop出OCR的View,具体参考Demo工程。
-	* 通用文字识别成功：`- (void) ocrOnGeneralSuccessful:(id)result`
-	* 银行卡识别成功：`- (void) ocrOnBankCardSuccessful:(id)result`
-	* 身份证识别成功：`- (void) ocrOnIdCardSuccessful:(id)result`
-	* 识别失败：`- (void) ocrOnFail:(NSError *)error`
+ * 通用文字识别成功：`- (void) ocrOnGeneralSuccessful:(id)result`
+ * 银行卡识别成功：`- (void) ocrOnBankCardSuccessful:(id)result`
+ * 身份证识别成功：`- (void) ocrOnIdCardSuccessful:(id)result`
+ * 识别失败：`- (void) ocrOnFail:(NSError *)error`
 3. 在工程`Info.plist`中添加`NSCameraUsageDescription`，相机权限说明
 4. 初始化ViewController，其中
     * 通用文字识别：`UIViewController * vc = [AipGeneralVC ViewControllerWithDelegate:self]`
     * 银行卡识别 `UIViewController * vc = [AipCaptureCardVC ViewControllerWithCardType:CardTypeBankCard andDelegate:self]`
     * 身份证识别
-    	* 正面: `UIViewController * vc = [AipCaptureCardVC ViewControllerWithCardType:CardTypeIdCardFont andDelegate:self]`
-    	* 背面: `UIViewController * vc = [AipCaptureCardVC ViewControllerWithCardType:CardTypeIdCardFont andDelegate:self]`
+     * 正面: `UIViewController * vc = [AipCaptureCardVC ViewControllerWithCardType:CardTypeIdCardFont andDelegate:self]`
+     * 背面: `UIViewController * vc = [AipCaptureCardVC ViewControllerWithCardType:CardTypeIdCardFont andDelegate:self]`
 5. 在合适的地方启动ViewController: 如`[self presentViewController:vc animated:YES completion:nil]`
 
 AipOcrSdk.framework，即AipOcr工程包含了相机相关操作代码，如开发者想直接使用，无需引用AipOcrSdk工程，直接引入AipOcrSdk.framework即可。若需要修改相机操作相关UI，可引入AipOcrSdk工程，编辑相关UI代码即可。
-    	
-    	
+​    	
+​    	
 ## 数据接口
 
 该调用方法传入需要识别的UIImage，异步识别，识别完成之后，回调返回识别结果。
@@ -162,18 +162,18 @@ AipOcrSdk.framework，即AipOcr工程包含了相机相关操作代码，如开�
 
 1. 身份验证：调用 `[[AipOcrService shardService] authWithAK:SK` 或其他验证方法；
 2. 调用以下相应接口
-	* 通用文字识别 `detectTextFromImage`
-	* 身份证正面`detectIdCardFrontFromImage`
-	* 身份证背面`detectIdCardBackFromImage`
-	* 银行卡`detectBankCardFromImage`
+ * 通用文字识别 `detectTextFromImage`
+ * 身份证正面`detectIdCardFrontFromImage`
+ * 身份证背面`detectIdCardBackFromImage`
+ * 银行卡`detectBankCardFromImage`
 
 
 **所有回调函数均在后台线程中被调用，如需在主线程中操作，请使用`[[NSOperationQueue mainQueue] addOperationWithBlock]`patch到主线程中，示例参考demo工程。**
 
 ### 通用文字识别
 
- * 调用示例
- 
+* 调用示例
+
 ```
 NSDictionary *options = @{@"language_type": @"CHN_ENG", @"detect_direction": @"true"};
 [[AipOcrService shardService] detectTextFromImage:finalImage withOptions:options successHandler:^(id result) {
@@ -187,7 +187,7 @@ NSDictionary *options = @{@"language_type": @"CHN_ENG", @"detect_direction": @"t
 
 | 参数                    | 是否必选  | 类型      | 可选值范围                                   | 说明                                       |
 | --------------------- | ----- | ------- | --------------------------------------- | ---------------------------------------- |
-| image（已由参数替代）                 | true  | string  | -                                       | 图像数据，base64编码，要求base64编码后大小不超过1M，最短边至少15px，最长边最大2048px,支持jpg/png/bmp格式 |
+| image（已由参数替代）         | true  | string  | -                                       | 图像数据，base64编码，要求base64编码后大小不超过1M，最短边至少15px，最长边最大2048px,支持jpg/png/bmp格式 |
 | recognize_granularity | false | string  | big、small                               | 是否定位单字符位置，big：不定位单字符位置，默认值；small：定位单字符位置 |
 | mask                  | false | string  | -                                       | 表示mask区域的黑白灰度图片，白色代表选中, base64编码         |
 | language_type         | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
@@ -254,13 +254,13 @@ NSDictionary *options = @{@"language_type": @"CHN_ENG", @"detect_direction": @"t
 ```
 * 结果返回
 
-| 参数                 | 类型     | 描述               |
-| :----------------- | :----- | :--------------- |
-| log_id             | Uint64 | 唯一的log id，用于问题定位 |
-| result             | Object | 定位和识别结果数组        |
-| +bank_card_number | String | 银行卡识别结果          |
-| +bank_name	| string |	银行名，不能识别时为空|
-| +bank_card_type|	uint32 |	银行卡类型，0:不能识别; 1: 借记卡; 2: 信用卡|
+| 参数                | 类型     | 描述                           |
+| :---------------- | :----- | :--------------------------- |
+| log_id            | Uint64 | 唯一的log id，用于问题定位             |
+| result            | Object | 定位和识别结果数组                    |
+| +bank_card_number | String | 银行卡识别结果                      |
+| +bank_name        | string | 银行名，不能识别时为空                  |
+| +bank_card_type   | uint32 | 银行卡类型，0:不能识别; 1: 借记卡; 2: 信用卡 |
 
 ```json
  // 示例
@@ -289,12 +289,12 @@ NSDictionary *options = @{@"language_type": @"CHN_ENG", @"detect_direction": @"t
 
 **options参数**
 
-| 参数               | 必选    | 范围               | 类型      | 说明                                       |
-| ---------------- | ----- | ---------------- | ------- | ---------------------------------------- |
-| image（已由image参数代替）            | true  |                  | String  | 图像数据，支持本地图像文件路径，图像文件二进制数据，要求base64编码后大小不超过1M，最短边至少15px，最长边最大2048px,支持jpg/png/bmp格式 |
-| isFront（已由函数名区分）        | true  | true、false       | Boolean | true：身份证正面，false：身份证背面                   |
-| detect_direction | false | true、false       | string  | 是否检测图像朝向，默认不检测，即：false。可选值为：true - 检测图像朝向；false - 不检测图像朝向。朝向是指输入图像是正常方向、逆时针旋转90/180/270度 |
-| accuracy         | false | auto、normal、high | string  | 精准度，精度越高，速度越慢。default：auto               |
+| 参数                 | 必选    | 范围               | 类型      | 说明                                       |
+| ------------------ | ----- | ---------------- | ------- | ---------------------------------------- |
+| image（已由image参数代替） | true  |                  | String  | 图像数据，支持本地图像文件路径，图像文件二进制数据，要求base64编码后大小不超过1M，最短边至少15px，最长边最大2048px,支持jpg/png/bmp格式 |
+| isFront（已由函数名区分）   | true  | true、false       | Boolean | true：身份证正面，false：身份证背面                   |
+| detect_direction   | false | true、false       | string  | 是否检测图像朝向，默认不检测，即：false。可选值为：true - 检测图像朝向；false - 不检测图像朝向。朝向是指输入图像是正常方向、逆时针旋转90/180/270度 |
+| accuracy           | false | auto、normal、high | string  | 精准度，精度越高，速度越慢。default：auto               |
 
 
 * 结果
@@ -362,7 +362,7 @@ static CGFloat const pinchMinscale = 0.5;
 识别失败后，自动重试一次。
 
 在AipOcrSdk/AipOcrSdk/AipOcrService 中，配置属性 retry即可
-	
+​	
 ```	
 /**
  * 是否重试。默认为NO。YES会在失败时自动重试一次。
@@ -376,50 +376,53 @@ static CGFloat const pinchMinscale = 0.5;
 **验证错误**
 
 
-|错误码 | 错误信息 | 说明 | 备注 |
-|---|---|---|---|
-|110 |	Access token invalid or no longer valid	|Access Token过期失效| 请重新获得有效的Token |
-|283501 | License file check error| 授权文件不匹配 |请在[官网](http://ai.baidu.com)中配置正确的包名，并确认使用了正确的授权文件|
-|283502 | App identifier unmatch | BundleId不匹配 |请在[官网](http://ai.baidu.com)中配置正确的包名，并确认使用了正确的授权文件| 
-|283504 | Network error | 网络请求失败|  请授权App网络权限并保证网络通畅|
-|283505 | Server illegal response | 服务器返回数据异常 | |
-|283601 | Server authentication error |身份验证错误。| 请在[官网](http://ai.baidu.com)中配置应用，并确认填写了正确的AK/SK，或使用了正确的授权文件|
-|283602 | Authentication time error | 时间戳不正确，可能是设备时间异常。 | |
-|283604 | App identifier unmatch | 错误的PackageName或者BundleId | |
-|283700 | Server internal error |  服务器内部错误 | |
+| 错误码    | 错误信息                                    | 说明                       | 备注                                       |
+| ------ | --------------------------------------- | ------------------------ | ---------------------------------------- |
+| 110    | Access token invalid or no longer valid | Access Token过期失效         | 请重新获得有效的Token                            |
+| 283501 | License file check error                | 授权文件不匹配                  | 请在[控制台](https://console.bce.baidu.com/ai/#/ai/ocr/overview/index)中配置正确的包名，并确认使用了正确的授权文件 |
+| 283502 | App identifier unmatch                  | BundleId不匹配              | 请在[控制台](https://console.bce.baidu.com/ai/#/ai/ocr/overview/index)中配置正确的包名，并确认使用了正确的授权文件 |
+| 283504 | Network error                           | 网络请求失败                   | 请授权App网络权限并保证网络通畅                        |
+| 283505 | Server illegal response                 | 服务器返回数据异常                |                                          |
+| 283601 | Server authentication error             | 身份验证错误。                  | 请在[控制台](https://console.bce.baidu.com/ai/#/ai/ocr/overview/index)中配置应用，并确认填写了正确的AK/SK，或使用了正确的授权文件 |
+| 283602 | Authentication time error               | 时间戳不正确，可能是设备时间异常。        |                                          |
+| 283604 | App identifier unmatch                  | 错误的PackageName或者BundleId | 请在[控制台](https://console.bce.baidu.com/ai/#/ai/ocr/overview/index)中配置正确的包名，并确认使用了正确的授权文件 |
+| 283700 | Server internal error                   | 服务器内部错误                  | 您可以在工单系统中提交错误信息中的logId，我们将尝试帮您排查原因       |
 
 
 **服务错误**
 
-| 错误码    | 错误信息                         | 描述            |
-| ------ | ---------------------------- | ------------- |
-| 216015 | module closed                | 模块关闭          |
-| 216100 | invalid param                | 非法参数          |
-| 216101 | not enough param             | 参数数量不够        |
-| 216102 | service not support          | 业务不支持         |
-| 216103 | param too long               | 参数太长          |
-| 216110 | appid not exist              | APP ID不存在     |
-| 216111 | invalid userid               | 非法用户ID        |
-| 216200 | empty image                  | 空的图片          |
-| 216201 | image format error           | 图片格式错误        |
-| 216202 | image size error             | 图片大小错误        |
-| 216300 | db error                     | DB错误          |
-| 216400 | backend error                | 后端系统错误        |
-| 216401 | internal error               | 内部错误          |
-| 216500 | unknown error                | 未知错误          |
-| 216600 | id number format error       | 身份证的ID格式错误    |
-| 216601 | id number and name not match | 身份证的ID和名字不匹配  |
-| 216630 | recognize error              | 识别错误          |
-| 216631 | recognize bank card error    | 识别银行卡错误（通常为检测不到银行卡）       |
-| 216632 | ocr                          | unknown error |
-| 216633 | recognize idcard error       | 识别身份证错误（通常为检测不到身份证）       |
-| 216634 | detect error                 | 检测错误          |
-| 216635 | get mask error               | 获取mask图片错误    |
+| 错误码    | 错误信息                         | 描述                  |
+| ------ | ---------------------------- | ------------------- |
+| 216015 | module closed                | 模块关闭                |
+| 216100 | invalid param                | 非法参数                |
+| 216101 | not enough param             | 参数数量不够              |
+| 216102 | service not support          | 业务不支持               |
+| 216103 | param too long               | 参数太长                |
+| 216110 | appid not exist              | APP ID不存在           |
+| 216111 | invalid userid               | 非法用户ID              |
+| 216200 | empty image                  | 空的图片                |
+| 216201 | image format error           | 图片格式错误              |
+| 216202 | image size error             | 图片大小错误              |
+| 216300 | db error                     | DB错误                |
+| 216400 | backend error                | 后端系统错误              |
+| 216401 | internal error               | 内部错误                |
+| 216500 | unknown error                | 未知错误                |
+| 216600 | id number format error       | 身份证的ID格式错误          |
+| 216601 | id number and name not match | 身份证的ID和名字不匹配        |
+| 216630 | recognize error              | 识别错误                |
+| 216631 | recognize bank card error    | 识别银行卡错误（通常为检测不到银行卡） |
+| 216632 | ocr                          | unknown error       |
+| 216633 | recognize idcard error       | 识别身份证错误（通常为检测不到身份证） |
+| 216634 | detect error                 | 检测错误                |
+| 216635 | get mask error               | 获取mask图片错误          |
+| 282000 | logic internal error         | 业务逻辑层内部错误           |
+| 282001 | logic backend error          | 业务逻辑层后端服务错误         |
+| 282100 | image transcode error        | 图片压缩转码错误            |
 
 
 # 版本更新记录
 
-| 上线日期      | 版本号  | 更新内容                        |
-| --------- | ---- | --------------------------- |
-| 2017.3.16  | 1.0.0  | 在线OCR第一版！|
+| 上线日期      | 版本号   | 更新内容      |
+| --------- | ----- | --------- |
+| 2017.3.16 | 1.0.0 | 在线OCR第一版！ |
 
