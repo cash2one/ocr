@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490786085/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490786085/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490786085/css/technology/ocr-general_location.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/technology/ocr-general_location.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490786085/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1490967304/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -187,14 +187,17 @@
             <ul>
                 {%if $userInfo eq Null%}
                 <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
+                <li><a class="btn-primary free-demo ai-redirect"
+                       role="button"
+                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 {%if $userInfo.internalLink !== Null%}
                 <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
                 {%/if%}
                 <li>
-                    <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
+                    <a class="console ai-redirect"
+                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
@@ -219,14 +222,17 @@
         </div>
         <div class="tech-banner-btn-list">
             <a role="button"
+               class="btn-primary media ai-redirect"
+               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">立即使用</a>
+            <a role="button"
+               class="btn-other media"
+               href="
                {%if $src eq Null%}
-               class="btn-primary media consult"
-               data-operation="cooperation"
+               /docs#OCR
                {%else%}
-               class="btn-primary media"
-               href="https://cloud.baidu.com/doc/OCR/index.html"
-               {%/if%}>
-                免费使用
+               https://cloud.baidu.com/doc/OCR/index.html
+               {%/if%}">
+                技术文档
             </a>
         </div>
     </div>
@@ -237,7 +243,7 @@
             功能介绍
         </div>
         <div class="tech-function-info">
-            支持多场景下正图文字检测、定位、识别。支持任意场景、复杂背景、任意版面识别，
+            支持多场景下整图文字检测、定位、识别。支持任意场景、复杂背景、任意版面识别，
             支持10多种语言的识别能准确定位并返回文字位置信息，方便客户进行二次处理
         </div>
         <div class="tech-function-detail tech-clear">
@@ -274,28 +280,28 @@
                 </div>
                 <div class="tech-demo-card-list">
                     <div class="tech-demo-card-item tech-demo-card-active">
-                        <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/ocr-general_location/demo-card-1.jpeg" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/ocr-general_location/demo-card-1.jpeg" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/ocr-general_location/demo-card-2.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/ocr-general_location/demo-card-2.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/ocr-general_location/demo-card-3.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/ocr-general_location/demo-card-3.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/ocr-general_location/demo-card-4.jpg" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/ocr-general_location/demo-card-4.jpg" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/ocr-general_location/demo-card-5.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/ocr-general_location/demo-card-5.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/ocr-general_location/demo-card-6.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/ocr-general_location/demo-card-6.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/ocr-general_location/demo-card-7.jpeg" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/ocr-general_location/demo-card-7.jpeg" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/ocr-general_location/demo-card-8.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/ocr-general_location/demo-card-8.png" alt=" ">
                     </div>
                 </div>
             </div>
@@ -326,7 +332,7 @@
             <div class="tech-feature-desc">
                 <div class="tech-feature-desc-title">成熟稳定</div>
             <div class="tech-feature-desc-info">
-                经过手机百度，百度翻译，涂书笔记，百度糯米等多款重量级产品实践检验，产品成熟稳定
+                经过手机百度，百度翻译，涂书笔记，百度糯米等多款重量级产品实践检验，产品成熟稳定。
                 支持实时文字识别能力、弹性灵活的高并发承载及99.95%的可用性保证
             </div>
             </div>
@@ -431,7 +437,7 @@
                 <div class="tech-case-item-title">快手</div>
                 <div class="tech-case-item-info">
                     快手是中国领先的短视频共享平台<br>
-                    快手调用百度OCR接口对短视频进行识别并进行是否作弊判断有效的监测了短视频违规情况
+                    快手调用百度OCR接口对短视频进行识别并进行是否作弊判断。有效的监测了短视频违规情况
                 </div>
             </div>
         </div>
@@ -490,7 +496,7 @@
 <div class="tech-section get-started tech-product">
     <div class="container-product">
         <div class="tech-product-title">产品定价</div>
-        <div class="tech-product-info">本产品为按调用量计费的后付费产品，定价采取分段式阶定价方式</div>
+        <div class="tech-product-info">本产品为按调用量计费的后付费产品，定价采取分段式阶梯定价方式</div>
         <div class="tech-product-wrapper">
             <div class="product-box-1">
                 <div class="box-head">价目表</div>
@@ -533,22 +539,17 @@
                 <div class="box-head">调用失败如何计费？</div>
                 <div class="box-body">
                     <div class="box-body-connent">
-                        支付失败类型共分两种：服务错误和业务操作错误导致的调用失败。超出免配额后，
+                        调用失败类型共分两种：服务错误和业务操作错误导致的调用失败。超出免费配额后，
                         因服务错误导致的调用失败不计费，相关错误码请查询
                         <a class="product-error-query" href="/docs#OCR-API">错误码详情</a>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>
         <div class="tech-free-product-btn">
             <a role="button"
-               {%if $src eq Null%}
-               class="btn-primary large consult"
-               data-operation="cooperation"
-               {%else%}
-               class="btn-primary large"
-               href="https://cloud.baidu.com/doc/OCR/index.html"
-               {%/if%}>
+               class="btn-primary large ai-redirect"
+               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">
                 免费使用
             </a>
         </div>
@@ -624,11 +625,26 @@
             <nav class="quick-path">
                 <h3>控制台入口</h3>
                 <ul>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
+                           class="ai-redirect">百度语音</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index"
+                           class="ai-redirect">文字识别</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index"
+                           class="ai-redirect">人脸识别</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index"
+                           class="ai-redirect">自然语言处理</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
+                           class="ai-redirect">黄反识别</a>
+                    </li>
                 </ul>
             </nav>
             <nav class="resource">
@@ -684,8 +700,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490786085/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490786085/js/technology/ocr-general_location.js"></script>
+<script src="//ai.bdstatic.com/dist/1490967304/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1490967304/js/technology/ocr-general_location.js"></script>
 
 <script>
     (function () {

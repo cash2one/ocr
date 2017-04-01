@@ -41,12 +41,12 @@ Andoird SDK提供了一个可快速运行的demo工程，直接在Android Studio
 在工程AndroidManifest.xml文件中添加如下权限：
 各个权限的用途说明见下表：
 
-|名称 | 用途 |
-|---|---|
-|INTERNET|应用联网，发送请求数据至服务器，获得识别结果。|
-|CAMERA|调用相机进行拍照（仅UI部分需要）|
-|WRITE_EXTERNAL_STORAGE|图片裁剪临时存储|
-|READ_EXTERNAL_STORAGE|图片裁剪临时存储|
+| 名称                     | 用途                      |
+| ---------------------- | ----------------------- |
+| INTERNET               | 应用联网，发送请求数据至服务器，获得识别结果。 |
+| CAMERA                 | 调用相机进行拍照（仅UI部分需要）       |
+| WRITE_EXTERNAL_STORAGE | 图片裁剪临时存储                |
+| READ_EXTERNAL_STORAGE  | 图片裁剪临时存储                |
 
 ### Proguard配置
 
@@ -197,7 +197,7 @@ OCR.getInstance().recognizeGeneral(param, new OnResultListener<GeneralResult>() 
 
 | 参数                    | 是否必选  | 类型      | 可选值范围                                   | 说明                                       |
 | --------------------- | ----- | ------- | --------------------------------------- | ---------------------------------------- |
-| image                | true  | string  | -                                       | 图像数据，base64编码，要求base64编码后大小不超过1M，最短边至少15px，最长边最大2048px,支持jpg/png/bmp格式 |
+| image                 | true  | string  | -                                       | 图像数据，base64编码，要求base64编码后大小不超过1M，最短边至少15px，最长边最大2048px,支持jpg/png/bmp格式 |
 | recognize_granularity | false | string  | big、small                               | 是否定位单字符位置，big：不定位单字符位置，默认值；small：定位单字符位置 |
 | mask                  | false | string  | -                                       | 表示mask区域的黑白灰度图片，白色代表选中, base64编码         |
 | language_type         | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
@@ -275,13 +275,13 @@ OCR.getInstance().recognizeBankCard(param, new OnResultListener<BankCardResult>(
 
 * 结果返回
 
-| 参数                 | 类型     | 描述               |
-| :----------------- | :----- | :--------------- |
-| log_id             | Uint64 | 唯一的log id，用于问题定位 |
-| result             | Object | 定位和识别结果数组        |
-| \+bank_card_number | String | 银行卡识别结果          |
-| \+bank_name | String | 银行名，不能识别时为空         |
-| \+bank_card_type | uint32 | 银行卡类型，0:不能识别; 1: 借记卡; 2: 信用卡|
+| 参数                 | 类型     | 描述                           |
+| :----------------- | :----- | :--------------------------- |
+| log_id             | Uint64 | 唯一的log id，用于问题定位             |
+| result             | Object | 定位和识别结果数组                    |
+| \+bank_card_number | String | 银行卡识别结果                      |
+| \+bank_name        | String | 银行名，不能识别时为空                  |
+| \+bank_card_type   | uint32 | 银行卡类型，0:不能识别; 1: 借记卡; 2: 信用卡 |
 
 ```json
  // 示例
@@ -322,7 +322,7 @@ OCR.getInstance().recognizeIDCard(param, new OnResultListener<IDCardResult>() {
 | 参数               | 必选    | 范围               | 类型      | 说明                                       |
 | ---------------- | ----- | ---------------- | ------- | ---------------------------------------- |
 | image            | true  |                  | String  | 图像数据，支持本地图像文件路径，图像文件二进制数据，要求base64编码后大小不超过1M，最短边至少15px，最长边最大2048px,支持jpg/png/bmp格式 |
-| isFront        | true  | true、false       | Boolean | true：身份证正面，false：身份证背面                   |
+| isFront          | true  | true、false       | Boolean | true：身份证正面，false：身份证背面                   |
 | detect_direction | false | true、false       | string  | 是否检测图像朝向，默认不检测，即：false。可选值为：true - 检测图像朝向；false - 不检测图像朝向。朝向是指输入图像是正常方向、逆时针旋转90/180/270度 |
 | accuracy         | false | auto、normal、high | string  | 精准度，精度越高，速度越慢。default：auto               |
 
@@ -368,49 +368,54 @@ OCR.getInstance().recognizeIDCard(param, new OnResultListener<IDCardResult>() {
 
 **验证错误**
 
-|错误码 | 错误信息 | 说明 | 备注 |
-|---|---|---|---|
-|110 | Access token invalid or no longer valid |Access Token过期失效| 请重新获得有效的Token |
-|283501 | License file check error| 授权文件不匹配 |请在[官网](http://ai.baidu.com)中配置正确的包名，并确认使用了正确的授权文件|
-|283502 | App identifier unmatch | BundleId不匹配 |请在[官网](http://ai.baidu.com)中配置正确的包名，并确认使用了正确的授权文件|
-|283504 | Network error | 网络请求失败| 请授权App网络权限并保证网络通畅|
-|283505 | Server illegal response | 服务器返回数据异常 | |
-|283601 | Server authentication error |身份验证错误。| 请在[官网](http://ai.baidu.com)中配置应用，并确认填写了正确的AK/SK，或使用了正确的授权文件|
-|283602 | Authentication time error | 时间戳不正确，可能是设备时间异常。 | |
-|283604 | App identifier unmatch | 错误的PackageName或者BundleId | |
-|283700 | Server internal error | 服务器内部错误 | |
+| 错误码    | 错误信息                                    | 说明                            | 备注                                       |
+| ------ | --------------------------------------- | ----------------------------- | ---------------------------------------- |
+| 110    | Access token invalid or no longer valid | Access Token过期失效              | 请重新获得有效的Token                            |
+| 283501 | License file check error                | 授权文件不匹配                       | 请在[控制台](https://console.bce.baidu.com/ai/#/ai/ocr/overview/index)中配置正确的包名，并确认使用了正确的授权文件 |
+| 283502 | App identifier unmatch                  | BundleId不匹配                   | 请在[控制台](https://console.bce.baidu.com/ai/#/ai/ocr/overview/index)中配置正确的包名，并确认使用了正确的授权文件 |
+| 283503 | License file not exists                 | 请确认aip.licence文件存在于assets文件夹中 |                                          |
+| 283504 | Network error                           | 网络请求失败                        | 请授权App网络权限并保证网络通畅                        |
+| 283505 | Server illegal response                 | 服务器返回数据异常                     |                                          |
+| 283506 | Load jni so library error               | JNI加载异常                       | 请确认开发包中的so库被正确加载                         |
+| 283601 | Server authentication error             | 身份验证错误。                       | 请在[控制台](https://console.bce.baidu.com/ai/#/ai/ocr/overview/index)中配置应用，并确认填写了正确的AK/SK，或使用了正确的授权文件 |
+| 283602 | Authentication time error               | 时间戳不正确，可能是设备时间异常。             | 请确保不要改变调用设备的本地时间                         |
+| 283604 | App identifier unmatch                  | 错误的PackageName或者BundleId      | 请在[控制台](https://console.bce.baidu.com/ai/#/ai/ocr/overview/index)中配置正确的包名，并确认使用了正确的授权文件 |
+| 283700 | Server internal error                   | 服务器内部错误                       | 您可以在工单系统中提交错误信息中的logId，我们将尝试帮您排查错误原因     |
 
 
 
 **服务错误**
 
-| 错误码    | 错误信息                         | 描述            |
-| ------ | ---------------------------- | ------------- |
-| 216015 | module closed                | 模块关闭          |
-| 216100 | invalid param                | 非法参数          |
-| 216101 | not enough param             | 参数数量不够        |
-| 216102 | service not support          | 业务不支持         |
-| 216103 | param too long               | 参数太长          |
-| 216110 | appid not exist              | APP ID不存在     |
-| 216111 | invalid userid               | 非法用户ID        |
-| 216200 | empty image                  | 空的图片          |
-| 216201 | image format error           | 图片格式错误        |
-| 216202 | image size error             | 图片大小错误        |
-| 216300 | db error                     | DB错误          |
-| 216400 | backend error                | 后端系统错误        |
-| 216401 | internal error               | 内部错误          |
-| 216500 | unknown error                | 未知错误          |
-| 216600 | id number format error       | 身份证的ID格式错误    |
-| 216601 | id number and name not match | 身份证的ID和名字不匹配  |
-| 216630 | recognize error              | 识别错误          |
-| 216631 | recognize bank card error    | 识别银行卡错误（通常为检测不到银行卡）       |
-| 216632 | ocr                          | unknown error |
-| 216633 | recognize idcard error       | 识别身份证错误（通常为检测不到身份证）       |
-| 216634 | detect error                 | 检测错误          |
-| 216635 | get mask error               | 获取mask图片错误    |
+| 错误码    | 错误信息                         | 描述                  |
+| ------ | ---------------------------- | ------------------- |
+| 216015 | module closed                | 模块关闭                |
+| 216100 | invalid param                | 非法参数                |
+| 216101 | not enough param             | 参数数量不够              |
+| 216102 | service not support          | 业务不支持               |
+| 216103 | param too long               | 参数太长                |
+| 216110 | appid not exist              | APP ID不存在           |
+| 216111 | invalid userid               | 非法用户ID              |
+| 216200 | empty image                  | 空的图片                |
+| 216201 | image format error           | 图片格式错误              |
+| 216202 | image size error             | 图片大小错误              |
+| 216500 | unknown error                | 未知错误                |
+| 216600 | id number format error       | 身份证的ID格式错误          |
+| 216601 | id number and name not match | 身份证的ID和名字不匹配        |
+| 216630 | recognize error              | 识别错误                |
+| 216631 | recognize bank card error    | 识别银行卡错误（通常为检测不到银行卡） |
+| 216632 | ocr                          | unknown error       |
+| 216633 | recognize idcard error       | 识别身份证错误（通常为检测不到身份证） |
+| 216634 | detect error                 | 检测错误                |
+| 216635 | get mask error               | 获取mask图片错误          |
+| 282000 | logic internal error   | 业务逻辑层内部错误     |
+| 282001 | logic backend error    | 业务逻辑层后端服务错误   |
+| 282100 | image transcode error  | 图片压缩转码错误      |
 
 # 版本更新记录
 
-| 上线日期      | 版本号  | 更新内容                        |
-| --------- | ---- | --------------------------- |
-| 2017.3.16  | 1.0.0  | 在线OCR第一版！|
+| 上线日期      | 版本号   | 更新内容                    |
+| --------- | ----- | ----------------------- |
+| 2017.3.23 | 1.0.1 | 更新demo获取token失败的错误提示的交互 |
+| 2017.3.16 | 1.0.0 | 在线OCR第一版！               |
+
+

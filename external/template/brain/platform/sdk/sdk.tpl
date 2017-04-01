@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490786085/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490786085/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490786085/css/sdk/sdk.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/sdk/sdk.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490786085/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1490967304/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -187,14 +187,17 @@
             <ul>
                 {%if $userInfo eq Null%}
                 <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
+                <li><a class="btn-primary free-demo ai-redirect"
+                       role="button"
+                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 {%if $userInfo.internalLink !== Null%}
                 <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
                 {%/if%}
                 <li>
-                    <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
+                    <a class="console ai-redirect"
+                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
@@ -585,7 +588,7 @@
                         <i class="sdk-language-sprite sdk-java"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-ocr"></i>
-                            <a href="http://ai.baidu.com/download/aip-ocr-java-sdk-1.2.zip">
+                            <a href="http://ai.baidu.com/download/aip-ocr-java-sdk-1.3.1.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -593,8 +596,8 @@
                             <div class="sdk-item-name">Java SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.3.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-03-23</div>
+                                <div class="sdk-version">版本: 1.3.1</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-31</div>
                             </div>
                         </div>
                     </div>
@@ -604,7 +607,7 @@
                         <i class="sdk-language-sprite sdk-php"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-ocr"></i>
-                            <a href="http://ai.baidu.com/download/aip-ocr-php-sdk-1.3.zip">
+                            <a href="http://ai.baidu.com/download/aip-ocr-php-sdk-1.3.1.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -612,8 +615,8 @@
                             <div class="sdk-item-name">PHP SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.3.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-03-23</div>
+                                <div class="sdk-version">版本: 1.3.1</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-31</div>
                             </div>
                         </div>
                     </div>
@@ -624,7 +627,7 @@
                         <i class="sdk-language-sprite sdk-python"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-ocr"></i>
-                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.3.zip">
+                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.3.1.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -632,8 +635,8 @@
                             <div class="sdk-item-name">Python SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.3.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-03-23</div>
+                                <div class="sdk-version">版本: 1.3.1</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-31</div>
                             </div>
                         </div>
                     </div>
@@ -705,7 +708,7 @@
                         <i class="sdk-language-sprite sdk-php"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bfr"></i>
-                            <a href="http://ai.baidu.com/download/aip-face-php-sdk-1.3.zip">
+                            <a href="http://ai.baidu.com/download/aip-face-php-sdk-1.3.1.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -713,8 +716,8 @@
                             <div class="sdk-item-name">PHP SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.3.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-03-23</div>
+                                <div class="sdk-version">版本: 1.3.1</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-31</div>
                             </div>
                         </div>
                     </div>
@@ -725,7 +728,7 @@
                         <i class="sdk-language-sprite sdk-python"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bfr"></i>
-                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.3.zip">
+                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.3.1.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -733,8 +736,8 @@
                             <div class="sdk-item-name">Python SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.3.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-03-23</div>
+                                <div class="sdk-version">版本: 1.3.1</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-31</div>
                             </div>
                         </div>
                     </div>
@@ -768,7 +771,7 @@
                         <i class="sdk-language-sprite sdk-php"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-nlp"></i>
-                            <a href="http://ai.baidu.com/download/aip-nlp-php-sdk-1.2.zip">
+                            <a href="http://ai.baidu.com/download/aip-nlp-php-sdk-1.3.1.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -776,8 +779,8 @@
                             <div class="sdk-item-name">PHP SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.2.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-03-02</div>
+                                <div class="sdk-version">版本: 1.3.1</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-31</div>
                             </div>
                         </div>
                     </div>
@@ -788,7 +791,7 @@
                         <i class="sdk-language-sprite sdk-python"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-nlp"></i>
-                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.3.zip">
+                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.3.1.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -796,8 +799,8 @@
                             <div class="sdk-item-name">Python SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.3.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-03-23</div>
+                                <div class="sdk-version">版本: 1.3.1</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-31</div>
                             </div>
                         </div>
                     </div>
@@ -831,7 +834,7 @@
                         <i class="sdk-language-sprite sdk-php"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-anti"></i>
-                            <a href="http://ai.baidu.com/download/aip-antiporn-php-sdk-1.3.zip">
+                            <a href="http://ai.baidu.com/download/aip-antiporn-php-sdk-1.3.1.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -839,8 +842,8 @@
                             <div class="sdk-item-name">PHP SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.3.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-03-23</div>
+                                <div class="sdk-version">版本: 1.3.1</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-31</div>
                             </div>
                         </div>
                     </div>
@@ -850,7 +853,7 @@
                         <i class="sdk-language-sprite sdk-python"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-anti"></i>
-                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.3.zip">
+                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.3.1.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -858,8 +861,8 @@
                             <div class="sdk-item-name">Python SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 1.3.0</div>
-                                <div class="sdk-update-date">发布时间: 2017-03-23</div>
+                                <div class="sdk-version">版本: 1.3.1</div>
+                                <div class="sdk-update-date">发布时间: 2017-03-31</div>
                             </div>
                         </div>
                     </div>
@@ -892,11 +895,26 @@
             <nav class="quick-path">
                 <h3>控制台入口</h3>
                 <ul>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
+                           class="ai-redirect">百度语音</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index"
+                           class="ai-redirect">文字识别</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index"
+                           class="ai-redirect">人脸识别</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index"
+                           class="ai-redirect">自然语言处理</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
+                           class="ai-redirect">黄反识别</a>
+                    </li>
                 </ul>
             </nav>
             <nav class="resource">
@@ -952,8 +970,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490786085/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490786085/js/sdk/sdk.js"></script>
+<script src="//ai.bdstatic.com/dist/1490967304/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1490967304/js/sdk/sdk.js"></script>
 
 <script>
     (function () {

@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490786085/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490786085/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490786085/css/technology/ar.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/technology/ar.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490786085/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1490967304/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -187,14 +187,17 @@
             <ul>
                 {%if $userInfo eq Null%}
                 <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
+                <li><a class="btn-primary free-demo ai-redirect"
+                       role="button"
+                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 {%if $userInfo.internalLink !== Null%}
                 <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
                 {%/if%}
                 <li>
-                    <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
+                    <a class="console ai-redirect"
+                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
@@ -217,7 +220,7 @@
         <div class="consult">
             {%if $src eq Null%}
             <a role="button" class="btn-primary media">商务合作</a>
-            {/if}
+            {%/if%}
             {%if $src !== Null%}
             <a role="button" class="btn-primary media" href="mailto:ai@baidu.com">商务合作</a>
             {%/if%}
@@ -303,7 +306,7 @@
         <h2>产品与服务</h2>
         <div class="clear-float">
             <div class="flow-chart">
-                <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/ar/process-flow.png">
+                <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/ar/process-flow.png">
             </div>
             <div class="product-desc-list">
                 <div class="product-desc">
@@ -396,11 +399,26 @@
             <nav class="quick-path">
                 <h3>控制台入口</h3>
                 <ul>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
+                           class="ai-redirect">百度语音</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index"
+                           class="ai-redirect">文字识别</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index"
+                           class="ai-redirect">人脸识别</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index"
+                           class="ai-redirect">自然语言处理</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
+                           class="ai-redirect">黄反识别</a>
+                    </li>
                 </ul>
             </nav>
             <nav class="resource">
@@ -456,8 +474,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490786085/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490786085/js/technology/ar.js"></script>
+<script src="//ai.bdstatic.com/dist/1490967304/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1490967304/js/technology/ar.js"></script>
 
 <script>
     (function () {

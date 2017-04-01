@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490786085/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490786085/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490786085/css/technology/nlp-comment_tag.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/technology/nlp-comment_tag.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490786085/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1490967304/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -187,14 +187,17 @@
             <ul>
                 {%if $userInfo eq Null%}
                 <li><a href="https://login.bce.baidu.com?fromai=1&redirect=https%3A%2F%2Fai.baidu.com">登录</a></li>
-                <li><a class="btn-primary free-demo" role="button" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
+                <li><a class="btn-primary free-demo ai-redirect"
+                       role="button"
+                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a></li>
                 {%/if%}
                 {%if $userInfo != Null%}
                 {%if $userInfo.internalLink !== Null%}
                 <li><a class="btn-other internal-link" role="button" href="{%$userInfo.internalLink%}">内部版本</a></li>
                 {%/if%}
                 <li>
-                    <a class="console" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
+                    <a class="console ai-redirect"
+                       href="https://console.bce.baidu.com/?fromai=1#/aip/overview">控制台</a>
                 </li>
                 <li>
                     <a>{%$userInfo.uname%}</a>
@@ -213,7 +216,9 @@
         <h1>评论观点抽取</h1>
         <p>自动抽取和分析评论观点，帮助您实现舆情分析、用户理解，支持产品优化和营销决策。</p>
         <div>
-            <a role="button" class="btn-primary media" href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">立即使用</a>
+            <a role="button"
+               class="btn-primary media ai-redirect"
+               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">立即使用</a>
             <a role="button"
                class="btn-other media"
                href="
@@ -238,14 +243,14 @@
         <div class="nlp-function-list">
             <h2>单条评论观点抽取</h2>
             <p class="list-title">输入单条用户评论</p>
-            <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/nlp-comment/list-1.png">
+            <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/nlp-comment/list-1.png">
             <p class="list-intro">该形式需要用户或者准备demo中一次提供单条评论，评论观点挖掘工具通过对其中的情感观点抽取进行单独的标签展示</p>
             <p class="list-intro">评论观点标签极性包含好评和差评两个极性，不同极性的标签展示可适当通过颜色或其他形式进行区分</p>
         </div>
         <div class="nlp-function-list">
             <h2>产品评论观点挖掘</h2>
             <p class="list-title">输入实体评论集</p>
-            <img src="//ai.bdstatic.com/dist/1490786085/ai_images/technology/nlp-comment/list-2.png" >
+            <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/nlp-comment/list-2.png" >
             <p class="list-intro">该形式需要用户或者准备demo中一次提供单个实体的若干条评论，通过评论观点抽取工具对每一条评论进行抽取，并最终进行汇总得到实体的总体标签结果进行展示</p>
             <p class="list-intro">评论观点标签极性包含好评和差评两个极性，不同极性的标签展示可适当通过颜色或其他形式进行区分</p>
         </div>
@@ -355,7 +360,9 @@
         <h2>立即获取免费API Key</h2>
         <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
         <div>
-            <a role="button" class="btn-primary large" href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+            <a role="button"
+               class="btn-primary large ai-redirect"
+               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
         </div>
     </div>
 </section>
@@ -407,11 +414,26 @@
             <nav class="quick-path">
                 <h3>控制台入口</h3>
                 <ul>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index">百度语音</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">文字识别</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index">人脸识别</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">自然语言处理</a></li>
-                    <li><a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">黄反识别</a></li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/speech/overview/index"
+                           class="ai-redirect">百度语音</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index"
+                           class="ai-redirect">文字识别</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/face/overview/index"
+                           class="ai-redirect">人脸识别</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index"
+                           class="ai-redirect">自然语言处理</a>
+                    </li>
+                    <li>
+                        <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
+                           class="ai-redirect">黄反识别</a>
+                    </li>
                 </ul>
             </nav>
             <nav class="resource">
@@ -467,8 +489,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490786085/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490786085/js/technology/nlp-comment_tag.js"></script>
+<script src="//ai.bdstatic.com/dist/1490967304/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1490967304/js/technology/nlp-comment_tag.js"></script>
 
 <script>
     (function () {
