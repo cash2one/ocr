@@ -8,8 +8,8 @@
 <script>
     import videoJs from 'video.js';
 
-    // less的引入不支持alias，所以写在js中引入
-    import 'video.js/dist/video-js.css';
+    // less的引入不支持alias，所以写在js中引入, 样式自定义化
+    import '../css/video.css';
 
     export default {
         props: {
@@ -54,3 +54,14 @@
         }
     }
 </script>
+
+<style lang="less">
+    .ai-video-name {
+        padding-left: 8px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #262626;
+        color: #fff;
+        font-size: 14px;
+    }
+</style>

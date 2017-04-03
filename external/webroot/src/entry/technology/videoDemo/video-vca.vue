@@ -2,7 +2,7 @@
     <div class="ai-video-demo">
         <ai-video class="ai-video-player"
                   :videoSrc="videoSrc"
-                  :videoName="videoName"
+                  :videoName="videoNames[selectedVideoIndex]"
                   :second="second"
                   @timeupdate="ontimeupdate"></ai-video>
         <div class="ai-video-result-panel">
@@ -57,7 +57,7 @@
         },
         data() {
             return {
-                videoName: '视频名称',
+                videoNames: ['视频1', '视频2', '视频3'],
                 resultTabs: ['语音', '文字', '人脸', '场景'],
                 result: {
                     voiceRecognitionResult: [],
@@ -205,7 +205,7 @@
         position: relative;
         box-sizing: border-box;
         height: 250px;
-        border: 1px solid #f6f6f6;
+        border: 1px solid #f9f9f9;
         font-size: 12px;
     }
 
@@ -215,7 +215,7 @@
         box-sizing: border-box;
         width: 100%;
         height: 50px;
-        border-bottom: 1px solid #f6f6f6;
+        border-bottom: 1px solid #f9f9f9;
         padding-top: 10px;
         text-align: center;
         font-size: 0;

@@ -33,6 +33,7 @@
 
     .video-tag-box {
         box-sizing: border-box;
+        height: 131px;
         padding: 10px 20px;
         overflow: auto;
         font-size: 0;
