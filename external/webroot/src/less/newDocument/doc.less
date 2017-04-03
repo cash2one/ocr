@@ -37,8 +37,8 @@
     }
 
     p {
-        line-height: 22px;
         margin: 12px 0;
+        line-height: 22px;
         font-size: 12px;
         word-wrap: break-word;
         color: #666;
@@ -47,11 +47,13 @@
     ul {
         margin: 0;
         padding-left: 20px;
+        list-style: disc;
     }
 
     li {
         font-size: 12px;
         margin-bottom: 5px;
+        color: #666;
     }
 
     img {
@@ -62,8 +64,6 @@
         max-width: 100%;
         padding: 20px;
         overflow: auto;
-        background-color: #fafafa;
-        border: 1px solid #f2f2f2;
         border-radius: 2px;
     }
 
@@ -103,5 +103,15 @@
 
     tr:nth-child(2n) {
         background-color: #fafafa;
+    }
+
+    blockquote {
+        margin: 10px 0;
+        border-left: 3px solid #0073eb;
+        color: #5a788c;
+
+        >* {
+            margin-left: 10px;
+        }
     }
 }

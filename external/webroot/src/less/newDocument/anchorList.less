@@ -19,10 +19,13 @@
 }
 
 .anchor-text {
+    box-sizing: border-box;
+    padding-right: 10px;
     overflow: hidden;
-    font-size: 12px;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-size: 12px;
+    text-align: left;
 }
 
 .anchor-level-1 {
@@ -31,15 +34,17 @@
         display: inline-block;
         vertical-align: top;
         font-size: 12px;
-        text-align: center;
     }
 
     .anchor-index {
         width: 35px;
         color: #ccc;
+        text-align: center;
     }
 
     .anchor-text {
+        // 目录栏总宽150px
+        width: 150px - 35px;
         color: #666;
     }
 }
