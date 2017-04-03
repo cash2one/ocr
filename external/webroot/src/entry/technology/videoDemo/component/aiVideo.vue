@@ -9,7 +9,7 @@
     import videoJs from 'video.js';
 
     // less的引入不支持alias，所以写在js中引入, 样式自定义化
-    import '../css/video.css';
+    import '../css/video.less';
 
     export default {
         props: {
