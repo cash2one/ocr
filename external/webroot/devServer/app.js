@@ -55,6 +55,20 @@ app.get('/video/vca', (req, res, next) => {
     );
 });
 
+app.get('/video/cover', (req, res, next) => {
+    renderSmarty(
+        'technology/video-cover.tpl',
+        getMockData()
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
+
 app.listen(port, () => {
     console.log('访问本地' + port + ',即可即时查看效果，enjoy it');
 });

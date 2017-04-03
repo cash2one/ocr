@@ -47,7 +47,7 @@
         cursor: pointer;
 
         &-selected {
-            border: 1px solid blue;
+            border: 1px solid #6394f2;
         }
 
         img {
