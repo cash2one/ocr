@@ -37,10 +37,12 @@ const versionPath = getVersion();
 // glob选项
 const globConfig = {
     cwd: path.join(__dirname, '..', 'src', 'entry'),
+    // TODO 未来重构时，这里要优化
     ignore: [
         '**/pager.js', '**/base.js',
         '**/common/*.js', '**/util/*.js',
-        '**/lib/*.js', '**/mixin/*.js'
+        '**/lib/*.js', '**/mixin/*.js',
+        '**/videoDemo/*.js'
     ]
 };
 
@@ -207,7 +209,7 @@ module.exports = {
                 use: 'url-loader'
             },
             {
-                test: /\.(jpe?g|png|gif|mp4)$/i,
+                test: /\.(jpe?g|png|gif|mp4|eot)$/i,
                 exclude: /sprite|icons([\/\\]).+\.(jpe?g|png|gif)$/i,
                 use: [
                     {

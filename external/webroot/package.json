@@ -65,6 +65,7 @@
     "request": "^2.81.0",
     "smarty.js": "^3.2.0",
     "superagent": "^3.5.2",
+    "video.js": "^5.19.0",
     "vue": "^2.2.6",
     "vue-loader": "^11.3.4",
     "vue-router": "^2.3.1",
