@@ -41,33 +41,10 @@ app.get('/docs', (req, res, next) => {
     );
 });
 
-app.get('/video/vca', (req, res, next) => {
-    renderSmarty(
-        'technology/video-vca.tpl',
-        getMockData()
-    ).then(
-        content => {
-            res
-                .type('html')
-                .end(content);
-        },
-        next
-    );
-});
-
-app.get('/video/cover', (req, res, next) => {
-    renderSmarty(
-        'technology/video-cover.tpl',
-        getMockData()
-    ).then(
-        content => {
-            res
-                .type('html')
-                .end(content);
-        },
-        next
-    );
-});
+// 挂载router
+app.use('/tech/nlp', require('./router/nlp'));
+app.use('/tech/video', require('./router/video'));
+app.use('/tech/face', require('./router/face'));
 
 app.listen(port, () => {
     console.log('访问本地' + port + ',即可即时查看效果，enjoy it');
