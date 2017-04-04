@@ -69,7 +69,7 @@
 
     .voice-subtitle {
         box-sizing: border-box;
-        width: 578px - 125px;
+        max-width: 578px - 125px - 10px;
         padding-right: 10px;
 
         &-in-range {

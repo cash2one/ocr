@@ -57,7 +57,7 @@
         },
         data() {
             return {
-                videoNames: ['视频1', '视频2', '视频3'],
+                videoNames: ['匆匆那年', '战长沙', 'IDL宣传片', 'Robin接受彭博社全球专访'],
                 resultTabs: ['语音', '文字', '人脸', '场景'],
                 result: {
                     voiceRecognitionResult: [],
@@ -70,20 +70,26 @@
                 second: 0,
                 // 当前激活的tab
                 activeTab: '语音',
+                /* eslint-disable */
                 videos: [
                     {
                         posterSrc: require('./image/video-poster.png'),
-                        src: 'http://vo.fod4.com/v/25c17d6eb2/v600.mp4'
+                        src: 'http://gcik9stp4yee5v0aciu.exp.bcevod.com/mda-hdavmb2nypg7du9g/hdavxa0bdnf5r7wpxvt/mda-hdavmb2nypg7du9g.mp4'
                     },
                     {
                         posterSrc: require('./image/video-poster.png'),
-                        src: 'http://vjs.zencdn.net/v/oceans.mp4'
+                        src: 'http://gcik9stp4yee5v0aciu.exp.bcevod.com/mda-hdavpn6azr06gkx2/hdav6c8uu7pm8vajbp0/mda-hdavpn6azr06gkx2.mp4'
                     },
                     {
                         posterSrc: require('./image/video-poster.png'),
-                        src: 'ccc'
+                        src: 'http://gcik9stp4yee5v0aciu.exp.bcevod.com/mda-hdavsw3m66d8ra5x/hdavtdhx0z0fypj91t8/mda-hdavsw3m66d8ra5x.mp4'
+                    },
+                    {
+                        posterSrc: require('./image/video-poster.png'),
+                        src: 'http://gcik9stp4yee5v0aciu.exp.bcevod.com/mda-hdav8gguws4wtazt/hdav8qgtu6d2cc27fgf/mda-hdav8gguws4wtazt.mp4'
                     }
                 ],
+                /* eslint-enable */
                 // 当前播放的视频所需的排序
                 selectedVideoIndex: 0,
             };
@@ -175,6 +181,16 @@
                                 this.result = require('./analyzeResult/2.json').result;
                             },
                             'video2'
+                        );
+
+                        return;
+                    case 3:
+                        require.ensure(
+                            './analyzeResult/3.json',
+                            require => {
+                                this.result = require('./analyzeResult/3.json').result;
+                            },
+                            'video3'
                         );
 
                         return;
