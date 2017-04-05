@@ -43,7 +43,8 @@
     }
 
     .face-show-second {
-        width: 578px - 75px;
+        // TODO 30px是为滚动条预留的，未来更改布局，删除这块
+        max-width: 578px - 75px - 30px;
         word-break: break-all;
         white-space: nowrap;
         font-size: 0;

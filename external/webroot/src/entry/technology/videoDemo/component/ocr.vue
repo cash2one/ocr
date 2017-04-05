@@ -26,7 +26,15 @@
         computed: {
             // 数据按时间顺序排列
             sortedData() {
-                return this.data.sort((a, b) => {
+                const filteredData = [];
+
+                this.data.forEach(datum => {
+                    if (datum.words.length > 0) {
+                        filteredData.push(datum);
+                    }
+                });
+
+                return filteredData.sort((a, b) => {
                     return a.timestamp - b.timestamp;
                 });
             }
@@ -76,7 +84,8 @@
     }
 
     .ocr-result-text {
-        width: (580 - 75)px;
+        // TODO 30px是为滚动条预留的，未来更改布局，删除这块
+        max-width: 580px - 75px - 30px;
         word-break: break-all;
         white-space: nowrap;
     }
