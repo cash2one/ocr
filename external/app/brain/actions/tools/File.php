@@ -6,10 +6,9 @@
  **************************************************************************/
 
 /**
- * @file Ocr.php
- * @author huanglinhao(huanglinhao@baidu.com)
- * @date 2016/06/18 18:48:45
- * @brief
+ * @file File.php
+ * @author songqingyun(songqingyun@baidu.com)
+ * @date 2017/04/05 15:48:45
  *
  **/
 class Action_File extends Ap_Action_Abstract
@@ -19,21 +18,39 @@ class Action_File extends Ap_Action_Abstract
     {
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
-        $url = Brain_Util::getParamAsString($arrInput, 'url');
-        $param = array(
-            "aibaiduid" => $_COOKIE['BAIDUID'],
-            "fromai" => 1,
-        );
-        $url = Brain_Util::appendUrl($url, $param);
-        if (empty($url)) {
-            $url = "https://ai.baidu.com";
+        $filePath = Brain_Util::getParamAsString($arrInput, 'filePath');
+        $fileDao = new Dao_MFile();
+        $file = $fileDao->getFile($filePath);
+        if (empty($file)) {
+            header("Location: /error");
+            return;
         }
-        if (!Bd_Str::exist($url, "http")) {
-            $url = "https://" . $url;
-        }
-        $url = Bd_Str::urldecode($url);
 
-        header("Location: $url");
+        $BOS_CONFIG =
+            array(
+                'credentials' => array(
+                    'ak' => 'f86a2044998643b5abc89b59158bad6d',
+                    'sk' => '2ed913d114e042059031af493287cc03',
+                ),
+                'endpoint' => 'http://bj.bcebos.com',
+            );
+        $client = new BosClient($BOS_CONFIG);
+        // 图片
+        if ($file['type'] == 1) {
+            header("Content-Type:" . $file['content_type']);
+            header("Cache-Control max-age=864000");
+            $str = $client->get_object_as_string("api-web", $filePath);
+            echo $str;
+            return;
+        }else{
+            $str = $client->get_object_as_string("api-web", $filePath);
+            header( "Content-type:  application/octet-stream ");
+            header( "Accept-Ranges:  bytes ");
+            header( "Accept-Length: " .$file['size']);
+            header( "Content-Disposition:  attachment;  filename=".$file['name']);
+            echo $str;
+            return;
+        }
+
     }
 }
-/* vim: set expandtab ts=4 sw=4 sts=4 tw=80: */
