@@ -4,9 +4,15 @@
         <p>输入视频，通过对视频本身的内容理解，自动截取视频中的精彩画面，输出作为视频的封面，可应用于海量新老视频自动的封面选图</p>
         <div>
             <a role="button"
-               class="btn-primary media ai-redirect"
-               target="_blank"
-               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">商务合作</a>
+               {%if $src eq Null%}
+               class="btn-primary media consult"
+               data-operation="cooperation"
+               {%else%}
+               class="btn-primary media"
+               href="mailto://ai@baidu.com"
+               {%/if%}>
+                商务合作
+            </a>
         </div>
     </div>
 </section>
@@ -157,7 +163,7 @@
                     <h3>提升视频播放量</h3>
                     <p>
                         智能视频封面选图服务，为视频生成最精彩的封面，在最短的时间内把视频最具吸引力的内容呈现出来，
-                        有效帮助提升视频的点击量、播放量和用户播放时长
+                        有效帮助提升视频的点击量、播放量和用户停留时长
                     </p>
                 </div>
             </div>
@@ -171,7 +177,7 @@
                 产品与服务
             </div>
             <div class="title-minor">
-                百度为您提供基于云服务的一站式视频TAG输出服务
+                百度为您提供基于云服务的一站式视频封面选图输出服务
             </div>
         </div>
         <div class="tech-product-connent"></div>
@@ -191,7 +197,7 @@
     </div>
 </section>
 {%/if%}
-{%if $src eq Null%}
+<!-- {%if $src eq Null%}
 <section class="tech-section tech-guide">
     <div class="container">
         <h2>使用指南</h2>
@@ -205,4 +211,4 @@
         </div>
     </div>
 </section>
-{%/if%}
+{%/if%} -->

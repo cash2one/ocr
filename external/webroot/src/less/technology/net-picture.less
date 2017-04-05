@@ -10,27 +10,27 @@
 
 // 技术单页前缀
 @prefix: tech;
-@intro: url('../../../ai_images/technology/ocr-general_location/intro.png');
+@intro: url('../../../ai_images/technology/net-picture/intro.png');
 // 调用通用的banner模块
 .@{prefix}-banner {
-    .banner(@page-name: ocr-general_location);
+    .banner(@page-name: net-picture);
     &-title {
         width: 500px;
     }
 }
 // 调用通用的tech-feature模块
 .@{prefix}-feature {
-    .tech-feature(@page-name: ocr-general_location, @icon-num: 3)
+    .tech-feature(@page-name: net-picture, @icon-num: 3)
 }
 
 // 调用通用的apply-scenario模块
 .@{prefix}-scenario {
-    .apply-scenario(@page-name: ocr-general_location, @icon-num: 6);
+    .apply-scenario(@page-name: net-picture, @icon-num: 3);
 }
 
 // 调用通用的tech-case模块
 .@{prefix}-case {
-    .tech-case(@page-name: ocr-general_location; @num: 6; @case-logo: ture;);
+    .tech-case(@page-name: net-picture; @num: 2; @case-logo: ture;);
 
     &-item-1 {
         .tech-case-item-logo {
@@ -43,7 +43,7 @@
 // 功能介绍
 .@{prefix}-function {
     height: 450px;
-    background: url(../../../ai_images/technology/ocr-general_location/intro-bg.png) no-repeat top center;
+    background: url(../../../ai_images/technology/net-picture/intro-bg.png) no-repeat top center;
     background-size: cover;
     text-align: center;
     color: @white;
@@ -70,30 +70,33 @@
     &-original-card {
         display: inline-block;
         vertical-align: top;
-        width: 400px;
-        height: 250px;
+        width: 479px;
+        height: 178px;
         overflow: hidden;
-        .icon(@intro, -10px, -310px);
+        background: url(../../../ai_images/technology/net-picture/tech-function-scanning.png) no-repeat;
+        background-size: cover;
 
         &:before {
             content: '';
             display: block;
-            width: 400px;
+            width: 479px;
             height: 132px;
             transform: translate(0, -132px);
-            .icon(@intro, -552px, -310px);
+            background: url(../../../ai_images/technology/net-picture/tech-function-before.png) no-repeat;
+            background-size: cover;
         }
 
 
         &.tech-function-scanning {
             &:before {
                 transition: 3s linear;
-                transform: translate(0, 250px);
+                transform: translate(0, 178px);
             }
         }
 
         &.tech-function-scanned {
-            .icon(@intro, -10px, -11px);
+            background: url(../../../ai_images/technology/net-picture/tech-function-scanned.png) no-repeat;
+            background-size: cover;
         }
     }
 
@@ -102,18 +105,19 @@
         vertical-align: top;
         width: 130px;
         height: 160px;
-        margin-top: 55px;
+        margin-top: 27px;
         .icon(@intro, -410px, -66px);
     }
 
     &-scan-result {
         display: inline-block;
         vertical-align: top;
-        width: 400px;
-        height: 250px;
+        width: 438px;
+        height: 185px;
         opacity: 0;
         transition: opacity 1.5s ease-out;
-        background: url(../../../ai_images/technology/ocr-general_location/tech-function-scan-result.png) no-repeat;
+        background: url(../../../ai_images/technology/net-picture/tech-function-scan-result.png) no-repeat;
+        background-size: cover;
         &.tech-function-scanned {
             opacity: 1;
         }
@@ -396,102 +400,4 @@
 
 #orc-enhanced-title {
     font-size: 35px;
-}
-
-.@{prefix}-product {
-    padding: 50px 0 40px;
-    background-color: #fff;
-    text-align: center;
-    .container-product {
-        display: block;
-        width: 1180px;
-        height: 100%;
-        margin: 0 auto;
-        position: relative;
-    }
-    &-title {
-        padding-bottom: 20px;
-        color: #333;
-        font-size: 30px;
-    }
-    &-info {
-        padding-bottom: 30px;
-        font-size: 16px;
-        color: #666;
-    }
-    &-wrapper {
-        position: relative;
-        width: 1180px;
-        height: 240px;
-        left: 50%;
-        font-size: 0;
-        transform: translateX(-50%);
-        margin-bottom: 20px;
-        [class^='product-box-'] {
-            position: absolute;
-        }
-        [class^='box-body-'] {
-            display: inline-block;
-            font-size: 14px;
-        }
-        .product-box-1 {
-            height: 240px;
-            width: 585px;
-            .box-body-header {
-                width: 50%;
-            }
-            .box-body-connent {
-                width: 50%;
-                color: rgba(0, 0, 0, 0.6);
-            }
-            .box-body-foot {
-                font-size: 14px;
-            }
-        }
-        .product-box-2 {
-            right: 0;
-            height: 120px;
-            width: 585px;
-            .box-body-header {
-                width: 25%;
-            }
-            .box-body-connent {
-                width: 25%;
-                color: rgba(0, 0, 0, 0.6);
-            }
-        }
-        .product-box-3 {
-            right: 0;
-            bottom: 0;
-            height: 100px;
-            width: 585px;
-            font-size: 15px;
-            .box-body-connent {
-                height: 65px;
-                padding-top: 5px;
-            }
-            .product-error-query {
-                color: #0073eb;
-            }
-        }
-        .box-head {
-            height: 30px;
-            font-size: 16px;
-            text-align: left;
-            padding-left: 20px;
-            line-height: 30px;
-            font-weight: bold;
-            border: 1px solid #ccc;
-        }
-        .box-body {
-            text-align: left;
-            padding-left: 20px;
-            border: 1px solid #ccc;
-            border-top: 0;
-            div {
-                height: 30px;
-                line-height: 30px;
-            }
-        }
-    }
 }

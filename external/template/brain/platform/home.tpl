@@ -115,21 +115,16 @@
                                 <li><a href="http://api.fanyi.baidu.com/api/trans/product/index" target="_blank">机器翻译平台</a></li>
                             </ul>
                         </li>
-                        <li id="tech-user-profile">
+                        <li id="tech-video">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>用户画像
+                                <span class="tech-title-icon"></span>视频技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>用户画像</span>
+                                <span>智能视频分析</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
-                            </ul>
-                            <div class="sub-tech-title">
-                                <span>推荐云平台</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
+                                <li><a href="#" target="_blank">视频内容分析VCA</a></li>
+                                <li><a href="#" target="_blank">视频封面选图</a></li>
                             </ul>
                         </li>
                         <li id="tech-machine-learning">
@@ -153,6 +148,27 @@
                             <ul class="tech-list">
                                 <li><a href="/tech/ar">AR内容平台</a></li>
                             </ul>
+                        </li>
+                        <li id="tech-user-profile">
+                            <div class="tech-title">
+                                <span class="tech-title-icon"></span>用户画像
+                            </div>
+                            <div class="tech-title-minor">
+                                <div class="sub-tech-title">
+                                    <span>用户画像</span>
+                                </div>
+                                <ul class="tech-list">
+                                    <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
+                                </ul>
+                            </div>
+                            <div class="tech-title-minor">
+                                <div class="sub-tech-title">
+                                    <span>推荐云平台</span>
+                                </div>
+                                <ul class="tech-list">
+                                    <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </li>
@@ -213,7 +229,21 @@
 <div class="ai-platform page-content">
     <section class="banner">
     <ul class="banner-content">
-        <li class="active video-bg">
+        <li class="active">
+            <h1>智能视频分析</h1>
+            <p>
+                精细化视频分析服务，多项技术业界领先<br>
+                提供视频分类、视频tag、优质精彩视频封面输出
+            </p>
+            <div>
+                <a role="button"
+                   class="get-started"
+                   href="#">
+                    点击观看
+                </a>
+            </div>
+        </li>
+        <li>
             <h1>OCR SDK上线 iOS/Android</h1>
             <p>
                 OCR iOS SDK，Android SDK全新上线，让您的应用快速集成<br>
@@ -255,7 +285,7 @@
                 </div>
             </a>
         </li>
-        <li>
+       <!--  <li>
             <a href="/tech/ar">
                 <h1>百度AR-增强现实技术</h1>
                 <p>人们通过增强现实技术看到更多，更远，更奇妙的世界<br>
@@ -264,7 +294,7 @@
                     <button type="button" class="get-started">了解详情</button>
                 </div>
             </a>
-        </li>
+        </li> -->
         <li>
             <a href="http://duer.baidu.com" target="_blank">
                 <h1>&nbsp;</h1>
@@ -284,7 +314,7 @@
                 </div>
             </a>
         </li>
-        <li class="video-bg">
+        <!-- <li class="video-bg">
             <h1>让 AI 变革发生</h1>
             <p>更全面、优质、易用的人工智能服务<br>即刻开启AI发现之旅</p>
             <div>
@@ -296,11 +326,10 @@
             </div>
             <video src="//ai.bdstatic.com/dist/1490967304/ai_images/home/banner-1.mp4">
             </video>
-        </li>
+        </li> -->
     </ul>
     <ul class="banner-indicator">
         <li class="active"></li>
-        <li></li>
         <li></li>
         <li></li>
         <li></li>
@@ -533,6 +562,54 @@
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-detail">
+                    <div class="clear-float">
+                        <div class="service-desc">
+                            <h3>智能视频分析</h3>
+                            <p>行业首创基于视频内容理解的智能分析服务，实时输出视频分类、
+                                视频TAG、精彩视频封面等
+                            </p>
+                        </div>
+                        <div class="service-icon"></div>
+                    </div>
+                    <hr>
+                    <div class="service-tech-list clear-float">
+                        <ul class="inline-list">
+                            <li>
+                                <a href="#"
+                                   target="_blank">视频内容封面VCA</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                   target="_blank">
+                                    视频封面选图
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item service-item-waiting">
+                <div class="service-detail">
+                    <div class="clear-float">
+                        <div class="service-desc">
+                            <h2>敬请期待...</h2>
+                        </div>
+                        <div class="service-icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item service-item-waiting">
+                <div class="service-detail">
+                    <div class="clear-float">
+                        <div class="service-desc">
+                            <h2>敬请期待...</h2>
+                        </div>
+                        <div class="service-icon"></div>
                     </div>
                 </div>
             </div>

@@ -1,13 +1,20 @@
 <section class="tech-section tech-banner">
     <div class="container">
         <h1>视频内容分析VCA</h1>
-        <!--<p>（Video Content Analysis）</p>-->
-        <p>输入视频，通过对视频本身的内容理解，自动截取视频中的精彩画面，输出作为视频的封面，可应用于海量新老视频自动的封面选图</p>
+        <div class="title-minor">（Video Content Analysis）</div>
+        <p>输入视频，通过多维AI技术，对视频进行智能分析<br>
+            输出视频内容的泛标签，从而提高搜索准确度和用户推荐视频的曝光量</p>
         <div>
             <a role="button"
-               class="btn-primary media ai-redirect"
-               target="_blank"
-               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">商务合作</a>
+               {%if $src eq Null%}
+               class="btn-primary media consult"
+               data-operation="cooperation"
+               {%else%}
+               class="btn-primary media"
+               href="#"
+               {%/if%}>
+                商务合作
+            </a>
         </div>
     </div>
 </section>
@@ -15,7 +22,7 @@
     <div class="container">
         <h2>技术介绍</h2>
         <p id="container-p">
-            行业首创技术，基于对视频内容的充分理解，输出最具代表性的优质精彩封面，便于用户快速定位目标视频，提升视觉和检索体验
+            行业首创，基于百度领先的人工智能技术，对视频进行语音、文字、人脸、物体、分类多维度分析，输出视频泛标签，提升搜索推荐效果
         </p>
         <div class="tech-intro-detail">
             <div class="scan-box">
@@ -30,7 +37,7 @@
                 <div class="scan-box-image"></div>
                 <div class="scan-box-title">视频元素提取</div>
                 <div class="scan-box-connent">
-                    分别对视频中的语言、文字、人脸（包含明星人脸及人脸属性）、
+                    分别对视频中的语音、文字、人脸（包含明星人脸及人脸属性）、
                     物体进行智能化识别
                 </div>
             </div>
@@ -152,20 +159,18 @@
             <div class="scene-item shadow">
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
-                    <h3>优化用户体验</h3>
+                    <h3>视频个性化推荐</h3>
                     <p>
-                        无论是自媒体创作短视频，亦或是综合视频网站的海量视频，都可以使用智能视频封面选图服务，快速为长/短视频选出
-                        最具代表性的高质封面，提升用户的视觉体验，同时便于用户快速筛选视频，帮助用户留存
+                        通过视频打TAG技术，快速补充视频TAG，TAG直接入库，解决新视频冷启动问题，增加视频曝光
                     </p>
                 </div>
             </div>
             <div class="scene-item shadow">
                 <div class="scene-icon"></div>
                 <div class="scene-desc">
-                    <h3>提升视频播放量</h3>
+                    <h3>视频内容检索</h3>
                     <p>
-                        智能视频封面选图服务，为视频生成最精彩的封面，在最短的时间内把视频最具吸引力的内容呈现出来，
-                        有效帮助提升视频的点击量、播放量和用户播放时长
+                        通过视频打TAG技术，快速新增热门标签，标签直接入库，解决视频缺乏新关键词无法露出的问题，提升用户检索体验
                     </p>
                 </div>
             </div>
@@ -179,7 +184,7 @@
                 产品与服务
             </div>
             <div class="title-minor">
-                百度为您提供基于云服务的一站式视频TAG输出服务
+                百度为您提供基于云服务的一站式视频内容分析VCA输出服务
             </div>
         </div>
         <div class="tech-product-connent"></div>
@@ -194,12 +199,12 @@
             <a role="button"
                target="_blank"
                class="btn-primary large ai-redirect"
-               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+               href="https://cloud.baidu.com/product/vod.html">商务合作</a>
         </div>
     </div>
 </section>
 {%/if%}
-{%if $src eq Null%}
+<!-- {%if $src eq Null%}
 <section class="tech-section tech-guide">
     <div class="container">
         <h2>使用指南</h2>
@@ -213,4 +218,4 @@
         </div>
     </div>
 </section>
-{%/if%}
+{%/if%} -->

@@ -8,7 +8,7 @@ import $ from 'jquery';
 import throttle from 'lodash.throttle';
 
 import '../common/tech-case';
-import '../../less/technology/ocr-general_location.less';
+import '../../less/technology/net-picture.less';
 import getBase64ByFileReader from '../util/getBase64ByFileReader';
 
 /* eslint-disable */
@@ -16,7 +16,7 @@ const formatImg = require('../../../ai_images/error/image-format.png');
 const tooLargeImg = require('../../../ai_images/error/too-large.png');
 const noResult = require('../../../ai_images/error/no-general-result.png');
 const timeoutImg = require('../../../ai_images/error/timeout.png');
-import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/ocr-general_location.html';
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/net-picture.html';
 // fixme 很不合理
 
 /* eslint-enable */
@@ -118,10 +118,6 @@ const showResult = data => {
             '<tr>',
             `    <td>${i + 1}</td>`,
             `    <td>${record.words}</td>`,
-            `    <td>${location.left}</td>`,
-            `    <td>${location.top}</td>`,
-            `    <td>${location.width}</td>`,
-            `    <td>${location.height}</td>`,
             '</tr>'
         ];
 
@@ -135,14 +131,7 @@ const showResult = data => {
             '    <thead>',
             '        <tr>',
             '            <th rowspan="2" style="width:20px;">编号</th>',
-            '            <th rowspan="2" style="width:250px;">识别结果</th>',
-            '            <th colspan="4">识别结果</th>',
-            '        </tr>',
-            '        <tr>',
-            '            <th>left</th>',
-            '            <th>top</th>',
-            '            <th>width</th>',
-            '            <th>height</th>',
+            '            <th rowspan="2" style="width:420px;">识别结果</th>',
             '        </tr>',
             '    </thead>',
             `    <tbody>${htmlArr.join('\r')}</tbody>`,

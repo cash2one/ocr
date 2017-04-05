@@ -215,7 +215,7 @@ header.header-nav {
 #tech-service {
     width: 1180px;
     left: -254px;
-    height: 455px;
+    height: 555px;
     box-shadow: none;
 
     &:after {
@@ -346,13 +346,13 @@ header.header-nav {
         }
     }
 
-    #tech-user-profile,
+    #tech-video,
     #tech-machine-learning {
         width: 25%;
         margin-top: 10px;
         margin-right: 10%
     }
-    #tech-user-profile,
+    #tech-video,
     #tech-machine-learning {
         width: 16%;
         margin-top: 10px;
@@ -391,8 +391,18 @@ header.header-nav {
     #tech-ar .tech-title-icon {
         .icon(@template-png, -105px, -2px);
     }
+    #tech-video .tech-title-icon {
+        background-image: url('../../../ai_images/tech-video.png');
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+    }
 }
-
+#tech-user-profile {
+    .tech-title-minor {
+        position: relative;
+        float: left;
+    }
+}
 #ocr-enhanced-link {
     width: 165px !important;
 }

@@ -9,9 +9,9 @@ import Vue from 'vue';
 import videoCover from './videoDemo/video-cover.vue';
 
 /* eslint-disable */
-import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/video-cover.html';
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/video-vcs.html';
 /* eslint-enable */
-import '../../less/technology/video-cover.less';
+import '../../less/technology/video-vcs.less';
 
 // case点击效果
 $('.case-indicator > li').click(function () {

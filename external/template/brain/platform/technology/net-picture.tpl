@@ -115,21 +115,16 @@
                                 <li><a href="http://api.fanyi.baidu.com/api/trans/product/index" target="_blank">机器翻译平台</a></li>
                             </ul>
                         </li>
-                        <li id="tech-user-profile">
+                        <li id="tech-video">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>用户画像
+                                <span class="tech-title-icon"></span>视频技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>用户画像</span>
+                                <span>智能视频分析</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
-                            </ul>
-                            <div class="sub-tech-title">
-                                <span>推荐云平台</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
+                                <li><a href="#" target="_blank">视频内容分析VCA</a></li>
+                                <li><a href="#" target="_blank">视频封面选图</a></li>
                             </ul>
                         </li>
                         <li id="tech-machine-learning">
@@ -153,6 +148,27 @@
                             <ul class="tech-list">
                                 <li><a href="/tech/ar">AR内容平台</a></li>
                             </ul>
+                        </li>
+                        <li id="tech-user-profile">
+                            <div class="tech-title">
+                                <span class="tech-title-icon"></span>用户画像
+                            </div>
+                            <div class="tech-title-minor">
+                                <div class="sub-tech-title">
+                                    <span>用户画像</span>
+                                </div>
+                                <ul class="tech-list">
+                                    <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
+                                </ul>
+                            </div>
+                            <div class="tech-title-minor">
+                                <div class="sub-tech-title">
+                                    <span>推荐云平台</span>
+                                </div>
+                                <ul class="tech-list">
+                                    <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </li>
@@ -214,22 +230,25 @@
     <div class="tech-section tech-banner">
     <div class="ai-container">
         <div class="tech-banner-title" id="orc-enhanced-title">
-            通用文字识别（含位置信息版）
+            网图识别
         </div>
         <div class="tech-banner-info">
             <p>依托全网海量优质数据和业界领先的深度学习技术<br>
-                在通用文字识别基础上，支持扩展返回每行及每个文字的位置信息</p>
+                专门对网络图片进行识别优化，支持更多字体和复杂背景下的文字识别</p>
         </div>
         <div class="tech-banner-btn-list">
             <a role="button"
+               class="btn-primary media ai-redirect"
+               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">获取API Key</a>
+            <a role="button"
+               class="btn-other media"
+               href="
                {%if $src eq Null%}
-               class="btn-primary media consult"
-               data-operation="cooperation"
+               /docs#OCR
                {%else%}
-               class="btn-primary media"
-               href="https://cloud.baidu.com/doc/OCR/index.html"
-               {%/if%}>
-                免费使用
+               https://cloud.baidu.com/doc/OCR/index.html
+               {%/if%}">
+                技术文档
             </a>
         </div>
     </div>
@@ -240,8 +259,8 @@
             功能介绍
         </div>
         <div class="tech-function-info">
-            支持多场景下正图文字检测、定位、识别。支持任意场景、复杂背景、任意版面识别，
-            支持10多种语言的识别能准确定位并返回文字位置信息，方便客户进行二次处理
+            支持互联网场景下的整图文字检测识别；多项ICDAR指标世界第一，支持任意场景、复杂背景、任意版面识别，支持10多种语言的识别
+            在图片文字清晰，小幅度倾斜、无明显背光等情况下识别率高达90%以上
         </div>
         <div class="tech-function-detail tech-clear">
             <div class="tech-function-original-card"></div>
@@ -352,9 +371,9 @@
         <div class="tech-scenario-item tech-scenario-shadow">
             <div class="tech-scenario-icon tech-scenario-icon-1"></div>
             <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">通用自然场景</div>
+                <div class="tech-scenario-desc-name">通用网络场景</div>
                 <div class="tech-scenario-desc-info">
-                    印刷文档识别，翻译文字识别，搜索识别，涂抹识别等通用自然场景
+                    针对互联网图片中的文字进行专门识别优化，对各种复杂的互联网图片中文字识别效果更好
                 </div>
             </div>
         </div>
@@ -363,43 +382,16 @@
             <div class="tech-scenario-desc">
                 <div class="tech-scenario-desc-name">图片反作弊</div>
                 <div class="tech-scenario-desc-info">
-                    识别图像和视频中的违规文字，进行违规处理和风险管控
+                    识别互联网中用户头像、聊天图像、社交圈图片、电商平台图片等场景中的文字，方便用户进行违规处理和风险管控
                 </div>
             </div>
         </div>
         <div class="tech-scenario-item tech-scenario-shadow">
             <div class="tech-scenario-icon tech-scenario-icon-3"></div>
             <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">医疗场景</div>
-                <div class="tech-scenario-desc-info">
-                    提升医疗行业的票据识别功能，减少人工输入过程，提高输入效率
-                </div>
-            </div>
-        </div>
-        <div class="tech-scenario-item tech-scenario-shadow">
-            <div class="tech-scenario-icon tech-scenario-icon-4"></div>
-            <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">金融场景</div>
-                <div class="tech-scenario-desc-info">
-                    用于企业证照、年报、财报等识别
-                </div>
-            </div>
-        </div>
-        <div class="tech-scenario-item tech-scenario-shadow">
-            <div class="tech-scenario-icon tech-scenario-icon-5"></div>
-            <div class="tech-scenario-desc">
                 <div class="tech-scenario-desc-name">视频场景</div>
                 <div class="tech-scenario-desc-info">
-                    用于视频字幕识别，视频标题识别，视频反作弊，头像反作弊，评论反作弊等
-                </div>
-            </div>
-        </div>
-        <div class="tech-scenario-item tech-scenario-shadow">
-            <div class="tech-scenario-icon tech-scenario-icon-6"></div>
-            <div class="tech-scenario-desc">
-                <div class="tech-scenario-desc-name">交通场景</div>
-                <div class="tech-scenario-desc-info">
-                    基于图像技术识别道路标示牌，文字信息，提升地图数据生产效率与质量助力高精地图基础数据生产
+                    用于短视频、长视频、直播等视频场景下的文字识别，方便用户进行视频标注、视频违规判断等操作
                 </div>
             </div>
         </div>
@@ -410,35 +402,14 @@
         <div class="tech-case-item tech-case-item-1 tech-case-active">
             <div class="ai-container">
                 <div class="tech-case-item-logo"></div>
-                <div class="tech-case-item-title">百度翻译</div>
+                <div class="tech-case-item-title">百度凤巢</div>
                 <div class="tech-case-item-info">
-                    百度翻译手机版提供中英日韩等10多个语种的文本互译<br>
-                    使用OCR技术实现拍照整屏实时翻译、菜单翻译、涂抹翻译、取词翻译等功能，无需键盘输入，提升用户体验
+                    百度凤巢是百度旗下的专业广告推广系统<br>
+                    调用百度网图OCR接口对各种图片中的文字进行识别，从而进行反作弊判断和风险管控
                 </div>
             </div>
         </div>
         <div class="tech-case-item tech-case-item-2">
-            <div class="ai-container">
-                <div class="tech-case-item-logo"></div>
-                <div class="tech-case-item-title">涂书笔记</div>
-                <div class="tech-case-item-info">
-                    涂书笔记是一款纸质书文字摘录APP，入选了“App store 2014年度精选”<br>
-                    用户拍摄书中感兴趣的内容，涂抹要摘录的文字，即可使用OCR技术进行实时识别、记录读书笔记，识别准确率95%以上<br>
-                    识别速度快，准确率高，减少了用户的输入操作，有效的提高了用户的体验
-                </div>
-            </div>
-        </div>
-        <div class="tech-case-item tech-case-item-3">
-            <div class="ai-container">
-                <div class="tech-case-item-logo"></div>
-                <div class="tech-case-item-title">快手</div>
-                <div class="tech-case-item-info">
-                    快手是中国领先的短视频共享平台<br>
-                    快手调用百度OCR接口对短视频进行识别并进行是否作弊判断有效的监测了短视频违规情况
-                </div>
-            </div>
-        </div>
-        <div class="tech-case-item tech-case-item-4">
             <div class="ai-container">
                 <div class="tech-case-item-logo"></div>
                 <div class="tech-case-item-title">手机百度</div>
@@ -448,112 +419,13 @@
                 </div>
             </div>
         </div>
-        <div class="tech-case-item tech-case-item-5">
-            <div class="ai-container">
-                <div class="tech-case-item-logo"></div>
-                <div class="tech-case-item-title">百度地图</div>
-                <div class="tech-case-item-info">
-                    百度地图是百度提供的一项网络地图搜索服务<br>
-                    百度地图调用百度通用OCR接口进行地图街景路牌，指示牌，商户招牌，门牌等街景文字信息的识别，进行地图信息标注和处理
-                </div>
-            </div>
-        </div>
-        <div class="tech-case-item tech-case-item-6">
-            <div class="ai-container">
-                <div class="tech-case-item-logo"></div>
-                <div class="tech-case-item-title">百度外卖</div>
-                <div class="tech-case-item-info">
-                    百度外卖，是由百度打造的专业外卖服务平台<br>
-                    百度外卖调用百度通用OCR接口进行外卖票据的识别服务，包括拍小票送餐等
-                </div>
-            </div>
-        </div>
     </div>
     <div class="tech-case-option">
         <div class="tech-case-option-btn tech-case-option-btn-1 tech-case-active">
-            百度翻译
+            百度凤巢
         </div>
         <div class="tech-case-option-btn tech-case-option-btn-2">
-            涂书笔记
-        </div>
-        <div class="tech-case-option-btn tech-case-option-btn-3">
-            快手
-        </div>
-        <div class="tech-case-option-btn tech-case-option-btn-4">
             手机百度
-        </div>
-        <div class="tech-case-option-btn tech-case-option-btn-5">
-            百度地图
-        </div>
-        <div class="tech-case-option-btn tech-case-option-btn-6">
-            百度外卖
-        </div>
-    </div>
-</div>
-<div class="tech-section get-started tech-product">
-    <div class="container-product">
-        <div class="tech-product-title">产品定价</div>
-        <div class="tech-product-info">本产品为按调用量计费的后付费产品，定价采取分段式阶定价方式</div>
-        <div class="tech-product-wrapper">
-            <div class="product-box-1">
-                <div class="box-head">价目表</div>
-                <div class="box-body">
-                    <div class="box-body-header">月调用量</div>
-                    <div class="box-body-header">单价</div>
-                    <div class="box-body-connent">0&lt;调用量&lt;=5w</div>
-                    <div class="box-body-connent">0.040元/次</div>
-                    <div class="box-body-connent">5w&lt;调用量&lt;=10w</div>
-                    <div class="box-body-connent">0.035元/次</div>
-                    <div class="box-body-connent">10w&lt;调用量&lt;=20w</div>
-                    <div class="box-body-connent">0.030元/次</div>
-                    <div class="box-body-connent">20w&lt;调用量&lt;=50w</div>
-                    <div class="box-body-connent">0.025元/次</div>
-                    <div class="box-body-connent">50w&lt;调用量</div>
-                    <div class="box-body-connent">0.020元/次</div>
-                    <div class="box-body-foot">
-                        免费配额：每日500次免费调用次数，超出免费配额，开始计费
-                    </div>
-                </div>
-            </div>
-            <div class="product-box-2">
-                <div class="box-head">付费配置</div>
-                <div class="box-body">
-                    <div class="box-body-header"></div>
-                    <div class="box-body-header">500/日免费配额</div>
-                    <div class="box-body-header">超过免费配额</div>
-                    <div class="box-body-header">QPS限制</div>
-                    <div class="box-body-header">免费</div>
-                    <div class="box-body-connent">拥有</div>
-                    <div class="box-body-connent">不响应请求</div>
-                    <div class="box-body-connent">不保证并发</div>
-                    <div class="box-body-header">付费</div>
-                    <div class="box-body-connent">拥有</div>
-                    <div class="box-body-connent">响应请求</div>
-                    <div class="box-body-connent">保证10次并发</div>
-                </div>
-            </div>
-            <div class="product-box-3">
-                <div class="box-head">调用失败如何计费？</div>
-                <div class="box-body">
-                    <div class="box-body-connent">
-                        支付失败类型共分两种：服务错误和业务操作错误导致的调用失败。超出免配额后，
-                        因服务错误导致的调用失败不计费，相关错误码请查询
-                        <a class="product-error-query" href="/docs#OCR-API">错误码详情</a>
-                    </div> 
-                </div>
-            </div>
-        </div>
-        <div class="tech-free-product-btn">
-            <a role="button"
-               {%if $src eq Null%}
-               class="btn-primary large consult"
-               data-operation="cooperation"
-               {%else%}
-               class="btn-primary large"
-               href="https://cloud.baidu.com/doc/OCR/index.html"
-               {%/if%}>
-                免费使用
-            </a>
         </div>
     </div>
 </div>
