@@ -11,7 +11,7 @@
  * @date 2017/04/05 15:48:45
  *
  **/
-include ("../../library/brain/BaiduBce.phar");
+include ("BaiduBce.phar");
 use BaiduBce\Util\Time;
 use BaiduBce\Services\Bos\BosClient;
 
