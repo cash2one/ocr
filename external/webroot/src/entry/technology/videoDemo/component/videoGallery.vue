@@ -5,7 +5,7 @@
              class="video-gallery-item"
              :class="{'video-gallery-item-selected': index === selectedIndex}">
              <div class="demo-card-dialog"></div>
-            <img :src="video.posterSrc" alt="">
+            <img :src="video.poster" alt="">
         </div>
     </div>
 </template>
@@ -41,26 +41,32 @@
     }
 
     .video-gallery-item {
+        box-sizing: border-box;
+        position: relative;
         display: inline-block;
+        width: 25%;
         padding: 5px;
         text-align: center;
         border: 1px solid #f6f6f6;
         cursor: pointer;
-        position: relative;
+
         &-selected {
             border: 1px solid #6394f2;
+
             .demo-card-dialog {
                 display: none;
             }
         }
+
         .demo-card-dialog {
             position: absolute;
             left: 5px;
             top: 5px;
             right: 5px;
             bottom: 5px;
-            background-color: rgba(0, 0, 0, .5); 
+            background-color: rgba(0, 0, 0, .5);
         }
+
         .demo-card-dialog::after {
             content: "";
             position: absolute;
@@ -74,12 +80,14 @@
             background-size: 50px 30px;
             background-repeat: no-repeat;
         }
+
         .demo-card-dialog:hover::after {
             background-position: -22px 0;
         }
+
         img {
-            width: 130px;
-            height: 110px;
+            max-width: 90%;
+            max-height: 90%;
         }
     }
 </style>

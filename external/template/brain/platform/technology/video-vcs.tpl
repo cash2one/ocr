@@ -123,8 +123,8 @@
                                 <span>智能视频分析</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="#" target="_blank">视频内容分析VCA</a></li>
-                                <li><a href="#" target="_blank">视频封面选图</a></li>
+                                <li><a href="/tech/video/vca" target="_blank">视频内容分析VCA</a></li>
+                                <li><a href="/tech/video/vcs" target="_blank">视频封面选图</a></li>
                             </ul>
                         </li>
                         <li id="tech-machine-learning">
@@ -230,7 +230,7 @@
     <section class="tech-section tech-banner">
     <div class="container">
         <h1>视频封面选图</h1>
-        <p>输入视频，通过对视频本身的内容理解，自动截取视频中的精彩画面，输出作为视频的封面，可应用于海量新老视频自动的封面选图</p>
+        <p>通过对视频本身的内容理解，自动截取视频中的精彩画面，输出作为视频的封面，可应用于海量新老视频自动的封面选图</p>
         <div>
             <a role="button"
                {%if $src eq Null%}
@@ -283,60 +283,6 @@
     <div class="container">
         <h2>功能演示</h2>
         <div class="demo-container clear-float" id="video-cover-demo">
-            <!--<div class="clear-float">-->
-                <!--<div class="data-view-container">-->
-                    <!--<div class="data-view" data-label="识别结果" id="demo-result">-->
-                        <!--<div class="canvas-container"></div>-->
-                        <!--<div id="result-gallery">-->
-                            <!--<ul></ul>-->
-                        <!--</div>-->
-                        <!--<ul id="face-details">-->
-
-                        <!--</ul>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="data-view-container">-->
-                    <!--<div class="data-view" data-label="RESPONSE JSON" id="demo-json">-->
-                        <!--<p></p>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div>-->
-                <!--<ul class="demo-card-list clear-float">-->
-                    <!--<li>-->
-                        <!--<div class="demo-card-dialog"></div>-->
-                        <!--<img src="../../../ai_images/technology/antiporn/demo-card-1.jpg" alt=" ">-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div class="demo-card-dialog"></div>-->
-                        <!--<img src="../../../ai_images/technology/antiporn/demo-card-2.jpg" alt=" ">-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div class="demo-card-dialog"></div>-->
-                        <!--<img src="../../../ai_images/technology/antiporn/demo-card-3.jpg" alt=" ">-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div class="demo-card-dialog"></div>-->
-                        <!--<img src="../../../ai_images/technology/antiporn/demo-card-4.jpg" alt=" ">-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div class="demo-card-dialog"></div>-->
-                        <!--<img src="../../../ai_images/technology/antiporn/demo-card-5.jpg" alt=" ">-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div class="demo-card-dialog"></div>-->
-                        <!--<img src="../../../ai_images/technology/antiporn/demo-card-6.jpg" alt=" ">-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div class="demo-card-dialog"></div>-->
-                        <!--<img src="../../../ai_images/technology/antiporn/demo-card-7.jpg" alt=" ">-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div class="demo-card-dialog"></div>-->
-                        <!--<img src="../../../ai_images/technology/antiporn/demo-card-8.jpg" alt=" ">-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</div>-->
         </div>
     </div>
 </section>
@@ -415,32 +361,18 @@
 {%if $userInfo eq Null%}
 <section class="tech-section get-started">
     <div class="container">
-        <h2>立即获取免费API Key</h2>
-        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
+        <h2>快速提交您的需求</h2>
+        <p>欢迎各短视频平台、广电行业以及各行业优秀的技术合作伙伴与我们联系<br>
+            一起携手探索更多AI带给我们的更多可能性！</p>
         <div>
             <a role="button"
                target="_blank"
                class="btn-primary large ai-redirect"
-               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+               href="mailto:ai@baidu.com">商务合作</a>
         </div>
     </div>
 </section>
 {%/if%}
-<!-- {%if $src eq Null%}
-<section class="tech-section tech-guide">
-    <div class="container">
-        <h2>使用指南</h2>
-        <div class="guide-link clear-float">
-            <h3>常见问题</h3>
-            <ul>
-                <li><a href="#">支持哪些视频格式的识别？</a></li>
-                <li><a href="#">如果输入视频，是上传还是输入URL？</a></li>
-                <li><a href="#">更多&nbsp;&gt;</a></li>
-            </ul>
-        </div>
-    </div>
-</section>
-{%/if%} -->
 
 </div>
 <aside class="aside-action">

@@ -123,8 +123,8 @@
                                 <span>智能视频分析</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="#" target="_blank">视频内容分析VCA</a></li>
-                                <li><a href="#" target="_blank">视频封面选图</a></li>
+                                <li><a href="/tech/video/vca" target="_blank">视频内容分析VCA</a></li>
+                                <li><a href="/tech/video/vcs" target="_blank">视频封面选图</a></li>
                             </ul>
                         </li>
                         <li id="tech-machine-learning">

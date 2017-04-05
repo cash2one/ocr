@@ -2,12 +2,12 @@
     <div class="ai-video-demo">
         <ai-video class="ai-video-player"
                   :videoSrc="videoSrc"
+                  :poster="videos[selectedVideoIndex].poster"
                   :videoName="videoNames[selectedVideoIndex]"></ai-video>
-        <video-cover :coverSrc="coverSrc" class="ai-video-result-panel"></video-cover>
+        <video-cover :coverSrc="videos[selectedVideoIndex].poster" class="ai-video-result-panel"></video-cover>
         <video-gallery :videos="videos"
                        :selectedIndex="selectedVideoIndex"
                        @changevideo="onchangeVideo"></video-gallery>
-        <div class="ai-video-tip">以上为视频内容功能演示，暂不支持线上演示。</div>
     </div>
 </template>
 
@@ -23,24 +23,30 @@
         },
         data() {
             return {
-                videoNames: ['视频1', '视频2', '视频3'],
+                videoNames: [
+                    '回到汪星球_百度感恩节微电影', '百度云宣传片',
+                    '百度索引真实世界', '无人车实拍'
+                ],
                 // 当前播放的视频所需的排序
                 selectedVideoIndex: 0,
                 videos: [
                     {
-                        posterSrc: require('./image/video-poster.png'),
-                        src: 'http://vo.fod4.com/v/25c17d6eb2/v600.mp4'
+                        poster: require('../../../../ai_images/technology/video-cover/poster-1.png'),
+                        src: 'https://gcik9stp4yee5v0aciu.exp.bcevod.com/mda-hdetx8jn5iwpjf0c/hdethw0mzin00yyh258/mda-hdetx8jn5iwpjf0c.mp4'
                     },
                     {
-                        posterSrc: require('./image/video-poster.png'),
-                        src: 'http://vjs.zencdn.net/v/oceans.mp4'
+                        poster: require('../../../../ai_images/technology/video-cover/poster-2.png'),
+                        src: 'https://gcik9stp4yee5v0aciu.exp.bcevod.com/mda-hdet98mvf8sw12nv/hdetreka5kduke72pz7/mda-hdet98mvf8sw12nv.mp4'
                     },
                     {
-                        posterSrc: require('./image/video-poster.png'),
-                        src: 'ccc'
+                        poster: require('../../../../ai_images/technology/video-cover/poster-3.png'),
+                        src: 'https://gcik9stp4yee5v0aciu.exp.bcevod.com/mda-hdet2kxz3n4afc89/hdet45e7efbnkb8pw52/mda-hdet2kxz3n4afc89.mp4'
+                    },
+                    {
+                        poster: require('../../../../ai_images/technology/video-cover/poster-4.png'),
+                        src: 'https://gcik9stp4yee5v0aciu.exp.bcevod.com/mda-hdetr6d0eec0spw1/hdet7ms0c8gg38kausq/mda-hdetr6d0eec0spw1.mp4'
                     }
-                ],
-                coverSrc: require('./image/video-poster.png')
+                ]
             };
         },
         computed: {
@@ -73,7 +79,7 @@
     }
 
     .ai-video-result-panel {
-        width: 580px;
+        width: 600px;
         height: 420px;
     }
 

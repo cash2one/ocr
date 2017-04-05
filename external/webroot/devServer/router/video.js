@@ -24,9 +24,9 @@ router.get('/vca', (req, res, next) => {
     );
 });
 
-router.get('/cover', (req, res, next) => {
+router.get('/vcs', (req, res, next) => {
     renderSmarty(
-        'technology/video-cover.tpl',
+        'technology/video-vcs.tpl',
         getMockData({})
     ).then(
         content => {
