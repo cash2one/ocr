@@ -1,0 +1,15 @@
+<div class="code-block">
+    <div class="code-block-tab-container">
+        {{#each codeData}}
+            <div class="code-block-title"
+                 data-index="{{@index}}">
+                {{lanData.readableLanName}}
+            </div>
+        {{/each}}
+    </div>
+    {{#each codeData}}
+        <div data-lan="{{lanData.readableLanName}}">
+            <pre><code class="hljs">{{{codeHTML}}}</code></pre>
+        </div>
+    {{/each}}
+</div>
