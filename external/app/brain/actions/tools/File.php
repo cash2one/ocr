@@ -44,7 +44,7 @@ class Action_File extends Ap_Action_Abstract
         // 图片
         if ($file['type'] == 1) {
             header("Content-Type:" . $file['content_type']);
-            header("Cache-Control max-age=864000");
+            header("Cache-Control:max-age=864000");
             $str = $client->getObjectAsString("aip-web", $filePath);
             echo $str;
             return;
