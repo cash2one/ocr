@@ -15,7 +15,7 @@
 error_reporting(-1);
 date_default_timezone_set('UTC');
 
-define('__BOS_CLIENT_ROOT', dirname(__DIR__));
+define('_BOS_CLIENT_ROOT', dirname(__DIR__));
 
 $BOS_CONFIG =
     array(
