@@ -39,10 +39,10 @@ class BosClien
 
     public function __construct()
     {
-        global $gBOS_CONFIG;
+        global $g_BOS_CONFIG;
 
         parent::__construct();
-        $this->client = new BosClient($gBOS_CONFIG);
+        $this->client = new BosClient($g_BOS_CONFIG);
         $this->logger = LogFactory::getLogger(get_class($this));
     }
 
