@@ -33,7 +33,7 @@
         <video-gallery :videos="videos"
                        :selectedIndex="selectedVideoIndex"
                        @changevideo="onchangeVideo"></video-gallery>
-        <div class="ai-video-tip">以上为视频内容功能演示，暂不支持线上演示。</div>
+        <div class="ai-video-tip">以上为视频内容分析VCA功能演示，实际效果请联系我们对接测试</div>
     </div>
 </template>
 
