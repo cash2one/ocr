@@ -11,6 +11,10 @@
  * @date 2017/04/05 15:48:45
  *
  **/
+include ("BaiduBce.phar");
+use BaiduBce\Util\Time;
+use BaiduBce\Services\Bos\BosClient;
+
 class Action_File extends Ap_Action_Abstract
 {
 
