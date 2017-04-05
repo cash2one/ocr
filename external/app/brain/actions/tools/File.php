@@ -47,7 +47,7 @@ class Action_File extends Ap_Action_Abstract
             header("Cache-Control:max-age=864000");
             $str = $client->getObjectAsString("aip-web", $filePath);
             echo $str;
-            return;
+            exit;
         } else {
             $str = $client->getObjectAsString("aip-web", $filePath);
             header("Content-type:  application/octet-stream ");
