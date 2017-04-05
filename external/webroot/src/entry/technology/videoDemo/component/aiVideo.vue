@@ -18,7 +18,11 @@
                 type: String,
                 required: true
             },
-            videoName: String
+            videoName: String,
+            poster: {
+                type: String,
+                default: ''
+            }
         },
         mounted() {
             const _this = this;
@@ -39,7 +43,8 @@
                         src: _this.videoSrc,
                         type: 'video/mp4'
                     }
-                ]
+                ],
+                poster: this.poster
             });
 
             this._player.on('timeupdate', () => {
@@ -50,6 +55,9 @@
             // 视频路径props切换时，播放器调整播放
             videoSrc() {
                 this._player.src(this.videoSrc);
+            },
+            poster() {
+                this._player.poster(this.poster);
             }
         }
     }

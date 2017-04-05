@@ -123,8 +123,8 @@
                                 <span>智能视频分析</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="#" target="_blank">视频内容分析VCA</a></li>
-                                <li><a href="#" target="_blank">视频封面选图</a></li>
+                                <li><a href="/tech/video/vca" target="_blank">视频内容分析VCA</a></li>
+                                <li><a href="/tech/video/vcs" target="_blank">视频封面选图</a></li>
                             </ul>
                         </li>
                         <li id="tech-machine-learning">
@@ -349,7 +349,7 @@
                 <div class="tech-case-item-title">乌镇人脸闸机</div>
                 <div class="tech-case-item-info">
                     用户在购买门票时进行人像采集，就可以在景区通过人脸识别多次进出景区<br>
-                    在互联网大会前落地上线，期间电视台播出2期节目，品牌露出11次，为后续和景区闸机厂商合作提供了良好的基础调
+                    在互联网大会前落地上线，期间电视台播出2期节目，品牌露出11次，为后续和景区闸机厂商合作提供了良好的基础
                 </div>
             </div>
         </div>

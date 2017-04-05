@@ -123,8 +123,8 @@
                                 <span>智能视频分析</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="#" target="_blank">视频内容分析VCA</a></li>
-                                <li><a href="#" target="_blank">视频封面选图</a></li>
+                                <li><a href="/tech/video/vca" target="_blank">视频内容分析VCA</a></li>
+                                <li><a href="/tech/video/vcs" target="_blank">视频封面选图</a></li>
                             </ul>
                         </li>
                         <li id="tech-machine-learning">
@@ -231,8 +231,8 @@
     <div class="container">
         <h1>视频内容分析VCA</h1>
         <div class="title-minor">（Video Content Analysis）</div>
-        <p>输入视频，通过多维AI技术，对视频进行智能分析<br>
-            输出视频内容的泛标签，从而提高搜索准确度和用户推荐视频的曝光量</p>
+        <p>通过多维AI技术，对视频进行智能分析输出视频内容的泛标签<br>
+            从而提高搜索准确度和用户推荐视频的曝光量</p>
         <div>
             <a role="button"
                {%if $src eq Null%}
@@ -292,60 +292,6 @@
     <div class="container">
         <h2>功能演示</h2>
         <div class="demo-container clear-float" id="video-vca-demo">
-            <!--<div class="clear-float">-->
-                <!--<div class="data-view-container">-->
-                    <!--<div class="data-view" data-label="识别结果" id="demo-result">-->
-                        <!--<div class="canvas-container"></div>-->
-                        <!--<div id="result-gallery">-->
-                            <!--<ul></ul>-->
-                        <!--</div>-->
-                        <!--<ul id="face-details">-->
-
-                        <!--</ul>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="data-view-container">-->
-                    <!--<div class="data-view" data-label="RESPONSE JSON" id="demo-json">-->
-                        <!--<p></p>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div>-->
-                <!--<ul class="demo-card-list clear-float">-->
-                    <!--<li>-->
-                        <!--<div class="demo-card-dialog"></div>-->
-                        <!--<img src="../../../ai_images/technology/antiporn/demo-card-1.jpg" alt=" ">-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div class="demo-card-dialog"></div>-->
-                        <!--<img src="../../../ai_images/technology/antiporn/demo-card-2.jpg" alt=" ">-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div class="demo-card-dialog"></div>-->
-                        <!--<img src="../../../ai_images/technology/antiporn/demo-card-3.jpg" alt=" ">-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div class="demo-card-dialog"></div>-->
-                        <!--<img src="../../../ai_images/technology/antiporn/demo-card-4.jpg" alt=" ">-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div class="demo-card-dialog"></div>-->
-                        <!--<img src="../../../ai_images/technology/antiporn/demo-card-5.jpg" alt=" ">-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div class="demo-card-dialog"></div>-->
-                        <!--<img src="../../../ai_images/technology/antiporn/demo-card-6.jpg" alt=" ">-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div class="demo-card-dialog"></div>-->
-                        <!--<img src="../../../ai_images/technology/antiporn/demo-card-7.jpg" alt=" ">-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div class="demo-card-dialog"></div>-->
-                        <!--<img src="../../../ai_images/technology/antiporn/demo-card-8.jpg" alt=" ">-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</div>-->
         </div>
     </div>
 </section>
@@ -433,21 +379,6 @@
     </div>
 </section>
 {%/if%}
-<!-- {%if $src eq Null%}
-<section class="tech-section tech-guide">
-    <div class="container">
-        <h2>使用指南</h2>
-        <div class="guide-link clear-float">
-            <h3>常见问题</h3>
-            <ul>
-                <li><a href="#">支持哪些视频格式的识别？</a></li>
-                <li><a href="#">如果输入视频，是上传还是输入URL？</a></li>
-                <li><a href="#">更多&nbsp;&gt;</a></li>
-            </ul>
-        </div>
-    </div>
-</section>
-{%/if%} -->
 
 </div>
 <aside class="aside-action">
