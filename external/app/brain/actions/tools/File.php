@@ -43,11 +43,11 @@ class Action_File extends Ap_Action_Abstract
         if ($file['type'] == 1) {
             header("Content-Type:" . $file['content_type']);
             header("Cache-Control max-age=864000");
-            $str = $client->get_object_as_string("api-web", $filePath);
+            $str = $client->getObjectAsString("api-web", $filePath);
             echo $str;
             return;
         }else{
-            $str = $client->get_object_as_string("api-web", $filePath);
+            $str = $client->getObjectAsString("api-web", $filePath);
             header( "Content-type:  application/octet-stream ");
             header( "Accept-Ranges:  bytes ");
             header( "Accept-Length: " .$file['size']);
