@@ -11,7 +11,7 @@
  * @date 2017/04/05 15:48:45
  *
  **/
-include ("BaiduBce.phar");
+include("BaiduBce.phar");
 use BaiduBce\Util\Time;
 use BaiduBce\Services\Bos\BosClient;
 
@@ -24,11 +24,13 @@ class Action_File extends Ap_Action_Abstract
         $arrInput = $arrRequest['request_param'];
         $filePath = Brain_Util::getParamAsString($arrInput, 'filePath');
         $fileDao = new Dao_MFile();
-        $file = $fileDao->getFile($filePath);
-        if (empty($file)) {
+        $files = $fileDao->getFile($filePath);
+        if (empty($files)) {
             header("Location: /error");
             return;
         }
+
+        $file = $files[0];
 
         $BOS_CONFIG =
             array(
@@ -43,15 +45,15 @@ class Action_File extends Ap_Action_Abstract
         if ($file['type'] == 1) {
             header("Content-Type:" . $file['content_type']);
             header("Cache-Control max-age=864000");
-            $str = $client->getObjectAsString("api-web", $filePath);
+            $str = $client->getObjectAsString("aip-web", $filePath);
             echo $str;
             return;
-        }else{
+        } else {
             $str = $client->getObjectAsString("aip-web", $filePath);
-            header( "Content-type:  application/octet-stream ");
-            header( "Accept-Ranges:  bytes ");
-            header( "Accept-Length: " .$file['size']);
-            header( "Content-Disposition:  attachment;  filename=".$file['name']);
+            header("Content-type:  application/octet-stream ");
+            header("Accept-Ranges:  bytes ");
+            header("Accept-Length: " . $file['size']);
+            header("Content-Disposition:  attachment;  filename=" . $file['name']);
             echo $str;
             return;
         }
