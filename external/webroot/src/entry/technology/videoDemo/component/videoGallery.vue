@@ -55,17 +55,11 @@
         }
         .demo-card-dialog {
             position: absolute;
-            width: 130px;
-            height: 101px;
-            z-index: 5;
-        }
-        .demo-card-dialog::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            width: 129px;
-            height: 108px;
-            background-color: rgba(0, 0, 0, .5);
+            left: 5px;
+            top: 5px;
+            right: 5px;
+            bottom: 5px;
+            background-color: rgba(0, 0, 0, .5); 
         }
         .demo-card-dialog::after {
             content: "";
@@ -73,6 +67,7 @@
             width: 30px;
             height: 30px;
             top: 50%;
+            left: 50%;
             transform: translateX(-50%) translateY(-50%);
             background-image: url('../../../../../ai_images/technology/video-cover/video-arrow.png');
             background-position: 5px 0;

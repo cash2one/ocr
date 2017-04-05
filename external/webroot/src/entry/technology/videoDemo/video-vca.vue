@@ -33,7 +33,7 @@
         <video-gallery :videos="videos"
                        :selectedIndex="selectedVideoIndex"
                        @changevideo="onchangeVideo"></video-gallery>
-        <div class="ai-video-tip">请选择以上视频进行功能演示，暂不支持线上演示（受版权限制，仅展示时事新闻类视频）</div>
+        <div class="ai-video-tip">以上为视频内容功能演示，暂不支持线上演示。</div>
     </div>
 </template>
 
