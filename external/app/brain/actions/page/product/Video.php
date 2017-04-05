@@ -19,7 +19,7 @@ class Action_Video extends Ap_Action_Abstract {
         $arrInput = $arrRequest['request_param'];
 
         $class_name = substr(strtolower(__CLASS__), strlen('action_'));
-        $techList = array('vcs', 'vcs');
+        $techList = array('vcs', 'vca');
 
         $inputKeys = array_keys($arrInput);
         $tech = $inputKeys[0];
