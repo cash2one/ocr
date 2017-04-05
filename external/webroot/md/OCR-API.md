@@ -2,6 +2,8 @@
 
 本文档主要针对API开发者，调用AI服务相关的API接口有两种调用方式，两种不同的调用方式采用相同的接口URL，区别在于请求方式和鉴权方法不一样，请求参数和返回结果一致。
 
+{% ocrAPI %}
+
 **请求消息体格式**
 
 API服务要求使用POST方式调用，Content-Type为application/x-www-form-urlencoded，然后通过urlencode格式化请求体。
