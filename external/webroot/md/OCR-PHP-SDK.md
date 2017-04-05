@@ -12,7 +12,7 @@
            │      ├── AipHttpClient.php        //内部http请求类
            │      ├── AipBCEUtil.php           //内部工具类
            │      ├── AipBase                  //Aip基类
-           └── demo
+           └── demo     
                   ├── DemoAipOcr.php           //OCR服务示例
                   ├── idcard.jpg               //身份证图片示例
                   ├── bankcard.jpg             //银行卡图片示例
@@ -24,7 +24,7 @@
 
 1.在[官方网站](http://ai.baidu.com/sdk)下载PHP SDK压缩工具包。
 
-2.将下载的`aip-ocr-php-sdk-version.zip`解压后，复制AipOrc.php以及lib/*到工程文件夹中。
+2.将下载的`aip-ocr-php-sdk-version.zip`解压后，复制AipOcr.php以及lib/*到工程文件夹中。
 
 3.引入AipOcr.php。
 
@@ -50,10 +50,65 @@ const SECRET_KEY = '你的 Secret Key';
 $aipOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
 ```
 
-在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是在创建完毕应用后，系统分配给用户的，均为字符串，用于标识用户，为访问做签名验证，可在AI服务控制台中的**应用列表**中查看。
+在上面代码中，常量`APP_ID`在百度云控制台中创建，常量`API_KEY`与`SECRET_KEY`是在创建完毕应用后，系统分配给用户的，均为字符串，用于标识用户，为访问做签名验证，可在AI服务控制台中的**应用列表**中查看。  
 
 **注意：**如您以前是百度云的老用户，其中`API_KEY`对应百度云的“Access Key ID”，`SECRET_KEY`对应百度云的“Access Key Secret”。
 
+## 配置AipOcrClient
+
+如果用户需要配置AipOcrClient的一些细节参数，可以在构造AipOcr之后调用接口设置参数，目前只支持以下参数：
+
+| 接口                           | 说明                      |
+| ---------------------------- | ----------------------- |
+| setConnectionTimeoutInMillis | 建立连接的超时时间（单位：毫秒）        |
+| setSocketTimeoutInMillis     | 通过打开的连接传输数据的超时时间（单位：毫秒） |
+
+# 错误信息格式
+
+若请求错误，服务器将返回的JSON文本包含以下参数：
+
+* **error_code：**错误码；关于错误码的详细信息请参考**通用错误码**和**业务相关错误码**。
+* **error_msg：**错误描述信息，帮助理解和解决发生的错误。
+
+**SDK本地检测参数返回的错误码**：
+
+| error_code | error_msg                        | 备注          |
+| ---------- | -------------------------------- | ----------- |
+| SDK100     | image size error                 | 图片大小超限      |
+| SDK101     | image length error               | 图片边长不符合要求   |
+| SDK102     | read image file error            | 读取图片文件错误    |
+| SDK108     | connection or read data time out | 连接超时或读取数据超时 |
+| SDK109     | unsupported image format         | 不支持的图片格式    |
+
+**服务端返回的错误码**
+
+| 错误码    | 错误信息                         | 描述            |
+| ------ | ---------------------------- | ------------- |
+| 216015 | module closed                | 模块关闭          |
+| 216100 | invalid param                | 非法参数          |
+| 216101 | not enough param             | 参数数量不够        |
+| 216102 | service not support          | 业务不支持         |
+| 216103 | param too long               | 参数太长          |
+| 216110 | appid not exist              | APP ID不存在     |
+| 216111 | invalid userid               | 非法用户ID        |
+| 216200 | empty image                  | 空的图片          |
+| 216201 | image format error           | 图片格式错误        |
+| 216202 | image size error             | 图片大小错误        |
+| 216300 | db error                     | DB错误          |
+| 216400 | backend error                | 后端系统错误        |
+| 216401 | internal error               | 内部错误          |
+| 216500 | unknown error                | 未知错误          |
+| 216600 | id number format error       | 身份证的ID格式错误    |
+| 216601 | id number and name not match | 身份证的ID和名字不匹配  |
+| 216630 | recognize error              | 识别错误          |
+| 216631 | recognize bank card error    | 识别银行卡错误       |
+| 216632 | ocr                          | unknown error |
+| 216633 | recognize idcard error       | 识别身份证错误       |
+| 216634 | detect error                 | 检测错误          |
+| 216635 | get mask error               | 获取mask图片错误    |
+| 282000 | logic internal error    	| 业务逻辑层内部错误 |
+| 282001 | logic backend error     	| 业务逻辑层后端服务错误 |
+| 282100 | image transcode error	| 图片压缩转码错误 		|
 
 # 通用文字识别
 
@@ -76,7 +131,7 @@ const SECRET_KEY = '你的 Secret Key';
 $apiOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
 
 // 调用通用文字识别接口
-$result = $apiOcr->general(file_get_contents('general.jpg'));
+$result = $apiOcr->basicGeneral(file_get_contents('general.jpg'));
 ```
 
 传入图片时还想增加一些自定义参数配置：
@@ -97,23 +152,59 @@ $apiOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
 $option = array('detect_direction' => false, 'language_type' => "CHN_ENG");
 
 // 调用通用文字识别接口
-$result = $apiOcr->general(file_get_contents('general.jpg'), $option);
+$result = $apiOcr->basicGeneral(file_get_contents('general.jpg'), $option);
 ```
 
 **通用文字识别 请求参数详情**
 
 | 参数                    | 是否必选  | 类型      | 可选值范围                                   | 说明                                       |
 | --------------------- | ----- | ------- | --------------------------------------- | ---------------------------------------- |
-| image                 | true  | string  | -                                       | 图像数据，base64编码                            |
-| recognize_granularity | false | string  | big、small                               | 是否定位单字符位置，big：不定位单字符位置，默认值；small：定位单字符位置 |
+| image                 | true  | string  | -                                       | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
 | mask                  | false | string  | -                                       | 表示mask区域的黑白灰度图片，白色代表选中, base64编码         |
 | language_type         | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
 | detect_direction      | false | boolean | true、false                              | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
 | detect_language       | FALSE | string  | true、false                              | 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）           |
 | classify_dimension    | FALSE | string  | lottery                                 | 分类维度（根据OCR结果进行分类），逗号分隔，当前只支持lottery。<br/>lottery：彩票分类，设置detect_direction有助于提升精度 |
-| vertexes_location     | FALSE | string  | true、false                              | 是否返回文字外接多边形顶点位置，不支持单字位置。默认为false         |
+
 
 **通用文字识别 返回数据参数详情**
+
+| 字段                 | 必选   | 类型      | 说明                                       |
+| ------------------ | ---- | ------- | ---------------------------------------- |
+| direction          | 否    | int32   | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
+| log_id             | 是    | uint64  | 唯一的log id，用于问题定位                         |
+| words_result_num   | 是    | uint32  | 识别结果数，表示words_result的元素个数                |
+| words_result       | 是    | array() | 定位和识别结果数组                                |
+| +words             | 否    | string  | 识别结果字符串                                  |
+
+
+# 通用文字识别（含位置信息版）
+
+通用文字识别（含位置信息版）可以接受任意图片，并识别出图片中的文字以及全部文字串，以及字符在图片中的位置信息。
+
+图片接受参数类型：支持本地图片路径字符串，图片文件二进制数组。
+
+举例，要对一张图片进行文字识别，具体的文字的内容和信息在返回的words_result字段中：
+
+```
+    // 参数为本地图片文件二进制数组
+    byte[] file = readImageFile(imagePath);
+    JSONObject response = client.general(file);
+    System.out.println(response.to
+
+**通用文字识别（含位置信息版） 请求参数详情**
+
+| 参数                    | 是否必选  | 类型      | 可选值范围                                   | 说明                                       |
+| --------------------- | ----- | ------- | --------------------------------------- | ---------------------------------------- |
+| image                 | true  | string  | -                                       | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
+| mask                  | false | string  | -                                       | 表示mask区域的黑白灰度图片，白色代表选中, base64编码         |
+| language_type         | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
+| detect_direction      | false | boolean | true、false                              | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
+| detect_language       | FALSE | string  | true、false                              | 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）           |
+| classify_dimension    | FALSE | string  | lottery                                 | 分类维度（根据OCR结果进行分类），逗号分隔，当前只支持lottery。<br/>lottery：彩票分类，设置detect_direction有助于提升精度 |
+
+
+**通用文字识别（含位置信息版） 返回数据参数详情**
 
 | 字段                 | 必选   | 类型      | 说明                                       |
 | ------------------ | ---- | ------- | ---------------------------------------- |
@@ -172,7 +263,7 @@ $result = $apiOcr->bankcard(file_get_contents('bankcard.jpg'));
 
 | 参数                 | 类型     | 描述               |
 | :----------------- | :----- | :--------------- |
-| log_id             | Uint64 | 唯一的log id，用于问题定位 |
+| log_id             | Unit64 | 唯一的log id，用于问题定位 |
 | result             | Object | 定位和识别结果数组        |
 | \+bank_card_number | String | 银行卡识别结果          |
 | +bank_name         | string | 银行名，不能识别时为空               |

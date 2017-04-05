@@ -1,7 +1,7 @@
 <div class="code-block">
     <div class="code-block-tab-container">
         {{#each codeData}}
-            <div class="code-block-title"
+            <div class="code-block-title {{tabActive @index}}"
                  data-index="{{@index}}">
                 {{lanData.readableLanName}}
             </div>

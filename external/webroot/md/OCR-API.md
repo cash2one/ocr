@@ -1,8 +1,21 @@
 # 简介
 
-本文档主要针对API开发者，调用AI服务相关的API接口有两种调用方式，两种不同的调用方式采用相同的接口URL，区别在于请求方式和鉴权方法不一样，请求参数和返回结果一致。
+Hi，您好，欢迎使用百度OCR文字识别API服务。
 
-{% ocrAPI %}
+本文档主要针对API开发者，描述百度OCR文字识别接口服务的相关技术内容。如果您对文档内容有任何疑问，可以通过以下几种方式联系我们：
+
+* 在百度云控制台内**提交工单**，咨询问题类型请选择**人工智能服务**；
+* 加入**开发者QQ群**：224994340；
+
+## 接口能力
+
+| 接口名称  | 接口能力简要描述                     |
+| :---- | :--------------------------- |
+| 人脸检测  | 检测人脸并定位，返回五官关键点，及人脸各属性值      |
+| 人脸比对  | 返回两两比对的人脸相似值                 |
+| 人脸识别  | 在人脸集合中查找相似的人脸                |
+| 人脸认证  | 识别上传的图片是否为指定用户               |
+| 人脸库设置 | 最人脸集合的相关操作，如注册、删除、更新、查找用户信息等 |
 
 **请求消息体格式**
 
@@ -113,6 +126,9 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 | 216633 | recognize idcard error | 识别身份证错误       |
 | 216634 | detect error           | 检测错误          |
 | 216635 | get mask error         | 获取mask图片错误    |
+| 282000 | logic internal error    	| 业务逻辑层内部错误 |
+| 282001 | logic backend error     	| 业务逻辑层后端服务错误 |
+| 282100 | image transcode error	| 图片压缩转码错误 		|
 
 ## 业务相关错误码
 
@@ -132,11 +148,10 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 # 识别接口
 
-## 通用文字识别
+## 通用文字识别（含位置信息版）
+**接口描述**
 
-**接口描述**
-
-用户向服务请求识别某张图中的所有文字。
+用户向服务请求识别某张图中的所有文字，并返回文字在图中的位置信息。
 
 **调用方式一请求示例**
 
@@ -263,6 +278,91 @@ Content-Type: application/json;charset=UTF-8
 | +++height          | 是    | uint32  | 表示位置的长方形的高度                              |
 | ++char             | 是    | string  | 单字符识别结果                                  |
 
+## 通用文字识别
+
+**接口描述**
+
+用户向服务请求识别某张图中的所有文字。
+
+**调用方式一请求示例**
+
+* HTTP 方法： POST
+
+* 请求URL： `https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic `
+
+* URL参数：<br>
+
+| 参数           | 值                                        |
+| ------------ | ---------------------------------------- |
+| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
+
+* Header如下：
+
+| 参数           | 值                                 |
+| ------------ | --------------------------------- |
+| Content-Type | application/x-www-form-urlencoded |
+
+* Body中数据示例：
+
+| 参数    | 值          |
+| ----- | ---------- |
+| image | 图像base64编码 |
+
+
+
+**调用方式二请求示例**
+
+```
+POST /rest/2.0/ocr/v1/general_basic HTTP/1.1
+
+x-bce-date: 2016-10-18T02: 20: 01Z,
+host: aip.baidubce.com,
+accept: */*,
+authorization: bce-auth-v1/fbf9f7889585498d8ba8a68da26cbb2e/2016-10-18T02: 20: 01Z/1800/host/6c7cb35358b5c870666d14588af648e8c941a8b2300becd97831803198ee7a6d
+
+image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
+```
+
+**请求参数**
+
+| 参数                 | 是否必选  | 类型      | 可选值范围                                   | 说明                                       |
+| ------------------ | ----- | ------- | --------------------------------------- | ---------------------------------------- |
+| image              | true  | string  | -                                       | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
+| mask               | false | string  | -                                       | 表示mask区域的黑白灰度图片，白色代表选中, base64编码         |
+| language_type      | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
+| detect_direction   | false | boolean | true、false                              | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
+| detect_language    | FALSE | string  | true、false                              | 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）           |
+| classify_dimension | FALSE | string  | lottery                                 | 分类维度（根据OCR结果进行分类），逗号分隔，当前只支持lottery。<br/>lottery：彩票分类，设置detect_direction有助于提升精度 |
+
+**返回示例**
+
+```http
+HTTP/1.1 200 OK
+x-bce-request-id: 73c4e74c-3101-4a00-bf44-fe246959c05e
+Cache-Control: no-cache
+Server: BWS
+Date: Tue, 18 Oct 2016 02:21:01 GMT
+Content-Type: application/json;charset=UTF-8
+{
+"log_id": 2471272194, 
+"words_result_num": 2,
+"classify_result": {"lottery": "unknown"}, 
+"words_result": 
+	[
+		{"words": " TSINGTAO"}, 
+		{"words": "青島睥酒"}
+	]
+}
+```
+**返回参数**
+
+| 字段               | 必选   | 类型      | 说明                                       |
+| ---------------- | ---- | ------- | ---------------------------------------- |
+| direction        | 否    | int32   | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
+| log_id           | 是    | uint64  | 唯一的log id，用于问题定位                         |
+| words_result     | 是    | array() | 识别结果数组                                |
+| words_result_num | 是    | uint32  | 识别结果数，表示words_result的元素个数                |
+| +words           | 否    | string  | 识别结果字符串                                  |
 
 ## 身份证识别
 

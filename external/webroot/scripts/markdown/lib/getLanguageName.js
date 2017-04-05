@@ -32,6 +32,12 @@ module.exports = function (ext) {
                 hljsLanName: 'C++',
                 readableLanName: 'C++'
             };
+        // bash居然用.txt后缀...
+        case 'txt':
+            return {
+                hljsLanName: 'Bash',
+                readableLanName: 'bash'
+            };
         default:
             return {
                 hljsLanName: '',

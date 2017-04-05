@@ -1,0 +1,62 @@
+#include <iostream>
+#include <curl/curl.h>
+#include "face_match.h"
+// libcurl库下载链接：https://curl.haxx.se/download.html
+// 人脸匹配接口url
+const static std::string face_match_url = "https://aip.baidubce.com/rest/2.0/faceverify/v1/match";
+static std::string face_match_result;
+
+/**
+ * curl发送http请求调用的回调函数，回调函数中对返回的json格式的body进行了解析，解析结果储存在全局的静态变量当中
+ * @param 参数定义见libcurl文档
+ * @return 返回值定义见libcurl文档
+ */
+static size_t callback(void *ptr, size_t size, size_t nmemb, void *stream) {
+    // 获取到的body存放在ptr中，先将其转换为string格式
+    face_match_result = std::string((char *) ptr, size * nmemb);
+    return size * nmemb;
+}
+
+/**
+ * 调用人脸匹配接口，返回json格式的结果，具体格式解析见百度大脑文档
+ * @param json_result 以string格式返回的json格式的结果
+ * @param images 多个base64编码的图像数据字符串 注：base64数据不包含格式信息（即不包含data:image/jpeg;base64））
+ * @param access_token 以string格式传入的access token数据，access token获取方式见access_token获取相关文档及代码
+ * @return 调用成功返回0，发生错误返回其他错误码
+ */
+int match(std::string &json_result, const std::vector<std::string> &images, const std::string &access_token) {
+    std::string url = face_match_url + "?access_token=" + access_token;
+    CURL *curl = NULL;
+    CURLcode result_code;
+    int is_success;
+    curl = curl_easy_init();
+    if (curl) {
+        std::string image_plain = images[0];
+        for (int i = 1; i < images.size(); i++) {
+            image_plain.append("," + images[i]);
+        }
+        curl_easy_setopt(curl, CURLOPT_URL, url.data());
+        curl_easy_setopt(curl, CURLOPT_POST, 1);
+        curl_httppost *post = NULL;
+        curl_httppost *last = NULL;
+        curl_formadd(&post, &last, CURLFORM_COPYNAME, "images", CURLFORM_COPYCONTENTS, image_plain.data(),
+                     CURLFORM_END);
+        curl_easy_setopt(curl, CURLOPT_HTTPPOST, post);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, callback);
+        result_code = curl_easy_perform(curl);
+        if (result_code != CURLE_OK) {
+            fprintf(stderr, "curl_easy_perform() failed: %s\n",
+                    curl_easy_strerror(result_code));
+            is_success = 1;
+            return is_success;
+        }
+        json_result = face_match_result;
+        curl_easy_cleanup(curl);
+        is_success = 0;
+    } else {
+        fprintf(stderr, "curl_easy_init() failed.");
+        is_success = 1;
+    }
+    return is_success;
+}
+

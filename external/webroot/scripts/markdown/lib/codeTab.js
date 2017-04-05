@@ -16,6 +16,14 @@ const tpl = handlebars.compile(codeTplRawTpl);
 
 const codeExamplePath = path.resolve(__dirname, '..', '..', '..', 'md', 'codeExample');
 
+handlebars.registerHelper('tabActive', function (index) {
+    if (index === 0) {
+        return 'block-active';
+    }
+
+    return '';
+});
+
 module.exports = function (codeDirPath) {
     // 当前代码tab需要用的代码所在的路径
     const codeFileDir = path.join(codeExamplePath, codeDirPath, '*');
@@ -54,7 +62,6 @@ module.exports = function (codeDirPath) {
             lanData,
             codeHTML: hljs.highlight(lanData.hljsLanName, code).value
         });
-
     }
 
     return tpl({
