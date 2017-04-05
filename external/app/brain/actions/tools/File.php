@@ -47,7 +47,7 @@ class Action_File extends Ap_Action_Abstract
             echo $str;
             return;
         }else{
-            $str = $client->getObjectAsString("api-web", $filePath);
+            $str = $client->getObjectAsString("aip-web", $filePath);
             header( "Content-type:  application/octet-stream ");
             header( "Accept-Ranges:  bytes ");
             header( "Accept-Length: " .$file['size']);
