@@ -25,12 +25,24 @@ app.use(
     express.static(path.join(__dirname, '..', 'data'))
 );
 
+app.get('/', (req, res, next) => {
+    renderSmarty(
+        'home.tpl',
+        getMockData({})
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
+
 app.get('/docs', (req, res, next) => {
     renderSmarty(
         'newDocument/newDocument.tpl',
-        getMockData({
-            cf: 'chenfan'
-        })
+        getMockData({})
     ).then(
         content => {
             res
