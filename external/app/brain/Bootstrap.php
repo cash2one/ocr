@@ -25,7 +25,7 @@ class Bootstrap extends Ap_Bootstrap_Abstract{
             array("module"=>"tech", "controller"=>"antiporn", "action"=>"index")
         ));
 
-        $dispatcher->getRouter()->addRoute('file', new Ap_Route_Regex('file/([a-zA-Z-_0-9]+)',
+        $dispatcher->getRouter()->addRoute('file', new Ap_Route_Regex('file\/([a-zA-Z-_0-9]+)',
             array('controller' => 'Main',"action"=>"File"), array(1 => 'filePath')
         ));
     }
