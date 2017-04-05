@@ -12,20 +12,20 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
+    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/ie9.style.css">
+    <link rel="stylesheet" href="/ai_dist/1490967304/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/home.style.css">
+    <link rel="stylesheet" href="/ai_dist/1490967304/css/base.style.css">
+    <link rel="stylesheet" href="/ai_dist/1490967304/css/home.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490967304/ai_images/logo.png" alt="百度大脑">
+                <img src="/ai_dist/1490967304/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -123,8 +123,8 @@
                                 <span>智能视频分析</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="#" target="_blank">视频内容分析VCA</a></li>
-                                <li><a href="#" target="_blank">视频封面选图</a></li>
+                                <li><a href="/tech/video/vca" target="_blank">视频内容分析VCA</a></li>
+                                <li><a href="/tech/video/vcs" target="_blank">视频封面选图</a></li>
                             </ul>
                         </li>
                         <li id="tech-machine-learning">
@@ -230,32 +230,28 @@
     <section class="banner">
     <ul class="banner-content">
         <li class="active">
-            <h1>智能视频分析</h1>
-            <p>
+            <a href="/tech/video/vca">
+                <h1>智能视频分析</h1>
+                <p>
                 精细化视频分析服务，多项技术业界领先<br>
                 提供视频分类、视频tag、优质精彩视频封面输出
-            </p>
-            <div>
-                <a role="button"
-                   class="get-started"
-                   href="#">
-                    点击观看
-                </a>
-            </div>
+                </p>
+                <div>
+                    <button type="button" class="get-started">点击观看</button>
+                </div>
+            </a>
         </li>
         <li>
-            <h1>OCR SDK上线 iOS/Android</h1>
-            <p>
+            <a href="http://ai.baidu.com/sdk#sdk-category-ocr">
+                <h1>OCR SDK上线 iOS/Android</h1>
+                <p>
                 OCR iOS SDK，Android SDK全新上线，让您的应用快速集成<br>
                 通用文字识别、身份证识别、银行卡卡号识别的能力
-            </p>
-            <div>
-                <a role="button"
-                   class="get-started"
-                   href="http://ai.baidu.com/sdk#sdk-category-ocr">
-                    立即下载
-                </a>
-            </div>
+                </p>
+                <div>
+                    <button type="button" class="get-started">立即下载</button>
+                </div>
+            </a>
         </li>
         <li>
             <a href="/tech/face/search">
@@ -324,7 +320,7 @@
                     免费试用
                 </a>
             </div>
-            <video src="//ai.bdstatic.com/dist/1490967304/ai_images/home/banner-1.mp4">
+            <video src="/ai_dist/1490967304/ai_images/home/banner-1.mp4">
             </video>
         </li> -->
     </ul>
@@ -580,11 +576,11 @@
                     <div class="service-tech-list clear-float">
                         <ul class="inline-list">
                             <li>
-                                <a href="#"
-                                   target="_blank">视频内容封面VCA</a>
+                                <a href="/tech/video/vca"
+                                   target="_blank">视频内容分析VCA</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="/tech/video/vcs"
                                    target="_blank">
                                     视频封面选图
                                 </a>
@@ -711,7 +707,7 @@
                     <img alt="百度语音基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1490967304/ai_images/home/video-1.png">
+                         src="/ai_dist/1490967304/ai_images/home/video-1.png">
                 </a>
                 <h5>百度语音基础介绍及应用场景</h5>
             </li>
@@ -721,7 +717,7 @@
                     <img alt="百度OCR基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1490967304/ai_images/home/video-2.png">
+                         src="/ai_dist/1490967304/ai_images/home/video-2.png">
                 </a>
                 <h5>百度OCR基础介绍及应用场景</h5>
             </li>
@@ -731,7 +727,7 @@
                     <img alt="百度人脸技术基础介绍及引用场景"
                         width="500"
                         height="280"
-                        src="//ai.bdstatic.com/dist/1490967304/ai_images/home/video-3.png">
+                        src="/ai_dist/1490967304/ai_images/home/video-3.png">
                 </a>
                 <h5>百度人脸技术基础介绍及引用场景</h5>
             </li>
@@ -742,7 +738,7 @@
                     <img alt="百度翻译产品介绍"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1490967304/ai_images/home/video-4.png">
+                         src="/ai_dist/1490967304/ai_images/home/video-4.png">
                 </a>
                 <h5>百度翻译产品介绍</h5>
             </li>
@@ -883,8 +879,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490967304/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490967304/js/home.js"></script>
+<script src="/ai_dist/1490967304/js/common.bundle.js"></script>
+<script src="/ai_dist/1490967304/js/home.js"></script>
 
 <script>
     (function () {

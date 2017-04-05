@@ -11,7 +11,7 @@
 </template>
 
 <script>
-    export default {  
+    export default {
         props: {
             videos: Array,
             selectedIndex: {
@@ -54,34 +54,34 @@
             }
         }
         .demo-card-dialog {
-                        position: absolute;
-                        width: 130px;
-                        height: 101px;
-                        z-index: 5;
-                    }
-                    .demo-card-dialog::before {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        width: 129px;
-                        height: 108px;
-                        background-color: rgba(0, 0, 0, .5);
-                    }
-                    .demo-card-dialog::after {
-                        content: "";
-                        position: absolute;
-                        width: 30px;
-                        height: 30px;
-                        top: 50%;
-                        transform: translateX(-50%) translateY(-50%);
-                        background-image: url('../../../../../ai_images/technology/video-cover/video-arrow.png');
-                        background-position: 5px 0;
-                        background-size: 50px 30px;
-                        background-repeat: no-repeat;
-                    }
-                    .demo-card-dialog:hover::after {
-                        background-position: -22px 0;
-                    }
+            position: absolute;
+            width: 130px;
+            height: 101px;
+            z-index: 5;
+        }
+        .demo-card-dialog::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 129px;
+            height: 108px;
+            background-color: rgba(0, 0, 0, .5);
+        }
+        .demo-card-dialog::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            background-image: url('../../../../../ai_images/technology/video-cover/video-arrow.png');
+            background-position: 5px 0;
+            background-size: 50px 30px;
+            background-repeat: no-repeat;
+        }
+        .demo-card-dialog:hover::after {
+            background-position: -22px 0;
+        }
         img {
             width: 130px;
             height: 110px;
