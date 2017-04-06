@@ -1,4 +1,5 @@
 <?php
+
 /**
  * User: wangyadong03
  * Date: 2017/4/6
@@ -46,7 +47,7 @@ class Dao_Tag extends Dao_Base
     {
         $arrFields = $this->tagListFields;
         $arrConds = null;
-        $arrOptions = null;
+        $arrOptions = array("enable=" => 1);
         $arrAppends = array(
             'order by id',
         );

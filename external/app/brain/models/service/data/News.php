@@ -29,4 +29,5 @@ class Service_Data_News{
         return $news[0]['id'];
     }
 
+
 }
