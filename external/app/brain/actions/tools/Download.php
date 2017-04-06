@@ -17,8 +17,6 @@ class Action_Download extends Ap_Action_Abstract
 
     public function execute()
     {
-        $arrRequest = Saf_SmartMain::getCgi();
-        $arrInput = $arrRequest['request_param'];
         var_dump('Here!!');
         var_dump($arrInput);
 
@@ -44,7 +42,10 @@ class Action_Download extends Ap_Action_Abstract
         $dbSdkInfo = new Dao_SdkInfo();
         $dbSdkInfo->insertSdkInfo($passId, $ucid, 1, 0);
 
+        $arrRequest = Saf_SmartMain::getCgi();
+        $arrInput = $arrRequest['request_param'];
         $filePath = Brain_Util::getParamAsString($arrInput, 'filePath');
+        var_dump($filePath);
         $fileDao = new Dao_MFile();
         $files = $fileDao->getFile($filePath);
         $file = $files[0];
@@ -54,7 +55,7 @@ class Action_Download extends Ap_Action_Abstract
         header("Accept-Length: " . $file['size']);
         header("Content-Disposition:  attachment;  filename=" . $file['name']);
         var_dump(file_get_contents($filename));
-        
+
         return;
     }
 }
