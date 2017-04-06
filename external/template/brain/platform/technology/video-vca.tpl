@@ -15,17 +15,17 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/technology/video-vca.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/technology/video-vca.style.css">
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490967304/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1491467582/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -236,12 +236,12 @@
             从而提高搜索准确度和用户推荐视频的曝光量</p>
         <div>
             <a role="button"
-               class="btn-other media"
-               href="
                {%if $src eq Null%}
-               /product/apply/vca.html?from=ai
+               class="btn-primary media ai-redirect"
+               href="https://cloud.baidu.com/product/apply/vca.html?from=ai"
                {%else%}
-               /product/apply/vca.html
+               class="btn-primary media"
+               href="/product/apply/vca.html"
                {%/if%}">
                 商务合作
             </a>
@@ -371,12 +371,12 @@
             一起携手探索更多AI带给我们的更多可能性！</p>
         <div>
             <a role="button"
-               class="btn-other media"
-               href="
                {%if $src eq Null%}
-               /product/apply/vca.html?from=ai
+               class="btn-primary large ai-redirect"
+               href="https://cloud.baidu.com/product/apply/vca.html?from=ai"
                {%else%}
-               /product/apply/vca.html
+               class="btn-primary large"
+               href="/product/apply/vca.html"
                {%/if%}">
                 商务合作
             </a>
@@ -483,8 +483,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490967304/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490967304/js/technology/video-vca.js"></script>
+<script src="//ai.bdstatic.com/dist/1491467582/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1491467582/js/technology/video-vca.js"></script>
 
 <script>
     (function () {
