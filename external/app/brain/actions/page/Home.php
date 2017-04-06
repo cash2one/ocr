@@ -21,8 +21,8 @@ class Action_Home extends Ap_Action_Abstract {
         $dbNews = new Dao_News();
         $lastestNews  = $dbNews->getLastestNews();
         $newsList  = $dbNews->getHomeNewsList();
-        $arrPageInfo['lastestNews '] = $lastestNews;
-        $arrPageInfo['newsList '] = $newsList;
+        $arrPageInfo['lastestNews'] = $lastestNews;
+        $arrPageInfo['newsList'] = $newsList;
         echo "首页新闻：";
         echo "lastestNews" . $lastestNews;
         echo "newsList" . $newsList;
