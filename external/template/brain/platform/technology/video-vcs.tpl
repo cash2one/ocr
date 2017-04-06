@@ -273,7 +273,7 @@
                 <div class="scan-box-image"></div>
                 <div class="scan-box-title">封面精彩度</div>
                 <div class="scan-box-connent">
-                    对视频中的人脸、声音、字幕等元素，与理解的视频内容进行识别、比对，输出内容精彩质高的封面
+                    对视频中的人脸、声音、字幕等元素，与理解的视频内容进行识别、比对，输出内容精彩的高质量封面
                 </div>
             </div>
             <div class="scan-box">
