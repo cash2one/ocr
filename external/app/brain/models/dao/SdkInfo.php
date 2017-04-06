@@ -46,11 +46,14 @@ class Dao_SdkInfo extends Dao_Base {
      */
     public function insertSdkInfo($uc_id, $pass_id, $service_type, $language) {
         
+        $date = date("Y-m-d");
+
         $arrRow = array(
             'uc_id' => $uc_id,
             'pass_id' => $pass_id,
             'service_type' => $service_type,
             'language' => $language,
+            'create_time' => $date,
         );  
         $arrOptions = null;
         $arrOnDup = $arrRow;
