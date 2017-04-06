@@ -42,7 +42,7 @@ class Dao_NewsTag extends Dao_Base
 
     /**
      * getTagIdListByNewsId
-     *
+     * @param null
      * @access public
      * @return void
      */
@@ -61,7 +61,7 @@ class Dao_NewsTag extends Dao_Base
 
     /**
      * getTagNewsIdList
-     *
+     * @param null
      * @access public
      * @return void
      */
@@ -83,7 +83,7 @@ class Dao_NewsTag extends Dao_Base
 
     /**
      * getTagNewsCount
-     *
+     * @param null
      * @access public
      * @return void
      */

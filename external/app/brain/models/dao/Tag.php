@@ -38,8 +38,9 @@ class Dao_Tag extends Dao_Base
 
     /**
      * getTagList
-     *
+     * @param null
      * @access public
+     * @return void
      */
     public function getTagList()
     {
@@ -56,8 +57,9 @@ class Dao_Tag extends Dao_Base
 
     /**
      * getTag
-     *
+     * @param $tagId
      * @access public
+     * @return void
      */
     public function getTag($tagId)
     {
