@@ -17,18 +17,23 @@ class Action_Download extends Ap_Action_Abstract
 
     public function execute()
     {
-        var_dump('Here!!');
-        $passId = '111';
-        $ucid = '222';
+        $arrRequest = Saf_SmartMain::getCgi();
+        $arrInput = $arrRequest['request_param'];
+        var_dump('Here!!\n');
+        var_dump($arrInput);
+
+        $passId = '123';
+        $ucid = '321';
 
         $userInfo = Bd_Passport::checkUserLogin();
+        var_dump($userInfo);
         if($userInfo != false){
             $passId = $userInfo['uid'];
             var_dump($passId);
         } else{
             var_dump('No passId');
         }
-        
+
         if(!empty($_COOKIE['__cas__id__'])){
             $ucid = $_COOKIE['__cas__id__'];
             var_dump($ucid);
@@ -39,8 +44,6 @@ class Action_Download extends Ap_Action_Abstract
         $dbSdkInfo = new Dao_SdkInfo();
         $dbSdkInfo->insertSdkInfo($passId, $ucid, 1, 0);
 
-        $arrRequest = Saf_SmartMain::getCgi();
-        $arrInput = $arrRequest['request_param'];
         $filePath = Brain_Util::getParamAsString($arrInput, 'filePath');
 
         return;
