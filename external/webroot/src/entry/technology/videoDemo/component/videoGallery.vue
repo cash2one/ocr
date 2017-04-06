@@ -36,6 +36,7 @@
 
 <style lang="less">
     .video-gallery {
+        width: 1180px;
         font-size: 0;
         margin-top: 20px;
     }
