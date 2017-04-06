@@ -28,8 +28,9 @@ class Action_Home extends Ap_Action_Abstract {
         echo "lastestNews";
         echo "<br>";
         echo count($lastestNews);
+        echo "<br>";
         for($i=0;$i<count($lastestNews);$i++){
-            foreach($lastestNews as $x=>$x_value){
+            foreach($lastestNews[$i] as $x=>$x_value){
                 echo "Key=" . $x . ", Value=" . $x_value;
                 echo "<br>";
             }
@@ -37,8 +38,9 @@ class Action_Home extends Ap_Action_Abstract {
         echo "newsList";
         echo "<br>";
         echo count($newsList);
+        echo "<br>";
         for($i=0;$i<count($newsList);$i++){
-            foreach($newsList[i] as $x=>$x_value){
+            foreach($newsList[$i] as $x=>$x_value){
                 echo "Key=" . $x . ", Value=" . $x_value;
                 echo "<br>";
             }
