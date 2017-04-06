@@ -47,7 +47,7 @@ class Dao_News extends Dao_Base
         'id',
         'title',
         'abs',
-        'img',
+        'banner as img',
     );
 
     /**
@@ -96,12 +96,12 @@ class Dao_News extends Dao_Base
         $arrFields = $this->homeNewsListFields;
         $arrConds = array(
             "place=" => 0,
-            "index=" => 1,    //文章是否可置于首页标签
+            "show_index=" => 1,    //文章是否可置于首页标签
         );
         $arrOptions = null;
         $arrAppends = array(
             'order by index_order',
-            'limit 4',
+            'limit 0 , 4',
         );
         $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
         $arrDBRet = $this->query($strSQL);
