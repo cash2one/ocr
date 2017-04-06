@@ -44,7 +44,7 @@ class Action_Case extends Ap_Action_Abstract {
             $strSiteUrl = $dataContent['siteUrl'] =  Brain_Util::getParamAsString($arrInput, "siteUrl");
             $business = $dataContent['business'] = Brain_Util::getParamAsString($arrInput, "business");
             $requirement = $dataContent['requirement'] = Brain_Util::getParamAsString($arrInput, "requirement");
-            $dataContent['fromUrl'] = Brain_Util::getParamAsString($arrInput, "fromUrl");
+            $dataContent['urlFrom'] = Brain_Util::getParamAsString($arrInput, "urlFrom");
             $seccode = Brain_Seccode::getSeccode();
             //echo $seccode, "<br>", $strCode;
             
