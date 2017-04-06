@@ -27,12 +27,16 @@ class Action_Home extends Ap_Action_Abstract {
         echo "<br>";
         echo "lastestNews";
         echo "<br>";
-        foreach($lastestNews as $x=>$x_value){
-            echo "Key=" . $x . ", Value=" . $x_value;
-            echo "<br>";
+        echo count($lastestNews);
+        for($i=0;$i<count($lastestNews);$i++){
+            foreach($lastestNews as $x=>$x_value){
+                echo "Key=" . $x . ", Value=" . $x_value;
+                echo "<br>";
+            }
         }
         echo "newsList";
         echo "<br>";
+        echo count($newsList);
         for($i=0;$i<count($newsList);$i++){
             foreach($newsList[i] as $x=>$x_value){
                 echo "Key=" . $x . ", Value=" . $x_value;
