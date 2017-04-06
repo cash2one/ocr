@@ -10,7 +10,7 @@ import VueRouter from 'vue-router';
 import main from './route/main.vue';
 
 // highlight.js皮肤
-import 'highlight.js/styles/color-brewer.css';
+import 'highlight.js/styles/ocean.css';
 
 Vue.use(VueRouter);
 

@@ -139,7 +139,9 @@ class Dao_Case extends Dao_Base {
                 </tr>
                 <tr>
                     <th>公司网址:</th>
-                    <td colspan='3'>{$data_content['siteUrl']}</td>
+                    <td>{$data_content['siteUrl']}</td>
+                    <th>来源网址</th>
+                    <td>{$data_content['urlFrom']}</td>
                 </tr>
                 <tr>
                     <th>联系电话:</th>

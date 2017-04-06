@@ -25,12 +25,10 @@ app.use(
     express.static(path.join(__dirname, '..', 'data'))
 );
 
-app.get('/docs', (req, res, next) => {
+app.get('/', (req, res, next) => {
     renderSmarty(
-        'newDocument/newDocument.tpl',
-        getMockData({
-            cf: 'chenfan'
-        })
+        'home.tpl',
+        getMockData({})
     ).then(
         content => {
             res
@@ -40,6 +38,26 @@ app.get('/docs', (req, res, next) => {
         next
     );
 });
+
+app.get('/docs', (req, res, next) => {
+    renderSmarty(
+        'newDocument/newDocument.tpl',
+        getMockData({})
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
+
+// 挂载router
+app.use('/tech/nlp', require('./router/nlp'));
+app.use('/tech/video', require('./router/video'));
+app.use('/tech/face', require('./router/face'));
+app.use('/tech/ocr', require('./router/ocr'));
 
 app.listen(port, () => {
     console.log('访问本地' + port + ',即可即时查看效果，enjoy it');

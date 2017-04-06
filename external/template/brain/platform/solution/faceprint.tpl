@@ -8,24 +8,32 @@
     <meta name="keywords" content="{%$keyword%}">
     <meta name="description" content="{%$description%}">
     <meta name="baidu-site-verification" content="GOPjfm49Yc" />
-    <script src="https://hm.baidu.com/hm.js?fdad4351b2e90e0f489d7fbfc47c8acf"></script>
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/solution/faceprint.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/solution/faceprint.style.css">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?fdad4351b2e90e0f489d7fbfc47c8acf";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490967304/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1491467582/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -115,32 +123,28 @@
                                 <li><a href="http://api.fanyi.baidu.com/api/trans/product/index" target="_blank">机器翻译平台</a></li>
                             </ul>
                         </li>
-                        <li id="tech-user-profile">
+                        <li id="tech-video">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>用户画像
+                                <span class="tech-title-icon"></span>视频技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>用户画像</span>
+                                <span>智能视频分析</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
-                            </ul>
-                            <div class="sub-tech-title">
-                                <span>推荐云平台</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
+                                <li><a href="/tech/video/vca" target="_blank">视频内容分析VCA</a></li>
+                                <li><a href="/tech/video/vcs" target="_blank">视频封面选图</a></li>
                             </ul>
                         </li>
                         <li id="tech-machine-learning">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>机器学习
+                                <span class="tech-title-icon"></span>深度学习
                             </div>
                             <div class="sub-tech-title">
                                 <span>PaddlePaddle</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a></li>
+                                <li><a href="http://book.paddlepaddle.org/" target="_blank">深度学习入门</a></li>
                             </ul>
                         </li>
                         <li id="tech-ar">
@@ -153,6 +157,27 @@
                             <ul class="tech-list">
                                 <li><a href="/tech/ar">AR内容平台</a></li>
                             </ul>
+                        </li>
+                        <li id="tech-user-profile">
+                            <div class="tech-title">
+                                <span class="tech-title-icon"></span>用户画像
+                            </div>
+                            <div class="tech-title-minor">
+                                <div class="sub-tech-title">
+                                    <span>用户画像</span>
+                                </div>
+                                <ul class="tech-list">
+                                    <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
+                                </ul>
+                            </div>
+                            <div class="tech-title-minor">
+                                <div class="sub-tech-title">
+                                    <span>推荐云平台</span>
+                                </div>
+                                <ul class="tech-list">
+                                    <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </li>
@@ -229,7 +254,7 @@
         <div class="solution-container">
             <div class="solution-case shadow">
                 <div class="solution-icon">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/solution/faceprint/solution-case-1.png">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/solution/faceprint/solution-case-1.png">
                 </div>
                 <div class="solution-desc">
                     <h3>远程自助</h3>
@@ -238,7 +263,7 @@
             </div>
             <div class="solution-case shadow">
                 <div class="solution-icon">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/solution/faceprint/solution-case-2.png">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/solution/faceprint/solution-case-2.png">
                 </div>
                 <div class="solution-desc">
                     <h3>交互流畅</h3>
@@ -247,7 +272,7 @@
             </div>
             <div class="solution-case shadow">
                 <div class="solution-icon">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/solution/faceprint/solution-case-3.png">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/solution/faceprint/solution-case-3.png">
                 </div>
                 <div class="solution-desc">
                     <h3>行业定制</h3>
@@ -406,8 +431,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490967304/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490967304/js/solution/faceprint.js"></script>
+<script src="//ai.bdstatic.com/dist/1491467582/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1491467582/js/solution/faceprint.js"></script>
 
 <script>
     (function () {

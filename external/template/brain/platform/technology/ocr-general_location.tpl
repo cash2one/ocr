@@ -8,24 +8,32 @@
     <meta name="keywords" content="{%$keyword%}">
     <meta name="description" content="{%$description%}">
     <meta name="baidu-site-verification" content="GOPjfm49Yc" />
-    <script src="https://hm.baidu.com/hm.js?fdad4351b2e90e0f489d7fbfc47c8acf"></script>
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/technology/ocr-general_location.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/technology/ocr-general_location.style.css">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?fdad4351b2e90e0f489d7fbfc47c8acf";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490967304/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1491467582/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -115,32 +123,28 @@
                                 <li><a href="http://api.fanyi.baidu.com/api/trans/product/index" target="_blank">机器翻译平台</a></li>
                             </ul>
                         </li>
-                        <li id="tech-user-profile">
+                        <li id="tech-video">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>用户画像
+                                <span class="tech-title-icon"></span>视频技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>用户画像</span>
+                                <span>智能视频分析</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
-                            </ul>
-                            <div class="sub-tech-title">
-                                <span>推荐云平台</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
+                                <li><a href="/tech/video/vca" target="_blank">视频内容分析VCA</a></li>
+                                <li><a href="/tech/video/vcs" target="_blank">视频封面选图</a></li>
                             </ul>
                         </li>
                         <li id="tech-machine-learning">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>机器学习
+                                <span class="tech-title-icon"></span>深度学习
                             </div>
                             <div class="sub-tech-title">
                                 <span>PaddlePaddle</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a></li>
+                                <li><a href="http://book.paddlepaddle.org/" target="_blank">深度学习入门</a></li>
                             </ul>
                         </li>
                         <li id="tech-ar">
@@ -153,6 +157,27 @@
                             <ul class="tech-list">
                                 <li><a href="/tech/ar">AR内容平台</a></li>
                             </ul>
+                        </li>
+                        <li id="tech-user-profile">
+                            <div class="tech-title">
+                                <span class="tech-title-icon"></span>用户画像
+                            </div>
+                            <div class="tech-title-minor">
+                                <div class="sub-tech-title">
+                                    <span>用户画像</span>
+                                </div>
+                                <ul class="tech-list">
+                                    <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
+                                </ul>
+                            </div>
+                            <div class="tech-title-minor">
+                                <div class="sub-tech-title">
+                                    <span>推荐云平台</span>
+                                </div>
+                                <ul class="tech-list">
+                                    <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </li>
@@ -280,28 +305,28 @@
                 </div>
                 <div class="tech-demo-card-list">
                     <div class="tech-demo-card-item tech-demo-card-active">
-                        <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/ocr-general_location/demo-card-1.jpeg" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-general_location/demo-card-1.jpeg" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/ocr-general_location/demo-card-2.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-general_location/demo-card-2.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/ocr-general_location/demo-card-3.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-general_location/demo-card-3.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/ocr-general_location/demo-card-4.jpg" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-general_location/demo-card-4.jpg" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/ocr-general_location/demo-card-5.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-general_location/demo-card-5.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/ocr-general_location/demo-card-6.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-general_location/demo-card-6.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/ocr-general_location/demo-card-7.jpeg" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-general_location/demo-card-7.jpeg" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1490967304/ai_images/technology/ocr-general_location/demo-card-8.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-general_location/demo-card-8.png" alt=" ">
                     </div>
                 </div>
             </div>
@@ -539,9 +564,7 @@
                 <div class="box-head">调用失败如何计费？</div>
                 <div class="box-body">
                     <div class="box-body-connent">
-                        调用失败类型共分两种：服务错误和业务操作错误导致的调用失败。超出免费配额后，
-                        因服务错误导致的调用失败不计费，相关错误码请查询
-                        <a class="product-error-query" href="/docs#OCR-API">错误码详情</a>
+                        通用文字识别（含位置信息版）任何调用失败均不计入调用次数，不产生任何费用
                     </div>
                 </div>
             </div>
@@ -700,8 +723,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490967304/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490967304/js/technology/ocr-general_location.js"></script>
+<script src="//ai.bdstatic.com/dist/1491467582/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1491467582/js/technology/ocr-general_location.js"></script>
 
 <script>
     (function () {

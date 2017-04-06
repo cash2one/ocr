@@ -8,7 +8,6 @@
     <meta name="keywords" content="{%$keyword%}">
     <meta name="description" content="{%$description%}">
     <meta name="baidu-site-verification" content="GOPjfm49Yc" />
-    <script src="https://hm.baidu.com/hm.js?fdad4351b2e90e0f489d7fbfc47c8acf"></script>
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
@@ -19,6 +18,15 @@
     <![endif]-->
     <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.base.css[0] %>">
     <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.cssFile %>">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?fdad4351b2e90e0f489d7fbfc47c8acf";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body class="ai-platform">
 <header class="header-nav">
@@ -115,32 +123,28 @@
                                 <li><a href="http://api.fanyi.baidu.com/api/trans/product/index" target="_blank">机器翻译平台</a></li>
                             </ul>
                         </li>
-                        <li id="tech-user-profile">
+                        <li id="tech-video">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>用户画像
+                                <span class="tech-title-icon"></span>视频技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>用户画像</span>
+                                <span>智能视频分析</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
-                            </ul>
-                            <div class="sub-tech-title">
-                                <span>推荐云平台</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
+                                <li><a href="/tech/video/vca" target="_blank">视频内容分析VCA</a></li>
+                                <li><a href="/tech/video/vcs" target="_blank">视频封面选图</a></li>
                             </ul>
                         </li>
                         <li id="tech-machine-learning">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>机器学习
+                                <span class="tech-title-icon"></span>深度学习
                             </div>
                             <div class="sub-tech-title">
                                 <span>PaddlePaddle</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a></li>
+                                <li><a href="http://book.paddlepaddle.org/" target="_blank">深度学习入门</a></li>
                             </ul>
                         </li>
                         <li id="tech-ar">
@@ -153,6 +157,27 @@
                             <ul class="tech-list">
                                 <li><a href="/tech/ar">AR内容平台</a></li>
                             </ul>
+                        </li>
+                        <li id="tech-user-profile">
+                            <div class="tech-title">
+                                <span class="tech-title-icon"></span>用户画像
+                            </div>
+                            <div class="tech-title-minor">
+                                <div class="sub-tech-title">
+                                    <span>用户画像</span>
+                                </div>
+                                <ul class="tech-list">
+                                    <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
+                                </ul>
+                            </div>
+                            <div class="tech-title-minor">
+                                <div class="sub-tech-title">
+                                    <span>推荐云平台</span>
+                                </div>
+                                <ul class="tech-list">
+                                    <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </li>

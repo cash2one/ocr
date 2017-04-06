@@ -14,13 +14,20 @@ handlebars.registerPartial(
     'image',
     fs.readFileSync(path.join(__dirname, 'partials', 'image.hbs')).toString()
 );
+// 生成实例代码块的helper
+handlebars.registerHelper('codeTab', require('./codeTab'));
 
 module.exports = function (data) {
     return Promise.all(
-        data.map(({fileName, tpl, headings, imageData}) => {
-            return new Promise((resolve, reject) => {
-                const compiledTpl = handlebars.compile(tpl);
+        data.map(({fileName, tpl, headings, imageData}) =>
+            new Promise((resolve, reject) => {
+                // 代码地址标识转handlebars helper
+                tpl = tpl.replace(/<p>{%(.*)%}<\/p>/g, (match, codeDirPath) => {
+                    return `{{{codeTab "${codeDirPath.trim()}"}}}`;
+                });
 
+                // 编译handlebars
+                const compiledTpl = handlebars.compile(tpl);
                 const html = compiledTpl({imageData});
 
                 resolve({
@@ -35,7 +42,7 @@ module.exports = function (data) {
                         headings
                     }
                 });
-            });
-        })
+            })
+        )
     );
 };

@@ -29,6 +29,12 @@
     }
 }
 
+.leaf-dot,
+.leaf-text {
+    display: inline-block;
+    vertical-align: top;
+}
+
 .level-1 {
     color: #333;
 
@@ -51,15 +57,18 @@
     color: #999;
 
     &.tree-node {
-        padding-left: 50px;
+        padding-left: 30px;
+        font-size: 0;
+    }
+
+    .leaf-text {
+        // 目录栏总宽240px,左侧留白30px
+        width: 240px - 30px - 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         font-size: 12px;
     }
-}
-
-.leaf-dot,
-.leaf-text {
-    display: inline-block;
-    vertical-align: top;
 }
 
 // 叶子节点前的小点，左右垂直居中

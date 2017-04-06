@@ -73,7 +73,7 @@
                     .icon (url('../../ai_images/home/banner-7.png'), center, center);
                 }
                 &:nth-child(8) {
-                    .icon (url('../../ai_images/home/banner-8.jpg'), center, center);
+                    .icon (url('../../ai_images/home/banner-8.png'), center, center);
                 }
 
                 & > a {
@@ -114,6 +114,12 @@
                         background-color: @white;
                         color: @blue;
                     }
+                }
+                .get-cloud {
+                    position: absolute;
+                    left:50%;
+                    top:50%;
+                    transform: translate(-50%,200%);
                 }
             }
         }
@@ -204,7 +210,6 @@
 
             .service-container {
                 border: 1px solid fadeOut(@black, 95%);
-
                 .service-item {
                     width: 33.33333%;
                     display: inline-block;
@@ -257,9 +262,18 @@
                     &:nth-child(6) .service-icon {
                         .icon (url('../../ai_images/home/service.png'), -170px, -95px);
                     }
+                    &:nth-child(7) .service-icon {
+                        background-image: url('../../ai_images/home/service-video.png');
+                        background-size: 70px 70px;
+                    }
 
                 }
-
+                .service-item-waiting {
+                        height: 171px;
+                        .service-desc {
+                            transform: translateX(-10%) translateY(50%);
+                        }
+                }
                 .service-detail {
                     padding: 30px 15px 15px;
                     width: 100%;
