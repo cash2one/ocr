@@ -19,6 +19,15 @@
     <![endif]-->
     <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.base.css[0] %>">
     <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.cssFile %>">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?fdad4351b2e90e0f489d7fbfc47c8acf";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body class="ai-platform">
 <header class="header-nav">
@@ -230,7 +239,6 @@
 <div id="app"></div>
 <script src="<%= htmlWebpackPlugin.options.jsCommonBundle %>"></script>
 <script src="<%= htmlWebpackPlugin.options.jsFile %>"></script>
-
 <script>
     (function () {
         var bp = document.createElement('script');
