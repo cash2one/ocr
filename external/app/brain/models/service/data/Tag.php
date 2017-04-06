@@ -19,6 +19,7 @@ class Service_Data_Tag
     /**
      * 获取所有有效的tag
      * 默认缓存10分钟
+     * @return
      */
     public function getTags()
     {
