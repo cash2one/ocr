@@ -79,29 +79,29 @@ $AipAntiPorn = new AipAntiPorn(APP_ID, API_KEY, SECRET_KEY);
 
 **服务端返回的错误码**
 
-| 错误码    | 错误信息                    | 描述        |
-| ------ | ----------------------- | --------- |
-| 216015 | module closed           | 模块关闭      |
-| 216100 | invalid param           | 非法参数      |
-| 216101 | not enough param        | 参数数量不够    |
-| 216102 | service not support     | 业务不支持     |
-| 216103 | param too long          | 参数太长      |
-| 216110 | appid not exist         | APP ID不存在 |
-| 216111 | invalid userid          | 非法用户ID    |
-| 216200 | empty image             | 空的图片      |
-| 216201 | image format error      | 图片格式错误    |
-| 216202 | image size error        | 图片大小错误    |
-| 216300 | db error                | DB错误      |
-| 216400 | backend error           | 后端系统错误    |
-| 216401 | internal error          | 内部错误      |
-| 216402 | face not found          | 没有找到人脸    |
-| 216500 | unknown error           | 未知错误      |
-| 282200 | internal error          | 业务逻辑层内部错误 |
-| 282201 | backend error           | 后端服务错误    |
-| 282202 | antiporn detect timeout | 检测超时      |
-| 282203 | image frame size error  | gif单帧大小超限 |
-| 282204 | image frames limit 500  | gif总帧数超限  |
-| 282205 | image fromat must gif   | 图片格式错误    |
+| 错误码    | 错误信息                     | 描述          |
+| ------ | ------------------------ | ----------- |
+| 216015 | module closed            | 模块关闭        |
+| 216100 | invalid param            | 非法参数        |
+| 216101 | not enough param         | 参数数量不够      |
+| 216102 | service not support      | 业务不支持       |
+| 216103 | param too long           | 参数太长        |
+| 216110 | appid not exist          | APP ID不存在   |
+| 216111 | invalid userid           | 非法用户ID      |
+| 216200 | empty image              | 空的图片        |
+| 216201 | image format error       | 图片格式错误      |
+| 216202 | image size error         | 图片大小错误      |
+| 216300 | db error                 | DB错误        |
+| 216400 | backend error            | 后端系统错误      |
+| 216401 | internal error           | 内部错误        |
+| 216402 | face not found           | 没有找到人脸      |
+| 216500 | unknown error            | 未知错误        |
+| 282000 | logic internal error     | 业务逻辑层内部错误   |
+| 282001 | logic backend error      | 业务逻辑层后端服务错误 |
+| 282202 | antiporn detect timeout  | 检测超时        |
+| 282203 | image frame size error   | gif单帧大小超限   |
+| 282204 | image frames limit error | gif总帧数超限    |
+| 282205 | image fromat must gif    | 图片格式错误      |
 
 # 黄反识别
 
@@ -166,12 +166,14 @@ $result = $aipAntiPorn->detectGif(file_get_contents('antiporn.gif'));
 | image | String | 图像数据，支持本地图像文件路径，图像文件二进制数组 | 是    |
 
 **GIF色情图像识别 访问限制**
-| 检查项           | 限制条件   |
-| ------------- | ------ |
-| 图片格式          | gif    |
-| 每帧base64编码后大小 | < 4M   |
-| 帧数            | 不超过500 |
-| 图片base64编码后大小 | < 20M  |
+
+
+| 检查项           | 限制条件  |
+| ------------- | ----- |
+| 图片格式          | gif   |
+| 每帧base64编码后大小 | < 4M  |
+| 帧数            | 不超过50 |
+| 图片base64编码后大小 | < 20M |
 
 **GIF色情图像识别 返回数据参数详情**
 

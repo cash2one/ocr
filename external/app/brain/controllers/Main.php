@@ -31,6 +31,7 @@ class Controller_Main extends Ap_Controller_Abstract {
         'sitemap'     => 'actions/page/SiteMap.php',
         'redirect'     => 'actions/tools/Redirect.php',
         'newdocs' => 'actions/page/NewDocs.php',
+        'file'     => 'actions/tools/File.php',
 
 
     );

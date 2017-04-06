@@ -8,24 +8,32 @@
     <meta name="keywords" content="{%$keyword%}">
     <meta name="description" content="{%$description%}">
     <meta name="baidu-site-verification" content="GOPjfm49Yc" />
-    <script src="https://hm.baidu.com/hm.js?fdad4351b2e90e0f489d7fbfc47c8acf"></script>
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/home.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/home.style.css">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?fdad4351b2e90e0f489d7fbfc47c8acf";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490967304/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1491467582/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -115,32 +123,28 @@
                                 <li><a href="http://api.fanyi.baidu.com/api/trans/product/index" target="_blank">机器翻译平台</a></li>
                             </ul>
                         </li>
-                        <li id="tech-user-profile">
+                        <li id="tech-video">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>用户画像
+                                <span class="tech-title-icon"></span>视频技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>用户画像</span>
+                                <span>智能视频分析</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
-                            </ul>
-                            <div class="sub-tech-title">
-                                <span>推荐云平台</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
+                                <li><a href="/tech/video/vca" target="_blank">视频内容分析VCA</a></li>
+                                <li><a href="/tech/video/vcs" target="_blank">视频封面选图</a></li>
                             </ul>
                         </li>
                         <li id="tech-machine-learning">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>机器学习
+                                <span class="tech-title-icon"></span>深度学习
                             </div>
                             <div class="sub-tech-title">
                                 <span>PaddlePaddle</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a></li>
+                                <li><a href="http://book.paddlepaddle.org/" target="_blank">深度学习入门</a></li>
                             </ul>
                         </li>
                         <li id="tech-ar">
@@ -153,6 +157,27 @@
                             <ul class="tech-list">
                                 <li><a href="/tech/ar">AR内容平台</a></li>
                             </ul>
+                        </li>
+                        <li id="tech-user-profile">
+                            <div class="tech-title">
+                                <span class="tech-title-icon"></span>用户画像
+                            </div>
+                            <div class="tech-title-minor">
+                                <div class="sub-tech-title">
+                                    <span>用户画像</span>
+                                </div>
+                                <ul class="tech-list">
+                                    <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
+                                </ul>
+                            </div>
+                            <div class="tech-title-minor">
+                                <div class="sub-tech-title">
+                                    <span>推荐云平台</span>
+                                </div>
+                                <ul class="tech-list">
+                                    <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </li>
@@ -213,19 +238,29 @@
 <div class="ai-platform page-content">
     <section class="banner">
     <ul class="banner-content">
-        <li class="active video-bg">
-            <h1>OCR SDK上线 iOS/Android</h1>
-            <p>
+        <li class="active">
+            <a href="/tech/video/vca">
+                <h1>智能视频分析</h1>
+                <p>
+                精细化视频分析服务，多项技术业界领先<br>
+                提供视频分类、视频tag、优质精彩视频封面输出
+                </p>
+                <div>
+                    <button type="button" class="get-started">了解详情</button>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://ai.baidu.com/sdk#sdk-category-ocr">
+                <h1>OCR SDK上线 iOS/Android</h1>
+                <p>
                 OCR iOS SDK，Android SDK全新上线，让您的应用快速集成<br>
                 通用文字识别、身份证识别、银行卡卡号识别的能力
-            </p>
-            <div>
-                <a role="button"
-                   class="get-started"
-                   href="http://ai.baidu.com/sdk#sdk-category-ocr">
-                    立即下载
-                </a>
-            </div>
+                </p>
+                <div>
+                    <button type="button" class="get-started">立即下载</button>
+                </div>
+            </a>
         </li>
         <li>
             <a href="/tech/face/search">
@@ -256,16 +291,6 @@
             </a>
         </li>
         <li>
-            <a href="/tech/ar">
-                <h1>百度AR-增强现实技术</h1>
-                <p>人们通过增强现实技术看到更多，更远，更奇妙的世界<br>
-                    颠覆认知，获取新知，检索比真实更真实的世界</p>
-                <div>
-                    <button type="button" class="get-started">了解详情</button>
-                </div>
-            </a>
-        </li>
-        <li>
             <a href="http://duer.baidu.com" target="_blank">
                 <h1>&nbsp;</h1>
                 <p>只要搭载DuerOS系统的智能设备都能够直接与用户开口对话<br>
@@ -284,7 +309,14 @@
                 </div>
             </a>
         </li>
-        <li class="video-bg">
+        <li>
+            <a href="https://cloud.baidu.com/event/ABC-ecology-partner/?t=cp:online-media|ci:20170327_ABCEcology_meeting|cn:zhanzhang">
+                <div>
+                    <button type="button" class="get-started get-cloud">立即报名</button>
+                </div>
+            </a>
+        </li>
+        <!-- <li class="video-bg">
             <h1>让 AI 变革发生</h1>
             <p>更全面、优质、易用的人工智能服务<br>即刻开启AI发现之旅</p>
             <div>
@@ -294,9 +326,9 @@
                     免费试用
                 </a>
             </div>
-            <video src="//ai.bdstatic.com/dist/1490967304/ai_images/home/banner-1.mp4">
+            <video src="//ai.bdstatic.com/dist/1491467582/ai_images/home/banner-1.mp4">
             </video>
-        </li>
+        </li> -->
     </ul>
     <ul class="banner-indicator">
         <li class="active"></li>
@@ -497,8 +529,8 @@
                 <div class="service-detail">
                     <div class="clear-float">
                         <div class="service-desc">
-                            <h3>机器学习</h3>
-                            <p>开放易用的深度学习平台Paddle-Paddle，为企业级应用和学术调研提供支持</p>
+                            <h3>深度学习</h3>
+                            <p>开放易用的深度学习平台PaddlePaddle，为企业级应用和学术调研提供支持</p>
                         </div>
                         <div class="service-icon"></div>
                     </div>
@@ -509,6 +541,12 @@
                                 <a href="http://www.paddlepaddle.org/"
                                    target="_blank">
                                     PaddlePaddle
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://book.paddlepaddle.org"
+                                   target="_blank">
+                                    深度学习入门
                                 </a>
                             </li>
                         </ul>
@@ -533,6 +571,54 @@
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-detail">
+                    <div class="clear-float">
+                        <div class="service-desc">
+                            <h3>智能视频分析</h3>
+                            <p>行业首创基于视频内容理解的智能分析服务，实时输出视频分类、
+                                视频TAG、精彩视频封面等
+                            </p>
+                        </div>
+                        <div class="service-icon"></div>
+                    </div>
+                    <hr>
+                    <div class="service-tech-list clear-float">
+                        <ul class="inline-list">
+                            <li>
+                                <a href="/tech/video/vca"
+                                   target="_blank">视频内容分析VCA</a>
+                            </li>
+                            <li>
+                                <a href="/tech/video/vcs"
+                                   target="_blank">
+                                    视频封面选图
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item service-item-waiting">
+                <div class="service-detail">
+                    <div class="clear-float">
+                        <div class="service-desc">
+                            <h2>敬请期待...</h2>
+                        </div>
+                        <div class="service-icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item service-item-waiting">
+                <div class="service-detail">
+                    <div class="clear-float">
+                        <div class="service-desc">
+                            <h2>敬请期待...</h2>
+                        </div>
+                        <div class="service-icon"></div>
                     </div>
                 </div>
             </div>
@@ -634,7 +720,7 @@
                     <img alt="百度语音基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1490967304/ai_images/home/video-1.png">
+                         src="//ai.bdstatic.com/dist/1491467582/ai_images/home/video-1.png">
                 </a>
                 <h5>百度语音基础介绍及应用场景</h5>
             </li>
@@ -644,7 +730,7 @@
                     <img alt="百度OCR基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1490967304/ai_images/home/video-2.png">
+                         src="//ai.bdstatic.com/dist/1491467582/ai_images/home/video-2.png">
                 </a>
                 <h5>百度OCR基础介绍及应用场景</h5>
             </li>
@@ -654,7 +740,7 @@
                     <img alt="百度人脸技术基础介绍及引用场景"
                         width="500"
                         height="280"
-                        src="//ai.bdstatic.com/dist/1490967304/ai_images/home/video-3.png">
+                        src="//ai.bdstatic.com/dist/1491467582/ai_images/home/video-3.png">
                 </a>
                 <h5>百度人脸技术基础介绍及引用场景</h5>
             </li>
@@ -665,7 +751,7 @@
                     <img alt="百度翻译产品介绍"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1490967304/ai_images/home/video-4.png">
+                         src="//ai.bdstatic.com/dist/1491467582/ai_images/home/video-4.png">
                 </a>
                 <h5>百度翻译产品介绍</h5>
             </li>
@@ -806,8 +892,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490967304/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490967304/js/home.js"></script>
+<script src="//ai.bdstatic.com/dist/1491467582/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1491467582/js/home.js"></script>
 
 <script>
     (function () {

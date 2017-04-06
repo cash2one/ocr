@@ -12,6 +12,7 @@ const isUrl = require('is-url');
 const Renderer = require('marked').Renderer;
 const hljs = require('highlight.js');
 
+// 代码块
 const codeTpl = handlebars.compile(
     fs.readFileSync(path.join(__dirname, 'partials', 'code.hbs')).toString()
 );
@@ -110,9 +111,7 @@ module.exports = class AiMDRenderer extends Renderer {
 
         // 行内代码
         this.codespan = function (code) {
-            return codeTpl({
-                code: hljs.highlightAuto(code).value
-            });
+            return `<code>${hljs.highlightAuto(code).value}</code>`;
         };
 
         this.link = function (href, title, text) {

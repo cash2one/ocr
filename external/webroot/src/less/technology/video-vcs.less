@@ -1,0 +1,100 @@
+@import '../common/helper.less';
+@import '../common/global.less';
+@import '../common/modal.less';
+@import '../common/tech-feature.less';
+
+@banner: url('../../../ai_images/technology/video-cover/banner.png');
+@intro-bg: url('../../../ai_images/technology/video-cover/intro-bg.png');
+@scan-result-icons: url('../../../ai_images/technology/antiporn/scan-result-iconss.png');
+
+@import '../common/tech-page.less';
+
+.tech-section {
+    &.tech-intro {
+        .tech-intro-detail {
+            display: inline-block;
+            padding: 30px 35px 0;
+            font-size: 0;
+
+            .scan-box {
+                display: inline-block;
+                overflow: hidden;
+                position: relative;
+                width: 370px;
+                height: 300px;
+                color: rgb(255, 255, 255);
+                &-image {
+                    width: 184px;
+                    height: 132px;
+                    margin-left: 92px; 
+                  background-size: 100% 100%;
+                }
+                &:nth-child(1) .scan-box-image {
+                    background-image: url('../../../ai_images/technology/video-cover/intro-case-1.png');
+                }
+                &:nth-child(2) .scan-box-image {
+                    background-image: url('../../../ai_images/technology/video-cover/intro-case-2.png');
+                }
+                &:nth-child(3) .scan-box-image {
+                    background-image: url('../../../ai_images/technology/video-cover/intro-case-3.png');
+                }
+                &-title {
+                    font-size: 16px;
+                    text-align: center;
+                    padding: 30px 0 20px;
+                }
+                &-connent {
+                    width: 310px;
+                    font-size: 13px;
+                    line-height: 30px;
+                    margin-left: 40px;
+                }
+            }
+
+        }
+    }
+    .tech-feature {
+        .tech-feature(@page-name: video-cover, @icon-num: 3)
+    }
+    &.tech-scene {
+        .scene-item {
+            display: inline-block;
+            width: 320px;
+            margin-left: 160px;
+            .scene-desc {
+                width: 260px;
+            }
+        }
+        .scene-item:nth-child(1) .scene-icon {
+            background-image: url('../../../ai_images/technology/video-cover/sprite/scene-icon-1.png');
+            background-size: 100% 100%;
+        }
+        .scene-item:nth-child(2) .scene-icon {
+            background-image: url('../../../ai_images/technology/video-cover/sprite/scene-icon-2.png');
+            background-size: 100% 100%;
+        }
+    }
+    &.tech-product {
+        border-top: 1px solid rgba(0, 0, 0, .05);
+        .container {
+            width: 690px;
+        }
+        .tech-product-title {
+            text-align: center;
+        }
+        .title-main {
+            font-size: 30px;
+            padding-bottom: 30px;
+        }
+        .title-minor {
+            font-size: 18px;
+            padding-bottom: 50px;
+        }
+        .tech-product-connent {
+            height: 202px;
+            background-image: url('../../../ai_images/technology/video-cover/product.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+}

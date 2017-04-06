@@ -8,8 +8,6 @@ const path = require('path');
 
 // 第三方
 const fs = require('fs-extra');
-const cheerio = require('cheerio');
-const handlebars = require('handlebars');
 
 // lib
 const parseMdConfig = require('./lib/parseCategory');

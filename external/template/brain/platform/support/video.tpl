@@ -8,24 +8,32 @@
     <meta name="keywords" content="{%$keyword%}">
     <meta name="description" content="{%$description%}">
     <meta name="baidu-site-verification" content="GOPjfm49Yc" />
-    <script src="https://hm.baidu.com/hm.js?fdad4351b2e90e0f489d7fbfc47c8acf"></script>
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1490967304/css/support/video.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/support/video.style.css">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?fdad4351b2e90e0f489d7fbfc47c8acf";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body class="ai-platform">
 <header class="header-nav">
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1490967304/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1491467582/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -115,32 +123,28 @@
                                 <li><a href="http://api.fanyi.baidu.com/api/trans/product/index" target="_blank">机器翻译平台</a></li>
                             </ul>
                         </li>
-                        <li id="tech-user-profile">
+                        <li id="tech-video">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>用户画像
+                                <span class="tech-title-icon"></span>视频技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>用户画像</span>
+                                <span>智能视频分析</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
-                            </ul>
-                            <div class="sub-tech-title">
-                                <span>推荐云平台</span>
-                            </div>
-                            <ul class="tech-list">
-                                <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
+                                <li><a href="/tech/video/vca" target="_blank">视频内容分析VCA</a></li>
+                                <li><a href="/tech/video/vcs" target="_blank">视频封面选图</a></li>
                             </ul>
                         </li>
                         <li id="tech-machine-learning">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>机器学习
+                                <span class="tech-title-icon"></span>深度学习
                             </div>
                             <div class="sub-tech-title">
                                 <span>PaddlePaddle</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a></li>
+                                <li><a href="http://book.paddlepaddle.org/" target="_blank">深度学习入门</a></li>
                             </ul>
                         </li>
                         <li id="tech-ar">
@@ -153,6 +157,27 @@
                             <ul class="tech-list">
                                 <li><a href="/tech/ar">AR内容平台</a></li>
                             </ul>
+                        </li>
+                        <li id="tech-user-profile">
+                            <div class="tech-title">
+                                <span class="tech-title-icon"></span>用户画像
+                            </div>
+                            <div class="tech-title-minor">
+                                <div class="sub-tech-title">
+                                    <span>用户画像</span>
+                                </div>
+                                <ul class="tech-list">
+                                    <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
+                                </ul>
+                            </div>
+                            <div class="tech-title-minor">
+                                <div class="sub-tech-title">
+                                    <span>推荐云平台</span>
+                                </div>
+                                <ul class="tech-list">
+                                    <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </li>
@@ -217,25 +242,25 @@
 </div>
 <div class="video-container container">
     <div class="video-category">
-        <h4 class="video-category-title">百度语音</h4>
+        <h4 class="video-category-title">人脸识别</h4>
         <ul class="video-list clear-float">
             <li>
-                <a href="http://www.chuanke.com/v7867982-208144-1278714.html" target="_blank">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/support/video/voice-info.png">
+                <a href="https://www.chuanke.com/v7867982-214444-1352828.html" target="_blank">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/support/video/face-detect.png">
                 </a>
-                <h5>百度语音基础介绍及应用场景</h5>
+                <h5>百度人脸查找技术介绍</h5>
             </li>
             <li>
-                <a href="http://www.chuanke.com/v7867982-209753-1294636.html" target="_blank">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/support/video/voice-spot.png">
+                <a href="http://www.chuanke.com/v7867982-208540-1278742.html" target="_blank">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/support/video/face-info.png">
                 </a>
-                <h5>语音识别API介绍及接入指导</h5>
+                <h5>百度人脸识别基础介绍及场景应用</h5>
             </li>
             <li>
-                <a href="http://www.chuanke.com/v7867982-209755-1294650.html" target="_blank">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/support/video/voice-composite.png">
+                <a href="http://www.chuanke.com/v7867982-209744-1294796.html" target="_blank">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/support/video/face-api.png">
                 </a>
-                <h5>语音合成API介绍及接入指导</h5>
+                <h5>百度人脸识别API介绍及接入指导</h5>
             </li>
         </ul>
     </div>
@@ -244,38 +269,38 @@
         <ul class="video-list clear-float">
             <li>
                 <a href="http://www.chuanke.com/v7867982-208539-1278740.html" target="_blank">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/support/video/ocr-info.png">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/support/video/ocr-info.png">
                 </a>
                 <h5>百度OCR基础介绍及场景应用</h5>
             </li>
             <li>
                 <a href="http://www.chuanke.com/v7867982-208150-1278728.html" target="_blank">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/support/video/ocr-api.png">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/support/video/ocr-api.png">
                 </a>
                 <h5>百度OCR的API使用</h5>
             </li>
         </ul>
     </div>
     <div class="video-category">
-        <h4 class="video-category-title">人脸识别</h4>
+        <h4 class="video-category-title">百度语音</h4>
         <ul class="video-list clear-float">
             <li>
-                <a href="http://www.chuanke.com/v7867982-208540-1278742.html" target="_blank">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/support/video/face-info.png">
+                <a href="http://www.chuanke.com/v7867982-208144-1278714.html" target="_blank">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/support/video/voice-info.png">
                 </a>
-                <h5>百度人脸识别基础介绍及场景应用</h5>
+                <h5>百度语音基础介绍及应用场景</h5>
             </li>
             <li>
-                <a href="http://www.chuanke.com/v7867982-209744-1294796.html" target="_blank">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/support/video/face-api.png">
+                <a href="http://www.chuanke.com/v7867982-209753-1294636.html" target="_blank">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/support/video/voice-spot.png">
                 </a>
-                <h5>百度人脸识别API介绍及接入指导</h5>
+                <h5>语音识别API介绍及接入指导</h5>
             </li>
             <li>
-                <a href="https://www.chuanke.com/v7867982-214444-1352828.html" target="_blank">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/support/video/face-detect.png">
+                <a href="http://www.chuanke.com/v7867982-209755-1294650.html" target="_blank">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/support/video/voice-composite.png">
                 </a>
-                <h5>百度人脸查找技术介绍</h5>
+                <h5>语音合成API介绍及接入指导</h5>
             </li>
         </ul>
     </div>
@@ -284,25 +309,25 @@
         <ul class="video-list clear-float">
             <li>
                 <a href="http://www.chuanke.com/v7867982-208171-1278730.html" target="_blank">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/support/video/nlp-feature.png">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/support/video/nlp-feature.png">
                 </a>
                 <h5>机器翻译功能和场景介绍</h5>
             </li>
             <li>
                 <a href="http://www.chuanke.com/v7867982-208173-1278732.html" target="_blank">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/support/video/nlp-pm.png">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/support/video/nlp-pm.png">
                 </a>
                 <h5>机器翻译产品介绍</h5>
             </li>
             <li>
                 <a href="http://www.chuanke.com/v7867982-208163-1278729.html" target="_blank">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/support/video/nlp-skill.png">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/support/video/nlp-skill.png">
                 </a>
                 <h5>机器翻译技术介绍</h5>
             </li>
             <li>
                 <a href="http://www.chuanke.com/v7867982-208172-1278731.html" target="_blank">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/support/video/nlp-render.png">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/support/video/nlp-render.png">
                 </a>
                 <h5>机器翻译API使用教程</h5>
             </li>
@@ -310,13 +335,13 @@
         <ul class="video-list clear-float">
             <li>
                 <a href="http://www.chuanke.com/v7867982-209750-1294627.html" target="_blank">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/support/video/nlp-info.png">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/support/video/nlp-info.png">
                 </a>
                 <h5>NLP基础介绍及场景应用</h5>
             </li>
             <li>
                 <a href="http://www.chuanke.com/v7867982-209752-1294632.html" target="_blank">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/support/video/nlp-api.png">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/support/video/nlp-api.png">
                 </a>
                 <h5>NLP API介绍及接入指导</h5>
             </li>
@@ -327,13 +352,13 @@
         <ul class="video-list clear-float">
             <li>
                 <a href="http://www.chuanke.com/v7867982-208541-1281894.html" target="_blank">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/support/video/yellow-info.png">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/support/video/yellow-info.png">
                 </a>
                 <h5>黄反识别基础介绍及场景使用</h5>
             </li>
             <li>
                 <a href="http://www.chuanke.com/v7867982-208174-1278733.html" target="_blank">
-                    <img src="//ai.bdstatic.com/dist/1490967304/ai_images/support/video/yellow-api.png">
+                    <img src="//ai.bdstatic.com/dist/1491467582/ai_images/support/video/yellow-api.png">
                 </a>
                 <h5>黄反识别API使用教程</h5>
             </li>
@@ -439,8 +464,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1490967304/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1490967304/js/support/video.js"></script>
+<script src="//ai.bdstatic.com/dist/1491467582/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1491467582/js/support/video.js"></script>
 
 <script>
     (function () {
