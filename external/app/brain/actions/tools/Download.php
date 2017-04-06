@@ -28,8 +28,7 @@ class Action_Download extends Ap_Action_Abstract
         } else{
             var_dump('No passId');
         }
-
-        header("P3P: CP=CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR");
+        
         if(!empty($_COOKIE['__cas__id__'])){
             $ucid = $_COOKIE['__cas__id__'];
             var_dump($ucid);
