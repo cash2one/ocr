@@ -129,13 +129,14 @@
                         </li>
                         <li id="tech-machine-learning">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>机器学习
+                                <span class="tech-title-icon"></span>深度学习
                             </div>
                             <div class="sub-tech-title">
                                 <span>PaddlePaddle</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a></li>
+                                <li><a href="http://book.paddlepaddle.org/" target="_blank">深度学习入门</a></li>
                             </ul>
                         </li>
                         <li id="tech-ar">
@@ -234,8 +235,15 @@
             输出作为视频的封面，可应用于海量新老视频自动的封面选图</p>
         <div>
             <a role="button"
-               class="btn-primary media ai-redirect"
-               href="/product/apply/vca.html?from=ai">商务合作</a>
+               class="btn-other media"
+               href="
+               {%if $src eq Null%}
+               /product/apply/vca.html?from=ai
+               {%else%}
+               /product/apply/vca.html
+               {%/if%}">
+                商务合作
+            </a>
         </div>
     </div>
 </section>
@@ -357,9 +365,15 @@
             一起携手探索更多AI带给我们的更多可能性！</p>
         <div>
             <a role="button"
-               target="_blank"
-               class="btn-primary large ai-redirect"
-               href="/product/apply/vca.html?from=ai">商务合作</a>
+               class="btn-other media"
+               href="
+               {%if $src eq Null%}
+               /product/apply/vca.html?from=ai
+               {%else%}
+               /product/apply/vca.html
+               {%/if%}">
+                商务合作
+            </a>
         </div>
     </div>
 </section>

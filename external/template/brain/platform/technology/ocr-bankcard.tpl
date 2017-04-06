@@ -129,13 +129,14 @@
                         </li>
                         <li id="tech-machine-learning">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>机器学习
+                                <span class="tech-title-icon"></span>深度学习
                             </div>
                             <div class="sub-tech-title">
                                 <span>PaddlePaddle</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a></li>
+                                <li><a href="http://book.paddlepaddle.org/" target="_blank">深度学习入门</a></li>
                             </ul>
                         </li>
                         <li id="tech-ar">

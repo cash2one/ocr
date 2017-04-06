@@ -6,8 +6,15 @@
             从而提高搜索准确度和用户推荐视频的曝光量</p>
         <div>
             <a role="button"
-               class="btn-primary media ai-redirect"
-               href="/product/apply/vca.html?from=ai">商务合作</a>
+               class="btn-other media"
+               href="
+               {%if $src eq Null%}
+               /product/apply/vca.html?from=ai
+               {%else%}
+               /product/apply/vca.html
+               {%/if%}">
+                商务合作
+            </a>
         </div>
     </div>
 </section>
@@ -134,9 +141,15 @@
             一起携手探索更多AI带给我们的更多可能性！</p>
         <div>
             <a role="button"
-               target="_blank"
-               class="btn-primary large ai-redirect"
-               href="/product/apply/vca.html?from=ai">商务合作</a>
+               class="btn-other media"
+               href="
+               {%if $src eq Null%}
+               /product/apply/vca.html?from=ai
+               {%else%}
+               /product/apply/vca.html
+               {%/if%}">
+                商务合作
+            </a>
         </div>
     </div>
 </section>

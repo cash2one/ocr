@@ -129,13 +129,14 @@
                         </li>
                         <li id="tech-machine-learning">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>机器学习
+                                <span class="tech-title-icon"></span>深度学习
                             </div>
                             <div class="sub-tech-title">
                                 <span>PaddlePaddle</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a></li>
+                                <li><a href="http://book.paddlepaddle.org/" target="_blank">深度学习入门</a></li>
                             </ul>
                         </li>
                         <li id="tech-ar">
@@ -520,8 +521,8 @@
                 <div class="service-detail">
                     <div class="clear-float">
                         <div class="service-desc">
-                            <h3>机器学习</h3>
-                            <p>开放易用的深度学习平台Paddle-Paddle，为企业级应用和学术调研提供支持</p>
+                            <h3>深度学习</h3>
+                            <p>开放易用的深度学习平台PaddlePaddle，为企业级应用和学术调研提供支持</p>
                         </div>
                         <div class="service-icon"></div>
                     </div>
@@ -532,6 +533,12 @@
                                 <a href="http://www.paddlepaddle.org/"
                                    target="_blank">
                                     PaddlePaddle
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://book.paddlepaddle.org"
+                                   target="_blank">
+                                    深度学习入门
                                 </a>
                             </li>
                         </ul>
