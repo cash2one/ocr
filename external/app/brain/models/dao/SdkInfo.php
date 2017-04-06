@@ -46,9 +46,6 @@ class Dao_SdkInfo extends Dao_Base {
      */
     public function insertSdkInfo($uc_id, $pass_id, $service_type, $language) {
         
-        $userInfo = $this->getUserInfo($uid);
-
-        
         $arrRow = array(
             'uc_id' => $uc_id,
             'pass_id' => $pass_id,

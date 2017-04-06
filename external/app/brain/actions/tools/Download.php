@@ -11,9 +11,6 @@
  * @date 2017/04/06 14:28:45
  *
  **/
-include("BaiduBce.phar");
-use BaiduBce\Util\Time;
-use BaiduBce\Services\Bos\BosClient;
 
 class Action_Download extends Ap_Action_Abstract
 {
