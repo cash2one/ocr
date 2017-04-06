@@ -72,6 +72,7 @@
         // TODO 30px是为滚动条预留的，未来更改布局，删除这块
         max-width: 598px - 125px - 35px;
         padding-right: 10px;
+        color: #666;
 
         &-in-range {
             background-color: #ebebeb;

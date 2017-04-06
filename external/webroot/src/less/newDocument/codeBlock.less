@@ -1,3 +1,5 @@
+@block-height: 400px;
+
 .code-block {
     margin: 15px 0;
 
@@ -5,8 +7,14 @@
         display: none;
     }
 
-    pre{
+    pre {
         margin: 0;
+    }
+
+    code {
+        box-sizing: border-box;
+        // 因为外层是border-box,又有2px的border，所以实际高度是(400 - 2)px
+        min-height: @block-height - 2px;
     }
 }
 
@@ -55,7 +63,7 @@
 }
 
 [data-lan] {
-    height: 400px;
+    height: @block-height;
     box-sizing: border-box;
     overflow: auto;
     border: 1px solid #ccc;
