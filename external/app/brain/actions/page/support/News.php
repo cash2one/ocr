@@ -59,7 +59,14 @@ class Action_News extends Ap_Action_Abstract {
                     $tagList[$index] = $dbTag->getTag($newsTag[$index]);
                 }
             }
-            echo "新闻页--Tag信息：" . $tagList;
+            echo "新闻页--Tag信息：" . count($tagList);
+            echo "<br>";
+            for($i=0;$i<count($tagList);$i++){
+                foreach($tagList[$i] as $x=>$x_value){
+                    echo "Key=" . $x . ", Value=" . $x_value;
+                    echo "<br>";
+                }
+            }
             $arrRet = array(
                 'errno' => 0,
                 'msg' => 'success',
@@ -72,7 +79,6 @@ class Action_News extends Ap_Action_Abstract {
                 $arrRet['data']['tagList '] = $tagList;
                 $dbNews->addPv($strId);
             }
-            echo "新闻页--信息汇总：" . $arrRet;
             //Brain_Output::jsonOutput($arrRet);
             //Brain_Output::htmlOutput($arrRet, 'brain/page/news/detail.tpl');
             $arrRet['page'] = substr(strtolower(__CLASS__), 7);
@@ -151,7 +157,7 @@ class Action_News extends Ap_Action_Abstract {
             //请求热门标签:tag
             $tag_key = 'news_tag_' . $tag;
             $tag_value = Brain_Memcache::get($tag_key);
-            if(empty($tag_value)) {
+            if(!empty($tag_value)) {
                 echo "热门标签，命中缓存...";
                 $tagList = $tag_value;
                 echo $tag_key . ' '. $tagList;
@@ -164,7 +170,7 @@ class Action_News extends Ap_Action_Abstract {
             //请求新闻列表:tag、offset
             $newsList_key = 'news_tag_'.$tag.'_offset_'.$offset;
             $newsList_value = Brain_Memcache::get($newsList_key);
-            if(empty($newsList_value)){
+            if(!empty($newsList_value)){
                 echo "新闻列表，命中缓存...";
                 $newsList = $newsList_value;
                 echo $newsList_key . ' '. $newsList;
@@ -193,7 +199,7 @@ class Action_News extends Ap_Action_Abstract {
             $pagination = array();
             $tag_pagination = 'news_tag_'.$tag.'_pagination';
             $tag_pagination_total = Brain_Memcache::get($tag_pagination);
-            if(empty($tag_pagination_total)){
+            if(!empty($tag_pagination_total)){
                 echo "分页信息，命中缓存...";
                 $pagination['total'] = $tag_pagination_total;
                 echo $tag_pagination . ' '. $tag_pagination_total;
