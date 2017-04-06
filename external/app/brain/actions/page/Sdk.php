@@ -17,10 +17,6 @@ class Action_Sdk extends Ap_Action_Abstract {
     public function execute() {
 
         $arrPageInfo['page'] = substr(strtolower(__CLASS__), 7);
-
-        $dbSdkInfo = new Dao_SdkInfo();
-    	$dbSdkInfo->insertSdkInfo('123', '456', 'nlp', 'php');
-
         Brain_Output::htmlOutput(
             $arrPageInfo, 
             'brain/platform/sdk/sdk.tpl'
