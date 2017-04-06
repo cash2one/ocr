@@ -75,10 +75,8 @@
             top: 50%;
             left: 50%;
             transform: translateX(-50%) translateY(-50%);
-            background-image: url('../../../../../ai_images/technology/video-vcs/video-arrow.png');
-            background-position: 5px 0;
+            background: url('../../../../../ai_images/technology/video-cover/video-arrow.png') no-repeat 5px 0;
             background-size: 50px 30px;
-            background-repeat: no-repeat;
         }
 
         .demo-card-dialog:hover::after {

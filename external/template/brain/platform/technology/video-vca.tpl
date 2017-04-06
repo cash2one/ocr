@@ -240,7 +240,7 @@
                data-operation="cooperation"
                {%else%}
                class="btn-primary media"
-               href="#"
+               href="https://cloud.baidu.com/product/apply/vca.html?from=ai"
                {%/if%}>
                 商务合作
             </a>
@@ -368,13 +368,14 @@
 {%if $userInfo eq Null%}
 <section class="tech-section get-started">
     <div class="container">
-        <h2>立即获取免费API Key</h2>
-        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
+        <h2>快速提交您的需求</h2>
+        <p>欢迎各短视频平台、广电行业以及各行业优秀的技术合作伙伴与我们联系<br>
+            一起携手探索更多AI带给我们的更多可能性！</p>
         <div>
             <a role="button"
                target="_blank"
                class="btn-primary large ai-redirect"
-               href="https://cloud.baidu.com/product/vod.html">商务合作</a>
+               href="https://cloud.baidu.com/product/apply/vca.html?from=ai">商务合作</a>
         </div>
     </div>
 </section>
