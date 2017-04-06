@@ -57,6 +57,7 @@ app.get('/docs', (req, res, next) => {
 app.use('/tech/nlp', require('./router/nlp'));
 app.use('/tech/video', require('./router/video'));
 app.use('/tech/face', require('./router/face'));
+app.use('/tech/ocr', require('./router/ocr'));
 
 app.listen(port, () => {
     console.log('访问本地' + port + ',即可即时查看效果，enjoy it');
