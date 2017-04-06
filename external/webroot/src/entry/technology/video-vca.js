@@ -5,6 +5,7 @@
 
 import $ from 'jquery';
 import Vue from 'vue';
+import 'babel-polyfill';
 
 import videoVca from './videoDemo/video-vca.vue';
 

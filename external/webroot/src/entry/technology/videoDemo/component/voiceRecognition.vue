@@ -1,8 +1,9 @@
 <template>
-    <div>
-        <div v-for="datum in data"
+    <div class="video-subtitle-container" ref="subtitleContainer">
+        <div v-for="(datum, index) in data"
              class="voice-item"
-             :class="getSubTitleClass(datum.startTimestampInSecond, datum.endTimestampInSecond)">
+             :class="getSubTitleClass(datum.startTimestampInSecond, datum.endTimestampInSecond, index)"
+             ref="subtitle">
             <div class="voice-time-range">
                 {{datum.startTimestampInSecond|formatTime}} - {{datum.endTimestampInSecond|formatTime}}
             </div>
@@ -23,11 +24,26 @@
             // 术语集合，字幕中的术语需要高亮
             terms: Array
         },
+        mounted() {
+            this.$on('subtitleinrange', function (index) {
+                if (!this.$refs.subtitle) {
+                    return;
+                }
+
+                this.$refs.subtitleContainer.scrollTop = this.$refs.subtitle[index].offsetTop;
+            });
+        },
         methods: {
-            getSubTitleClass(startTimestamp, endTimestamp) {
+            getSubTitleClass(startTimestamp, endTimestamp, index) {
+                const inRange = startTimestamp <= this.second && this.second < endTimestamp;
+
+                if (inRange) {
+                    this.$emit('subtitleinrange', index);
+                }
+
                 return {
                     // 当前的字幕高亮显示
-                    'voice-subtitle-in-range': startTimestamp <= this.second && this.second < endTimestamp
+                    'voice-subtitle-in-range': inRange
                 };
             },
             // 在字幕中加粗术语
@@ -46,6 +62,11 @@
 </script>
 
 <style lang="less">
+    .video-subtitle-container {
+        height: 100%;
+        overflow: auto;
+    }
+
     .voice-item {
         font-size: 0;
         padding: 8px 0;
@@ -60,6 +81,7 @@
         display: inline-block;
         vertical-align: top;
         font-size: 12px;
+        line-height: 1.5em;
     }
 
     .voice-time-range {
@@ -75,7 +97,7 @@
         color: #666;
 
         &-in-range {
-            background-color: #ebebeb;
+            background-color: #e8f0f9;
         }
     }
 </style>

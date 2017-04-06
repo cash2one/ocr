@@ -220,7 +220,7 @@
     .ai-video-tab {
         position: relative;
         box-sizing: border-box;
-        height: 250px;
+        height: 280px;
         border: 1px solid #f9f9f9;
         font-size: 12px;
     }

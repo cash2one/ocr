@@ -18,6 +18,7 @@
 <style>
     .classification-container {
         padding: 8px 15px;
+        color: #666;
     }
 
     .classification-item {

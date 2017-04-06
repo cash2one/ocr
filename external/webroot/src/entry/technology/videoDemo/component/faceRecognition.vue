@@ -26,6 +26,7 @@
 <style lang="less">
     .face-item {
         font-size: 0;
+        color: #666;
     }
 
     .face-name,

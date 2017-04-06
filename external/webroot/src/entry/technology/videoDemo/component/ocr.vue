@@ -67,6 +67,11 @@
         border-bottom: 1px solid #f6f6f6;
 
         &-in-range {
+            background-color: #e8f0f9;
+        }
+
+        // 隔行变色效果
+        &:nth-child(2n) {
             background-color: #ededed;
         }
     }
@@ -76,6 +81,7 @@
         display: inline-block;
         vertical-align: top;
         font-size: 12px;
+        line-height: 1.5em;
     }
 
     .ocr-time {
@@ -86,6 +92,7 @@
     .ocr-result-text {
         // TODO 30px是为滚动条预留的，未来更改布局，删除这块
         max-width: 598px - 75px - 35px;
+        color: #666;
         word-break: break-all;
         white-space: nowrap;
     }
