@@ -36,6 +36,20 @@ class Dao_News extends Dao_Base
         'link',
     );
 
+    // 新闻速递字段
+    private $lastestNewsFields = array(
+        'id',
+        'title',
+    );
+
+    // 首页新闻块字段
+    private $homeNewsListFields = array(
+        'id',
+        'title',
+        'abs',
+        'img',
+    );
+
     /**
      * @brief 连接db，表名初始化
      *
@@ -48,6 +62,50 @@ class Dao_News extends Dao_Base
         parent::__construct();
         $this->strTable = 't_news';
     }
+
+    /**
+     * getLastestNews
+     *
+     * @access public
+     */
+    public function getLastestNews()
+    {
+        $arrFields = $this->lastestNewsFields;
+        $arrConds = array(
+            "place=" => 0
+        );
+        $arrOptions = null;
+        $arrAppends = array(
+            'order by id desc',
+            'limit 1',
+        );
+        $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
+        $arrDBRet = $this->query($strSQL);
+        return $arrDBRet;
+    }
+
+    /**
+     * getHomeNewsList
+     *
+     * @access public
+     */
+    public function getHomeNewsList()
+    {
+        $arrFields = $this->homeNewsListFields;
+        $arrConds = array(
+            "place=" => 0,
+            "index" => 1,    //文章是否可置于首页标签
+        );
+        $arrOptions = null;
+        $arrAppends = array(
+            'order by id desc',
+            'limit 4',
+        );
+        $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
+        $arrDBRet = $this->query($strSQL);
+        return $arrDBRet;
+    }
+
 
     /**
      * getNewsList
