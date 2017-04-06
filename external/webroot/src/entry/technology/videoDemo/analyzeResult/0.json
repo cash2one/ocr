@@ -96,7 +96,55 @@
                 "statement": "小度胜出"
             }
         ],
-        "faceRecognitionResult": [],
+        "faceRecognitionResult": [
+            {
+                "face": "蒋昌建",
+                "timestampInSecond": [
+                    20,
+                    106,
+                    108,
+                    130,
+                    142
+                ]
+            },
+            {
+                "face": "刘国梁",
+                "timestampInSecond": [
+                    22
+                ]
+            },
+            {
+                "face": "王峰",
+                "timestampInSecond": [
+                    32,
+                    34,
+                    46,
+                    52,
+                    62,
+                    82,
+                    88,
+                    90,
+                    102,
+                    132,
+                    140
+                ]
+            },
+            {
+                "face": "魏坤琳",
+                "timestampInSecond": [
+                    86,
+                    96,
+                    98,
+                    114
+                ]
+            },
+            {
+                "face": "吴恩达",
+                "timestampInSecond": [
+                    156
+                ]
+            }
+        ],
         "classificationResult": [
             {
                 "classification": "娱乐_综艺"
@@ -104,9 +152,29 @@
         ],
         "libs": [
             {
-                "frequency": 3,
-                "term": "六个核桃",
-                "source": "OCR"
+                "frequency": 1,
+                "term": "吴恩达",
+                "source": "FACE"
+            },
+            {
+                "frequency": 1,
+                "term": "蒋昌建",
+                "source": "FACE"
+            },
+            {
+                "frequency": 1,
+                "term": "王峰",
+                "source": "FACE"
+            },
+            {
+                "frequency": 1,
+                "term": "刘国梁",
+                "source": "FACE"
+            },
+            {
+                "frequency": 1,
+                "term": "魏坤琳",
+                "source": "FACE"
             },
             {
                 "frequency": 3,
