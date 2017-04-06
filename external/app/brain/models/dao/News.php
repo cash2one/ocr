@@ -96,11 +96,11 @@ class Dao_News extends Dao_Base
         $arrFields = $this->homeNewsListFields;
         $arrConds = array(
             "place=" => 0,
-            "index" => 1,    //文章是否可置于首页标签
+            "index=" => 1,    //文章是否可置于首页标签
         );
         $arrOptions = null;
         $arrAppends = array(
-            'order by id desc',
+            'order by index_order',
             'limit 4',
         );
         $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
