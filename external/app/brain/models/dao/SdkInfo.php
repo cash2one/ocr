@@ -35,7 +35,7 @@ class Dao_SdkInfo extends Dao_Base {
     }
 
     /**
-     * insertUser 
+     * insertSdkInfo
      * 
      * @param mixed $uc_id 
      * @param mixed $pass_id 
@@ -44,7 +44,7 @@ class Dao_SdkInfo extends Dao_Base {
      * @access public
      * @return void
      */
-    public function insertUser($uc_id, $pass_id, $service_type, $language) {
+    public function insertSdkInfo($uc_id, $pass_id, $service_type, $language) {
         
         $userInfo = $this->getUserInfo($uid);
 
