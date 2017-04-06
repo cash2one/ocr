@@ -19,7 +19,7 @@ class Action_Download extends Ap_Action_Abstract
     {
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
-        var_dump('Here!!\n');
+        var_dump('Here!!');
         var_dump($arrInput);
 
         $passId = '123';
@@ -45,7 +45,16 @@ class Action_Download extends Ap_Action_Abstract
         $dbSdkInfo->insertSdkInfo($passId, $ucid, 1, 0);
 
         $filePath = Brain_Util::getParamAsString($arrInput, 'filePath');
+        $fileDao = new Dao_MFile();
+        $files = $fileDao->getFile($filePath);
+        $file = $files[0];
 
+        header("Content-type:  application/octet-stream ");
+        header("Accept-Ranges:  bytes ");
+        header("Accept-Length: " . $file['size']);
+        header("Content-Disposition:  attachment;  filename=" . $file['name']);
+        var_dump(file_get_contents($filename));
+        
         return;
     }
 }
