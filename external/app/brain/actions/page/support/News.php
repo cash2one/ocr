@@ -53,13 +53,8 @@ class Action_News extends Ap_Action_Abstract {
             if (is_array($newsTag) && count($newsTag) > 0) {
                 for($i=0;$i<count($newsTag);$i++){
                     foreach($newsTag[$i] as $x=>$x_value){
-                        echo "Key=" . $x . ", Value=" . $x_value;
                         $tagElement = $dbTag->getTag(''.$x_value);
                         for($j=0;$j<count($tagElement);$j++){
-                            foreach($tagElement[$j] as $x=>$x_value){
-                                echo "Key=" . $x . ", Value=" . $x_value;
-                                echo "<br>";
-                            }
                             array_push($tagList, $tagElement[$j]);
                         }
                     }

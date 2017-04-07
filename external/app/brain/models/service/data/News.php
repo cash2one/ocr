@@ -42,7 +42,7 @@ class Service_Data_News{
         $newsList_key = 'ai_platform_news_tag_'.$tag.'_offset_'.$offset;
         $newsList_value = Brain_Memcache::get($newsList_key);
         if(!empty($newsList_value)){
-            echo "新闻列表，命中缓存...";
+            //echo "新闻列表，命中缓存...";
             $newsList = $newsList_value;
             /*echo $newsList_key;
             echo "<br>";
@@ -54,7 +54,7 @@ class Service_Data_News{
             }*/
             return $newsList;
         } else {
-            echo "新闻列表，未命中缓存...";
+            //echo "新闻列表，未命中缓存...";
             if('0' == $tag){
                 $newsStart = ''.(($offset-1) * 10);
                 $newsList = $this->newsDao->getNewsList($newsStart,'10');
@@ -92,14 +92,14 @@ class Service_Data_News{
         $tag_pagination = 'ai_platform_news_tagpagination_'.$tag;
         $tag_pagination_total = Brain_Memcache::get($tag_pagination);
         if(!empty($tag_pagination_total)){
-            echo "分页信息，命中缓存...";
+            //echo "分页信息，命中缓存...";
             $total = $tag_pagination_total;
             /*echo $tag_pagination;
             echo "<br>";
             echo $total;*/
             return $total;
         } else {
-            echo "分页信息，未命中缓存...";
+            //echo "分页信息，未命中缓存...";
             $tagNewsCount = $this ->newsTagDao->getTagNewsCount($tag);
             $total = ''.ceil( (intval($tagNewsCount))/10);
             Brain_Memcache::set($tag_pagination, $total, Lib_Const::NEWS_CACHE_TIME);

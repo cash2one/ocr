@@ -27,7 +27,7 @@ class Service_Data_Tag
         $tag_key = 'ai_platform_news_tag_list';
         $tag_value = Brain_Memcache::get($tag_key);
         if (!empty($tag_value)) {
-            echo "热门标签，命中缓存...";
+            //echo "热门标签，命中缓存...";
             $tagList = $tag_value;
             /*echo $tag_key . '=== ';
             echo "<br>";
@@ -39,7 +39,7 @@ class Service_Data_Tag
             }*/
             return $tagList;
         } else {
-            echo "热门标签，未命中缓存...";
+            //echo "热门标签，未命中缓存...";
             $tagList = $this->tagDao->getTagList();
             Brain_Memcache::set($tag_key, $tagList, Lib_Const::NEWS_CACHE_TIME);
             return $tagList;
