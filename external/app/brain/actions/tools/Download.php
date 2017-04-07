@@ -12,6 +12,9 @@
  *
  **/
 
+reqiure ROOT ."app/brain/library/lib/casclientSDK-php5/Cas/Info.php";
+reqiure ROOT ."app/brain/library/lib/casclientSDK-php5/Cas/Client.php";
+
 class Action_Download extends Ap_Action_Abstract
 {
 
