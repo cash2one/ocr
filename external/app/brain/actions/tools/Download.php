@@ -17,8 +17,7 @@ class Action_Download extends Ap_Action_Abstract
 
     public function execute()
     {
-        var_dump('Here!!');
-        var_dump($arrInput);
+        var_dump('Here!111');
 
         $passId = '123';
         $ucid = '321';
@@ -53,6 +52,7 @@ class Action_Download extends Ap_Action_Abstract
         header("Content-type:  application/octet-stream ");
         header("Accept-Ranges:  bytes ");
         header("Accept-Length: " . $file['size']);
+        var_dump('fileSize');
         var_dump($file['size']);
         header("Content-Disposition:  attachment;  filename=" . $file['name']);
         var_dump(file_get_contents($filename));
