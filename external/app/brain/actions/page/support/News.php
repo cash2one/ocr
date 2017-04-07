@@ -167,6 +167,7 @@ class Action_News extends Ap_Action_Abstract {
             $arrRet['newsList'] = $newsList;
             $arrRet['tagList'] = $tagList;
             $arrRet['pagination'] = $pagination;
+            $arrRet['currentTag'] = $tag;
             //返回
             Brain_Output::htmlOutput($arrRet, 'brain/platform/support/news/news-list.tpl');
         }
