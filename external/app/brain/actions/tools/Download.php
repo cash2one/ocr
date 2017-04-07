@@ -17,8 +17,6 @@ class Action_Download extends Ap_Action_Abstract
 
     public function execute()
     {
-        var_dump('Here!111');
-
         $passId = '123';
         $ucid = '321';
 
@@ -38,23 +36,45 @@ class Action_Download extends Ap_Action_Abstract
             var_dump('No ucid');
         }
 
-        $dbSdkInfo = new Dao_SdkInfo();
-        $dbSdkInfo->insertSdkInfo($passId, $ucid, 1, 0);
-
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
         $filePath = Brain_Util::getParamAsString($arrInput, 'filePath');
         var_dump($filePath);
+
+        $serviceType = 0;
+        $language = 0;
+        $sdkArr = explode('-', $filePath);
+        if ($sdkArr[1] == 'ocr') {
+            $serviceType = 0;
+        } elseif ($sdkArr[1] == 'face') {
+            $serviceType = 1;
+        } elseif ($sdkArr[1] == 'nlp') {
+            $serviceType = 2;
+        } elseif ($sdkArr[1] == 'antiporn') {
+            $serviceType = 3;
+        } elseif ($sdkArr[1] == 'python') {
+            $language = 2;
+        }
+
+        if ($sdkArr[2] == 'java') {
+            $serviceType = 0;
+        } elseif ($sdkArr[2] == 'php') {
+            $serviceType = 1;
+        } elseif ($sdkArr[2] == 'android') {
+            $serviceType = 3;
+        } elseif ($sdkArr[2] == 'ios') {
+            $serviceType = 4;
+        }
+
+        $dbSdkInfo = new Dao_SdkInfo();
+        $dbSdkInfo->insertSdkInfo($passId, $ucid, $serviceType, $language);
 
         ob_start(); 
         $size = readfile($filePath); 
         header("Content-type:  application/octet-stream ");
         header("Accept-Ranges:  bytes ");
         header("Accept-Length: " . $size);
-        var_dump('fileSize');
-        var_dump($file['size']);
         header("Content-Disposition:  attachment;  filename=" . $filePath);
-        var_dump(file_get_contents($filePath));
         readfile($filePath); 
         return ;
     }
