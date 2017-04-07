@@ -43,7 +43,7 @@ class Action_Download extends Ap_Action_Abstract
         $cas_client = new Cas_Client($casInfo);
         $objCheckRes = $cas_client->validate();
         $ucid = (string)$objCheckRes->getUcid();
-        var_dump(ucid);
+        var_dump($ucid);
 
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
