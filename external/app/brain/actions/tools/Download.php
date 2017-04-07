@@ -66,9 +66,9 @@ class Action_Download extends Ap_Action_Abstract
 
         $arrServers = array('10.95.106.174:8042');
         $intAppid = '469';
-        $strAppKey = '10.95.106.174';
+        $strAppKey = 'ai.baidu.com';
         $intTmOut = '2000';
-        $strCookieDomain = '10.95.106.174';
+        $strCookieDomain = 'ai.baidu.com';
         $strLoginUrl = 'login.bcetest.baidu.com';
         $strJumpUrl = 'ai.baidu.com';
         $casInfo = new Cas_Info($arrServers, $intAppid, $strAppKey,$intTmOut);
