@@ -36,12 +36,16 @@ class Action_Download extends Ap_Action_Abstract
         $strLoginUrl = 'login.bce.baidu.com';
         $strJumpUrl = 'ai.baidu.com';
         $casInfo = new Cas_Info($arrServers, $intAppid, $strAppKey);
+        var_dump($ucid);
         $casInfo->setCookieDomain($strCookieDomain);
         $casInfo->setLoginUrl($strLoginUrl);
         $casInfo->setJumpUrl($strJumpUrl);
         //$casInfo->setAutoRedirect(false);
+        var_dump($ucid);
         $cas_client = new Cas_Client($casInfo);
+        var_dump($ucid);
         $objCheckRes = $cas_client->validate();
+        var_dump($ucid);
         $ucid = (string)$objCheckRes->getUcid();
         var_dump($ucid);
 
