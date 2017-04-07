@@ -87,7 +87,7 @@ class Action_News extends Ap_Action_Abstract {
             if (is_array($arrNews) && count($arrNews) > 0) {
                 $arrRet['data'] = $arrNews[0];
                 //增加tag信息
-                $arrRet['data']['tagList '] = $tagList;
+                $arrRet['data']['tagList'] = $tagList;
                 $dbNews->addPv($strId);
             }
             //Brain_Output::jsonOutput($arrRet);
