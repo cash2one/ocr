@@ -33,17 +33,14 @@ class Action_News extends Ap_Action_Abstract {
         $dbTag = new Dao_Tag();
         $dbNewsTag = new Dao_NewsTag();
 
-        /**
-         *
+
         if ('list' === $strAction) {
             $strPn = '' . Brain_Util::getParamAsInt($arrInput, 'pn', 0);
             $strRn = '' . Brain_Util::getParamAsInt($arrInput, 'rn', 10);
             $arrNews = $dbNews->getNewsList($strPn, $strRn);
 
             Brain_Output::jsonOutput(0, 'success', $arrNews);
-        } else
-        */
-        if ('top3' === $strAction) {
+        } else if ('top3' === $strAction) {
             $arrNews = $dbNews->getNewsList('0', '3');
 
             Brain_Output::jsonOutput(0, 'success', $arrNews);
