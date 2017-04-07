@@ -40,6 +40,7 @@ class Service_Data_Tag
             return $tagList;
         } else {
             echo "热门标签，未命中缓存...";
+            echo "<br>";
             $tagList = $this->tagDao->getTagList();
             echo $tag_key . '===';
             echo "<br>";

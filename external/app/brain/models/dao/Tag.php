@@ -47,7 +47,9 @@ class Dao_Tag extends Dao_Base
     {
         $arrFields = $this->tagListFields;
         $arrConds = null;
-        $arrOptions = array("enable=" => 1);
+        $arrOptions = array(
+            'enable=' => 1
+        );
         $arrAppends = array(
             'order by id',
         );
