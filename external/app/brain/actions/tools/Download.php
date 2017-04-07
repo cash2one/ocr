@@ -35,6 +35,7 @@ class Action_Download extends Ap_Action_Abstract
         $strCookieDomain = '10.95.106.174';
         $strLoginUrl = 'login.bce.baidu.com';
         $strJumpUrl = 'ai.baidu.com';
+        var_dump($ucid);
         $casInfo = new Cas_Info($arrServers, $intAppid, $strAppKey);
         var_dump($ucid);
         $casInfo->setCookieDomain($strCookieDomain);
