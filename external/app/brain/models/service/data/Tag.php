@@ -33,10 +33,10 @@ class Service_Data_Tag
             return $tagList;
         } else {
             echo "热门标签，未命中缓存...";
-            $tags = $this->tagDao->getTagList();
-            echo "查库结果展示：" . $tag_key . ' ' . $tags;
-            Brain_Memcache::set($tag_key, $tags, Lib_Const::NEWS_CACHE_TIME);
-            return $tags;
+            $tagList = $this->tagDao->getTagList();
+            echo "查库结果展示：" . $tag_key . ' ' . $tagList;
+            Brain_Memcache::set($tag_key, $tagList, Lib_Const::NEWS_CACHE_TIME);
+            return $tagList;
         }
     }
 

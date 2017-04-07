@@ -65,7 +65,6 @@ class Dao_News extends Dao_Base
 
     /**
      * getLastestNews
-     * @param null
      * @access public
      * @return void
      */
@@ -87,7 +86,6 @@ class Dao_News extends Dao_Base
 
     /**
      * getHomeNewsList
-     * @param null
      * @access public
      * @return void
      */

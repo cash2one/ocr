@@ -154,62 +154,17 @@ class Action_News extends Ap_Action_Abstract {
             //Brain_Output::htmlOutput(array(), 'brain/page/news/news.tpl');
             $offset = Brain_Util::getParamAsInt($arrInput, 'offset', 1);    //默认1
             $tag = ''.Brain_Util::getParamAsInt($arrInput, 'tag', 0);    //默认0:所有标签
+            echo $tag;
+            echo $offset;
             //请求热门标签:tag
-            $tag_key = 'news_tag_' . $tag;
-            $tag_value = Brain_Memcache::get($tag_key);
-            if(!empty($tag_value)) {
-                echo "热门标签，命中缓存...";
-                $tagList = $tag_value;
-                echo $tag_key . ' '. $tagList;
-            } else {
-                echo "热门标签，未命中缓存...";
-                $tagList = $dbTag->getTagList();
-                echo "查库结果展示：".$tag_key . ' '. $tagList;
-                Brain_Memcache::set($tag_key, $tagList, TIME_LIMIT);
-            }
+            $service_Tag = new Service_Data_Tag();
+            $tagList = $service_Tag->getTags();
             //请求新闻列表:tag、offset
-            $newsList_key = 'news_tag_'.$tag.'_offset_'.$offset;
-            $newsList_value = Brain_Memcache::get($newsList_key);
-            if(!empty($newsList_value)){
-                echo "新闻列表，命中缓存...";
-                $newsList = $newsList_value;
-                echo $newsList_key . ' '. $newsList;
-            } else {
-                echo "新闻列表，未命中缓存...";
-                if('0' == $tag){
-                    $newsStart = ''.(($offset-1) * 10);
-                    $newsList = $dbNews->getNewsList($newsStart,'10');
-                }else{
-                    //先查询t_news_tag表，找出第offset页的news_id;查询t_news表，逐一查询每条news_id对应的记录;
-                    $newsStart = ''.(($offset-1) * 10);
-                    $newsIdList = &$dbNewsTag->getTagNewsIdList($tag,$newsStart,'10');
-
-                    $newsList = array();
-                    if (is_array($newsIdList) && count($newsIdList) > 0) {
-                        $count = count($newsIdList);
-                        for($index=0; $index<$count; $index++){
-                            $newsList[$index] = $dbNews->getNews($newsIdList[$index]);
-                        }
-                    }
-                }
-                echo $newsList_key . ' '. $newsList;
-                Brain_Memcache::set($newsList_key, $newsList, TIME_LIMIT);
-            }
+            $service_News = new Service_Data_News();
+            $newsList = $service_News->getNewsListByTagAndOffset($tag, $offset);
             //分页信息请求：tag、offset---查询t_news_tag表，得出记录条数，求得总页码、当前页码
             $pagination = array();
-            $tag_pagination = 'news_tag_'.$tag.'_pagination';
-            $tag_pagination_total = Brain_Memcache::get($tag_pagination);
-            if(!empty($tag_pagination_total)){
-                echo "分页信息，命中缓存...";
-                $pagination['total'] = $tag_pagination_total;
-                echo $tag_pagination . ' '. $tag_pagination_total;
-            } else {
-                echo "分页信息，未命中缓存...";
-                $tagNewsCount = $dbNewsTag->getTagNewsCount($tag);
-                $pagination['total'] = ''.( (intval($tagNewsCount)-1)/10 + 1);
-                echo $tag_pagination . ' '. $pagination['total'];
-                Brain_Memcache::set($tag_pagination, $pagination['total'], TIME_LIMIT);
-            }
+            $pagination['total'] = $service_News->getPaginationByTag($tag);
             $pagination['offset'] = ''.$offset;
             //汇总
             $arrRet = array();
