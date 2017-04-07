@@ -46,10 +46,10 @@ class Dao_Tag extends Dao_Base
     public function getTagList()
     {
         $arrFields = $this->tagListFields;
-        $arrConds = null;
-        $arrOptions = array(
+        $arrConds = array(
             'enable=' => 1
         );
+        $arrOptions = null;
         $arrAppends = array(
             'order by id',
         );

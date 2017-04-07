@@ -72,7 +72,7 @@ class Dao_News extends Dao_Base
     {
         $arrFields = $this->lastestNewsFields;
         $arrConds = array(
-            "place=" => 0
+            'place=' => 0
         );
         $arrOptions = null;
         $arrAppends = array(
@@ -93,8 +93,8 @@ class Dao_News extends Dao_Base
     {
         $arrFields = $this->homeNewsListFields;
         $arrConds = array(
-            "place=" => 1,
-            "show_index=" => 0,    //文章是否可置于首页标签
+            'place=' => 1,
+            'show_index=' => 0,    //文章是否可置于首页标签
         );
         $arrOptions = null;
         $arrAppends = array(
