@@ -80,7 +80,7 @@
     }
 
     .ai-video-result-panel {
-        width: 600px;
+        width: 580px;
         height: 420px;
     }
 

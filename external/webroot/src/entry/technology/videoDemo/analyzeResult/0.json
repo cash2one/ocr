@@ -153,11 +153,6 @@
         "libs": [
             {
                 "frequency": 1,
-                "term": "吴恩达",
-                "source": "FACE"
-            },
-            {
-                "frequency": 1,
                 "term": "蒋昌建",
                 "source": "FACE"
             },
@@ -3661,7 +3656,7 @@
                 "image": "http://gcij9qtbwcnrx9qz3y8.exp.bcevod.com/mda-fantastic/aim-hc6z0sa01gc16h54/00000.jpg",
                 "words": [
                     {
-                        "word": "小度暂时以比0领先",
+                        "word": "小度暂时以1比0领先",
                         "rect": {
                             "leftOffsetInPixel": 45,
                             "topOffsetInPixel": 304,
