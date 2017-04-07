@@ -6,7 +6,7 @@
 <section class="container news-main">
     <div class="news-title">{%$data.title%}</div>
     <div class="news-info-container">
-        <span class="time">发布日期：{%$data.time | date_format: '%Y-%m-%d %H:%M:%S'%}</span><span class="pv">浏览量：{%$data.pv%}次</span>
+        <span class="time">发布日期：{%$data.time|date_format:'%Y-%m-%d %H:%M:%S'%}</span><span class="pv">浏览量：{%$data.pv%}次</span>
         <div class="tag-list">
             {%foreach $tagList as $tag%}
             <a href="/support/news?tag={%$tag.id%}">{%$tag.name%}</a>

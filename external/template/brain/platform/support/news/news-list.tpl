@@ -248,7 +248,7 @@
             <div class="news-item">
                 <a href="/support/news?action=detail&amp;id={%$news.id%}">
                     <h3>{%$news.title%}</h3>
-                    <span class="time">发布日期：{%$news.time | date_format: '%Y-%m-%d %H:%M:%S'%}</span><span class="pv">浏览量：{%$news.pv%}次</span>
+                    <span class="time">发布日期：{%$news.time|date_format:'%Y-%m-%d %H:%M:%S'%}</span><span class="pv">浏览量：{%$news.pv%}次</span>
                     <p>{%$news.abs%}</p>
                     <i class="more"></i>
                 </a>
