@@ -1,5 +1,5 @@
 <?php
-require_once 'Cas/Svr/Communicator.php';
+#require_once 'Cas/Svr/Communicator.php';
 /**
  * 共有session类
  *

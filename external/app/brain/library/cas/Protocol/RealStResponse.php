@@ -1,5 +1,5 @@
 <?php
-require_once 'Cas/Protocol.php';
+#require_once 'Cas/Protocol.php';
 class Cas_Protocol_RealStResponse extends Cas_Protocol {
 
 	var $st;	// 真实st
