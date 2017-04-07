@@ -108,6 +108,7 @@ class Service_Data_News{
             echo "分页信息，未命中缓存...";
             echo "<br>";
             $tagNewsCount = $this ->newsTagDao->getTagNewsCount($tag);
+            echo $tagNewsCount;
             if(0 == intval($tagNewsCount)){
                 $total = '0';
             }else{

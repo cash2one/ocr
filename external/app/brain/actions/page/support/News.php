@@ -56,7 +56,7 @@ class Action_News extends Ap_Action_Abstract {
             if (is_array($newsTag) && count($newsTag) > 0) {
                 $count = count($newsTag);
                 for($index=0; $index<$count; $index++){
-                    $tagList[$index] = $dbTag->getTag($newsTag[$index]);
+                    $tagList[$index] = $dbTag->getTag($newsTag[$index]['tag_id']);
                 }
             }
             echo "新闻页--Tag信息：" . count($tagList);
