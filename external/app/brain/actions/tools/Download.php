@@ -57,13 +57,13 @@ class Action_Download extends Ap_Action_Abstract
         }
 
         if ($sdkArr[2] == 'java') {
-            $serviceType = 0;
+            $language = 0;
         } elseif ($sdkArr[2] == 'php') {
-            $serviceType = 1;
+            $language = 1;
         } elseif ($sdkArr[2] == 'android') {
-            $serviceType = 3;
+            $language = 3;
         } elseif ($sdkArr[2] == 'ios') {
-            $serviceType = 4;
+            $language = 4;
         }
 
         $dbSdkInfo = new Dao_SdkInfo();
