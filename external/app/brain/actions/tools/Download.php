@@ -32,18 +32,17 @@ class Action_Download extends Ap_Action_Abstract
         $arrServers = array('10.95.106.174:8042');
         $intAppid = '469';
         $strAppKey = 'ai.baidu.com';
-        $intTmOut = '2000';
         $strCookieDomain = '10.95.106.174';
         $strLoginUrl = 'login.bce.baidu.com';
         $strJumpUrl = 'ai.baidu.com';
-        $casInfo = new Cas_Info($arrServers, $intAppid, $strAppKey, $intTmOut);
+        $casInfo = new Cas_Info($arrServers, $intAppid, $strAppKey);
         $casInfo->setCookieDomain($strCookieDomain);
         $casInfo->setLoginUrl($strLoginUrl);
         $casInfo->setJumpUrl($strJumpUrl);
         //$casInfo->setAutoRedirect(false);
         $cas_client = new Cas_Client($casInfo);
         $objCheckRes = $cas_client->validate();
-        $ucid = (string)$obj->getUcid();
+        $ucid = (string)$objCheckRes->getUcid();
         var_dump(ucid);
 
         $arrRequest = Saf_SmartMain::getCgi();
