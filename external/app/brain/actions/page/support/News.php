@@ -144,7 +144,7 @@ class Action_News extends Ap_Action_Abstract {
             echo $strRet;
         } else {
             //Brain_Output::htmlOutput(array(), 'brain/page/news/news.tpl');
-            $offset = Brain_Util::getParamAsInt($arrInput, 'offset', 1);    //默认1
+            $offset = Brain_Util::getParamAsInt($arrInput, 'offset', 0);    //默认0
             $tag = ''.Brain_Util::getParamAsInt($arrInput, 'tag', 0);    //默认所有标签
             //请求热门标签:tag
             $service_Tag = new Service_Data_Tag();

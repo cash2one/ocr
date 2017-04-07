@@ -39,6 +39,9 @@ class Service_Data_News{
      */
     public function getNewsListByTagAndOffset($tag, $offset)
     {
+        if(0 > $offset){
+            $offset = 0;
+        }
         $newsList_key = 'ai_platform_news_tag_'.$tag.'_offset_'.$offset;
         $newsList_value = Brain_Memcache::get($newsList_key);
         if(!empty($newsList_value)){
@@ -56,11 +59,11 @@ class Service_Data_News{
         } else {
             //echo "新闻列表，未命中缓存...";
             if('0' == $tag){
-                $newsStart = ''.(($offset-1) * 10);
+                $newsStart = ''.(($offset) * 10);
                 $newsList = $this->newsDao->getNewsList($newsStart,'10');
             }else{
                 //查询t_news_tag表，找出第offset页的news_id;
-                $newsStart = ''.(($offset-1) * 10);
+                $newsStart = ''.(($offset) * 10);
                 $newsIdList = $this ->newsTagDao->getTagNewsIdList($tag,$newsStart,'10');
                 //查询t_news表，逐一查询每条news_id对应的记录;
                 $newsList = array();
