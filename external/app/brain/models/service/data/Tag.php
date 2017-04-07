@@ -42,7 +42,8 @@ class Service_Data_Tag
             echo "热门标签，未命中缓存...";
             echo "<br>";
             $tagList = $this->tagDao->getTagList();
-            echo $tag_key . '===';
+            echo $tag_key;
+            echo count($tagList);
             echo "<br>";
             for($i=0;$i<count($tagList);$i++){
                 foreach($tagList[$i] as $x=>$x_value){

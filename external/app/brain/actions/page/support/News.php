@@ -72,7 +72,6 @@ class Action_News extends Ap_Action_Abstract {
                 'msg' => 'success',
                 'data' => (object) array(),
             );
-            $arrRet['data']['tagList '] = array();
             if (is_array($arrNews) && count($arrNews) > 0) {
                 $arrRet['data'] = $arrNews[0];
                 //增加tag信息
@@ -172,10 +171,6 @@ class Action_News extends Ap_Action_Abstract {
             $arrRet['newsList'] = $newsList;
             $arrRet['tagList'] = $tagList;
             $arrRet['pagination'] = $pagination;
-            echo "新闻列表页";
-            echo "newsList" . $newsList;
-            echo "tagList " . $tagList;
-            echo "pagination " . $pagination;
             //返回
             Brain_Output::htmlOutput($arrRet, 'brain/platform/support/news/news-list.tpl');
         }

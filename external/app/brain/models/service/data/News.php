@@ -74,6 +74,8 @@ class Service_Data_News{
             }
             echo $newsList_key;
             echo "<br>";
+            echo count($newsList);
+            echo "<br>";
             for($i=0;$i<count($newsList);$i++){
                 foreach($newsList[$i] as $x=>$x_value){
                     echo "Key=" . $x . ", Value=" . $x_value;
@@ -106,7 +108,11 @@ class Service_Data_News{
             echo "分页信息，未命中缓存...";
             echo "<br>";
             $tagNewsCount = $this ->newsTagDao->getTagNewsCount($tag);
-            $total = ''.( (intval($tagNewsCount)-1)/10 + 1);
+            if(0 == intval($tagNewsCount)){
+                $total = '0';
+            }else{
+                $total = ''.( (intval($tagNewsCount)-1)/10 + 1);
+            }
             echo $tag_pagination;
             echo "<br>";
             echo $total;
