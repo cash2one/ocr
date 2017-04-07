@@ -71,14 +71,6 @@ class Action_News extends Ap_Action_Abstract {
                     }
                 }
             }
-            echo "新闻页--Tag信息：" . count($tagList);
-            echo "<br>";
-            for($i=0;$i<count($tagList);$i++){
-                foreach($tagList[$i] as $x=>$x_value){
-                    echo "Key=" . $x . ", Value=" . $x_value;
-                    echo "<br>";
-                }
-            }
             $arrRet = array(
                 'errno' => 0,
                 'msg' => 'success',
@@ -87,7 +79,7 @@ class Action_News extends Ap_Action_Abstract {
             if (is_array($arrNews) && count($arrNews) > 0) {
                 $arrRet['data'] = $arrNews[0];
                 //增加tag信息
-                $arrRet['data']['tagList'] = $tagList;
+                $arrRet['tagList'] = $tagList;
                 $dbNews->addPv($strId);
             }
             //Brain_Output::jsonOutput($arrRet);
