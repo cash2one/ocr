@@ -23,28 +23,7 @@ class Action_Home extends Ap_Action_Abstract {
         $newsList  = $dbNews->getHomeNewsList();
         $arrPageInfo['lastestNews'] = $lastestNews;
         $arrPageInfo['newsList'] = $newsList;
-        echo "首页新闻：";
-        echo "<br>";
-        echo "lastestNews";
-        echo "<br>";
-        echo count($lastestNews);
-        echo "<br>";
-        for($i=0;$i<count($lastestNews);$i++){
-            foreach($lastestNews[$i] as $x=>$x_value){
-                echo "Key=" . $x . ", Value=" . $x_value;
-                echo "<br>";
-            }
-        }
-        echo "newsList";
-        echo "<br>";
-        echo count($newsList);
-        echo "<br>";
-        for($i=0;$i<count($newsList);$i++){
-            foreach($newsList[$i] as $x=>$x_value){
-                echo "Key=" . $x . ", Value=" . $x_value;
-                echo "<br>";
-            }
-        }
+
         Brain_Output::htmlOutput(
             $arrPageInfo, 
             'brain/platform/home.tpl'
