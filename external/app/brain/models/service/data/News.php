@@ -109,11 +109,14 @@ class Service_Data_News{
             echo "<br>";
             $tagNewsCount = $this ->newsTagDao->getTagNewsCount($tag);
             echo $tagNewsCount;
-            if(0 == intval($tagNewsCount)){
-                $total = '0';
-            }else{
-                $total = ''.( (intval($tagNewsCount)-1)/10 + 1);
-            }
+            /**
+             *   if(0 == intval($tagNewsCount)){
+             * $total = '0';
+             * }else{
+             * $total = ''.( (intval($tagNewsCount)-1)/10 + 1);
+             * }
+             */
+            $total = ''.ceil( (intval($tagNewsCount)-1)/10);
             echo $tag_pagination;
             echo "<br>";
             echo $total;
