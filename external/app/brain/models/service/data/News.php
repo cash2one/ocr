@@ -116,7 +116,7 @@ class Service_Data_News{
              * $total = ''.( (intval($tagNewsCount)-1)/10 + 1);
              * }
              */
-            $total = ''.ceil( (intval($tagNewsCount)-1)/10);
+            $total = ''.ceil( (intval($tagNewsCount))/10);
             echo $tag_pagination;
             echo "<br>";
             echo $total;
