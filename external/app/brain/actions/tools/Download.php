@@ -21,12 +21,8 @@ class Action_Download extends Ap_Action_Abstract
         $ucid = '321';
 
         $userInfo = Bd_Passport::checkUserLogin();
-        var_dump($userInfo);
         if($userInfo != false){
             $passId = $userInfo['uid'];
-            var_dump($passId);
-        } else{
-            var_dump('No passId');
         }
 
         $arrServers = array('10.95.106.174:8042');
@@ -36,20 +32,14 @@ class Action_Download extends Ap_Action_Abstract
         $strCookieDomain = '10.95.106.174';
         $strLoginUrl = 'login.bce.baidu.com';
         $strJumpUrl = 'ai.baidu.com';
-        var_dump($ucid);
         $casInfo = new Cas_Info($arrServers, $intAppid, $strAppKey,$intTmOut);
-        var_dump($ucid);
         $casInfo->setCookieDomain($strCookieDomain);
         $casInfo->setLoginUrl($strLoginUrl);
         $casInfo->setJumpUrl($strJumpUrl);
         //$casInfo->setAutoRedirect(false);
-        var_dump($ucid);
         $cas_client = new Cas_Client($casInfo);
-        var_dump($ucid);
         $objCheckRes = $cas_client->validate();
-        var_dump($ucid);
         $ucid = (string)$objCheckRes->getUcid();
-        var_dump($ucid);
 
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
