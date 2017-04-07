@@ -101,7 +101,8 @@ class Dao_NewsTag extends Dao_Base
         $arrAppends = null;
         $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
         $arrDBRet = $this->query($strSQL);
-        return $arrDBRet;
+        $tagNewsCount = $arrDBRet[0]['count(*)'];
+        return $tagNewsCount;
     }
 
 }
