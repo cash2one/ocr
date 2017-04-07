@@ -29,12 +29,22 @@ class Action_Download extends Ap_Action_Abstract
             var_dump('No passId');
         }
 
-        if(!empty($_COOKIE['__cas__id__'])){
-            $ucid = $_COOKIE['__cas__id__'];
-            var_dump($ucid);
-        } else{
-            var_dump('No ucid');
-        }
+        $arrServers = array('10.95.106.174:8042');
+        $intAppid = '469';
+        $strAppKey = 'ai.baidu.com';
+        $intTmOut = '2000';
+        $strCookieDomain = '10.95.106.174';
+        $strLoginUrl = 'login.bcetest.baidu.com';
+        $strJumpUrl = 'ai.baidu.com';
+        $casInfo = new Cas_Info($arrServers, $intAppid, $strAppKey, $intTmOut);
+        $casInfo->setCookieDomain($strCookieDomain);
+        $casInfo->setLoginUrl($strLoginUrl);
+        $casInfo->setJumpUrl($strJumpUrl);
+        //$casInfo->setAutoRedirect(false);
+        $cas_client = new Cas_Client($casInfo);
+        $objCheckRes = $cas_client->validate();
+        $ucid = (string)$obj->getUcid();
+        var_dump(ucid);
 
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
