@@ -67,9 +67,10 @@ class Dao_Tag extends Dao_Base
     public function getTag($tagId)
     {
         $arrFields = $this->tagListFields;
-        $arrConds = array(
+        $arrConds = [
             'id=' => $tagId,
-        );
+            'enable=' => 1,
+        ];
         $arrOptions = null;
         $arrAppends = null;
         $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);

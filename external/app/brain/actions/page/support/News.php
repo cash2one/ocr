@@ -63,7 +63,7 @@ class Action_News extends Ap_Action_Abstract {
                 for($i=0;$i<count($newsTag);$i++){
                     foreach($newsTag[$i] as $x=>$x_value){
                         echo "Key=" . $x . ", Value=" . $x_value;
-                        $tagList[$i] = $dbTag->getTag($x_value);
+                        array_push($tagList,$dbTag->getTag($x_value));    //$tagList[$i] = $dbTag->getTag($x_value);
                     }
                 }
             }
