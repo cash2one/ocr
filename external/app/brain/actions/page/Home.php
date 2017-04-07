@@ -21,7 +21,7 @@ class Action_Home extends Ap_Action_Abstract {
         $dbNews = new Dao_News();
         $lastestNews  = $dbNews->getLastestNews();
         $newsList  = $dbNews->getHomeNewsList();
-        $arrPageInfo['lastestNews'] = $lastestNews;
+        $arrPageInfo['lastestNews'] = $lastestNews[0];
         $arrPageInfo['newsList'] = $newsList;
 
         Brain_Output::htmlOutput(
