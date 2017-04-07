@@ -54,9 +54,16 @@ class Action_News extends Ap_Action_Abstract {
             $tagList = array();
             $newsTag = $dbNewsTag->getTagIdListByNewsId($strId);
             if (is_array($newsTag) && count($newsTag) > 0) {
-                $count = count($newsTag);
-                for($index=0; $index<$count; $index++){
-                    $tagList[$index] = $dbTag->getTag($newsTag[$index]['tag_id']);
+                /*
+                 * $count = count($newsTag);
+                 * for($index=0; $index<$count; $index++){
+                 * $tagList[$index] = $dbTag->getTag($newsTag[$index]['tag_id']);
+                 * }
+                 */
+                for($i=0;$i<count($newsTag);$i++){
+                    foreach($newsTag[$i] as $x=>$x_value){
+                        $tagList[$i] = $dbTag->getTag($x_value);
+                    }
                 }
             }
             echo "新闻页--Tag信息：" . count($tagList);
