@@ -11,7 +11,6 @@ class Service_Data_News{
 
     public function __construct()
     {
-        parent::__construct();
         $this ->newsDao = new Dao_News();
     }
 
