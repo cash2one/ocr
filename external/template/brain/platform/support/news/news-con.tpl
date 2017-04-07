@@ -244,9 +244,12 @@
 <section class="container news-main">
     <div class="news-title">{%$data.title%}</div>
     <div class="news-info-container">
-        <div class="news-date" id="news-date"></div>
-        <div class="news-author">{%$data.author%}</div>
-        <div class="news-view-count">{%$data.pv%}次浏览</div>
+        <span class="time">发布日期：{%$data.time | date_format: '%Y-%m-%d %H:%M:%S'%}</span><span class="pv">浏览量：{%$data.pv%}次</span>
+        <div class="tag-list">
+            {%foreach $tagList as $tag%}
+            <a href="/support/news?tag={%$tag.id%}">{%$tag.name%}</a>
+            {%/foreach%}
+        </div>
     </div>
     <hr class="news-info-split">
     <div class="news-content">
@@ -266,19 +269,6 @@
     </div>
 </section>
 {%/if%}
-<script>
-    (function () {
-        var newsDateContainer = document.getElementById('news-date');
-        /* eslint-disable */
-        var dateObj = new Date(+{$data.time}000);
-        /* eslint-enable */
-        var year = dateObj.getFullYear();
-        var month = dateObj.getMonth() + 1;
-        var date = dateObj.getDate();
-
-        newsDateContainer.innerHTML = '[' + year + '-' + month + '-' + date + ']';
-    })();
-</script>
 
 </div>
 <aside class="aside-action">

@@ -103,11 +103,25 @@
         <li></li>
     </ul>
 </section>
+<section class="lastest-news">
+    <div class="container">
+        <h4>新闻速递</h4><a href="/support/news?action=detail&amp;id={%$lastestNews.id%}">{%$lastestNews.title%}</a>
+    </div>
+</section>
 <section class="news">
     <div class="container">
-        <div class="news-container"></div>
-        <h4>新闻动态</h4>
-        <a href="/support/news">more &gt;</a>
+        <ul>
+            {%foreach $newsList as $news%}
+            <li>
+                <a href="/support/news?action=detail&amp;id={%$news.id%}">
+                    <img src="{%$news.img%}" alt="{%$news.title%}">
+                    <h4>{%$news.title%}</h4>
+                    <p>{%$news.abs%}</p>
+                    <i class="more"></i>
+                </a>
+            </li>
+            {%/foreach%}
+        </ul>
     </div>
 </section>
 <section class="tech-service home-section">

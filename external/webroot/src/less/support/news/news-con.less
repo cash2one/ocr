@@ -43,16 +43,33 @@
 
     &-info-container {
         font-size: 0;
-    }
-
-    &-date,
-    &-author,
-    &-view-count {
-        display: inline-block;
-        padding-right: 20px;
-        vertical-align: top;
-        font-size: 12px;
-        color: #999;
+        .time {
+            margin-right: 18px;
+            font-size: @font-size-1;
+            color: #999;
+        }
+        .pv {
+            font-size: @font-size-1;
+            color: #999;
+        }
+        .tag-list {
+            margin-top: 8px;
+            a {
+                line-height: 24px;
+                border: 1px solid #f2f2f2;
+                border-radius: 3px;
+                margin-right: 10px;
+                display: inline-block;
+                white-space: nowrap;
+                font-size: @font-size-1;
+                color: #999;
+                padding: 0 10px;
+                &:hover {
+                    color: #0073eb;
+                    border-color: #0073eb;
+                }
+            }
+        }
     }
 }
 
