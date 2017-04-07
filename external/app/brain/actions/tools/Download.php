@@ -25,22 +25,6 @@ class Action_Download extends Ap_Action_Abstract
             $passId = $userInfo['uid'];
         }
 
-        $arrServers = array('10.95.106.174:8042');
-        $intAppid = '469';
-        $strAppKey = '10.95.106.174';
-        $intTmOut = '2000';
-        $strCookieDomain = '10.95.106.174';
-        $strLoginUrl = 'login.bcetest.baidu.com';
-        $strJumpUrl = 'ai.baidu.com';
-        $casInfo = new Cas_Info($arrServers, $intAppid, $strAppKey,$intTmOut);
-        $casInfo->setCookieDomain($strCookieDomain);
-        $casInfo->setLoginUrl($strLoginUrl);
-        $casInfo->setJumpUrl($strJumpUrl);
-        $casInfo->setAutoRedirect(false);
-        $cas_client = new Cas_Client($casInfo);
-        $objCheckRes = $cas_client->validate();
-        $ucid = (string)$objCheckRes->getUcid();
-        var_dump($ucid);
 
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
@@ -72,9 +56,6 @@ class Action_Download extends Ap_Action_Abstract
             $language = 4;
         }
 
-        $dbSdkInfo = new Dao_SdkInfo();
-        $dbSdkInfo->insertSdkInfo($passId, $ucid, $serviceType, $language);
-
         ob_start(); 
         $size = readfile($filePath); 
         header("Content-type:  application/octet-stream ");
@@ -82,6 +63,27 @@ class Action_Download extends Ap_Action_Abstract
         header("Accept-Length: " . $size);
         header("Content-Disposition:  attachment;  filename=" . $filePath);
         readfile($filePath); 
+
+        $arrServers = array('10.95.106.174:8042');
+        $intAppid = '469';
+        $strAppKey = '10.95.106.174';
+        $intTmOut = '2000';
+        $strCookieDomain = '10.95.106.174';
+        $strLoginUrl = 'login.bcetest.baidu.com';
+        $strJumpUrl = 'ai.baidu.com';
+        $casInfo = new Cas_Info($arrServers, $intAppid, $strAppKey,$intTmOut);
+        $casInfo->setCookieDomain($strCookieDomain);
+        $casInfo->setLoginUrl($strLoginUrl);
+        $casInfo->setJumpUrl($strJumpUrl);
+        $casInfo->setAutoRedirect(false);
+        $cas_client = new Cas_Client($casInfo);
+        $objCheckRes = $cas_client->validate();
+        $ucid = (string)$objCheckRes->getUcid();
+        var_dump($ucid);
+
+        $dbSdkInfo = new Dao_SdkInfo();
+        $dbSdkInfo->insertSdkInfo($passId, $ucid, $serviceType, $language);
+
         return ;
     }
 }
