@@ -29,28 +29,18 @@ class Service_Data_Tag
         if (!empty($tag_value)) {
             echo "热门标签，命中缓存...";
             $tagList = $tag_value;
-            echo $tag_key . '=== ';
+            /*echo $tag_key . '=== ';
             echo "<br>";
             for($i=0;$i<count($tagList);$i++){
                 foreach($tagList[$i] as $x=>$x_value){
                     echo "Key=" . $x . ", Value=" . $x_value;
                     echo "<br>";
                 }
-            }
+            }*/
             return $tagList;
         } else {
             echo "热门标签，未命中缓存...";
-            echo "<br>";
             $tagList = $this->tagDao->getTagList();
-            echo $tag_key;
-            echo count($tagList);
-            echo "<br>";
-            for($i=0;$i<count($tagList);$i++){
-                foreach($tagList[$i] as $x=>$x_value){
-                    echo "Key=" . $x . ", Value=" . $x_value;
-                    echo "<br>";
-                }
-            }
             Brain_Memcache::set($tag_key, $tagList, Lib_Const::NEWS_CACHE_TIME);
             return $tagList;
         }

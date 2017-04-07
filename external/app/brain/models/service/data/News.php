@@ -44,18 +44,17 @@ class Service_Data_News{
         if(!empty($newsList_value)){
             echo "新闻列表，命中缓存...";
             $newsList = $newsList_value;
-            echo $newsList_key;
+            /*echo $newsList_key;
             echo "<br>";
             for($i=0;$i<count($newsList);$i++){
                 foreach($newsList[$i] as $x=>$x_value){
                     echo "Key=" . $x . ", Value=" . $x_value;
                     echo "<br>";
                 }
-            }
+            }*/
             return $newsList;
         } else {
             echo "新闻列表，未命中缓存...";
-            echo "<br>";
             if('0' == $tag){
                 $newsStart = ''.(($offset-1) * 10);
                 $newsList = $this->newsDao->getNewsList($newsStart,'10');
@@ -70,16 +69,6 @@ class Service_Data_News{
                     for($index=0; $index<$count; $index++){
                         $newsList[$index] = $this->newsDao->getNews($newsIdList[$index]);
                     }
-                }
-            }
-            echo $newsList_key;
-            echo "<br>";
-            echo count($newsList);
-            echo "<br>";
-            for($i=0;$i<count($newsList);$i++){
-                foreach($newsList[$i] as $x=>$x_value){
-                    echo "Key=" . $x . ", Value=" . $x_value;
-                    echo "<br>";
                 }
             }
             Brain_Memcache::set($newsList_key, $newsList, Lib_Const::NEWS_CACHE_TIME);
@@ -100,26 +89,14 @@ class Service_Data_News{
         if(!empty($tag_pagination_total)){
             echo "分页信息，命中缓存...";
             $total = $tag_pagination_total;
-            echo $tag_pagination;
+            /*echo $tag_pagination;
             echo "<br>";
-            echo $total;
+            echo $total;*/
             return $total;
         } else {
             echo "分页信息，未命中缓存...";
-            echo "<br>";
             $tagNewsCount = $this ->newsTagDao->getTagNewsCount($tag);
-            echo $tagNewsCount;
-            /**
-             *   if(0 == intval($tagNewsCount)){
-             * $total = '0';
-             * }else{
-             * $total = ''.( (intval($tagNewsCount)-1)/10 + 1);
-             * }
-             */
             $total = ''.ceil( (intval($tagNewsCount))/10);
-            echo $tag_pagination;
-            echo "<br>";
-            echo $total;
             Brain_Memcache::set($tag_pagination, $total, Lib_Const::NEWS_CACHE_TIME);
             return $total;
         }

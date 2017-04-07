@@ -51,22 +51,16 @@ class Action_News extends Ap_Action_Abstract {
             $tagList = array();
             $newsTag = $dbNewsTag->getTagIdListByNewsId($strId);
             if (is_array($newsTag) && count($newsTag) > 0) {
-                /*
-                 * $count = count($newsTag);
-                 * for($index=0; $index<$count; $index++){
-                 * $tagList[$index] = $dbTag->getTag($newsTag[$index]['tag_id']);
-                 * }
-                 */
                 for($i=0;$i<count($newsTag);$i++){
                     foreach($newsTag[$i] as $x=>$x_value){
                         echo "Key=" . $x . ", Value=" . $x_value;
-                        $wyd = $dbTag->getTag(''.$x_value);    //$tagList[$i] = $dbTag->getTag($x_value);
-                        for($j=0;$j<count($wyd);$j++){
-                            foreach($wyd[$j] as $x=>$x_value){
+                        $tagElement = $dbTag->getTag(''.$x_value);
+                        for($j=0;$j<count($tagElement);$j++){
+                            foreach($tagElement[$j] as $x=>$x_value){
                                 echo "Key=" . $x . ", Value=" . $x_value;
                                 echo "<br>";
                             }
-                            array_push($tagList, $wyd[$j]);
+                            array_push($tagList, $tagElement[$j]);
                         }
                     }
                 }
@@ -156,9 +150,7 @@ class Action_News extends Ap_Action_Abstract {
         } else {
             //Brain_Output::htmlOutput(array(), 'brain/page/news/news.tpl');
             $offset = Brain_Util::getParamAsInt($arrInput, 'offset', 1);    //默认1
-            $tag = ''.Brain_Util::getParamAsInt($arrInput, 'tag', 0);    //默认0:所有标签
-            echo $tag;
-            echo $offset;
+            $tag = ''.Brain_Util::getParamAsInt($arrInput, 'tag', 0);    //默认所有标签
             //请求热门标签:tag
             $service_Tag = new Service_Data_Tag();
             $tagList = $service_Tag->getTags();
