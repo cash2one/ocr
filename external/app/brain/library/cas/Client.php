@@ -1,8 +1,8 @@
 <?php
-#require_once 'Cas/Info.php';
-#require_once 'Cas/Svr/Communicator.php';
-#require_once 'Cas/Protocol/CheckResponse.php';
-#require_once 'Cas/Protocol/RealStResponse.php';
+//require_once 'Cas/Info.php';
+//require_once 'Cas/Svr/Communicator.php';
+//require_once 'Cas/Protocol/CheckResponse.php';
+//require_once 'Cas/Protocol/RealStResponse.php';
 /**
  * Cas-Client类
  *
