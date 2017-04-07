@@ -5,6 +5,7 @@
 @import '../common/tech-case.less';
 @import '../common/tech-commom.less';
 @import '../common/tech-guid.less';
+@import '../common/tech-function.less';
 @import '../common/modal.less';
 @import '../common/helper.less';
 
@@ -20,7 +21,7 @@
 }
 // 调用通用的tech-feature模块
 .@{prefix}-feature {
-    .tech-feature(@page-name: net-picture, @icon-num: 3)
+    .tech-feature(@page-name: net-picture, @icon-num: 3);
 }
 
 // 调用通用的apply-scenario模块
@@ -30,7 +31,7 @@
 
 // 调用通用的tech-case模块
 .@{prefix}-case {
-    .tech-case(@page-name: net-picture; @num: 2; @case-logo: ture;);
+    .tech-case(@page-name: net-picture; @num: 2; @case-logo: ture);
 
     &-item-1 {
         .tech-case-item-logo {
@@ -42,30 +43,10 @@
 
 // 功能介绍
 .@{prefix}-function {
-    height: 450px;
-    background: url(../../../ai_images/technology/net-picture/intro-bg.png) no-repeat top center;
-    background-size: cover;
-    text-align: center;
-    color: @white;
 
-    // 功能介绍标题
-    &-title {
-        padding: 30px 0 20px;
-        font-size: @big-title-size;
-    }
-
-    // 功能介绍简介
-    &-info {
-        width: 685px;
-        margin: 0 auto;
-        line-height: 25 / 14;
-    }
+    .tech-function(@page-name: net-picture);
 
     // 功能介绍demo
-    &-detail {
-        margin-top: 40px;
-        font-size: 0;
-    }
 
     &-original-card {
         display: inline-block;

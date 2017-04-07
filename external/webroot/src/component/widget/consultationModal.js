@@ -36,7 +36,6 @@ export default class ConsultationModal extends Modal {
         this.setContent(applyTpl({}));
         setPlaceHolder(this.getModal());
     }
-
     apply() {
         this.setContent(loadingTpl({}));
     }

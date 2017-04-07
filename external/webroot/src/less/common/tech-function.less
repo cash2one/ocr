@@ -1,0 +1,30 @@
+@import '../common/initialize.less';
+
+
+// @page-name: 单页名称
+// @height: 区域高度
+
+.tech-function(@page-name: video-vca; @height: 440px) {
+    background: url("../../../ai_images/technology/@{page-name}/intro-bg.png") no-repeat top center;
+    background-size: cover;
+    color: @white;
+    text-align: center;
+    padding:10px 0 20px;
+    // 功能介绍标题
+    &-title {
+        padding: 20px 0 20px;
+        font-size: @big-title-size;
+        text-align: center;
+    }
+
+    // 功能介绍简介
+    &-info {
+        text-align: center;
+        margin: 0 auto;
+        line-height: 25 / 14;
+    }
+    &-detail {
+        padding-top: 40px;
+        font-size: 0;
+    }
+}

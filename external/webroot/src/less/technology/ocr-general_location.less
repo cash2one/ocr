@@ -5,8 +5,10 @@
 @import '../common/tech-case.less';
 @import '../common/tech-commom.less';
 @import '../common/tech-guid.less';
+@import '../common/tech-function.less';
 @import '../common/modal.less';
 @import '../common/helper.less';
+
 
 // 技术单页前缀
 @prefix: tech;
@@ -42,30 +44,10 @@
 
 // 功能介绍
 .@{prefix}-function {
-    height: 450px;
-    background: url(../../../ai_images/technology/ocr-general_location/intro-bg.png) no-repeat top center;
-    background-size: cover;
-    text-align: center;
-    color: @white;
-
-    // 功能介绍标题
-    &-title {
-        padding: 30px 0 20px;
-        font-size: @big-title-size;
-    }
-
-    // 功能介绍简介
-    &-info {
-        width: 685px;
-        margin: 0 auto;
-        line-height: 25 / 14;
-    }
+    //功能介绍标题，文字
+    .tech-function(@page-name: ocr-general_location);
 
     // 功能介绍demo
-    &-detail {
-        margin-top: 40px;
-        font-size: 0;
-    }
 
     &-original-card {
         display: inline-block;
