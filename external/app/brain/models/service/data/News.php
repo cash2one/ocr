@@ -8,10 +8,12 @@
 class Service_Data_News{
 
     protected $newsDao;
+    protected $newsTagDao;
 
     public function __construct()
     {
         $this ->newsDao = new Dao_News();
+        $this ->newsTagDao = new Dao_NewsTag();
     }
 
     /**
@@ -52,7 +54,7 @@ class Service_Data_News{
             }else{
                 //先查询t_news_tag表，找出第offset页的news_id;查询t_news表，逐一查询每条news_id对应的记录;
                 $newsStart = ''.(($offset-1) * 10);
-                $newsIdList = $this->newsDao->getTagNewsIdList($tag,$newsStart,'10');
+                $newsIdList = $this ->newsTagDao->getTagNewsIdList($tag,$newsStart,'10');
 
                 $newsList = array();
                 if (is_array($newsIdList) && count($newsIdList) > 0) {
@@ -85,7 +87,7 @@ class Service_Data_News{
             return $total;
         } else {
             echo "分页信息，未命中缓存...";
-            $tagNewsCount = $this->newsDao->getTagNewsCount($tag);
+            $tagNewsCount = $this ->newsTagDao->getTagNewsCount($tag);
             $total = ''.( (intval($tagNewsCount)-1)/10 + 1);
             echo $tag . ' '. $total;
             Brain_Memcache::set($tag_pagination, $total, Lib_Const::NEWS_CACHE_TIME);
