@@ -45,18 +45,17 @@ class Action_Download extends Ap_Action_Abstract
         $arrInput = $arrRequest['request_param'];
         $filePath = Brain_Util::getParamAsString($arrInput, 'filePath');
         var_dump($filePath);
-        $fileDao = new Dao_MFile();
-        $files = $fileDao->getFile($filePath);
-        $file = $files[0];
 
+        ob_start(); 
+        $size = readfile($filePath); 
         header("Content-type:  application/octet-stream ");
         header("Accept-Ranges:  bytes ");
-        header("Accept-Length: " . $file['size']);
+        header("Accept-Length: " . $size);
         var_dump('fileSize');
         var_dump($file['size']);
-        header("Content-Disposition:  attachment;  filename=" . $file['name']);
-        var_dump(file_get_contents($filename));
-        readfile($filename); 
-        return $file;
+        header("Content-Disposition:  attachment;  filename=" . $filePath);
+        var_dump(file_get_contents($filePath));
+        readfile($filePath); 
+        return ;
     }
 }
