@@ -1,0 +1,2 @@
+词向量表示接口
+curl -i -k 'https://aip.baidubce.com/rpc/2.0/nlp/v1/wordembedding?access_token=24.bb41cb1bd46dd44b9c801b10ce010240.2592000.1492322377.282335-9252280' --data '{"query1":"百度","query2":"谷歌","tid":1}' -H 'Content-Type:application/json; charset=UTF-8'

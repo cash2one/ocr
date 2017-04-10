@@ -9,6 +9,11 @@
 
     pre {
         margin: 0;
+
+        // 代码示例中的code标签无圆角，利用高权重覆盖
+        code {
+            border-radius: 0;
+        }
     }
 
     code {
@@ -56,7 +61,7 @@
         height: 10px;
         border-top: 1px solid #ccc;
         border-left: 1px solid #ccc;
-        background-color: #fafafa;
+        background-color: #2b303b;
         transform: translateX(-50%) rotate(45deg);
         transform-origin: 50% 50%;
     }
