@@ -1,6 +1,6 @@
 <?php
 require_once(dirname(__FILE__).'/../Msg.php');
-require_once(dirname(__FILE__).'/../Protocol/NsHeader.php');
+require_once(dirname(__FILE__).'/../protocol/NsHeader.php');
 define('CMD_CHECK_ID', 7);
 define('CMD_GET_REAL_ST', 11);
 define('CMD_SET_PUB_SESS', 12);
