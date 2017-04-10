@@ -155,6 +155,31 @@ class Dao_News extends Dao_Base
     }
 
     /**
+     * getNewsListByNewsIdList
+     *
+     * @param mixed $newsIdList
+     * @access public
+     * @return void
+     */
+    public function getNewsListByNewsIdList($newsIdList)
+    {
+        $arrFields = $this->arrDefaultFields;
+        $arrConds = array(
+            "id IN" => $newsIdList,
+        );
+        $arrOptions = null;
+        $arrAppends = array(
+            'order by id desc',
+        );
+
+        $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
+
+        $arrDBRet = $this->query($strSQL);
+
+        return $arrDBRet;
+    }
+
+    /**
      * getNews
      *
      * @param mixed $strId
