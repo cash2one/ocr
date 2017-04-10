@@ -23,6 +23,8 @@ class Action_Download extends Ap_Action_Abstract
         $userInfo = Bd_Passport::checkUserLogin();
         if($userInfo != false){
             $passId = $userInfo['uid'];
+        }else{
+            var_dump("No passId!");
         }
 
 
