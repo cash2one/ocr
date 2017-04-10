@@ -31,7 +31,7 @@ class Action_Download extends Ap_Action_Abstract
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
         $filePath = Brain_Util::getParamAsString($arrInput, 'filePath');
-        var_dump($filePath);
+        // var_dump($filePath);
 
         $serviceType = 0;
         $language = 0;
@@ -58,13 +58,6 @@ class Action_Download extends Ap_Action_Abstract
             $language = 4;
         }
 
-        ob_start(); 
-        $size = readfile($filePath); 
-        header("Content-type:  application/octet-stream ");
-        header("Accept-Ranges:  bytes ");
-        header("Accept-Length: " . $size);
-        header("Content-Disposition:  attachment;  filename=" . $filePath);
-        readfile($filePath); 
 
         $arrServers = array('mycas.baidu.com:8880');
         $intAppid = '469';
@@ -82,6 +75,14 @@ class Action_Download extends Ap_Action_Abstract
         $objCheckRes = $cas_client->validate();
         $ucid = (string)$objCheckRes->getUcid();
         var_dump($ucid);
+
+        ob_start(); 
+        $size = readfile($filePath); 
+        header("Content-type:  application/octet-stream ");
+        header("Accept-Ranges:  bytes ");
+        header("Accept-Length: " . $size);
+        header("Content-Disposition:  attachment;  filename=" . $filePath);
+        readfile($filePath); 
 
         $dbSdkInfo = new Dao_SdkInfo();
         $dbSdkInfo->insertSdkInfo($passId, $ucid, $serviceType, $language);
