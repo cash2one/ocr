@@ -24,7 +24,7 @@ class Action_Download extends Ap_Action_Abstract
         if($userInfo != false){
             $passId = $userInfo['uid'];
         }else{
-            var_dump("No passId!");
+            // var_dump("No passId!");
         }
 
 
@@ -73,9 +73,11 @@ class Action_Download extends Ap_Action_Abstract
         $casInfo->setAutoRedirect(false);
         $cas_client = new Cas_Client($casInfo);
         $objCheckRes = $cas_client->validate();
-        $ucid = (string)$objCheckRes->getUcid();
-        var_dump($ucid);
-
+        if (!is_null($objCheckRes)) {
+            $ucid = (string)$objCheckRes->getUcid();
+            var_dump($ucid);
+        }
+        
         ob_start(); 
         $size = readfile($filePath); 
         header("Content-type:  application/octet-stream ");
