@@ -1,0 +1,1 @@
+curl -i -k 'https://aip.baidubce.com/rpc/2.0/nlp/v1/wordseg?access_token=24.bb41cb1bd46dd44b9c801b10ce010240.2592000.1492322377.282335-9252280' --data '{"query":"百度是一家高科技公司","lang_id":1}' -H 'Content-Type:application/json; charset=UTF-8'

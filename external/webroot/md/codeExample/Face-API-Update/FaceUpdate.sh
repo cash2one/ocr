@@ -1,0 +1,1 @@
+curl -i -k 'https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/user/update?access_token=24.a1ff1c9e242129e0e88e506dfc223454.2592000.1492586050.282335-9395294' --data '{"uid":"testuid", "images":"%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK"}' -H 'Content-Type:application/x-www-form-urlencoded'

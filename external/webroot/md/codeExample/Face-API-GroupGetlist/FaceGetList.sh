@@ -1,0 +1,1 @@
+curl -i -k 'https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/group/getlist?access_token=24. a1ff1c9e242129e0e88e506dfc223454.2592000.1492586050.282335-9395294' --data '{"start":"0","num":"100"}' -H 'Content-Type:application/x-www-form-urlencoded'
