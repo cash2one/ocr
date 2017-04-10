@@ -108,6 +108,24 @@ class Dao_News extends Dao_Base
 
 
     /**
+     * getNewsCount
+     * @param null
+     * @access public
+     * @return void
+     */
+    public function getNewsCount()
+    {
+        $arrFields = array('count(*)');
+        $arrConds = null;
+        $arrOptions = null;
+        $arrAppends = null;
+        $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
+        $arrDBRet = $this->query($strSQL);
+        $tagNewsCount = $arrDBRet[0]['count(*)'];
+        return $tagNewsCount;
+    }
+
+    /**
      * getNewsList
      *
      * @param mixed $strStart

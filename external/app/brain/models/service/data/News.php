@@ -103,7 +103,11 @@ class Service_Data_News{
             return $total;
         } else {
             //echo "分页信息，未命中缓存...";
-            $tagNewsCount = $this ->newsTagDao->getTagNewsCount($tag);
+            if('0' === $tag){
+                $tagNewsCount = $this ->newsDao->getNewsCount();
+            } else{
+                $tagNewsCount = $this ->newsTagDao->getTagNewsCount($tag);
+            }
             $total = ''.ceil( intval($tagNewsCount)/10);
             Brain_Memcache::set($tag_pagination, $total, Lib_Const::NEWS_CACHE_TIME);
             return $total;
