@@ -116,7 +116,9 @@ class Dao_News extends Dao_Base
     public function getNewsCount()
     {
         $arrFields = array('count(*)');
-        $arrConds = null;
+        $arrConds = array(
+            "place=" => 0
+        );
         $arrOptions = null;
         $arrAppends = null;
         $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
