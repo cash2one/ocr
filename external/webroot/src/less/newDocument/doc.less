@@ -4,7 +4,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 0 20px 0 40px;
+    padding: 0 40px;
     box-sizing: border-box;
     overflow: auto;
 
@@ -61,6 +61,7 @@
     }
 
     code {
+        margin: 0 5px;
         padding: 2px 5px;
         border: 1px solid #ebebeb;
     }
@@ -112,6 +113,17 @@
         border: 1px solid #ebebeb;
         font-size: 12px;
         color: #666;
+    }
+
+    // 标题文字不允许折行
+    th {
+        white-space: nowrap;
+    }
+
+    td {
+        &:last-child {
+            white-space: normal;
+        }
     }
 
     tr:nth-child(2n) {
