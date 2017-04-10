@@ -1,8 +1,8 @@
 <?php
 require_once(dirname(__FILE__).'/Info.php');
-require_once(dirname(__FILE__).'/Svr/Communicator.php');
-require_once(dirname(__FILE__).'/Protocol/CheckResponse.php');
-require_once(dirname(__FILE__).'/Protocol/RealStResponse.php');
+require_once(dirname(__FILE__).'/svr/Communicator.php');
+require_once(dirname(__FILE__).'/protocol/CheckResponse.php');
+require_once(dirname(__FILE__).'/protocol/RealStResponse.php');
 /**
  * Cas-Client类
  *

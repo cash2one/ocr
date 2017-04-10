@@ -1,5 +1,5 @@
 <?php
-require_once(dirname(__FILE__).'/../Svr/Communicator.php)';
+require_once(dirname(__FILE__).'/../svr/Communicator.php)';
 /**
  * 共有session类
  *
