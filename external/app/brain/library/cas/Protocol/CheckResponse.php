@@ -1,5 +1,5 @@
 <?php
-//require_once 'Cas/Protocol.php';
+require_once(dirname(__FILE__).'/../Protocol.php');
 class Cas_Protocol_CheckResponse extends Cas_Protocol {
 	var $ucid;
 	var $tag;			//1表示使用重名登陆

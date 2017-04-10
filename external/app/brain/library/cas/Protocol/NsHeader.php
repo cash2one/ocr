@@ -1,5 +1,5 @@
 <?php
-//require_once 'Cas/Packer.php';
+require_once(dirname(__FILE__).'/../Packer.php');
 define('NS_HEADER_LEN', 36);
 class Cas_Protocol_NsHeader {
 /**
