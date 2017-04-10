@@ -46,11 +46,13 @@ class Action_News extends Ap_Action_Abstract {
             //增加tag信息
             $tagList = array();
             $newsTag = $dbNewsTag->getTagIdListByNewsId($strId);
-            $tagIds = array();
-            foreach ($newsTag as $x_value) {
-                $tagIds[] = $x_value['tag_id'];
+            if(!empty($newsTag)){
+                $tagIds = array();
+                foreach ($newsTag as $x_value) {
+                    $tagIds[] = $x_value['tag_id'];
+                }
+                $tagList = $dbTag->getTagListByIds($tagIds);
             }
-            $tagList = $dbTag->getTagListByIds($tagIds);
 
             /*if (is_array($newsTag) && count($newsTag) > 0) {
                 for($i=0;$i<count($newsTag);$i++){
