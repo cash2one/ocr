@@ -94,7 +94,7 @@ class Dao_News extends Dao_Base
         $arrFields = $this->homeNewsListFields;
         $arrConds = array(
             'place=' => 0,
-            'show_index=' => 1,    //文章是否可置于首页标签
+            'show_index=' => 1,
         );
         $arrOptions = null;
         $arrAppends = array(
@@ -109,13 +109,12 @@ class Dao_News extends Dao_Base
 
     /**
      * getNewsCount
-     * @param null
      * @access public
      * @return void
      */
     public function getNewsCount()
     {
-        $arrFields = array('count(*)');
+        $arrFields = array('count(*) as c');
         $arrConds = array(
             "place=" => 0
         );
@@ -123,7 +122,7 @@ class Dao_News extends Dao_Base
         $arrAppends = null;
         $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
         $arrDBRet = $this->query($strSQL);
-        $tagNewsCount = $arrDBRet[0]['count(*)'];
+        $tagNewsCount = $arrDBRet[0]['c'];
         return $tagNewsCount;
     }
 
@@ -164,9 +163,7 @@ class Dao_News extends Dao_Base
     public function getNewsListByNewsIdList($newsIdList)
     {
         $arrFields = $this->arrDefaultFields;
-        $arrConds = array(
-            'id IN ' => $this->getSQLIn($newsIdList),
-        );
+        $arrConds =  'id IN '.$this->getSQLIn($newsIdList);
         $arrOptions = null;
         $arrAppends = array(
             'order by id desc',

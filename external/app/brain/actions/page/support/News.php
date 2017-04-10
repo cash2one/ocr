@@ -14,10 +14,6 @@
  **/
 
 class Action_News extends Ap_Action_Abstract {
-
-    //缓存超时设置
-    const TIME_LIMIT = 3600;
-
     /**
      * execute 
      * 

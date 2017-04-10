@@ -20,7 +20,6 @@ class Service_Data_News
 
     /**
      * 获取最新的新闻ID
-     * @param
      * @return int 最新的新闻ID
      * @author songqingyun
      */
@@ -50,14 +49,6 @@ class Service_Data_News
         if (!empty($newsList_value)) {
             //echo "新闻列表，命中缓存...";
             $newsList = $newsList_value;
-            /*echo $newsList_key;
-            echo "<br>";
-            for($i=0;$i<count($newsList);$i++){
-                foreach($newsList[$i] as $x=>$x_value){
-                    echo "Key=" . $x . ", Value=" . $x_value;
-                    echo "<br>";
-                }
-            }*/
             return $newsList;
         } else {
             //echo "新闻列表，未命中缓存...";
@@ -74,7 +65,7 @@ class Service_Data_News
                 foreach ($newsIdList as $x_value) {
                     $newsIds[] = $x_value['news_id'];
                 }
-                $newsList = $this->newsDao->getNewsListByNewsIdList(q);
+                $newsList = $this->newsDao->getNewsListByNewsIdList($newsIdList);
             }
             Brain_Memcache::set($newsList_key, $newsList, Lib_Const::NEWS_CACHE_TIME);
             return $newsList;
@@ -94,9 +85,6 @@ class Service_Data_News
         if (!empty($tag_pagination_total)) {
             //echo "分页信息，命中缓存...";
             $total = $tag_pagination_total;
-            /*echo $tag_pagination;
-            echo "<br>";
-            echo $total;*/
             return $total;
         } else {
             //echo "分页信息，未命中缓存...";

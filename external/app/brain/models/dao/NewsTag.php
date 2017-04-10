@@ -30,7 +30,7 @@ class Dao_NewsTag extends Dao_Base
 
     /**
      * @brief 连接db，表名初始化
-     * @return  null
+     * @return  void
      * Date: 2017/4/6
      * Time: 10:58
      **/
@@ -42,7 +42,7 @@ class Dao_NewsTag extends Dao_Base
 
     /**
      * getTagIdListByNewsId
-     * @param null
+     * @param $newsId
      * @access public
      * @return void
      */
@@ -61,7 +61,9 @@ class Dao_NewsTag extends Dao_Base
 
     /**
      * getTagNewsIdList
-     * @param null
+     * @param $tag_id
+     * @param $strStart
+     * @param $strCount
      * @access public
      * @return void
      */
@@ -83,13 +85,13 @@ class Dao_NewsTag extends Dao_Base
 
     /**
      * getTagNewsCount
-     * @param null
+     * @param $tag_id
      * @access public
      * @return void
      */
     public function getTagNewsCount($tag_id)
     {
-        $arrFields = array('count(*)');
+        $arrFields = array('count(*) as c');
         $arrConds = array(
             'tag_id =' => $tag_id,
         );
@@ -97,7 +99,7 @@ class Dao_NewsTag extends Dao_Base
         $arrAppends = null;
         $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
         $arrDBRet = $this->query($strSQL);
-        $tagNewsCount = $arrDBRet[0]['count(*)'];
+        $tagNewsCount = $arrDBRet[0]['c'];
         return $tagNewsCount;
     }
 

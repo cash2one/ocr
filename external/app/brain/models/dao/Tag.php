@@ -27,7 +27,7 @@ class Dao_Tag extends Dao_Base
 
     /**
      * @brief 连接db，表名初始化
-     * @return  null
+     * @return  void
      * Date: 2017/4/6
      * Time: 9:57
      **/
@@ -39,7 +39,6 @@ class Dao_Tag extends Dao_Base
 
     /**
      * getTagList
-     * @param null
      * @access public
      * @return void
      */
