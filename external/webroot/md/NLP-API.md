@@ -1,22 +1,43 @@
 # 简介
 
-本文档主要针对API开发者，调用AI服务相关的API接口有两种调用方式，两种不同的调用方式采用相同的接口URL，区别在于请求方式和鉴权方法不一样，请求参数和返回结果一致。
+Hi，您好，欢迎使用百度人脸识别API服务。
 
-**请求消息体格式**
+本文档主要针对API开发者，描述百度人脸识别接口服务的相关技术内容。如果您对文档内容有任何疑问，可以通过以下几种方式联系我们：
 
-API服务要求使用JSON格式的结构体来描述一个请求的具体内容。**发送时需要对body整体进行GBK编码。**
+* 在百度云控制台内**提交工单**，咨询问题类型请选择**人工智能服务**；
+* 加入**开发者QQ群**：224994340；
 
-**请求返回格式**
+## 接口能力
 
-API服务均采用JSON格式的消息体作为响应返回的格式。**返回内容为GBK编码**
+| 接口名称  | 接口能力简要描述                     |
+| :---- | :--------------------------- |
+| 人脸检测  | 检测人脸并定位，返回五官关键点，及人脸各属性值      |
+| 人脸比对  | 返回两两比对的人脸相似值                 |
+| 人脸识别  | 在人脸库中查找相似的人脸                |
+| 人脸认证  | 识别上传的图片是否为指定用户               |
+| 人脸库设置 | 对人脸库的相关操作，如注册、删除、更新、查找用户信息等 |
 
-# 调用方式一
+## 请求格式
 
-## 请求URL数据格式
+POST方式调用
+
+**注意：**要求使用JSON格式的结构体来描述一个请求的具体内容。**发送时需要对body整体进行GBK编码。**
+
+## 返回格式
+
+JSON格式，**返回内容为GBK编码**
+
+# 调用方式
+
+调用AI服务相关的API接口有两种调用方式，两种不同的调用方式采用相同的接口URL。
+
+区别在于**请求方式**和**鉴权方法**不一样，请求参数和返回结果一致。
+
+## 调用方式一
 
 向API服务地址使用POST发送请求，必须在URL中带上参数：
 
-**access\_token:** 必须参数，参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)。
+**access_token:** 必须参数，参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)。
 
 POST中参数按照API接口说明调用即可。
 
@@ -30,7 +51,7 @@ https://aip.baidubce.com/rpc/2.0/nlp/v1/wordseg?access_token=24.f9ba9c5241b67688
 
 # 调用方式二
 
-## 请求头域内容
+**请求头域内容**
 
 NLP的API服务需要在请求的HTTP头域中包含以下信息：
 
@@ -57,69 +78,34 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 > **说明：**方式二鉴权使用的[API认证机制](https://cloud.baidu.com/doc/Reference/AuthenticationMechanism.html)authorization必须通过百度云的[AK/SK](https://cloud.baidu.com/doc/Reference/GetAKSK.html)生成。
 
-# 错误信息格式
-
-若请求错误，服务器将返回的JSON文本包含以下参数：
-
-* **error\_code：**错误码；关于错误码的详细信息请参考“[公共错误码](#公共错误码)”。
-
-* **error\_msg：**错误描述信息，帮助理解和解决发生的错误。
-
-例如Access Token失效返回：
-
-```
-{
-  "error_code": 110,
-  "error_msg": "Access token invalid or no longer valid"
-}
-```
-
-
-需要重新获取新的Access Token再次请求即可。
-
-**Access Token错误码**
-
-| error\_CODE | error\_MSG                              | 解释               |
-| ----------- | --------------------------------------- | ---------------- |
-| 100         | Invalid parameter                       | 无效参数             |
-| 110         | Access token invalid or no longer valid | Access Token过期失效 |
-
-
-
-## 公共错误码
-
-| Code        | Message                               | HTTP Status Code | 说明       |
-| ----------- | ------------------------------------- | ---------------- | -------- |
-| FormatError | [param]:[param]=[Validation criteria] | 400              | 请求格式错误   |
-| Forbidden   | authentication failed                 | 403              | 认证失败或无权限 |
-| Unavailable | Service internal error occurred       | 500              | 内部服务发生错误 |
-
 
 # 分词接口
 
-**接口描述**
+## 接口描述
 
 分词接口提供基本词和混排两种粒度的分词结果，基本词粒度较小，适用于搜索引擎等需要更多召回的任务，而混排粒度倾向于保留更多的短语。
 
-**调用方式一请求示例**
+## 请求说明
 
-* HTTP方法: POST
+**请求示例**
 
-* 请求URL: `https://aip.baidubce.com/rpc/2.0/nlp/v1/wordseg`
+HTTP方法: `POST`
 
-* URL参数：<br>
+请求URL: `https://aip.baidubce.com/rpc/2.0/nlp/v1/wordseg`
+
+URL参数：
 
 | 参数           | 值                                        |
 | ------------ | ---------------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
-* Header如下：
+Header如下：
 
 | 参数           | 值                |
 | ------------ | ---------------- |
 | Content-Type | application/json |
 
-* body请求示例:
+Body请求示例:
 
   ```
   {
@@ -128,33 +114,40 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
   }
   ```
 
-**调用方式二请求示例**
-
-```
-POST /rpc/2.0/nlp/v1/wordseg HTTP/1.1
-accept-encoding: gzip, deflate
-x-bce-date: {utc-date-string}
-connection: keep-alive
-accept: */*
-host: aip.baidubce.com
-content-type: application/x-www-form-urlencoded
-authorization: {bce-authorization-string}
-
-{
-    "query": "百度是一家高科技公司",
-    "lang_id": 1
-}
-
-```
-
-
-
 **请求参数**
 
-| 参数名称     | 类型     | 详细说明                                     |
-| -------- | ------ | ---------------------------------------- |
-| query    | String | 必须，待分词的文本                                |
-| lang\_id | Int    | 非必须，默认为1，输入字符串的语言对应的id，简体中文设置为1（目前不支持其他语言） |
+| 参数名称     | 类型     | 是否必选 | 详细说明                                     |
+| --------- | ------ | ------ |------------------------------ |
+| query    | String | 是   | 待分词的文本                                |
+| lang\_id | Int    | 否   | 默认为1，输入字符串的语言对应的id，简体中文设置为1（目前不支持其他语言） |
+
+**请求示例代码**
+
+**提示一：**使用示例代码前，请记得替换其中的示例Token信息。
+
+**提示二：**部分语言依赖的类或库，请在代码注释中查看下载地址。
+
+{% NLP-API-Wordseg %}
+
+## 返回说明
+
+**返回参数**
+
+| 参数名称           | 类型     | 详细说明                                     |
+| --------------- | -------- | ---------------------------------------- |
+| wordsepbuf     | String | 基本词粒度结果，以\t分割                            |
+| wsbtermcount   | int    | 基本词粒度输出的词个数                              |
+| wsbtermoffsets | List   | 该参数为列表，元素个数为切分出来的词个数，每个元素值表示对应的基本词在被切分文本的起始位置（字节偏移） |
+| wsbtermpos     | List   | 参数值为列表，元素值为对应切分出来的基本词在 wordsepbuf的字节偏移以及长度，整数的低24bit为偏移，高8bit为长度 |
+| wpcompbuf      | String | 混排粒度结果，以\t分割                             |
+| wpbtermcount   | Int    | 混排粒度输出的词个数                               |
+| wpbtermoffsets | List   | 该参数为列表，元素个数为切分出来的词个数，每个元素值表示对应的词是从第几个基本词开始的（基本词偏移） |
+| wpbtermpos     | List   | 参数值为列表，元素值为对应切分出来的词在 wpcompbuf的字节偏移以及长度，整数的低24bit为偏移，高8bit为长度 |
+| subphrbuf      | String | 所有识别出来的短语，以\t分割                          |
+| spbtermcount   | Int    | 识别出来的短语个数                                |
+| spbtermoffsets | List   | 该参数为列表，元素个数为识别出来的短语个数，每个元素值表示对应短语是从第几个基本词开始的（基本词偏移） |
+| spbtermpos     | List   | 参数值为列表，元素值为对应切分出来的短语在 subphrbuf的字节偏移以及长度，整数的低24bit为偏移，高8bit为长度 |
+
 
 **返回示例**
 
@@ -273,80 +266,66 @@ authorization: {bce-authorization-string}
 }
 ```
 
-
-**返回参数**
-
-| 参数名称           | 类型     | 详细说明                                     |
-| -------------- | ------ | ---------------------------------------- |
-| wordsepbuf     | String | 基本词粒度结果，以\t分割                            |
-| wsbtermcount   | int    | 基本词粒度输出的词个数                              |
-| wsbtermoffsets | List   | 该参数为列表，元素个数为切分出来的词个数，每个元素值表示对应的基本词在被切分文本的起始位置（字节偏移） |
-| wsbtermpos     | List   | 参数值为列表，元素值为对应切分出来的基本词在 wordsepbuf的字节偏移以及长度，整数的低24bit为偏移，高8bit为长度 |
-| wpcompbuf      | String | 混排粒度结果，以\t分割                             |
-| wpbtermcount   | Int    | 混排粒度输出的词个数                               |
-| wpbtermoffsets | List   | 该参数为列表，元素个数为切分出来的词个数，每个元素值表示对应的词是从第几个基本词开始的（基本词偏移） |
-| wpbtermpos     | List   | 参数值为列表，元素值为对应切分出来的词在 wpcompbuf的字节偏移以及长度，整数的低24bit为偏移，高8bit为长度 |
-| subphrbuf      | String | 所有识别出来的短语，以\t分割                          |
-| spbtermcount   | Int    | 识别出来的短语个数                                |
-| spbtermoffsets | List   | 该参数为列表，元素个数为识别出来的短语个数，每个元素值表示对应短语是从第几个基本词开始的（基本词偏移） |
-| spbtermpos     | List   | 参数值为列表，元素值为对应切分出来的短语在 subphrbuf的字节偏移以及长度，整数的低24bit为偏移，高8bit为长度 |
-
-
 # 词性标注接口
 
-**接口描述**
+## 接口描述
 
 词性标注接口为分词结果中的每个单词标注一个正确的词性的程序，也标注每个词是名词、动词、形容词或其他词性。
 
-**调用方式一请求示例**
+## 请求说明
 
-* HTTP方法: POST
+**请求示例**
 
-* 请求URL: `https://aip.baidubce.com/rpc/2.0/nlp/v1/wordpos`
+HTTP方法: `POST`
 
-* URL参数：<br>
+请求URL: `https://aip.baidubce.com/rpc/2.0/nlp/v1/wordpos`
+
+URL参数：
 
 | 参数           | 值                                        |
 | ------------ | ---------------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
-* Header如下：
+Header如下：
 
 | 参数           | 值                |
 | ------------ | ---------------- |
 | Content-Type | application/json |
 
-* body请求示例:
+Body请求示例:
 
-  ```
+```json
   {
     "query": "你好百度"
   }
-  ```
-
-**调用方式二请求示例**
-
 ```
-POST /rpc/2.0/nlp/v1/wordpos HTTP/1.1
-accept-encoding: gzip, deflate
-x-bce-date: {utc-date-string}
-connection: keep-alive
-accept: */*
-host: aip.baidubce.com
-content-type: application/x-www-form-urlencoded
-authorization: {bce-authorization-string}
-
-{
-    "query": "你好百度"
-}
-```
-
 
 **请求参数**
 
 | Key   | 类型     | 含义及备注                                    |
 | ----- | ------ | ---------------------------------------- |
 | query | string | 带标注的文本串。算法内部使用GBK编码，外部如果要求UTF8编码，则需进行编码转换。 |
+
+**请求示例代码**
+
+**提示一：**使用示例代码前，请记得替换其中的示例Token。
+
+**提示二：**部分语言依赖的类或库，请在代码注释中查看下载地址。
+
+{% NLP-API-Wordpos %}
+
+## 返回说明
+
+**返回参数**
+
+| Key         | 类型     | 含义及备注                              |
+| ----------- | ------ | ---------------------------------- |
+| result_out | array  | 词性标注结果数组，数组中每个元素对应一个词汇。每个词汇是一个dict |
+| +word       | string | 词汇的字面                              |
+| +offset     | int    | 偏移量，以基本粒度词汇为单位                     |
+| +length     | int    | 长度，以基本粒度词汇为单位                      |
+| +type       | string | 词性                                 |
+| +confidence | float  | 置信度分值，0\~1                         |
 
 **返回示例**
 
@@ -359,17 +338,6 @@ authorization: {bce-authorization-string}
       ]
 }
 ```
-
-**返回参数**
-
-| Key         | 类型     | 含义及备注                              |
-| ----------- | ------ | ---------------------------------- |
-| result\_out | array  | 词性标注结果数组，数组中每个元素对应一个词汇。每个词汇是一个dict |
-| +word       | string | 词汇的字面                              |
-| +offset     | int    | 偏移量，以基本粒度词汇为单位                     |
-| +length     | int    | 长度，以基本粒度词汇为单位                      |
-| +type       | string | 词性                                 |
-| +confidence | float  | 置信度分值，0\~1                         |
 
 **词性缩略词说明**
 
@@ -417,100 +385,81 @@ authorization: {bce-authorization-string}
 
 # 词向量表示接口
 
-**接口描述**
+## 接口描述
 
 词向量接口提供两种功能：输入两个词tid=1得到两个词的相似度结果，输入1个词tid=2得到词的词向量。
 
-**调用方式一请求示例**
+**请求示例**
 
-* HTTP方法: POST
+HTTP方法: `POST`
 
-* 请求URL: `https://aip.baidubce.com/rpc/2.0/nlp/v1/wordembedding`
+请求URL: `https://aip.baidubce.com/rpc/2.0/nlp/v1/wordembedding`
 
-* URL参数：<br>
+URL参数：
 
 | 参数           | 值                                        |
 | ------------ | ---------------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
-* Header如下：
+Header如下：
 
 | 参数           | 值                |
 | ------------ | ---------------- |
 | Content-Type | application/json |
 
-* body请求示例:
+Body请求示例:
 
-    - 输入两个词
+**输入两个词**
 
-  ```
+```json
   {
     "query1":"百度",
     "query2":"谷歌",
     "tid":1
   }
-  ```
+```
 
-    - 输入一个词
+**输入一个词**
 
-  ```
+```json
   {
     "query1":"百度",
     "tid":2
   }
-  ```
-
-**调用方式二请求示例**
-
-- 输入两个词
-
-  ```
-  POST /rpc/2.0/nlp/v1/wordembedding HTTP/1.1
-  accept-encoding: gzip, deflate
-  x-bce-date: {utc-date-string}
-  connection: keep-alive
-  accept: */*
-  host: aip.baidubce.com
-  content-type: application/x-www-form-urlencoded
-  authorization: {bce-authorization-string}
-
-  {
-    "query1":"百度",
-    "query2":"谷歌",
-    "tid":1
-  }
-  ```
-
-- 输入一个词
-
-  ```
-  POST /rpc/2.0/nlp/v1/wordembedding HTTP/1.1
-  accept-encoding: gzip, deflate
-  x-bce-date: {utc-date-string}
-  connection: keep-alive
-  accept: */*
-  host: aip.baidubce.com
-  content-type: application/x-www-form-urlencoded
-  authorization: {bce-authorization-string}
-
-  {
-    "query1":"百度",
-    "tid":2
-  }
-  ```
+```
 
 **请求参数**
 
-| 参数     | 说明                                 |
-| ------ | ---------------------------------- |
-| query1 | 输入的第一个词                            |
-| query2 | 输入的第二个词                            |
-| tid    | 指定算法类型，tid=1，返回两个词的相似度；tid=2，返回词向量 |
+| 参数    | 是否必选 | 说明                                 |
+| ------ | ------- | ---------------------------------- |
+| query1 | 是      | 输入的第一个词                            |
+| query2 | 是      | 输入的第二个词                            |
+| tid    | 是      | 指定算法类型，tid=1，返回两个词的相似度；tid=2，返回词向量 |
 
+**请求示例代码**
+
+**提示一：**使用示例代码前，请记得替换其中的示例Token、图片地址或Base64信息。
+
+**提示二：**部分语言依赖的类或库，请在代码注释中查看下载地址。
+
+{% NLP-API-Wordembedding %}
+
+## 返回说明
+
+**返回参数**
+
+| 参数     | 描述        |
+| -------- | ------------ |
+| ret     | 属性对象的集合 |
+| message | 词汇的字面     |
+| data    | 返回数据      |
+| +vec    | 词向量结果     |
+| +sim    | 相似度对象     |
+| ++sim   | 相似度       |
 
 **返回示例**
 
-```
+```json
 {
   "ret":0,
   "message":"",
@@ -523,82 +472,55 @@ authorization: {bce-authorization-string}
 }
 ```
 
-**返回参数**
-
-
-| 参数      | 描述        |
-| :------ | :-------- |
-| ret     | 人脸属性对象的集合 |
-| message | 词汇的字面     |
-| data    | 返回数据      |
-| +vec    | 词向量结果     |
-| +sim    | 相似度对象     |
-| ++sim   | 相似度       |
-
 # 中文DNN语言模型
 
-**接口描述**
+## 接口描述
 
 中文DNN语言模型接口用于输出切词结果并给出每个词在句子中的概率值。
 
-**调用方式一请求示例**
+## 请求说明
 
-* HTTP方法： POST
+**请求示例**
 
-* 请求URL： `https://aip.baidubce.com/rpc/2.0/nlp/v1/dnnlm_cn`
+HTTP方法：`POST`
 
-* URL参数：<br>
+请求URL： `https://aip.baidubce.com/rpc/2.0/nlp/v1/dnnlm_cn`
+
+URL参数：
 
 | 参数           | 值                                        |
 | ------------ | ---------------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
-* Header如下：
+Header如下：
 
 | 参数           | 值                |
 | ------------ | ---------------- |
 | Content-Type | application/json |
 
-* body请求示例:
+Body请求示例:
 
-  ```
+```json
   {
     "input_sequence":"百度是个搜索公司"
   }
-  ```
-
-**调用方式二请求示例**
-
-```
-POST /rpc/2.0/nlp/v1/dnnlm_cn HTTP/1.1
-accept-encoding: gzip, deflate
-x-bce-date: {utc-date-string}
-connection: keep-alive
-accept: */*
-host: aip.baidubce.com
-content-type: application/x-www-form-urlencoded
-authorization: {bce-authorization-string}
-
-{
-    "input_sequence":"百度是个搜索公司"
-}
 ```
 
 **请求参数**
 
-| 参数              | 说明          |
+| 参数             | 说明          |
 | --------------- | ----------- |
-| Input\_sequence | 输入的句子，不需要切词 |
+| input\_sequence | 输入的句子，不需要切词 |
 
+**请求示例代码**
 
-**返回示例**
+**提示一：**使用示例代码前，请记得替换其中的示例Token。
 
-```
-{
-  "seq_seg":"百度 是 个 搜索 公司",
-  "seq_prob":" 0.00059052   0.00373688  0.0372463   0.00137015  0.000118814 "
-}
-```
+**提示二：**部分语言依赖的类或库，请在代码注释中查看下载地址。
+
+{% NLP-API-Dnnlm-cn %}
+
+## 返回说明
 
 **返回参数**
 
@@ -607,35 +529,45 @@ authorization: {bce-authorization-string}
 | seq\_seg  | 句子的切词结果        |
 | seq\_prob | 切词后每个词在句子中的概率值 |
 
+**返回示例**
+
+```json
+{
+  "seq_seg":"百度 是 个 搜索 公司",
+  "seq_prob":" 0.00059052   0.00373688  0.0372463   0.00137015  0.000118814 "
+}
+```
+
 
 # 短文本相似度接口
 
-
-**功能**
+## 接口描述
 
 短文本相似度接口用来判断两个文本的相似度得分。
 
-**调用方式一请求示例**
+## 请求说明
 
-* HTTP方法： POST
+**请求示例**
 
-* 请求URL： `https://aip.baidubce.com/rpc/2.0/nlp/v1/simnet`
+HTTP方法：`POST`
 
-* URL参数：<br>
+请求URL：`https://aip.baidubce.com/rpc/2.0/nlp/v1/simnet`
+
+URL参数：
 
 | 参数           | 值                                        |
 | ------------ | ---------------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
-* Header如下：
+Header如下：
 
 | 参数           | 值                |
 | ------------ | ---------------- |
 | Content-Type | application/json |
 
-* body请求示例:
+Body请求示例:
 
-```
+```json
 {
   "input":
     {
@@ -645,38 +577,35 @@ authorization: {bce-authorization-string}
     }
 }
 ```
-
-**调用方式二请求示例**
-
-```
-POST /rpc/2.0/nlp/v1/simnet HTTP/1.1
-accept-encoding: gzip, deflate
-x-bce-date: {utc-date-string}
-connection: keep-alive
-accept: */*
-host: aip.baidubce.com
-content-type: application/x-www-form-urlencoded
-authorization: {bce-authorization-string}
-
-{
-  "input":
-    {
-      "qslots":[{"terms_sequence":"你好百度” ", "type":0, "items":[]}],
-      "tslots":[{"terms_sequence":"你好世界” ", "type":0, "items":[]}],
-      "type":0
-    }
-}
-```
-
 
 **请求参数**
 
 | 参数                      | 说明       |
-| ----------------------- | -------- |
+| ----------------------- | ------------- |
 | qslots中的terms\_sequence | 短文本1     |
 | tslots中的terms\_sequence | 短文本2     |
 | items                   | 均设置为空列表  |
 | type                    | 类别，均设置为0 |
+
+**请求示例代码**
+
+**提示一：**使用示例代码前，请记得替换其中的示例Token。
+
+**提示二：**部分语言依赖的类或库，请在代码注释中查看下载地址。
+
+{% NLP-API-Simnet %}
+
+## 返回说明
+
+**返回参数**
+
+| 参数          | 说明          |
+| ----------- | ----------- |
+| score       | 两个文本相似度得分   |
+| error       | error code  |
+| type        | 默认为0        |
+| error\_note | error对应文字说明 |
+| items       | 默认为空        |
 
 **返回示例**
 
@@ -693,17 +622,7 @@ authorization: {bce-authorization-string}
 }
 ```
 
-**返回参数**
-
-| 参数          | 说明          |
-| ----------- | ----------- |
-| score       | 两个文本相似度得分   |
-| error       | error code  |
-| type        | 默认为0        |
-| error\_note | error对应文字说明 |
-| items       | 默认为空        |
-
-**错误码说明**
+**此接口业务错误码说明**
 
 | Code | Message               | 返回说明      |
 | ---- | --------------------- | --------- |
@@ -719,55 +638,38 @@ authorization: {bce-authorization-string}
 
 # 评论观点抽取接口
 
-**功能**
+## 接口描述
 
 评论观点抽取接口用来提取一个句子观点评论的情感属性。
 
-**调用方式一请求示例**
+## 请求说明
 
-* HTTP方法: POST
+**请求示例**
 
-* 请求URL: `https://aip.baidubce.com/rpc/2.0/nlp/v1/comment_tag`
+HTTP方法: `POST`
 
-* URL参数：<br>
+请求URL: `https://aip.baidubce.com/rpc/2.0/nlp/v1/comment_tag`
+
+URL参数：
 
 | 参数           | 值                                        |
 | ------------ | ---------------------------------------- |
 | access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
 
-* Header如下：
+Header如下：
 
 | 参数           | 值                |
 | ------------ | ---------------- |
 | Content-Type | application/json |
 
-* body请求示例:
+Body请求示例:
 
-  ```
+```json
   {
     "comment":"个人觉得福克斯好，外观漂亮年轻，动力和操控性都不错",
     "entity":"NULL",
     "type":"10"
   }
-  ```
-
-**调用方式二请求示例**
-
-```
-POST /rpc/2.0/nlp/v1/comment_tag HTTP/1.1
-accept-encoding: gzip, deflate
-x-bce-date: {utc-date-string}
-connection: keep-alive
-accept: */*
-host: aip.baidubce.com
-content-type: application/x-www-form-urlencoded
-authorization: {bce-authorization-string}
-
-{
-    "comment":"个人觉得福克斯好，外观漂亮年轻，动力和操控性都不错",
-    "entity":"NULL",
-    "type":"10"
-}
 ```
 
 **请求参数**
@@ -795,19 +697,15 @@ authorization: {bce-authorization-string}
 | 11   | 生活     |
 | 12   | 购物     |
 
+**请求示例代码**
 
-**返回示例**
+**提示一：**使用示例代码前，请记得替换其中的示例Token。
 
-```
-{
-  "abstract":"<span>动力和操控性都不错</span>",
-  "adj":"不错",
-  "comment":"个人觉得福克斯好，外观漂亮年轻，动力和操控性都不错",
-  "entity":"NULL",
-  "fea":"动力",
-  "type":"2"
-}
-```
+**提示二：**部分语言依赖的类或库，请在代码注释中查看下载地址。
+
+{% NLP-API-Comment_tag %}
+
+## 返回说明
 
 **返回参数**
 
@@ -821,3 +719,40 @@ authorization: {bce-authorization-string}
 | type     | 表示情感极性（其中2表示积极、1表示中性、0表示消极）。 |
 | 其他参数     | 暂不生效                         |
 
+**返回示例**
+
+```json
+{
+  "abstract":"<span>动力和操控性都不错</span>",
+  "adj":"不错",
+  "comment":"个人觉得福克斯好，外观漂亮年轻，动力和操控性都不错",
+  "entity":"NULL",
+  "fea":"动力",
+  "type":"2"
+}
+```
+
+# 错误码
+
+若请求错误，服务器将返回的JSON文本包含以下参数：
+
+* **error_code：**错误码。
+
+* **error_msg：**错误描述信息，帮助理解和解决发生的错误。
+
+例如Access Token失效返回：
+
+```
+{
+  "error_code": 110,
+  "error_msg": "Access token invalid or no longer valid"
+}
+```
+
+需要重新获取新的Access Token再次请求即可。
+
+| 错误码   | 错误信息                          | 描述     |
+| ------ | --------------------------------- | -------------- |
+| 400    | Validation criteria               |  请求格式错误    |
+| 403    | Authentication failed             | 认证失败或无权限  |
+| 500    | Service internal error occurred   |  内部服务发生错误 |
