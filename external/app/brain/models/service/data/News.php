@@ -65,7 +65,7 @@ class Service_Data_News
                 foreach ($newsIdList as $x_value) {
                     $newsIds[] = $x_value['news_id'];
                 }
-                $newsList = $this->newsDao->getNewsListByNewsIdList($newsIdList);
+                $newsList = $this->newsDao->getNewsListByNewsIdList($newsIds);
             }
             Brain_Memcache::set($newsList_key, $newsList, Lib_Const::NEWS_CACHE_TIME);
             return $newsList;

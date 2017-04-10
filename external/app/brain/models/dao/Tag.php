@@ -79,4 +79,25 @@ class Dao_Tag extends Dao_Base
         return $arrDBRet;
     }
 
+    /**
+     * getTagListByIds
+     *
+     * @param mixed $tagIds
+     * @access public
+     * @return void
+     */
+    public function getTagListByIds($tagIds)
+    {
+        $arrFields = $this->tagListFields;
+        $arrConds =  'id IN '.$this->getSQLIn($tagIds);
+        $arrOptions = null;
+        $arrAppends = null;
+
+        $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
+
+        $arrDBRet = $this->query($strSQL);
+
+        return $arrDBRet;
+    }
+
 }
