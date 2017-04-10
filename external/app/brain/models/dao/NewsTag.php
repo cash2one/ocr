@@ -90,13 +90,9 @@ class Dao_NewsTag extends Dao_Base
     public function getTagNewsCount($tag_id)
     {
         $arrFields = array('count(*)');
-        if('0' != $tag_id){
-            $arrConds = array(
-                'tag_id =' => $tag_id,
-            );
-        }else{
-            $arrConds = null;
-        }
+        $arrConds = array(
+            'tag_id =' => $tag_id,
+        );
         $arrOptions = null;
         $arrAppends = null;
         $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
