@@ -72,7 +72,8 @@ class Dao_News extends Dao_Base
     {
         $arrFields = $this->lastestNewsFields;
         $arrConds = array(
-            'place=' => 0
+            'place=' => 0,
+            'show_index=' => 0,
         );
         $arrOptions = null;
         $arrAppends = array(
