@@ -47,19 +47,15 @@ class Service_Data_News
         $newsList_key = 'ai_platform_news_tag_' . $tag . '_offset_' . $offset;
         $newsList_value = Brain_Memcache::get($newsList_key);
         if (!empty($newsList_value)) {
-            //echo "新闻列表，命中缓存...";
             $newsList = $newsList_value;
             return $newsList;
         } else {
-            //echo "新闻列表，未命中缓存...";
             if ('0' == $tag) {
                 $newsStart = '' . (($offset - 1) * 10);
                 $newsList = $this->newsDao->getNewsList($newsStart, '10');
             } else {
-                //查询t_news_tag表，找出第offset页的news_id;
                 $newsStart = '' . (($offset - 1) * 10);
                 $newsIdList = $this->newsTagDao->getTagNewsIdList($tag, $newsStart, '10');
-                //查询t_news表，逐一查询每条news_id对应的记录;
                 $newsIds = array();
                 $newsList = array();
                 foreach ($newsIdList as $x_value) {
@@ -83,11 +79,9 @@ class Service_Data_News
         $tag_pagination = 'ai_platform_news_tagpagination_' . $tag;
         $tag_pagination_total = Brain_Memcache::get($tag_pagination);
         if (!empty($tag_pagination_total)) {
-            //echo "分页信息，命中缓存...";
             $total = $tag_pagination_total;
             return $total;
         } else {
-            //echo "分页信息，未命中缓存...";
             if ('0' === $tag) {
                 $tagNewsCount = $this->newsDao->getNewsCount();
             } else {

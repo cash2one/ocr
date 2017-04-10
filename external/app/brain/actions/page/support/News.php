@@ -53,17 +53,6 @@ class Action_News extends Ap_Action_Abstract {
                 }
                 $tagList = $dbTag->getTagListByIds($tagIds);
             }
-
-            /*if (is_array($newsTag) && count($newsTag) > 0) {
-                for($i=0;$i<count($newsTag);$i++){
-                    foreach($newsTag[$i] as $x=>$x_value){
-                        $tagElement = $dbTag->getTag(''.$x_value);
-                        for($j=0;$j<count($tagElement);$j++){
-                            array_push($tagList, $tagElement[$j]);
-                        }
-                    }
-                }
-            }*/
             $arrRet = array(
                 'errno' => 0,
                 'msg' => 'success',
@@ -71,12 +60,9 @@ class Action_News extends Ap_Action_Abstract {
             );
             if (is_array($arrNews) && count($arrNews) > 0) {
                 $arrRet['data'] = $arrNews[0];
-                //增加tag信息
                 $arrRet['tagList'] = $tagList;
                 $dbNews->addPv($strId);
             }
-            //Brain_Output::jsonOutput($arrRet);
-            //Brain_Output::htmlOutput($arrRet, 'brain/page/news/detail.tpl');
             $arrRet['page'] = substr(strtolower(__CLASS__), 7);
             Brain_Output::htmlOutput($arrRet, 'brain/platform/support/news/news-con.tpl');
         } else if ('delete' === $strAction) {
@@ -147,20 +133,19 @@ class Action_News extends Ap_Action_Abstract {
             header('Content-Type: text/html; charset=UTF-8');
             echo $strRet;
         } else {
-            //Brain_Output::htmlOutput(array(), 'brain/page/news/news.tpl');
-            $offset = Brain_Util::getParamAsInt($arrInput, 'offset', 1);    //默认1
-            $tag = ''.Brain_Util::getParamAsInt($arrInput, 'tag', 0);    //默认所有标签
-            //请求热门标签:tag
+            $offset = Brain_Util::getParamAsInt($arrInput, 'offset', 1);
+            $tag = ''.Brain_Util::getParamAsInt($arrInput, 'tag', 0);
+            //热门标签
             $service_Tag = new Service_Data_Tag();
             $tagList = $service_Tag->getTags();
-            //请求新闻列表:tag、offset
+            //新闻列表
             $service_News = new Service_Data_News();
             $newsList = $service_News->getNewsListByTagAndOffset($tag, $offset);
-            //分页信息请求：tag、offset---查询t_news_tag表，得出记录条数，求得总页码、当前页码
+            //分页信息
             $pagination = array();
             $pagination['total'] = $service_News->getPaginationByTag($tag);
             $pagination['offset'] = ''.$offset;
-            //汇总
+
             $arrRet = array();
             $arrRet['page'] = substr(strtolower(__CLASS__), 7);
             $arrRet['newsList'] = $newsList;

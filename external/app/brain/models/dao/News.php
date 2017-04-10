@@ -106,7 +106,6 @@ class Dao_News extends Dao_Base
         return $arrDBRet;
     }
 
-
     /**
      * getNewsCount
      * @access public
@@ -168,11 +167,8 @@ class Dao_News extends Dao_Base
         $arrAppends = array(
             'order by id desc',
         );
-
         $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
-
         $arrDBRet = $this->query($strSQL);
-
         return $arrDBRet;
     }
 

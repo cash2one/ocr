@@ -6,7 +6,6 @@
  */
 class Dao_NewsTag extends Dao_Base
 {
-
     // 表名
     private $strTable;
 
