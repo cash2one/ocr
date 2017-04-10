@@ -66,16 +66,22 @@ class Service_Data_News{
                 $newsStart = ''.(($offset-1) * 10);
                 $newsIdList = $this ->newsTagDao->getTagNewsIdList($tag,$newsStart,'10');
                 //查询t_news表，逐一查询每条news_id对应的记录;
+                $newsIds = '';
                 $newsList = array();
-                /*for($i=0;$i<count($newsIdList);$i++){
+                for($i=0;$i<count($newsIdList);$i++){
                     foreach($newsIdList[$i] as $x=>$x_value){
-                        $tagNewsElement = $this->newsDao->getNews(''.$x_value);
-                        for($j=0;$j<count($tagNewsElement);$j++){
+                        echo $x_value;
+                        echo "<br>";
+                        $newsIds .= '"'.$x_value.'"'.',';
+                        /*$tagNewsElement = $this->newsDao->getNews(''.$x_value);
+                       /for($j=0;$j<count($tagNewsElement);$j++){
                             array_push($newsList, $tagNewsElement[$j]);
-                        }
+                        }*/
                     }
-                }*/
-                $newsList = $this->newsDao->getNewsListByNewsIdList($newsIdList);
+                }
+                chop($newsIds,",");
+                echo $newsIds;
+                $newsList = $this->newsDao->getNewsListByNewsIdList($newsIds);
             }
             Brain_Memcache::set($newsList_key, $newsList, Lib_Const::NEWS_CACHE_TIME);
             return $newsList;
