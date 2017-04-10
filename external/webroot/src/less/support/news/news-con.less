@@ -55,7 +55,7 @@
         .tag-list {
             margin-top: 8px;
             a {
-                line-height: 24px;
+                line-height: 23px;
                 border: 1px solid #f2f2f2;
                 border-radius: 3px;
                 margin-right: 10px;
@@ -72,22 +72,25 @@
         }
     }
 }
+.ai-platform {
+    .@{prefix}-main {
+        margin: 40px auto 22px auto;
+        width: 800px;
+        padding: 0;
 
-.@{prefix}-main {
-    margin: 40px 0 22px;
+        .@{prefix}-content {
+            font-size: @font-size-1;
+            color: @font-gray;
+            line-height: 24px;
 
-    .@{prefix}-content {
-        font-size: @font-size-1;
-        color: @font-gray;
-        line-height: 24px;
+            div,
+            p {
+                margin-bottom: 8px;
+            }
 
-        div,
-        p {
-            margin-bottom: 8px;
-        }
-
-        img {
-            margin: 14px auto;
+            img {
+                margin: 14px auto;
+            }
         }
     }
 }
