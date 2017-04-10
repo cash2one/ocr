@@ -288,7 +288,7 @@ class Cas_Client {
     	if(strcmp(strtolower($_SERVER['HTTPS']),'on') == 0) {
     		$strProtocol = 'https';
     	}
-    	$strReqUrl = $strProtocol . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    	$strReqUrl = $strProtocol . '://' . 'ai.baidu.com' . $_SERVER['REQUEST_URI'];
     	$strSTKeyParamName = $this->_objCasInfo->getStKeyParamName();
     	$intP = strpos($strReqUrl, "{$strSTKeyParamName}");
     	if ($intP>0) {
