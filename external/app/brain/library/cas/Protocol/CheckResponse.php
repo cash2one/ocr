@@ -13,6 +13,7 @@ class Cas_Protocol_CheckResponse extends Cas_Protocol {
 	var $reserve;		// 登录时存入的保留字段
 	var $tgc; //tgc
 
+
     
     /**
      * @return int
