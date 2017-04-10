@@ -73,7 +73,7 @@ class Dao_NewsTag extends Dao_Base
         );
         $arrOptions = null;
         $arrAppends = array(
-            'order by id desc',
+            'order by news_id desc',
             'limit ' . intval($strStart) . ', ' . intval($strCount),
         );
         $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
