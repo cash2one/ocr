@@ -1,19 +1,21 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: songqingyun
  * Date: 2017/3/8
  * Time: 下午5:41
  */
-class Service_Data_News{
+class Service_Data_News
+{
 
     protected $newsDao;
     protected $newsTagDao;
 
     public function __construct()
     {
-        $this ->newsDao = new Dao_News();
-        $this ->newsTagDao = new Dao_NewsTag();
+        $this->newsDao = new Dao_News();
+        $this->newsTagDao = new Dao_NewsTag();
     }
 
     /**
@@ -22,9 +24,10 @@ class Service_Data_News{
      * @return int 最新的新闻ID
      * @author songqingyun
      */
-    public function getNewsLastId(){
-        $news = $this->newsDao->getNewsList(0,1);
-        if (empty($news)){
+    public function getNewsLastId()
+    {
+        $news = $this->newsDao->getNewsList(0, 1);
+        if (empty($news)) {
             return 1;
         }
         return $news[0]['id'];
@@ -39,12 +42,12 @@ class Service_Data_News{
      */
     public function getNewsListByTagAndOffset($tag, $offset)
     {
-        if(1 > $offset){
+        if (1 > $offset) {
             $offset = 1;
         }
-        $newsList_key = 'ai_platform_news_tag_'.$tag.'_offset_'.$offset;
+        $newsList_key = 'ai_platform_news_tag_' . $tag . '_offset_' . $offset;
         $newsList_value = Brain_Memcache::get($newsList_key);
-        if(!empty($newsList_value)){
+        if (!empty($newsList_value)) {
             //echo "新闻列表，命中缓存...";
             $newsList = $newsList_value;
             /*echo $newsList_key;
@@ -58,30 +61,20 @@ class Service_Data_News{
             return $newsList;
         } else {
             //echo "新闻列表，未命中缓存...";
-            if('0' == $tag){
-                $newsStart = ''.(($offset-1) * 10);
-                $newsList = $this->newsDao->getNewsList($newsStart,'10');
-            }else{
+            if ('0' == $tag) {
+                $newsStart = '' . (($offset - 1) * 10);
+                $newsList = $this->newsDao->getNewsList($newsStart, '10');
+            } else {
                 //查询t_news_tag表，找出第offset页的news_id;
-                $newsStart = ''.(($offset-1) * 10);
-                $newsIdList = $this ->newsTagDao->getTagNewsIdList($tag,$newsStart,'10');
+                $newsStart = '' . (($offset - 1) * 10);
+                $newsIdList = $this->newsTagDao->getTagNewsIdList($tag, $newsStart, '10');
                 //查询t_news表，逐一查询每条news_id对应的记录;
-                $newsIds = '';
+                $newsIds = array();
                 $newsList = array();
-                for($i=0;$i<count($newsIdList);$i++){
-                    foreach($newsIdList[$i] as $x=>$x_value){
-                        echo $x_value;
-                        echo "<br>";
-                        $newsIds .= '"'.$x_value.'"'.',';
-                        /*$tagNewsElement = $this->newsDao->getNews(''.$x_value);
-                       /for($j=0;$j<count($tagNewsElement);$j++){
-                            array_push($newsList, $tagNewsElement[$j]);
-                        }*/
-                    }
+                foreach ($newsIdList as $x_value) {
+                    $newsIds[] = $x_value['news_id'];
                 }
-                chop($newsIds,",");
-                echo $newsIds;
-                $newsList = $this->newsDao->getNewsListByNewsIdList($newsIds);
+                $newsList = $this->newsDao->getNewsListByNewsIdList(q);
             }
             Brain_Memcache::set($newsList_key, $newsList, Lib_Const::NEWS_CACHE_TIME);
             return $newsList;
@@ -96,9 +89,9 @@ class Service_Data_News{
      */
     public function getPaginationByTag($tag)
     {
-        $tag_pagination = 'ai_platform_news_tagpagination_'.$tag;
+        $tag_pagination = 'ai_platform_news_tagpagination_' . $tag;
         $tag_pagination_total = Brain_Memcache::get($tag_pagination);
-        if(!empty($tag_pagination_total)){
+        if (!empty($tag_pagination_total)) {
             //echo "分页信息，命中缓存...";
             $total = $tag_pagination_total;
             /*echo $tag_pagination;
@@ -107,12 +100,12 @@ class Service_Data_News{
             return $total;
         } else {
             //echo "分页信息，未命中缓存...";
-            if('0' === $tag){
-                $tagNewsCount = $this ->newsDao->getNewsCount();
-            } else{
-                $tagNewsCount = $this ->newsTagDao->getTagNewsCount($tag);
+            if ('0' === $tag) {
+                $tagNewsCount = $this->newsDao->getNewsCount();
+            } else {
+                $tagNewsCount = $this->newsTagDao->getTagNewsCount($tag);
             }
-            $total = ''.ceil( intval($tagNewsCount)/10);
+            $total = '' . ceil(intval($tagNewsCount) / 10);
             Brain_Memcache::set($tag_pagination, $total, Lib_Const::NEWS_CACHE_TIME);
             return $total;
         }

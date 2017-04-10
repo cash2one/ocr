@@ -165,7 +165,7 @@ class Dao_News extends Dao_Base
     {
         $arrFields = $this->arrDefaultFields;
         $arrConds = array(
-            "id IN" => $newsIdList,
+            'id IN ' => $this->getSQLIn($newsIdList),
         );
         $arrOptions = null;
         $arrAppends = array(
