@@ -60,14 +60,22 @@
         max-width: 100%;
     }
 
-    code.hljs {
-        padding: 20px;
+    code {
+        padding: 2px 5px;
+        border: 1px solid #ebebeb;
     }
 
-    code {
-        max-width: 100%;
-        overflow: auto;
-        border-radius: 2px;
+    // 块级代码
+    pre {
+        code {
+            padding: 20px;
+            border: 0;
+            max-width: 100%;
+            overflow: auto;
+            border-radius: 2px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
     }
 
     strong {
@@ -99,7 +107,7 @@
 
     th,
     td {
-        min-width: 50px;
+        min-width: 80px;
         padding: 6px 20px;
         border: 1px solid #ebebeb;
         font-size: 12px;
