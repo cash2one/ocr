@@ -12,6 +12,9 @@ class Brain_Token {
     const OPENAPI_URL = "https://openapi.baidu.com/oauth/2.0/token";
     const MEMCACHE_KEY_TOKEN = "openapi_token";
 
+    const BCE_URL = "https://aip.baidubce.com/oauth/2.0/token";
+    const MEMCACHE_KEY_BCE_TOKEN = "bce_token";
+
     /**
      * getToken 获取token
      * 
@@ -66,6 +69,41 @@ class Brain_Token {
         {
             return;
         }
+    }
+
+    public static function getBceToken(){
+        $token = Brain_Memcache::get(Brain_Token::MEMCACHE_KEY_BCE_TOKEN);
+
+        if($token == '')
+        {
+            $openapiConf = Bd_Conf::getAppConf('bceapi');
+
+            $tokenUrl = Brain_Token::BCE_URL . '?' .
+                'grant_type=' . $openapiConf['grant_type'] . '&' .
+                'client_id=' . $openapiConf['client_id'] . '&' .
+                'client_secret=' . $openapiConf['client_secret'];
+
+            //echo file_get_contents($tokenUrl);
+            $tokenInfo = json_decode(file_get_contents($tokenUrl));
+
+            if(array_key_exists('access_token', $tokenInfo))
+            {
+                return $tokenInfo->access_token;
+            }
+            else
+            {
+                return;
+            }
+
+            if($token != '')
+            {
+                Brain_Memcache::set(
+                    Brain_Token::MEMCACHE_KEY_BCE_TOKEN,
+                    $token, 20 * 24 * 3600);
+            }
+        }
+
+        return $token;
     }
 
 }
