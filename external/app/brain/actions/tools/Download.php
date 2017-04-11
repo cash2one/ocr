@@ -26,10 +26,10 @@ class Action_Download extends Ap_Action_Abstract
             if($userInfo != false){
                 $passId = $userInfo['uid'];
             }else{
-                var_dump("No passId!");
+                // var_dump("No passId!");
             }
         } catch (Exception $e) {
-            print $e->getMessage();
+            // print $e->getMessage();
         }
 
 
@@ -81,10 +81,10 @@ class Action_Download extends Ap_Action_Abstract
             $objCheckRes = $cas_client->validate();
             if (!is_null($objCheckRes)) {
                 $ucid = (string)$objCheckRes->getUcid();
-                var_dump($ucid);
+                // var_dump($ucid);
             }
         } catch (Exception $e) {
-            print $e->getMessage();
+            // print $e->getMessage();
         }
         
         ob_start(); 
