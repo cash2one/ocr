@@ -81,6 +81,11 @@
                                     通用文字识别（含位置信息版）
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="/tech/ocr/webimage">
+                                        网络图片文字识别
+                                    </a>
+                                </li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>人脸识别</span>
@@ -248,7 +253,7 @@
         <div class="tech-banner-btn-list">
             <a role="button"
                class="btn-primary media ai-redirect"
-               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">立即使用</a>
+               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">免费使用</a>
             <a role="button"
                class="btn-other media"
                href="
@@ -257,8 +262,12 @@
                {%else%}
                https://cloud.baidu.com/doc/OCR/index.html
                {%/if%}">
-                技术文档
+                开通付费
             </a>
+            <a href="#" class="product-price"></a>
+        </div>
+        <div class="product-word">
+            每月<div class="word-point">15000</div>次免费调用量，开通付费后用量<div class="word-point">不再设限！</div>
         </div>
     </div>
 </div>
@@ -268,8 +277,8 @@
             功能介绍
         </div>
         <div class="tech-function-info">
-            支持多场景下整图文字检测、定位、识别。支持任意场景、复杂背景、任意版面识别，
-            支持10多种语言的识别能准确定位并返回文字位置信息，方便客户进行二次处理
+            支持多场景下整图文字检测、定位、识别。支持任意场景、复杂背景、任意版面识别，支持10多种语言的识别<br>
+            能准确定位并返回文字位置信息，方便客户进行二次处理
         </div>
         <div class="tech-function-detail tech-clear">
             <div class="tech-function-original-card"></div>
@@ -561,10 +570,22 @@
                 </div>
             </div>
             <div class="product-box-3">
+                <div class="box-head">合作咨询</div>
+                <div class="box-body">
+                    <div class="box-body-header">如果您有以下的需求或其他需求，您可以提交合作咨询：</div>
+                    <div class="box-body-connent">1.如果您的调用量远大于最大的阶梯段，并需要更低的价格；</div>
+                    <div class="box-body-connent">2.如果您需要更高的QPS/并发；</div>
+                    <div class="box-body-connent">3.如果您有其他的OCR要求；</div>
+                    <div class="box-body-connent">4.如果您对现有的接口/SDK/文档有任何建议意见。</div>
+                </div>
+            </div>
+            <div class="product-box-4">
                 <div class="box-head">调用失败如何计费？</div>
                 <div class="box-body">
                     <div class="box-body-connent">
-                        通用文字识别（含位置信息版）任何调用失败均不计入调用次数，不产生任何费用
+                        <div class="product-error-query">
+                            通用文字识别（含位置信息版）任何调用失败均不算作一次需计费的调用，不产生任何费用
+                        </div>
                     </div>
                 </div>
             </div>
@@ -575,6 +596,9 @@
                href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">
                 免费使用
             </a>
+            <a role="button"
+               class="btn-primary large ai-redirect"
+               href="#">开通付费</a>
         </div>
     </div>
 </div>

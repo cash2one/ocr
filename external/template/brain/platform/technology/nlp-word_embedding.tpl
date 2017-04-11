@@ -81,6 +81,11 @@
                                     通用文字识别（含位置信息版）
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="/tech/ocr/webimage">
+                                        网络图片文字识别
+                                    </a>
+                                </li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>人脸识别</span>
