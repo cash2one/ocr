@@ -258,7 +258,7 @@
                class="btn-other media"
                href="
                {%if $src eq Null%}
-               /docs#OCR
+               /docs#OCR-API
                {%else%}
                https://cloud.baidu.com/doc/OCR/index.html
                {%/if%}">
@@ -629,7 +629,7 @@
         <div class="tech-guide-question tech-clear">
             <div class="tech-guide-question-title">开发指南</div>
             <div class="tech-guide-question-list">
-                <a class="tech-link-btn" href="/docs#OCR">技术文档&nbsp;&gt;</a>
+                <a class="tech-link-btn" href="/docs#OCR-API">技术文档&nbsp;&gt;</a>
                 <a class="tech-link-btn" href="/sdk">SDK下载&nbsp;&gt;</a>
                 <a class="tech-link-btn" href="#">教学视频&nbsp;&gt;</a>
             </div>
@@ -637,11 +637,11 @@
             <div class="tech-guide-question tech-clear">
             <div class="tech-guide-question-title">常见问题</div>
             <div class="tech-guide-question-list">
-                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q1">图片格式和分辨率有限制吗?</a>
-                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q8">字体有要求吗？</a>
-                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q9">支持哪些语言识别？</a>
-                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q10">支持文档扫描图片的文字识别吗？</a>
-                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q7">怎么提高文字识别的准确率和识别速度？</a>
+                <a class="tech-link-btn" href="/docs#OCR-FAQ">图片格式和分辨率有限制吗?</a>
+                <a class="tech-link-btn" href="/docs#OCR-FAQ">字体有要求吗？</a>
+                <a class="tech-link-btn" href="/docs#OCR-FAQ">支持哪些语言识别？</a>
+                <a class="tech-link-btn" href="/docs#OCR-FAQ">支持文档扫描图片的文字识别吗？</a>
+                <a class="tech-link-btn" href="/docs#OCR-FAQ">怎么提高文字识别的准确率和识别速度？</a>
             </div>
         </div>
     </div>

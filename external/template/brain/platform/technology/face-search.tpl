@@ -259,7 +259,7 @@
                class="btn-other media"
                href="
                {%if $src eq Null%}
-               /docs#FACE
+               /docs#FACE-API
                {%else%}
                https://cloud.baidu.com/doc/FACE/index.html
                {%/if%}">
@@ -409,15 +409,15 @@
         <div class="tech-guide-link tech-clear">
             <div class="tech-guide-link-title">开发指南</div>
             <div class="tech-guide-link-list">
-                <a class="tech-link-btn" href="/docs#FACE">技术文档 &gt;</a>
+                <a class="tech-link-btn" href="/docs#FACE-API">技术文档 &gt;</a>
                 <a class="tech-link-btn" href="/sdk">SDK下载 &gt;</a>
             </div>
         </div>
         <div class="tech-guide-question tech-clear">
             <div class="tech-guide-question-title">常见问题</div>
             <div class="tech-guide-question-list">
-                <a class="tech-link-btn" href="/docs#FACE-FAQ_Q1">识别的图片支持怎样输入？</a>
-                <a class="tech-link-btn" href="/docs#FACE-FAQ_Q2">什么是base64编码，如何提供？</a>
+                <a class="tech-link-btn" href="/docs#FACE-FAQ">识别的图片支持怎样输入？</a>
+                <a class="tech-link-btn" href="/docs#FACE-FAQ">什么是base64编码，如何提供？</a>
             </div>
         </div>
     </div>

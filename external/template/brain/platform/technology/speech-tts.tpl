@@ -253,7 +253,7 @@
                class="btn-other media"
                href="
                {%if $src eq Null%}
-               /docs#Speech-Tts-O2OAndroidSDK
+               /docs#/TTS-Android-SDK
                {%else%}
                https://cloud.baidu.com/doc/SPEECH/index.html
                {%/if%}">
@@ -410,16 +410,16 @@
         <div class="guide-link clear-float">
             <h3>开发指南</h3>
             <ul>
-                <li><a href="/docs#Speech-Tts">技术文档 ></a></li>
+                <li><a href="/docs#/TTS-Android-SDK">技术文档 ></a></li>
                 <li><a href="/sdk">SDK下载 ></a></li>
             </ul>
         </div>
         <div class="question-link clear-float">
             <h3>常见问题</h3>
             <ul>
-                <li><a href="/docs#Speech-Tts-FAQ_Q2">语音合成提供REST API吗？</a></li>
-                <li><a href="/docs#Speech-Tts-FAQ_Q3">语音合成支持那些语言和音色的播报？</a></li>
-                <li><a href="/docs#Speech-Tts-FAQ_Q4">有离线语音合成可以提供吗？</a></li>
+                <li><a href="/docs#/TTS-FAQs">语音合成提供REST API吗？</a></li>
+                <li><a href="/docs#/TTS-FAQs">语音合成支持那些语言和音色的播报？</a></li>
+                <li><a href="/docs#/TTS-FAQs">有离线语音合成可以提供吗？</a></li>
             </ul>
         </div>
     </div>

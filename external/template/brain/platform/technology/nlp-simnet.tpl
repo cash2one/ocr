@@ -255,7 +255,7 @@
                class="btn-other media"
                href="
                {%if $src eq Null%}
-               /docs#NLP
+               /docs#NLP-API
                {%else%}
                https://cloud.baidu.com/doc/NLP/index.html
                {%/if%}">
@@ -409,7 +409,7 @@
         <div class="guide-link clear-float">
             <h3>开发指南</h3>
             <ul>
-                <li><a href="/docs#NLP">技术文档 &gt;</a></li>
+                <li><a href="/docs#NLP-API">技术文档 &gt;</a></li>
                 <li><a href="/sdk">SDK下载 &gt;</a></li>
             </ul>
         </div>
@@ -417,16 +417,16 @@
             <h3>常见问题</h3>
             <ul>
                 <li>
-                    <a href="/docs#NLP-FAQ_Q1">输入编码是什么?</a>
+                    <a href="/docs#NLP-FAQ">输入编码是什么?</a>
                 </li>
                 <li>
-                    <a href="/docs#NLP-FAQ_Q2">结果中的词性标注都是什么含义?</a>
+                    <a href="/docs#NLP-FAQ">结果中的词性标注都是什么含义?</a>
                 </li>
                 <li>
-                    <a href="/docs#NLP-FAQ_Q3">短文本相似度对文字字数有什么限制?</a>
+                    <a href="/docs#NLP-FAQ">短文本相似度对文字字数有什么限制?</a>
                 </li>
                 <li>
-                    <a href="/docs#NLP-FAQ_Q11">中文DNN语言模型对文本个数有什么限制？</a>
+                    <a href="/docs#NLP-FAQ">中文DNN语言模型对文本个数有什么限制？</a>
                 </li>
             </ul>
         </div>
