@@ -883,7 +883,7 @@
                         <i class="sdk-language-sprite sdk-python"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-anti"></i>
-                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.3.1.zip?type=anti-porn">
+                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.3.1.zip?type=antiporn">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
