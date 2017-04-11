@@ -17,20 +17,19 @@ class Action_Download extends Ap_Action_Abstract
 
     public function execute()
     {
-        $passId = '111';
-        $ucid = '222';
-        // echo "download action";
+        $passId = '113';
+        $ucid = '223';
 
-       // try{
-       //     $userInfo = Bd_Passport::checkUserLogin();
-       //     if($userInfo != false){
-       //         $passId = $userInfo['uid'];
-       //     }else{
-       //         // var_dump("No passId!");
-       //     }
-       // } catch (Exception $e) {
-       //     // print $e->getMessage();
-       // }
+       try{
+           $userInfo = Bd_Passport::checkUserLogin();
+           if($userInfo != false){
+               $passId = $userInfo['uid'];
+           }else{
+               // var_dump("No passId!");
+           }
+       } catch (Exception $e) {
+           // print $e->getMessage();
+       }
 
 
         $arrRequest = Saf_SmartMain::getCgi();
@@ -95,8 +94,8 @@ class Action_Download extends Ap_Action_Abstract
         header("Content-Disposition:  attachment;  filename=" . $filePath);
         readfile($filePath); 
 
-       // $dbSdkInfo = new Dao_SdkInfo();
-       // $dbSdkInfo->insertSdkInfo($ucid, $passId, $serviceType, $language);
+       $dbSdkInfo = new Dao_SdkInfo();
+       $dbSdkInfo->insertSdkInfo($ucid, $passId, $serviceType, $language);
 
         return ;
     }
