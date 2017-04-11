@@ -18,7 +18,8 @@ class Action_Docs extends Ap_Action_Abstract {
         $arrPageInfo['page'] = substr(strtolower(__CLASS__), 7);
         Brain_Output::htmlOutput(
             $arrPageInfo, 
-            'brain/platform/document/document.tpl'
+            'brain/platform/newDocument/newDocument.tpl'
+
         );
     }
 }
