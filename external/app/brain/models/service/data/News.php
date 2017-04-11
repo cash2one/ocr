@@ -54,12 +54,14 @@ class Service_Data_News
             } else {
                 $newsStart = '' . (($offset - 1) * 10);
                 $newsIdList = $this->newsTagDao->getTagNewsIdList($tag, $newsStart, '10');
-                $newsIds = array();
                 $newsList = array();
-                foreach ($newsIdList as $x_value) {
-                    $newsIds[] = $x_value['news_id'];
+                if(!empty($newsIdList)){
+                    $newsIds = array();
+                    foreach ($newsIdList as $x_value) {
+                        $newsIds[] = $x_value['news_id'];
+                    }
+                    $newsList = $this->newsDao->getNewsListByNewsIdList($newsIds);
                 }
-                $newsList = $this->newsDao->getNewsListByNewsIdList($newsIds);
             }
             Brain_Memcache::set($newsList_key, $newsList, Lib_Const::NEWS_CACHE_TIME);
             return $newsList;
@@ -87,7 +89,11 @@ class Service_Data_News
             } else {
                 $tagNewsCount = $this->newsTagDao->getTagNewsCount($tag);
             }
-            $total = '' . ceil(intval($tagNewsCount) / 10);
+            if(empty($tagNewsCount)){
+                $total = '0';
+            }else{
+                $total = '' . ceil(intval($tagNewsCount) / 10);
+            }
             Brain_Memcache::set($tag_pagination, $total, Lib_Const::NEWS_CACHE_TIME);
             return $total;
         } else {

@@ -101,5 +101,4 @@ class Dao_NewsTag extends Dao_Base
         $tagNewsCount = $arrDBRet[0]['c'];
         return $tagNewsCount;
     }
-
 }

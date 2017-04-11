@@ -89,7 +89,10 @@ class Dao_Tag extends Dao_Base
     public function getTagListByIds($tagIds)
     {
         $arrFields = $this->tagListFields;
-        $arrConds =  'id IN '.$this->getSQLIn($tagIds);
+        $arrConds = array(
+            'id IN '.$this->getSQLIn($tagIds),
+            'enable = 1',
+        );
         $arrOptions = null;
         $arrAppends = null;
 
