@@ -25,12 +25,12 @@ class Service_Data_Tag
         $tag_key = 'ai_platform_news_tag_list';
         $tag_value = Brain_Memcache::get($tag_key);
         if (empty($tag_value)) {
-            Bd_log::addNotice('Tags缓存未命中', $tag_key);
+            Bd_log::addNotice("Tags!!!","NO");
             $tagList = $this->tagDao->getTagList();
             Brain_Memcache::set($tag_key, $tagList, Lib_Const::NEWS_CACHE_TIME);
             return $tagList;
         } else {
-            Bd_log::addNotice('Tags缓存命中', $tag_key);
+            Bd_log::addNotice("Tags...","YES");
             $tagList = $tag_value;
             return $tagList;
         }
