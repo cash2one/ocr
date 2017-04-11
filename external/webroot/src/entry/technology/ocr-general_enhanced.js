@@ -117,10 +117,6 @@ const showResult = data => {
             '<tr>',
             `    <td>${i + 1}</td>`,
             `    <td>${record.words}</td>`,
-            `    <td>${location.left}</td>`,
-            `    <td>${location.top}</td>`,
-            `    <td>${location.width}</td>`,
-            `    <td>${location.height}</td>`,
             '</tr>'
         ];
 
@@ -134,14 +130,7 @@ const showResult = data => {
             '    <thead>',
             '        <tr>',
             '            <th rowspan="2" style="width:20px;">编号</th>',
-            '            <th colspan="5">识别结果</th>',
-            '        </tr>',
-            '        <tr>',
-            '            <th style="width:250px;">文字</th>',
-            '            <th>left</th>',
-            '            <th>top</th>',
-            '            <th>width</th>',
-            '            <th>height</th>',
+            '            <th rowspan="2" >识别结果</th>',
             '        </tr>',
             '    </thead>',
             `    <tbody>${htmlArr.join('\r')}</tbody>`,

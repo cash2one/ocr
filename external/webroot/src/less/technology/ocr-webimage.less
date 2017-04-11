@@ -11,27 +11,27 @@
 
 // 技术单页前缀
 @prefix: tech;
-@intro: url('../../../ai_images/technology/net-picture/intro.png');
+@intro: url('../../../ai_images/technology/ocr-webimage/intro.png');
 // 调用通用的banner模块
 .@{prefix}-banner {
-    .banner(@page-name: net-picture);
+    .banner(@page-name: ocr-webimage);
     &-title {
         width: 500px;
     }
 }
 // 调用通用的tech-feature模块
 .@{prefix}-feature {
-    .tech-feature(@page-name: net-picture, @icon-num: 3);
+    .tech-feature(@page-name: ocr-webimage, @icon-num: 3);
 }
 
 // 调用通用的apply-scenario模块
 .@{prefix}-scenario {
-    .apply-scenario(@page-name: net-picture, @icon-num: 3);
+    .apply-scenario(@page-name: ocr-webimage, @icon-num: 3);
 }
 
 // 调用通用的tech-case模块
 .@{prefix}-case {
-    .tech-case(@page-name: net-picture; @num: 2; @case-logo: ture);
+    .tech-case(@page-name: ocr-webimage; @num: 2; @case-logo: ture);
 
     &-item-1 {
         .tech-case-item-logo {
@@ -44,7 +44,7 @@
 // 功能介绍
 .@{prefix}-function {
 
-    .tech-function(@page-name: net-picture);
+    .tech-function(@page-name: ocr-webimage);
 
     // 功能介绍demo
 
@@ -54,7 +54,7 @@
         width: 479px;
         height: 178px;
         overflow: hidden;
-        background: url(../../../ai_images/technology/net-picture/tech-function-scanning.png) no-repeat;
+        background: url(../../../ai_images/technology/ocr-webimage/tech-function-scanning.png) no-repeat;
         background-size: cover;
 
         &:before {
@@ -63,7 +63,7 @@
             width: 479px;
             height: 132px;
             transform: translate(0, -132px);
-            background: url(../../../ai_images/technology/net-picture/tech-function-before.png) no-repeat;
+            background: url(../../../ai_images/technology/ocr-webimage/tech-function-before.png) no-repeat;
             background-size: cover;
         }
 
@@ -76,7 +76,7 @@
         }
 
         &.tech-function-scanned {
-            background: url(../../../ai_images/technology/net-picture/tech-function-scanned.png) no-repeat;
+            background: url(../../../ai_images/technology/ocr-webimage/tech-function-scanned.png) no-repeat;
             background-size: cover;
         }
     }
@@ -97,7 +97,7 @@
         height: 185px;
         opacity: 0;
         transition: opacity 1.5s ease-out;
-        background: url(../../../ai_images/technology/net-picture/tech-function-scan-result.png) no-repeat;
+        background: url(../../../ai_images/technology/ocr-webimage/tech-function-scan-result.png) no-repeat;
         background-size: cover;
         &.tech-function-scanned {
             opacity: 1;

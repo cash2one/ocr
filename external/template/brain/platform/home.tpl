@@ -81,6 +81,11 @@
                                     通用文字识别（含位置信息版）
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="/tech/ocr/webimage">
+                                        网络图片文字识别
+                                    </a>
+                                </li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>人脸识别</span>
@@ -425,6 +430,9 @@
                                     <li>
                                         <a href="/tech/ocr/bankcard">银行卡识别</a>
                                     </li>
+                                    <li>
+                                        <a href="/tech/ocr/webimage">网络图片文字识别</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
@@ -617,24 +625,10 @@
                 </div>
             </div>
             <div class="service-item service-item-waiting">
-                <div class="service-detail">
-                    <div class="clear-float">
-                        <div class="service-desc">
-                            <h2>敬请期待...</h2>
-                        </div>
-                        <div class="service-icon"></div>
-                    </div>
-                </div>
+                <div class="waiting">敬请期待</div>
             </div>
             <div class="service-item service-item-waiting">
-                <div class="service-detail">
-                    <div class="clear-float">
-                        <div class="service-desc">
-                            <h2>敬请期待...</h2>
-                        </div>
-                        <div class="service-icon"></div>
-                    </div>
-                </div>
+                <div class="waiting">敬请期待</div>
             </div>
         </div>
     </div>

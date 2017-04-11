@@ -8,7 +8,7 @@ import $ from 'jquery';
 import throttle from 'lodash.throttle';
 
 import '../common/tech-case';
-import '../../less/technology/net-picture.less';
+import '../../less/technology/ocr-webimage.less';
 import getBase64ByFileReader from '../util/getBase64ByFileReader';
 
 /* eslint-disable */
@@ -16,7 +16,7 @@ const formatImg = require('../../../ai_images/error/image-format.png');
 const tooLargeImg = require('../../../ai_images/error/too-large.png');
 const noResult = require('../../../ai_images/error/no-general-result.png');
 const timeoutImg = require('../../../ai_images/error/timeout.png');
-import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/net-picture.html';
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/ocr-webimage.html';
 // fixme 很不合理
 
 /* eslint-enable */
@@ -212,7 +212,7 @@ const scan = function (imageUrl, base64) {
         {
             url: '/aidemo',
             data: {
-                'type': 'general_location',
+                'type': 'webimage',
                 'image': base64,
                 'image_url': imageUrl
             }

@@ -287,21 +287,21 @@
                     }
 
                     &:nth-child(1) {
-                        height: 250px;
+                        height: 270px;
                         .service-icon {
                             .icon (url('../../ai_images/home/service.png'), -10px, -15px);
                         }
                     }
 
                     &:nth-child(2) {
-                        height: 250px;
+                        height: 270px;
                         .service-icon {
                             .icon (url('../../ai_images/home/service.png'), -90px, -15px);
                         }
                     }
 
                     &:nth-child(3) {
-                        height: 250px;
+                        height: 270px;
                         .service-icon {
                             .icon (url('../../ai_images/home/service.png'), -170px, -15px);
                         }
@@ -325,9 +325,14 @@
 
                 }
                 .service-item-waiting {
-                        height: 171px;
-                        .service-desc {
-                            transform: translateX(-10%) translateY(50%);
+                    position: relative;
+                    height: 171px;
+                        .waiting {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%,-50%);
+                            font-size: 30px;
                         }
                 }
                 .service-detail {

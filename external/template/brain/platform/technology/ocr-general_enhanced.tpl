@@ -81,6 +81,11 @@
                                     通用文字识别（含位置信息版）
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="/tech/ocr/webimage">
+                                        网络图片文字识别
+                                    </a>
+                                </li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>人脸识别</span>
@@ -256,6 +261,7 @@
                {%/if%}>
                 商务合作
             </a>
+            <a href="#" class="product-price"></a>
         </div>
     </div>
 </div>
@@ -430,7 +436,65 @@
         </div>
     </div>
 </div>
-
+<div class="tech-section get-started tech-product">
+    <div class="container-product">
+        <div class="tech-product-title">产品定价</div>
+        <div class="tech-product-info">本产品为按调用量计费的后付费产品，定价采取分段式阶梯定价方式</div>
+        <div class="tech-product-wrapper">
+            <div class="product-box-1">
+                <div class="box-head">价目表</div>
+                <div class="box-body">
+                    <div class="box-body-header">月调用量</div>
+                    <div class="box-body-header">单价</div>
+                    <div class="box-body-connent">0&lt;调用量&lt;=5w</div>
+                    <div class="box-body-connent">0.060元/次</div>
+                    <div class="box-body-connent">5w&lt;调用量&lt;=10w</div>
+                    <div class="box-body-connent">0.055元/次</div>
+                    <div class="box-body-connent">10w&lt;调用量&lt;=20w</div>
+                    <div class="box-body-connent">0.050元/次</div>
+                    <div class="box-body-connent">20w&lt;调用量&lt;=50w</div>
+                    <div class="box-body-connent">0.045元/次</div>
+                    <div class="box-body-connent">50w&lt;调用量</div>
+                    <div class="box-body-connent">0.040元/次</div>
+                </div>
+            </div>
+            <div class="product-box-2">
+                <div class="box-head">付费配置</div>
+                <div class="box-body">
+                    <div class="box-body-header">调用量限额</div>
+                    <div class="box-body-header">QPS限制</div>
+                    <div class="box-body-connent">不限制，按量付费</div>
+                    <div class="box-body-connent">保证10次并发</div>
+                </div>
+            </div>
+            <div class="product-box-3">
+                <div class="box-head">合作咨询</div>
+                <div class="box-body">
+                    <div class="box-body-header">如果您有以下的需求或其他需求，您可以提交合作咨询：</div>
+                    <div class="box-body-connent">1.如果您的调用量远大于最大的阶梯段，并需要更低的价格；</div>
+                    <div class="box-body-connent">2.如果您需要更高的QPS/并发；</div>
+                    <div class="box-body-connent">3.如果您有其他的OCR要求；</div>
+                    <div class="box-body-connent">4.如果您对现有的接口/SDK/文档有任何建议意见。</div>
+                </div>
+            </div>
+            <div class="product-box-4">
+                <div class="box-head">调用失败如何计费？</div>
+                <div class="box-body">
+                    <div class="box-body-connent">
+                        <div class="product-error-query">
+                            通用文字识别（含生僻字版）任何调用失败均不算作一次需计费的调用，不产生任何费用
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tech-free-product-btn">
+            <a role="button"
+               class="btn-primary large ai-redirect"
+               href="#">开通付费</a>
+        </div>
+    </div>
+</div>
 {%if $userInfo eq Null%}
 <div class="tech-section get-started tech-free">
     <div class="ai-container">

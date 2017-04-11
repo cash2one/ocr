@@ -81,6 +81,11 @@
                                     通用文字识别（含位置信息版）
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="/tech/ocr/webimage">
+                                        网络图片文字识别
+                                    </a>
+                                </li>
                             </ul>
                             <div class="sub-tech-title">
                                 <span>人脸识别</span>
@@ -236,13 +241,17 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-    <section class="tech-section tech-banner">
-    <div class="container">
-        <h1>视频内容分析VCA</h1>
+    <div class="tech-section tech-banner">
+    <div class="ai-container">
+        <div class="tech-banner-title">
+            视频内容分析VCA
+        </div>
         <div class="title-minor">（Video Content Analysis）</div>
-        <p>通过多维AI技术，对视频进行智能分析，输出视频内容的泛标签<br>
-            从而提高搜索准确度和用户推荐视频的曝光量</p>
-        <div>
+        <div class="tech-banner-info">
+            通过多维AI技术，对视频进行智能分析，输出视频内容的泛标签<br>
+            从而提高搜索准确度和用户推荐视频的曝光量
+        </div>
+        <div class="tech-banner-btn-list">
             <a role="button"
                {%if $src eq Null%}
                class="btn-primary media ai-redirect"
@@ -251,18 +260,20 @@
                class="btn-primary media"
                href="/product/apply/vca.html"
                {%/if%}">
-                商务合作
+            商务合作
             </a>
         </div>
     </div>
-</section>
-<section class="tech-section tech-intro">
-    <div class="container">
-        <h2>技术介绍</h2>
-        <p id="container-p">
+</div>
+<div class="tech-section tech-function">
+    <div class="ai-container">
+        <div class="tech-function-title">
+            技术介绍
+        </div>
+        <div class="tech-function-info">
             行业首创，基于百度领先的人工智能技术，对视频进行语音、文字、人脸、物体、分类多维度分析，输出视频泛标签，提升搜索推荐效果
-        </p>
-        <div class="tech-intro-detail">
+        </div>
+        <div class="tech-function-detail">
             <div class="scan-box">
                 <div class="scan-box-image"></div>
                 <div class="scan-box-title">视频分类</div>
@@ -293,14 +304,14 @@
             </div>
         </div>
     </div>
-</section>
-<section class="tech-section tech-demo">
+</div>
+<div class="tech-section tech-demo">
+    <div class="tech-demo-title">功能演示</div>
     <div class="container">
-        <h2>功能演示</h2>
         <div class="demo-container clear-float" id="video-vca-demo">
         </div>
     </div>
-</section>
+</div>
 <div class="ai-container tech-section tech-feature">
     <div class="tech-feature-title">技术特色</div>
     <div class="tech-feature-list tech-clear">
@@ -333,31 +344,30 @@
         </div>
     </div>
 </div>
-<section class="tech-section tech-scene">
-    <div class="container">
-        <h2>应用场景</h2>
-        <div class="scene-list clear-float">
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>视频个性化推荐</h3>
-                    <p>
-                        通过视频打TAG技术，快速补充视频TAG，TAG直接入库，解决新视频冷启动问题，增加视频曝光
-                    </p>
+<hr class="tech-section-border">
+<div class="ai-container tech-section tech-scenario">
+    <div class="tech-scenario-title">应用场景</div>
+    <div class="tech-scenario-list tech-clear">
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-1"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">视频个性化推荐</div>
+                <div class="tech-scenario-desc-info">
+                    通过视频打TAG技术，快速补充视频TAG，TAG直接入库，解决新视频冷启动问题，增加视频曝光
                 </div>
             </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>视频内容检索</h3>
-                    <p>
-                        通过视频打TAG技术，快速新增热门标签，标签直接入库，解决视频缺乏新关键词无法露出的问题，提升用户检索体验
-                    </p>
+        </div>
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-2"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">视频内容检索</div>
+                <div class="tech-scenario-desc-info">
+                    通过视频打TAG技术，快速新增热门标签，标签直接入库，解决视频缺乏新关键词无法露出的问题，提升用户检索体验
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 <div class="tech-section tech-product">
     <div class="container">
         <div class="tech-product-title">
@@ -372,12 +382,12 @@
     </div>
 </div>
 {%if $userInfo eq Null%}
-<section class="tech-section get-started">
-    <div class="container">
-        <h2>快速提交您的需求</h2>
-        <p>欢迎各短视频平台、广电行业以及各行业优秀的技术合作伙伴与我们联系<br>
-            一起携手探索更多AI带给我们的更多可能性！</p>
-        <div>
+<div class="tech-section get-started tech-free">
+    <div class="ai-container">
+        <div class="tech-free-title">快速提交您的需求</div>
+        <div class="tech-free-info">欢迎各短视频平台、广电行业以及各行业优秀的技术合作伙伴与我们联系<br>
+            一起携手探索更多AI带给我们的更多可能性！</div>
+        <div class="tech-free-btn">
             <a role="button"
                {%if $src eq Null%}
                class="btn-primary large ai-redirect"
@@ -386,11 +396,11 @@
                class="btn-primary large"
                href="/product/apply/vca.html"
                {%/if%}">
-                商务合作
+            商务合作
             </a>
         </div>
     </div>
-</section>
+</div>
 {%/if%}
 
 </div>
