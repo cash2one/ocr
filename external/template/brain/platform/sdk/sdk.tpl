@@ -652,7 +652,7 @@
                         <i class="sdk-language-sprite sdk-python"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-ocr"></i>
-                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.3.1.zip">
+                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.3.1.zip?type=ocr">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -753,7 +753,7 @@
                         <i class="sdk-language-sprite sdk-python"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bfr"></i>
-                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.3.1.zip">
+                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.3.1.zip?type=bfr">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -816,7 +816,7 @@
                         <i class="sdk-language-sprite sdk-python"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-nlp"></i>
-                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.3.1.zip">
+                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.3.1.zip?type=nlp">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -878,7 +878,7 @@
                         <i class="sdk-language-sprite sdk-python"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-anti"></i>
-                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.3.1.zip">
+                            <a href="http://ai.baidu.com/download/aip-python-sdk-1.3.1.zip?type=anti-porn">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
