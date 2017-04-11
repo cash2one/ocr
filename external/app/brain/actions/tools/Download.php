@@ -59,23 +59,27 @@ class Action_Download extends Ap_Action_Abstract
         }
 
 
-        $arrServers = array('mycas.baidu.com:8880');
-        $intAppid = '469';
-        $strAppKey = 'ai.baidu.com';
-        $intTmOut = '2000';
-        $strCookieDomain = 'ai.baidu.com';
-        $strLoginUrl = 'http://login.bce.baidu.com';
-        $strJumpUrl = 'https://mycas.baidu.com:8443/?action=check&appid=';
-        $casInfo = new Cas_Info($arrServers, $intAppid, $strAppKey,$intTmOut);
-        $casInfo->setCookieDomain($strCookieDomain);
-        $casInfo->setLoginUrl($strLoginUrl);
-        $casInfo->setJumpUrl($strJumpUrl);
-        $casInfo->setAutoRedirect(false);
-        $cas_client = new Cas_Client($casInfo);
-        $objCheckRes = $cas_client->validate();
-        if (!is_null($objCheckRes)) {
-            $ucid = (string)$objCheckRes->getUcid();
-            var_dump($ucid);
+        try {
+            $arrServers = array('mycas.baidu.com:8880');
+            $intAppid = '469';
+            $strAppKey = 'ai.baidu.com';
+            $intTmOut = '2000';
+            $strCookieDomain = 'ai.baidu.com';
+            $strLoginUrl = 'http://login.bce.baidu.com';
+            $strJumpUrl = 'https://mycas.baidu.com:8443/?action=check&appid=';
+            $casInfo = new Cas_Info($arrServers, $intAppid, $strAppKey,$intTmOut);
+            $casInfo->setCookieDomain($strCookieDomain);
+            $casInfo->setLoginUrl($strLoginUrl);
+            $casInfo->setJumpUrl($strJumpUrl);
+            $casInfo->setAutoRedirect(false);
+            $cas_client = new Cas_Client($casInfo);
+            $objCheckRes = $cas_client->validate();
+            if (!is_null($objCheckRes)) {
+                $ucid = (string)$objCheckRes->getUcid();
+                var_dump($ucid);
+            }
+        } catch (Exception $e) {
+            print $e->getMessage();
         }
         
         ob_start(); 
