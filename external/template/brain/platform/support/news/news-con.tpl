@@ -236,12 +236,7 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-    <section class="news-banner">
-    <div class="container">
-        <h1>新闻动态</h1>
-    </div>
-</section>
-<section class="container news-main">
+    <section class="container news-main">
     <div class="news-title">{%$data.title%}</div>
     <div class="news-info-container">
         <span class="time">发布日期：{%$data.time|date_format:'%Y-%m-%d %H:%M:%S'%}</span><span class="pv">浏览量：{%$data.pv%}次</span>
