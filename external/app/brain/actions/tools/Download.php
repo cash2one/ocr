@@ -20,11 +20,16 @@ class Action_Download extends Ap_Action_Abstract
         $passId = '111';
         $ucid = '222';
 
-        $userInfo = Bd_Passport::checkUserLogin();
-        if($userInfo != false){
-            $passId = $userInfo['uid'];
-        }else{
-            // var_dump("No passId!");
+
+        try{
+            $userInfo = Bd_Passport::checkUserLogin();
+            if($userInfo != false){
+                $passId = $userInfo['uid'];
+            }else{
+                var_dump("No passId!");
+            }
+        } catch (Exception $e) {
+            print $e->getMessage();
         }
 
 
