@@ -102,8 +102,8 @@ class Action_Download extends Ap_Action_Abstract
           Header("Location: $url"); 
         }
 
-       // $dbSdkInfo = new Dao_SdkInfo();
-       // $dbSdkInfo->insertSdkInfo($ucid, $passId, $serviceType, $language);
+        $dbSdkInfo = new Dao_SdkInfo();
+        $dbSdkInfo->insertSdkInfo($ucid, $passId, $serviceType, $language);
 
         return ;
     }
