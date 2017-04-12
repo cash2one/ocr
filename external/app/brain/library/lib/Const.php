@@ -43,7 +43,7 @@ class Lib_Const
     const ERRORNO_DB_QUERY_FAILED = -1002;
     const ERRORNO_DB_GENERAL_ERROR = -1003;
     const ERRORNO_PIC_UPLOAD_ERROR = -1004;
-    const NEWS_CACHE_TIME = 6000;
+    const NEWS_CACHE_TIME = 600;
 
 }
 /* vim: set expandtab ts=4 sw=4 sts=4 tw=80: */

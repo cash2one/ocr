@@ -52,9 +52,7 @@ class Dao_News extends Dao_Base
 
     /**
      * @brief 连接db，表名初始化
-     *
      * @return  null
-     *
      * @date 2015/07/20 20:00:24
      **/
     public function __construct()
