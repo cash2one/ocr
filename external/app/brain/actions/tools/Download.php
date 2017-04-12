@@ -88,14 +88,19 @@ class Action_Download extends Ap_Action_Abstract
         
         $odp_path = Bd_Conf::getAppConf('odp_info/path');
         $path = $odp_path.$filePath;
-        ob_start(); 
-        $size = filesize($path); 
-        header("Content-type:  application/octet-stream ");
-        header("Accept-Ranges:  bytes ");
-        header("Accept-Length: " . $size);
-        header("Content-Disposition:  attachment;  filename=" .$filePath);
-        echo file_get_contents($path);
-        readfile($path);
+        if (file_exists($filename)) {
+          ob_start(); 
+          $size = filesize($path); 
+          header("Content-type:  application/octet-stream ");
+          header("Accept-Ranges:  bytes ");
+          header("Accept-Length: " . $size);
+          header("Content-Disposition:  attachment;  filename=" .$filePath);
+          echo file_get_contents($path);
+          readfile($path);
+        } else {
+          $url = '/404';
+          Header("Location: $url"); 
+        }
 
        // $dbSdkInfo = new Dao_SdkInfo();
        // $dbSdkInfo->insertSdkInfo($ucid, $passId, $serviceType, $language);
