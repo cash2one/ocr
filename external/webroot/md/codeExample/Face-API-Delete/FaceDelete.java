@@ -13,9 +13,9 @@ public class Delete {
     /**
      * 重要提示代码中所需工具类
      * FileUtil,Base64Util,HttpUtil请从
-     * https://github.com/Baidu-AIP/Demo/blob/master/java/com/baidu/ai/aip/utils/FileUtil.java
-     * https://github.com/Baidu-AIP/Demo/blob/master/java/com/baidu/ai/aip/utils/Base64Util.java
-     * https://github.com/Baidu-AIP/Demo/blob/master/java/com/baidu/ai/aip/utils/HttpUtil.java
+     * http://ai.baidu.com/download/demo/java/utils/FileUtil.java
+     * http://ai.baidu.com/download/demo/java/utils/Base64Util.java
+     * http://ai.baidu.com/download/demo/java/utils/HttpUtil.java
      * 下载
      */
     public static void main(String[] args) {

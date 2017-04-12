@@ -12,10 +12,19 @@
 }
 
 .anchor-item {
+    position: relative;
     height: 40px;
     line-height: 40px;
     font-size: 0;
     cursor: pointer;
+}
+
+.anchor-text,
+.anchor-index,
+.anchor-dot {
+    position: absolute;
+    top: 0;
+    bottom: 0;
 }
 
 .anchor-text {
@@ -31,39 +40,32 @@
 .anchor-level-1 {
     .anchor-index,
     .anchor-text {
-        display: inline-block;
-        vertical-align: top;
         font-size: 12px;
     }
 
     .anchor-index {
+        // top和bottom已在公共部分设置
+        left: 0;
         width: 35px;
         color: #ccc;
         text-align: center;
     }
 
     .anchor-text {
-        // 目录栏总宽150px
-        width: 150px - 35px;
+        left: 35px;
+        right: 5px;
         color: #666;
     }
 }
 
 .anchor-level-2 {
     box-sizing: border-box;
-    padding-left: 1 * @level-padding;
     color: #999;
 
-    .anchor-dot,
-    .anchor-text {
-        display: inline-block;
-        vertical-align: top;
-    }
-
     .anchor-dot {
-        position: relative;
+        // top和bottom在公共部分设置了
+        left: 1 * @level-padding;
         width: @dot-width;
-        height: 100%;
 
         &:after {
             position: absolute;
@@ -80,8 +82,8 @@
 
     .anchor-text {
         // 1px是border
-        max-width: @anchor-list-width - @level-padding - @dot-width - 1;
-        color: #999;
+        left: 1 * @level-padding + @dot-width;
+        right: 3px;
     }
 }
 

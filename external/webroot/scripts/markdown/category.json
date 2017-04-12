@@ -21,16 +21,20 @@
           "text": "语音识别",
           "children": [
             {
-              "text": "离在线语音识别Android SDK",
+              "text": "离在线语音识别 Android SDK",
               "md": "ASR-Android-SDK"
             },
             {
-              "text": "离在线语音识别iOS SDK",
+              "text": "离在线语音识别 iOS SDK",
               "md": "ASR-iOS-SDK"
             },
             {
-              "text": "在线语音识别Android SDK",
+              "text": "在线语音识别 Android SDK",
               "md": "ASR-Online-Android-SDK"
+            },
+            {
+              "text": "在线语音识别 iOS SDK",
+              "md": "ASR-Online-iOS-SDK"
             },
             {
               "text": "语音识别 REST API",
@@ -39,10 +43,6 @@
             {
               "text": "语义理解协议",
               "md": "ASR-Query-Protocol"
-            },
-            {
-              "text": "常见问题",
-              "md": "ASR-FAQs"
             }
           ]
         },
@@ -64,10 +64,6 @@
             {
               "text": "语音合成 REST API",
               "md": "TTS-API"
-            },
-            {
-              "text": "常见问题",
-              "md": "TTS-FAQs"
             }
           ]
         }
@@ -94,6 +90,14 @@
             {
               "text": "Python语言",
               "md": "OCR-Python-SDK"
+            },
+            {
+              "text": "iOS SDK",
+              "md": "OCR-iOS-SDK"
+            },
+            {
+              "text": "Android SDK",
+              "md": "OCR-Android-SDK"
             }
           ]
         }
@@ -181,7 +185,7 @@
   "priceDoc": [
     {
       "text": "OCR文字识别定价",
-      "md": "OCR-Prise"
+      "md": "OCR-Pricing"
     }
   ]
 }

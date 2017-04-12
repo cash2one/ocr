@@ -1,3 +1,5 @@
+@category-dot-width: 15px;
+
 .tree-node {
     box-sizing: border-box;
     height: 48px;
@@ -37,47 +39,18 @@
     vertical-align: top;
 }
 
-.level-1 {
-    color: #333;
-
-    &.tree-node {
-        padding-left: 20px;
-    }
-}
-
-
-.level-2 {
-    color: #666;
-
-    &.tree-node {
-        padding-left: 35px;
-        font-size: 12px;
-    }
-}
-
-.level-3 {
-    color: #999;
-
-    &.tree-node {
-        padding-left: 30px;
-        font-size: 0;
-    }
-
-    .leaf-text {
-        // 目录栏总宽240px,左侧留白30px
-        width: 240px - 30px - 15px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        font-size: 12px;
-    }
+// 叶子节点内的文本段
+.leaf-text {
+    // 超出省略
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 // 叶子节点前的小点，左右垂直居中
 .leaf-dot {
     position: relative;
-    width: 15px;
-    height: 100%;
+    width: @category-dot-width;
 
     &:after {
         position: absolute;
@@ -92,9 +65,79 @@
     }
 }
 
-.non-leaf-node {
+// 非叶子节点和叶子节点
+.non-leaf-node,
+.leaf-node {
     // 非叶子节点，为箭头做位置参考
     position: relative;
+}
+
+.leaf-text,
+.leaf-dot {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.level-1 {
+    color: #333;
+
+    &.tree-node {
+        padding-left: 20px;
+    }
+
+    .leaf-dot {
+        // top和bottom值在公共部分已经定义了
+        left: 20px;
+        // 宽度有公共定义
+    }
+
+    .leaf-text {
+        left: 20px + @category-dot-width;
+        right: 0;
+    }
+}
+
+.level-2 {
+    color: #666;
+
+    &.tree-node {
+        padding-left: 35px;
+        font-size: 12px;
+    }
+
+    .leaf-dot {
+        // top和bottom值在公共部分已经定义了
+        left: 35px;
+        // 宽度有公共定义
+    }
+
+    .leaf-text {
+        left: 35px + @category-dot-width;
+        right: 0;
+    }
+}
+
+.level-3 {
+    color: #999;
+
+    &.tree-node {
+        padding-left: 30px;
+        font-size: 0;
+    }
+
+    .leaf-dot {
+        // top和bottom值在公共部分已经定义了
+        left: 30px;
+        // 宽度有公共定义
+    }
+
+    .leaf-text {
+        left: 35px + @category-dot-width;
+        // 右侧有15px留白
+        right: 15px;
+        font-size: 12px;
+    }
 }
 
 .non-leaf-arrow {

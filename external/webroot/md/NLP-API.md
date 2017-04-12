@@ -37,7 +37,7 @@ JSON格式，**返回内容为GBK编码**
 
 向API服务地址使用POST发送请求，必须在URL中带上参数：
 
-**access_token:** 必须参数，参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)。
+**access_token:** 必须参数，参考“[Access Token获取](http://ai.baidu.com/docs#/Auth)。
 
 POST中参数按照API接口说明调用即可。
 
@@ -97,7 +97,7 @@ URL参数：
 
 | 参数           | 值                                        |
 | ------------ | ---------------------------------------- |
-| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
+| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#/Auth)” |
 
 Header如下：
 
@@ -284,7 +284,7 @@ URL参数：
 
 | 参数           | 值                                        |
 | ------------ | ---------------------------------------- |
-| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
+| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#/Auth)” |
 
 Header如下：
 
@@ -399,7 +399,7 @@ URL参数：
 
 | 参数           | 值                                        |
 | ------------ | ---------------------------------------- |
-| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
+| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#/Auth)” |
 
 Header如下：
 
@@ -490,7 +490,7 @@ URL参数：
 
 | 参数           | 值                                        |
 | ------------ | ---------------------------------------- |
-| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
+| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#/Auth)” |
 
 Header如下：
 
@@ -557,7 +557,7 @@ URL参数：
 
 | 参数           | 值                                        |
 | ------------ | ---------------------------------------- |
-| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
+| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#/Auth)” |
 
 Header如下：
 
@@ -654,7 +654,7 @@ URL参数：
 
 | 参数           | 值                                        |
 | ------------ | ---------------------------------------- |
-| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
+| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#/Auth)” |
 
 Header如下：
 

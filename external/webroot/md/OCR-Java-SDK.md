@@ -1,4 +1,4 @@
-# Java SDK文档
+﻿# Java SDK文档
 
 本文档主要介绍OCR Java SDK的安装和使用。在使用本文档前，您需要先了解Optical Character Recognition(OCR)的基础知识，并已经开通了OCR服务。
 
@@ -281,6 +281,131 @@ public void generalRecognition(AipOcr client) {
 | +++width           | 是    | uint32  | 表示定位定位位置的长方形的宽度                          |
 | +++height          | 是    | uint32  | 表示位置的长方形的高度                              |
 | ++char             | 是    | string  | 单字符识别结果                                  |
+
+
+# 通用文字识别（含生僻字版）
+
+某些场景中，图片中的中文不光有常用字，还包含了生僻字，这时用户需要对该图进行文字识别，应使用通用文字识别（含生僻字版）。
+
+图片接受参数类型：支持本地图片路径字符串，图片文件二进制数组。
+举例，要对一张网络图片进行文字识别，具体的文字的内容和信息在返回的words_result字段中：
+
+```java
+public void enhancedGeneral(AipOcr client) {
+    // 参数为本地图片路径
+    String imagePath = "enhance_general.jpg";
+    JSONObject response = client.enhancedGeneral(imagePath);
+    System.out.println(response.toString());
+
+    // 参数为本地图片文件二进制数组
+    byte[] file = readImageFile(imagePath);
+    JSONObject response = client.enhancedGeneral(file);
+    System.out.println(response.toString());
+}
+```
+传入图片时还想增加一些自定义参数配置：
+
+```java
+public void generalRecognition(AipOcr client) {
+    // 自定义参数定义
+    HashMap<String, String> options = new HashMap<String, String>();
+    options.put("detect_direction", "false");
+    options.put("language_type", "CHN_ENG");
+
+    // 参数为本地图片路径
+    String imagePath = "enhanced_general.jpg";
+    JSONObject response = client.enhancedGeneral(imagePath, options);
+    System.out.println(response.toString());
+
+    // 参数为本地图片文件二进制数组
+    byte[] file = readImageFile(imagePath);
+    JSONObject response = client.enhancedGeneral(file, options);
+    System.out.println(response.toString());
+}
+```
+
+**通用文字识别（含生僻字版）请求参数详情**
+
+| 参数                    | 是否必选  | 类型      | 可选值范围                                   | 说明                                       |
+| --------------------- | ----- | ------- | --------------------------------------- | ---------------------------------------- |
+| image                 | true  | string  | -                                       | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
+| language_type         | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
+| detect_direction      | false | boolean | true、false                              | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
+
+**通用文字识别（含生僻字版）  返回数据参数详情**
+
+| 字段                 | 必选   | 类型      | 说明                                       |
+| ------------------ | ---- | ------- | ---------------------------------------- |
+| direction          | 否    | int32   | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
+| log_id             | 是    | uint64  | 唯一的log id，用于问题定位                         |
+| words_result_num   | 是    | uint32  | 识别结果数，表示words_result的元素个数                |
+| words_result       | 是    | array() | 定位和识别结果数组                                |
+| +words             | 否    | string  | 识别结果字符串                                  |
+
+
+# 网络图片文字识别
+
+
+网络图片文字识别用于识别一些网络上背景复杂，特殊字体的文字。
+
+图片接受参数类型：支持本地图片路径字符串，图片文件二进制数组。
+
+举例，要对一张网络图片进行文字识别，具体的文字的内容和信息在返回的words_result字段中：
+
+```java
+public void webImageOCR(AipOcr client) {
+    // 参数为本地图片路径
+    String imagePath = "webimage.jpg";
+    JSONObject response = client.webImage(imagePath);
+    System.out.println(response.toString());
+
+    // 参数为本地图片文件二进制数组
+    byte[] file = readImageFile(imagePath);
+    JSONObject response = client.webImage(file);
+    System.out.println(response.toString());
+}
+```
+传入图片时还想增加一些自定义参数配置：
+
+```java
+public void generalRecognition(AipOcr client) {
+    // 自定义参数定义
+    HashMap<String, String> options = new HashMap<String, String>();
+    options.put("detect_direction", "false");
+    options.put("language_type", "CHN_ENG");
+
+    // 参数为本地图片路径
+    String imagePath = "webimage.jpg";
+    JSONObject response = client.general(imagePath, options);
+    System.out.println(response.toString());
+
+    // 参数为本地图片文件二进制数组
+    byte[] file = readImageFile(imagePath);
+    JSONObject response = client.general(file, options);
+    System.out.println(response.toString());
+}
+```
+
+**网络图片文字识别 请求参数详情**
+
+| 参数                    | 是否必选  | 类型      | 可选值范围                                   | 说明                                       |
+| --------------------- | ----- | ------- | --------------------------------------- | ---------------------------------------- |
+| image                 | true  | string  | -                                       | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
+| language_type         | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
+| detect_direction      | false | boolean | true、false                              | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
+| detect_language       | FALSE | string  | true、false                              | 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）           |
+
+
+**网络图片文字识别  返回数据参数详情**
+
+| 字段                 | 必选   | 类型      | 说明                                       |
+| ------------------ | ---- | ------- | ---------------------------------------- |
+| direction          | 否    | int32   | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
+| log_id             | 是    | uint64  | 唯一的log id，用于问题定位                         |
+| words_result_num   | 是    | uint32  | 识别结果数，表示words_result的元素个数                |
+| words_result       | 是    | array() | 定位和识别结果数组                                |
+| +words             | 否    | string  | 识别结果字符串                                  |
+
 
 
 # 银行卡识别
