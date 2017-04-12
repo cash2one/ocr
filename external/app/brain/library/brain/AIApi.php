@@ -51,6 +51,13 @@ class Brain_AIApi
                 'detect_direction' => 'true',
             ),
         ),
+        "webimage" => array(
+            'type' => 'bce',
+            'url' => 'https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic',
+            'params' => array(
+                'detect_direction' => 'true',
+            ),
+        ),
         "general_location" => array(
             'type' => 'bce',
             'url' => 'https://aip.baidubce.com/rest/2.0/ocr/v1/general',
