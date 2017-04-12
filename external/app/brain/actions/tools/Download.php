@@ -1,4 +1,6 @@
 <?php
+require_once(dirname(__FILE__).'/../../library/cas/Info.php');
+require_once(dirname(__FILE__).'/../../library/cas/Client.php');
 /***************************************************************************
  *
  * Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
