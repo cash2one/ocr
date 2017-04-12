@@ -31,7 +31,7 @@ class Dao_SdkInfo extends Dao_Base {
      **/
     public function __construct() {
         parent::__construct();
-        $this->strTable = 't_sdk_info';
+        $this->strTable = 't_sdk_log';
     }
 
     /**
