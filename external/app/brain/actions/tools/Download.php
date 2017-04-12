@@ -32,10 +32,9 @@ class Action_Download extends Ap_Action_Abstract
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
         $filePath = Brain_Util::getParamAsString($arrInput, 'filePath');
-        // var_dump($filePath);
 
-        $serviceType = 0;
-        $language = 0;
+        $serviceType = -1;
+        $language = -1;
         $sdkArr = explode('-', $filePath);
         if ($sdkArr[1] == 'ocr') {
             $serviceType = 0;
