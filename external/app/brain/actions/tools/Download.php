@@ -92,10 +92,13 @@ class Action_Download extends Ap_Action_Abstract
         header("Accept-Ranges:  bytes ");
         header("Accept-Length: " . $size);
         header("Content-Disposition:  attachment;  filename=" . $filePath);
-        readfile($filePath); 
+        $odp_path = Bd_Conf::getAppConf('odp_info');
+        readfile($odp_path.$filePath); 
 
-       $dbSdkInfo = new Dao_SdkInfo();
-       $dbSdkInfo->insertSdkInfo($ucid, $passId, $serviceType, $language);
+        var_dump($uid);
+        var_dump($passId);
+       // $dbSdkInfo = new Dao_SdkInfo();
+       // $dbSdkInfo->insertSdkInfo($ucid, $passId, $serviceType, $language);
 
         return ;
     }
