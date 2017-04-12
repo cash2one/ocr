@@ -93,7 +93,7 @@ class Action_Download extends Ap_Action_Abstract
         header("Content-type:  application/octet-stream ");
         header("Accept-Ranges:  bytes ");
         header("Accept-Length: " . $size);
-        header("Content-Disposition:  attachment;  filename=" .$path);
+        header("Content-Disposition:  attachment;  filename=" .$filePath);
         echo file_get_contents($path);
         readfile($path);
 
