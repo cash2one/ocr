@@ -86,7 +86,8 @@ class Brain_AIApi
             'params' => array(),
         ),
         "face" => array(
-            'url' => 'https://openapi.baidu.com/rest/2.0/vis-faceattribute/v1/faceattribute',
+            'type' => 'bce',
+            'url' => 'https://aip.baidubce.com/rest/2.0/face/v1/detect',
             'params' => array(
                 'max_face_num' => 20,
                 'face_fields' => 'age,beauty,expression,faceshape,gender,glasses,landmark,race',
