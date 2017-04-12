@@ -397,7 +397,7 @@ class Brain_AIApi
             'Host: ai.baidu.com',
         );
         //curl_setopt($ch, CURLOPT_HEADER, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+        //curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
 
         $output = curl_exec($ch);
 
