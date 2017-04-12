@@ -19,8 +19,8 @@ class Action_Download extends Ap_Action_Abstract
 
     public function execute()
     {
-        $passId = '113';
-        $ucid = '223';
+        $passId = '';
+        $ucid = '';
 
        try{
            $userInfo = Bd_Passport::checkUserLogin();
@@ -66,13 +66,13 @@ class Action_Download extends Ap_Action_Abstract
 
 
        try {
-           $arrServers = array('mycas.baidu.com:8880');
+           $arrServers = array('10.65.211.251:6270','10.26.5.46:6270','10.36.4.147:6270');
            $intAppid = '469';
            $strAppKey = 'ai.baidu.com';
            $intTmOut = '2000';
            $strCookieDomain = 'ai.baidu.com';
            $strLoginUrl = 'http://login.bce.baidu.com';
-           $strJumpUrl = 'https://mycas.baidu.com:8443/?action=check&appid=';
+           $strJumpUrl = 'https://cas.baidu.com/?action=check&appid=';
            $casInfo = new Cas_Info($arrServers, $intAppid, $strAppKey,$intTmOut);
            $casInfo->setCookieDomain($strCookieDomain);
            $casInfo->setLoginUrl($strLoginUrl);
