@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/technology/ocr-general.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/technology/ocr-general.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1491467582/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1491986722/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -255,7 +255,7 @@
                {%if $src eq Null%}
                /docs#OCR-API
                {%else%}
-               https://cloud.baidu.com/doc/OCR/index.html
+               /doc/OCR/index.html
                {%/if%}">
                 技术文档
             </a>
@@ -284,16 +284,9 @@
                     <table cellspacing="0">
                         <thead>
                             <tr>
-                                <th rowspan="2" style="width:20px;">编号</th>
-                                <th rowspan="2" style="width:420px">识别结果</th>
+                                <th rowspan="2" class="result-index">编号</th>
+                                <th rowspan="2" class="result-connent">识别结果</th>
                             </tr>
-                            <!--<tr>
-                                <th style="width:250px;">文字</th>
-                                <th>left</th>
-                                <th>top</th>
-                                <th>width</th>
-                                <th>height</th>
-                            </tr>-->
                         </thead>
                         <tbody></tbody>
                     </table>
@@ -310,28 +303,28 @@
                 <p class="demo-desc">提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片，图片大小不超过2M，长边不超过2048像素。为保证正常识别效果，请保证需要识别部分为图片主体部分。</p>
                 <ul class="demo-card-list clear-float">
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-general/demo-card-1.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general/demo-card-1.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-general/demo-card-2.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general/demo-card-2.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-general/demo-card-3.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general/demo-card-3.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-general/demo-card-4.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general/demo-card-4.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-general/demo-card-5.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general/demo-card-5.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-general/demo-card-6.jpg">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general/demo-card-6.jpg">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-general/demo-card-7.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general/demo-card-7.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-general/demo-card-8.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general/demo-card-8.png">
                     </li>
                 </ul>
             </div>
@@ -500,9 +493,9 @@
         <div class="question-link clear-float">
             <h3>常见问题</h3>
             <ul>
-                <li><a href="/docs#OCR-FAQ">图片格式和分辨率有限制么？</a></li>
-                <li><a href="/docs#OCR-FAQ">图片大小有限制么？</a></li>
-                <li><a href="/docs#OCR-FAQ">怎么提高识别的准确率和识别速度？</a></li>
+                <li><a href="/docs#/FAQ/27a8606d">图片格式和分辨率有限制么？</a></li>
+                <li><a href="/docs#/FAQ/27a8606d">图片大小有限制么？</a></li>
+                <li><a href="/docs#/FAQ/27a8606d">怎么提高识别的准确率和识别速度？</a></li>
             </ul>
         </div>
     </div>
@@ -607,8 +600,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1491467582/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1491467582/js/technology/ocr-general.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/technology/ocr-general.js"></script>
 
 <script>
     (function () {

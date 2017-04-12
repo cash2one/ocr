@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/technology/speech-asr.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/technology/speech-asr.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1491467582/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1491986722/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -278,7 +278,7 @@
             百度语音识别的准确率达到90%以上，让您的应用绘“声”绘色
         </div>
         <div class="tech-function-pic">
-            <img width="670" src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/speech-asr/intro.png" >
+            <img width="670" src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/speech-asr/intro.png" >
         </div>
     </div>
 </div>
@@ -452,9 +452,9 @@
         <div class="tech-guide-question tech-clear">
             <div class="tech-guide-question-title">常见问题</div>
             <div class="tech-guide-question-list">
-                <a class="tech-link-btn" href="/docs#/ASR-FAQs">语音识别REST API支持的音频格式、采样率有哪些？</a>
-                <a class="tech-link-btn" href="/docs#/ASR-FAQs">语音识别REST API最长支持多长的录音？</a>
-                <a class="tech-link-btn" href="/docs#/ASR-FAQs">语音识别SDK支持的音频格式、采样率有哪些？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/a53b4698">语音识别REST API支持的音频格式、采样率有哪些？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/a53b4698">语音识别REST API最长支持多长的录音？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/a53b4698">语音识别SDK支持的音频格式、采样率有哪些？</a>
             </div>
         </div>
     </div>
@@ -559,8 +559,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1491467582/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1491467582/js/technology/speech-asr.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/technology/speech-asr.js"></script>
 
 <script>
     (function () {

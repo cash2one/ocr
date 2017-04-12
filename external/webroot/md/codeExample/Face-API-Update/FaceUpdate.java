@@ -17,9 +17,9 @@ public class Update {
     /**
      * 重要提示代码中所需工具类
      * FileUtil,Base64Util,HttpUtil请从
-     * https://github.com/Baidu-AIP/Demo/blob/master/java/com/baidu/ai/aip/utils/FileUtil.java
-     * https://github.com/Baidu-AIP/Demo/blob/master/java/com/baidu/ai/aip/utils/Base64Util.java
-     * https://github.com/Baidu-AIP/Demo/blob/master/java/com/baidu/ai/aip/utils/HttpUtil.java
+     * http://ai.baidu.com/download/demo/java/utils/FileUtil.java
+     * http://ai.baidu.com/download/demo/java/utils/Base64Util.java
+     * http://ai.baidu.com/download/demo/java/utils/HttpUtil.java
      * 下载
      */
     public static void main(String[] args) {
@@ -41,7 +41,6 @@ public class Update {
             String params = "uid=" + uid + "&" + URLEncoder.encode("images", "UTF-8") + "="
                     + URLEncoder.encode(imgStr1 + "," + imgStr2, "UTF-8");
             /**
-             /**
              * 线上环境access_token有过期时间， 客户端可自行缓存，过期后重新获取。
              */
             String accessToken = "#####调用鉴权接口获取的token#####";

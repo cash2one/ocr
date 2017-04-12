@@ -74,19 +74,19 @@
                 videos: [
                     {
                         poster: require('../../../../ai_images/technology/video-vca/poster-1.png'),
-                        src: 'http://gcik9stp4yee5v0aciu.exp.bcevod.com/mda-hdavmb2nypg7du9g/hdavxa0bdnf5r7wpxvt/mda-hdavmb2nypg7du9g.mp4'
+                        src: 'https://gcik9stp4yee5v0aciu.exp.bcevod.com/mda-hdavmb2nypg7du9g/hdavxa0bdnf5r7wpxvt/mda-hdavmb2nypg7du9g.mp4'
                     },
                     {
                         poster: require('../../../../ai_images/technology/video-vca/poster-2.png'),
-                        src: 'http://gcik9stp4yee5v0aciu.exp.bcevod.com/mda-hdavpn6azr06gkx2/hdav6c8uu7pm8vajbp0/mda-hdavpn6azr06gkx2.mp4'
+                        src: 'https://gcik9stp4yee5v0aciu.exp.bcevod.com/mda-hdavpn6azr06gkx2/hdav6c8uu7pm8vajbp0/mda-hdavpn6azr06gkx2.mp4'
                     },
                     {
                         poster: require('../../../../ai_images/technology/video-vca/poster-3.png'),
-                        src: 'http://gcik9stp4yee5v0aciu.exp.bcevod.com/mda-hdavsw3m66d8ra5x/hdavtdhx0z0fypj91t8/mda-hdavsw3m66d8ra5x.mp4'
+                        src: 'https://gcik9stp4yee5v0aciu.exp.bcevod.com/mda-hdavsw3m66d8ra5x/hdavtdhx0z0fypj91t8/mda-hdavsw3m66d8ra5x.mp4'
                     },
                     {
                         poster: require('../../../../ai_images/technology/video-vca/poster-4.png'),
-                        src: 'http://gcik9stp4yee5v0aciu.exp.bcevod.com/mda-hdav8gguws4wtazt/hdav8qgtu6d2cc27fgf/mda-hdav8gguws4wtazt.mp4'
+                        src: 'https://gcik9stp4yee5v0aciu.exp.bcevod.com/mda-hdav8gguws4wtazt/hdav8qgtu6d2cc27fgf/mda-hdav8gguws4wtazt.mp4'
                     }
                 ],
                 /* eslint-enable */
@@ -202,7 +202,7 @@
 
 <style lang="less">
     .ai-video-demo {
-        width: 1180px;
+        width: 1160px;
         margin: 0 auto;
         font-size: 0;
     }
@@ -214,7 +214,7 @@
     }
 
     .ai-video-result-panel {
-        width: 600px;
+        width: 580px;
     }
 
     .ai-video-tab {

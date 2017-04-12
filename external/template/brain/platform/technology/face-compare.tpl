@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/technology/face-compare.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/technology/face-compare.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1491467582/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1491986722/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -378,8 +378,8 @@
         <div class="question-link clear-float">
             <h3>常见问题</h3>
             <ul>
-                <li><a href="/docs#/FACE-FAQ">识别的图片支持怎样输入?</a></li>
-                <li><a href="/docs#/FACE-FAQ">什么是base64编码，如何提供？</a></li>
+                <li><a href="/docs#/FAQ/bf8881b2">识别的图片支持怎样输入?</a></li>
+                <li><a href="/docs#/FAQ/bf8881b2">什么是base64编码，如何提供？</a></li>
             </ul>
         </div>
     </div>
@@ -484,8 +484,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1491467582/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1491467582/js/technology/face-compare.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/technology/face-compare.js"></script>
 
 <script>
     (function () {

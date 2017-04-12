@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491467582/css/technology/ocr-webimage.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/technology/ocr-webimage.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1491467582/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1491986722/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -243,8 +243,8 @@
 <div class="ai-platform page-content">
     <div class="tech-section tech-banner">
     <div class="ai-container">
-        <div class="tech-banner-title" id="orc-enhanced-title">
-            网图图片文字识别
+        <div class="tech-banner-title">
+            网络图片文字识别
         </div>
         <div class="tech-banner-info">
             <p>依托全网海量优质数据和业界领先的深度学习技术<br>
@@ -260,7 +260,7 @@
                {%if $src eq Null%}
                /docs#OCR-API
                {%else%}
-               https://cloud.baidu.com/doc/OCR/index.html
+               /doc/OCR/index.html
                {%/if%}">
                 技术文档
             </a>
@@ -273,7 +273,7 @@
             功能介绍
         </div>
         <div class="tech-function-info">
-            支持互联网场景下的整图文字检测识别；多项ICDAR指标世界第一，支持任意场景、复杂背景、任意版面识别，支持10多种语言的识别<br>
+            支持互联网场景下的整图文字检测识别。多项ICDAR指标世界第一，支持任意场景、复杂背景、任意版面识别，支持10多种语言的识别<br>
             在图片文字清晰，小幅度倾斜、无明显背光等情况下识别率高达90%以上
         </div>
         <div class="tech-function-detail tech-clear">
@@ -310,28 +310,28 @@
                 </div>
                 <div class="tech-demo-card-list">
                     <div class="tech-demo-card-item tech-demo-card-active">
-                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-webimage/demo-card-1.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-webimage/demo-card-1.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-webimage/demo-card-2.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-webimage/demo-card-2.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-webimage/demo-card-3.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-webimage/demo-card-3.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-webimage/demo-card-4.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-webimage/demo-card-4.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-webimage/demo-card-5.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-webimage/demo-card-5.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-webimage/demo-card-6.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-webimage/demo-card-6.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-webimage/demo-card-7.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-webimage/demo-card-7.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1491467582/ai_images/technology/ocr-webimage/demo-card-8.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-webimage/demo-card-8.png" alt=" ">
                     </div>
                 </div>
             </div>
@@ -353,7 +353,7 @@
                 <div class="tech-feature-desc-title">准确性高</div>
                 <div class="tech-feature-desc-info">
                     国内首个公有云OCR产品，基于百度深度学习研究院（IDL）强大的深度学习算法和中文检测识别技术，
-                    整图中文识别准确率达85%以上，英文91%以上，文字定位精准
+                    整图中文识别准确率达85%以上，英文91%以上
                 </div>
             </div>
         </div>
@@ -387,7 +387,7 @@
             <div class="tech-scenario-desc">
                 <div class="tech-scenario-desc-name">通用网络场景</div>
                 <div class="tech-scenario-desc-info">
-                    针对互联网图片中的文字进行专门识别优化，对各种复杂的互联网图片中文字识别效果更好
+                    针对互联网图片中的文字进行了专项优化，对各种复杂的互联网图片中文字识别效果更好
                 </div>
             </div>
         </div>
@@ -405,7 +405,7 @@
             <div class="tech-scenario-desc">
                 <div class="tech-scenario-desc-name">视频场景</div>
                 <div class="tech-scenario-desc-info">
-                    用于短视频、长视频、直播等视频场景下的文字识别，方便用户进行视频标注、视频违规判断等操作
+                    用于短视频、长视频、直播等视频场景下的文字识别，方便用户进行视频标注，视频违规判断等操作
                 </div>
             </div>
         </div>
@@ -416,10 +416,10 @@
         <div class="tech-case-item tech-case-item-1 tech-case-active">
             <div class="ai-container">
                 <div class="tech-case-item-logo"></div>
-                <div class="tech-case-item-title">百度凤巢</div>
+                <div class="tech-case-item-title"></div>
                 <div class="tech-case-item-info">
                     百度凤巢是百度旗下的专业广告推广系统<br>
-                    调用百度网图OCR接口对各种图片中的文字进行识别，从而进行反作弊判断和风险管控
+                    调用百度网络图片文字识别接口对各种图片中的文字进行识别，从而进行反作弊判断和风险管控
                 </div>
             </div>
         </div>
@@ -429,14 +429,14 @@
                 <div class="tech-case-item-title">手机百度</div>
                 <div class="tech-case-item-info">
                     手机百度是百度推出的一款方便手机用户随时随地使用百度搜索服务的应用<br>
-                    手机百度调用百度通用OCR接口进行多模拍照文字识别，发现题目，翻译文字等功能
+                    手机百度调用百度通用OCR接口进行多模拍照文字识别，拍题识别，文字翻译等功能
                 </div>
             </div>
         </div>
     </div>
     <div class="tech-case-option">
         <div class="tech-case-option-btn tech-case-option-btn-1 tech-case-active">
-            百度凤巢
+            百度推广
         </div>
         <div class="tech-case-option-btn tech-case-option-btn-2">
             手机百度
@@ -446,19 +446,12 @@
 {%if $userInfo eq Null%}
 <div class="tech-section get-started tech-free">
     <div class="ai-container">
-        <div class="tech-free-title">快速提交您的需求</div>
-        <div class="tech-free-info">您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</div>
+        <div class="tech-free-title">立即获取免费API Key</div>
+        <div class="tech-free-info">现在试用，获取免费API Key，免费调用各项开放能力API</div>
         <div class="tech-free-btn">
             <a role="button"
-               {%if $src eq Null%}
-               class="btn-primary large consult"
-               data-operation="cooperation"
-               {%else%}
-               class="btn-primary large"
-               href="mailto://ai@baidu.com"
-               {%/if%}>
-                商务合作
-            </a>
+               class="btn-primary large ai-redirect"
+               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
         </div>
     </div>
 </div>
@@ -472,17 +465,16 @@
             <div class="tech-guide-question-list">
                 <a class="tech-link-btn" href="/docs#OCR-API">技术文档&nbsp;&gt;</a>
                 <a class="tech-link-btn" href="/sdk">SDK下载&nbsp;&gt;</a>
-                <a class="tech-link-btn" href="#">教学视频&nbsp;&gt;</a>
             </div>
             </div>
             <div class="tech-guide-question tech-clear">
             <div class="tech-guide-question-title">常见问题</div>
             <div class="tech-guide-question-list">
-                <a class="tech-link-btn" href="/docs#OCR-FAQ">图片格式和分辨率有限制吗?</a>
-                <a class="tech-link-btn" href="/docs#OCR-FAQ">字体有要求吗？</a>
-                <a class="tech-link-btn" href="/docs#OCR-FAQ">支持哪些语言识别？</a>
-                <a class="tech-link-btn" href="/docs#OCR-FAQ">支持文档扫描图片的文字识别吗？</a>
-                <a class="tech-link-btn" href="/docs#OCR-FAQ">怎么提高文字识别的准确率和识别速度？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/27a8606d">图片格式和分辨率有限制吗?</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/27a8606d">字体有要求吗？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/27a8606d">支持哪些语言识别？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/27a8606d">支持文档扫描图片的文字识别吗？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/27a8606d">怎么提高文字识别的准确率和识别速度？</a>
             </div>
         </div>
     </div>
@@ -588,8 +580,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1491467582/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1491467582/js/technology/ocr-webimage.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/technology/ocr-webimage.js"></script>
 
 <script>
     (function () {
