@@ -17,10 +17,10 @@
     .banner(@page-name: ocr-general_enhanced);
     .product-price {
         display: inline-block;
-        width: 110px;
+        width: 84px;
         height: 14px;
         background: url('../../../ai_images/product-price.png') no-repeat;
-        background-size: 110px 14px;
+        background-size: 84px 14px;
     }
 }
 // 调用通用的tech-feature模块
@@ -318,7 +318,13 @@
             text-align: left;
         }
     }
-
+    .result-index {
+        width: 40px;
+        height: 30px;
+    }
+    .result-connent {
+        width: 400px;
+    }
     &.has-result {
         &::after {
             display: none;
@@ -385,5 +391,5 @@
 }
 
 .@{prefix}-product {
-    .tech-product(@wrapper-height: 320px; @box-1-row: 6;@box-2-num: 2;@box-2-row: 2);
+    .tech-product(@wrapper-height: 320px; @pric-1-row: 6;@pric-2-num: 2;@pric-2-row: 2);
 }

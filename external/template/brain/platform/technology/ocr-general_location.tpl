@@ -255,19 +255,19 @@
                class="btn-primary media ai-redirect"
                href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">免费使用</a>
             <a role="button"
-               class="btn-other media"
-               href="
                {%if $src eq Null%}
-               /docs#OCR-API
+               class="btn-primary media ai-redirect"
+               href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=location_ocr"
                {%else%}
-               https://cloud.baidu.com/doc/OCR/index.html
-               {%/if%}">
-                开通付费
+               class="btn-primary media"
+               href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=all"
+               {%/if%}>
+            开通付费
             </a>
             <a href="#" class="product-price"></a>
         </div>
         <div class="product-word">
-            每月<div class="word-point">15000</div>次免费调用量，开通付费后用量<div class="word-point">不再设限！</div>
+            每月<span class="word-point">15000</span>次免费调用量，开通付费后用量<span class="word-point">不再设限！</span>
         </div>
     </div>
 </div>
@@ -527,65 +527,64 @@
         </div>
     </div>
 </div>
+
 <div class="tech-section get-started tech-product">
     <div class="container-product">
         <div class="tech-product-title">产品定价</div>
         <div class="tech-product-info">本产品为按调用量计费的后付费产品，定价采取分段式阶梯定价方式</div>
         <div class="tech-product-wrapper">
-            <div class="product-box-1">
-                <div class="box-head">价目表</div>
-                <div class="box-body">
-                    <div class="box-body-header">月调用量</div>
-                    <div class="box-body-header">单价</div>
-                    <div class="box-body-connent">0&lt;调用量&lt;=5w</div>
-                    <div class="box-body-connent">0.040元/次</div>
-                    <div class="box-body-connent">5w&lt;调用量&lt;=10w</div>
-                    <div class="box-body-connent">0.035元/次</div>
-                    <div class="box-body-connent">10w&lt;调用量&lt;=20w</div>
-                    <div class="box-body-connent">0.030元/次</div>
-                    <div class="box-body-connent">20w&lt;调用量&lt;=50w</div>
-                    <div class="box-body-connent">0.025元/次</div>
-                    <div class="box-body-connent">50w&lt;调用量</div>
-                    <div class="box-body-connent">0.020元/次</div>
-                    <div class="box-body-foot">
+            <div class="product-form-1">
+                <div class="product-head pric-head-1">价目表</div>
+                <div class="product-body pric-body-1">
+                    <div class="pric-item-header pric-item-1">月调用量</div>
+                    <div class="pric-item-header pric-item-1">单价</div>
+                    <div class="pric-item-connent pric-item-1">0&lt;调用量&lt;=5w</div>
+                    <div class="pric-item-connent pric-item-1">0.040元/次</div>
+                    <div class="pric-item-connent pric-item-1">5w&lt;调用量&lt;=10w</div>
+                    <div class="pric-item-connent pric-item-1">0.035元/次</div>
+                    <div class="pric-item-connent pric-item-1">10w&lt;调用量&lt;=20w</div>
+                    <div class="pric-item-connent pric-item-1">0.030元/次</div>
+                    <div class="pric-item-connent pric-item-1">20w&lt;调用量&lt;=50w</div>
+                    <div class="pric-item-connent pric-item-1">0.025元/次</div>
+                    <div class="pric-item-connent pric-item-1">50w&lt;调用量</div>
+                    <div class="pric-item-connent pric-item-1">0.020元/次</div>
+                    <div class="pric-item-foot">
                         免费配额：每日500次免费调用次数，超出免费配额，开始计费
                     </div>
                 </div>
             </div>
-            <div class="product-box-2">
-                <div class="box-head">付费配置</div>
-                <div class="box-body">
-                    <div class="box-body-header"></div>
-                    <div class="box-body-header">500/日免费配额</div>
-                    <div class="box-body-header">超过免费配额</div>
-                    <div class="box-body-header">QPS限制</div>
-                    <div class="box-body-header">免费</div>
-                    <div class="box-body-connent">拥有</div>
-                    <div class="box-body-connent">不响应请求</div>
-                    <div class="box-body-connent">不保证并发</div>
-                    <div class="box-body-header">付费</div>
-                    <div class="box-body-connent">拥有</div>
-                    <div class="box-body-connent">响应请求</div>
-                    <div class="box-body-connent">保证10次并发</div>
+            <div class="product-form-2">
+                <div class="product-head pric-head-2">付费配置</div>
+                <div class="product-body pric-body-2">
+                    <div class="pric-item-header pric-item-2"></div>
+                    <div class="pric-item-header pric-item-2">500/日免费配额</div>
+                    <div class="pric-item-header pric-item-2">超过免费配额</div>
+                    <div class="pric-item-header pric-item-2">QPS限制</div>
+                    <div class="pric-item-header pric-item-2">免费</div>
+                    <div class="pric-item-connent pric-item-2">拥有</div>
+                    <div class="pric-item-connent pric-item-2">不响应请求</div>
+                    <div class="pric-item-connent pric-item-2">不保证并发</div>
+                    <div class="pric-item-header pric-item-2">付费</div>
+                    <div class="pric-item-connent pric-item-2">拥有</div>
+                    <div class="pric-item-connent pric-item-2">响应请求</div>
+                    <div class="pric-item-connent pric-item-2">保证10次并发</div>
                 </div>
             </div>
-            <div class="product-box-3">
-                <div class="box-head">合作咨询</div>
-                <div class="box-body">
-                    <div class="box-body-header">如果您有以下的需求或其他需求，您可以提交合作咨询：</div>
-                    <div class="box-body-connent">1.如果您的调用量远大于最大的阶梯段，并需要更低的价格；</div>
-                    <div class="box-body-connent">2.如果您需要更高的QPS/并发；</div>
-                    <div class="box-body-connent">3.如果您有其他的OCR要求；</div>
-                    <div class="box-body-connent">4.如果您对现有的接口/SDK/文档有任何建议意见。</div>
+            <div class="product-form-3">
+                <div class="product-head pric-head-3">合作咨询</div>
+                <div class="product-body pric-body-3">
+                    <div class="pric-item-header pric-item-3">如果您有以下的需求或其他需求，您可以提交合作咨询：</div>
+                    <div class="pric-item-connent pric-item-3">1.如果您的调用量远大于最大的阶梯段，并需要更低的价格；</div>
+                    <div class="pric-item-connent pric-item-3">2.如果您需要更高的QPS/并发；</div>
+                    <div class="pric-item-connent pric-item-3">3.如果您有其他的OCR要求；</div>
+                    <div class="pric-item-connent pric-item-3">4.如果您对现有的接口/SDK/文档有任何建议意见。</div>
                 </div>
             </div>
-            <div class="product-box-4">
-                <div class="box-head">调用失败如何计费？</div>
-                <div class="box-body">
-                    <div class="box-body-connent">
-                        <div class="product-error-query">
-                            通用文字识别（含位置信息版）任何调用失败均不算作一次需计费的调用，不产生任何费用
-                        </div>
+            <div class="product-form-4">
+                <div class="product-head pric-head-4">调用失败如何计费？</div>
+                <div class="product-body pric-body-4">
+                    <div class="pric-item-connent pric-item-4">
+                        通用文字识别（含位置信息版）任何调用失败均不算作一次需计费的调用，不产生任何费用
                     </div>
                 </div>
             </div>
@@ -597,8 +596,15 @@
                 免费使用
             </a>
             <a role="button"
+               {%if $src eq Null%}
                class="btn-primary large ai-redirect"
-               href="#">开通付费</a>
+               href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=location_ocr"
+               {%else%}
+               class="btn-primary large"
+               href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=all"
+               {%/if%}>
+            开通付费
+            </a>
         </div>
     </div>
 </div>
@@ -631,7 +637,6 @@
             <div class="tech-guide-question-list">
                 <a class="tech-link-btn" href="/docs#OCR-API">技术文档&nbsp;&gt;</a>
                 <a class="tech-link-btn" href="/sdk">SDK下载&nbsp;&gt;</a>
-                <a class="tech-link-btn" href="#">教学视频&nbsp;&gt;</a>
             </div>
             </div>
             <div class="tech-guide-question tech-clear">

@@ -1,24 +1,25 @@
 @import '../common/initialize.less';
 
-.tech-product (@wrapper-height: 380px;@num: 4; @box-1-num: 2; @box-1-row: 7;@box-2-num: 4;@box-2-row: 3; @box-3-num: 1) {
-    @box-1-width :(1/@box-1-num)*560px;
-    @box-2-width :(1/@box-2-num)*560px;
-    @box-3-width :(1/@box-3-num)*560px;
-    @box-3-height :(@box-1-row)*30px;
-    @box-4-height :(@box-2-row)*30px;
+.tech-product (@wrapper-height: 380px;@num: 4; @pric-1-num: 2; @pric-1-row: 7;@pric-2-num: 4;@pric-2-row: 3; @pric-3-num: 1) {
+    @pric-1-width :(1/@pric-1-num)*560px;
+    @pric-2-width :(1/@pric-2-num)*560px;
+    @pric-3-width :(1/@pric-3-num)*560px;
+    @pric-3-height :(@pric-1-row)*30px;
+    @pric-4-height :(@pric-2-row)*30px;
 
     padding: 50px 0;
     background-color: #fff;
     text-align: center;
+
     .container-product {
         display: block;
         width: 1180px;
         height: 100%;
         margin: 0 auto;
         position: relative;
-        .large {
-            margin: 0 20px;
-        }
+    }
+    .btn-primary {
+        margin: 0 20px;
     }
     &-title {
         padding-bottom: 20px;
@@ -39,79 +40,82 @@
         transform: translateX(-50%);
         margin-bottom: 30px;
     }
-    [class^='product-box-'] {
+    [class^='product-form-'] {
         position: absolute;
         width: 585px;
-        .box-body-header {
-            font-size: 14px;
-        }
-        .box-body-connent {
-            color: rgba(0, 0, 0, 0.6);
-        }
     }
-    [class^='box-body-'] {
-        display: inline-block;
-        font-size: 13px;
-    }
-    .product-box-1 {
-        [class^='box-body-'] {
-            width: @box-1-width;
-        }
-        .box-body-foot {
-            width: 100%;
-        }
-    }
-    .product-box-2 {
-        bottom: 0;
-        [class^='box-body-'] {
-            width: @box-2-width;
-        }
-    }
-    .product-box-3 {
-        right: 0;
-        .box-body {
-            height: @box-3-height;
-        }
-        [class^='box-body-'] {
-            width: @box-3-width;
-        }
-    }
-    .product-box-4 {
-        right: 0;
-        bottom: 0;
-        font-size: 15px;
-        .box-body {
-            padding-right: 20px;
-        }
-        .box-body-connent {
-            position: relative;
-            width: 100%;
-            height: @box-4-height;
-            color: #000;
-        }
-        .product-error-query {
-            position: absolute;
-            width: 100%;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
-        }
-    }
-    .box-head {
-        font-size: 16px;
-        text-align: left;
+    .product-head {
         padding-left: 20px;
         line-height: 30px;
-        font-weight: bold;
+        font-size: 16px;
+        text-align: left;
+        font-weight: 600;
         border: 1px solid #ccc;
     }
-    .box-body {
-        text-align: left;
+    .product-body {
         padding-left: 20px;
         border: 1px solid #ccc;
         border-top: 0;
-        div {
-            line-height: 30px;
-        }
+        text-align: left;
+    }
+    .pric-item-header {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 30px;
+        font-size: 14px;
+    }
+    .pric-item-connent {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 30px;
+        font-size: 13px;
+        color: rgba(0,0,0,.6);
+    }
+
+    //表单一不同之处
+    .pric-item-1{
+        width: @pric-1-width;
+    }
+    .pric-item-foot {
+        line-height: 30px;
+        font-size: 13px;
+    }
+
+    //表单二不同之处
+    .product-form-2 {
+        bottom: 0;
+    }
+    .pric-item-2 {
+        width: @pric-2-width;
+    }
+
+    //表单三不同之处
+    .product-form-3 {
+        right: 0;
+    }
+    .pric-body-3 {
+        height: @pric-3-height;
+    }
+    .pric-item-3 {
+        width: @pric-3-width;
+        line-height: 35px;
+    }
+
+    //表单四不同之处
+    .product-form-4 {
+        right: 0;
+        bottom: 0;
+        font-size: 15px;
+    }
+    .pric-body-4 {
+        padding-right: 20px;
+        height: @pric-4-height;
+    }
+    .pric-item-4 {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        color: rgba(0,0,0,1);
     }
 }
