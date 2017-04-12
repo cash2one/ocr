@@ -86,8 +86,8 @@ class Action_Download extends Ap_Action_Abstract
            // print $e->getMessage();
        }
         
-        $odp_path = Bd_Conf::getAppConf('odp_info');
-        $path = $odp_path.$filePath
+        $odp_path = Bd_Conf::getAppConf('odp_info/path');
+        $path = $odp_path.$filePath;
         ob_start(); 
         $size = filesize($path); 
         header("Content-type:  application/octet-stream ");
