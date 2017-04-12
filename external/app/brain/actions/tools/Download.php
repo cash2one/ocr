@@ -1,6 +1,6 @@
 <?php
 require_once(dirname(__FILE__).'/../../library/cas/Info.php');
-require_once(dirname(__FILE__).'/../../library/cas/Client.php');
+require_once(dirname(__FILE__).'/../../library/cas/ClientUC.php');
 /***************************************************************************
  *
  * Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
@@ -78,7 +78,7 @@ class Action_Download extends Ap_Action_Abstract
            $casInfo->setLoginUrl($strLoginUrl);
            $casInfo->setJumpUrl($strJumpUrl);
            $casInfo->setAutoRedirect(false);
-           $cas_client = new Cas_Client($casInfo);
+           $cas_client = new Cas_ClientUC($casInfo);
            $objCheckRes = $cas_client->validate();
            if (!is_null($objCheckRes)) {
                $ucid = (string)$objCheckRes->getUcid();
