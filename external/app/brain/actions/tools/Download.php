@@ -1,6 +1,4 @@
 <?php
-require_once(dirname(__FILE__).'/../../library/cas/Info.php');
-require_once(dirname(__FILE__).'/../../library/cas/ClientUC.php');
 /***************************************************************************
  *
  * Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
@@ -26,11 +24,8 @@ class Action_Download extends Ap_Action_Abstract
            $userInfo = Bd_Passport::checkUserLogin();
            if($userInfo != false){
                $passId = $userInfo['uid'];
-           }else{
-               // var_dump("No passId!");
            }
        } catch (Exception $e) {
-           // print $e->getMessage();
        }
 
 
@@ -82,10 +77,9 @@ class Action_Download extends Ap_Action_Abstract
            $objCheckRes = $cas_client->validate();
            if (!is_null($objCheckRes)) {
                $ucid = (string)$objCheckRes->getUcid();
-               // var_dump($ucid);
            }
        } catch (Exception $e) {
-           // print $e->getMessage();
+
        }
         
         $odp_path = Bd_Conf::getAppConf('odp_info/path');
@@ -99,13 +93,12 @@ class Action_Download extends Ap_Action_Abstract
           header("Content-Disposition:  attachment;  filename=" .$filePath);
           echo file_get_contents($path);
           readfile($path);
+          $dbSdkInfo = new Dao_SdkInfo();
+          $dbSdkInfo->insertSdkInfo($ucid, $passId, $serviceType, $language);
         } else {
           $url = '/404';
           Header("Location: $url"); 
         }
-
-        $dbSdkInfo = new Dao_SdkInfo();
-        $dbSdkInfo->insertSdkInfo($ucid, $passId, $serviceType, $language);
 
         return ;
     }
