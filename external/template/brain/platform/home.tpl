@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/home.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/home.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1491541563/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1491986722/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -79,6 +79,11 @@
                                  <li>
                                     <a href="/tech/ocr/general_location" id="ocr-location-link">
                                     通用文字识别（含位置信息版）
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/tech/ocr/webimage">
+                                        网络图片文字识别
                                     </a>
                                 </li>
                             </ul>
@@ -239,6 +244,18 @@
     <section class="banner">
     <ul class="banner-content">
         <li class="active">
+            <a href="#">
+                <h1>文字识别 计费系统上线</h1>
+                <p>
+                    异地容灾，提高响应，降低风险<br>
+                    7*24小时售后，无限次调用，更高的QPS
+                </p>
+                <div>
+                    <button type="button" class="get-started">更多优惠</button>
+                </div>
+            </a>
+        </li>
+        <li>
             <a href="/tech/video/vca">
                 <h1>智能视频分析</h1>
                 <p>
@@ -309,13 +326,6 @@
                 </div>
             </a>
         </li>
-        <li>
-            <a href="https://cloud.baidu.com/event/ABC-ecology-partner/?t=cp:online-media|ci:20170327_ABCEcology_meeting|cn:zhanzhang">
-                <div>
-                    <button type="button" class="get-started get-cloud">立即报名</button>
-                </div>
-            </a>
-        </li>
         <!-- <li class="video-bg">
             <h1>让 AI 变革发生</h1>
             <p>更全面、优质、易用的人工智能服务<br>即刻开启AI发现之旅</p>
@@ -326,7 +336,7 @@
                     免费试用
                 </a>
             </div>
-            <video src="//ai.bdstatic.com/dist/1491541563/ai_images/home/banner-1.mp4">
+            <video src="//ai.bdstatic.com/dist/1491986722/ai_images/home/banner-1.mp4">
             </video>
         </li> -->
     </ul>
@@ -341,11 +351,25 @@
         <li></li>
     </ul>
 </section>
+<section class="lastest-news">
+    <div class="container">
+        <h4>新闻速递</h4><a href="/support/news?action=detail&amp;id={%$lastestNews.id%}">{%$lastestNews.title%}</a>
+    </div>
+</section>
 <section class="news">
     <div class="container">
-        <div class="news-container"></div>
-        <h4>新闻动态</h4>
-        <a href="/support/news">more &gt;</a>
+        <ul>
+            {%foreach $newsList as $news%}
+            <li>
+                <a href="/support/news?action=detail&amp;id={%$news.id%}">
+                    <img src="{%$news.img%}" alt="{%$news.title%}">
+                    <h4>{%$news.title%}</h4>
+                    <p>{%$news.abs%}</p>
+                    <i class="more"></i>
+                </a>
+            </li>
+            {%/foreach%}
+        </ul>
     </div>
 </section>
 <section class="tech-service home-section">
@@ -410,6 +434,9 @@
                                     </li>
                                     <li>
                                         <a href="/tech/ocr/bankcard">银行卡识别</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/ocr/webimage">网络图片文字识别</a>
                                     </li>
                                 </ul>
                             </li>
@@ -603,24 +630,10 @@
                 </div>
             </div>
             <div class="service-item service-item-waiting">
-                <div class="service-detail">
-                    <div class="clear-float">
-                        <div class="service-desc">
-                            <h2>敬请期待...</h2>
-                        </div>
-                        <div class="service-icon"></div>
-                    </div>
-                </div>
+                <div class="waiting">敬请期待</div>
             </div>
             <div class="service-item service-item-waiting">
-                <div class="service-detail">
-                    <div class="clear-float">
-                        <div class="service-desc">
-                            <h2>敬请期待...</h2>
-                        </div>
-                        <div class="service-icon"></div>
-                    </div>
-                </div>
+                <div class="waiting">敬请期待</div>
             </div>
         </div>
     </div>
@@ -720,7 +733,7 @@
                     <img alt="百度语音基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1491541563/ai_images/home/video-1.png">
+                         src="//ai.bdstatic.com/dist/1491986722/ai_images/home/video-1.png">
                 </a>
                 <h5>百度语音基础介绍及应用场景</h5>
             </li>
@@ -730,7 +743,7 @@
                     <img alt="百度OCR基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1491541563/ai_images/home/video-2.png">
+                         src="//ai.bdstatic.com/dist/1491986722/ai_images/home/video-2.png">
                 </a>
                 <h5>百度OCR基础介绍及应用场景</h5>
             </li>
@@ -740,7 +753,7 @@
                     <img alt="百度人脸技术基础介绍及引用场景"
                         width="500"
                         height="280"
-                        src="//ai.bdstatic.com/dist/1491541563/ai_images/home/video-3.png">
+                        src="//ai.bdstatic.com/dist/1491986722/ai_images/home/video-3.png">
                 </a>
                 <h5>百度人脸技术基础介绍及引用场景</h5>
             </li>
@@ -751,7 +764,7 @@
                     <img alt="百度翻译产品介绍"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1491541563/ai_images/home/video-4.png">
+                         src="//ai.bdstatic.com/dist/1491986722/ai_images/home/video-4.png">
                 </a>
                 <h5>百度翻译产品介绍</h5>
             </li>
@@ -892,8 +905,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1491541563/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1491541563/js/home.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/home.js"></script>
 
 <script>
     (function () {

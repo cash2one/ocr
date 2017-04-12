@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/technology/face-search.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/technology/face-search.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1491541563/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1491986722/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -79,6 +79,11 @@
                                  <li>
                                     <a href="/tech/ocr/general_location" id="ocr-location-link">
                                     通用文字识别（含位置信息版）
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/tech/ocr/webimage">
+                                        网络图片文字识别
                                     </a>
                                 </li>
                             </ul>
@@ -254,7 +259,7 @@
                class="btn-other media"
                href="
                {%if $src eq Null%}
-               /docs#FACE
+               /docs#FACE-API
                {%else%}
                https://cloud.baidu.com/doc/FACE/index.html
                {%/if%}">
@@ -404,15 +409,15 @@
         <div class="tech-guide-link tech-clear">
             <div class="tech-guide-link-title">开发指南</div>
             <div class="tech-guide-link-list">
-                <a class="tech-link-btn" href="/docs#FACE">技术文档 &gt;</a>
+                <a class="tech-link-btn" href="/docs#FACE-API">技术文档 &gt;</a>
                 <a class="tech-link-btn" href="/sdk">SDK下载 &gt;</a>
             </div>
         </div>
         <div class="tech-guide-question tech-clear">
             <div class="tech-guide-question-title">常见问题</div>
             <div class="tech-guide-question-list">
-                <a class="tech-link-btn" href="/docs#FACE-FAQ_Q1">识别的图片支持怎样输入？</a>
-                <a class="tech-link-btn" href="/docs#FACE-FAQ_Q2">什么是base64编码，如何提供？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/bf8881b2">识别的图片支持怎样输入？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/bf8881b2">什么是base64编码，如何提供？</a>
             </div>
         </div>
     </div>
@@ -517,8 +522,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1491541563/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1491541563/js/technology/face-search.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/technology/face-search.js"></script>
 
 <script>
     (function () {

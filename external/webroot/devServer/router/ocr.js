@@ -51,4 +51,46 @@ router.get('/general_location', (req, res, next) => {
         next
     );
 });
+
+router.get('/idcard', (req, res, next) => {
+    renderSmarty(
+        'technology/ocr-idcard.tpl',
+        getMockData({})
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
+
+router.get('/bankcard', (req, res, next) => {
+    renderSmarty(
+        'technology/ocr-bankcard.tpl',
+        getMockData({})
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
+
+router.get('/webimage', (req, res, next) => {
+    renderSmarty(
+        'technology/ocr-webimage.tpl',
+        getMockData({})
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
 module.exports = router;

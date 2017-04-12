@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/technology/face-detect.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/technology/face-detect.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1491541563/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1491986722/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -79,6 +79,11 @@
                                  <li>
                                     <a href="/tech/ocr/general_location" id="ocr-location-link">
                                     通用文字识别（含位置信息版）
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/tech/ocr/webimage">
+                                        网络图片文字识别
                                     </a>
                                 </li>
                             </ul>
@@ -248,7 +253,7 @@
                class="btn-other media"
                href="
                {%if $src eq Null%}
-               /docs#FACE
+               /docs#FACE-API
                {%else%}
                https://cloud.baidu.com/doc/FACE/index.html
                {%/if%}">
@@ -308,28 +313,28 @@
             <div>
                 <ul class="demo-card-list clear-float">
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/bfr-detect/demo-card-1.jpg">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/bfr-detect/demo-card-1.jpg">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/bfr-detect/demo-card-2.jpg">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/bfr-detect/demo-card-2.jpg">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/bfr-detect/demo-card-3.jpg">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/bfr-detect/demo-card-3.jpg">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/bfr-detect/demo-card-4.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/bfr-detect/demo-card-4.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/bfr-detect/demo-card-5.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/bfr-detect/demo-card-5.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/bfr-detect/demo-card-6.jpg">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/bfr-detect/demo-card-6.jpg">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/bfr-detect/demo-card-7.jpg">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/bfr-detect/demo-card-7.jpg">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/bfr-detect/demo-card-8.jpg">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/bfr-detect/demo-card-8.jpg">
                     </li>
                 </ul>
             </div>
@@ -438,15 +443,15 @@
         <div class="guide-link clear-float">
             <h3>开发指南</h3>
             <ul>
-                <li><a href="/docs#FACE">技术文档 ></a></li>
+                <li><a href="/docs#FACE-API">技术文档 ></a></li>
                 <li><a href="/sdk">SDK下载 ></a></li>
             </ul>
         </div>
         <div class="question-link clear-float">
             <h3>常见问题</h3>
             <ul>
-                <li><a href="/docs#FACE-FAQ_Q1">识别的图片支持怎样输入?</a></li>
-                <li><a href="/docs#FACE-FAQ_Q2">什么是base64编码，如何提供？</a></li>
+                <li><a href="/docs#/FAQ/bf8881b2">识别的图片支持怎样输入?</a></li>
+                <li><a href="/docs#/FAQ/bf8881b2">什么是base64编码，如何提供？</a></li>
             </ul>
         </div>
     </div>
@@ -551,8 +556,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1491541563/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1491541563/js/technology/face-detect.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/technology/face-detect.js"></script>
 
 <script>
     (function () {

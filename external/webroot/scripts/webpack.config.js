@@ -125,6 +125,7 @@ webpackEntries.base = ['src/less/base.less'];
 webpackEntries.ie9 = ['src/less/ie9.less'];
 webpackEntries.template = ['src/view/common/template.html'];
 
+
 module.exports = {
     // 注意基准路径是webroot
     context: path.resolve(__dirname, '..'),

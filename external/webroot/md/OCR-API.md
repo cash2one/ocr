@@ -9,61 +9,85 @@ Hi，您好，欢迎使用百度OCR文字识别API服务。
 
 ## 接口能力
 
-| 接口名称  | 接口能力简要描述                     |
-| :---- | :--------------------------- |
-| 人脸检测  | 检测人脸并定位，返回五官关键点，及人脸各属性值      |
-| 人脸比对  | 返回两两比对的人脸相似值                 |
-| 人脸识别  | 在人脸集合中查找相似的人脸                |
-| 人脸认证  | 识别上传的图片是否为指定用户               |
-| 人脸库设置 | 最人脸集合的相关操作，如注册、删除、更新、查找用户信息等 |
+| 接口名称          | 接口能力简要描述                |
+| :------------ | :---------------------- |
+| 通用文字识别（含位置版）  | 识别图片中的文字信息（包含文字区域的坐标信息） |
+| 通用文字识别（不含位置版） | 识别图片中的文字信息（不含文字区域的坐标信息） |
+| 身份证识别         | 识别身份证正反面的文字信息           |
+| 银行卡识别         | 识别银行卡的卡号及发卡行信息          |
 
-**请求消息体格式**
+## 请求格式
 
-API服务要求使用POST方式调用，Content-Type为application/x-www-form-urlencoded，然后通过urlencode格式化请求体。
+POST方式调用
 
-**请求返回格式**
+**注意：**Content-Type为`application/x-www-form-urlencoded`，然后通过`urlencode`格式化请求体。
 
-API服务均采用JSON格式的消息体作为响应返回的格式。
+## 返回格式
 
-**服务限制**
+JSON格式
 
-OCR服务对图片格式、图片大小有限制，格式支持jpg、png，长宽都要小于2048px。
+## 请求限制
 
-# 调用方式一
+请求图片需经过`base64编码`：图片的base64编码指将一副图片数据编码成一串字符串，使用该字符串代替图像地址。您可以首先得到图片的二进制，然后用Base64格式编码即可。
 
-## 请求URL数据格式
+**注意：**图片的base64编码是不包含图片头的，如`（data:image/jpg;base64,）`
+
+**请求格式支持：**PNG、JPG、JPEG、BMP，**不支持GIF图片**
+
+| 接口名称          | 图片编码后大小限额                              |
+| :------------ | :------------------------------------- |
+| 通用文字识别（含位置版）  | base64编码后大小不超过4M，最短边至少15px，最长边最大4096px |
+| 通用文字识别（不含位置版） | base64编码后大小不超过4M，最短边至少15px，最长边最大4096px |
+| 身份证识别         | base64编码后大小不超过4M，最短边至少15px，最长边最大4096px |
+| 银行卡识别         | base64编码后大小不超过4M，最短边至少15px，最长边最大4096px |
+
+# 调用方式
+
+调用AI服务相关的API接口有两种调用方式，两种不同的调用方式采用相同的接口URL。
+
+区别在于**请求方式**和**鉴权方法**不一样，请求参数和返回结果一致。
+
+## 调用方式一
+
+**请求URL数据格式**
 
 向API服务地址使用POST发送请求，必须在URL中带上参数：
 
-**access_token:** 必须参数，参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)”。
+**access_token:** 必须参数，参考“[Access Token获取](http://ai.baidu.com/docs#/Auth)”。
+
+> 注意：`access_token`的有效期为30天，需要每30天进行定期更换；
 
 POST中参数按照API接口说明调用即可。
 
-例如文字识别API，使用HTTPS POST发送：
+例如人脸识别API，使用HTTPS POST发送：
 
 ```
 https://aip.baidubce.com/rest/2.0/ocr/v1/general?access_token=24.f9ba9c5241b67688bb4adbed8bc91dec.2592000.1485570332.282335-8574074
 ```
 
+**获取access_token示例代码**
+
+{% AccessToken %}
+
 > **说明：**方式一鉴权使用的Access_token必须通过API Key和Secret Key获取。
 
-# 调用方式二
+## 调用方式二
 
-## 请求头域内容
+**请求头域内容**
 
-OCR的API服务需要在请求的HTTP头域中包含以下信息：
+在请求的HTTP头域中包含以下信息：
 
 * host（必填）
 * x-bce-date （必填）
 * x-bce-request-id（选填）
 * authorization（必填）
-* content-type（选填）
+* content-type（必填）
 * content-length（选填）
 
-作为示例，以下是一个标准的请求头域内容:
+作为示例，以下是一个标准的人脸识别的请求头域内容:
 
 ```http
-POST /rest/2.0/ocr/v1/general? HTTP/1.1
+POST /rest/2.0/face/v1/detect HTTP/1.1
 accept-encoding: gzip, deflate
 x-bce-date: 2015-03-24T13:02:00Z
 connection: keep-alive
@@ -76,122 +100,105 @@ authorization: bce-auth-v1/46bd9968a6194b4bbdf0341f2286ccce/2015-03-24T13:02:00Z
 
 > **说明：**方式二鉴权使用的[API认证机制](https://cloud.baidu.com/doc/Reference/AuthenticationMechanism.html)authorization必须通过百度云的[AK/SK](https://cloud.baidu.com/doc/Reference/GetAKSK.html)生成。
 
+# 通用文字识别
 
-# 错误信息格式
+## 接口描述
 
-若请求错误，服务器将返回的JSON文本包含以下参数：
+用户向服务请求识别某张图中的所有文字。
 
-* **error_code：**错误码；关于错误码的详细信息请参考“[通用错误码](#通用错误码)和[业务相关错误码](#业务相关错误码)”。
+## 请求说明
 
-* **error_msg：**错误描述信息，帮助理解和解决发生的错误。
+**请求示例**
 
-例如Access Token失效返回：
+HTTP 方法：`POST`
 
-```
-{
-  "error_code": 110,
-  "error_msg": "Access token invalid or no longer valid"
-}
-```
+请求URL： `https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic `
 
-
-需要重新获取新的Access Token再次请求即可。
-
-**Access Token错误码**
-
-| error_CODE | error_MSG                               | 解释               |
-| ---------- | --------------------------------------- | ---------------- |
-| 100        | Invalid parameter                       | 无效参数             |
-| 110        | Access token invalid or no longer valid | Access Token过期失效 |
-
-## 通用错误码
-
-| 错误码    | 错误信息                   | 描述            |
-| ------ | ---------------------- | ------------- |
-| 216015 | module closed          | 模块关闭          |
-| 216100 | invalid param          | 非法参数          |
-| 216101 | not enough param       | 参数数量不够        |
-| 216102 | service not support    | 业务不支持         |
-| 216103 | param too long         | 参数太长          |
-| 216110 | appid not exist        | APP ID不存在     |
-| 216111 | invalid userid         | 非法用户ID        |
-| 216200 | empty image            | 空的图片          |
-| 216201 | image format error     | 图片格式错误        |
-| 216202 | image size error       | 图片大小错误        |
-| 216300 | db error               | DB错误          |
-| 216400 | backend error          | 后端系统错误        |
-| 216401 | internal error         | 内部错误          |
-| 216500 | unknown error          | 未知错误          |
-| 216632 | ocr                    | unknown error |
-| 216633 | recognize idcard error | 识别身份证错误       |
-| 216634 | detect error           | 检测错误          |
-| 216635 | get mask error         | 获取mask图片错误    |
-| 282000 | logic internal error    	| 业务逻辑层内部错误 |
-| 282001 | logic backend error     	| 业务逻辑层后端服务错误 |
-| 282100 | image transcode error	| 图片压缩转码错误 		|
-
-## 业务相关错误码
-
-| 错误码    | 错误信息                         | 描述           |
-| ------ | ---------------------------- | ------------ |
-| 216600 | id number format error       | 身份证的ID格式错误   |
-| 216601 | id number and name not match | 身份证的ID和名字不匹配 |
-| 216611 | user not exist               | 用户不存在        |
-| 216613 | user not found               | 用户查找不到       |
-| 216614 | not enough images            | 图片信息不完整      |
-| 216615 | fail to process images       | 处理图片信息失败     |
-| 216616 | image existed                | 图片已存在        |
-| 216617 | fail to add user             | 添加用户失败       |
-| 216618 | no user in group             | 群组里没有用户      |
-| 216630 | recognize error              | 识别错误         |
-| 216631 | recognize bank card error    | 识别银行卡错误      |
-
-# 识别接口
-
-## 通用文字识别（含位置信息版）
-**接口描述**
-
-用户向服务请求识别某张图中的所有文字，并返回文字在图中的位置信息。
-
-**调用方式一请求示例**
-
-* HTTP 方法： POST
-
-* 请求URL： `https://aip.baidubce.com/rest/2.0/ocr/v1/general`
-
-* URL参数：<br>
+URL参数：
 
 | 参数           | 值                                        |
 | ------------ | ---------------------------------------- |
-| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
+| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#/Auth)” |
 
-* Header如下：
+Header如下：
 
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | Content-Type | application/x-www-form-urlencoded |
 
-* Body中数据示例：
+Body中放置请求参数，参数详情如下：
 
-| 参数    | 值          |
-| ----- | ---------- |
-| image | 图像base64编码 |
+**请求参数**
 
+| 参数               | 是否必选  | 类型      | 可选值范围                                   | 说明                                       |
+| ---------------- | ----- | ------- | --------------------------------------- | ---------------------------------------- |
+| image            | true  | string  | -                                       | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
+| mask             | false | string  | -                                       | 表示mask区域的黑白灰度图片，白色代表选中, base64编码         |
+| language_type    | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
+| detect_direction | false | boolean | true、false                              | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
+| detect_language  | FALSE | string  | true、false                              | 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）           |
 
+**请求代码示例**
 
-**调用方式二请求示例**
+请参考通用文字识别（含位置信息版）的代码内容，并更换请求地址。
 
+## 返回说明
+
+**返回参数**
+
+| 字段               | 是否必选 | 类型      | 说明                                       |
+| ---------------- | ---- | ------- | ---------------------------------------- |
+| direction        | 否    | int32   | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
+| log_id           | 是    | uint64  | 唯一的log id，用于问题定位                         |
+| words_result     | 是    | array() | 识别结果数组                                   |
+| words_result_num | 是    | uint32  | 识别结果数，表示words_result的元素个数                |
+| +words           | 否    | string  | 识别结果字符串                                  |
+
+**返回示例**
+
+```http
+HTTP/1.1 200 OK
+x-bce-request-id: 73c4e74c-3101-4a00-bf44-fe246959c05e
+Cache-Control: no-cache
+Server: BWS
+Date: Tue, 18 Oct 2016 02:21:01 GMT
+Content-Type: application/json;charset=UTF-8
+{
+"log_id": 2471272194, 
+"words_result_num": 2,
+"words_result": 
+	[
+		{"words": " TSINGTAO"}, 
+		{"words": "青島睥酒"}
+	]
+}
 ```
-POST /rest/2.0/ocr/v1/general HTTP/1.1
 
-x-bce-date: 2016-10-18T02: 20: 01Z,
-host: aip.baidubce.com,
-accept: */*,
-authorization: bce-auth-v1/fbf9f7889585498d8ba8a68da26cbb2e/2016-10-18T02: 20: 01Z/1800/host/6c7cb35358b5c870666d14588af648e8c941a8b2300becd97831803198ee7a6d
+# 通用文字识别（含位置信息版）
 
-image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
+## 接口描述
 
-```
+用户向服务请求识别某张图中的所有文字，并返回文字在图中的位置信息。
+
+**请求示例**
+
+HTTP 方法：`POST`
+
+请求URL： `https://aip.baidubce.com/rest/2.0/ocr/v1/general`
+
+URL参数：
+
+| 参数           | 值                                        |
+| ------------ | ---------------------------------------- |
+| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#/Auth)” |
+
+Header如下：
+
+| 参数           | 值                                 |
+| ------------ | --------------------------------- |
+| Content-Type | application/x-www-form-urlencoded |
+
+Body中放置请求参数，参数详情如下：
 
 **请求参数**
 
@@ -203,8 +210,43 @@ image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 | language_type         | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
 | detect_direction      | false | boolean | true、false                              | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
 | detect_language       | FALSE | string  | true、false                              | 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）           |
-| classify_dimension    | FALSE | string  | lottery                                 | 分类维度（根据OCR结果进行分类），逗号分隔，当前只支持lottery。<br/>lottery：彩票分类，设置detect_direction有助于提升精度 |
 | vertexes_location     | FALSE | string  | true、false                              | 是否返回文字外接多边形顶点位置，不支持单字位置。默认为false         |
+
+**请求代码示例**
+
+**提示一：**使用示例代码前，请记得替换其中的示例Token、图片地址或Base64信息。
+
+**提示二：**部分语言依赖的类或库，请在代码注释中查看下载地址。
+
+{% OCR-API-General %}
+
+## 返回说明
+
+**返回参数**
+
+| 字段                 | 是否必选 | 类型      | 说明                                       |
+| ------------------ | ---- | ------- | ---------------------------------------- |
+| direction          | 否    | int32   | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
+| log_id             | 是    | uint64  | 唯一的log id，用于问题定位                         |
+| words_result       | 是    | array() | 定位和识别结果数组                                |
+| words_result_num   | 是    | uint32  | 识别结果数，表示words_result的元素个数                |
+| +vertexes_location | 否    | array() | 当前为四个顶点: 左上，右上，右下，左下。当vertexes_location=true时存在 |
+| ++x                | 是    | uint32  | 水平坐标（坐标0点为左上角）                           |
+| ++y                | 是    | uint32  | 垂直坐标（坐标0点为左上角）                           |
+| +location          | 是    | array() | 位置数组（坐标0点为左上角）                           |
+| ++left             | 是    | uint32  | 表示定位位置的长方形左上顶点的水平坐标                      |
+| ++top              | 是    | uint32  | 表示定位位置的长方形左上顶点的垂直坐标                      |
+| ++width            | 是    | uint32  | 表示定位位置的长方形的宽度                            |
+| ++height           | 是    | uint32  | 表示定位位置的长方形的高度                            |
+| +words             | 否    | string  | 识别结果字符串                                  |
+| +chars             | 否    | array() | 单字符结果，recognize_granularity=small时存在     |
+| ++location         | 是    | array() | 位置数组（坐标0点为左上角）                           |
+| +++left            | 是    | uint32  | 表示定位位置的长方形左上顶点的水平坐标                      |
+| +++top             | 是    | uint32  | 表示定位位置的长方形左上顶点的垂直坐标                      |
+| +++width           | 是    | uint32  | 表示定位定位位置的长方形的宽度                          |
+| +++height          | 是    | uint32  | 表示位置的长方形的高度                              |
+| ++char             | 是    | string  | 单字符识别结果                                  |
+
 
 **返回示例**
 
@@ -253,86 +295,59 @@ Content-Type: application/json;charset=UTF-8
 ]
 }
 ```
-**返回参数**
+# 通用文字识别（含生僻字版）
 
-| 字段                 | 必选   | 类型      | 说明                                       |
-| ------------------ | ---- | ------- | ---------------------------------------- |
-| direction          | 否    | int32   | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
-| log_id             | 是    | uint64  | 唯一的log id，用于问题定位                         |
-| words_result       | 是    | array() | 定位和识别结果数组                                |
-| words_result_num   | 是    | uint32  | 识别结果数，表示words_result的元素个数                |
-| +vertexes_location | 否    | array() | 当前为四个顶点: 左上，右上，右下，左下。当vertexes_location=true时存在 |
-| ++x                | 是    | uint32  | 水平坐标（坐标0点为左上角）                           |
-| ++y                | 是    | uint32  | 垂直坐标（坐标0点为左上角）                           |
-| +location          | 是    | array() | 位置数组（坐标0点为左上角）                           |
-| ++left             | 是    | uint32  | 表示定位位置的长方形左上顶点的水平坐标                      |
-| ++top              | 是    | uint32  | 表示定位位置的长方形左上顶点的垂直坐标                      |
-| ++width            | 是    | uint32  | 表示定位位置的长方形的宽度                            |
-| ++height           | 是    | uint32  | 表示定位位置的长方形的高度                            |
-| +words             | 否    | string  | 识别结果字符串                                  |
-| +chars             | 否    | array() | 单字符结果，recognize_granularity=small时存在     |
-| ++location         | 是    | array() | 位置数组（坐标0点为左上角）                           |
-| +++left            | 是    | uint32  | 表示定位位置的长方形左上顶点的水平坐标                      |
-| +++top             | 是    | uint32  | 表示定位位置的长方形左上顶点的垂直坐标                      |
-| +++width           | 是    | uint32  | 表示定位定位位置的长方形的宽度                          |
-| +++height          | 是    | uint32  | 表示位置的长方形的高度                              |
-| ++char             | 是    | string  | 单字符识别结果                                  |
+## 接口描述
 
-## 通用文字识别
+某些场景中，图片中的中文不光有常用字，还包含了生僻字，这时用户需要对该图进行文字识别，应使用通用文字识别（含生僻字版）。
 
-**接口描述**
+## 请求说明
 
-用户向服务请求识别某张图中的所有文字。
+**请求示例**
 
-**调用方式一请求示例**
+HTTP 方法：`POST`
 
-* HTTP 方法： POST
+请求URL： `aip.baidubce.com/rest/2.0/ocr/v1/general_enhanced `
 
-* 请求URL： `https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic `
-
-* URL参数：<br>
+URL参数：
 
 | 参数           | 值                                        |
 | ------------ | ---------------------------------------- |
-| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
+| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#/Auth)” |
 
-* Header如下：
+Header如下：
 
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | Content-Type | application/x-www-form-urlencoded |
 
-* Body中数据示例：
-
-| 参数    | 值          |
-| ----- | ---------- |
-| image | 图像base64编码 |
-
-
-
-**调用方式二请求示例**
-
-```
-POST /rest/2.0/ocr/v1/general_basic HTTP/1.1
-
-x-bce-date: 2016-10-18T02: 20: 01Z,
-host: aip.baidubce.com,
-accept: */*,
-authorization: bce-auth-v1/fbf9f7889585498d8ba8a68da26cbb2e/2016-10-18T02: 20: 01Z/1800/host/6c7cb35358b5c870666d14588af648e8c941a8b2300becd97831803198ee7a6d
-
-image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
-```
+Body中放置请求参数，参数详情如下：
 
 **请求参数**
 
-| 参数                 | 是否必选  | 类型      | 可选值范围                                   | 说明                                       |
-| ------------------ | ----- | ------- | --------------------------------------- | ---------------------------------------- |
-| image              | true  | string  | -                                       | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
-| mask               | false | string  | -                                       | 表示mask区域的黑白灰度图片，白色代表选中, base64编码         |
-| language_type      | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
-| detect_direction   | false | boolean | true、false                              | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
-| detect_language    | FALSE | string  | true、false                              | 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）           |
-| classify_dimension | FALSE | string  | lottery                                 | 分类维度（根据OCR结果进行分类），逗号分隔，当前只支持lottery。<br/>lottery：彩票分类，设置detect_direction有助于提升精度 |
+| 参数               | 是否必选  | 类型      | 可选值范围                                   | 说明                                       |
+| ---------------- | ----- | ------- | --------------------------------------- | ---------------------------------------- |
+| image            | true  | string  | -                                       | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
+| mask             | false | string  | -                                       | 表示mask区域的黑白灰度图片，白色代表选中, base64编码         |
+| language_type    | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
+| detect_direction | false | boolean | true、false                              | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
+| detect_language  | FALSE | string  | true、false                              | 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）           |
+
+**请求代码示例**
+
+请参考通用文字识别（含位置信息版）的代码内容，并更换请求地址。
+
+## 返回说明
+
+**返回参数**
+
+| 字段               | 是否必选 | 类型      | 说明                                       |
+| ---------------- | ---- | ------- | ---------------------------------------- |
+| direction        | 否    | int32   | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
+| log_id           | 是    | uint64  | 唯一的log id，用于问题定位                         |
+| words_result     | 是    | array() | 识别结果数组                                   |
+| words_result_num | 是    | uint32  | 识别结果数，表示words_result的元素个数                |
+| +words           | 否    | string  | 识别结果字符串                                  |
 
 **返回示例**
 
@@ -346,7 +361,6 @@ Content-Type: application/json;charset=UTF-8
 {
 "log_id": 2471272194, 
 "words_result_num": 2,
-"classify_result": {"lottery": "unknown"}, 
 "words_result": 
 	[
 		{"words": " TSINGTAO"}, 
@@ -354,61 +368,106 @@ Content-Type: application/json;charset=UTF-8
 	]
 }
 ```
-**返回参数**
 
-| 字段               | 必选   | 类型      | 说明                                       |
-| ---------------- | ---- | ------- | ---------------------------------------- |
-| direction        | 否    | int32   | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
-| log_id           | 是    | uint64  | 唯一的log id，用于问题定位                         |
-| words_result     | 是    | array() | 识别结果数组                                |
-| words_result_num | 是    | uint32  | 识别结果数，表示words_result的元素个数                |
-| +words           | 否    | string  | 识别结果字符串                                  |
+# 网络图片文字识别
 
-## 身份证识别
+## 接口描述
 
-**接口描述**
+用户向服务请求识别一些网络上背景复杂，特殊字体的文字。
 
-用户向服务请求识别身份证，身份证识别包括正面和背面。
+## 请求说明
 
-**调用方式一请求示例**
+**请求示例**
 
-* HTTP 方法： POST
+HTTP 方法：`POST`
 
-* 请求URL： `https://aip.baidubce.com/rest/2.0/ocr/v1/idcard`
+请求URL： `https://aip.baidubce.com/rest/2.0/ocr/v1/webimage `
 
-* URL参数：<br>
+URL参数：
 
 | 参数           | 值                                        |
 | ------------ | ---------------------------------------- |
-| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
+| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#/Auth)” |
 
-* Header如下：
+Header如下：
 
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | Content-Type | application/x-www-form-urlencoded |
 
-* Body中数据如下：
+Body中放置请求参数，参数详情如下：
 
-| 参数           | 值                                    |
-| ------------ | ------------------------------------ |
-| image        | 图像base64编码                           |
-| id_card_side | 范围：front/back。front：身份证正面，back：身份证背面 |
+**请求参数**
 
+| 参数               | 是否必选  | 类型      | 可选值范围                                   | 说明                                       |
+| ---------------- | ----- | ------- | --------------------------------------- | ---------------------------------------- |
+| image            | true  | string  | -                                       | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
+| mask             | false | string  | -                                       | 表示mask区域的黑白灰度图片，白色代表选中, base64编码         |
+| language_type    | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
+| detect_direction | false | boolean | true、false                              | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
+| detect_language  | FALSE | string  | true、false                              | 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）           |
 
+**请求代码示例**
 
-**调用方式二请求示例**
+请参考通用文字识别（含位置信息版）的代码内容，并更换请求地址。
 
+## 返回说明
+
+**返回参数**
+
+| 字段               | 是否必选 | 类型      | 说明                                       |
+| ---------------- | ---- | ------- | ---------------------------------------- |
+| direction        | 否    | int32   | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
+| log_id           | 是    | uint64  | 唯一的log id，用于问题定位                         |
+| words_result     | 是    | array() | 识别结果数组                                   |
+| words_result_num | 是    | uint32  | 识别结果数，表示words_result的元素个数                |
+| +words           | 否    | string  | 识别结果字符串                                  |
+
+**返回示例**
+
+```http
+HTTP/1.1 200 OK
+x-bce-request-id: 73c4e74c-3101-4a00-bf44-fe246959c05e
+Cache-Control: no-cache
+Server: BWS
+Date: Tue, 18 Oct 2016 02:21:01 GMT
+Content-Type: application/json;charset=UTF-8
+{
+"log_id": 2471272194, 
+"words_result_num": 2,
+"words_result": 
+	[
+		{"words": " TSINGTAO"}, 
+		{"words": "青島睥酒"}
+	]
+}
 ```
-POST /api/v1/ocr/idcard HTTP/1.1
-x-bce-date: 2016-10-18T02: 20: 01Z,
-host: aip.baidubce.com,
-accept: */*,
-authorization: bce-auth-v1/fbf9f7889585498d8ba8a68da26cbb2e/2016-10-18T02: 20: 01Z/1800/host/6c7cb35358b5c870666d14588af648e8c941a8b2300becd97831803198ee7a6d
 
-id_card_side=front&image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK...
+# 身份证识别
 
-```
+**接口描述**
+
+用户向服务请求识别身份证，身份证识别包括正面和背面。
+
+**请求示例**
+
+HTTP 方法：`POST`
+
+请求URL： `https://aip.baidubce.com/rest/2.0/ocr/v1/idcard`
+
+URL参数：
+
+| 参数           | 值                                        |
+| ------------ | ---------------------------------------- |
+| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#/Auth)” |
+
+Header如下：
+
+| 参数           | 值                                 |
+| ------------ | --------------------------------- |
+| Content-Type | application/x-www-form-urlencoded |
+
+Body中放置请求参数，参数详情如下：
 
 **请求参数**
 
@@ -418,6 +477,30 @@ id_card_side=front&image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK...
 | id_card_side     | true  | string  | front、back | front：身份证正面；back：身份证背面                   |
 | image            | true  | string  | -          | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
 
+**请求代码示例**
+
+**提示一：**使用示例代码前，请记得替换其中的示例Token、图片地址或Base64信息。
+
+**提示二：**部分语言依赖的类或库，请在代码注释中查看下载地址。
+
+{% OCR-API-Idcard %}
+
+## 返回说明
+
+**返回参数**
+
+| 字段               | 是否必选 | 类型      | 说明                                       |
+| ---------------- | ---- | ------- | ---------------------------------------- |
+| direction        | 否    | int32   | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
+| log_id           | 是    | uint64  | 唯一的log id，用于问题定位                         |
+| words_result     | 是    | array() | 定位和识别结果数组                                |
+| words_result_num | 是    | uint32  | 识别结果数，表示words_result的元素个数                |
+| +location        | 是    | array() | 位置数组（坐标0点为左上角）                           |
+| ++left           | 是    | uint32  | 表示定位位置的长方形左上顶点的水平坐标                      |
+| ++top            | 是    | uint32  | 表示定位位置的长方形左上顶点的垂直坐标                      |
+| ++width          | 是    | uint32  | 表示定位位置的长方形的宽度                            |
+| ++height         | 是    | uint32  | 表示定位位置的长方形的高度                            |
+| +words           | 否    | string  | 识别结果字符串                                  |
 
 
 **返回示例**
@@ -448,74 +531,57 @@ Content-Type: application/json;charset=UTF-8
 }
 ```
 
-**返回参数**
+# 银行卡识别
 
-| 字段               | 必选   | 类型      | 说明                                       |
-| ---------------- | ---- | ------- | ---------------------------------------- |
-| direction        | 否    | int32   | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
-| log_id           | 是    | uint64  | 唯一的log id，用于问题定位                         |
-| words_result     | 是    | array() | 定位和识别结果数组                                |
-| words_result_num | 是    | uint32  | 识别结果数，表示words_result的元素个数                |
-| +location        | 是    | array() | 位置数组（坐标0点为左上角）                           |
-| ++left           | 是    | uint32  | 表示定位位置的长方形左上顶点的水平坐标                      |
-| ++top            | 是    | uint32  | 表示定位位置的长方形左上顶点的垂直坐标                      |
-| ++width          | 是    | uint32  | 表示定位位置的长方形的宽度                            |
-| ++height         | 是    | uint32  | 表示定位位置的长方形的高度                            |
-| +words           | 否    | string  | 识别结果字符串                                  |
+## 接口描述
 
+识别银行卡并返回卡号和发卡行。
 
-## 银行卡识别
+**请求示例**
 
-**接口描述**
+HTTP 方法: `POST`
 
-识别银行卡并返回卡号。
+请求URL: `https://aip.baidubce.com/rest/2.0/ocr/v1/bankcard`
 
-**调用方式一请求示例**
-
-* HTTP 方法: POST
-
-* 请求URL: `https://aip.baidubce.com/rest/2.0/ocr/v1/bankcard`
-
-* URL参数：<br>
+URL参数：
 
 | 参数           | 值                                        |
 | ------------ | ---------------------------------------- |
-| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#Beginner-Auth)” |
+| access_token | 通过API Key和Secret Key获取的access_token,参考“[Access Token获取](http://ai.baidu.com/docs#/Auth)” |
 
-* Header如下：
+Header如下：
 
 | 参数           | 值                                 |
 | ------------ | --------------------------------- |
 | Content-Type | application/x-www-form-urlencoded |
 
-* Body中数据如下：
-
-| 参数    | 值          |
-| ----- | ---------- |
-| image | 图像base64编码 |
-
-
-
-**调用方式二请求示例**
-
-```http
-POST /api/v1/ocr/bankcard HTTP/1.1
-x-bce-date: 2016-10-18T02: 20: 01Z,
-host: aip.baidubce.com,
-accept: */*,
-authorization: bce-auth-v1/fbf9f7889585498d8ba8a68da26cbb2e/2016-10-18T02: 20: 01Z/1800/host/6c7cb35358b5c870666d14588af648e8c941a8b2300becd97831803198ee7a6d
-
-image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
-
-```
+Body中放置请求参数，参数详情如下：
 
 **请求参数**
 
 | 参数    | 类型     | 是否必须 | 说明                                       |
 | ----- | ------ | ---- | ---------------------------------------- |
-| image | string | true | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
+| image | string | 是    | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
 
+**请求代码示例**
 
+**提示一：**使用示例代码前，请记得替换其中的示例Token、图片地址或Base64信息。
+
+**提示二：**部分语言依赖的类或库，请在代码注释中查看下载地址。
+
+{% OCR-API-Bankcard %}
+
+## 返回说明
+
+**返回参数**
+
+| 参数                | 类型     | 是否必须 | 说明                           |
+| ----------------- | ------ | ---- | ---------------------------- |
+| log_id            | uint64 | 是    | 请求标识码，随机数，唯一。                |
+| result            | object | 是    | 返回结果                         |
+| +bank_card_number | string | 是    | 银行卡卡号                        |
+| +bank_name        | string | 是    | 银行名，不能识别时为空                  |
+| +bank_card_type   | uint32 | 是    | 银行卡类型，0:不能识别; 1: 借记卡; 2: 信用卡 |
 
 **返回示例**
 
@@ -530,15 +596,56 @@ image=%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK
 }
 ```
 
-**返回参数**
+# 错误码
 
-| 参数                | 类型     | 是否必须 | 说明                           |
-| ----------------- | ------ | ---- | ---------------------------- |
-| log_id            | uint64 | 是    | 请求标识码，随机数，唯一。                |
-| result            | object | 是    | 返回结果                         |
-| +bank_card_number | string | 是    | 银行卡卡号                        |
-| +bank_name        | string | 是    | 银行名，不能识别时为空                |
-| +bank_card_type   | uint32 | 是    | 银行卡类型，0:不能识别; 1: 借记卡; 2: 信用卡 |
+若请求错误，服务器将返回的JSON文本包含以下参数：
+
+* **error_code：**错误码。
+
+* **error_msg：**错误描述信息，帮助理解和解决发生的错误。
+
+例如Access Token失效返回：
+
+```
+{
+  "error_code": 110,
+  "error_msg": "Access token invalid or no longer valid"
+}
+```
+
+需要重新获取新的Access Token再次请求即可。
 
 
-​
+| 错误码    | 错误信息                                    | 描述             |
+| ------ | --------------------------------------- | -------------- |
+| 4      | Open api request limit reached          | 集群超限额          |
+| 17     | Open api daily request limit reached    | 每天流量超限额        |
+| 18     | Open api qps request limit reached      | QPS超限额         |
+| 19     | Open api total request limit reached    | 请求总量超限额        |
+| 100    | Invalid parameter                       | 无效参数           |
+| 110    | Access token invalid or no longer valid | Access Token失效 |
+| 111    | Access token expired                    | Access token过期 |
+| 216015 | module closed                           | 模块关闭           |
+| 216100 | invalid param                           | 非法参数           |
+| 216101 | not enough param                        | 参数数量不够         |
+| 216102 | service not support                     | 业务不支持          |
+| 216103 | param too long                          | 参数太长           |
+| 216110 | appid not exist                         | APP ID不存在      |
+| 216111 | invalid userid                          | 非法用户ID         |
+| 216200 | empty image                             | 空的图片           |
+| 216201 | image format error                      | 图片格式错误         |
+| 216202 | image size error                        | 图片大小错误         |
+| 216300 | db error                                | DB错误           |
+| 216400 | backend error                           | 后端系统错误         |
+| 216401 | internal error                          | 内部错误           |
+| 216500 | unknown error                           | 未知错误           |
+| 216600 | id number format error                  | 身份证的ID格式错误     |
+| 216601 | id number and name not match            | 身份证的ID和名字不匹配   |
+| 216630 | recognize error                         | 识别错误           |
+| 216631 | recognize bank card error               | 识别银行卡错误        |
+| 216632 | ocr unknown error                       | ocr未知错误        |
+| 216633 | recognize idcard error                  | 识别身份证错误        |
+| 216634 | detect error                            | 检测错误           |
+| 216635 | get mask error                          | 获取mask图片错误     |
+| 282001 | logic backend error                     | 业务逻辑层后端服务错误    |
+| 282100 | image transcode error                   | 图片压缩转码错误       |

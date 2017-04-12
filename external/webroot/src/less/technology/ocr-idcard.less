@@ -1,6 +1,7 @@
 @import '../common/helper.less';
 @import '../common/global.less';
 @import '../common/modal.less';
+@import '../common/tech-product.less';
 
 @banner: url('../../../ai_images/technology/ocr-idcard/banner.png');
 @icons: url('../../../ai_images/technology/ocr-idcard/icons.png');
@@ -9,7 +10,25 @@
 @case-icons: url('../../../ai_images/technology/ocr-idcard/case-icons.png');
 
 @import '../common/tech-page.less';
-
+.tech-banner {
+    .tech-docs {
+        display: inline-block;
+        vertical-align: middle;
+        width: 82px;
+        height: 15px;
+        background: url('../../../ai_images/icons/tech-docs.png') no-repeat;
+        background-size: 82px 15px;
+    }
+    .product-word {
+        display: inline-block;
+        width: 100%;
+        margin-top: 20px;
+        .word-point {
+            display: inline-block;
+            color: red;
+        }
+    }
+}
 .tech-section {
     &.tech-intro {
         .tech-intro-detail {
@@ -402,4 +421,8 @@
             display: none;
         }
     }
+}
+
+.tech-product {
+    .tech-product(@wrapper-height: 380px);
 }

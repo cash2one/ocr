@@ -5,8 +5,11 @@
 @import '../common/tech-case.less';
 @import '../common/tech-commom.less';
 @import '../common/tech-guid.less';
+@import '../common/tech-function.less';
+@import '../common/tech-product.less';
 @import '../common/modal.less';
 @import '../common/helper.less';
+
 
 // 技术单页前缀
 @prefix: tech;
@@ -16,6 +19,24 @@
     .banner(@page-name: ocr-general_location);
     &-title {
         width: 500px;
+        padding: 30px 0 10px;
+    }
+    &-info {
+        padding-bottom: 20px;
+    }
+    .tech-docs {
+        display: inline-block;
+        vertical-align: middle;
+        width: 82px;
+        height: 15px;
+        background: url('../../../ai_images/icons/tech-docs.png') no-repeat;
+        background-size: 82px 15px;
+    }
+    .product-word {
+        margin-top: 20px;
+        .word-point {
+            color: #f00;
+        }
     }
 }
 // 调用通用的tech-feature模块
@@ -42,30 +63,10 @@
 
 // 功能介绍
 .@{prefix}-function {
-    height: 450px;
-    background: url(../../../ai_images/technology/ocr-general_location/intro-bg.png) no-repeat top center;
-    background-size: cover;
-    text-align: center;
-    color: @white;
-
-    // 功能介绍标题
-    &-title {
-        padding: 30px 0 20px;
-        font-size: @big-title-size;
-    }
-
-    // 功能介绍简介
-    &-info {
-        width: 685px;
-        margin: 0 auto;
-        line-height: 25 / 14;
-    }
+    //功能介绍标题，文字
+    .tech-function(@page-name: ocr-general_location);
 
     // 功能介绍demo
-    &-detail {
-        margin-top: 40px;
-        font-size: 0;
-    }
 
     &-original-card {
         display: inline-block;
@@ -333,7 +334,9 @@
             text-align: left;
         }
     }
-
+    .result-index {
+        width: 35px;
+    }
     &.has-result {
         &::after {
             display: none;
@@ -400,99 +403,5 @@
 }
 
 .@{prefix}-product {
-    padding: 50px 0 40px;
-    background-color: #fff;
-    text-align: center;
-    .container-product {
-        display: block;
-        width: 1180px;
-        height: 100%;
-        margin: 0 auto;
-        position: relative;
-    }
-    &-title {
-        padding-bottom: 20px;
-        color: #333;
-        font-size: 30px;
-    }
-    &-info {
-        padding-bottom: 30px;
-        font-size: 16px;
-        color: #666;
-    }
-    &-wrapper {
-        position: relative;
-        width: 1180px;
-        height: 240px;
-        left: 50%;
-        font-size: 0;
-        transform: translateX(-50%);
-        margin-bottom: 30px;
-        [class^='product-box-'] {
-            position: absolute;
-        }
-        [class^='box-body-'] {
-            display: inline-block;
-            font-size: 13px;
-        }
-        .product-box-1 {
-            height: 240px;
-            width: 585px;
-            .box-body-header {
-                width: 50%;
-                font-size: 14px;
-            }
-            .box-body-connent {
-                width: 50%;
-                color: rgba(0, 0, 0, 0.6);
-            }
-        }
-        .product-box-2 {
-            right: 0;
-            height: 120px;
-            width: 585px;
-            .box-body-header {
-                width: 25%;
-                font-size: 14px;
-            }
-            .box-body-connent {
-                width: 25%;
-                color: rgba(0, 0, 0, 0.6);
-            }
-        }
-        .product-box-3 {
-            right: 0;
-            bottom: 0;
-            height: 100px;
-            width: 585px;
-            font-size: 15px;
-            .box-body-connent {
-                height: 65px;
-                line-height: 65px;
-                padding-right: 10px;
-            }
-            .product-error-query {
-                color: #0073eb;
-            }
-        }
-        .box-head {
-            height: 30px;
-            font-size: 16px;
-            text-align: left;
-            padding-left: 20px;
-            line-height: 30px;
-            font-weight: bold;
-            border: 1px solid #ccc;
-        }
-        .box-body {
-            text-align: left;
-            padding-left: 20px;
-            border: 1px solid #ccc;
-            border-top: 0;
-            div {
-                height: 30px;
-                line-height: 30px;
-            }
-        }
-    }
+   .tech-product(@wrapper-height: 380px);
 }

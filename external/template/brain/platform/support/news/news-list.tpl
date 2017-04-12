@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/support/news/news-list.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/support/news/news-list.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1491541563/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1491986722/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -79,6 +79,11 @@
                                  <li>
                                     <a href="/tech/ocr/general_location" id="ocr-location-link">
                                     通用文字识别（含位置信息版）
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/tech/ocr/webimage">
+                                        网络图片文字识别
                                     </a>
                                 </li>
                             </ul>
@@ -242,8 +247,35 @@
     </div>
 </section>
 <div class="news-content">
-    <div class="container" id="news-container"></div>
-    <div class="pg"></div>
+    <div class="container">
+        <div class="news-list">
+            {%foreach $newsList as $news%}
+            <div class="news-item">
+                <a href="/support/news?action=detail&amp;id={%$news.id%}">
+                    <h3>{%$news.title%}</h3>
+                    <span class="time">发布日期：{%$news.time|date_format:'%Y-%m-%d %H:%M:%S'%}</span><span class="pv">浏览量：{%$news.pv%}次</span>
+                    <p>{%$news.abs%}</p>
+                    <i class="more"></i>
+                </a>
+            </div>
+            {%/foreach%}
+            <div class="pg" data-total="{%$pagination.total%}" data-offset="{%$pagination.offset%}" data-tag="{%$currentTag%}">
+                {%if $pagination.offset gt 1%}
+                <a href="/support/news?tag={%$currentTag%}&amp;offset={%$pagination.offset - 1%}">上一页</a>
+                {%/if%}
+                {%if $pagination.total gt $pagination.offset%}
+                <a href="/support/news?tag={%$currentTag%}&amp;offset={%$pagination.offset + 1%}">下一页</a>
+                {%/if%}
+            </div>
+        </div>
+        <div class="tag-list">
+            <h3>热门标签</h3>
+            <a href="/support/news">全部</a>
+            {%foreach $tagList as $tag%}
+            <a href="/support/news?tag={%$tag.id%}">{%$tag.name%}</a>
+            {%/foreach%}
+        </div>
+    </div>
 </div>
 {%if $userInfo eq Null%}
 <section class="tech-section get-started">
@@ -357,8 +389,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1491541563/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1491541563/js/support/news/news-list.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/support/news/news-list.js"></script>
 
 <script>
     (function () {

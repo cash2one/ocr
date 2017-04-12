@@ -1,0 +1,2 @@
+短文本相似度接口
+curl -i -k 'https://aip.baidubce.com/rpc/2.0/nlp/v1/simnet?access_token=24.bb41cb1bd46dd44b9c801b10ce010240.2592000.1492322377.282335-9252280' --data '{"input":{"qslots":[{"terms_sequence":"你好百度","type":0,"items":[]},{"terms_sequence":"你好北京” ", "type":0, "items":[]}],"tslots":[{"terms_sequence":"你好世界","type":0,"items":[]}],"type":0}}' -H 'Content-Type:application/json; charset=UTF-8'

@@ -26,11 +26,15 @@ module.exports = function () {
             });
         };
 
+        // TODO 未来这里自动化，不需要手工添加
         // 获取全部新手文档
         extract(categoryConfig.beginnerDoc);
 
         // 获取全部技术文档
         extract(categoryConfig.techDoc);
+
+        // 计费文档
+        extract(categoryConfig.priceDoc);
     }
     catch (e) {
         return Promise.reject(e);

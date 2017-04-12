@@ -148,47 +148,102 @@
         }
     }
 
-    .news {
-        line-height: 40px;
-        height: 40px;
-        background-color: #fafafa;
-        border-bottom: 1px solid fadeOut(@black, 95%);
-        color: #666;
+    .lastest-news {
+        background-color: #f6f6f6;
+        padding-top: 30px;
 
-        & > .container {
-            .news-container {
-                float: left;
-                width: 100%;
-                height: 100%;
-
-                & > ul {
-                    margin: 0 60px;
-
-                    & > li {
-                        display: inline-block;
-                        float: left;
-                        width: 28%;
-                        margin: 0 2%;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        font-size: @font-size-1;
-                    }
-                }
-            }
-
+        .container {
+            line-height: 40px;
+            height: 40px;
+            padding: 0;
+            background-color: #fff;
+            border: 1px solid fadeOut(@black, 95%);
             & > a {
-                float: left;
-                width: 60px;
-                margin-left: -60px;
+                margin-left: 40px;
+                color: #0073eb;
             }
 
             & > h4 {
                 float: left;
-                font-size: @font-size-1;
-                color: #999;
-                margin-left: -100%;
-                width: 60px;
+                font-size: @font-size-2;
+                color: #fff;
+                width: 150px;
+                text-align: center;
+                background-color: #fa6928;
+            }
+        }
+    }
+
+    .news {
+        padding-top: 10px;
+        background-color: #f6f6f6;
+        .container {
+            width: 1200px;
+            padding: 0;
+            ul {
+                margin: 0;
+                font-size: 0;
+                white-space: nowrap;
+                li {
+                    display: inline-block;
+                    width: 280px;
+                    height: 260px;
+                    padding: 10px;
+                    cursor: pointer;
+                    vertical-align: top;
+                    position: relative;
+                    &:hover {
+                        box-shadow: 0 2px 8px fadeOut(@black, 80%);
+                        background-color: #fff;
+                        a {
+                            border-color: #fff;
+                            h4 {
+                                color: #0073eb
+                            }
+                            .more {
+                                background-image: url(../../ai_images/home/more-hover.png);
+                            }
+                        }
+                    }
+                    a {
+                        border: 1px solid #f2f2f2;
+                        width: 278px;
+                        height: 258px;
+                        background-color: #fff;
+                        position: relative;
+                        display: block;
+                        img {
+                            width: 100%;
+                            height: 100px;
+                        }
+                        h4 {
+                            font-size: @font-size-2;
+                            color: #666;
+                            line-height: 24px;
+                            margin: 10px 20px;
+                            white-space: normal;
+                            max-height: 48px;
+                            overflow: hidden;
+                        }
+                        p {
+                            color: #999;
+                            white-space: normal;
+                            margin: 10px 20px;
+                            font-size:  @font-size-1;
+                            line-height: 20px;
+                            max-height: 40px;
+                            overflow: hidden;
+                        }
+                        .more {
+                            background: url(../../ai_images/home/more.png) no-repeat;
+                            width: 15px;
+                            height: 11px;
+                            position: absolute;
+                            left: 20px;
+                            bottom: 18px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -207,6 +262,7 @@
         &.tech-service {
             background-color: #f6f6f6;
             padding-bottom: 30px;
+            padding-top: 40px;
 
             .service-container {
                 border: 1px solid fadeOut(@black, 95%);
@@ -231,21 +287,21 @@
                     }
 
                     &:nth-child(1) {
-                        height: 250px;
+                        height: 270px;
                         .service-icon {
                             .icon (url('../../ai_images/home/service.png'), -10px, -15px);
                         }
                     }
 
                     &:nth-child(2) {
-                        height: 250px;
+                        height: 270px;
                         .service-icon {
                             .icon (url('../../ai_images/home/service.png'), -90px, -15px);
                         }
                     }
 
                     &:nth-child(3) {
-                        height: 250px;
+                        height: 270px;
                         .service-icon {
                             .icon (url('../../ai_images/home/service.png'), -170px, -15px);
                         }
@@ -269,9 +325,14 @@
 
                 }
                 .service-item-waiting {
-                        height: 171px;
-                        .service-desc {
-                            transform: translateX(-10%) translateY(50%);
+                    position: relative;
+                    height: 171px;
+                        .waiting {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%,-50%);
+                            font-size: 30px;
                         }
                 }
                 .service-detail {

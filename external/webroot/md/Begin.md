@@ -25,20 +25,16 @@
 
 ## 4. 生成签名
 第三方应用在调用开放平台API之前，首先需要获取Access Token（用户身份验证和授权的凭证）。  
-您需要使用创建应用所分配到的AppID、API Key及Secret Key，进行Access Token的生成，方法详见 [Access Token获取](http://ai.baidu.com/docs#Beginner-Auth.html)”。
+您需要使用创建应用所分配到的AppID、API Key及Secret Key，进行Access Token的生成，方法详见 [Access Token获取](http://ai.baidu.com/docs#/Auth)”。
 
 
 
 ## 5. 启动开发
 目前各项服务我们都会开放REST API形式的服务，您可以点击「技术文档」中各服务的文档，查看**具体调用方法及参数**。  
-[语音API文档](http://ai.bidu.com/docs#Speech)  
-[文字识别API文档](http://ai.bidu.com/docs#OCR)  
-[人脸识别API文档](http://ai.bidu.com/docs#FACE)  
-[黄反识别API文档](http://ai.bidu.com/docs#Antiporn)  
-[自然语言处理API文档](http://ai.bidu.com/docs#NLP)  
+[语音识别API](http://ai.bidu.com/docs#/ASR-API) | [语音合成API](http://ai.bidu.com/docs#/TTS-API) | [OCR文字识别API](http://ai.bidu.com/docs#/OCR-API) | [人脸识别API](http://ai.bidu.com/docs#/FACE-API) | [黄反识别API](http://ai.bidu.com/docs#/Antiporn-API) | [自然语言处理API](http://ai.bidu.com/docs#/NLP-API)  
 
 
-我们同样也为您提供了客户端或服务端SDK，后续会不断补充拓展，敬请持续关注。  
+我们同样也为您提供了客户端或服务端SDK，帮忙您快速接入服务。后续也会不断补充拓展，敬请持续关注。  
 [SDK下载页](http://ai.baidu.com/sdk.html)
 
 

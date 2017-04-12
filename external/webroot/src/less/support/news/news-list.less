@@ -4,7 +4,7 @@
 
 @import (inline) './pager.less';
 
-@banner: url('../../../../ai_images/support/news/news-list/banner.jpg');
+@banner: url('../../../../ai_images/support/news/news-list/banner.png');
 @icons: none;
 @intro-bg: none;
 @case-icons: none;
@@ -18,7 +18,7 @@
 
 
 .@{prefix}-banner {
-    background: #000 url('../../../../ai_images/support/news/news-list/banner.jpg') no-repeat center;
+    background: #000 url('../../../../ai_images/support/news/news-list/banner.png') no-repeat center;
 
     h1 {
         color: #fff;
@@ -29,34 +29,107 @@
     }
 }
 .@{prefix}-content {
-    margin-top: 44px;
-
-    .@{prefix}-list {
-        padding-left: 16px;
-        position: relative;
-        color: @block;
-        margin: 18px 0;
-
-        &:before {
-            content: '';
-            display: block;
-            width: 2px;
-            height: 2px;
-            background: #707070;
+    margin-top: 30px;
+    .container {
+        width: 1150px;
+        &:after {
+            content: ' ';
             position: absolute;
-            top: 13px;
-            left: 10px;
+            top: 0;
+            right: 290px;
+            width: 10px;
+            height: 20px;
+            background-color: #fff;
         }
-
-        h2 {
-            font-size: @font-size-2;
-            line-height: 26px;
+    }
+    .@{prefix}-list {
+        width: 845px;
+        padding-right: 20px;
+        border-right: 1px solid #f2f2f2;
+        .@{prefix}-item {
+            padding: 0 35px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            position: relative;
+            &:hover {
+                box-shadow: 0 2px 8px fadeOut(@black, 80%);
+                a {
+                    border-bottom-color: #fff;
+                    h3 {
+                        color: #0073eb
+                    }
+                    .more {
+                        visibility: visible;
+                    }
+                }
+            }
+            a {
+                display: block;
+                padding: 20px 0 40px;
+                border-bottom: 1px solid #f2f2f2;
+                h3 {
+                    font-size: 20px;
+                    color: #666;
+                    line-height: 24px;
+                    white-space: normal;
+                    margin-bottom: 5px;
+                }
+                .time {
+                    margin-right: 18px;
+                    font-size: @font-size-1;
+                    color: #999;
+                }
+                .pv {
+                    font-size: @font-size-1;
+                    color: #999;
+                }
+                p {
+                    color: #666;
+                    white-space: normal;
+                    font-size:  @font-size-2;
+                    line-height: 20px;
+                    margin-top: 10px;
+                    margin-bottom: 0;
+                }
+                .more {
+                    position: absolute;
+                    bottom: 15px;
+                    width: 15px;
+                    height: 11px;
+                    margin-top: 10px;
+                    visibility: hidden;
+                    display: block;
+                    background: url(../../../../ai_images/support/news/news-list/more-hover.png) no-repeat;
+                }
+            }
         }
-
-        p {
+    }
+    .tag-list {
+        position: absolute;
+        right: 0;
+        top: 20px;
+        width: 245px;
+        h3 {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+        a {
+            line-height: 23px;
+            border: 1px solid #f2f2f2;
+            border-radius: 3px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            white-space: nowrap;
             font-size: @font-size-1;
-            line-height: 24px;
-            margin: 0;
+            color: #999;
+            padding: 0 10px;
+            &:hover {
+                color: #0073eb;
+                border-color: #0073eb;
+            }
         }
     }
 }

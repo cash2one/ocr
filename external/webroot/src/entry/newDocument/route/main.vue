@@ -25,6 +25,18 @@
                           @changenode="changeNode">
                 </treeMenu>
             </accordion>
+            <accordion title="计费文档"
+                       :collapsed="priceDocCollapsed"
+                       @requestopen="priceDocCollapsed = false"
+                       @requestcollapse="priceDocCollapsed = true">
+                <treeMenu :items="priceDocTree"
+                          :selectedNode="$route.params.doc"
+                          :openedId="openedId"
+                          @requestopen="requestOpen"
+                          @requestcollapse="requestCollapse"
+                          @changenode="changeNode">
+                </treeMenu>
+            </accordion>
         </div>
         <div class="anchor-list" :class="getAnchorListContainerClass()">
             <keep-alive>
@@ -65,7 +77,8 @@
     // module
     import addId from '../lib/addId';
     import getHierarchy from '../lib/getHierarchy';
-    import {beginnerDoc, techDoc} from 'docCategory';
+    // docCategory路径见webpack
+    import {beginnerDoc, techDoc, priceDoc} from 'docCategory';
 
     import 'less/newDocument/newDocument.less';
 
@@ -160,6 +173,7 @@
                 // 绘制文档目录树所用的数据，通过addId方法，为每个节点添加一个id
                 techDocTree: addId(techDoc),
                 beginnerDocTree: addId(beginnerDoc),
+                priceDocTree: addId(priceDoc),
                 // 目录树中，需要展开的节点的id
                 openedId: [],
                 // 目录数据
@@ -172,6 +186,7 @@
                 techDocCollapsed: false,
                 // 文档模块中，所有树的节点统一编排id,方便协调多颗叔的选中状态
                 beginnerDocCollapsed: false,
+                priceDocCollapsed: false,
                 // 目录模式，有两种 全景模式-full, 精简模式-lite
                 anchorListMode: 'full'
             };
@@ -216,7 +231,7 @@
 
                 // 找到当前文档的层级信息
                 const hierarchy = getHierarchy(
-                    [this.techDocTree, this.beginnerDocTree],
+                    [this.techDocTree, this.beginnerDocTree, this.priceDocTree],
                     this.$route.params.doc
                 );
 

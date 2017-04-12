@@ -2,18 +2,19 @@
 using System.IO;
 using System.Net;
 using System.Text;
-using Mono.Web;
+using System.Web;
 
 namespace com.baidu.ai
 {
-	public static class FaceDetect
+	public static class Detect
 	{
 
 		// 人脸检测
 		public static string detect() {
 			
+			string token = "########";
 			string strbaser64 = FileUtils.getFileBase64("/work/demo-card-1.jpg"); // 图片的base64编码
-			string host = "https://aip.baidubce.com/rest/2.0/face/v1/detect?access_token=" + AccessToken.TOKEN;
+			string host = "https://aip.baidubce.com/rest/2.0/face/v1/detect?access_token=" + token;
 			Encoding encoding = Encoding.Default;
 			HttpWebRequest request = (HttpWebRequest)WebRequest.Create(host);
 			request.Method = "post";
