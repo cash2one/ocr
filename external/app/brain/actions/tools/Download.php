@@ -86,14 +86,16 @@ class Action_Download extends Ap_Action_Abstract
            // print $e->getMessage();
        }
         
+        $odp_path = Bd_Conf::getAppConf('odp_info');
+        $path = $odp_path.$filePath
         ob_start(); 
-        $size = filesize($filePath); 
+        $size = filesize($path); 
         header("Content-type:  application/octet-stream ");
         header("Accept-Ranges:  bytes ");
         header("Accept-Length: " . $size);
-        header("Content-Disposition:  attachment;  filename=" . $filePath);
-        $odp_path = Bd_Conf::getAppConf('odp_info');
-        readfile($odp_path.$filePath); 
+        header("Content-Disposition:  attachment;  filename=" . $path);
+        echo file_get_contents($filename);
+        readfile($path);
 
         var_dump($uid);
         var_dump($passId);
