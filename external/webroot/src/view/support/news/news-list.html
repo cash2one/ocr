@@ -27,9 +27,9 @@
         </div>
         <div class="tag-list">
             <h3>热门标签</h3>
-            <a href="/support/news">全部</a>
+            <a href="/support/news" class="{%if $currentTag eq ''%}selected{%/if%}">全部</a>
             {%foreach $tagList as $tag%}
-            <a href="/support/news?tag={%$tag.id%}">{%$tag.name%}</a>
+            <a href="/support/news?tag={%$tag.id%}" class="{%if $tag.id eq $currentTag%}selected{%/if%}">{%$tag.name%}</a>
             {%/foreach%}
         </div>
     </div>
