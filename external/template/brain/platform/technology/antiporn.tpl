@@ -448,7 +448,7 @@
         <div class="guide-link clear-float">
             <h3>开发指南</h3>
             <ul>
-                <li><a href="/docs#/Antiporn-API">技术文档 ></a></li>
+                <li><a href="/docs#/FAQ/88197504">技术文档 ></a></li>
                 <li><a href="/sdk">SDK下载 ></a></li>
             </ul>
         </div>

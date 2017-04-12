@@ -452,9 +452,9 @@
         <div class="tech-guide-question tech-clear">
             <div class="tech-guide-question-title">常见问题</div>
             <div class="tech-guide-question-list">
-                <a class="tech-link-btn" href="/docs#/ASR-FAQs">语音识别REST API支持的音频格式、采样率有哪些？</a>
-                <a class="tech-link-btn" href="/docs#/ASR-FAQs">语音识别REST API最长支持多长的录音？</a>
-                <a class="tech-link-btn" href="/docs#/ASR-FAQs">语音识别SDK支持的音频格式、采样率有哪些？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/a53b4698">语音识别REST API支持的音频格式、采样率有哪些？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/a53b4698">语音识别REST API最长支持多长的录音？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/a53b4698">语音识别SDK支持的音频格式、采样率有哪些？</a>
             </div>
         </div>
     </div>

@@ -417,9 +417,9 @@
         <div class="question-link clear-float">
             <h3>常见问题</h3>
             <ul>
-                <li><a href="/docs#/TTS-FAQs">语音合成提供REST API吗？</a></li>
-                <li><a href="/docs#/TTS-FAQs">语音合成支持那些语言和音色的播报？</a></li>
-                <li><a href="/docs#/TTS-FAQs">有离线语音合成可以提供吗？</a></li>
+                <li><a href="/docs#/FAQ/ae5176ea">语音合成提供REST API吗？</a></li>
+                <li><a href="/docs#/FAQ/ae5176ea">语音合成支持那些语言和音色的播报？</a></li>
+                <li><a href="/docs#/FAQ/ae5176ea">有离线语音合成可以提供吗？</a></li>
             </ul>
         </div>
     </div>
