@@ -97,8 +97,6 @@ class Action_Download extends Ap_Action_Abstract
         echo file_get_contents($path);
         readfile($path);
 
-        var_dump($uid);
-        var_dump($passId);
        // $dbSdkInfo = new Dao_SdkInfo();
        // $dbSdkInfo->insertSdkInfo($ucid, $passId, $serviceType, $language);
 
