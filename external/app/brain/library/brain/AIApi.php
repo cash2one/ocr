@@ -340,7 +340,9 @@ class Brain_AIApi
         );
         $postData = array_merge($postData, $apiInfo['params']);
         //print_r($postData);
-
+        if (key_exists("type", $apiInfo) && "bce" == $apiInfo['type']) {
+            $url.="?access_token=".$accessToken;
+        }
         $ret_data = Brain_AIApi::doCallApi($url, $postData);
 
         if ($ret_data == null) {
@@ -392,7 +394,7 @@ class Brain_AIApi
         curl_setopt($ch, CURLOPT_COOKIE, 'BDUSS=' . $_COOKIE['BDUSS']);
 
         $header = array(
-            'Host: openapi.baidu.com',
+            'Host: ai.baidu.com',
         );
         //curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
