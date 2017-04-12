@@ -7,16 +7,18 @@
                class="btn-primary media ai-redirect"
                href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">免费使用</a>
             <a role="button"
-               {%if $src eq Null%}
                class="btn-primary media ai-redirect"
-               href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=bcn_ocr"
-               {%else%}
-               class="btn-primary media"
-               href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=all"
-               {%/if%}>
+               href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=bcn_ocr">
             开通付费
             </a>
-            <a href="#" class="product-price"></a>
+            <a class="tech-docs"
+               href="
+               {%if $src eq Null%}
+               /docs#/OCR-API/top
+               {%else%}
+               https://cloud.baidu.com/doc/OCR/index.html
+               {%/if%}">
+            </a>
         </div>
         <div class="product-word">
             每月<span class="word-point">15000</span>次免费调用量，开通付费后用量<span class="word-point">不再设限！</span>
@@ -171,7 +173,16 @@
 <div class="tech-section get-started tech-product">
 <div class="container-product">
     <div class="tech-product-title">产品定价</div>
-    <div class="tech-product-info">本产品为按调用量计费的后付费产品，定价采取分段式阶梯定价方式</div>
+    <div class="tech-product-info">本产品为按调用量计费的后付费产品，定价采取分段式阶梯定价方式
+        <a class="product-price"
+           href="
+               {%if $src eq Null%}
+               /docs#/OCR-Pricing/top
+               {%else%}
+               https://cloud.baidu.com/doc/OCR/OCR-Pricing.html
+               {%/if%}">
+        </a>
+    </div>
     <div class="tech-product-wrapper">
         <div class="product-form-1">
             <div class="product-head pric-head-1">价目表</div>
@@ -236,13 +247,8 @@
             免费使用
         </a>
         <a role="button"
-           {%if $src eq Null%}
            class="btn-primary large ai-redirect"
-           href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=bcn_ocr"
-           {%else%}
-           class="btn-primary large"
-           href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=all"
-           {%/if%}>
+           href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=bcn_ocr">
         开通付费
         </a>
     </div>

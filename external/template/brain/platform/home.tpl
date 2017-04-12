@@ -244,6 +244,18 @@
     <section class="banner">
     <ul class="banner-content">
         <li class="active">
+            <a href="#">
+                <h1>文字识别 计费系统上线</h1>
+                <p>
+                    异地容灾，提高响应，降低风险<br>
+                    7*24小时售后，无限次调用，更高的QPS
+                </p>
+                <div>
+                    <button type="button" class="get-started">更多优惠</button>
+                </div>
+            </a>
+        </li>
+        <li>
             <a href="/tech/video/vca">
                 <h1>智能视频分析</h1>
                 <p>
@@ -311,13 +323,6 @@
                 <p>百度手机助手&百度开发者平台</p>
                 <div>
                     <button type="button" class="get-started">了解详情</button>
-                </div>
-            </a>
-        </li>
-        <li>
-            <a href="https://cloud.baidu.com/event/ABC-ecology-partner/?t=cp:online-media|ci:20170327_ABCEcology_meeting|cn:zhanzhang">
-                <div>
-                    <button type="button" class="get-started get-cloud">立即报名</button>
                 </div>
             </a>
         </li>
