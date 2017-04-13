@@ -15,13 +15,14 @@ import java.net.URLEncoder;
 public class Detect {
 
     /**
-     * 重要提示代码中所需工具类
+     * 代码中所需工具类
      * FileUtil,Base64Util,HttpUtil请从
-     * http://ai.baidu.com/download/demo/java/utils/FileUtil.java
-     * http://ai.baidu.com/download/demo/java/utils/Base64Util.java
-     * http://ai.baidu.com/download/demo/java/utils/HttpUtil.java
+     * https://ai.baidu.com/file/BA73D199EED14D8AA5FC5A4BF4BDDA34
+     * https://ai.baidu.com/file/C8D81F3301E24D2892968F09AE1AD6E2
+     * https://ai.baidu.com/file/88C6E86FB5D141889391693FC84504B1
      * 下载
      */
+    
     public static void main(String[] args) {
         // 人脸检测 url
         String detectUrl = "https://aip.baidubce.com/rest/2.0/face/v1/detect";

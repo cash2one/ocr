@@ -307,7 +307,7 @@ Content-Type: application/json;charset=UTF-8
 
 HTTP 方法：`POST`
 
-请求URL： `aip.baidubce.com/rest/2.0/ocr/v1/general_enhanced `
+请求URL： `https://aip.baidubce.com/rest/2.0/ocr/v1/general_enhanced `
 
 URL参数：
 
@@ -445,9 +445,11 @@ Content-Type: application/json;charset=UTF-8
 
 # 身份证识别
 
-**接口描述**
+## 接口描述
 
 用户向服务请求识别身份证，身份证识别包括正面和背面。
+
+## 请求说明
 
 **请求示例**
 
