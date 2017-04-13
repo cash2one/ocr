@@ -470,22 +470,22 @@
                 </div>
             </div>
             <div class="product-form-2">
-                <div class="product-head pric-head-2">付费配置</div>
+                <div class="product-head pric-head-2">合作咨询</div>
                 <div class="product-body pric-body-2">
-                    <div class="pric-item-header pric-item-2">调用量限额</div>
-                    <div class="pric-item-header pric-item-2">QPS限制</div>
-                    <div class="pric-item-connent pric-item-2">不限制，按量付费</div>
-                    <div class="pric-item-connent pric-item-2">保证10次并发</div>
+                    <div class="pric-item-header pric-item-2">如果您有以下的需求或其他需求，您可以提交合作咨询：</div>
+                    <div class="pric-item-connent pric-item-2">1.如果您的调用量远大于最大的阶梯段，并需要更低的价格；</div>
+                    <div class="pric-item-connent pric-item-2">2.如果您需要更高的QPS/并发；</div>
+                    <div class="pric-item-connent pric-item-2">3.如果您有其他的OCR要求；</div>
+                    <div class="pric-item-connent pric-item-2">4.如果您对现有的接口/SDK/文档有任何建议意见。</div>
                 </div>
             </div>
             <div class="product-form-3">
-                <div class="product-head pric-head-3">合作咨询</div>
+                <div class="product-head pric-head-3">付费配置</div>
                 <div class="product-body pric-body-3">
-                    <div class="pric-item-header pric-item-3">如果您有以下的需求或其他需求，您可以提交合作咨询：</div>
-                    <div class="pric-item-connent pric-item-3">1.如果您的调用量远大于最大的阶梯段，并需要更低的价格；</div>
-                    <div class="pric-item-connent pric-item-3">2.如果您需要更高的QPS/并发；</div>
-                    <div class="pric-item-connent pric-item-3">3.如果您有其他的OCR要求；</div>
-                    <div class="pric-item-connent pric-item-3">4.如果您对现有的接口/SDK/文档有任何建议意见。</div>
+                    <div class="pric-item-header pric-item-3">调用量限额</div>
+                    <div class="pric-item-header pric-item-3">QPS限制</div>
+                    <div class="pric-item-connent pric-item-3">不限制，按量付费</div>
+                    <div class="pric-item-connent pric-item-3">保证10次并发</div>
                 </div>
             </div>
             <div class="product-form-4">
