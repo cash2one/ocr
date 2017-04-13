@@ -1,11 +1,11 @@
 @import '../common/initialize.less';
 
-.tech-product (@wrapper-height: 380px;@num: 4; @pric-1-num: 2; @pric-1-row: 7;@pric-2-num: 4;@pric-2-row: 3; @pric-3-num: 1) {
+.tech-product (@wrapper-height: 380px;@num: 4; @pric-1-num: 2; @pric-1-row: 7;@pric-3-num: 4;@pric-3-row: 3; @pric-2-num: 1) {
     @pric-1-width :(1/@pric-1-num)*560px;
-    @pric-2-width :(1/@pric-2-num)*560px;
     @pric-3-width :(1/@pric-3-num)*560px;
-    @pric-3-height :(@pric-1-row)*30px;
-    @pric-4-height :(@pric-2-row)*30px;
+    @pric-2-width :(1/@pric-2-num)*560px;
+    @pric-2-height :(@pric-1-row)*30px;
+    @pric-4-height :(@pric-3-row)*30px;
 
     padding: 50px 0;
     background-color: #fff;
@@ -32,12 +32,9 @@
         color: #666;
     }
     &-wrapper {
-        position: relative;
         width: 1180px;
         height: @wrapper-height;
-        left: 50%;
         font-size: 0;
-        transform: translateX(-50%);
         margin-bottom: 30px;
     }
     .product-price {
@@ -50,7 +47,8 @@
         background-size: 84px 14px;
     }
     [class^='product-form-'] {
-        position: absolute;
+        display: inline-block;
+        vertical-align: top;
         width: 585px;
     }
     .product-head {
@@ -82,6 +80,9 @@
     }
 
     //表单一不同之处
+    .product-form-1 {
+        padding:0 10px 10px 0;
+    }
     .pric-item-1{
         width: @pric-1-width;
     }
@@ -90,30 +91,25 @@
         font-size: 13px;
     }
 
-    //表单二不同之处
-    .product-form-2 {
-        bottom: 0;
-    }
-    .pric-item-2 {
-        width: @pric-2-width;
-    }
-
     //表单三不同之处
     .product-form-3 {
-        right: 0;
-    }
-    .pric-body-3 {
-        height: @pric-3-height;
+        padding-right: 10px;
     }
     .pric-item-3 {
         width: @pric-3-width;
+    }
+
+    //表单二不同之处
+    .pric-body-2 {
+        height: @pric-2-height;
+    }
+    .pric-item-2 {
+        width: @pric-2-width;
         line-height: 35px;
     }
 
     //表单四不同之处
     .product-form-4 {
-        right: 0;
-        bottom: 0;
         font-size: 15px;
     }
     .pric-body-4 {
