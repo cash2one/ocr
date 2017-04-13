@@ -123,17 +123,23 @@
 
                             const blockIndex = +target.getAttribute('data-index');
 
-                            target.parentNode.querySelectorAll('.code-block-title').forEach(element => {
-                                element.classList.remove('block-active');
-                            });
+                            [].forEach.call(
+                                target.parentNode.querySelectorAll('.code-block-title'),
+                                element => {
+                                    element.classList.remove('block-active');
+                                }
+                            );
 
                             target.classList.add('block-active');
 
-                            blocks.forEach((element, index) => {
-                                element.style.display = index === blockIndex
-                                    ? 'block'
-                                    : 'none';
-                            });
+                            [].forEach.call(
+                                blocks,
+                                (element, index) => {
+                                    element.style.display = index === blockIndex
+                                        ? 'block'
+                                        : 'none';
+                                }
+                            );
                         }
                     };
                 });
