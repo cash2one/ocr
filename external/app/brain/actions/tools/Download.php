@@ -11,27 +11,27 @@
  * @date 2017/04/06 14:28:45
  *
  **/
-
 class Action_Download extends Ap_Action_Abstract
 {
 
     public function execute()
     {
         $passId = '';
-        $ucid = '';
+        $ucId = '';
 
-       try{
-           $userInfo = Bd_Passport::checkUserLogin();
-           if($userInfo != false){
-               $passId = $userInfo['uid'];
-           }
-       } catch (Exception $e) {
-       }
+        try {
+            $userInfo = Bd_Passport::checkUserLogin();
+            if ($userInfo != false) {
+                $passId = $userInfo['uid'];
+            }
+        } catch (Exception $e) {
+        }
 
 
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
         $filePath = Brain_Util::getParamAsString($arrInput, 'filePath');
+
 
         $serviceType = -1;
         $language = -1;
@@ -46,6 +46,16 @@ class Action_Download extends Ap_Action_Abstract
             $serviceType = 3;
         } elseif ($sdkArr[1] == 'python') {
             $language = 2;
+            $type = $arrInput['type'];
+            if ($type == 'ocr') {
+                $serviceType = 0;
+            } elseif ($type == 'bfr') {
+                $serviceType = 1;
+            } elseif ($type == 'nlp') {
+                $serviceType = 2;
+            } elseif ($type == 'antiporn') {
+                $serviceType = 3;
+            }
         }
 
         if ($sdkArr[2] == 'java') {
@@ -59,46 +69,49 @@ class Action_Download extends Ap_Action_Abstract
         }
 
 
-       try {
-           $arrServers = array('10.65.211.251:6270','10.26.5.46:6270','10.36.4.147:6270');
-           $intAppid = '469';
-           $strAppKey = 'ai.baidu.com';
-           $intTmOut = '2000';
-           $strCookieDomain = 'ai.baidu.com';
-           $strLoginUrl = 'http://login.bce.baidu.com';
-           $strJumpUrl = 'https://cas.baidu.com/?action=check&appid=';
-           $casInfo = new Cas_Info($arrServers, $intAppid, $strAppKey,$intTmOut);
-           $casInfo->setCookieDomain($strCookieDomain);
-           $casInfo->setLoginUrl($strLoginUrl);
-           $casInfo->setJumpUrl($strJumpUrl);
-           $casInfo->setAutoRedirect(false);
-           $cas_client = new Cas_ClientUC($casInfo);
-           $objCheckRes = $cas_client->validate();
-           if (!is_null($objCheckRes)) {
-               $ucid = (string)$objCheckRes->getUcid();
-           }
-       } catch (Exception $e) {
-
-       }
-        
-        $odp_path = Bd_Conf::getAppConf('odp_info/path');
-        $path = $odp_path.$filePath;
-        if (file_exists($path)) {
-          ob_start(); 
-          $size = filesize($path); 
-          header("Content-type:  application/octet-stream ");
-          header("Accept-Ranges:  bytes ");
-          header("Accept-Length: " . $size);
-          header("Content-Disposition:  attachment;  filename=" .$filePath);
-          echo file_get_contents($path);
-          readfile($path);
-          $dbSdkInfo = new Dao_SdkInfo();
-          $dbSdkInfo->insertSdkInfo($ucid, $passId, $serviceType, $language);
-        } else {
-          $url = '/404';
-          Header("Location: $url"); 
+        try {
+            $arrServers = Bd_Conf::getAppConf('uc_info/host');
+            $intAppid = Bd_Conf::getAppConf('uc_info/appId');
+            $strAppKey = Bd_Conf::getAppConf('uc_info/appKey');
+            $intTmOut = Bd_Conf::getAppConf('uc_info/timeOut');
+            $strCookieDomain = Bd_Conf::getAppConf('uc_info/cookieDomain');
+            $strLoginUrl = Bd_Conf::getAppConf('uc_info/loginUrl');
+            $strJumpUrl = Bd_Conf::getAppConf('uc_info/jumpUrl');
+            $casInfo = new Cas_Info($arrServers, $intAppid, $strAppKey, $intTmOut);
+            $casInfo->setCookieDomain($strCookieDomain);
+            $casInfo->setLoginUrl($strLoginUrl);
+            $casInfo->setJumpUrl($strJumpUrl);
+            $casInfo->setAutoRedirect(false);
+            $cas_client = new Cas_ClientUC($casInfo);
+            $objCheckRes = $cas_client->validate();
+            if (!is_null($objCheckRes)) {
+                $ucId = (string)$objCheckRes->getUcid();
+            }
+        } catch (Exception $e) {
         }
 
-        return ;
+
+        $odp_path = Bd_Conf::getAppConf('odp_info/path');
+        $path = $odp_path . $filePath;
+        if (file_exists($path)) {
+            ob_start();
+            $size = filesize($path);
+            header("Content-type:  application/octet-stream ");
+            header("Accept-Ranges:  bytes ");
+            header("Accept-Length: " . $size);
+            header("Content-Disposition:  attachment;  filename=" . $filePath);
+            echo file_get_contents($path);
+            readfile($path);
+
+            if  ($serviceType != -1 && $language != -1) {
+                $dbSdkInfo = new Dao_SdkInfo();
+                $dbSdkInfo->insertSdkInfo($ucId, $passId, $serviceType, $language);
+            }
+        } else {
+            $url = '/404';
+            Header("Location: $url");
+        }
+
+        return;
     }
 }
