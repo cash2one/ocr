@@ -205,7 +205,7 @@
                     <a>帮助与支持</a>
                     <ul class="sub-top-nav">
                         <li><a href="/support/video">教学视频</a></li>
-                        <li><a href="/support/faq">常见问题</a></li>
+                        <li><a href="/docs#/FAQ">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
                         <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
@@ -381,7 +381,7 @@
                     <div class="clear-float">
                         <div class="service-desc">
                             <h3>语音技术</h3>
-                            <p>多场景语音服务支持撞见，让你的应用长上耳朵、开口说话</p>
+                            <p>多场景语音服务支持专家，让你的应用长上耳朵、开口说话</p>
                         </div>
                         <div class="service-icon"></div>
                     </div>
