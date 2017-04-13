@@ -1,0 +1,1 @@
+ALTER TABLE t_news ADD INDEX `idx_place`(place);
