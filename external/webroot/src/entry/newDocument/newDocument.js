@@ -19,7 +19,7 @@ const routes = [
     {
         // 在这里设置默认打开的文档
         path: '/',
-        redirect: '/Beginner-AccessProcess/top'
+        redirect: '/Begin/top'
     },
     {
         path: '/:doc/:anchor',
