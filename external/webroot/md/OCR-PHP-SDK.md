@@ -54,7 +54,8 @@ $aipOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
 
 **注意：**如您以前是百度云的老用户，其中`API_KEY`对应百度云的“Access Key ID”，`SECRET_KEY`对应百度云的“Access Key Secret”。
 
-## 配置AipOcrClient
+
+## 配置AipOcrClient
 
 如果用户需要配置AipOcrClient的一些细节参数，可以在构造AipOcr之后调用接口设置参数，目前只支持以下参数：
 
@@ -108,6 +109,7 @@ $aipOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
 | 216635 | get mask error               | 获取mask图片错误    |
 | 282000 | logic internal error    	| 业务逻辑层内部错误 |
 | 282001 | logic backend error     	| 业务逻辑层后端服务错误 |
+| 282002 | input encoding error    	| 请求参数编码错误 |
 | 282100 | image transcode error	| 图片压缩转码错误 		|
 
 # 通用文字识别
@@ -149,7 +151,7 @@ const SECRET_KEY = '你的 Secret Key';
 $apiOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
 
 // 定义参数变量
-$option = array('detect_direction' => false, 'language_type' => "CHN_ENG");
+$option = array('detect_direction' => 'false', 'language_type' => "CHN_ENG");
 
 // 调用通用文字识别接口
 $result = $apiOcr->basicGeneral(file_get_contents('general.jpg'), $option);
@@ -186,11 +188,43 @@ $result = $apiOcr->basicGeneral(file_get_contents('general.jpg'), $option);
 
 举例，要对一张图片进行文字识别，具体的文字的内容和信息在返回的words_result字段中：
 
+
+```php
+// 引入文字识别OCR SDK
+require_once 'AipOcr.php';
+
+// 定义常量
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
+
+// 初始化ApiOcr
+$apiOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
+
+// 调用通用文字识别接口
+$result = $apiOcr->general(file_get_contents('general.jpg'));
 ```
-    // 参数为本地图片文件二进制数组
-    byte[] file = readImageFile(imagePath);
-    JSONObject response = client.general(file);
-    System.out.println(response.to
+
+传入图片时还想增加一些自定义参数配置：
+
+```php
+// 引入文字识别OCR SDK
+require_once 'AipOcr.php';
+
+// 定义常量
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
+
+// 初始化ApiOcr
+$apiOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
+
+// 定义参数变量
+$option = array('detect_direction' => 'false', 'language_type' => "CHN_ENG");
+
+// 调用通用文字识别接口
+$result = $apiOcr->general(file_get_contents('general.jpg'), $option);
+```
 
 **通用文字识别（含位置信息版） 请求参数详情**
 
@@ -201,6 +235,7 @@ $result = $apiOcr->basicGeneral(file_get_contents('general.jpg'), $option);
 | language_type         | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
 | detect_direction      | false | boolean | true、false                              | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
 | detect_language       | FALSE | string  | true、false                              | 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）           |
+| vertexes_location     | false | boolean | true、false                              | 是否在返回结果中标识文字位置|
 | classify_dimension    | FALSE | string  | lottery                                 | 分类维度（根据OCR结果进行分类），逗号分隔，当前只支持lottery。<br/>lottery：彩票分类，设置detect_direction有助于提升精度 |
 
 
@@ -228,6 +263,141 @@ $result = $apiOcr->basicGeneral(file_get_contents('general.jpg'), $option);
 | +++width           | 是    | uint32  | 表示定位定位位置的长方形的宽度                          |
 | +++height          | 是    | uint32  | 表示位置的长方形的高度                              |
 | ++char             | 是    | string  | 单字符识别结果                                  |
+
+
+
+
+# 通用文字识别（含生僻字版）
+
+某些场景中，图片中的中文不光有常用字，还包含了生僻字，这时用户需要对该图进行文字识别，应使用通用文字识别（含生僻字版）。
+
+图片接受参数类型：支持本地图片路径字符串，图片文件二进制数组。
+举例，要对一张网络图片进行文字识别，具体的文字的内容和信息在返回的words_result字段中：
+
+
+```php
+// 引入文字识别OCR SDK
+require_once 'AipOcr.php';
+
+// 定义常量
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
+
+// 初始化ApiOcr
+$apiOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
+
+// 调用生僻字识别接口
+$result = $apiOcr->enhancedGeneral(file_get_contents('enhanced_general.jpg'));
+```
+
+传入图片时还想增加一些自定义参数配置：
+
+```php
+// 引入文字识别OCR SDK
+require_once 'AipOcr.php';
+
+// 定义常量
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
+
+// 初始化ApiOcr
+$apiOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
+
+// 定义参数变量
+$option = array('detect_direction' => 'false', 'language_type' => "CHN_ENG");
+
+// 调用生僻字识别接口
+$result = $apiOcr->enhancedGeneral(file_get_contents('enhanced_general.jpg'), $option);
+```
+**通用文字识别（含生僻字版）请求参数详情**
+
+| 参数                    | 是否必选  | 类型      | 可选值范围                                   | 说明                                       |
+| --------------------- | ----- | ------- | --------------------------------------- | ---------------------------------------- |
+| image                 | true  | string  | -                                       | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
+| language_type         | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
+| detect_direction      | false | boolean | true、false                              | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
+
+**通用文字识别（含生僻字版）  返回数据参数详情**
+
+| 字段                 | 必选   | 类型      | 说明                                       |
+| ------------------ | ---- | ------- | ---------------------------------------- |
+| direction          | 否    | int32   | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
+| log_id             | 是    | uint64  | 唯一的log id，用于问题定位                         |
+| words_result_num   | 是    | uint32  | 识别结果数，表示words_result的元素个数                |
+| words_result       | 是    | array() | 定位和识别结果数组                                |
+| +words             | 否    | string  | 识别结果字符串                                  |
+
+
+# 网络图片文字识别
+
+
+网络图片文字识别用于识别一些网络上背景复杂，特殊字体的文字。
+
+图片接受参数类型：支持本地图片路径字符串，图片文件二进制数组。
+
+举例，要对一张网络图片进行文字识别，具体的文字的内容和信息在返回的words_result字段中：
+
+
+```php
+// 引入文字识别OCR SDK
+require_once 'AipOcr.php';
+
+// 定义常量
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
+
+// 初始化ApiOcr
+$apiOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
+
+// 调用网络图片文字识别接口
+$result = $apiOcr->webImage(file_get_contents('web_image.jpg'));
+```
+
+传入图片时还想增加一些自定义参数配置：
+
+```php
+// 引入文字识别OCR SDK
+require_once 'AipOcr.php';
+
+// 定义常量
+const APP_ID = '你的 App ID'
+const API_KEY = '你的 API Key';
+const SECRET_KEY = '你的 Secret Key';
+
+// 初始化ApiOcr
+$apiOcr = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
+
+// 定义参数变量
+$option = array('detect_direction' => 'true', 'language_type' => "CHN_ENG");
+
+// 调用网络图片文字识别接口
+$result = $apiOcr->webImage(file_get_contents('web_image.jpg'), $option);
+```
+
+**网络图片文字识别 请求参数详情**
+
+| 参数                    | 是否必选  | 类型      | 可选值范围                                   | 说明                                       |
+| --------------------- | ----- | ------- | --------------------------------------- | ---------------------------------------- |
+| image                 | true  | string  | -                                       | 图像数据，base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px,支持jpg/png/bmp格式 |
+| language_type         | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
+| detect_direction      | false | boolean | true、false                              | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
+| detect_language       | FALSE | string  | true、false                              | 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）           |
+
+
+**网络图片文字识别  返回数据参数详情**
+
+| 字段                 | 必选   | 类型      | 说明                                       |
+| ------------------ | ---- | ------- | ---------------------------------------- |
+| direction          | 否    | int32   | 图像方向，当detect_direction=true时存在。<br/>- -1:未定义，<br/>- 0:正向，<br/>- 1: 逆时针90度，<br/>- 2:逆时针180度，<br/>- 3:逆时针270度 |
+| log_id             | 是    | uint64  | 唯一的log id，用于问题定位                         |
+| words_result_num   | 是    | uint32  | 识别结果数，表示words_result的元素个数                |
+| words_result       | 是    | array() | 定位和识别结果数组                                |
+| +words             | 否    | string  | 识别结果字符串                                  |
+
+
 
 # 银行卡识别
 
@@ -345,4 +515,6 @@ $result = $apiOcr->idcard(file_get_contents('idcard.jpg'), $isFront, $options);
 | \+\+top          | Uint32 | 表示定位位置的长方形左上顶点的垂直坐标                      |
 | \+\+width        | Uint32 | 表示定位位置的长方形的宽度                            |
 | \+\+height       | Uint32 | 表示定位位置的长方形的高度                            |
+| \+words          | String | 识别结果字符串                                  |
++\+height       | Uint32 | 表示定位位置的长方形的高度                            |
 | \+words          | String | 识别结果字符串                                  |

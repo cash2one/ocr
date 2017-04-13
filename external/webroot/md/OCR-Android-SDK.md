@@ -39,6 +39,12 @@ Andoird SDK提供了一个可快速运行的demo工程，直接在Android Studio
 ### 为工程添加必要的权限
 
 在工程AndroidManifest.xml文件中添加如下权限：
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.CAMERA"/>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+```
 各个权限的用途说明见下表：
 
 | 名称                     | 用途                      |
@@ -409,12 +415,14 @@ OCR.getInstance().recognizeIDCard(param, new OnResultListener<IDCardResult>() {
 | 216635 | get mask error               | 获取mask图片错误          |
 | 282000 | logic internal error   | 业务逻辑层内部错误     |
 | 282001 | logic backend error    | 业务逻辑层后端服务错误   |
+| 282002 | input encoding error    	           | 请求参数编码错误 |
 | 282100 | image transcode error  | 图片压缩转码错误      |
 
 # 版本更新记录
 
 | 上线日期      | 版本号   | 更新内容                    |
 | --------- | ----- | ----------------------- |
+| 2017.4.13 | 1.0.2 | 修复部分用户使用ak，sk方式无法获取token的问题 |
 | 2017.3.23 | 1.0.1 | 更新demo获取token失败的错误提示的交互 |
 | 2017.3.16 | 1.0.0 | 在线OCR第一版！               |
 
