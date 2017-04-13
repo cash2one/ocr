@@ -41,7 +41,7 @@ module.exports = function (ext) {
         case 'sh':
             return {
                 hljsLanName: 'Bash',
-                readableLanName: 'Bash'
+                readableLanName: 'bash'
             };
         default:
             return {
