@@ -417,6 +417,7 @@ static CGFloat const pinchMinscale = 0.5;
 | 216635 | get mask error               | 获取mask图片错误          |
 | 282000 | logic internal error         | 业务逻辑层内部错误           |
 | 282001 | logic backend error          | 业务逻辑层后端服务错误         |
+| 282002 | input encoding error    	           | 请求参数编码错误 |
 | 282100 | image transcode error        | 图片压缩转码错误            |
 
 
