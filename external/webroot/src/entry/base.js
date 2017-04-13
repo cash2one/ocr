@@ -62,8 +62,8 @@ if (window.location.hostname.indexOf('cloud.baidu.com') < 0) {
     // 绑定合作咨询模态框
     let consultationModal = new ConsultationModal();
     $('.consult').on('click',
-        e => {
-            e.stopPropagation();
+        () => {
+            // e.stopPropagation();
             consultationModal.show();
         }
     );

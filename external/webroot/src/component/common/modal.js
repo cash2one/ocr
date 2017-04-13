@@ -65,6 +65,19 @@ export default class Modal {
             $('.ai-modal').trigger('close');
         }
 
-        $('body').off('close', close).on('click', close);
+        const $body = $('body');
+
+        $body.off('close', close);
+
+        // fixme 咨询按键需要百度统计统计点击次数，所以不能阻止冒泡，故在这里做一个dirty solution
+        $body.on('click', (e) => {
+            const $target = $(e.target);
+
+            if ($target.add($target.parents()).hasClass('consult')) {
+                return;
+            }
+
+            close();
+        });
     }
 }
