@@ -112,6 +112,8 @@ public class Sample {
 | 216500 | unknown error            | 未知错误        |
 | 282000 | logic internal error     | 业务逻辑层内部错误   |
 | 282001 | logic backend error      | 业务逻辑层后端服务错误 |
+| 282002 | input encoding error    	           | 请求参数编码错误 |
+| 282100 | image transcode error                   | 图片压缩转码错误       |
 | 282202 | antiporn detect timeout  | 检测超时        |
 | 282203 | image frame size error   | gif单帧大小超限   |
 | 282204 | image frames limit error | gif总帧数超限    |
@@ -224,6 +226,7 @@ public void antiPornGif(AipAntiporn client) {
 
 | 上线日期      | 版本号  | 更新内容                      |
 | --------- | ---- | ------------------------- |
+| 2017.4.13 | 1.3.2 | AI SDK同步版本更新  |
 | 2017.3.23 | 1.3  | 新增GIF色情图像识别接口，兼容Android环境 |
 | 2017.3.2  | 1.2  | 上线对图片参数要求限制，增加设置超时接口      |
 | 2017.1.20 | 1.1  | 对部分云用户调用不成功的错误修复          |

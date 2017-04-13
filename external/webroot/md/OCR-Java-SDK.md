@@ -135,6 +135,7 @@ public class Sample {
 | 216635 | get mask error               | 获取mask图片错误    |
 | 282000 | logic internal error    	| 业务逻辑层内部错误 |
 | 282001 | logic backend error     	| 业务逻辑层后端服务错误 |
+| 282002 | input encoding error    	           | 请求参数编码错误 |
 | 282100 | image transcode error	| 图片压缩转码错误 		|
 
 # 通用文字识别
@@ -253,6 +254,7 @@ public void generalRecognition(AipOcr client) {
 | mask                  | false | string  | -                                       | 表示mask区域的黑白灰度图片，白色代表选中, base64编码         |
 | language_type         | false | string  | CHN_ENG、ENG、POR、FRE、GER、ITA、SPA、RUS、JAP | 识别语言类型，默认为CHN_ENG。可选值包括：<br/>- CHN_ENG：中英文混合；<br/>- ENG：英文；<br/>- POR：葡萄牙语；<br/>- FRE：法语；<br/>- GER：德语；<br/>- ITA：意大利语；<br/>- SPA：西班牙语；<br/>- RUS：俄语；<br/>- JAP：日语 |
 | detect_direction      | false | boolean | true、false                              | 是否检测图像朝向，默认不检测，即：false。朝向是指输入图像是正常方向、逆时针旋转90/180/270度。可选值包括:<br/>- true：检测朝向；<br/>- false：不检测朝向。 |
+| vertexes_location     | false | boolean | true、false                              | 是否在返回结果中标识文字位置|
 | detect_language       | FALSE | string  | true、false                              | 是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语）           |
 | classify_dimension    | FALSE | string  | lottery                                 | 分类维度（根据OCR结果进行分类），逗号分隔，当前只支持lottery。<br/>lottery：彩票分类，设置detect_direction有助于提升精度 |
 
@@ -525,6 +527,7 @@ public void idcardRecognition(AipOcr client) {
 
 | 上线日期      | 版本号  | 更新内容                        |
 | --------- | ---- | --------------------------- |
+| 2017.4.13 | 1.3.2 | 新增通用文字识别（含生僻字版）和网图识别接口 |
 | 2017.3.31 | 1.3.1 | 新增通用文字识别（含位置信息版） |
 | 2017.3.23 | 1.3 | 兼容Android环境 |
 | 2017.3.2  | 1.2  | 上线对图片参数要求限制，增加设置超时接口        |
