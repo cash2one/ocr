@@ -103,7 +103,7 @@ class Action_Download extends Ap_Action_Abstract
             echo file_get_contents($path);
             readfile($path);
 
-            if  ($serviceType != -1 && $language != -1 && http_response_code() != 302 && !isset($array["castk"])) {
+            if  ($serviceType != -1 && $language != -1 && http_response_code() != 302 && !isset($arrInput["castk"])) {
                 $dbSdkInfo = new Dao_SdkInfo();
                 $dbSdkInfo->insertSdkInfo($ucId, $passId, $serviceType, $language);
             }
