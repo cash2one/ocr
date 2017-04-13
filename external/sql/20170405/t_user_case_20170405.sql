@@ -1,0 +1,1 @@
+ALTER TABLE `t_user_case` CHANGE COLUMN `json_content` `json_content` varchar(6000) NOT NULL DEFAULT '' COMMENT 'json';
