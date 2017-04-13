@@ -53,7 +53,7 @@ class Brain_AIApi
         ),
         "webimage" => array(
             'type' => 'bce',
-            'url' => 'https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic',
+            'url' => 'https://aip.baidubce.com/rest/2.0/ocr/v1/webimage',
             'params' => array(
                 'detect_direction' => 'true',
             ),
@@ -66,8 +66,8 @@ class Brain_AIApi
             ),
         ),
         "general_enhanced" => array(
-            'type' => 'openapi',
-            'url' => 'https://openapi.baidu.com/rest/2.0/vis-ocr/v1/ocr/enhance_classnum',
+            'type' => 'bce',
+            'url' => 'https://aip.baidubce.com/rest/2.0/ocr/v1/general_enhanced',
             'params' => array(
                 'detect_direction' => 'true',
             ),
