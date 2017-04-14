@@ -33,6 +33,7 @@ class Controller_Main extends Ap_Controller_Abstract {
         'newdocs' => 'actions/page/NewDocs.php',
         'file'     => 'actions/tools/File.php',
 
+        'download' => 'actions/tools/Download.php',
 
     );
 }
