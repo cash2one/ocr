@@ -233,7 +233,12 @@
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
+                        {%if $userInfo.type eq 1%}
                         <li><a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com">退出</a></li>
+                        {%/if%}
+                        {%if $userInfo.type eq 2%}
+                        <li><a href="http://cas.baidu.com/?action=logout&u=https%3a%2f%2fai.baidu.com">退出</a></li>
+                        {%/if%}
                     </ul>
                 </li>
                 {%/if%}
