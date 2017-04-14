@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/technology/nlp-word_embedding.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/technology/nlp-word_embedding.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1491986722/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1492140185/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -278,7 +278,7 @@
             词表中所有的词向量构成一个向量空间，每一个词都是这个词向量空间中的一个点，利用这种方法，实现文本的可计算
         </div>
         <div class="tech-function-pic">
-            <img width="500" src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/nlp-word_embedding/function-pic.png" >
+            <img width="500" src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/nlp-word_embedding/function-pic.png" >
         </div>
     </div>
 </div>
@@ -485,8 +485,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1491986722/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1491986722/js/technology/nlp-word_embedding.js"></script>
+<script src="//ai.bdstatic.com/dist/1492140185/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1492140185/js/technology/nlp-word_embedding.js"></script>
 
 <script>
     (function () {

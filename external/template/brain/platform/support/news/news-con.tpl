@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/support/news/news-con.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/support/news/news-con.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1491986722/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1492140185/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -368,8 +368,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1491986722/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1491986722/js/support/news/news-con.js"></script>
+<script src="//ai.bdstatic.com/dist/1492140185/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1492140185/js/support/news/news-con.js"></script>
 
 <script>
     (function () {

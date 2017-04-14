@@ -31,10 +31,10 @@
 
 ## 5. 启动开发
 目前各项服务我们都会开放REST API形式的服务，您可以点击「技术文档」中各服务的文档，查看**具体调用方法及参数**。  
-[语音识别API](http://ai.bidu.com/docs#/ASR-API) | [语音合成API](http://ai.bidu.com/docs#/TTS-API) | [OCR文字识别API](http://ai.bidu.com/docs#/OCR-API) | [人脸识别API](http://ai.bidu.com/docs#/FACE-API) | [黄反识别API](http://ai.bidu.com/docs#/Antiporn-API) | [自然语言处理API](http://ai.bidu.com/docs#/NLP-API)  
+[语音识别API](http://ai.baidu.com/docs#/ASR-API) | [语音合成API](http://ai.baidu.com/docs#/TTS-API) | [OCR文字识别API](http://ai.baidu.com/docs#/OCR-API) | [人脸识别API](http://ai.baidu.com/docs#/FACE-API) | [黄反识别API](http://ai.baidu.com/docs#/Antiporn-API) | [自然语言处理API](http://ai.baidu.com/docs#/NLP-API)  
 
 
 我们同样也为您提供了客户端或服务端SDK，帮忙您快速接入服务。后续也会不断补充拓展，敬请持续关注。  
-[SDK下载页](http://ai.baidu.com/sdk.html)
+[SDK下载页](http://ai.baidu.com/sdk)
 
 

@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/technology/ocr-general.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/technology/ocr-general.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1491986722/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1492140185/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -303,28 +303,28 @@
                 <p class="demo-desc">提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片，图片大小不超过2M，长边不超过2048像素。为保证正常识别效果，请保证需要识别部分为图片主体部分。</p>
                 <ul class="demo-card-list clear-float">
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general/demo-card-1.png">
+                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/ocr-general/demo-card-1.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general/demo-card-2.png">
+                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/ocr-general/demo-card-2.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general/demo-card-3.png">
+                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/ocr-general/demo-card-3.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general/demo-card-4.png">
+                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/ocr-general/demo-card-4.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general/demo-card-5.png">
+                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/ocr-general/demo-card-5.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general/demo-card-6.jpg">
+                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/ocr-general/demo-card-6.jpg">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general/demo-card-7.png">
+                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/ocr-general/demo-card-7.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general/demo-card-8.png">
+                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/ocr-general/demo-card-8.png">
                     </li>
                 </ul>
             </div>
@@ -600,8 +600,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1491986722/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1491986722/js/technology/ocr-general.js"></script>
+<script src="//ai.bdstatic.com/dist/1492140185/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1492140185/js/technology/ocr-general.js"></script>
 
 <script>
     (function () {

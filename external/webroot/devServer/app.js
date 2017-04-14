@@ -59,6 +59,20 @@ app.use('/tech/video', require('./router/video'));
 app.use('/tech/face', require('./router/face'));
 app.use('/tech/ocr', require('./router/ocr'));
 
+app.get('/tech/speech', (req, res, next) => {
+    renderSmarty(
+        'secondary/speech.tpl',
+        getMockData({})
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
+
 app.listen(port, () => {
     console.log('访问本地' + port + ',即可即时查看效果，enjoy it');
 });
