@@ -261,7 +261,7 @@
                class="btn-other media"
                href="
                {%if $src eq Null%}
-               /docs#Speech-Asr-O2OAndroidSDK
+               /docs#/ASR-Android-SDK/
                {%else%}
                https://cloud.baidu.com/doc/SPEECH/index.html
                {%/if%}">
@@ -449,7 +449,7 @@
     <div class="ai-container">
         <div class="tech-guide-links">
             <a href="http://ai.baidu.com/docs">新手指南</a>
-            <a href="http://ai.baidu.com/docs#Speech-Asr-O2OAndroidSDK">技术文档</a>
+            <a href="http://ai.baidu.com/docs#/ASR-Android-SDK/">技术文档</a>
             <a href="http://ai.baidu.com/sdk#sdk-category-bs">SDK下载</a>
         </div>
         <div class="tech-guide-route">
