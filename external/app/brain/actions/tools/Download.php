@@ -19,13 +19,8 @@ class Action_Download extends Ap_Action_Abstract
         $passId = '';
         $ucId = '';
 
-        try {
-            $userInfo = Bd_Passport::checkUserLogin();
-            if ($userInfo != false) {
-                $passId = $userInfo['uid'];
-            }
-        } catch (Exception $e) {
-        }
+        $userInfo = Brain_User::getUserInfo();
+
 
 
         $arrRequest = Saf_SmartMain::getCgi();
@@ -67,29 +62,6 @@ class Action_Download extends Ap_Action_Abstract
         } elseif ($sdkArr[2] == 'ios') {
             $language = 4;
         }
-
-
-        try {
-            $arrServers = Bd_Conf::getAppConf('uc_info/host');
-            $intAppid = Bd_Conf::getAppConf('uc_info/appId');
-            $strAppKey = Bd_Conf::getAppConf('uc_info/appKey');
-            $intTmOut = Bd_Conf::getAppConf('uc_info/timeOut');
-            $strCookieDomain = Bd_Conf::getAppConf('uc_info/cookieDomain');
-            $strLoginUrl = Bd_Conf::getAppConf('uc_info/loginUrl');
-            $strJumpUrl = Bd_Conf::getAppConf('uc_info/jumpUrl');
-            $casInfo = new Cas_Info($arrServers, $intAppid, $strAppKey, $intTmOut);
-            $casInfo->setCookieDomain($strCookieDomain);
-            $casInfo->setLoginUrl($strLoginUrl);
-            $casInfo->setJumpUrl($strJumpUrl);
-            $casInfo->setAutoRedirect(false);
-            $cas_client = new Cas_ClientUC($casInfo);
-            $objCheckRes = $cas_client->validate();
-            if (!is_null($objCheckRes)) {
-                $ucId = (string)$objCheckRes->getUcid();
-            }
-        } catch (Exception $e) {
-        }
-
 
         $odp_path = Bd_Conf::getAppConf('odp_info/path');
         $path = $odp_path . $filePath;
