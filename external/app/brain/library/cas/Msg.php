@@ -6,6 +6,10 @@
 class Cas_Msg {
 	static $_arrOption;	
 	static $_logid = 0;
+
+    /**
+     * @return int|string
+     */
 	static function getLogid() {
 		if (self::$_logid == 0) {
 			self::$_logid = microtime(true) . mt_rand(0,100);
@@ -20,7 +24,10 @@ class Cas_Msg {
 	public static function setOptions($arrOpt) {
 		self::$_arrOption = $arrOpt;
 	}
-	
+
+    /**
+     * @param $strMsg
+     */
 	static function Log($strMsg) {
 		$intLogid = self::getLogid();
 		$strLogDir = self::getDir();

@@ -59,7 +59,7 @@ class Cas_ClientUC {
      * 校验ST是否合法；
      * 返回值为array类型，值为：
      * 
-     * @param strST    来自cookie的ST，如果为NULL，则从URL中获取st参数
+     * @param strST    来自cookie的ST，如果为null，则从URL中获取st参数
      * @return $arrRet 
      * 		array(
      *  		  ucid:int,
@@ -99,7 +99,7 @@ class Cas_ClientUC {
     		Cas_Msg::Log("next to get real st");
     		$arrTmp = $this->_objSvr->getRealST($strSTKey, $intAppid);
     		$objNsH = $arrTmp['nsheader'];
-    		if ($objNsH!=NULL) {
+    		if ($objNsH!=null) {
     			$intRvd = $objNsH->getReserved();
     			if ($intRvd === 0) {   			
 	    			$objRealStRes = new Cas_Protocol_RealStResponse($arrTmp['data']);
@@ -159,7 +159,7 @@ class Cas_ClientUC {
     				Cas_Msg::Log('castk=-1 but cookie has st and ucid, next try to validate');
     				$arrTmp = $this->_objSvr->validateST($intUcid, $intAppid, $strST);
     				$objCheckRes = $this->procValidateResult($intUcid, $strST, $arrTmp);
-    				if ($objCheckRes != NULL) {
+    				if ($objCheckRes != null) {
     					Cas_Msg::Log('castk=-1 but cookie has st and ucid, next try to validate-->success');
     					return $objCheckRes;
     				}
@@ -179,7 +179,7 @@ class Cas_ClientUC {
     	if (is_numeric($intUcid) && $intUcid>0 && strlen($strST)>10) {
 	    	$arrTmp = $this->_objSvr->validateST($intUcid, $intAppid, $strST);
 	    	$objCheckRes = $this->procValidateResult($intUcid, $strST, $arrTmp);
-	    	if ($objCheckRes == NULL) {
+	    	if ($objCheckRes == null) {
 	    		Cas_Msg::Log("validate failed, response is null" );
 	    		$this->gotoJump();
 	    	}
@@ -200,7 +200,7 @@ class Cas_ClientUC {
      * @return Cas_Protocol_CheckResponse
      */
     function procValidateResult($intUcid, $strST, $arrData) {
-    	$objCheckRes = NULL;
+    	$objCheckRes = null;
     	$strSTCookieName = $this->_objCasInfo->getCookieSTKey();    	
     	$strUcidCookieName = $this->_objCasInfo->getCookieIDKey();
     	if (!is_array($arrData)) {
@@ -208,7 +208,7 @@ class Cas_ClientUC {
 	    	return $objCheckRes;
     	}    	
     	$objNsH = $arrData['nsheader'];
-	    if ($objNsH == NULL || $objNsH->getReserved() != 0) {
+	    if ($objNsH == null || $objNsH->getReserved() != 0) {
 	    	$msg = "";
 	    	if ($objNsH) {
 	    		$msg = "reserved is:" . $objNsH->getReserved();
@@ -254,12 +254,18 @@ class Cas_ClientUC {
 			return md5($strST . $intUcid . $intAppid . $strSubappkey);
 		}
     }
-    
+
+    /**
+     * @return mixed
+     */
     function getCookieUcid() {
     	$strUcidCookieName = $this->_objCasInfo->getCookieIDKey();
     	return $_COOKIE[$strUcidCookieName];
     }
-    
+
+    /**
+     * @return mixed
+     */
     function getCookieST() {
     	$strSTCookieName = $this->_objCasInfo->getCookieSTKey();    	
     	return $_COOKIE[$strSTCookieName];
@@ -314,8 +320,8 @@ class Cas_ClientUC {
     	$intUcid = $_COOKIE[$strUcidCookieName];
     	if ($strST || $intUcid>0) {
     		//删除cookie
-    		$_COOKIE[$strSTCookieName] = NULL;
-    		$_COOKIE[$strUcidCookieName] = NULL;    		
+    		$_COOKIE[$strSTCookieName] = null;
+    		$_COOKIE[$strUcidCookieName] = null;    		
 	    	if ($strCookieDomain) {
 	    		setcookie($strSTCookieName, $strST, time() - 100, $strCookiePath, $strCookieDomain);    		
     			setcookie($strUcidCookieName, $intUcid, time() - 100, $strCookiePath, $strCookieDomain); 			
@@ -337,11 +343,11 @@ class Cas_ClientUC {
     	$strCookiePath = $this->_objCasInfo->getCookiePath();
     	$strCookieDomain = $this->_objCasInfo->getCookieDomain();
     	if ($strCookieDomain) {
-    		setcookie($strSTCookieName, $strST, NULL, $strCookiePath, $strCookieDomain);
-    		setcookie($strUcidCookieName, $intUcid, NULL, $strCookiePath, $strCookieDomain);
+    		setcookie($strSTCookieName, $strST, null, $strCookiePath, $strCookieDomain);
+    		setcookie($strUcidCookieName, $intUcid, null, $strCookiePath, $strCookieDomain);
     	} else {    	
-    		setcookie($strSTCookieName, $strST, NULL, $strCookiePath);
-    		setcookie($strUcidCookieName, $intUcid, NULL, $strCookiePath);
+    		setcookie($strSTCookieName, $strST, null, $strCookiePath);
+    		setcookie($strUcidCookieName, $intUcid, null, $strCookiePath);
     	}
     	$_COOKIE[$strSTCookieName] = $strST;
     	$_COOKIE[$strUcidCookieName] = $intUcid;
@@ -360,9 +366,9 @@ class Cas_ClientUC {
     	$strCookiePath = $this->_objCasInfo->getCookiePath();
     	$strCookieDomain = $this->_objCasInfo->getCookieDomain();
     	if ($strCookieDomain) {
-    		setcookie($strHbCookieName, $intHb, NULL, $strCookiePath, $strCookieDomain);
+    		setcookie($strHbCookieName, $intHb, null, $strCookiePath, $strCookieDomain);
     	} else {    	
-    		setcookie($strHbCookieName, $intHb, NULL, $strCookiePath);
+    		setcookie($strHbCookieName, $intHb, null, $strCookiePath);
     	}
     	$_COOKIE[$strHbCookieName] = $intHb;
     }

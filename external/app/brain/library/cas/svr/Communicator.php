@@ -66,39 +66,59 @@ class Cas_Svr_Communicator {
 	 * @var resource
 	 */
 	var $_objConn;
-	
+
+    /**
+     * Cas_Svr_Communicator constructor.
+     * @param $arrServers
+     * @param string $strAppKey
+     * @param int $intTimeOut
+     */
 	function __construct($arrServers, $strAppKey = '', $intTimeOut = 1000) {
 		$this->Cas_Svr_Communicator($arrServers, $strAppKey, $intTimeOut);
 	}
-	
+
+    /**
+     * @param $arrServers
+     * @param string $strAppKey
+     * @param int $intTimeOut
+     */
 	function Cas_Svr_Communicator($arrServers, $strAppKey = '', $intTimeOut = 1000) {
 		$this->_arrServers = $arrServers;
 		$this->_arrCurr_Servers = $arrServers;
 		$this->_intTimeOut = $intTimeOut;
 		$this->_strSubAppkey = $strAppKey;
 	}
-	
+
+    /**
+     * @return mixed
+     */
 	function getLogid() {
 		list($usec, $sec) = explode(" ", microtime());
 		return ($usec + $sec) * 1000;
 	}
-	
+
+    /**
+     * @param $arrData
+     * @return mixed
+     */
 	function getPackFromData($arrData) {
 		return mc_pack_array2pack($arrData);
 	}
-	
+
+    /**
+     * @param $strData
+     * @return mixed
+     */
 	function getDataFromPack($strData) {
 		return mc_pack_pack2array($strData);
 	}
-	/**
-	 * 校验st
-	 *
-	 * @param int $ucid
-	 * @param int $appid
-	 * @param string $st
-	 * @param string $subappkey
-	 * @return array
-	 */
+
+    /**
+     * @param $ucid
+     * @param $appid
+     * @param $st
+     * @return array
+     */
 	function validateST($ucid, $appid, $st) {
 		$objNsHead = new Cas_Protocol_NsHeader(CMD_CHECK_ID, VERSION, CAS_PROVIDER, MAGIC_NUM, 0);
 		$arrData = array(
@@ -112,21 +132,16 @@ class Cas_Svr_Communicator {
 		$arrRet = $this->exchangeNsData($objNsHead, $arrData);
 		return $arrRet;
 	}
-	
-	/**
-	 * 校验st
-	 *
-	 * @param int $ucid
-	 * @param int $appid
-	 * @param string $st
-	 * @param string $subappkey
-	 * @return array
-	 */
+
+    /**
+     * @param $strKey
+     * @return array|mixed|null
+     */
 	function getPubSessData($strKey) {
 		$arrRet = array();
 		$strKey = trim($strKey);
 		if (strlen($strKey)<10) {
-			return NULL;
+			return null;
 		}
 		$strSubKey = '';
 		$intP = strpos($strKey, ".");
@@ -154,13 +169,12 @@ class Cas_Svr_Communicator {
 		}		
 		return $arrRet;
 	}
-/**
-	 * 校验st
-	 *
-	 * @param string $strKey
-	 * @param string $strData
-	 * @return bool
-	 */
+
+    /**
+     * @param $strKey
+     * @param $strData
+     * @return bool
+     */
 	function setPubSessData($strKey, $strData) {
 		$bolRet = false;
 		$strKey = trim($strKey);
@@ -188,22 +202,18 @@ class Cas_Svr_Communicator {
 		$arrTmp = $this->exchangeNsData($objNsHead, $arrData);	
 		if ($arrTmp) {
 			$objNsHead = $arrTmp['nsheader'];
-			if ($objNsHead != NULL && $objNsHead->getReserved() === 0) {
+			if ($objNsHead != null && $objNsHead->getReserved() === 0) {
 				$bolRet = true;
 			}
 			
 		}		
 		return $bolRet;
 	}
-/**
-	 * 校验st
-	 *
-	 * @param int $ucid
-	 * @param int $appid
-	 * @param string $st
-	 * @param string $subappkey
-	 * @return array
-	 */
+
+    /**
+     * @param $strKey
+     * @return bool
+     */
 	function unsetPubSessData($strKey) {
 		$bolRet = false;
 		$strKey = trim($strKey);
@@ -229,21 +239,18 @@ class Cas_Svr_Communicator {
 		$arrTmp = $this->exchangeNsData($objNsHead, $arrData);	
 		if ($arrTmp) {
 			$objNsHead = $arrTmp['nsheader'];
-			if ($objNsHead != NULL && $objNsHead->getReserved() === 0) {
+			if ($objNsHead != null && $objNsHead->getReserved() === 0) {
 				$bolRet = true;
 			}			
 		}		
 		return $bolRet;
 	}
-	
-	/**
-	 * 根据一次性stkey获得用于校验的st
-	 *
-	 * @param string $stkey
-	 * @param string $appkey
-	 * @param int $appid
-	 * @return array
-	 */
+
+    /**
+     * @param $stkey
+     * @param $appid
+     * @return array
+     */
 	function getRealST($stkey, $appid) {
 		$objNsHead = new Cas_Protocol_NsHeader(CMD_GET_REAL_ST, VERSION, CAS_PROVIDER, MAGIC_NUM, 0);
 		$arrData = array(
@@ -258,26 +265,24 @@ class Cas_Svr_Communicator {
 		return $arrRet;
 	}
 
-	/**
-	 * 交互数据
-	 *
-	 * @param Cas_Protocol_Header $objNsHeader
-	 * @param array $arrDataToSend
-	 * @return array('nsheader'=>$objNsHeader, 'data'=>array(), 'logid'=>uint)
-	 */
+    /**
+     * @param $objNsHeader
+     * @param $arrDataToSend
+     * @return array
+     */
 	function exchangeNsData($objNsHeader, $arrDataToSend) {
-		$arrRet = array('nsheader'=>NULL, 'data'=>array(), 'logid'=>0);
+		$arrRet = array('nsheader'=>null, 'data'=>array(), 'logid'=>0);
 		if (!$objNsHeader) {
 			Cas_Msg::Log("ns header empty");
 			return $arrRet;
 		}
-		if ($arrDataToSend != NULL && !is_array($arrDataToSend)) {
+		if ($arrDataToSend != null && !is_array($arrDataToSend)) {
 			Cas_Msg::Log("data to send must be array type");
 			return $arrRet;
 		}
 		//检查logid
 		$intLogid = $objNsHeader->getLogid();
-		if ($intLogid <= 0 || $intLogid == NULL) {
+		if ($intLogid <= 0 || $intLogid == null) {
 			$intLogid = $this->getLogid();
 			$objNsHeader->setLogid($intLogid);
 		}
@@ -331,19 +336,18 @@ class Cas_Svr_Communicator {
 		$arrRet['nsheader'] = $objReadNsHeader;
 		return $arrRet;
 	}
+
     /**
-     * 关闭连接
+     *
      */
     function close() {
         if (is_resource($this->_objConn)) {
             fclose($this->_objConn);
         }
-        $this->_objConn = NULL;
+        $this->_objConn = null;
     }
 
     /**
-     * 连接函数
-     * 
      * @return bool
      */
     function _connect() {
@@ -375,7 +379,7 @@ class Cas_Svr_Communicator {
             $this->_objConn = fsockopen($strIp, $intPort, $strErrno, $strErrstr, $intTimeOut);
             
             if (is_resource($this->_objConn)) {
-            	$bolRet = TRUE;
+            	$bolRet = true;
             	Cas_Msg::Log("connect to server:$strOneS success.");
                 break;
             } else {
@@ -391,10 +395,8 @@ class Cas_Svr_Communicator {
     }
 
     /**
-     * 读取数据
-     * 
-     * @param intLen    要读取的长度
-     * @return string , -1 means error
+     * @param int $intLen
+     * @return int|string
      */
     function read($intLen = 0) {
     	$intFailed = -1;
@@ -410,7 +412,7 @@ class Cas_Svr_Communicator {
     	} else {
        		$strRead = fread($this->_objConn, $intLen);
     	}
-        if ($strRead === FALSE) {
+        if ($strRead === false) {
             return $intFailed;
         } else {
             return $strRead;
@@ -418,15 +420,11 @@ class Cas_Svr_Communicator {
     }
 
     /**
-     * 发送数据
-     * 
-     * @param intLen    要发生的长度，默认是strData的长度
-     * @param strData
-     * 
-     * @return int 发送的字节数, -1 means failed
-     * @throw 异常
+     * @param $strData
+     * @param null $intLen
+     * @return int
      */
-    function send($strData, $intLen = NULL) {
+    function send($strData, $intLen = null) {
     	$intFailed = -1;
     	if (!is_resource($this->_objConn)) {
     		$bolRet = $this->_connect();
@@ -435,7 +433,7 @@ class Cas_Svr_Communicator {
     		}
     		
     	}
-        if ($intLen == NULL) {
+        if ($intLen == null) {
             $ret = fwrite($this->_objConn, $strData);
         } else {
             $ret = fwrite($this->_objConn, $strData, $intLen);

@@ -3,17 +3,18 @@
 class Cas_Protocol {
 	
 	var $_arrAssocData;
-	/**
-	 * 构造函数
-	 *
-	 * key会称为对象的成员变量
-	 * @param array $arrData key=>val
-	 * 
-	 */
+
+    /**
+     * Cas_Protocol constructor.
+     * @param $arrData
+     */
     function __construct($arrData) {    	
     	$this->Cas_Protocol($arrData);
     }
-    
+
+    /**
+     * @param $arrData
+     */
     function Cas_Protocol($arrData) {
     	if (!is_array($arrData) || count($arrData)<1) {
     		$this->_arrAssocData = array();
@@ -36,7 +37,7 @@ class Cas_Protocol {
     	if (strlen($strKey)>0 && array_key_exists($strKey, $this->_arrAssocData)) {
     		return $this->_arrAssocData[$strKey];
     	} else {
-    		return NULL;
+    		return null;
     	}
     }
     /**
