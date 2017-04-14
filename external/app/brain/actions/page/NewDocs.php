@@ -17,8 +17,8 @@ class Action_NewDocs extends Ap_Action_Abstract {
     public function execute() {
         $arrPageInfo['page'] = "docs";
         Brain_Output::htmlOutput(
-            $arrPageInfo, 
-            'brain/platform/newDocument/newDocument.tpl'
+            $arrPageInfo,
+            'brain/platform/document/document.tpl'
         );
     }
 }

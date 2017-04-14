@@ -18,13 +18,14 @@ import java.util.Map;
 public class SimNet {
 
     /**
-     * 重要提示代码中所需工具类
+     * 代码中所需工具类
      * FileUtil,Base64Util,HttpUtil请从
-     * https://github.com/Baidu-AIP/Demo/blob/master/java/com/baidu/ai/aip/utils/FileUtil.java
-     * https://github.com/Baidu-AIP/Demo/blob/master/java/com/baidu/ai/aip/utils/Base64Util.java
-     * https://github.com/Baidu-AIP/Demo/blob/master/java/com/baidu/ai/aip/utils/HttpUtil.java
+     * https://ai.baidu.com/file/BA73D199EED14D8AA5FC5A4BF4BDDA34
+     * https://ai.baidu.com/file/C8D81F3301E24D2892968F09AE1AD6E2
+     * https://ai.baidu.com/file/88C6E86FB5D141889391693FC84504B1
      * 下载
      */
+    
     public static void main(String[] args) {
         // 短文本相似度url
         String simNetUrl = "https://aip.baidubce.com/rpc/2.0/nlp/v1/simnet";

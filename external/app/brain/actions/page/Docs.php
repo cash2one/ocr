@@ -15,10 +15,11 @@
 class Action_Docs extends Ap_Action_Abstract {
 
     public function execute() {
-        $arrPageInfo['page'] = substr(strtolower(__CLASS__), 7);
+        $arrPageInfo['page'] = "docs";
         Brain_Output::htmlOutput(
             $arrPageInfo, 
-            'brain/platform/document/document.tpl'
+            'brain/platform/newDocument/newDocument.tpl'
+
         );
     }
 }

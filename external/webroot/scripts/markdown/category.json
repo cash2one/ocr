@@ -2,11 +2,15 @@
   "beginnerDoc": [
     {
       "text": "接入指南",
-      "md": "Beginner-AccessProcess"
+      "md": "Begin"
     },
     {
       "text": "鉴权认证机制",
-      "md": "Beginner-Auth"
+      "md": "Auth"
+    },
+    {
+      "text": "常见问题",
+      "md": "FAQ"
     }
   ],
   "techDoc": [
@@ -17,24 +21,28 @@
           "text": "语音识别",
           "children": [
             {
-              "text": "离在线语音识别Android SDK",
+              "text": "离在线语音识别 Android SDK",
               "md": "ASR-Android-SDK"
             },
             {
-              "text": "离在线语音识别iOS SDK",
+              "text": "离在线语音识别 iOS SDK",
               "md": "ASR-iOS-SDK"
             },
             {
-              "text": "在线语音识别Android SDK",
+              "text": "在线语音识别 Android SDK",
               "md": "ASR-Online-Android-SDK"
+            },
+            {
+              "text": "在线语音识别 iOS SDK",
+              "md": "ASR-Online-iOS-SDK"
             },
             {
               "text": "语音识别 REST API",
               "md": "ASR-API"
             },
             {
-              "text": "常见问题",
-              "md": "ASR-FAQs"
+              "text": "语义理解协议",
+              "md": "ASR-Query-Protocol"
             }
           ]
         },
@@ -56,10 +64,6 @@
             {
               "text": "语音合成 REST API",
               "md": "TTS-API"
-            },
-            {
-              "text": "常见问题",
-              "md": "TTS-FAQs"
             }
           ]
         }
@@ -86,12 +90,16 @@
             {
               "text": "Python语言",
               "md": "OCR-Python-SDK"
+            },
+            {
+              "text": "iOS SDK",
+              "md": "OCR-iOS-SDK"
+            },
+            {
+              "text": "Android SDK",
+              "md": "OCR-Android-SDK"
             }
           ]
-        },
-        {
-          "text": "常见问题",
-          "md": "OCR-FAQ"
         }
       ]
     },
@@ -118,10 +126,6 @@
               "md": "Face-Python-SDK"
             }
           ]
-        },
-        {
-          "text": "常见问题",
-          "md": "FACE-FAQ"
         }
       ]
     },
@@ -148,10 +152,6 @@
               "md": "NLP-Python-SDK"
             }
           ]
-        },
-        {
-          "text": "常见问题",
-          "md": "NLP-FAQ"
         }
       ]
     },
@@ -178,12 +178,14 @@
               "md": "Antiporn-Python-SDK"
             }
           ]
-        },
-        {
-          "text": "常见问题",
-          "md": "Antiporn-FAQ"
         }
       ]
+    }
+  ],
+  "priceDoc": [
+    {
+      "text": "OCR文字识别定价",
+      "md": "OCR-Pricing"
     }
   ]
 }

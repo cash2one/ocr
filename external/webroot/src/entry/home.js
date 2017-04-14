@@ -63,11 +63,11 @@ $(document).ready(function () {
 
     $('.banner-indicator > li').eq(0).click();
 
-    // 渲染底部新闻
-    new News({
-        selector: '.page-content .news-container',
-        newsCounter: 3
-    }).render();
+    // // 渲染底部新闻
+    // new News({
+    //     selector: '.page-content .news-container',
+    //     newsCounter: 3
+    // }).render();
 
     // 解决方案点击响应
     $('.solution-tab a').click(function (e) {

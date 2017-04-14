@@ -15,10 +15,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/newDocument/newDocument.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/newDocument/newDocument.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -34,7 +34,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1491541563/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1491986722/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -80,6 +80,11 @@
                                  <li>
                                     <a href="/tech/ocr/general_location" id="ocr-location-link">
                                     通用文字识别（含位置信息版）
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/tech/ocr/webimage">
+                                        网络图片文字识别
                                     </a>
                                 </li>
                             </ul>
@@ -201,7 +206,7 @@
                     <a>帮助与支持</a>
                     <ul class="sub-top-nav">
                         <li><a href="/support/video">教学视频</a></li>
-                        <li><a href="/support/faq">常见问题</a></li>
+                        <li><a href="/docs#/FAQ">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
                         <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
@@ -237,8 +242,8 @@
     </div>
 </header>
 <div id="app"></div>
-<script src="//ai.bdstatic.com/dist/1491541563/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1491541563/js/newDocument/newDocument.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/newDocument/newDocument.js"></script>
 <script>
     (function () {
         var bp = document.createElement('script');

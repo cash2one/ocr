@@ -98,6 +98,8 @@ $AipAntiPorn = new AipAntiPorn(APP_ID, API_KEY, SECRET_KEY);
 | 216500 | unknown error            | 未知错误        |
 | 282000 | logic internal error     | 业务逻辑层内部错误   |
 | 282001 | logic backend error      | 业务逻辑层后端服务错误 |
+| 282002 | input encoding error    	           | 请求参数编码错误 |
+| 282100 | image transcode error                   | 图片压缩转码错误       |
 | 282202 | antiporn detect timeout  | 检测超时        |
 | 282203 | image frame size error   | gif单帧大小超限   |
 | 282204 | image frames limit error | gif总帧数超限    |

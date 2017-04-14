@@ -1,6 +1,7 @@
 @import '../common/helper.less';
 @import '../common/global.less';
 @import '../common/modal.less';
+@import '../common/tech-product.less';
 
 @banner: url('../../../ai_images/technology/ocr-bankcard/banner.png');
 @icons: url('../../../ai_images/technology/ocr-bankcard/icons.png');
@@ -9,7 +10,22 @@
 @case-icons: url('../../../ai_images/technology/ocr-bankcard/case-icons.png');
 
 @import '../common/tech-page.less';
-
+.tech-banner {
+    .tech-docs {
+        display: inline-block;
+        vertical-align: top;
+        width: 82px;
+        height: 40px;
+        background: url('../../../ai_images/icons/tech-docs.png') no-repeat center center;
+        background-size: 82px 15px;
+    }
+    .product-word {
+        margin-top: 20px;
+        .word-point {
+            color: red;
+        }
+    }
+}
 .tech-section {
     &.tech-intro {
         .tech-intro-detail {
@@ -427,4 +443,7 @@
             }
         }
     }
+}
+.tech-product {
+    .tech-product()
 }

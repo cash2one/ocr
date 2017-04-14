@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/technology/ocr-general_enhanced.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/technology/ocr-general_enhanced.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1491541563/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1491986722/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -79,6 +79,11 @@
                                  <li>
                                     <a href="/tech/ocr/general_location" id="ocr-location-link">
                                     通用文字识别（含位置信息版）
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/tech/ocr/webimage">
+                                        网络图片文字识别
                                     </a>
                                 </li>
                             </ul>
@@ -200,7 +205,7 @@
                     <a>帮助与支持</a>
                     <ul class="sub-top-nav">
                         <li><a href="/support/video">教学视频</a></li>
-                        <li><a href="/support/faq">常见问题</a></li>
+                        <li><a href="/docs#/FAQ">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
                         <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
@@ -247,14 +252,17 @@
         </div>
         <div class="tech-banner-btn-list">
             <a role="button"
+               class="btn-primary media ai-redirect"
+               href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=enhance_ocr">
+            开通付费
+            </a>
+            <a class="tech-docs"
+               href="
                {%if $src eq Null%}
-               class="btn-primary media consult"
-               data-operation="cooperation"
+               /docs#/OCR-API
                {%else%}
-               class="btn-primary media"
-               href="mailto://ai@baidu.com"
-               {%/if%}>
-                商务合作
+               /doc/OCR/index.html
+               {%/if%}">
             </a>
         </div>
     </div>
@@ -299,28 +307,28 @@
                 </div>
                 <div class="tech-demo-card-list">
                     <div class="tech-demo-card-item tech-demo-card-active">
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/ocr-general_enhanced/demo-card-1.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general_enhanced/demo-card-1.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/ocr-general_enhanced/demo-card-2.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general_enhanced/demo-card-2.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/ocr-general_enhanced/demo-card-3.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general_enhanced/demo-card-3.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/ocr-general_enhanced/demo-card-4.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general_enhanced/demo-card-4.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/ocr-general_enhanced/demo-card-5.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general_enhanced/demo-card-5.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/ocr-general_enhanced/demo-card-6.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general_enhanced/demo-card-6.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/ocr-general_enhanced/demo-card-7.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general_enhanced/demo-card-7.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/ocr-general_enhanced/demo-card-8.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-general_enhanced/demo-card-8.png">
                     </div>
                 </div>
             </div>
@@ -430,7 +438,74 @@
         </div>
     </div>
 </div>
-
+<div class="tech-section get-started tech-product">
+    <div class="container-product">
+        <div class="tech-product-title">产品定价</div>
+        <div class="tech-product-info">本产品为按调用量计费的后付费产品，定价采取分段式阶梯定价方式
+            <a class="product-price"
+               href="
+               {%if $src eq Null%}
+               /docs#/OCR-Pricing
+               {%else%}
+               /doc/OCR/OCR-Pricing.html
+               {%/if%}">
+            </a>
+        </div>
+        <div class="tech-product-wrapper">
+            <div class="product-form-1">
+                <div class="product-head pric-head-1">价目表</div>
+                <div class="product-body pric-body-1">
+                    <div class="pric-item-header pric-item-1">月调用量</div>
+                    <div class="pric-item-header pric-item-1">单价</div>
+                    <div class="pric-item-connent pric-item-1">0&lt;调用量&lt;=5w</div>
+                    <div class="pric-item-connent pric-item-1">0.060元/次</div>
+                    <div class="pric-item-connent pric-item-1">5w&lt;调用量&lt;=10w</div>
+                    <div class="pric-item-connent pric-item-1">0.055元/次</div>
+                    <div class="pric-item-connent pric-item-1">10w&lt;调用量&lt;=20w</div>
+                    <div class="pric-item-connent pric-item-1">0.050元/次</div>
+                    <div class="pric-item-connent pric-item-1">20w&lt;调用量&lt;=50w</div>
+                    <div class="pric-item-connent pric-item-1">0.045元/次</div>
+                    <div class="pric-item-connent pric-item-1">50w&lt;调用量</div>
+                    <div class="pric-item-connent pric-item-1">0.040元/次</div>
+                </div>
+            </div>
+            <div class="product-form-2">
+                <div class="product-head pric-head-2">合作咨询</div>
+                <div class="product-body pric-body-2">
+                    <div class="pric-item-header pric-item-2">如果您有以下的需求或其他需求，您可以提交合作咨询：</div>
+                    <div class="pric-item-connent pric-item-2">1.如果您的调用量远大于最大的阶梯段，并需要更低的价格；</div>
+                    <div class="pric-item-connent pric-item-2">2.如果您需要更高的QPS/并发；</div>
+                    <div class="pric-item-connent pric-item-2">3.如果您有其他的OCR要求；</div>
+                    <div class="pric-item-connent pric-item-2">4.如果您对现有的接口/SDK/文档有任何建议意见。</div>
+                </div>
+            </div>
+            <div class="product-form-3">
+                <div class="product-head pric-head-3">付费配置</div>
+                <div class="product-body pric-body-3">
+                    <div class="pric-item-header pric-item-3">调用量限额</div>
+                    <div class="pric-item-header pric-item-3">QPS限制</div>
+                    <div class="pric-item-connent pric-item-3">不限制，按量付费</div>
+                    <div class="pric-item-connent pric-item-3">保证10次并发</div>
+                </div>
+            </div>
+            <div class="product-form-4">
+                <div class="product-head pric-head-4">调用失败如何计费？</div>
+                <div class="product-body pric-body-4">
+                    <div class="pric-item-connent pric-item-4">
+                        通用文字识别（含生僻字版）任何调用失败均不算作一次需计费的调用，不产生任何费用
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tech-free-product-btn">
+            <a role="button"
+               class="btn-primary large ai-redirect"
+               href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=enhance_ocr">
+            开通付费
+            </a>
+        </div>
+    </div>
+</div>
 {%if $userInfo eq Null%}
 <div class="tech-section get-started tech-free">
     <div class="ai-container">
@@ -458,11 +533,11 @@
         <div class="tech-guide-question tech-clear">
             <div class="tech-guide-question-title">常见问题</div>
             <div class="tech-guide-question-list">
-                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q1">图片格式和分辨率有限制吗?</a>
-                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q8">字体有要求吗？</a>
-                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q9">支持哪些语言识别？</a>
-                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q10">支持文档扫描图片的文字识别吗？</a>
-                <a class="tech-link-btn" href="/docs#OCR-FAQ_Q7">怎么提高文字识别的准确率和识别速度？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/27a8606d">图片格式和分辨率有限制吗?</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/27a8606d">字体有要求吗？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/27a8606d">支持哪些语言识别？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/27a8606d">支持文档扫描图片的文字识别吗？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/27a8606d">怎么提高文字识别的准确率和识别速度？</a>
             </div>
         </div>
     </div>
@@ -568,8 +643,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1491541563/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1491541563/js/technology/ocr-general_enhanced.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/technology/ocr-general_enhanced.js"></script>
 
 <script>
     (function () {

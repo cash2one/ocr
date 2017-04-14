@@ -36,17 +36,92 @@ class Dao_News extends Dao_Base
         'link',
     );
 
+    // 新闻速递字段
+    private $lastestNewsFields = array(
+        'id',
+        'title',
+    );
+
+    // 首页新闻块字段
+    private $homeNewsListFields = array(
+        'id',
+        'title',
+        'abs',
+        'banner as img',
+    );
+
     /**
      * @brief 连接db，表名初始化
-     *
      * @return  null
-     *
      * @date 2015/07/20 20:00:24
      **/
     public function __construct()
     {
         parent::__construct();
         $this->strTable = 't_news';
+    }
+
+    /**
+     * getLastestNews
+     * @access public
+     * @return void
+     */
+    public function getLastestNews()
+    {
+        $arrFields = $this->lastestNewsFields;
+        $arrConds = array(
+            'place=' => 0,
+            'show_index=' => 0,
+        );
+        $arrOptions = null;
+        $arrAppends = array(
+            'order by id desc',
+            'limit 1',
+        );
+        $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
+        $arrDBRet = $this->query($strSQL);
+        return $arrDBRet;
+    }
+
+    /**
+     * getHomeNewsList
+     * @access public
+     * @return void
+     */
+    public function getHomeNewsList()
+    {
+        $arrFields = $this->homeNewsListFields;
+        $arrConds = array(
+            'place=' => 0,
+            'show_index=' => 1,
+        );
+        $arrOptions = null;
+        $arrAppends = array(
+            'order by index_order',
+            'limit 0 , 4',
+        );
+        $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
+        $arrDBRet = $this->query($strSQL);
+        return $arrDBRet;
+    }
+
+    /**
+     * getNewsCount
+     * @access public
+     * @return void
+     */
+    public function getNewsCount()
+    {
+        $arrFields = array('count(*) as c');
+        $arrConds = array(
+            "place=" => 0
+        );
+        $arrOptions = null;
+        $arrAppends = null;
+        $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
+        $arrDBRet = $this->query($strSQL);
+        $tagNewsCount = $arrDBRet[0]['c'];
+        return $tagNewsCount;
     }
 
     /**
@@ -73,6 +148,26 @@ class Dao_News extends Dao_Base
 
         $arrDBRet = $this->query($strSQL);
 
+        return $arrDBRet;
+    }
+
+    /**
+     * getNewsListByNewsIdList
+     *
+     * @param mixed $newsIdList
+     * @access public
+     * @return void
+     */
+    public function getNewsListByNewsIdList($newsIdList)
+    {
+        $arrFields = $this->arrDefaultFields;
+        $arrConds =  'id IN '.$this->getSQLIn($newsIdList);
+        $arrOptions = null;
+        $arrAppends = array(
+            'order by id desc',
+        );
+        $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
+        $arrDBRet = $this->query($strSQL);
         return $arrDBRet;
     }
 

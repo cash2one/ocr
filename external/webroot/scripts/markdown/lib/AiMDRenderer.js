@@ -118,49 +118,6 @@ module.exports = class AiMDRenderer extends Renderer {
             // 文档的所有连接，在新窗口打开
             return `<a href="${encodeURI(href)}" target="_blank" >${text}</a>`;
         };
-
-        this.html =  function (html) {
-            const cheerio = require('cheerio');
-            const lodashUnescape = require('lodash.unescape');
-            html = lodashUnescape(html);
-
-            html = html.replace(/<\/?em>/g, '*');
-
-            const $ = cheerio.load(html, {
-                decodeEntities: false
-            });
-
-            const $codeBlock = $('.code-block');
-
-            $codeBlock.each((index, element) => {
-                const tabTitle = $(element)
-                    .find('[data-lan]')
-                    .map(
-                        (index, element) => {
-                            $(element).html(
-                                `
-                                <pre><code class="hljs">${hljs.highlightAuto($(element).html()).value}</code></pre>
-                                `
-                            );
-
-                            const titleClass = index === 0 ? 'block-active' : '';
-
-                            return `
-                                <div class="code-block-title ${titleClass}"
-                                     data-index="${index}">
-                                    ${$(element).attr('data-lan')}
-                                </div>`;
-                        }
-                    )
-                    .get()
-                    .join('\r');
-
-                const tabTitleContainer = `<div class="code-block-tab-container">${tabTitle}</div>`;
-                $(tabTitleContainer).prependTo(element);
-            });
-
-            return $.html();
-        };
     }
 
     _getMdName() {

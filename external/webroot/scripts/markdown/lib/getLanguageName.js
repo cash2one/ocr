@@ -10,12 +10,12 @@ module.exports = function (ext) {
                 // 用于highLight.js 解析的语言名称, hljs在高亮时，需要知道具体的语言名称
                 // 这个字段囊括的值符合hljs的规范
                 hljsLanName: 'Java',
-                readableLanName: 'java'
+                readableLanName: 'Java'
             };
         case 'py':
             return {
                 hljsLanName: 'Python',
-                readableLanName: 'python'
+                readableLanName: 'Python'
             };
         case 'cs':
             return {
@@ -34,6 +34,11 @@ module.exports = function (ext) {
             };
         // bash居然用.txt后缀...
         case 'txt':
+            return {
+                hljsLanName: 'Bash',
+                readableLanName: 'CURL'
+            };
+        case 'sh':
             return {
                 hljsLanName: 'Bash',
                 readableLanName: 'bash'

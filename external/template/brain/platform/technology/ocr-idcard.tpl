@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/technology/ocr-idcard.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/technology/ocr-idcard.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1491541563/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1491986722/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -79,6 +79,11 @@
                                  <li>
                                     <a href="/tech/ocr/general_location" id="ocr-location-link">
                                     通用文字识别（含位置信息版）
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/tech/ocr/webimage">
+                                        网络图片文字识别
                                     </a>
                                 </li>
                             </ul>
@@ -200,7 +205,7 @@
                     <a>帮助与支持</a>
                     <ul class="sub-top-nav">
                         <li><a href="/support/video">教学视频</a></li>
-                        <li><a href="/support/faq">常见问题</a></li>
+                        <li><a href="/docs#/FAQ">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
                         <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
@@ -243,17 +248,23 @@
         <div>
             <a role="button"
                class="btn-primary media ai-redirect"
-               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">立即使用</a>
+               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">免费使用</a>
             <a role="button"
-               class="btn-other media"
+               class="btn-primary media ai-redirect"
+               href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=id_ocr">
+            开通付费
+            </a>
+            <a class="tech-docs"
                href="
                {%if $src eq Null%}
-               /docs#OCR
+               /docs#/OCR-API
                {%else%}
-               https://cloud.baidu.com/doc/OCR/index.html
+               /doc/OCR/index.html
                {%/if%}">
-                技术文档
             </a>
+        </div>
+        <div class="product-word">
+            每月<div class="word-point">15000</div>次免费调用量，开通付费后用量<div class="word-point">不再设限！</div>
         </div>
     </div>
 </section>
@@ -296,22 +307,22 @@
                 <p class="demo-desc">提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片，图片大小不超过2M，长边不超过2048像素。为保证正常识别效果，请保持身份证正面向上，并为图片主体部分。此演示暂只支持正面识别。</p>
                 <ul class="demo-card-list clear-float">
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/ocr-idcard/demo-card-1.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-idcard/demo-card-1.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/ocr-idcard/demo-card-2.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-idcard/demo-card-2.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/ocr-idcard/demo-card-3.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-idcard/demo-card-3.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/ocr-idcard/demo-card-4.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-idcard/demo-card-4.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/ocr-idcard/demo-card-5.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-idcard/demo-card-5.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/ocr-idcard/demo-card-6.png">
+                        <img src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/ocr-idcard/demo-card-6.png">
                     </li>
                 </ul>
             </div>
@@ -393,6 +404,90 @@
         <li class="active"><a>百度钱包</a></li>
     </ul>
 </section>
+<div class="tech-section get-started tech-product">
+    <div class="container-product">
+        <div class="tech-product-title">产品定价</div>
+        <div class="tech-product-info">本产品为按调用量付费的后付费产品，定价采取分段式阶梯定价方式
+            <a class="product-price"
+               href="
+               {%if $src eq Null%}
+               /docs#/OCR-Pricing
+               {%else%}
+               /doc/OCR/OCR-Pricing.html
+               {%/if%}">
+            </a>
+        </div>
+        <div class="tech-product-wrapper">
+            <div class="product-form-1">
+                <div class="product-head pric-head-1">价目表</div>
+                <div class="product-body pric-body-1">
+                    <div class="pric-item-header pric-item-1">月调用量</div>
+                    <div class="pric-item-header pric-item-1">单价</div>
+                    <div class="pric-item-connent pric-item-1">0&lt;调用量&lt;=5w</div>
+                    <div class="pric-item-connent pric-item-1">0.050元/次</div>
+                    <div class="pric-item-connent pric-item-1">5w&lt;调用量&lt;=10w</div>
+                    <div class="pric-item-connent pric-item-1">0.045元/次</div>
+                    <div class="pric-item-connent pric-item-1">10w&lt;调用量&lt;=20w</div>
+                    <div class="pric-item-connent pric-item-1">0.040元/次</div>
+                    <div class="pric-item-connent pric-item-1">20w&lt;调用量&lt;=50w</div>
+                    <div class="pric-item-connent pric-item-1">0.035元/次</div>
+                    <div class="pric-item-connent pric-item-1">50w&lt;调用量</div>
+                    <div class="pric-item-connent pric-item-1">0.030元/次</div>
+                    <div class="pric-item-foot">
+                        免费配额：每日500次免费调用次数，超出免费配额，开始计费
+                    </div>
+                </div>
+            </div>
+            <div class="product-form-2">
+                <div class="product-head pric-head-2">合作咨询</div>
+                <div class="product-body pric-body-2">
+                    <div class="pric-item-header pric-item-2">如果您有以下的需求或其他需求，您可以提交合作咨询：</div>
+                    <div class="pric-item-connent pric-item-2">1.如果您的调用量远大于最大的阶梯段，并需要更低的价格；</div>
+                    <div class="pric-item-connent pric-item-2">2.如果您需要更高的QPS/并发；</div>
+                    <div class="pric-item-connent pric-item-2">3.如果您有其他的OCR要求；</div>
+                    <div class="pric-item-connent pric-item-2">4.如果您对现有的接口/SDK/文档有任何建议意见。</div>
+                </div>
+            </div>
+            <div class="product-form-3">
+                <div class="product-head pric-head-3">付费配置</div>
+                <div class="product-body pric-body-3">
+                    <div class="pric-item-header pric-item-3"></div>
+                    <div class="pric-item-header pric-item-3">500/日免费配额</div>
+                    <div class="pric-item-header pric-item-3">超过免费配额</div>
+                    <div class="pric-item-header pric-item-3">QPS限制</div>
+                    <div class="pric-item-header pric-item-3">免费</div>
+                    <div class="pric-item-connent pric-item-3">拥有</div>
+                    <div class="pric-item-connent pric-item-3">不响应请求</div>
+                    <div class="pric-item-connent pric-item-3">不保证并发</div>
+                    <div class="pric-item-header pric-item-3">付费</div>
+                    <div class="pric-item-connent pric-item-3">拥有</div>
+                    <div class="pric-item-connent pric-item-3">响应请求</div>
+                    <div class="pric-item-connent pric-item-3">保证10次并发</div>
+                </div>
+            </div>
+            <div class="product-form-4">
+                <div class="product-head pric-head-4">调用失败如何计费？</div>
+                <div class="product-body pric-body-4">
+                    <div class="pric-item-connent pric-item-4">
+                        身份证识别除去识别身份证错误（错误码：216633；错误信息：recognize idcard  error）算作需计费的调用，并按照价目表中阶梯价格计费。其余调用失败均不算作需计费的调用，不产生任何费用
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tech-free-product-btn">
+            <a role="button"
+               class="btn-primary large ai-redirect"
+               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">
+                免费使用
+            </a>
+            <a role="button"
+               class="btn-primary large ai-redirect"
+               href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=id_ocr">
+            开通付费
+            </a>
+        </div>
+    </div>
+</div>
 {%if $userInfo eq Null%}
 <section class="tech-section get-started">
     <div class="container">
@@ -413,16 +508,16 @@
         <div class="guide-link clear-float">
             <h3>开发指南</h3>
             <ul>
-                <li><a href="/docs#OCR">技术文档 ></a></li>
+                <li><a href="/docs#OCR-API">技术文档 ></a></li>
                 <li><a href="/sdk">SDK下载 ></a></li>
             </ul>
         </div>
         <div class="question-link clear-float">
             <h3>常见问题</h3>
             <ul>
-                <li><a href="/docs#OCR-FAQ_Q1">图片格式和分辨率有限制么？</a></li>
-                <li><a href="/docs#OCR-FAQ_Q2">图片大小有限制么？</a></li>
-                <li><a href="/docs#OCR-FAQ_Q7">怎么提高识别的准确率和识别速度？</a></li>
+                <li><a href="/docs#/FAQ/27a8606d">图片格式和分辨率有限制么？</a></li>
+                <li><a href="/docs#/FAQ/27a8606d">图片大小有限制么？</a></li>
+                <li><a href="/docs#/FAQ/27a8606d">怎么提高识别的准确率和识别速度？</a></li>
             </ul>
         </div>
     </div>
@@ -527,8 +622,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1491541563/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1491541563/js/technology/ocr-idcard.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/technology/ocr-idcard.js"></script>
 
 <script>
     (function () {

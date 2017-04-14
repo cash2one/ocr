@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/technology/video-vcs.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/technology/video-vcs.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1491541563/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1491986722/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -79,6 +79,11 @@
                                  <li>
                                     <a href="/tech/ocr/general_location" id="ocr-location-link">
                                     通用文字识别（含位置信息版）
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/tech/ocr/webimage">
+                                        网络图片文字识别
                                     </a>
                                 </li>
                             </ul>
@@ -200,7 +205,7 @@
                     <a>帮助与支持</a>
                     <ul class="sub-top-nav">
                         <li><a href="/support/video">教学视频</a></li>
-                        <li><a href="/support/faq">常见问题</a></li>
+                        <li><a href="/docs#/FAQ">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
                         <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
@@ -236,32 +241,38 @@
     </div>
 </header>
 <div class="ai-platform page-content">
-    <section class="tech-section tech-banner">
-    <div class="container">
-        <h1>视频封面选图</h1>
-        <p>通过对视频本身的内容理解，自动截取视频中的精彩画面<br>
-            输出作为视频的封面，可应用于海量新老视频自动的封面选图</p>
-        <div>
+    <div class="tech-section tech-banner">
+    <div class="ai-container">
+        <div class="tech-banner-title">
+            视频封面选图
+        </div>
+        <div class="tech-banner-info">
+            通过对视频本身的内容理解，自动截取视频中的精彩画面<br>
+            输出作为视频的封面，可应用于海量新老视频自动的封面选图
+        </div>
+        <div class="tech-banner-btn-list">
             <a role="button"
                {%if $src eq Null%}
                class="btn-primary media ai-redirect"
-               href="https://cloud.baidu.com/product/apply/vca.html?from=ai"
+               href="https://cloud.baidu.com/product/apply/vca.html?from=ai&service=VCS"
                {%else%}
                class="btn-primary media"
-               href="/product/apply/vca.html"
-               {%/if%}">
-                商务合作
+               href="/product/apply/vca.html?service=VCS"
+               {%/if%}>
+            商务合作
             </a>
         </div>
     </div>
-</section>
-<section class="tech-section tech-intro">
-    <div class="container">
-        <h2>技术介绍</h2>
-        <p id="container-p">
+</div>
+<div class="tech-section tech-function">
+    <div class="ai-container">
+        <div class="tech-function-title">
+            技术介绍
+        </div>
+        <div class="tech-function-info">
             行业首创技术，基于对视频内容的充分理解，输出最具代表性的优质精彩封面，便于用户快速定位目标视频，提升视觉和检索体验
-        </p>
-        <div class="tech-intro-detail">
+        </div>
+        <div class="tech-function-detail">
             <div class="scan-box">
                 <div class="scan-box-image"></div>
                 <div class="scan-box-title">封面内容相关性</div>
@@ -285,14 +296,14 @@
             </div>
         </div>
     </div>
-</section>
-<section class="tech-section tech-demo">
+</div>
+<div class="tech-section tech-demo">
+    <div class="tech-demo-title">功能演示</div>
     <div class="container">
-        <h2>功能演示</h2>
         <div class="demo-container clear-float" id="video-cover-demo">
         </div>
     </div>
-</section>
+</div>
 <div class="ai-container tech-section tech-feature">
     <div class="tech-feature-title">技术特色</div>
     <div class="tech-feature-list tech-clear">
@@ -325,33 +336,32 @@
         </div>
     </div>
 </div>
-<section class="tech-section tech-scene">
-    <div class="container">
-        <h2>应用场景</h2>
-        <div class="scene-list clear-float">
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>优化用户体验</h3>
-                    <p>
-                        无论是自媒体创作短视频，亦或是综合视频网站的海量视频，都可以使用智能视频封面选图服务，快速为长/短视频选出
-                        最具代表性的高质封面，提升用户的视觉体验，同时便于用户快速筛选视频，帮助用户留存
-                    </p>
+<hr class="tech-section-border">
+<div class="ai-container tech-section tech-scenario">
+    <div class="tech-scenario-title">应用场景</div>
+    <div class="tech-scenario-list tech-clear">
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-1"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">优化用户体验</div>
+                <div class="tech-scenario-desc-info">
+                    无论是自媒体创作短视频，亦或是综合视频网站的海量视频，都可以使用智能视频封面选图服务，快速为长/短视频选出
+                    最具代表性的高质封面，提升用户的视觉体验，同时便于用户快速筛选视频，帮助用户留存
                 </div>
             </div>
-            <div class="scene-item shadow">
-                <div class="scene-icon"></div>
-                <div class="scene-desc">
-                    <h3>提升视频播放量</h3>
-                    <p>
-                        智能视频封面选图服务，为视频生成最精彩的封面，在最短的时间内把视频最具吸引力的内容呈现出来，
-                        有效帮助提升视频的点击量、播放量和用户停留时长
-                    </p>
+        </div>
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-2"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">提升视频播放量</div>
+                <div class="tech-scenario-desc-info">
+                    智能视频封面选图服务，为视频生成最精彩的封面，在最短的时间内把视频最具吸引力的内容呈现出来，
+                    有效帮助提升视频的点击量、播放量和用户停留时长
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 <div class="tech-section tech-product">
     <div class="container">
         <div class="tech-product-title">
@@ -366,25 +376,25 @@
     </div>
 </div>
 {%if $userInfo eq Null%}
-<section class="tech-section get-started">
-    <div class="container">
-        <h2>快速提交您的需求</h2>
-        <p>欢迎各短视频平台、广电行业以及各行业优秀的技术合作伙伴与我们联系<br>
-            一起携手探索更多AI带给我们的更多可能性！</p>
-        <div>
+<div class="tech-section get-started tech-free">
+    <div class="ai-container">
+        <div class="tech-free-title">快速提交您的需求</div>
+        <div class="tech-free-info">欢迎各短视频平台、广电行业以及各行业优秀的技术合作伙伴与我们联系<br>
+            一起携手探索更多AI带给我们的更多可能性！</div>
+        <div class="tech-free-btn">
             <a role="button"
                {%if $src eq Null%}
                class="btn-primary large ai-redirect"
-               href="https://cloud.baidu.com/product/apply/vca.html?from=ai"
+               href="https://cloud.baidu.com/product/apply/vca.html?from=ai&service=VCS"
                {%else%}
                class="btn-primary large"
-               href="/product/apply/vca.html"
-               {%/if%}">
-                商务合作
+               href="/product/apply/vca.html?service=VCS"
+               {%/if%}>
+            商务合作
             </a>
         </div>
     </div>
-</section>
+</div>
 {%/if%}
 
 </div>
@@ -485,8 +495,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1491541563/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1491541563/js/technology/video-vcs.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/technology/video-vcs.js"></script>
 
 <script>
     (function () {

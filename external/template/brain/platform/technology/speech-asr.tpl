@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491541563/css/technology/speech-asr.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1491986722/css/technology/speech-asr.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1491541563/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1491986722/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -79,6 +79,11 @@
                                  <li>
                                     <a href="/tech/ocr/general_location" id="ocr-location-link">
                                     通用文字识别（含位置信息版）
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/tech/ocr/webimage">
+                                        网络图片文字识别
                                     </a>
                                 </li>
                             </ul>
@@ -200,7 +205,7 @@
                     <a>帮助与支持</a>
                     <ul class="sub-top-nav">
                         <li><a href="/support/video">教学视频</a></li>
-                        <li><a href="/support/faq">常见问题</a></li>
+                        <li><a href="/docs#/FAQ">常见问题</a></li>
                         <li><a href="/support/news">新闻中心</a></li>
                         <li><a href="http://developer.baidu.com/forum#ai">技术论坛</a></li>
                         <li><a href="/support/about">关于我们</a></li>
@@ -254,7 +259,7 @@
                class="btn-other media"
                href="
                {%if $src eq Null%}
-               /docs#Speech-Asr-O2OAndroidSDK
+               /docs#/ASR-Android-SDK
                {%else%}
                https://cloud.baidu.com/doc/SPEECH/index.html
                {%/if%}">
@@ -273,7 +278,7 @@
             百度语音识别的准确率达到90%以上，让您的应用绘“声”绘色
         </div>
         <div class="tech-function-pic">
-            <img width="670" src="//ai.bdstatic.com/dist/1491541563/ai_images/technology/speech-asr/intro.png" >
+            <img width="670" src="//ai.bdstatic.com/dist/1491986722/ai_images/technology/speech-asr/intro.png" >
         </div>
     </div>
 </div>
@@ -440,16 +445,16 @@
         <div class="tech-guide-link tech-clear">
             <div class="tech-guide-link-title">开发指南</div>
             <div class="tech-guide-link-list">
-                <a class="tech-link-btn" href="/docs#Speech-Asr">技术文档 &gt;</a>
+                <a class="tech-link-btn" href="/docs#/ASR-Android-SDK">技术文档 &gt;</a>
                 <a class="tech-link-btn" href="/sdk">SDK下载 &gt;</a>
             </div>
         </div>
         <div class="tech-guide-question tech-clear">
             <div class="tech-guide-question-title">常见问题</div>
             <div class="tech-guide-question-list">
-                <a class="tech-link-btn" href="/docs#Speech-Asr-FAQ_Q2">语音识别REST API支持的音频格式、采样率有哪些？</a>
-                <a class="tech-link-btn" href="/docs#Speech-Asr-FAQ_Q3">语音识别REST API最长支持多长的录音？</a>
-                <a class="tech-link-btn" href="/docs#Speech-Asr-FAQ_Q4">语音识别SDK支持的音频格式、采样率有哪些？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/a53b4698">语音识别REST API支持的音频格式、采样率有哪些？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/a53b4698">语音识别REST API最长支持多长的录音？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/a53b4698">语音识别SDK支持的音频格式、采样率有哪些？</a>
             </div>
         </div>
     </div>
@@ -554,8 +559,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1491541563/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1491541563/js/technology/speech-asr.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1491986722/js/technology/speech-asr.js"></script>
 
 <script>
     (function () {

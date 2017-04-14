@@ -1,0 +1,1 @@
+ALTER TABLE t_news ADD COLUMN place smallint(6) NOT NULL DEFAULT 0 COMMENT '内外网(0:外网,1:内网)';

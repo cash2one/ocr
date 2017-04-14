@@ -100,43 +100,52 @@
             enableCodeBlock() {
                 const codeBlock = document.querySelectorAll('.code-block');
 
-                codeBlock.forEach((element, index) => {
-                    const blocks = element.querySelectorAll('[data-lan]');
+                [].forEach.call(
+                    codeBlock,
+                    (element, index) => {
+                        const blocks = element.querySelectorAll('[data-lan]');
 
-                    [].forEach.call(
-                        blocks,
-                        (element, index) => {
-                            if (index > 0) {
-                                element.style.display = 'none';
+                        [].forEach.call(
+                            blocks,
+                            (element, index) => {
+                                if (index > 0) {
+                                    element.style.display = 'none';
+                                }
                             }
-                        }
-                    );
+                        );
 
-                    element.onclick = e => {
-                        const target = e.target;
+                        element.onclick = e => {
+                            const target = e.target;
 
-                        if (target.classList.contains('code-block-title')) {
-                            // 防止重复、反复点击
-                            if (target.classList.contains('block-active')) {
-                                return;
+                            if (target.classList.contains('code-block-title')) {
+                                // 防止重复、反复点击
+                                if (target.classList.contains('block-active')) {
+                                    return;
+                                }
+
+                                const blockIndex = +target.getAttribute('data-index');
+
+                                [].forEach.call(
+                                    target.parentNode.querySelectorAll('.code-block-title'),
+                                    element => {
+                                        element.classList.remove('block-active');
+                                    }
+                                );
+
+                                target.classList.add('block-active');
+
+                                [].forEach.call(
+                                    blocks,
+                                    (element, index) => {
+                                        element.style.display = index === blockIndex
+                                            ? 'block'
+                                            : 'none';
+                                    }
+                                );
                             }
-
-                            const blockIndex = +target.getAttribute('data-index');
-
-                            target.parentNode.querySelectorAll('.code-block-title').forEach(element => {
-                                element.classList.remove('block-active');
-                            });
-
-                            target.classList.add('block-active');
-
-                            blocks.forEach((element, index) => {
-                                element.style.display = index === blockIndex
-                                    ? 'block'
-                                    : 'none';
-                            });
-                        }
-                    };
-                });
+                        };
+                    }
+                );
             }
         }
     }

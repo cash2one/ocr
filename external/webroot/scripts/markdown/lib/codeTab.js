@@ -62,6 +62,16 @@ module.exports = function (codeDirPath) {
             lanData,
             codeHTML: hljs.highlight(lanData.hljsLanName, code).value
         });
+
+        // 示例代码显示排序参考表
+        const sortRef = [
+            'CURL', 'PHP', 'Java', 'Python',
+            'C++', 'C#'
+        ];
+        // 排序
+        codeData.sort((a, b) => {
+            return sortRef.indexOf(a.lanData.readableLanName) - sortRef.indexOf(b.lanData.readableLanName);
+        });
     }
 
     return tpl({

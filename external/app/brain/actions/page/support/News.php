@@ -14,7 +14,6 @@
  **/
 
 class Action_News extends Ap_Action_Abstract {
-
     /**
      * execute 
      * 
@@ -27,6 +26,9 @@ class Action_News extends Ap_Action_Abstract {
         $strAction = $arrInput['action'];
 
         $dbNews = new Dao_News();
+        $dbTag = new Dao_Tag();
+        $dbNewsTag = new Dao_NewsTag();
+
 
         if ('list' === $strAction) {
             $strPn = '' . Brain_Util::getParamAsInt($arrInput, 'pn', 0);
@@ -41,7 +43,16 @@ class Action_News extends Ap_Action_Abstract {
         } else if ('detail' === $strAction) {
             $strId = Brain_Util::getParamAsString($arrInput, 'id');
             $arrNews = $dbNews->getNews($strId);
-            
+            //增加tag信息
+            $tagList = array();
+            $newsTag = $dbNewsTag->getTagIdListByNewsId($strId);
+            if(!empty($newsTag)){
+                $tagIds = array();
+                foreach ($newsTag as $x_value) {
+                    $tagIds[] = $x_value['tag_id'];
+                }
+                $tagList = $dbTag->getTagListByIds($tagIds);
+            }
             $arrRet = array(
                 'errno' => 0,
                 'msg' => 'success',
@@ -49,10 +60,9 @@ class Action_News extends Ap_Action_Abstract {
             );
             if (is_array($arrNews) && count($arrNews) > 0) {
                 $arrRet['data'] = $arrNews[0];
+                $arrRet['tagList'] = $tagList;
                 $dbNews->addPv($strId);
             }
-            //Brain_Output::jsonOutput($arrRet);
-            //Brain_Output::htmlOutput($arrRet, 'brain/page/news/detail.tpl');
             $arrRet['page'] = substr(strtolower(__CLASS__), 7);
             Brain_Output::htmlOutput($arrRet, 'brain/platform/support/news/news-con.tpl');
         } else if ('delete' === $strAction) {
@@ -123,12 +133,28 @@ class Action_News extends Ap_Action_Abstract {
             header('Content-Type: text/html; charset=UTF-8');
             echo $strRet;
         } else {
-            //Brain_Output::htmlOutput(array(), 'brain/page/news/news.tpl');
+            $offset = Brain_Util::getParamAsInt($arrInput, 'offset', 1);
+            $tag = ''.Brain_Util::getParamAsInt($arrInput, 'tag', 0);
+            //热门标签
+            $service_Tag = new Service_Data_Tag();
+            $tagList = $service_Tag->getTags();
+            //新闻列表
+            $service_News = new Service_Data_News();
+            $newsList = $service_News->getNewsListByTagAndOffset($tag, $offset);
+            //分页信息
+            $pagination = array();
+            $pagination['total'] = $service_News->getPaginationByTag($tag);
+            $pagination['offset'] = ''.$offset;
+
             $arrRet = array();
             $arrRet['page'] = substr(strtolower(__CLASS__), 7);
+            $arrRet['newsList'] = $newsList;
+            $arrRet['tagList'] = $tagList;
+            $arrRet['pagination'] = $pagination;
+            $arrRet['currentTag'] = $tag;
+            //返回
             Brain_Output::htmlOutput($arrRet, 'brain/platform/support/news/news-list.tpl');
         }
     }
 }
-
 /* vim: set expandtab ts=4 sw=4 sts=4 tw=80: */

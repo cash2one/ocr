@@ -15,6 +15,8 @@ class Controller_Ocr extends Ap_Controller_Abstract
         'idcard' => 'actions/tech/ocr/IdCard.php',
         'general_enhanced' => 'actions/tech/ocr/GeneralEnhanced.php',
         'general_location' => 'actions/tech/ocr/GeneralLocation.php',
+        'webimage' => 'actions/tech/ocr/WebImage.php',
+
     );
 
 }

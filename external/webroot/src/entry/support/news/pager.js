@@ -155,9 +155,9 @@ $.extend($.fn, {
             });
         }
 
-        function ret(iTotal) {
+        function ret(iTotal, offset) {
             total = iTotal;
-            now = 0;
+            now = offset || 0;
             r();
         }
 

@@ -4,8 +4,35 @@
     </div>
 </section>
 <div class="news-content">
-    <div class="container" id="news-container"></div>
-    <div class="pg"></div>
+    <div class="container">
+        <div class="news-list">
+            {%foreach $newsList as $news%}
+            <div class="news-item">
+                <a href="/support/news?action=detail&amp;id={%$news.id%}">
+                    <h3>{%$news.title%}</h3>
+                    <span class="time">发布日期：{%$news.time|date_format:'%Y-%m-%d %H:%M:%S'%}</span><span class="pv">浏览量：{%$news.pv%}次</span>
+                    <p>{%$news.abs%}</p>
+                    <i class="more"></i>
+                </a>
+            </div>
+            {%/foreach%}
+            <div class="pg" data-total="{%$pagination.total%}" data-offset="{%$pagination.offset%}" data-tag="{%$currentTag%}">
+                {%if $pagination.offset gt 1%}
+                <a href="/support/news?tag={%$currentTag%}&amp;offset={%$pagination.offset - 1%}">上一页</a>
+                {%/if%}
+                {%if $pagination.total gt $pagination.offset%}
+                <a href="/support/news?tag={%$currentTag%}&amp;offset={%$pagination.offset + 1%}">下一页</a>
+                {%/if%}
+            </div>
+        </div>
+        <div class="tag-list">
+            <h3>热门标签</h3>
+            <a href="/support/news" class="{%if $currentTag eq ''%}selected{%/if%}">全部</a>
+            {%foreach $tagList as $tag%}
+            <a href="/support/news?tag={%$tag.id%}" class="{%if $tag.id eq $currentTag%}selected{%/if%}">{%$tag.name%}</a>
+            {%/foreach%}
+        </div>
+    </div>
 </div>
 {%if $userInfo eq Null%}
 <section class="tech-section get-started">
