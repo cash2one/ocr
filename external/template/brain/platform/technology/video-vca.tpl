@@ -255,11 +255,11 @@
             <a role="button"
                {%if $src eq Null%}
                class="btn-primary media ai-redirect"
-               href="https://cloud.baidu.com/product/apply/vca.html?from=ai"
+               href="https://cloud.baidu.com/product/apply/vca.html?from=ai&service=VCA"
                {%else%}
                class="btn-primary media"
-               href="/product/apply/vca.html"
-               {%/if%}">
+               href="/product/apply/vca.html?service=VCA"
+               {%/if%}>
             商务合作
             </a>
         </div>
@@ -391,11 +391,11 @@
             <a role="button"
                {%if $src eq Null%}
                class="btn-primary large ai-redirect"
-               href="https://cloud.baidu.com/product/apply/vca.html?from=ai"
+               href="https://cloud.baidu.com/product/apply/vca.html?from=ai&service=VCA"
                {%else%}
                class="btn-primary large"
-               href="/product/apply/vca.html"
-               {%/if%}">
+               href="/product/apply/vca.html?service=VCA"
+               {%/if%}>
             商务合作
             </a>
         </div>

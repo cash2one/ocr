@@ -53,7 +53,7 @@ https://aip.baidubce.com/rpc/2.0/nlp/v1/wordseg?access_token=24.f9ba9c5241b67688
 
 > **说明：**方式一鉴权使用的Access_token必须通过API Key和Secret Key获取。
 
-# 调用方式二
+## 调用方式二
 
 **请求头域内容**
 
