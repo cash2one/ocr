@@ -44,13 +44,12 @@ class Brain_User
                 }
                 if ($ucId && $ucId != 0) {
                     $result['uid'] = $ucId;
-                    $result['name'] = "";
+                    $result['uname'] = (string)$objCheckRes->getUsername();
                     $result['type'] = 2;
                 }
 
             } catch (Exception $e) {
             }
-            //return;
         } else {
             $result['uid'] = $userInfo['uid'];
             $result['uname'] = iconv('gb2312', 'utf-8', $userInfo['uname']);
@@ -62,8 +61,12 @@ class Brain_User
 
         }
         if (!empty($result)) {
-            $dbUser = new Dao_User();
-            $dbUser->insertUser($result['uid'], $result['uname']);
+            try {
+                $dbUser = new Dao_User();
+                $dbUser->insertUser($result['uid'], $result['uname']);
+            } catch (Exception $e) {
+
+            }
         }
         return $result;
     }
