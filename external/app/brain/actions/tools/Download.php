@@ -20,7 +20,13 @@ class Action_Download extends Ap_Action_Abstract
         $ucId = '';
 
         $userInfo = Brain_User::getUserInfo();
-
+        if ($userInfo && !empty($userInfo)) {
+            if ($userInfo[type] == 1) {
+                $passId = $userInfo['uid'];
+            } elseif ($userInfo[type] == 2) {
+                $ucId = $userInfo['uid'];
+            }
+        }
 
 
         $arrRequest = Saf_SmartMain::getCgi();
