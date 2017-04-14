@@ -1,12 +1,12 @@
 @import '../initialize.less';
 
 .tech-guide {
-    padding: 50px 0 80px;
+    padding: 50px 0;
     font-size: 0;
     background-color: #fafafa;
 
     &-title {
-        font-size: 35px;
+        font-size: 30px;
         text-align: center;
         padding-bottom: 30px;
         color: @deep-black;
@@ -24,20 +24,26 @@
     &-links {
         position: relative;
         padding: 3px 30px 0 50px;
+        font-size: 0;
 
         a {
             font-size: 16px;
-            margin-right: 30px;
+            margin-right: 29px;
+            color: #0073eb;
+
+            &:hover {
+                color: #097ef1;
+            }
         }
 
         &:after {
             position: absolute;
             content: "";
             right: 30px;
-            top: -8px;
-            bottom: -8px;
+            top: -7px;
+            bottom: -7px;
             width: 1px;
-            background-color: black;
+            background-color: #ececec;
         }
     }
 
@@ -51,16 +57,18 @@
         &-name {
             display: inline-block;
             font-size: 16px;
+            color: #666
         }
 
         &-num {
             width: 20px;
             height: 20px;
             line-height: 20px;
-            border: 1px solid black;
+            border: 1px solid #999;
             border-radius: 50%;
             font-size: 14px;
             text-align: center;
+            color: #999;
         }
 
         &-name {
@@ -75,7 +83,7 @@
             content: "";
             width: 50px;
             height: 1px;
-            background-color: grey;
+            background-color: #999;
         }
 
         // 最后一步没有横线
