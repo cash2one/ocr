@@ -22,7 +22,7 @@ class Brain_User
     {
 
         $userInfo = Bd_Passport::checkUserLogin();
-        $result = array();
+        $result = null;
         $host = $_SERVER['HTTP_HOST'];
         if ($userInfo == false && strpos($host, "ai")) {
             try {
@@ -44,6 +44,7 @@ class Brain_User
                     $ucId = (string)$objCheckRes->getUcid();
                 }
                 if ($ucId && $ucId != 0) {
+                    $result = array();
                     $result['uid'] = $ucId;
                     $result['uname'] = (string)$objCheckRes->getUsername();
                     $result['type'] = 2;
@@ -52,6 +53,7 @@ class Brain_User
             } catch (Exception $e) {
             }
         } else {
+            $result = array();
             $result['uid'] = $userInfo['uid'];
             $result['uname'] = iconv('gb2312', 'utf-8', $userInfo['uname']);
             $result['type'] = 1;
