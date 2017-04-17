@@ -21,7 +21,7 @@ class Action_Antiporn extends Ap_Action_Abstract {
         $arrPageInfo['page'] = substr(strtolower(__CLASS__), 7);
         $arrPageInfo['src'] = 'cloud';
 
-        Brain_Output::htmlOutput(
+        Brain_Output::htmlOutputNoUser(
             $arrPageInfo, 
             "brain/cloud/$tech.tpl"
         ); 

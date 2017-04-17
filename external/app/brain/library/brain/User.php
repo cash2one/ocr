@@ -23,7 +23,8 @@ class Brain_User
 
         $userInfo = Bd_Passport::checkUserLogin();
         $result = array();
-        if ($userInfo == false) {
+        $host = $_SERVER['HTTP_HOST'];
+        if ($userInfo == false && strpos($host, "ai")) {
             try {
                 $arrServers = Bd_Conf::getAppConf('uc_info/host');
                 $intAppid = Bd_Conf::getAppConf('uc_info/appId');
