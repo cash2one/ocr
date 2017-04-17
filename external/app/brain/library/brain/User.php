@@ -71,7 +71,7 @@ class Brain_User
 
             }
         }
-        if ($result == null){
+        if ($result == null || empty($result)){
             return;
         }else{
             return $result;
