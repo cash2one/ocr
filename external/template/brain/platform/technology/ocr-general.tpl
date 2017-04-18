@@ -100,6 +100,7 @@
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/antiporn">黄反识别</a></li>
+                                <li><a href="/tech/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -270,7 +271,7 @@
 <section class="tech-section tech-intro">
     <div class="container">
         <h2>功能介绍</h2>
-        <p>支持多场景下整体文字检测识别。多项ICDAR指标世界第一，支持任意场景、复杂背景、任意版面识别，支持10多种语言的识别<br>
+        <p>支持多场景下整图文字检测识别。多项ICDAR指标世界第一，支持任意场景、复杂背景、任意版面识别，支持10多种语言的识别<br>
             在图片文字清晰，小幅度倾斜、无明显背光等情况下识别率高达90%以上</p>
         <div class="tech-intro-detail">
             <div class="original-card"></div>

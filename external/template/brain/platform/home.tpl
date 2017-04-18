@@ -100,6 +100,7 @@
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/antiporn">黄反识别</a></li>
+                                <li><a href="/tech/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -435,13 +436,19 @@
                                         <a href="/tech/ocr/general">通用文字识别</a>
                                     </li>
                                     <li>
+                                        <a href="/tech/ocr/general_location">通用文字识别（含位置信息版）</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/ocr/webimage">网络图片文字识别</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/ocr/general_enhanced">通用文字识别（含生僻字版）</a>
+                                    </li>
+                                    <li>
                                         <a href="/tech/ocr/idcard">身份证识别</a>
                                     </li>
                                     <li>
                                         <a href="/tech/ocr/bankcard">银行卡识别</a>
-                                    </li>
-                                    <li>
-                                        <a href="/tech/ocr/webimage">网络图片文字识别</a>
                                     </li>
                                 </ul>
                             </li>

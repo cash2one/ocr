@@ -1,0 +1,36 @@
+@import '../common/initialize.less';
+@import '../common/banner.less';
+@import '../common/tech-feature.less';
+@import '../common/tech-scenario.less';
+@import '../common/tech-commom.less';
+@import '../common/modal.less';
+@import "../common/secondary/tech-catalog.less";
+
+@import "../common/secondary/scenarios.less";
+@import "../common/secondary/guid.less";
+
+// 技术单页前缀
+@prefix: tech;
+
+// 调用通用的banner模块
+.@{prefix}-banner {
+    .banner(@page-name: speech);
+}
+
+// 调用通用的tech-feature模块
+.@{prefix}-feature {
+    .tech-feature(@page-name: speech, @icon-num: 3)
+}
+
+// 调用通用的apply-scenario模块
+.@{prefix}-scenario {
+    .apply-scenario(@page-name: speech-asr, @icon-num: 5);
+}
+
+.tech-case(@page-name: speech; @num: 3; @case-logo: ture);
+
+.tech-catalog(@page-name: speech; @product-num: 6);
+
+.tech-feature-desc-info {
+    text-align: center;
+}
