@@ -31,6 +31,7 @@ class Dao_SdkCat extends Dao_Base
 
     /**
      * 获取所有有效的sdk最多100个
+     * @return
      */
     public function getList()
     {

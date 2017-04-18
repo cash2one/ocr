@@ -15,6 +15,9 @@ class Service_Data_Sdk
     private $cacheSdkLanList = "AIP_WEB_SDK_LAN_LIST";
     private $cacheSdkCatList = "AIP_WEB_SDK_CAT_LIST";
 
+    /**
+     * Service_Data_Sdk constructor.
+     */
     public function __construct()
     {
         $this->sdkDao = new Dao_Sdk();
@@ -86,6 +89,7 @@ class Service_Data_Sdk
      * 设置 sdk 分类
      * @param $catList
      * @param $sdk
+     * @return
      */
     public function setSdkCat($catList, $sdk)
     {
@@ -105,6 +109,7 @@ class Service_Data_Sdk
     /**
      * 设置sdk 版本
      * @param $sdk
+     * @return
      */
     public function setSdkVersion($sdk)
     {
@@ -123,6 +128,7 @@ class Service_Data_Sdk
     /**
      * 设置 sdk 发布时间
      * @param $sdk
+     * @return
      */
     public function setSdkPubTime($sdk)
     {
@@ -138,7 +144,7 @@ class Service_Data_Sdk
 
     /**
      * 获取所有有效分类
-     * @return mixed|void
+     * @return
      */
     public function getCatList()
     {
@@ -154,7 +160,7 @@ class Service_Data_Sdk
 
     /**
      * 获取所有语言
-     * @return mixed|void
+     * @return
      */
     public function getLanList()
     {
