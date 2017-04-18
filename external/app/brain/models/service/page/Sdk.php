@@ -21,6 +21,12 @@ class Service_Page_Sdk
      */
     public function execute()
     {
+        $arrRequest = Saf_SmartMain::getCgi();
+        $arrInput = $arrRequest['request_param'];
+        if (isset($arrInput['action']) && $arrInput['action'] =="1"){
+            $this->sdkData->cleanCache();
+            Brain_Output::jsonOutput(0,"clean cache success");
+        }
         $sdk = $this->sdkData->sdkData();
         $arrPageInfo['page'] = "sdk";
         $arrPageInfo['sdk'] = $sdk;

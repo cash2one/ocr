@@ -182,6 +182,9 @@ class Service_Data_Sdk
     public function cleanCache()
     {
         Brain_Memcache::delete($this->cacheSdkList);
+        Brain_Memcache::delete($this->cacheSdkCatList);
+        Brain_Memcache::delete($this->cacheSdkLanList);
+
     }
 
 }
