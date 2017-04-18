@@ -39,11 +39,11 @@ class Service_Data_Sdk
         $result = array();
 
         foreach ($sdkList as $sdk) {
-            $this->setSdkCat($catList, $sdk);
-            $this->setSdkType($lanList, $sdk);
-            $this->setSdkVersion($sdk);
-            $this->setSdkPubTime($sdk);
-            $result[$sdk['cat']][] = $sdk;
+            $sdk = $this->setSdkCat($catList, $sdk);
+            $sdk = $this->setSdkType($lanList, $sdk);
+            $sdk = $this->setSdkVersion($sdk);
+            $sdk = $this->setSdkPubTime($sdk);
+            $sdk = $result[$sdk['cat']][] = $sdk;
         }
         return $result;
     }
@@ -77,7 +77,7 @@ class Service_Data_Sdk
             return;
         }
         foreach ($lanList as $lan) {
-            if ($sdk['language'] === $lan['id']) {
+            if ($sdk['language'] == $lan['id']) {
                 $sdk['type'] = $lan['name'];
                 return $sdk;
             }
@@ -99,7 +99,7 @@ class Service_Data_Sdk
             return;
         }
         foreach ($catList as $cat) {
-            if ($sdk['category'] === $cat['id']) {
+            if ($sdk['category'] == $cat['id']) {
                 $sdk['cat'] = $cat['key'];
                 return $sdk;
             }
