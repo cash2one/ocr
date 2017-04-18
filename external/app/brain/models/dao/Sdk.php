@@ -22,6 +22,17 @@ class Dao_Sdk extends Dao_Base
         'language',
         'enable',
     );
+    private $arrDefaultFields2 = array(
+        'id',
+        'name',
+        'abs',
+        'version',
+        'file_path as filePath',
+        'pub_time',
+        'category',
+        'language',
+        'enable',
+    );
 
     /**
      * Dao_Sdk constructor.
@@ -38,7 +49,7 @@ class Dao_Sdk extends Dao_Base
      */
     public function getSdkList()
     {
-        $arrFields = $this->arrDefaultFields;
+        $arrFields = $this->$arrDefaultFields2;
         $arrConds = array(
             "enable=" => 1
         );
