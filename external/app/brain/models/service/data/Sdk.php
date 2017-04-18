@@ -100,7 +100,7 @@ class Service_Data_Sdk
         }
         foreach ($catList as $cat) {
             if ($sdk['category'] == $cat['id']) {
-                $sdk['cat'] = $cat['key'];
+                $sdk['cat'] = $cat['cat_key'];
                 return $sdk;
             }
         }
@@ -138,7 +138,7 @@ class Service_Data_Sdk
             return;
         }
         $pubTime = $sdk['pub_time'];
-        $t = date_format($pubTime, "yyyy-MM-dd");
+        $t = date_format($pubTime, "Y-m-d");
         $sdk['pub_time'] = $t;
         return $sdk;
     }
