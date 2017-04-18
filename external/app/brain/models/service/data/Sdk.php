@@ -32,9 +32,9 @@ class Service_Data_Sdk
      */
     public function sdkData()
     {
-        $sdkList = $this->sdkData->getSdkList();
-        $catList = $this->sdkData->getCatList();
-        $lanList = $this->sdkData->getLanList();
+        $sdkList = $this->getSdkList();
+        $catList = $this->getCatList();
+        $lanList = $this->getLanList();
 
         $result = array();
 
