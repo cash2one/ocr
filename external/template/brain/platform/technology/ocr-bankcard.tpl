@@ -100,6 +100,7 @@
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/antiporn">黄反识别</a></li>
+                                <li><a href="/tech/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -503,17 +504,15 @@
 </div>
 </div>
 {%if $userInfo eq Null%}
-<section class="tech-section get-started">
+<div class="tech-section get-started">
     <div class="container">
-        <h2>立即获取免费API Key</h2>
-        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
-        <div>
-            <a role="button"
-               class="btn-primary large ai-redirect"
-               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+        <h2>快速提交您的需求</h2>
+        <p>您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</p>
+        <div class="consult">
+            <a role="button" class="btn-primary large" href="mailto:ai@baidu.com">合作咨询</a>
         </div>
     </div>
-</section>
+</div>
 {%/if%}
 {%if $src eq Null%}
 <section class="tech-section tech-guide">

@@ -73,6 +73,48 @@ app.get('/tech/speech', (req, res, next) => {
     );
 });
 
+app.get('/tech/nlp', (req, res, next) => {
+    renderSmarty(
+        'secondary/nlp.tpl',
+        getMockData({})
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
+
+app.get('/tech/antiterror', (req, res, next) => {
+    renderSmarty(
+        'technology/antiterror.tpl',
+        getMockData({})
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
+
+app.get('/tech/antiporn', (req, res, next) => {
+    renderSmarty(
+        'technology/antiporn.tpl',
+        getMockData({})
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
+
 app.listen(port, () => {
     console.log('访问本地' + port + ',即可即时查看效果，enjoy it');
 });

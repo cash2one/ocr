@@ -100,6 +100,7 @@
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/antiporn">黄反识别</a></li>
+                                <li><a href="/tech/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -405,7 +406,7 @@
         <p>欢迎大体量用户app运营者、优秀的媒体渠道、硬件厂商、以及各行业优秀的技术合作伙伴与我们联系<br>
             一起携手探索更多AR带给我们的便捷可能性！</p>
         <div class="consult">
-            <a role="button" class="btn-primary large" href="mailto:ai@baidu.com">商务合作</a>
+            <a role="button" class="btn-primary large" href="mailto:ai@baidu.com">合作咨询</a>
         </div>
     </div>
 </section>
