@@ -10,10 +10,10 @@
  * @brief 
  *  
  **/
-class Action_Antierror extends Ap_Action_Abstract {
+class Action_Antiterror extends Ap_Action_Abstract {
 
     public function execute() {
-        $tech = 'aniterror';
+        $tech = 'antiterror';
         $templateFile = Brain_Cloud::genCloudTemplate($tech);
 
         $arrPageInfo['page'] = substr(strtolower(__CLASS__), 7);
