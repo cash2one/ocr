@@ -396,10 +396,7 @@
                     <div>主要服务：词法分析</div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/speech/customer-1-1.png" alt="">
-                        <div>
-                            度秘
-                        </div>
+                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/nlp/customer-1-1.png" alt="">
                     </div>
                 </div>
             </div>
@@ -421,7 +418,7 @@
                     <div>主要服务：中文短文本相似度 </div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <div>百度新闻</div>
+                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/nlp/customer-1-2.png" alt="">
                     </div>
                 </div>
             </div>
@@ -437,7 +434,7 @@
                     <div>主要服务：评论观点抽取</div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <div>百度糯米</div>
+                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/nlp/customer-1-3.png" alt="">
                     </div>
                 </div>
             </div>
