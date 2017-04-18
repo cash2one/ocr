@@ -56,10 +56,10 @@ class Service_Data_Sdk
     {
         $val = Brain_Memcache::get($this->cacheSdkList);
         if ($val && !empty($val)) {
-            return json_decode($val);
+            return $val;
         } else {
             $sdkList = $this->sdkDao->getSdkList();
-            Brain_Memcache::set($this->cacheSdkList, json_encode($sdkList), 60 * 60);
+            Brain_Memcache::set($this->cacheSdkList, $sdkList, 60 * 60);
             return $sdkList;
         }
 
@@ -152,10 +152,10 @@ class Service_Data_Sdk
     {
         $val = Brain_Memcache::get($this->cacheSdkCatList);
         if ($val && !empty($val)) {
-            return json_decode($val);
+            return $val;
         } else {
             $list = $this->sdkCatDao->getList();
-            Brain_Memcache::set($this->cacheSdkCatList, json_encode($list), 60 * 60);
+            Brain_Memcache::set($this->cacheSdkCatList, $list, 60 * 60);
             return $list;
         }
     }
