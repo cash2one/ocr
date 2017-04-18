@@ -68,6 +68,7 @@ class Service_Data_Sdk
     /**设置 sdk 语言
      * @param $lanList
      * @param $sdk
+     * @return
      */
     public function setSdkType($lanList, $sdk)
     {
