@@ -11,6 +11,7 @@ class Controller_Antiporn extends Ap_Controller_Abstract
     public $actions = array(
 
         'index' => 'actions/tech/antiporn/Index.php',
+        'terror' => 'actions/tech/antiporn/Terror.php',
     );
 
 }
