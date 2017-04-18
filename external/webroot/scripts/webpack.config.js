@@ -237,7 +237,14 @@ module.exports = {
             },
             {
                 test: /\.hbs$/,
-                use: 'handlebars-loader'
+                use: [
+                    {
+                        loader: 'handlebars-loader',
+                        options: {
+                            helperDirs: path.join(__dirname, 'lib', 'helpers')
+                        }
+                    }
+                ]
             },
             {
                 test: /\.vue$/,
