@@ -100,7 +100,7 @@ let startScan = function (type, imgSrc, url) {
                 return false;
             }
 
-            canvasContainer.toggleClass('has-result', res.msg==='success');
+            canvasContainer.toggleClass('has-result', res.msg === 'success');
             // canvasContainer.toggleClass('has-result', res.data.result_num >= 1);
             // let activeResult = null;
             // for (let i = 0, len = res.data.result.length; i < len; i++) {
@@ -110,12 +110,10 @@ let startScan = function (type, imgSrc, url) {
             //     }
             // }
 
-            canvasContainer
-                .attr('data-probability',
-                    Math.round(res.result * 10000) / 100
-                );
-                // .toggleClass('normal', )
-                // .toggleClass('terror', )
+            // canvasContainer
+            //     .attr('data-probability',Math.round(res.result * 10000) / 100)
+            //     .toggleClass('normal',res.result )
+            //     .toggleClass('terror', );
 
             isScanning = false;
         },
