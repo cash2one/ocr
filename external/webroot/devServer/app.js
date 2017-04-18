@@ -61,6 +61,33 @@ app.use('/tech/ocr', require('./router/ocr'));
 app.use('/tech/anti', require('./router/anti'));
 app.use('/', require('./router/aiDemo'));
 
+app.get('/sdk', (req, res, next) => {
+    fs.readFile(
+        path.join(__dirname, 'mock', 'sdk.json'),
+        (err, data) => {
+            if (err) {
+                next();
+
+                return;
+            }
+
+            renderSmarty(
+                'sdk/sdk.tpl',
+                getMockData({
+                    sdk: JSON.parse(data.toString())
+                })
+            ).then(
+                content => {
+                    res
+                        .type('html')
+                        .end(content);
+                },
+                next
+            );
+        }
+    );
+});
+
 app.get('/tech/speech', (req, res, next) => {
     renderSmarty(
         'secondary/speech.tpl',
