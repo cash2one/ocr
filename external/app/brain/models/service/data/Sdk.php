@@ -48,22 +48,7 @@ class Service_Data_Sdk
         return $result;
     }
 
-    /**
-     * 获取所有有效sdk
-     * @return mixed|void
-     */
-    public function getSdkList()
-    {
-        $val = Brain_Memcache::get($this->cacheSdkList);
-        if ($val && !empty($val)) {
-            return $val;
-        } else {
-            $sdkList = $this->sdkDao->getSdkList();
-            Brain_Memcache::set($this->cacheSdkList, $sdkList, 60 * 60);
-            return $sdkList;
-        }
 
-    }
 
     /**
      * 设置 sdk 语言
@@ -142,7 +127,22 @@ class Service_Data_Sdk
         $sdk['pub_time'] = $t;
         return $sdk;
     }
+    /**
+     * 获取所有有效sdk
+     * @return mixed|void
+     */
+    public function getSdkList()
+    {
+        $val = Brain_Memcache::get($this->cacheSdkList);
+        if ($val && !empty($val)) {
+            return Bd_String::json_decode($val, true);
+        } else {
+            $list = $this->sdkDao->getSdkList();
+            Brain_Memcache::set($this->cacheSdkList, Bd_String::json_encode($list), 60 * 60);
+            return $list;
+        }
 
+    }
 
     /**
      * 获取所有有效分类
@@ -152,10 +152,10 @@ class Service_Data_Sdk
     {
         $val = Brain_Memcache::get($this->cacheSdkCatList);
         if ($val && !empty($val)) {
-            return $val;
+            return Bd_String::json_decode($val, true);
         } else {
             $list = $this->sdkCatDao->getList();
-            Brain_Memcache::set($this->cacheSdkCatList, $list, 60 * 60);
+            Brain_Memcache::set($this->cacheSdkCatList, Bd_String::json_encode($list), 60 * 60);
             return $list;
         }
     }
@@ -168,10 +168,10 @@ class Service_Data_Sdk
     {
         $val = Brain_Memcache::get($this->cacheSdkLanList);
         if ($val && !empty($val)) {
-            return json_decode($val);
+            return Bd_String::json_decode($val, true);
         } else {
             $list = $this->sdkLanDao->getList();
-            Brain_Memcache::set($this->cacheSdkLanList, json_encode($list), 60 * 60);
+            Brain_Memcache::set($this->cacheSdkLanList, Bd_String::json_encode($list), 60 * 60);
             return $list;
         }
     }
