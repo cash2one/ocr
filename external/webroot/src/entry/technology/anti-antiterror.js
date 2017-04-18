@@ -11,9 +11,9 @@ import AlertModal from '../../component/widget/alertModal';
 
 
 /* eslint-disable */
-import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/antiterror.html';
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/anti-antiterror.html';
 /* eslint-enable */
-import '../../less/technology/antiterror.less';
+import '../../less/technology/anti-antiterror.less';
 
 // 绑定功能介绍动画
 const functionDetail = $('.tech-function-detail');
@@ -110,10 +110,10 @@ let startScan = function (type, imgSrc, url) {
             //     }
             // }
 
-            // canvasContainer
-            //     .attr('data-probability',Math.round(res.result * 10000) / 100)
-            //     .toggleClass('normal',res.result )
-            //     .toggleClass('terror', );
+            canvasContainer
+                .attr('data-probability', res.result)
+                .toggleClass('normal', res.result < 0.5)
+                .toggleClass('terror', res.result >= 0.5);
 
             isScanning = false;
         },
@@ -181,7 +181,7 @@ scanPhoto.click(function () {
         selector: '#demo-result .canvas-container',
         image: url,
         type: 'url',
-        apiType: 'pornography',
+        apiType: 'terror',
         success(imgSrc) {
             startScan('url', imgSrc, url);
         },

@@ -31,7 +31,7 @@
     .tech-catalog-prods(@product-num);
     .tech-catalog-prods(@n, @i: 1) when (@i <= @n) {
         .tech-prod-poster-@{i} {
-            background: url("../../../../ai_images/technology/speech/sprite/prod-poster-@{i}.png") center center;
+            background: url("../../../../ai_images/technology/@{page-name}/sprite/prod-poster-@{i}.png") center center;
             background-size: 300px 210px;
         }
 
