@@ -15,6 +15,22 @@ import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html
 /* eslint-enable */
 import '../../less/technology/antiterror.less';
 
+// 绑定功能介绍动画
+const functionDetail = $('.tech-function-detail');
+// demo canvas
+const canvasContainer = $('#demo-result .canvas-container');
+// RESPONSE JSON
+const demoJsonData = $('.demo-json-data');
+// 本地上传
+const photoUploadInput = $('.photo-upload-input');
+// demo点击图片
+const cardListItem = $('.card-list-item');
+// 检测按钮
+const scanPhoto = $('#scan-photo');
+// 输入图片url
+const demoPhotoUrl = $('#demo-photo-url');
+
+
 const demoImagePaths = [
     require('../../../ai_images/technology/antiterror/demo-card-1.jpg'),
     require('../../../ai_images/technology/antiterror/demo-card-2.jpg'),
@@ -32,7 +48,7 @@ $(window).scroll(
     throttle(
         () => {
             if ($(document).scrollTop() >= 100) {
-                $('.tech-function-detail').trigger('demo');
+                functionDetail.trigger('demo');
             }
         },
         300
@@ -40,8 +56,8 @@ $(window).scroll(
 );
 
 // 绑定功能介绍动画
-$('.tech-function-detail').one('demo', function () {
-    $('.tech-function-detail > .scan-box').addClass('scanned');
+functionDetail.one('demo', function () {
+    functionDetail.find('>.scan-box').addClass('scanned');
 });
 
 // 线上demo开始
@@ -50,30 +66,31 @@ let isScanning = false;
 // 重置demo相关dom
 let resetDemo = () => {
     isScanning = false;
-    $('#demo-json > p').empty();
-    $('#demo-photo-upload  > input').val('');
-    $('#demo-result .canvas-container').attr('class', 'canvas-container');
-    $('#demo-photo-upload, #scan-photo').removeClass('disabled');
+    demoJsonData.empty();
+    photoUploadInput.val('');
+    canvasContainer.attr('class', 'canvas-container');
+    scanPhoto.removeClass('disabled');
 };
 
 let startScan = function (type, imgSrc, url) {
-    $('#demo-json > p').empty();
-    $('#demo-result .canvas-container').attr('class', 'canvas-container loading');
+    demoJsonData.empty();
+    canvasContainer.attr('class', 'canvas-container loading');
     $('#face-details').hide().empty();
 
     let options = {
+        // 成功回调
         success(res) {
-            $('#demo-photo-upload, #scan-photo').removeClass('disabled');
-            $('#demo-json > p').html(JSON.stringify(res, null, '\t'));
-            $('#demo-result .canvas-container').removeClass('loading');
+            scanPhoto.removeClass('disabled');
+            demoJsonData.html(JSON.stringify(res, null, '\t'));
+            canvasContainer.removeClass('loading');
 
             if (res.errno !== 0 || !res.data.result_num) {
-                $('#demo-result .canvas-container')
+                canvasContainer
                     .toggleClass('error-upload-fail', res.errno === 107)
                     .toggleClass('error-timeout', res.errno === 28)
                     .toggleClass('error-image-format', res.errno === 106);
-                $('#demo-result .canvas-container').empty();
-                $('#demo-result .canvas-container').toggleClass(
+                canvasContainer.empty();
+                canvasContainer.toggleClass(
                     'error-no-result', !res.data || !res.data.result_num
                 );
                 isScanning = false;
@@ -83,25 +100,26 @@ let startScan = function (type, imgSrc, url) {
                 return false;
             }
 
-            $('#demo-result .canvas-container').toggleClass('has-result', res.data.result_num >= 1);
-            // $('#demo-result .canvas-container').toggleClass('has-result', res.msg==='success');
-            let activeResult = null;
-            for (let i = 0, len = res.data.result.length; i < len; i++) {
-                let record = res.data.result[i];
-                if (!activeResult || record.probability > activeResult.probability) {
-                    activeResult = record;
-                }
-            }
+            canvasContainer.toggleClass('has-result', res.msg==='success');
+            // canvasContainer.toggleClass('has-result', res.data.result_num >= 1);
+            // let activeResult = null;
+            // for (let i = 0, len = res.data.result.length; i < len; i++) {
+            //     let record = res.data.result[i];
+            //     if (!activeResult || record.probability > activeResult.probability) {
+            //         activeResult = record;
+            //     }
+            // }
 
-            $('#demo-result .canvas-container')
+            canvasContainer
                 .attr('data-probability',
                     Math.round(res.result * 10000) / 100
-                )
-                .toggleClass('normal', )
-                .toggleClass('terror', )
+                );
+                // .toggleClass('normal', )
+                // .toggleClass('terror', )
 
             isScanning = false;
         },
+        // 失败回调
         fail(xhr) {
             new AlertModal('接口发生错误：' + xhr.status + ' - ' + xhr.statusText);
             resetDemo();
@@ -120,7 +138,7 @@ let startScan = function (type, imgSrc, url) {
 
 
 // 上传图片
-$('#demo-photo-upload > input').change(function (e) {
+photoUploadInput.change(function (e) {
     if ($(this).val() === '') {
         return false;
     }
@@ -129,7 +147,7 @@ $('#demo-photo-upload > input').change(function (e) {
         return;
     }
     isScanning = true;
-    $('#demo-photo-upload, #scan-photo').addClass('disabled');
+    scanPhoto.addClass('disabled');
     let file = $(this)[0].files[0];
     new DemoCanvas({
         selector: '#demo-result .canvas-container',
@@ -137,7 +155,7 @@ $('#demo-photo-upload > input').change(function (e) {
         type: 'stream',
         lazyRender: true,
         success(imgSrc) {
-            $('#demo-photo-upload  > input').val('');
+            photoUploadInput.val('');
             startScan('stream', imgSrc);
         },
         fail: resetDemo
@@ -145,22 +163,22 @@ $('#demo-photo-upload > input').change(function (e) {
 });
 
 // demo 检测输入框事件绑定
-$('#demo-photo-url').change(function () {
-    $('.demo-card-list > li').removeClass('active');
+demoPhotoUrl.change(function () {
+    cardListItem.removeClass('active');
 });
 
 // 检测按钮事件
-$('#scan-photo').click(function () {
+scanPhoto.click(function () {
     if (isScanning) {
         new AlertModal('操作正在进行中，请稍候再试！');
         return;
     }
-    if ($(this).hasClass('disabled') || !$('#demo-photo-url').val()) {
+    if ($(this).hasClass('disabled') || !demoPhotoUrl.val()) {
         return false;
     }
     isScanning = true;
-    $('#demo-photo-upload, #scan-photo').addClass('disabled');
-    let url = $('#demo-photo-url').val();
+    scanPhoto.addClass('disabled');
+    let url = demoPhotoUrl.val();
     new DemoCanvas({
         selector: '#demo-result .canvas-container',
         image: url,
@@ -180,25 +198,25 @@ $('#demo-photo-upload').click(function () {
     }
 });
 
-const $demoImgContainer = $('.demo-card-list > li');
+// const $demoImgContainer = cardListItem;
 
-$demoImgContainer.each(function (index, item) {
+cardListItem.each(function (index, item) {
     $(item)
         .find('img')
         .attr('src', `${demoImagePaths[index]}`);
 });
 
 // 绑定实例图点击事件
-$demoImgContainer.click(function () {
+cardListItem.click(function () {
     if (isScanning) {
         new AlertModal('操作正在进行中，请稍候再试！');
         return;
     }
     isScanning = true;
-    $('.demo-card-list > li').removeClass('active');
+    cardListItem.removeClass('active');
     $(this).addClass('active');
     let url = `${window.location.protocol}${$(this).find('img').attr('src')}`;
-    $('#demo-photo-upload, #scan-photo').addClass('disabled');
+    scanPhoto.addClass('disabled');
     new DemoCanvas({
         selector: '#demo-result .canvas-container',
         image: url,
@@ -212,5 +230,5 @@ $demoImgContainer.click(function () {
 });
 
 // 触发初始化效果
-$('.demo-card-list > li')[0].click();
+cardListItem[0].click();
 

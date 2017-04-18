@@ -35,6 +35,7 @@
     &-detail {
         padding: 30px 35px 0;
     }
+    //功能介绍两块区域
     .scan-box {
         display: inline-block;
         vertical-align: top;
@@ -42,59 +43,57 @@
         height: 250px;
         overflow: hidden;
         opacity: .7;
-    }
-    .scan-box:nth-child(1) {
-        .icon(url('../../../ai_images/technology/antiterror/intro-case-1.png'), center,cneter);
-    }
-    .scan-box:nth-child(2) {
-        margin-left: 30px;
-        .icon(url('../../../ai_images/technology/antiterror/intro-case-2.png'), center, center);
-    }
+        &:nth-child(1) {
+            .icon(url('../../../ai_images/technology/antiterror/intro-case-1.png'), center,cneter);
+        }
+        &:nth-child(2) {
+            margin-left: 30px;
+            .icon(url('../../../ai_images/technology/antiterror/intro-case-2.png'), center, center);
+        }
 
-    .scan-box.scanned {
-        opacity: 1;
-        transition: opacity .3s ease-out;
-    }
+        &.scanned {
+            opacity: 1;
+            transition: opacity .3s ease-out;
+        }
+        &::before {
+            content: "";
+            display: inline-block;
+            vertical-align: top;
+            width: 350px;
+            height: 130px;
+            transform: translateY(-100%);
+            .icon(url('../../../ai_images/technology/antiterror/tech-function-mask.png'), center, center);
+            transition: all 3s ease-out;
+        }
 
+        &.scanned::before {
+            transform: translateY(250px);
+            transition-delay: .3s;
+        }
 
-    .scan-box::before {
-        content: "";
-        display: inline-block;
-        vertical-align: top;
-        width: 350px;
-        height: 130px;
-        transform: translateY(-100%);
-        .icon(url('../../../ai_images/technology/antiterror/tech-function-mask.png'), center, center);
-        transition: all 3s ease-out;
-    }
+        &::after {
+            content: "";
+            display: inline-block;
+            vertical-align: top;
+            width: 350px;
+            height: 250px;
+            margin-top: -130px;
+            opacity: 0;
+            transition: opacity .3s ease-out;
+        }
 
-    .scan-box.scanned::before {
-        transform: translateY(250px);
-        transition-delay: .3s;
-    }
-
-    .scan-box::after {
-        content: "";
-        display: inline-block;
-        vertical-align: top;
-        width: 350px;
-        height: 250px;
-        margin-top: -130px;
-        opacity: 0;
-        transition: opacity .3s ease-out;
-    }
-
-    .scan-box:nth-child(1)::after {
-        .icon(url('../../../ai_images/technology/antiterror/sprite/intro-case-terror.png'), center, center);
-        background-size: 67px 67px;
-    }
-    .scan-box:nth-child(2)::after {
-        .icon(url('../../../ai_images/technology/antiterror/sprite/intro-case-nomal.png'), center, center);
-        background-size: 67px 67px;
-    }
-    .scan-box.scanned::after {
-        opacity: 1;
-        transition-delay: 3.3s;
+        &:nth-child(1)::after {
+            .icon(url('../../../ai_images/technology/antiterror/sprite/intro-case-terror.png'), center, center);
+            background-size: 67px 67px;
+        }
+        &:nth-child(2)::after {
+            .icon(url('../../../ai_images/technology/antiterror/sprite/intro-case-nomal.png'), center, center);
+            background-size: 67px 67px;
+        }
+        &.scanned::after {
+            opacity: 1;
+            transition-delay: 3.3s;
+        }
     }
 }
 
@@ -117,31 +116,25 @@
     }
 
     .data-view {
-        width: 100%;
-        height: 350px;
         position: relative;
         box-sizing: border-box;
-        padding-right: 10px;
-    }
-    .data-view[data-label] {
-        background-color: #fafafa;
-        border: 1px solid #ebebeb;
-        overflow: hidden;
-        font-size: 14px;
-        color: #666;
-        padding-right: 0;
-    }
-    .data-view[data-label]::after {
-        content: attr(data-label);
-        border-right: 1px solid #cce3fb;
-        border-bottom: 1px solid #cce3fb;
-        background-color: #e6fafd;
-        position: absolute;
-        left: 0;
-        top: 0;
-        padding: 0 15px;
-        line-height: 30px;
-        //z-index: 9;
+        //height: 350px;
+        &[data-label] {
+            background-color: #fafafa;
+            border: 1px solid #ebebeb;
+            overflow: hidden;
+            font-size: 14px;
+            color: #666;
+        }
+        &-header {
+            position: absolute;
+            border-right: 1px solid #cce3fb;
+            border-bottom: 1px solid #cce3fb;
+            background-color: #e6fafd;
+            padding: 0 15px;
+            line-height: 30px;
+            z-index: 9;
+        }
     }
 
     #demo-result {
@@ -150,107 +143,106 @@
         border-right: none;
     }
     .canvas-container {
-        height: 100%;
-        width: 100%;
-    }
-    .canvas-container::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-    }
+        height: 400px;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
 
-    .canvas-container.error-upload-fail canvas,
-    .canvas-container.error-no-result canvas,
-    .canvas-container.error-timeout canvas {
-        display: none;
-    }
-    .canvas-container.error-image-format::after {
-        .icon(url('../../../ai_images/error/image-format.png'), center, center);
-    }
-    .canvas-container.error-upload-fail::after {
-        .icon(url('../../../ai_images/error/upload-fail.png'), center, center);
-    }
-    .canvas-container.error-no-result::after {
-        .icon(url('../../../ai_images/error/no-result.png'), center, center);
-    }
-    .canvas-container.error-timeout::after {
-        .icon(url('../../../ai_images/error/timeout.png'), center, center);
-    }
-    .canvas-container.has-result::after {
-        background-color: fadeOut(@black, 50%);
-    }
+        &.error-upload-fail canvas,
+        &.error-no-result canvas,
+        &.error-timeout canvas {
+            display: none;
+        }
+        &.error-image-format::after {
+            .icon(url('../../../ai_images/error/image-format.png'), center, center);
+        }
+        &.error-upload-fail::after {
+            .icon(url('../../../ai_images/error/upload-fail.png'), center, center);
+        }
+        &.error-no-result::after {
+            .icon(url('../../../ai_images/error/no-result.png'), center, center);
+        }
+        &.error-timeout::after {
+            .icon(url('../../../ai_images/error/timeout.png'), center, center);
+        }
+        &.has-result::after {
+            background-color: fadeOut(@black, 50%);
+        }
 
-    .canvas-container.loading::after {
-        color: #666;
-        content: "图片上传中";
-        line-height: 398px;
-        text-align: center;
-    }
+        &.loading::after {
+            color: #666;
+            content: "图片上传中";
+            line-height: 398px;
+            text-align: center;
+        }
 
-    .canvas-container::before {
-        content: "";
-        position: absolute;
-        left: 340px;
-        top: 75px;
-        width: 110px;
-        height: 120px;
-        z-index: 2;
-    }
-    .canvas-container.has-result::before {
-        content: attr(data-probability);
-        opacity: 0;
-        width: 204px;
-        height: 270px;
-        line-height: 580px;
-        color: @white;
-        font-size: 24px;
-        text-align: center;
-        left: 50%;
-        top: 50%;
-        transition: opacity .3s ease-out;
-        transform: translate(-50%, -50%);
-    }
+        &::before {
+            content: "";
+            position: absolute;
+            left: 340px;
+            top: 75px;
+            width: 110px;
+            height: 120px;
+            z-index: 2;
+        }
+        &.has-result::before {
+            content: attr(data-probability);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 204px;
+            height: 270px;
+            line-height: 580px;
+            color: @white;
+            font-size: 24px;
+            opacity: 0;
+            text-align: center;
+            transition: opacity .3s ease-out;
+        }
 
-    .canvas-container.has-result.normal::before {
-        opacity: 1;
-        .icon(url('../../../ai_images/technology/antiterror/sprite/scan-result-icon-2.png'), center, center);
-    }
-    .canvas-container.has-result.sexy::before {
-        opacity: 1;
-        .icon(url('../../../ai_images/technology/antiterror/sprite/scan-result-icon-1.png'), center, center);
-    }
-    .canvas-container.loading::before {
-        .icon(url('../../../ai_images/loading.png'), center, center);
-        left: 277px;
-        top: 145px;
-        width: 32px;
-        height: 32px;
-        .animate(uploading, 0.8s, 0, infinite, ease-in);
+        &.has-result.normal::before {
+            .icon(url('../../../ai_images/technology/antiterror/sprite/scan-result-icon-2.png'), center, center);
+            opacity: 1;
+        }
+        &.has-result.sexy::before {
+            .icon(url('../../../ai_images/technology/antiterror/sprite/scan-result-icon-1.png'), center, center);
+            opacity: 1;
+        }
+        &.loading::before {
+            .icon(url('../../../ai_images/loading.png'), center, center);
+            left: 277px;
+            top: 145px;
+            width: 32px;
+            height: 32px;
+            .animate(uploading, 0.8s, 0, infinite, ease-in);
 
-        @keyframes uploading {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
+            @keyframes uploading {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
             }
         }
     }
 
     #demo-json {
-        height: 100%;
+        height: 500px;
     }
     .demo-json-data {
+        box-sizing: border-box;
         white-space: pre-wrap;
         padding: 40px 30px;
         margin: 0;
         overflow: auto;
         height: 100%;
-        box-sizing: border-box;
     }
 
     .demo-desc {
@@ -262,18 +254,18 @@
     }
 
     .demo-data {
-        height: 38px;
+        height: 40px;
     }
     #demo-photo-url {
-        height: 36px;
-        border: 1px solid #ebebeb;
         padding: 0 11px;
+        border: 1px solid #ebebeb;
         width: 320px;
+        height: 36px;
         color: #333;
     }
     .demo-photo-or {
-        margin: 0 10px;
         display: inline-block;
+        margin: 0 10px;
         line-height: 38px;
         font-size: 14px;
         color: #999;
@@ -285,23 +277,21 @@
         box-shadow: none;
     }
     .photo-upload-input {
-        width: 0;
-        height: 0;
+        display: none;
     }
     .demo-data-label {
         display: inline-block;
         vertical-align: top;
+        width: 100px;
+        height: 36px;
         border: 1px solid @blue;
         background-color: @blue;
         color: @white;
-        width: 100px;
-        height: 36px;
         line-height: 36px;
         text-align: center;
         border-radius: 2px;
         font-size: 14px;
         cursor: pointer;
-
         &:hover {
             background-color: #1a81ed;
         }
@@ -312,6 +302,7 @@
         border: 1px solid #ebebeb;
     }
     .card-list-item {
+        position: relative;
         box-sizing: border-box;
         width: 12.5%;
         height: 95px;
@@ -319,26 +310,24 @@
         float: left;
         background-color: #fafafa;
         padding: 10px;
-        position: relative;
         cursor: pointer;
-    }
-    .card-list-item:nth-of-type(1) {
-        border-left: 1px solid fadeOut(@black, 95%);
-    }
+        &:nth-of-type(1) {
+            border-left: 1px solid fadeOut(@black, 95%);
+        }
 
-    .card-list-item.active::after,
-    .card-list-item:hover::after {
-        content: "";
-        border: 2px solid #7fb9f5;
-        position: absolute;
-        left: -1px;
-        top: -1px;
-        right: -1px;
-        bottom: -1px;
-        box-sizing: border-box;
-        z-index: 9;
+        &.active::after,
+        &:hover::after {
+            content: "";
+            position: absolute;
+            box-sizing: border-box;
+            border: 2px solid #7fb9f5;
+            left: -1px;
+            right: -1px;
+            top: 0;
+            bottom: 0;
+            z-index: 9;
+        }
     }
-
     .card-list-img {
         max-height: 100%;
         max-width: 100%;

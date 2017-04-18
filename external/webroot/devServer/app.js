@@ -58,6 +58,7 @@ app.use('/tech/nlp', require('./router/nlp'));
 app.use('/tech/video', require('./router/video'));
 app.use('/tech/face', require('./router/face'));
 app.use('/tech/ocr', require('./router/ocr'));
+app.use('/', require('./router/aiDemo'));
 
 app.get('/tech/speech', (req, res, next) => {
     renderSmarty(
