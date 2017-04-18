@@ -43,7 +43,7 @@ class Service_Data_Sdk
             $sdk = $this->setSdkType($lanList, $sdk);
             $sdk = $this->setSdkVersion($sdk);
             $sdk = $this->setSdkPubTime($sdk);
-            $sdk = $result[$sdk['cat']][] = $sdk;
+            $result[$sdk['cat']][] = $sdk;
         }
         return $result;
     }
@@ -138,7 +138,7 @@ class Service_Data_Sdk
             return;
         }
         $pubTime = $sdk['pub_time'];
-        $t = date_format($pubTime, "Y-m-d");
+        $t = date('Y-m-d', (int)$pubTime);
         $sdk['pub_time'] = $t;
         return $sdk;
     }
