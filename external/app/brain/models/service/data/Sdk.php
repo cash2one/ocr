@@ -65,7 +65,8 @@ class Service_Data_Sdk
 
     }
 
-    /**设置 sdk 语言
+    /**
+     * 设置 sdk 语言
      * @param $lanList
      * @param $sdk
      * @return
