@@ -49,7 +49,7 @@ class Dao_Sdk extends Dao_Base
      */
     public function getSdkList()
     {
-        $arrFields = $this->$arrDefaultFields2;
+        $arrFields = $this->arrDefaultFields2;
         $arrConds = array(
             "enable=" => 1
         );
