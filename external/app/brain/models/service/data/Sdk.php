@@ -184,7 +184,11 @@ class Service_Data_Sdk
      */
     public function getSdkById($id)
     {
-        return $this->sdkDao->getSdkById($id);
+        $sdk = $this->sdkDao->getSdkById($id);
+        if (!empty($sdk)) {
+            return $sdk[0];
+        }
+        return;
     }
 
     /**
