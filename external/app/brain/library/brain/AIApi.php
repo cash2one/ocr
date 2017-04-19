@@ -119,7 +119,7 @@ class Brain_AIApi
             'params' => array(),
         ),
         "terror" => array(
-            'url' => ' http://inner.openapi.baidu.com/rest/2.0/vis-classify/v1/terror',
+            'url' => 'http://inner.openapi.baidu.com/rest/2.0/vis-classify/v1/terror',
             'params' => array(),
         ),
     );
