@@ -254,7 +254,6 @@
     </div>
 </div>
 </div>
-{%if $src !== Null%}
 <div class="tech-section get-started tech-free">
     <div class="ai-container">
         <div class="tech-free-title">快速提交您的需求</div>
@@ -266,14 +265,13 @@
                data-operation="cooperation"
                {%else%}
                class="btn-primary large"
-               href="mailto://ai@baidu.com"
+               href="mailto:ai@baidu.com"
                {%/if%}>
             合作咨询
             </a>
         </div>
     </div>
 </div>
-{%/if%}
 {%if $src eq Null%}
 <section class="tech-section tech-guide">
     <div class="container">

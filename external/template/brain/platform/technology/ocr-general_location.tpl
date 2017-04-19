@@ -96,7 +96,7 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>黄反识别</span>
+                                <span>图像审核</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/antiporn">黄反识别</a></li>
@@ -620,7 +620,6 @@
         </div>
     </div>
 </div>
-{%if $src !== Null%}
 <div class="tech-section get-started tech-free">
     <div class="ai-container">
         <div class="tech-free-title">快速提交您的需求</div>
@@ -632,14 +631,13 @@
                data-operation="cooperation"
                {%else%}
                class="btn-primary large"
-               href="mailto://ai@baidu.com"
+               href="mailto:ai@baidu.com"
                {%/if%}>
                 合作咨询
             </a>
         </div>
     </div>
 </div>
-{%/if%}
 {%if $src eq Null%}
 <div class="tech-section tech-guide">
     <div class="ai-container">

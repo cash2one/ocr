@@ -84,6 +84,7 @@ let startScan = function (type, imgSrc, url) {
             demoJsonData.html(JSON.stringify(res, null, '\t'));
             canvasContainer.removeClass('loading');
 
+            // 识别失败时
             if (res.errno !== 0) {
                 canvasContainer
                     .toggleClass('error-upload-fail', res.errno === 107)
@@ -100,20 +101,20 @@ let startScan = function (type, imgSrc, url) {
                 return false;
             }
 
+            // 识别成功时
             canvasContainer.toggleClass('has-result', res.msg === 'success');
-            // canvasContainer.toggleClass('has-result', res.data.result_num >= 1);
-            // let activeResult = null;
-            // for (let i = 0, len = res.data.result.length; i < len; i++) {
-            //     let record = res.data.result[i];
-            //     if (!activeResult || record.probability > activeResult.probability) {
-            //         activeResult = record;
-            //     }
-            // }
-            const judgeGrade = res.data.result.toFixed(4);
+
+            let judgeGrade = res.data.result.toFixed(4);
+
             canvasContainer
-                .attr('data-probability', judgeGrade * 100)
                 .toggleClass('normal', judgeGrade < 0.5)
                 .toggleClass('terror', judgeGrade >= 0.5);
+
+            // 计算概率
+            if (judgeGrade <= 0.5) {
+                judgeGrade = 1 - judgeGrade;
+            }
+            canvasContainer.attr('data-probability', judgeGrade * 100);
 
             isScanning = false;
         },

@@ -96,7 +96,7 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>黄反识别</span>
+                                <span>图像审核</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/antiporn">黄反识别</a></li>
@@ -277,7 +277,7 @@
         </div>
         <div class="tech-function-info">
             随着互联网上图片、视频、直播等内容的爆炸性增长，内容涉暴涉恐审核的重要性也日益凸显<br>
-            百度暴力恐怖图像识别能够对包含：杀人流血场景、 暴恐袭击场景、恐怖分子头目照片、恐怖组织的旗帜、暴力行为（枪击、手持刀具等）等<br>
+            百度暴恐识别能够对包含：杀人流血场景、 暴恐袭击场景、恐怖分子头目照片、恐怖组织的旗帜、暴力行为（枪击、手持刀具等）等<br>
             进行快速精准的识别，准确率可达94%以上
         </div>
         <div class="tech-function-detail">
@@ -307,7 +307,7 @@
                     <label id="demo-photo-upload" class="demo-data-label"><input class="photo-upload-input" type="file">本地上传</label>
                 </div>
                 <p class="demo-desc">
-                    提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片，图片大小不超过2M。为保证正常识别效果，请保证需要识别部分为图片主体部分。</p>
+                    提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片，图片大小不超过2M。为保证正常识别效果，请保证需要识别部分为图片主体部分。暴恐图像判断：result的值超过0.5则为暴恐图片，低于0.5为正常图片</p>
             </div>
             <div class="data-view-container">
                 <div class="data-view" data-label="RESPONSE JSON" id="demo-json">
@@ -396,13 +396,12 @@
             <div class="tech-scenario-desc">
                 <div class="tech-scenario-desc-name">图片审核</div>
                 <div class="tech-scenario-desc-info">
-                    可对用户上传的图片进行审核，避免用户上传暴恐等不雅图片，确保产品内容质量可控
+                    可对用户上传的图片进行审核，避免用户上传暴恐等违规图片，确保产品内容质量可控
                 </div>
             </div>
         </div>
     </div>
 </div>
-{%if $src !== Null%}
 <div class="tech-section get-started tech-free">
     <div class="ai-container">
         <div class="tech-free-title">快速提交您的需求</div>
@@ -414,14 +413,13 @@
                data-operation="cooperation"
                {%else%}
                class="btn-primary large"
-               href="mailto://ai@baidu.com"
+               href="mailto:ai@baidu.com"
                {%/if%}>
             合作咨询
             </a>
         </div>
     </div>
 </div>
-{%/if%}
 
 </div>
 <aside class="aside-action">
