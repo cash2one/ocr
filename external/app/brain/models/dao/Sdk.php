@@ -66,4 +66,27 @@ class Dao_Sdk extends Dao_Base
         return $arrDBRet;
     }
 
+    /**
+     * 根据id获取sdk
+     * @param $id
+     * @return
+     */
+    public function getSdkById($id)
+    {
+        $arrFields = $this->arrDefaultFields;
+        $arrConds = array(
+            'id=' => $id,
+        );
+        $arrOptions = null;
+        $arrAppends = array(
+            'limit 1',
+        );
+
+        $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
+
+        $arrDBRet = $this->query($strSQL);
+
+        return $arrDBRet;
+    }
+
 }
