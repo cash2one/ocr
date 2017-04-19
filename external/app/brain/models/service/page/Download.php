@@ -53,7 +53,7 @@ class Service_Page_Download
             $dbSdkInfo = new Dao_SdkInfo();
             $dbSdkInfo->insertSdkInfo($ucId, $passId, $serviceType, $language);
         }
-        header("Location: " . $sdk['file_path']);
+        header("Location:" . $sdk['file_path']);
     }
 
     /**

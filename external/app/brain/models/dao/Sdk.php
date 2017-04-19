@@ -55,7 +55,7 @@ class Dao_Sdk extends Dao_Base
         );
         $arrOptions = null;
         $arrAppends = array(
-            'order by id desc ',
+            'order by id asc ',
             'limit 100',
         );
 
