@@ -306,7 +306,7 @@
                 </div>
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
+                        <i class="sdk-language-sprite sdk-ios"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bs"></i>
                             <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu_Voice_Combine_SDK_iOS.zip">
@@ -363,7 +363,7 @@
                 </div>
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
+                        <i class="sdk-language-sprite sdk-ios"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bs"></i>
                             <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu-Voice-SDK-iOS-1.6.4.zip">
@@ -463,7 +463,7 @@
                 </div>
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
+                        <i class="sdk-language-sprite sdk-ios"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bs"></i>
                             <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu_TTS_Combine_SDK_iOS.zip">
@@ -520,7 +520,7 @@
                 </div>
                 <div class="sdk-item-container">
                     <div class="sdk-item">
-                        <i class="sdk-language-sprite sdk-apple"></i>
+                        <i class="sdk-language-sprite sdk-ios"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bs"></i>
                             <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu-TTS-SDK-iOS-1.1.3.zip">
@@ -645,7 +645,7 @@
         <div class="sdk-category">
             <a name="sdk-category-bfr"><div class="sdk-category-name">人脸识别</div></a>
             <div class="sdk-collection">
-                {%foreach $sdk.brf as $sdkItem%}
+                {%foreach $sdk.bfr as $sdkItem%}
                 <div class="sdk-item-container">
                     <div class="sdk-item">
                         <i class="sdk-language-sprite sdk-{%$sdkItem.type%}"></i>

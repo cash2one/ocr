@@ -105,8 +105,8 @@ let startScan = function (type, imgSrc, url) {
             let judgeGrade = res.data.result.toFixed(4);
 
             // 计算概率
-            if(judgeGrade <= 0.5){
-                judgeGrade = 1 - judgeGrade
+            if (judgeGrade <= 0.5) {
+                judgeGrade = 1 - judgeGrade;
             }
 
             canvasContainer

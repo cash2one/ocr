@@ -97,7 +97,7 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>黄反识别</span>
+                                <span>图像审核</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/antiporn">黄反识别</a></li>
