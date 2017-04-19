@@ -101,15 +101,14 @@ let startScan = function (type, imgSrc, url) {
             }
 
             canvasContainer.toggleClass('has-result', res.msg === 'success');
-            // canvasContainer.toggleClass('has-result', res.data.result_num >= 1);
-            // let activeResult = null;
-            // for (let i = 0, len = res.data.result.length; i < len; i++) {
-            //     let record = res.data.result[i];
-            //     if (!activeResult || record.probability > activeResult.probability) {
-            //         activeResult = record;
-            //     }
-            // }
-            const judgeGrade = res.data.result.toFixed(4);
+
+            let judgeGrade = res.data.result.toFixed(4);
+
+            // 计算概率
+            if(judgeGrade <= 0.5){
+                judgeGrade = 1 - judgeGrade
+            }
+
             canvasContainer
                 .attr('data-probability', judgeGrade * 100)
                 .toggleClass('normal', judgeGrade < 0.5)
