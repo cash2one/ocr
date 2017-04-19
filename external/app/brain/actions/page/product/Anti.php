@@ -10,7 +10,7 @@
  * @brief 
  *  
  **/
-class Action_Antiterror extends Ap_Action_Abstract {
+class Action_Anti extends Ap_Action_Abstract {
 
     public function execute() {
         $arrRequest = Saf_SmartMain::getCgi();
