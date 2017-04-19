@@ -6,7 +6,7 @@
 import $ from 'jquery';
 import throttle from 'lodash.throttle';
 import DemoCanvas from '../../component/widget/demoCanvas';
-import {scanPornography} from '../../model/demoAPI';
+import {scanTerrorgraphy} from '../../model/demoAPI';
 import AlertModal from '../../component/widget/alertModal';
 
 
@@ -130,7 +130,7 @@ let startScan = function (type, imgSrc, url) {
         options.image = imgSrc;
     }
 
-    scanPornography(options);
+    scanTerrorgraphy(options);
 };
 
 
