@@ -276,7 +276,7 @@
             功能介绍
         </div>
         <div class="tech-function-info">
-            功能介绍：随着互联网上图片、视频、直播等内容的爆炸性增长，内容涉暴涉恐审核的重要性也日益凸显<br>
+            随着互联网上图片、视频、直播等内容的爆炸性增长，内容涉暴涉恐审核的重要性也日益凸显<br>
             百度暴力恐怖图像识别能够对包含：杀人流血场景、 暴恐袭击场景、恐怖分子头目照片、恐怖组织的旗帜、暴力行为（枪击、手持刀具等）等<br>
             进行快速精准的识别，准确率可达94%以上
         </div>
@@ -307,7 +307,7 @@
                     <label id="demo-photo-upload" class="demo-data-label"><input class="photo-upload-input" type="file">本地上传</label>
                 </div>
                 <p class="demo-desc">
-                    提示：可支持PNG、JPG、jpeg、BMP图片文件，不支持GIF图片，图片大小不超过2M。为保证正常识别效果，请保证需要识别部分为图片主体部分。</p>
+                    提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片，图片大小不超过2M。为保证正常识别效果，请保证需要识别部分为图片主体部分。</p>
             </div>
             <div class="data-view-container">
                 <div class="data-view" data-label="RESPONSE JSON" id="demo-json">
@@ -372,7 +372,7 @@
             <div class="tech-feature-desc">
                 <div class="tech-feature-desc-title">覆盖广</div>
                 <div class="tech-feature-desc-info">
-                    模型依托百度海量、丰富的数据，对不同领域的图片均能正确识别色情图，并通过深度学习算法，识别效果更智能
+                    模型依托百度海量、丰富的数据，对不同领域的图片均能正确识别暴恐图，并通过深度学习算法，识别效果更智能
                 </div>
             </div>
         </div>
@@ -396,24 +396,28 @@
             <div class="tech-scenario-desc">
                 <div class="tech-scenario-desc-name">图片审核</div>
                 <div class="tech-scenario-desc-info">
-                    可对用户上传的图片进行审核，避免用户上传色情等不雅图片，确保产品内容质量可控
+                    可对用户上传的图片进行审核，避免用户上传暴恐等不雅图片，确保产品内容质量可控
                 </div>
             </div>
         </div>
     </div>
 </div>
-{%if $userInfo eq Null%}
+{%if $src !== Null%}
 <div class="tech-section get-started tech-free">
     <div class="ai-container">
-        <div class="tech-free-title">现在注册，即享免费试用</div>
-        <div class="tech-free-info">
-            结合百度人工智能技术为您提供免费的技术应用
-        </div>
+        <div class="tech-free-title">快速提交您的需求</div>
+        <div class="tech-free-info">您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</div>
         <div class="tech-free-btn">
             <a role="button"
-               target="_blank"
-               class="btn-primary large ai-redirect"
-               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+               {%if $src eq Null%}
+               class="btn-primary large consult"
+               data-operation="cooperation"
+               {%else%}
+               class="btn-primary large"
+               href="mailto://ai@baidu.com"
+               {%/if%}>
+            合作咨询
+            </a>
         </div>
     </div>
 </div>
