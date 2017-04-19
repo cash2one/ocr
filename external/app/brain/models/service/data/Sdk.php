@@ -43,11 +43,11 @@ class Service_Data_Sdk
             $sdk = $this->setSdkType($lanList, $sdk);
             $sdk = $this->setSdkVersion($sdk);
             $sdk = $this->setSdkPubTime($sdk);
+            $sdk['filePath'] = "/download?sdkId=" . $sdk['id'];
             $result[$sdk['cat']][] = $sdk;
         }
         return $result;
     }
-
 
 
     /**
@@ -127,6 +127,7 @@ class Service_Data_Sdk
         $sdk['pub_time'] = $t;
         return $sdk;
     }
+
     /**
      * 获取所有有效sdk
      * @return mixed|void
@@ -174,6 +175,16 @@ class Service_Data_Sdk
             Brain_Memcache::set($this->cacheSdkLanList, Bd_String::json_encode($list), 60 * 60);
             return $list;
         }
+    }
+
+    /**
+     * 获取SDK
+     * @param $id
+     * @return object;
+     */
+    public function getSdkById($id)
+    {
+        return $this->sdkDao->getSdkById($id);
     }
 
     /**
