@@ -25,8 +25,8 @@ class Bootstrap extends Ap_Bootstrap_Abstract{
             array("module"=>"tech", "controller"=>"antiporn", "action"=>"index")
         ));
 
-        $dispatcher->getRouter()->addRoute('tech_Antiterror', new Ap_Route_Rewrite('tech/antiterror',
-            array("module"=>"tech", "controller"=>"antiporn", "action"=>"terror")
+        $dispatcher->getRouter()->addRoute('tech_Antiterror', new Ap_Route_Rewrite('tech/anti/antiterror',
+            array("module"=>"tech", "controller"=>"anti", "action"=>"terror")
         ));
 
         $dispatcher->getRouter()->addRoute('file', new Ap_Route_Rewrite('file/:filePath',
