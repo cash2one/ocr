@@ -96,10 +96,11 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>黄反识别</span>
+                                <span>图像审核</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/antiporn">黄反识别</a></li>
+                                <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -232,7 +233,12 @@
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
+                        {%if $userInfo.type eq 1%}
                         <li><a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com">退出</a></li>
+                        {%/if%}
+                        {%if $userInfo.type eq 2%}
+                        <li><a href="http://cas.baidu.com/?action=logout&u=https%3a%2f%2fai.baidu.com">退出</a></li>
+                        {%/if%}
                     </ul>
                 </li>
                 {%/if%}
@@ -251,7 +257,7 @@
                     7*24小时售后，无限次调用，更高的QPS
                 </p>
                 <div>
-                    <a href="/support/news?action=detail&id=131" class="get-started">更多优惠</a>
+                    <a href="/support/news?action=detail&id=131" class="get-started">了解详情</a>
                 </div>
             </div>
         </li>
@@ -436,7 +442,13 @@
                                         <a href="/tech/ocr/bankcard">银行卡识别</a>
                                     </li>
                                     <li>
+                                        <a href="/tech/ocr/general_location">通用文字识别（含位置信息版）</a>
+                                    </li>
+                                    <li>
                                         <a href="/tech/ocr/webimage">网络图片文字识别</a>
+                                    </li>
+                                    <li class="service-tech-left">
+                                        <a href="/tech/ocr/general_enhanced">通用文字识别（含生僻字版）</a>
                                     </li>
                                 </ul>
                             </li>
@@ -458,6 +470,7 @@
                                 <h4>黄反识别</h4>
                                 <ul>
                                     <li><a href="/tech/antiporn">黄反识别</a></li>
+                                    <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
                                 </ul>
                             </li>
                         </ul>

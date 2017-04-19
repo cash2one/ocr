@@ -96,10 +96,11 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>黄反识别</span>
+                                <span>图像审核</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/antiporn">黄反识别</a></li>
+                                <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -232,7 +233,12 @@
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
+                        {%if $userInfo.type eq 1%}
                         <li><a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com">退出</a></li>
+                        {%/if%}
+                        {%if $userInfo.type eq 2%}
+                        <li><a href="http://cas.baidu.com/?action=logout&u=https%3a%2f%2fai.baidu.com">退出</a></li>
+                        {%/if%}
                     </ul>
                 </li>
                 {%/if%}

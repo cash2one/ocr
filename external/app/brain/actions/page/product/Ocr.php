@@ -31,7 +31,7 @@ class Action_Ocr extends Ap_Action_Abstract {
 
         if (in_array($tech, $techList)){
             $templateFile = Brain_Cloud::genCloudTemplate($templateName);
-            Brain_Output::htmlOutput(
+            Brain_Output::htmlOutputNoUser(
                 $arrPageInfo, 
                 "brain/cloud/$templateName.tpl"
             ); 

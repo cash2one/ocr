@@ -56,6 +56,39 @@ class Brain_Output {
     }
 
     /**
+     * @param $arrPageInfo
+     * @param $strTpl
+     */
+    public function htmlOutputNoUser($arrPageInfo, $strTpl) {
+        header('Content-Type: text/html; charset=UTF-8');
+        $tpl = Bd_TplFactory::getInstance();
+        $pageConf = Bd_Conf::getAppConf('page_'.$arrPageInfo['page']);
+        if(!empty($pageConf))
+        {
+            $arrPageInfo['title'] = $pageConf['title'];
+            $arrPageInfo['keyword'] = $pageConf['keyword'];
+            $arrPageInfo['description'] = $pageConf['description'];
+        }
+        else
+        {
+            $pageConf = Bd_Conf::getAppConf('page_default');
+            $arrPageInfo['title'] = $pageConf['title'];
+            $arrPageInfo['keyword'] = $pageConf['keyword'];
+            $arrPageInfo['description'] = $pageConf['description'];
+        }
+
+        if($arrPageInfo['src'] == 'cloud')
+        {
+            $arrPageInfo['title'] = str_ireplace('百度大脑', '百度云', $arrPageInfo['title']);
+        }
+
+        $tpl->assign($arrPageInfo);
+        $strEcho = $tpl->fetch($strTpl);
+        echo $strEcho;
+    }
+
+
+    /**
      * @brief json输出
      *
      * @param arrPageInfo 待输出数组

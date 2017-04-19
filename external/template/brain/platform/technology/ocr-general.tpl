@@ -96,10 +96,11 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>黄反识别</span>
+                                <span>图像审核</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/antiporn">黄反识别</a></li>
+                                <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -232,7 +233,12 @@
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
+                        {%if $userInfo.type eq 1%}
                         <li><a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com">退出</a></li>
+                        {%/if%}
+                        {%if $userInfo.type eq 2%}
+                        <li><a href="http://cas.baidu.com/?action=logout&u=https%3a%2f%2fai.baidu.com">退出</a></li>
+                        {%/if%}
                     </ul>
                 </li>
                 {%/if%}
@@ -265,7 +271,7 @@
 <section class="tech-section tech-intro">
     <div class="container">
         <h2>功能介绍</h2>
-        <p>支持多场景下整体文字检测识别。多项ICDAR指标世界第一，支持任意场景、复杂背景、任意版面识别，支持10多种语言的识别<br>
+        <p>支持多场景下整图文字检测识别。多项ICDAR指标世界第一，支持任意场景、复杂背景、任意版面识别，支持10多种语言的识别<br>
             在图片文字清晰，小幅度倾斜、无明显背光等情况下识别率高达90%以上</p>
         <div class="tech-intro-detail">
             <div class="original-card"></div>
@@ -466,7 +472,7 @@
         <li><a>百度外卖</a></li>
     </ul>
 </section>
-{%if $userInfo eq Null%}
+{%if $src !== Null%}
 <section class="tech-section get-started">
     <div class="container">
         <h2>立即获取免费API Key</h2>

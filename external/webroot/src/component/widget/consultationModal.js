@@ -33,7 +33,64 @@ export default class ConsultationModal extends Modal {
     }
 
     reset() {
-        this.setContent(applyTpl({}));
+        const pathname = window.location.pathname;
+
+        // shift去除第一个空字段
+        const pathData = pathname.split('/');
+        pathData.shift();
+
+        // 总类别分两个 技术(tech)和解决方案(solution)
+        const [category, subCategory] = pathData;
+        // 表单选中项
+        let selectedOption = 'OCR文字识别';
+
+        if (category === 'solution') {
+            switch (subCategory) {
+                case 'robot':
+                    selectedOption = '机器人';
+                    break;
+                case 'facegate':
+                    selectedOption = '人脸闸机';
+                    break;
+                case 'faceprint':
+                    selectedOption = '人脸核身';
+                    break;
+                case 'dialog':
+                    selectedOption = '号码风险识别';
+                    break;
+            }
+        }
+        else if (category === 'tech') {
+            switch (subCategory) {
+                case 'nlp':
+                    selectedOption = 'NLP自然语言处理';
+                    break;
+                case 'ocr':
+                    selectedOption = 'OCR文字识别';
+                    break;
+                case 'speech':
+                    selectedOption = '语音技术';
+                    break;
+                case 'antiporn':
+                    selectedOption = '黄反识别';
+                    break;
+                case 'ar':
+                    selectedOption = 'AR增强现实';
+                    break;
+            }
+        }
+
+        this.setContent(applyTpl({
+            options: [
+                'OCR文字识别', '人脸识别', '黄反识别', '语音技术',
+                'NLP自然语言处理', '用户画像', '机器学习', 'AR增强现实',
+                '机器人', '人脸核身', '人脸闸机', '号码风险识别',
+                '我不确定'
+            ],
+            // 表单当前选中项，根据打开不同的页面，选中项不同
+            selectedOption
+        }));
+
         setPlaceHolder(this.getModal());
     }
     apply() {

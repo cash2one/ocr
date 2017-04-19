@@ -96,10 +96,11 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>黄反识别</span>
+                                <span>图像审核</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/antiporn">黄反识别</a></li>
+                                <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -232,7 +233,12 @@
                 <li>
                     <a>{%$userInfo.uname%}</a>
                     <ul class="sub-top-nav">
+                        {%if $userInfo.type eq 1%}
                         <li><a href="https://passport.baidu.com/?logout&u=https://ai.baidu.com">退出</a></li>
+                        {%/if%}
+                        {%if $userInfo.type eq 2%}
+                        <li><a href="http://cas.baidu.com/?action=logout&u=https%3a%2f%2fai.baidu.com">退出</a></li>
+                        {%/if%}
                     </ul>
                 </li>
                 {%/if%}
@@ -497,19 +503,24 @@
     </div>
 </div>
 </div>
-{%if $userInfo eq Null%}
-<section class="tech-section get-started">
-    <div class="container">
-        <h2>立即获取免费API Key</h2>
-        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
-        <div>
+<div class="tech-section get-started tech-free">
+    <div class="ai-container">
+        <div class="tech-free-title">快速提交您的需求</div>
+        <div class="tech-free-info">您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</div>
+        <div class="tech-free-btn">
             <a role="button"
-               class="btn-primary large ai-redirect"
-               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+               {%if $src eq Null%}
+               class="btn-primary large consult"
+               data-operation="cooperation"
+               {%else%}
+               class="btn-primary large"
+               href="mailto:ai@baidu.com"
+               {%/if%}>
+            合作咨询
+            </a>
         </div>
     </div>
-</section>
-{%/if%}
+</div>
 {%if $src eq Null%}
 <section class="tech-section tech-guide">
     <div class="container">

@@ -6,6 +6,7 @@
  */
 class Controller_Tech extends Ap_Controller_Abstract {
     public $actions = array(
-        "speech" =>"actions/tech/speech/Index.php",
+        "speech" =>"actions/tech/speech/Speech.php",
+        "nlp" =>"actions/tech/nlp/Nlp.php",
     );
 }
