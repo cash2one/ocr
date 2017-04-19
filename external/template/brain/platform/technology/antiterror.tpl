@@ -402,7 +402,6 @@
         </div>
     </div>
 </div>
-{%if $src !== Null%}
 <div class="tech-section get-started tech-free">
     <div class="ai-container">
         <div class="tech-free-title">快速提交您的需求</div>
@@ -421,7 +420,6 @@
         </div>
     </div>
 </div>
-{%/if%}
 
 </div>
 <aside class="aside-action">
