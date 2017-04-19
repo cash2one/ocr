@@ -63,7 +63,7 @@ class Service_Data_Sdk
         }
         foreach ($lanList as $lan) {
             if ($sdk['language'] == $lan['id']) {
-                $sdk['type'] = $lan['name'];
+                $sdk['type'] = strtolower($lan['name']);
                 return $sdk;
             }
         }
