@@ -12,7 +12,7 @@ const getMockData = require('../util/getMockData');
 
 router.get('/antiterror', (req, res, next) => {
     renderSmarty(
-        'technology/anti-antiterror.tpl',
+        'technology/antiterror.tpl',
         getMockData({})
     ).then(
         content => {

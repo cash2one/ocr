@@ -11,13 +11,13 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
+    <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="/ai_dist/1492140185/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="/ai_dist/1492140185/css/base.style.css">
-    <link rel="stylesheet" href="/ai_dist/1492140185/css/technology/antiterror.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/technology/antiterror.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="/ai_dist/1492140185/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1492140185/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -100,7 +100,7 @@
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/antiporn">黄反识别</a></li>
-                                <li><a href="/tech/antiterror">暴恐识别</a></li>
+                                <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -259,13 +259,13 @@
         <div class="tech-banner-btn-list">
             <a role="button"
                {%if $src eq Null%}
-               class="btn-primary media ai-redirect"
-               href="https://cloud.baidu.com/product/apply/vca.html?from=ai&service=VCS"
+               class="btn-primary media consult"
+               data-operation="cooperation"
                {%else%}
                class="btn-primary media"
-               href="/product/apply/vca.html?service=VCS"
+               href="mailto://ai@baidu.com"
                {%/if%}>
-            商务合作
+            合作咨询
             </a>
         </div>
     </div>
@@ -319,28 +319,28 @@
         <div>
             <ul class="demo-card-list clear-float">
                 <li class="card-list-item">
-                    <img class="card-list-img" src="/ai_dist/1492140185/ai_images/technology/antiporn/demo-card-1.jpg">
+                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/antiporn/demo-card-1.jpg">
                 </li>
                 <li class="card-list-item">
-                    <img class="card-list-img" src="/ai_dist/1492140185/ai_images/technology/antiporn/demo-card-2.jpg">
+                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/antiporn/demo-card-2.jpg">
                 </li>
                 <li class="card-list-item">
-                    <img class="card-list-img" src="/ai_dist/1492140185/ai_images/technology/antiporn/demo-card-3.jpg">
+                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/antiporn/demo-card-3.jpg">
                 </li>
                 <li class="card-list-item">
-                    <img class="card-list-img" src="/ai_dist/1492140185/ai_images/technology/antiporn/demo-card-4.jpg">
+                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/antiporn/demo-card-4.jpg">
                 </li>
                 <li class="card-list-item">
-                    <img class="card-list-img" src="/ai_dist/1492140185/ai_images/technology/antiporn/demo-card-5.jpg">
+                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/antiporn/demo-card-5.jpg">
                 </li>
                 <li class="card-list-item">
-                    <img class="card-list-img" src="/ai_dist/1492140185/ai_images/technology/antiporn/demo-card-6.jpg">
+                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/antiporn/demo-card-6.jpg">
                 </li>
                 <li class="card-list-item">
-                    <img class="card-list-img" src="/ai_dist/1492140185/ai_images/technology/antiporn/demo-card-7.jpg">
+                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/antiporn/demo-card-7.jpg">
                 </li>
                 <li class="card-list-item">
-                    <img class="card-list-img" src="/ai_dist/1492140185/ai_images/technology/antiporn/demo-card-8.jpg">
+                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/antiporn/demo-card-8.jpg">
                 </li>
             </ul>
         </div>
@@ -407,19 +407,13 @@
     <div class="ai-container">
         <div class="tech-free-title">现在注册，即享免费试用</div>
         <div class="tech-free-info">
-            结合百度人工智能技术为您提供免费的技术应用，结合百度人工智能技术
+            结合百度人工智能技术为您提供免费的技术应用
         </div>
         <div class="tech-free-btn">
             <a role="button"
-               {%if $src eq Null%}
+               target="_blank"
                class="btn-primary large ai-redirect"
-               href="https://cloud.baidu.com/product/apply/vca.html?from=ai&service=VCS"
-               {%else%}
-               class="btn-primary large"
-               href="/product/apply/vca.html?service=VCS"
-               {%/if%}>
-            商务合作
-            </a>
+               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
         </div>
     </div>
 </div>
@@ -523,8 +517,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="/ai_dist/1492140185/js/common.bundle.js"></script>
-<script src="/ai_dist/1492140185/js/technology/antiterror.js"></script>
+<script src="//ai.bdstatic.com/dist/1492140185/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1492140185/js/technology/antiterror.js"></script>
 
 <script>
     (function () {

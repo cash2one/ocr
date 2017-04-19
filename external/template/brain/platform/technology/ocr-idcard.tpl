@@ -100,7 +100,7 @@
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/antiporn">黄反识别</a></li>
-                                <li><a href="/tech/antiterror">暴恐识别</a></li>
+                                <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -495,12 +495,21 @@
     </div>
 </div>
 {%if $userInfo eq Null%}
-<div class="tech-section get-started">
-    <div class="container">
-        <h2>快速提交您的需求</h2>
-        <p>您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</p>
-        <div class="consult">
-            <a role="button" class="btn-primary large" href="mailto:ai@baidu.com">合作咨询</a>
+<div class="tech-section get-started tech-free">
+    <div class="ai-container">
+        <div class="tech-free-title">快速提交您的需求</div>
+        <div class="tech-free-info">您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</div>
+        <div class="tech-free-btn">
+            <a role="button"
+               {%if $src eq Null%}
+               class="btn-primary large consult"
+               data-operation="cooperation"
+               {%else%}
+               class="btn-primary large"
+               href="mailto://ai@baidu.com"
+               {%/if%}>
+            合作咨询
+            </a>
         </div>
     </div>
 </div>

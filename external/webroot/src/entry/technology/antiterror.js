@@ -11,9 +11,9 @@ import AlertModal from '../../component/widget/alertModal';
 
 
 /* eslint-disable */
-import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/anti-antiterror.html';
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/antiterror.html';
 /* eslint-enable */
-import '../../less/technology/anti-antiterror.less';
+import '../../less/technology/antiterror.less';
 
 // 绑定功能介绍动画
 const functionDetail = $('.tech-function-detail');
