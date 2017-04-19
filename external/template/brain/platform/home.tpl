@@ -447,7 +447,7 @@
                                     <li>
                                         <a href="/tech/ocr/webimage">网络图片文字识别</a>
                                     </li>
-                                    <li class="service-tech-">
+                                    <li class="service-tech-left">
                                         <a href="/tech/ocr/general_enhanced">通用文字识别（含生僻字版）</a>
                                     </li>
                                 </ul>

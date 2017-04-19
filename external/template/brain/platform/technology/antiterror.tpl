@@ -405,15 +405,19 @@
 {%if $userInfo eq Null%}
 <div class="tech-section get-started tech-free">
     <div class="ai-container">
-        <div class="tech-free-title">现在注册，即享免费试用</div>
-        <div class="tech-free-info">
-            结合百度人工智能技术为您提供免费的技术应用
-        </div>
+        <div class="tech-free-title">快速提交您的需求</div>
+        <div class="tech-free-info">您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</div>
         <div class="tech-free-btn">
             <a role="button"
-               target="_blank"
-               class="btn-primary large ai-redirect"
-               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+               {%if $src eq Null%}
+               class="btn-primary large consult"
+               data-operation="cooperation"
+               {%else%}
+               class="btn-primary large"
+               href="mailto://ai@baidu.com"
+               {%/if%}>
+            合作咨询
+            </a>
         </div>
     </div>
 </div>

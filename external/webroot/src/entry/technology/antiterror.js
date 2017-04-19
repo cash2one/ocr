@@ -84,14 +84,14 @@ let startScan = function (type, imgSrc, url) {
             demoJsonData.html(JSON.stringify(res, null, '\t'));
             canvasContainer.removeClass('loading');
 
-            if (res.errno !== 0 || !res.data.result_num) {
+            if (res.errno !== 0) {
                 canvasContainer
                     .toggleClass('error-upload-fail', res.errno === 107)
                     .toggleClass('error-timeout', res.errno === 28)
                     .toggleClass('error-image-format', res.errno === 106);
                 canvasContainer.empty();
                 canvasContainer.toggleClass(
-                    'error-no-result', !res.data || !res.data.result_num
+                    'error-no-result', !res.data
                 );
                 isScanning = false;
                 if ([106, 107, 28, 0].indexOf(res.errno) === -1) {
@@ -109,11 +109,11 @@ let startScan = function (type, imgSrc, url) {
             //         activeResult = record;
             //     }
             // }
-
+            const judgeGrade = Math.round(res.data.result * 10000) / 100;
             canvasContainer
-                .attr('data-probability', res.result)
-                .toggleClass('normal', res.result < 0.5)
-                .toggleClass('terror', res.result >= 0.5);
+                .attr('data-probability', judgeGrade)
+                .toggleClass('normal', judgeGrade < 0.5)
+                .toggleClass('terror', judgeGrade >= 0.5);
 
             isScanning = false;
         },
