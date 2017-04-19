@@ -109,9 +109,9 @@ let startScan = function (type, imgSrc, url) {
             //         activeResult = record;
             //     }
             // }
-            const judgeGrade = Math.round(res.data.result * 10000) / 100;
+            const judgeGrade = res.data.result.toFixed(4);
             canvasContainer
-                .attr('data-probability', judgeGrade)
+                .attr('data-probability', judgeGrade * 100)
                 .toggleClass('normal', judgeGrade < 0.5)
                 .toggleClass('terror', judgeGrade >= 0.5);
 
