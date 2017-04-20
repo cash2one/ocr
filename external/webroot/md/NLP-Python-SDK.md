@@ -1,4 +1,4 @@
-# Python SDK文档
+﻿# Python SDK文档
 
 本文档主要介绍自然语言处理Python SDK的使用，在使用前请先确保已创建应用并具有相应权限。
 
@@ -8,18 +8,18 @@
 
         ├── README.md
         ├── aip                 //SDK目录
-        │   ├── __init__.py     //导出类
-        │   ├── antiporn.py     //黄反识别
-        │   ├── base.py         //aip基类
-        │   ├── face.py         //人脸识别
-        │   ├── http.py         //http请求
-        │   ├── nlp.py          //nlp自然语言处理
-        │   └── ocr.py          //OCR图像识别
+        │   ├── __init__.py     //导出类
+        │   ├── antiporn.py     //黄反识别
+        │   ├── base.py         //aip基类
+        │   ├── face.py         //人脸识别
+        │   ├── http.py         //http请求
+        │   ├── nlp.py          //nlp自然语言处理
+        │   └── ocr.py          //OCR图像识别
         ├── doc                 //使用文档
-        │   ├── antiporn.md
-        │   ├── face.md
-        │   ├── nlp.md
-        │   └── ocr.md
+        │   ├── antiporn.md
+        │   ├── face.md
+        │   ├── nlp.md
+        │   └── ocr.md
         └── setup.py            //setuptools安装
 
 **支持 Python版本：2.7.+ ,3.+**
@@ -54,6 +54,7 @@ AipNlp类提供给开发者一系列的自然语言处理方法，参考如下�
 
 # 中文分词
 
+此接口功能已合并到词法分析中，将逐步下线，请移步使用[词法分析](#词法分析)接口。
 举例，要对字符串'你好百度'进行分词：
 
 
@@ -97,26 +98,27 @@ AipNlp类提供给开发者一系列的自然语言处理方法，参考如下�
 
 # 词性标注
 
+此接口功能已合并到词法分析中，将逐步下线，请移步使用[词法分析](#词法分析)接口。
 词性标注接口为分词结果中的每个单词标注一个正确的词性的程序，也标注每个词是名词、动词、形容词或其他词性。
 
 举例，传入一个词识别词的词性：
 
-```
-# 引入NLP SDK
-from aip import AipNlp
 
-# 定义常量
-APP_ID = '你的 App ID'
-API_KEY = '你的 API Key'
-SECRET_KEY = '你的 Secret Key'
+	# 引入NLP SDK
+	from aip import AipNlp
+	
+	# 定义常量
+	APP_ID = '你的 App ID'
+	API_KEY = '你的 API Key'
+	SECRET_KEY = '你的 Secret Key'
+	
+	# 初始化AipNlp对象
+	aipNlp = AipNlp(APP_ID, API_KEY, SECRET_KEY)
+	
+	
+	# 获取一个词的词向量
+	result = aipNlp.wordpos('百度')
 
-# 初始化AipNlp对象
-aipNlp = AipNlp(APP_ID, API_KEY, SECRET_KEY)
-
-
-# 获取一个词的词向量
-result = aipNlp.wordpos('百度')
-```
 
 **词性标注 请求参数详情**
 
@@ -393,6 +395,61 @@ result = aipNlp.wordpos('百度')
 | +raw_adj_begin_pos  | Int      | 词向量结果                 |
 | +degree_adv         | String   | 原始副词                  |
 | +degree_adv_pos     | Int      | 词向量结果                 |
+
+
+
+# 词法分析
+
+词法分析接口包含了中文分词和词性标注的功能，若需要使用中文分词或词性标注的功能，建议使用此接口。
+
+举例，传入文本，获取词法分析结果：
+
+```
+# 引入NLP SDK
+from aip import AipNlp
+    
+# 定义常量
+APP_ID = '你的 App ID'
+API_KEY = '你的 API Key'
+SECRET_KEY = '你的 Secret Key'
+
+# 初始化AipNlp对象
+aipNlp = AipNlp(APP_ID, API_KEY, SECRET_KEY)
+
+# 调用词法分析
+result = aipNlp.lexer('百度是个搜索公司')
+```
+
+**词法分析 请求参数详情**
+
+| 参数    | 类型            | 描述                                  | 是否必须 |
+| :---- | :------------ | :---------------------------------- | :--- |
+| text | String | 待解析文本,长度不超过16KB | 是    |
+
+**词法分析 返回数据参数详情**
+
+| 参数名称           | 类型                | **必需** | 详细说明                                     |
+| -------------- | ----------------- | ------ | ---------------------------------------- |
+| text          | string            | 是      | 原始单条请求文本                                 |
+| items         | array  of objects | 是      | 词汇数组，每个元素对应结果中的一个词                       |
+| +item         | string            | 是      | 词汇的字符串                                   |
+| +ne           | string            | 是      | 命名实体类型，命名实体识别算法使用。词性标注算法中，此项为空串          |
+| +pos          | string            | 是      | 词性，词性标注算法使用。命名实体识别算法中，此项为空串              |
+| +byte_offset  | int               | 是      | 在text中的字节级offset（使用GBK编码）                |
+| +byte_length  | int               | 是      | 字节级length（使用GBK编码）                       |
+| +uri          | string            | 否      | 链指到知识库的URI，只对命名实体有效。对于非命名实体和链接不到知识库的命名实体，此项为空串 |
+| +formal       | string            | 否      | 词汇的标准化表达，主要针对时间、数字单位，没有归一化表达的，此项为空串      |
+| +basic_words  | array of strings  | 是      | 基本词成分                                    |
+| +loc_details  | array  of objects | 否      | 地址成分，非必需，仅对地址型命名实体有效，没有地址成分的，此项为空数组。     |
+| ++type        | string            | 是      | 成分类型，如省、市、区、县                            |
+| ++byte_offset | int               | 是      | 在item中的字节级offset（使用GBK编码）                |
+| ++byte_length | int               | 是      | 字节级length（使用GBK编码）                       |
+|_details  | array  of objects | 否      | 地址成分，非必需，仅对地址型命名实体有效，没有地址成分的，此项为空数组。     |
+| ++type        | string            | 是      | 成分类型，如省、市、区、县                            |
+| ++byte_offset | int               | 是      | 在item中的字节级offset（使用GBK编码）                |
+| ++byte_length | int               | 是      | 字节级length（使用GBK编码）                       |
+
+
 
 
 

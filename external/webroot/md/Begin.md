@@ -35,6 +35,6 @@
 
 
 我们同样也为您提供了客户端或服务端SDK，帮忙您快速接入服务。后续也会不断补充拓展，敬请持续关注。  
-[SDK下载页](http://ai.baidu.com/sdk)
+[SDK下载页](http://ai.baidu.com/sdk.html)
 
 

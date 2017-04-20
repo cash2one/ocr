@@ -180,6 +180,8 @@ Content-Type: application/json;charset=UTF-8
 
 用户向服务请求识别某张图中的所有文字，并返回文字在图中的位置信息。
 
+## 请求说明
+
 **请求示例**
 
 HTTP 方法：`POST`
@@ -538,6 +540,8 @@ Content-Type: application/json;charset=UTF-8
 ## 接口描述
 
 识别银行卡并返回卡号和发卡行。
+
+## 请求说明
 
 **请求示例**
 
