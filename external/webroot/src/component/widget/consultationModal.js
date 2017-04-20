@@ -74,6 +74,9 @@ export default class ConsultationModal extends Modal {
                 case 'antiporn':
                     selectedOption = '黄反识别';
                     break;
+                case 'face':
+                    selectedOption = '人脸识别';
+                    break;
                 case 'ar':
                     selectedOption = 'AR增强现实';
                     break;
