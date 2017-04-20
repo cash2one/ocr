@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/home.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/home.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1492140185/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1492602425/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -96,10 +96,11 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>黄反识别</span>
+                                <span>图像审核</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/antiporn">黄反识别</a></li>
+                                <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -256,7 +257,7 @@
                     7*24小时售后，无限次调用，更高的QPS
                 </p>
                 <div>
-                    <a href="/support/news?action=detail&id=131" class="get-started">更多优惠</a>
+                    <a href="/support/news?action=detail&id=131" class="get-started">了解详情</a>
                 </div>
             </div>
         </li>
@@ -341,7 +342,7 @@
                     免费试用
                 </a>
             </div>
-            <video src="//ai.bdstatic.com/dist/1492140185/ai_images/home/banner-1.mp4">
+            <video src="//ai.bdstatic.com/dist/1492602425/ai_images/home/banner-1.mp4">
             </video>
         </li> -->
     </ul>
@@ -441,7 +442,13 @@
                                         <a href="/tech/ocr/bankcard">银行卡识别</a>
                                     </li>
                                     <li>
+                                        <a href="/tech/ocr/general_location">通用文字识别（含位置信息版）</a>
+                                    </li>
+                                    <li>
                                         <a href="/tech/ocr/webimage">网络图片文字识别</a>
+                                    </li>
+                                    <li class="service-tech-left">
+                                        <a href="/tech/ocr/general_enhanced">通用文字识别（含生僻字版）</a>
                                     </li>
                                 </ul>
                             </li>
@@ -460,9 +467,10 @@
                                 </ul>
                             </li>
                             <li>
-                                <h4>黄反识别</h4>
+                                <h4>图像审核</h4>
                                 <ul>
                                     <li><a href="/tech/antiporn">黄反识别</a></li>
+                                    <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -738,7 +746,7 @@
                     <img alt="百度语音基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1492140185/ai_images/home/video-1.png">
+                         src="//ai.bdstatic.com/dist/1492602425/ai_images/home/video-1.png">
                 </a>
                 <h5>百度语音基础介绍及应用场景</h5>
             </li>
@@ -748,7 +756,7 @@
                     <img alt="百度OCR基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1492140185/ai_images/home/video-2.png">
+                         src="//ai.bdstatic.com/dist/1492602425/ai_images/home/video-2.png">
                 </a>
                 <h5>百度OCR基础介绍及应用场景</h5>
             </li>
@@ -758,7 +766,7 @@
                     <img alt="百度人脸技术基础介绍及引用场景"
                         width="500"
                         height="280"
-                        src="//ai.bdstatic.com/dist/1492140185/ai_images/home/video-3.png">
+                        src="//ai.bdstatic.com/dist/1492602425/ai_images/home/video-3.png">
                 </a>
                 <h5>百度人脸技术基础介绍及引用场景</h5>
             </li>
@@ -769,7 +777,7 @@
                     <img alt="百度翻译产品介绍"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1492140185/ai_images/home/video-4.png">
+                         src="//ai.bdstatic.com/dist/1492602425/ai_images/home/video-4.png">
                 </a>
                 <h5>百度翻译产品介绍</h5>
             </li>
@@ -910,8 +918,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1492140185/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1492140185/js/home.js"></script>
+<script src="//ai.bdstatic.com/dist/1492602425/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1492602425/js/home.js"></script>
 
 <script>
     (function () {

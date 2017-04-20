@@ -24,6 +24,13 @@ class Action_Redirect extends Ap_Action_Abstract
             "aibaiduid" => $_COOKIE['BAIDUID'],
             "fromai" => 1,
         );
+        foreach ($arrInput as $k => $v) {
+            if ($k == 'url') {
+                continue;
+            }
+            $param[$k] = $v;
+        }
+
         $url = Brain_Util::appendUrl($url, $param);
         if (empty($url)) {
             $url = "https://ai.baidu.com";

@@ -45,6 +45,14 @@ export function scanPornography({image = null, imageUrl = null, success = $.noop
     }).success(success).fail(fail);
 }
 
+export function scanTerrorgraphy({image = null, imageUrl = null, success = $.noop, fail = $.noop}) {
+    $.post('/aidemo', {
+        type: 'terror',
+        image: image,
+        'image_url': imageUrl
+    }).success(success).fail(fail);
+}
+
 export function getHeader({imageUrl = null, type, success = $.noop, fail = $.noop}) {
     $.post('/aidemo', {
         action: 'getHeader',
