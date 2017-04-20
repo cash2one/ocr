@@ -271,6 +271,17 @@
                {%/if%}">
             </a>
         </div>
+        <div class="product-word">
+            <span>4月30日前开通付费，还有
+                <a class="word-point"
+                   href="
+                   {%if $src eq Null%}
+                   /support/news?action=detail&id=131&from=tech
+                   {%else%}
+                   http://ai.baidu.com/support/news?action=detail&id=131&from=tech
+                   {%/if%}">限时优惠&gt;&gt;</a>
+            </span>
+        </div>
     </div>
 </div>
 <div class="tech-section tech-function">
@@ -482,7 +493,8 @@
                     <div class="pric-item-connent pric-item-2">1.如果您的调用量远大于最大的阶梯段，并需要更低的价格；</div>
                     <div class="pric-item-connent pric-item-2">2.如果您需要更高的QPS/并发；</div>
                     <div class="pric-item-connent pric-item-2">3.如果您有其他的OCR要求；</div>
-                    <div class="pric-item-connent pric-item-2">4.如果您对现有的接口/SDK/文档有任何建议意见。</div>
+                    <div class="pric-item-connent pric-item-2">4.如果您需要接口返回文字在图片中的坐标信息；</div>
+                    <div class="pric-item-connent pric-item-2">5.如果您对现有的接口/SDK/文档有任何建议意见。</div>
                 </div>
             </div>
             <div class="product-form-3">
