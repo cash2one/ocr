@@ -107,6 +107,12 @@ class Brain_Util
         if (empty($param) || empty($url)) {
             return $url;
         }
+        $urls = explode("#", $url);
+        $last = "";
+        if (sizeof($urls) == 2) {
+            $last = "#" . $urls[1];
+        }
+        $url = $urls[0];
         if (Bd_Str::exist($url, "?")) {
             $url .= "&";
         } else {
@@ -119,7 +125,7 @@ class Brain_Util
             }
             $url .= $k . "=" . $v . "&";
         }
-        return rtrim($url, "&");
+        return rtrim($url, "&") . $last;
 
     }
 }

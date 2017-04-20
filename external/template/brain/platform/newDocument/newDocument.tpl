@@ -15,10 +15,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/newDocument/newDocument.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/newDocument/newDocument.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -34,7 +34,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1492140185/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1492602425/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -248,8 +248,8 @@
     </div>
 </header>
 <div id="app"></div>
-<script src="//ai.bdstatic.com/dist/1492140185/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1492140185/js/newDocument/newDocument.js"></script>
+<script src="//ai.bdstatic.com/dist/1492602425/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1492602425/js/newDocument/newDocument.js"></script>
 <script>
     (function () {
         var bp = document.createElement('script');
