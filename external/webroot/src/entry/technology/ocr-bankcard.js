@@ -7,7 +7,7 @@ import $ from 'jquery';
 import throttle from 'lodash.throttle';
 import DemoCanvas from '../../component/widget/demoCanvas';
 import {scanBankCard} from '../../model/demoAPI';
-import AlertModal from '../../component/widget/alertModal';
+// import AlertModal from '../../component/widget/alertModal';
 
 import 'less/technology/ocr-bankcard.less';
 
@@ -60,10 +60,11 @@ let isScanning = false;
 const $resultBg = $('#demo-result').find('.result-background');
 const $issuingBank = $('#issuing-bank');
 const $cardType = $('#card-type');
+const $demoJson = $('#demo-json > p');
 
 // 线上demo开始
 let resetDemo = () => {
-    $('#demo-json > p').empty();
+    $demoJson.empty();
     $('#demo-photo-upload > input').val('');
     $resultBg.attr('class', 'result-background');
     $('#demo-photo-upload, #scan-photo').removeClass('disabled');
@@ -71,13 +72,13 @@ let resetDemo = () => {
 };
 
 let startScan = function (type, imgSrc, url) {
-    $('#demo-json > p').empty();
+    $demoJson.empty();
     $resultBg.attr('class', 'result-background loading');
 
     let options = {
         success(res) {
             $('#demo-photo-upload, #scan-photo').removeClass('disabled');
-            $('#demo-json > p').html(JSON.stringify(res, null, '\t'));
+            $demoJson.html(JSON.stringify(res, null, '\t'));
             $resultBg.removeClass('loading');
 
             if (res.errno !== 0) {
@@ -90,7 +91,8 @@ let startScan = function (type, imgSrc, url) {
                 isScanning = false;
 
                 if ([106, 107, 28, 216631, 216630].indexOf(res.errno) === -1) {
-                    new AlertModal(res.msg);
+                    // new AlertModal(res.msg);
+                    $demoJson.html(res.msg);
                 }
 
                 return false;
@@ -119,8 +121,9 @@ let startScan = function (type, imgSrc, url) {
             isScanning = false;
         },
         fail(xhr) {
-            new AlertModal('接口发生错误：' + xhr.status + ' - ' + xhr.statusText);
+            // new AlertModal('接口发生错误：' + xhr.status + ' - ' + xhr.statusText);
             resetDemo();
+            $demoJson.html('接口发生错误：' + xhr.status + ' - ' + xhr.statusText);
         }
     };
     if (type === 'url') {
@@ -139,7 +142,8 @@ $('#demo-photo-upload  > input').change(function (e) {
         return false;
     }
     if (isScanning) {
-        new AlertModal('操作正在进行中，请稍候再试！');
+        // new AlertModal('操作正在进行中，请稍候再试！');
+        $demoJson.html('操作正在进行中，请稍候再试！');
         return;
     }
     isScanning = true;
@@ -165,8 +169,10 @@ $('#demo-photo-url').change(function () {
 // 检测按钮事件
 $('#scan-photo').click(function () {
     if (isScanning) {
-        new AlertModal('操作正在进行中，请稍候再试！');
+        // new AlertModal('操作正在进行中，请稍候再试！');
+        $demoJson.html('操作正在进行中，请稍候再试！');
         return;
+
     }
     if ($(this).hasClass('disabled') || !$('#demo-photo-url').val()) {
         return false;
@@ -203,7 +209,8 @@ $demoCardList.each(function (index, item) {
 // 绑定实例图点击事件
 $demoCardList.click(function () {
     if (isScanning) {
-        new AlertModal('操作正在进行中，请稍候再试！');
+        // new AlertModal('操作正在进行中，请稍候再试！');
+        $demoJson.html('操作正在进行中，请稍候再试！');
         return;
     }
 
