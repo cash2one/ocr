@@ -7,7 +7,6 @@ import $ from 'jquery';
 import throttle from 'lodash.throttle';
 import DemoCanvas from '../../component/widget/demoCanvas';
 import {scanBankCard} from '../../model/demoAPI';
-// import AlertModal from '../../component/widget/alertModal';
 
 import 'less/technology/ocr-bankcard.less';
 
@@ -87,13 +86,7 @@ let startScan = function (type, imgSrc, url) {
                     .toggleClass('error-timeout', res.errno === 28)
                     .toggleClass('error-no-result', res.errno === 216631 || res.errno === 216630)
                     .toggleClass('error-image-format', res.errno === 106);
-
                 isScanning = false;
-
-                if ([106, 107, 28, 216631, 216630].indexOf(res.errno) === -1) {
-                    // new AlertModal(res.msg);
-                    $demoJson.html(res.msg);
-                }
 
                 return false;
             }
@@ -121,7 +114,6 @@ let startScan = function (type, imgSrc, url) {
             isScanning = false;
         },
         fail(xhr) {
-            // new AlertModal('接口发生错误：' + xhr.status + ' - ' + xhr.statusText);
             resetDemo();
             $demoJson.html('接口发生错误：' + xhr.status + ' - ' + xhr.statusText);
         }
@@ -142,7 +134,6 @@ $('#demo-photo-upload  > input').change(function (e) {
         return false;
     }
     if (isScanning) {
-        // new AlertModal('操作正在进行中，请稍候再试！');
         $demoJson.html('操作正在进行中，请稍候再试！');
         return;
     }
@@ -169,7 +160,6 @@ $('#demo-photo-url').change(function () {
 // 检测按钮事件
 $('#scan-photo').click(function () {
     if (isScanning) {
-        // new AlertModal('操作正在进行中，请稍候再试！');
         $demoJson.html('操作正在进行中，请稍候再试！');
         return;
 
@@ -209,7 +199,6 @@ $demoCardList.each(function (index, item) {
 // 绑定实例图点击事件
 $demoCardList.click(function () {
     if (isScanning) {
-        // new AlertModal('操作正在进行中，请稍候再试！');
         $demoJson.html('操作正在进行中，请稍候再试！');
         return;
     }
