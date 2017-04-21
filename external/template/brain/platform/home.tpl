@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/home.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/home.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1492602425/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1492773116/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -314,12 +314,12 @@
             </div>
         </li>
         <li>
-            <div class="banner-item" target="_blank">
+            <div class="banner-item">
                 <h1>&nbsp;</h1>
                 <p>只要搭载DuerOS系统的智能设备都能够直接与用户开口对话<br>
                     让用户获取所求</p>
                 <div>
-                    <a href="http://duer.baidu.com" class="get-started">了解详情</a>
+                    <a target="_blank" href="http://duer.baidu.com" class="get-started">了解详情</a>
                 </div>
             </div>
         </li>
@@ -328,7 +328,7 @@
                 <h1>独家合作&nbsp;应用免费推广服务</h1>
                 <p>百度手机助手&百度开发者平台</p>
                 <div>
-                    <button href="/impel/showBanner?mainkey=introagent&frompos=000022" class="get-started">了解详情</button>
+                    <a target="_blank" href="http://app.baidu.com/impel/showBanner?mainkey=introagent&frompos=000022" class="get-started">了解详情</a>
                 </div>
             </div>
         </li>
@@ -342,7 +342,7 @@
                     免费试用
                 </a>
             </div>
-            <video src="//ai.bdstatic.com/dist/1492602425/ai_images/home/banner-1.mp4">
+            <video src="//ai.bdstatic.com/dist/1492773116/ai_images/home/banner-1.mp4">
             </video>
         </li> -->
     </ul>
@@ -746,7 +746,7 @@
                     <img alt="百度语音基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1492602425/ai_images/home/video-1.png">
+                         src="//ai.bdstatic.com/dist/1492773116/ai_images/home/video-1.png">
                 </a>
                 <h5>百度语音基础介绍及应用场景</h5>
             </li>
@@ -756,7 +756,7 @@
                     <img alt="百度OCR基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1492602425/ai_images/home/video-2.png">
+                         src="//ai.bdstatic.com/dist/1492773116/ai_images/home/video-2.png">
                 </a>
                 <h5>百度OCR基础介绍及应用场景</h5>
             </li>
@@ -766,7 +766,7 @@
                     <img alt="百度人脸技术基础介绍及引用场景"
                         width="500"
                         height="280"
-                        src="//ai.bdstatic.com/dist/1492602425/ai_images/home/video-3.png">
+                        src="//ai.bdstatic.com/dist/1492773116/ai_images/home/video-3.png">
                 </a>
                 <h5>百度人脸技术基础介绍及引用场景</h5>
             </li>
@@ -777,7 +777,7 @@
                     <img alt="百度翻译产品介绍"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1492602425/ai_images/home/video-4.png">
+                         src="//ai.bdstatic.com/dist/1492773116/ai_images/home/video-4.png">
                 </a>
                 <h5>百度翻译产品介绍</h5>
             </li>
@@ -918,8 +918,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1492602425/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1492602425/js/home.js"></script>
+<script src="//ai.bdstatic.com/dist/1492773116/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1492773116/js/home.js"></script>
 
 <script>
     (function () {
