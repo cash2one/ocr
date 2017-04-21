@@ -58,10 +58,67 @@ app.use('/tech/nlp', require('./router/nlp'));
 app.use('/tech/video', require('./router/video'));
 app.use('/tech/face', require('./router/face'));
 app.use('/tech/ocr', require('./router/ocr'));
+app.use('/tech/anti', require('./router/anti'));
+app.use('/', require('./router/aiDemo'));
+
+app.get('/sdk', (req, res, next) => {
+    fs.readFile(
+        path.join(__dirname, 'mock', 'sdk.json'),
+        (err, data) => {
+            if (err) {
+                next();
+
+                return;
+            }
+
+            renderSmarty(
+                'sdk/sdk.tpl',
+                getMockData({
+                    sdk: JSON.parse(data.toString())
+                })
+            ).then(
+                content => {
+                    res
+                        .type('html')
+                        .end(content);
+                },
+                next
+            );
+        }
+    );
+});
 
 app.get('/tech/speech', (req, res, next) => {
     renderSmarty(
         'secondary/speech.tpl',
+        getMockData({})
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
+
+app.get('/tech/nlp', (req, res, next) => {
+    renderSmarty(
+        'secondary/nlp.tpl',
+        getMockData({})
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
+
+app.get('/tech/antiporn', (req, res, next) => {
+    renderSmarty(
+        'technology/antiporn.tpl',
         getMockData({})
     ).then(
         content => {

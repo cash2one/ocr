@@ -55,6 +55,10 @@ class Brain_Output {
         echo $strEcho;
     }
 
+    /**
+     * @param $arrPageInfo
+     * @param $strTpl
+     */
     public function htmlOutputNoUser($arrPageInfo, $strTpl) {
         header('Content-Type: text/html; charset=UTF-8');
         $tpl = Bd_TplFactory::getInstance();

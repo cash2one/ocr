@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492140185/css/technology/ocr-general_enhanced.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/technology/ocr-general_enhanced.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1492140185/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1492602425/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -96,10 +96,11 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>黄反识别</span>
+                                <span>图像审核</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/antiporn">黄反识别</a></li>
+                                <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -270,6 +271,12 @@
                {%/if%}">
             </a>
         </div>
+        <div class="product-word">
+            4月30日前开通付费，还有
+            <a class="word-point"
+               href="http://ai.baidu.com/support/news?action=detail&id=131&from=tech">限时优惠&gt;&gt;
+            </a>
+        </div>
     </div>
 </div>
 <div class="tech-section tech-function">
@@ -312,28 +319,28 @@
                 </div>
                 <div class="tech-demo-card-list">
                     <div class="tech-demo-card-item tech-demo-card-active">
-                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/ocr-general_enhanced/demo-card-1.png">
+                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/ocr-general_enhanced/demo-card-1.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/ocr-general_enhanced/demo-card-2.png">
+                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/ocr-general_enhanced/demo-card-2.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/ocr-general_enhanced/demo-card-3.png">
+                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/ocr-general_enhanced/demo-card-3.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/ocr-general_enhanced/demo-card-4.png">
+                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/ocr-general_enhanced/demo-card-4.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/ocr-general_enhanced/demo-card-5.png">
+                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/ocr-general_enhanced/demo-card-5.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/ocr-general_enhanced/demo-card-6.png">
+                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/ocr-general_enhanced/demo-card-6.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/ocr-general_enhanced/demo-card-7.png">
+                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/ocr-general_enhanced/demo-card-7.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1492140185/ai_images/technology/ocr-general_enhanced/demo-card-8.png">
+                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/ocr-general_enhanced/demo-card-8.png">
                     </div>
                 </div>
             </div>
@@ -481,7 +488,8 @@
                     <div class="pric-item-connent pric-item-2">1.如果您的调用量远大于最大的阶梯段，并需要更低的价格；</div>
                     <div class="pric-item-connent pric-item-2">2.如果您需要更高的QPS/并发；</div>
                     <div class="pric-item-connent pric-item-2">3.如果您有其他的OCR要求；</div>
-                    <div class="pric-item-connent pric-item-2">4.如果您对现有的接口/SDK/文档有任何建议意见。</div>
+                    <div class="pric-item-connent pric-item-2">4.如果您需要接口返回文字在图片中的坐标信息；</div>
+                    <div class="pric-item-connent pric-item-2">5.如果您对现有的接口/SDK/文档有任何建议意见。</div>
                 </div>
             </div>
             <div class="product-form-3">
@@ -511,7 +519,6 @@
         </div>
     </div>
 </div>
-{%if $userInfo eq Null%}
 <div class="tech-section get-started tech-free">
     <div class="ai-container">
         <div class="tech-free-title">快速提交您的需求</div>
@@ -523,14 +530,13 @@
                data-operation="cooperation"
                {%else%}
                class="btn-primary large"
-               href="mailto://ai@baidu.com"
+               href="mailto:ai@baidu.com"
                {%/if%}>
-                商务合作
+                合作咨询
             </a>
         </div>
     </div>
 </div>
-{%/if%}
 {%if $src eq Null%}
 <div class="tech-section tech-guide">
     <div class="ai-container">
@@ -648,8 +654,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1492140185/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1492140185/js/technology/ocr-general_enhanced.js"></script>
+<script src="//ai.bdstatic.com/dist/1492602425/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1492602425/js/technology/ocr-general_enhanced.js"></script>
 
 <script>
     (function () {

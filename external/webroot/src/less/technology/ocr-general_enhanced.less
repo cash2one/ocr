@@ -15,6 +15,9 @@
 // 调用通用的banner模块
 .@{prefix}-banner {
     .banner(@page-name: ocr-general_enhanced);
+    &-title {
+        padding: 30px 0 10px;
+    }
     .tech-docs {
         display: inline-block;
         vertical-align: top;
@@ -22,6 +25,12 @@
         height: 40px;
         background: url('../../../ai_images/icons/tech-docs.png') no-repeat center center;
         background-size: 82px 15px;
+    }
+    .tech-billing {
+        margin-top: 20px;
+        &-btn {
+            color: #f00;
+        }
     }
 }
 // 调用通用的tech-feature模块
@@ -393,4 +402,7 @@
 
 .@{prefix}-product {
     .tech-product(@wrapper-height: 320px; @pric-1-row: 6;@pric-3-num: 2;@pric-3-row: 2);
+    .pric-item-2 {
+        line-height: 30px;
+    }
 }

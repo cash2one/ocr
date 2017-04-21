@@ -64,8 +64,9 @@ aside.aside-action {
                 .icon(@template-png, -65px, -22px);
             }
 
-            &.feedback > a:after {
-                background: url(../../../ai_images/icons/communication-icon.png) center;
+            .ai-consulting-group-btn {
+                height: 100%;
+                background: url(../../../ai_images/icons/ai-qq-group.png) center no-repeat;
                 background-size: 20px 20px;
             }
 
@@ -78,4 +79,41 @@ aside.aside-action {
             }
         }
     }
+}
+.ai-consulting-group {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 45px;
+    width: 150px;
+    height: 280px;
+    background: #0073eb;
+    &-item {
+        position: relative;
+        box-sizing: border-box;
+        height: 40px;
+        line-height: 20px;
+        text-align: center;
+        color: #fff;
+        border-bottom: 1px solid #0e1b56;
+        a {
+            display: block;
+        }
+    }
+    &-item:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -20px;
+        border: 10px solid transparent;
+        border-left-color: #0073eb;
+
+    }
+    &-item:hover {
+        background-color: #0e1b56;
+    }
+}
+.ai-consulting-group:hover,
+.feedback:hover .ai-consulting-group {
+    display: inline-block;
 }

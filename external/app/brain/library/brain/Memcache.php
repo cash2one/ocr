@@ -86,7 +86,7 @@ class Brain_Memcache {
     public static function delete($k)
     {
         $mc = Brain_Memcache::get_connect();
-        $ret = $mc->get($k);
+        $ret = $mc->delete($k);
 
         return $ret;
     }

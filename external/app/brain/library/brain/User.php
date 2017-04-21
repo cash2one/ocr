@@ -22,9 +22,9 @@ class Brain_User
     {
 
         $userInfo = Bd_Passport::checkUserLogin();
-        $result = array();
+        $result = null;
         $host = $_SERVER['HTTP_HOST'];
-        if ($userInfo == false && strpos($host, "ai")) {
+        if ($userInfo == false && strpos($host, "ai") !== false) {
             try {
                 $arrServers = Bd_Conf::getAppConf('uc_info/host');
                 $intAppid = Bd_Conf::getAppConf('uc_info/appId');
@@ -44,6 +44,7 @@ class Brain_User
                     $ucId = (string)$objCheckRes->getUcid();
                 }
                 if ($ucId && $ucId != 0) {
+                    $result = array();
                     $result['uid'] = $ucId;
                     $result['uname'] = (string)$objCheckRes->getUsername();
                     $result['type'] = 2;
@@ -51,7 +52,8 @@ class Brain_User
 
             } catch (Exception $e) {
             }
-        } else {
+        } else if ($userInfo !== false) {
+            $result = array();
             $result['uid'] = $userInfo['uid'];
             $result['uname'] = iconv('gb2312', 'utf-8', $userInfo['uname']);
             $result['type'] = 1;
@@ -69,7 +71,11 @@ class Brain_User
 
             }
         }
-        return $result;
+        if ($result == null || empty($result)) {
+            return;
+        } else {
+            return $result;
+        }
     }
 
     /**
