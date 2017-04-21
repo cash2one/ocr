@@ -8,6 +8,7 @@ class Controller_Product extends Ap_Controller_Abstract {
     public $actions = array(
 
         'antiporn' => 'actions/page/product/Antiporn.php',
+        'anti' => 'actions/page/product/Anti.php',
         'face'     => 'actions/page/product/Face.php',
         'nlp'      => 'actions/page/product/Nlp.php',
         'ocr'      => 'actions/page/product/Ocr.php',
