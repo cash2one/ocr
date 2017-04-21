@@ -31,6 +31,7 @@
 .@{prefix}-content {
     margin-top: 30px;
     .container {
+        display: table;
         width: 1150px;
         &:after {
             content: ' ';
@@ -43,6 +44,8 @@
         }
     }
     .@{prefix}-list {
+        position: relative;
+        display: table-cell;
         width: 845px;
         min-height: 200px;
         padding-right: 20px;
@@ -102,13 +105,21 @@
                     display: block;
                     background: url(../../../../ai_images/support/news/news-list/more-hover.png) no-repeat;
                 }
+
             }
+        }
+        .pg {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
         }
     }
     .tag-list {
-        position: absolute;
+        position: relative;
+        display: table-cell;
         right: 0;
-        top: 20px;
+        left: 40px;
         width: 245px;
         h3 {
             font-size: 16px;
