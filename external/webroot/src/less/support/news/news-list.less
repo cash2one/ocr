@@ -28,9 +28,30 @@
         text-align: center;
     }
 }
+
+.@{prefix} {
+    &-main-content {
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        bottom: 32px;
+        left: 0;
+        right: 0;
+    }
+
+    &-pg-footer {
+        box-sizing: border-box;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 32px;
+    }
+}
+
 .@{prefix}-content {
     margin-top: 30px;
     .container {
+        display: table;
         width: 1150px;
         &:after {
             content: ' ';
@@ -43,6 +64,8 @@
         }
     }
     .@{prefix}-list {
+        position: relative;
+        display: table-cell;
         width: 845px;
         min-height: 200px;
         padding-right: 20px;
@@ -102,13 +125,15 @@
                     display: block;
                     background: url(../../../../ai_images/support/news/news-list/more-hover.png) no-repeat;
                 }
+
             }
         }
     }
     .tag-list {
-        position: absolute;
+        position: relative;
+        display: table-cell;
         right: 0;
-        top: 20px;
+        left: 40px;
         width: 245px;
         h3 {
             font-size: 16px;

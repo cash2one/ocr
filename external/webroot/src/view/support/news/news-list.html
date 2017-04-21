@@ -6,23 +6,27 @@
 <div class="news-content">
     <div class="container">
         <div class="news-list">
-            {%foreach $newsList as $news%}
-            <div class="news-item">
-                <a href="/support/news?action=detail&amp;id={%$news.id%}">
-                    <h3>{%$news.title%}</h3>
-                    <span class="time">发布日期：{%$news.time|date_format:'%Y-%m-%d %H:%M:%S'%}</span><span class="pv">浏览量：{%$news.pv%}次</span>
-                    <p>{%$news.abs%}</p>
-                    <i class="more"></i>
-                </a>
+            <div class="news-main-content">
+                {%foreach $newsList as $news%}
+                <div class="news-item">
+                    <a href="/support/news?action=detail&amp;id={%$news.id%}">
+                        <h3>{%$news.title%}</h3>
+                        <span class="time">发布日期：{%$news.time|date_format:'%Y-%m-%d %H:%M:%S'%}</span><span class="pv">浏览量：{%$news.pv%}次</span>
+                        <p>{%$news.abs%}</p>
+                        <i class="more"></i>
+                    </a>
+                </div>
+                {%/foreach%}
             </div>
-            {%/foreach%}
-            <div class="pg" data-total="{%$pagination.total%}" data-offset="{%$pagination.offset%}" data-tag="{%$currentTag%}">
-                {%if $pagination.offset gt 1%}
-                <a href="/support/news?tag={%$currentTag%}&amp;offset={%$pagination.offset - 1%}">上一页</a>
-                {%/if%}
-                {%if $pagination.total gt $pagination.offset%}
-                <a href="/support/news?tag={%$currentTag%}&amp;offset={%$pagination.offset + 1%}">下一页</a>
-                {%/if%}
+            <div class="news-pg-footer">
+                <div class="pg" data-total="{%$pagination.total%}" data-offset="{%$pagination.offset%}" data-tag="{%$currentTag%}">
+                    {%if $pagination.offset gt 1%}
+                    <a href="/support/news?tag={%$currentTag%}&amp;offset={%$pagination.offset - 1%}">上一页</a>
+                    {%/if%}
+                    {%if $pagination.total gt $pagination.offset%}
+                    <a href="/support/news?tag={%$currentTag%}&amp;offset={%$pagination.offset + 1%}">下一页</a>
+                    {%/if%}
+                </div>
             </div>
         </div>
         <div class="tag-list">
