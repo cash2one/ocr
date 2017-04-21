@@ -25,14 +25,16 @@
             {%/foreach%}
         </div>
     </div>
-    <div class="news-pg-container">
-        <div class="pg" data-total="{%$pagination.total%}" data-offset="{%$pagination.offset%}" data-tag="{%$currentTag%}">
-            {%if $pagination.offset gt 1%}
-            <a href="/support/news?tag={%$currentTag%}&amp;offset={%$pagination.offset - 1%}">上一页</a>
-            {%/if%}
-            {%if $pagination.total gt $pagination.offset%}
-            <a href="/support/news?tag={%$currentTag%}&amp;offset={%$pagination.offset + 1%}">下一页</a>
-            {%/if%}
+    <div class="container">
+        <div class="news-pg-container">
+            <div class="pg" data-total="{%$pagination.total%}" data-offset="{%$pagination.offset%}" data-tag="{%$currentTag%}">
+                {%if $pagination.offset gt 1%}
+                <a href="/support/news?tag={%$currentTag%}&amp;offset={%$pagination.offset - 1%}">上一页</a>
+                {%/if%}
+                {%if $pagination.total gt $pagination.offset%}
+                <a href="/support/news?tag={%$currentTag%}&amp;offset={%$pagination.offset + 1%}">下一页</a>
+                {%/if%}
+            </div>
         </div>
     </div>
 </div>
