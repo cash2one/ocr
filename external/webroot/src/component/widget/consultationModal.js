@@ -123,8 +123,9 @@ export default class ConsultationModal extends Modal {
             const form = $('#consult-form');
             const inputsToCheck = [
                 'input[name=company]', 'input[name=username]',
-                'input[name=phone]', 'input[name=siteUrl]',
-                '[name=requirement]', 'input[name=code]'
+                'input[name=phone]', 'input[name=mail]',
+                'input[name=siteUrl]', '[name=requirement]',
+                'input[name=code]'
             ];
 
             // 清楚错误提示
@@ -158,6 +159,7 @@ export default class ConsultationModal extends Modal {
                             company: form.find('input[name=company]').val(),
                             username: form.find('input[name=username]').val(),
                             phone: form.find('input[name=phone]').val(),
+                            mail: form.find('input[name=mail]').val(),
                             trade: form.find('input[name=trade]').val(),
                             siteUrl: form.find('input[name=siteUrl]').val(),
                             business: form.find('textarea[name=business]').val(),

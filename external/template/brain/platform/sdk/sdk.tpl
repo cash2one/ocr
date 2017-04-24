@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/sdk/sdk.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/sdk/sdk.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1492602425/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1492773116/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -283,23 +283,24 @@
     </div>
     <div class="sdk-main">
         <div class="sdk-category">
-            <a name="sdk-category-bs"><div class="sdk-category-name">百度语音</div></a>
+            <a name="sdk-category-bs"><div class="sdk-category-name">百度语音-语音识别</div></a>
             <div class="sdk-collection">
                 <div class="sdk-item-container">
                     <div class="sdk-item">
                         <i class="sdk-language-sprite sdk-android"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bs"></i>
-                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/bd_speech_sdk_asr_v2.1.20.20160623_e3e63ce_beta.zip">
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/bd_speech_sdk_asr_v2.1.21.20170112_3ad14de_beta.zip">
                                 <div class="sdk-download-button">下载</div>
+
                             </a>
                         </div>
                         <div class="sdk-info">
                             <div class="sdk-item-name">离在线融合SDK</div>
                             <div class="sdk-description">含唤醒功能及常用离线指令</div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 2.1.20</div>
-                                <div class="sdk-update-date">发布时间: 2016-06-24</div>
+                                <div class="sdk-version">版本: 2.1.21</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-16</div>
                             </div>
                         </div>
                     </div>
@@ -447,7 +448,7 @@
                         <i class="sdk-language-sprite sdk-android"></i>
                         <div class="sdk-item-aside">
                             <i class="sdk-category-icon sdk-bs"></i>
-                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/bd_speech_sdk_tts_v2.2.9.20161020_154fa02_release.zip">
+                            <a href="http://bos.nj.bpc.baidu.com/v1/audio/Baidu-TTS-Android-2.3.0-2017-01-23_11.48.57.zip">
                                 <div class="sdk-download-button">下载</div>
                             </a>
                         </div>
@@ -455,8 +456,8 @@
                             <div class="sdk-item-name">离在线融合SDK</div>
                             <div class="sdk-description"></div>
                             <div class="sdk-bottom-info">
-                                <div class="sdk-version">版本: 2.2.9</div>
-                                <div class="sdk-update-date">发布时间: 2016-10-20</div>
+                                <div class="sdk-version">版本: 2.3.0</div>
+                                <div class="sdk-update-date">发布时间: 2017-01-23</div>
                             </div>
                         </div>
                     </div>
@@ -821,8 +822,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1492602425/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1492602425/js/sdk/sdk.js"></script>
+<script src="//ai.bdstatic.com/dist/1492773116/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1492773116/js/sdk/sdk.js"></script>
 
 <script>
     (function () {

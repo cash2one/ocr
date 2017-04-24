@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/technology/ocr-bankcard.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/technology/ocr-bankcard.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1492602425/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1492773116/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -270,7 +270,11 @@
             </a>
         </div>
         <div class="product-word">
-            每月<span class="word-point">15000</span>次免费调用量，开通付费后用量<span class="word-point">不再设限！</span>
+            4月30日前开通付费，即享
+            <a target="_blank"
+               class="word-point"
+               href="http://ai.baidu.com/support/news?action=detail&id=131&from=tech">限时优惠&gt;&gt;
+            </a>
         </div>
     </div>
 </section>
@@ -309,22 +313,22 @@
                 <p class="demo-desc">提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片，图片大小不超过2M，长边不超过2048像素。为保证正常识别效果，请保持银行卡正面向上，并为图片主体部分。</p>
                 <ul class="demo-card-list clear-float">
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/ocr-bankcard/demo-card-1.png">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/ocr-bankcard/demo-card-1.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/ocr-bankcard/demo-card-2.png">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/ocr-bankcard/demo-card-2.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/ocr-bankcard/demo-card-3.png">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/ocr-bankcard/demo-card-3.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/ocr-bankcard/demo-card-4.png">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/ocr-bankcard/demo-card-4.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/ocr-bankcard/demo-card-5.png">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/ocr-bankcard/demo-card-5.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/ocr-bankcard/demo-card-6.png">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/ocr-bankcard/demo-card-6.png">
                     </li>
                 </ul>
             </div>
@@ -642,8 +646,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1492602425/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1492602425/js/technology/ocr-bankcard.js"></script>
+<script src="//ai.bdstatic.com/dist/1492773116/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1492773116/js/technology/ocr-bankcard.js"></script>
 
 <script>
     (function () {

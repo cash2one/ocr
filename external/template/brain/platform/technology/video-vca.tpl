@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/technology/video-vca.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/technology/video-vca.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1492602425/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1492773116/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -261,10 +261,10 @@
             <a role="button"
                {%if $src eq Null%}
                class="btn-primary media ai-redirect"
-               href="https://cloud.baidu.com/product/apply/vca.html?from=ai&service=VCA"
+               href="https://cloud.baidu.com/survey/VCAApply.html?from=ai"
                {%else%}
                class="btn-primary media"
-               href="/product/apply/vca.html?service=VCA"
+               href="/survey/VCAApply.html"
                {%/if%}>
             商务合作
             </a>
@@ -397,10 +397,10 @@
             <a role="button"
                {%if $src eq Null%}
                class="btn-primary large ai-redirect"
-               href="https://cloud.baidu.com/product/apply/vca.html?from=ai&service=VCA"
+               href="https://cloud.baidu.com/survey/VCAApply.html?from=ai"
                {%else%}
                class="btn-primary large"
-               href="/product/apply/vca.html?service=VCA"
+               href="/survey/VCAApply.html"
                {%/if%}>
             商务合作
             </a>
@@ -507,8 +507,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1492602425/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1492602425/js/technology/video-vca.js"></script>
+<script src="//ai.bdstatic.com/dist/1492773116/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1492773116/js/technology/video-vca.js"></script>
 
 <script>
     (function () {

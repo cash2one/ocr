@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/secondary/nlp.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/secondary/nlp.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1492602425/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1492773116/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -396,7 +396,7 @@
                     <div>主要服务：词法分析</div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/nlp/customer-1-1.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/nlp/customer-1-1.png" alt="">
                     </div>
                 </div>
             </div>
@@ -418,7 +418,7 @@
                     <div>主要服务：中文短文本相似度 </div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/nlp/customer-1-2.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/nlp/customer-1-2.png" alt="">
                     </div>
                 </div>
             </div>
@@ -434,7 +434,7 @@
                     <div>主要服务：评论观点抽取</div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/nlp/customer-1-3.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/nlp/customer-1-3.png" alt="">
                     </div>
                 </div>
             </div>
@@ -633,8 +633,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1492602425/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1492602425/js/secondary/nlp.js"></script>
+<script src="//ai.bdstatic.com/dist/1492773116/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1492773116/js/secondary/nlp.js"></script>
 
 <script>
     (function () {

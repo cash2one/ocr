@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/support/news/news-list.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/support/news/news-list.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1492602425/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1492773116/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -253,7 +253,7 @@
     </div>
 </section>
 <div class="news-content">
-    <div class="container">
+    <div class="container news-gallery">
         <div class="news-list">
             {%foreach $newsList as $news%}
             <div class="news-item">
@@ -265,6 +265,17 @@
                 </a>
             </div>
             {%/foreach%}
+        </div>
+        <div class="tag-list">
+            <h3>热门标签</h3>
+            <a href="/support/news" class="{%if $currentTag eq ''%}selected{%/if%}">全部</a>
+            {%foreach $tagList as $tag%}
+            <a href="/support/news?tag={%$tag.id%}" class="{%if $tag.id eq $currentTag%}selected{%/if%}">{%$tag.name%}</a>
+            {%/foreach%}
+        </div>
+    </div>
+    <div class="container">
+        <div class="news-pg-container">
             <div class="pg" data-total="{%$pagination.total%}" data-offset="{%$pagination.offset%}" data-tag="{%$currentTag%}">
                 {%if $pagination.offset gt 1%}
                 <a href="/support/news?tag={%$currentTag%}&amp;offset={%$pagination.offset - 1%}">上一页</a>
@@ -273,13 +284,6 @@
                 <a href="/support/news?tag={%$currentTag%}&amp;offset={%$pagination.offset + 1%}">下一页</a>
                 {%/if%}
             </div>
-        </div>
-        <div class="tag-list">
-            <h3>热门标签</h3>
-            <a href="/support/news" class="{%if $currentTag eq ''%}selected{%/if%}">全部</a>
-            {%foreach $tagList as $tag%}
-            <a href="/support/news?tag={%$tag.id%}" class="{%if $tag.id eq $currentTag%}selected{%/if%}">{%$tag.name%}</a>
-            {%/foreach%}
         </div>
     </div>
 </div>
@@ -395,8 +399,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1492602425/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1492602425/js/support/news/news-list.js"></script>
+<script src="//ai.bdstatic.com/dist/1492773116/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1492773116/js/support/news/news-list.js"></script>
 
 <script>
     (function () {

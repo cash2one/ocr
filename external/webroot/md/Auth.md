@@ -6,13 +6,13 @@
 
 ## 获取Access Token
 
-##### 请求URL数据格式
+**请求URL数据格式**
 
 向授权服务地址`https://aip.baidubce.com/oauth/2.0/token`发送请求（推荐使用POST），并在URL中带上以下参数：
 
-* **grant_type:**     必须参数，固定为“client_credentials”；
-* **client_id:**         必须参数，应用的API Key；
-* **client_secret:**  必须参数，应用的Secret Key；
+* **grant_type：**     必须参数，固定为`client_credentials`；
+* **client_id：**         必须参数，应用的`API Key`；
+* **client_secret：**  必须参数，应用的`Secret Key`；
 
 例如：
 
@@ -23,7 +23,13 @@ https://aip.baidubce.com/oauth/2.0/token?
     client_secret= 0rDSjzQ20XUj5itV7WRtznPQSzr5pVw2&
 ```
 
-##### 服务器返回的JSON文本参数如下：
+**获取access_token示例代码**
+
+{% AccessToken %}
+
+> **说明：**方式一鉴权使用的Access_token必须通过API Key和Secret Key获取。
+
+**服务器返回的JSON文本参数如下：**
 
 - **access_token：**要获取的Access Token；
 - **expires_in：**Access Token的有效期(秒为单位，一般为1个月)；
@@ -42,7 +48,7 @@ https://aip.baidubce.com/oauth/2.0/token?
 }
 ```
 
-##### 若请求错误，服务器将返回的JSON文本包含以下参数：
+**若请求错误，服务器将返回的JSON文本包含以下参数：**
 
 * **error：**错误码；关于错误码的详细信息请参考下方鉴权认证错误码。
 
@@ -70,9 +76,8 @@ https://aip.baidubce.com/oauth/2.0/token?
 
 ## 使用Access Key ID/Secret Access Key的开发者注意
 
-![](bce-ak-sk.png)
 
-如上图中，如果您使用的是“安全认证/Access Key ”中的Access Key ID 和 Secret Access Key的开发者，则不能使用获取Access Token的方式鉴权，具体鉴权认证机制参考“[百度云鉴权认证机制](https://cloud.baidu.com/doc/Reference/AuthenticationMechanism.html)”。
+如果您使用的是“安全认证/Access Key ”中的Access Key ID 和 Secret Access Key的开发者，则不能使用获取Access Token的方式鉴权，具体鉴权认证机制参考“[百度云鉴权认证机制](https://cloud.baidu.com/doc/Reference/AuthenticationMechanism.html)”。
 
 
 
