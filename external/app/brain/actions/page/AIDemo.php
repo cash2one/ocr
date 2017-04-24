@@ -37,8 +37,8 @@ class Action_AIDemo extends Ap_Action_Abstract
         }
 
         if ($strAction == 'api') {
-            /* 
-             * 1. 参数检查 
+            /*
+             * 1. 参数检查
              * */
 
             if (!array_key_exists($demoType, Brain_AIApi::$arrTypelist)) {
@@ -68,9 +68,10 @@ class Action_AIDemo extends Ap_Action_Abstract
 
                 $imageUrl = Brain_Util::getParamAsString($arrInput, 'image_url', '');
                 $image = Brain_Util::getParamAsString($arrInput, 'image', '');
+                $imageFile = $_FILES["image_file"];
 
                 $filter_image = '';
-                if ($imageUrl == '' && $image == '') {
+                if ($imageUrl == '' && $image == '' && empty($imageFile['tmp_name'])) {
                     Brain_Output::jsonOutput(103, '请上传图片或图片URL');
                     return;
                 } else if ($imageUrl != '') {
@@ -117,6 +118,25 @@ class Action_AIDemo extends Ap_Action_Abstract
                         $image, stripos($image, ',') + 1,
                         ceil(Brain_AIApi::MAX_IMAGE_LIMIT / 3) * 4
                     );
+                } else if (!empty($imageFile['tmp_name'])) {
+                    if ($imageFile["error"] > 0) {
+                        Brain_Output::jsonOutput(108, '图片存在问题');
+                        return;
+                    }
+
+                    $image_type = substr($imageFile['type'], stripos($imageFile['type'], "/") + 1);
+                    if (!in_array($image_type, Brain_AIApi::$arrImageType)) {
+                        Brain_Output::jsonOutput(106, '图片类型错误（支持jpg、png、bmp格式）');
+                        return;
+                    }
+
+                    if ($imageFile['size'] > Brain_AIApi::MAX_IMAGE_LIMIT) {
+                        Brain_Output::jsonOutput(105, '图片超过大小限制');
+                        return;
+                    }
+
+                    $image_data = fread(fopen($imageFile['tmp_name'], 'r'), filesize($imageFile['tmp_name']));
+                    $filter_image = chunk_split(base64_encode($image_data));
                 }
 
                 if ($filter_image == '') {
@@ -124,8 +144,8 @@ class Action_AIDemo extends Ap_Action_Abstract
                     return;
                 }
 
-                /* 
-                 * 2. 逻辑处理 
+                /*
+                 * 2. 逻辑处理
                  * */
                 $ret_data = Brain_AIApi::callImageApi($demoType, $filter_image);
                 $this->filterLocation($demoType, $ret_data['data']);
