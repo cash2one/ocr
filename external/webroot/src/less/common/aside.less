@@ -77,6 +77,9 @@ aside.aside-action {
             &.back-top > a:after {
                 .icon(@template-png, -125px, -2px);
             }
+            .ai-consulting-group-item {
+                color: #fff;
+            }
         }
     }
 }
@@ -84,36 +87,38 @@ aside.aside-action {
     position: absolute;
     display: none;
     top: 0;
-    right: 45px;
+    right: 25px;
     width: 150px;
     height: 280px;
-    background: #0073eb;
-    &-item {
-        position: relative;
+    z-index: 9;
+    &-item  {
         box-sizing: border-box;
+        display: inline-block;
+        padding-top: 5px;
         height: 40px;
-        line-height: 20px;
+        width: 130px;
+        background: #0073eb;
         text-align: center;
-        color: #fff;
-        border-bottom: 1px solid #0e1b56;
-        a {
+        font-size: 12px;
+        border-bottom: 1px solid #005fc2;
+        &:hover {
+            background-color: #1681ed;
+        }
+    }
+    &-icon {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        // 利用border来做三角形
+        border: 10px solid transparent;
+        border-left-color: #0073eb;
+    }
+}
+
+.feedback {
+    &:hover {
+        .ai-consulting-group {
             display: block;
         }
     }
-    &-item:nth-child(2)::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: -20px;
-        border: 10px solid transparent;
-        border-left-color: #0073eb;
-
-    }
-    &-item:hover {
-        background-color: #0e1b56;
-    }
-}
-.ai-consulting-group:hover,
-.feedback:hover .ai-consulting-group {
-    display: inline-block;
 }
