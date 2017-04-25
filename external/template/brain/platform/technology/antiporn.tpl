@@ -44,7 +44,8 @@
                     <ul class="sub-top-nav" id="tech-service">
                         <li id="tech-speech">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>语音技术
+                                <span class="tech-title-icon"></span>
+                                <a class="tech-secondary-page" href="/tech/speech">语音技术</a>
                             </div>
                             <div class="sub-tech-title">
                                 <span>语音识别</span>
@@ -99,13 +100,14 @@
                                 <span>图像审核</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/antiporn">黄反识别</a></li>
+                                <li><a href="/tech/antiporn">色情识别</a></li>
                                 <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>自然语言
+                                <span class="tech-title-icon"></span>
+                                <a class="tech-secondary-page" href="/tech/nlp">自然语言</a>
                             </div>
                             <div class="sub-tech-title">
                                 <span>词汇级</span>
@@ -131,7 +133,8 @@
                         </li>
                         <li id="tech-video">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>视频技术
+                                <span class="tech-title-icon"></span>
+                                <a class="tech-secondary-page" href="/tech/video">视频技术</a>
                             </div>
                             <div class="sub-tech-title">
                                 <span>智能视频分析</span>
@@ -249,7 +252,7 @@
 <div class="ai-platform page-content">
     <section class="tech-section tech-banner">
     <div class="container">
-        <h1>黄反识别</h1>
+        <h1>色情识别</h1>
         <p>依托全网海量优质数据和深度神经网络技术，智能鉴别色情图片内容，为您的产品保驾护航。</p>
         <div>
             <a role="button"
@@ -273,7 +276,7 @@
     <div class="container">
         <h2>功能介绍</h2>
         <p>随着互联网的发展，信息量迎来了指数级发展，不可避免的将有大量的色情图片信息充斥其中<br>
-            黄反识别服务可以通过系统识别，给出图片的色情概率，对于高置信度的色情图片快速处理，低置信度的普通图片直接放行或辅助人工审核<br>
+            色情识别服务可以通过系统识别，给出图片的色情概率，对于高置信度的色情图片快速处理，低置信度的普通图片直接放行或辅助人工审核<br>
             从而有效释放图片信息审核压力，大幅降低审核人力成本，及时避免产品涉黄风险</p>
         <div class="tech-intro-detail">
             <div class="scan-box"></div>
@@ -316,28 +319,28 @@
             <div>
                 <ul class="demo-card-list clear-float">
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/antiporn/demo-card-1.jpg">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/antiporn/demo-card-1.jpg" alt=" ">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/antiporn/demo-card-2.jpg">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/antiporn/demo-card-2.jpg" alt=" ">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/antiporn/demo-card-3.jpg">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/antiporn/demo-card-3.jpg" alt=" ">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/antiporn/demo-card-4.jpg">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/antiporn/demo-card-4.jpg" alt=" ">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/antiporn/demo-card-5.jpg">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/antiporn/demo-card-5.jpg" alt=" ">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/antiporn/demo-card-6.jpg">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/antiporn/demo-card-6.jpg" alt=" ">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/antiporn/demo-card-7.jpg">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/antiporn/demo-card-7.jpg" alt=" ">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/antiporn/demo-card-8.jpg">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/antiporn/demo-card-8.jpg" alt=" ">
                     </li>
                 </ul>
             </div>
@@ -400,7 +403,7 @@
             <div class="container">
                 <div class="case-icon"></div>
                 <h2>百度网盘</h2>
-                <p>通过黄反识别服务，百度网盘有效识别出色情视频，避免用户存储大量色情视频，违反国家法规
+                <p>通过色情识别服务，百度网盘有效识别出色情视频，避免用户存储大量色情视频，违反国家法规
                 </p>
             </div>
         </li>
@@ -408,21 +411,21 @@
             <div class="container">
                 <div class="case-icon"></div>
                 <h2>百度图搜</h2>
-                <p>图搜处理的图片大量使用黄反服务，高效识别出色情图片</p>
+                <p>图搜处理的图片大量使用色情服务，高效识别出色情图片</p>
             </div>
         </li>
         <li class="case-item">
             <div class="container">
                 <div class="case-icon"></div>
                 <h2>百度糯米</h2>
-                <p>使用黄反服务，避免糯米用户上传色情图片</p>
+                <p>使用色情服务，避免糯米用户上传色情图片</p>
             </div>
         </li>
         <li class="case-item">
             <div class="container">
                 <div class="case-icon"></div>
                 <h2>百度贴吧</h2>
-                <p>贴吧上用户大量上传图片，使用黄反服务的准确色情识别能力，极大节省人力成本</p>
+                <p>贴吧上用户大量上传图片，使用色情服务的准确色情识别能力，极大节省人力成本</p>
             </div>
         </li>
     </ul>
@@ -469,10 +472,31 @@
             <a id="ai-consult" data-spec="合作咨询"></a>
         </li>
         <li class="feedback">
-            <a data-spec="在线咨询"
-               href="https://ikefu.baidu.com/web/ai-platform"
-               target="_blank"
-               id="feedback-btn"></a>
+            <div class="ai-consulting-group">
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=9fcd4324c68023d2d383dda42ec18318479d74de0c77fa33fe32cf6f98da1abd">
+                    百度大脑咨询QQ群<br>224994340
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=4af05bf8f1a70c8eba04a191e62e9d2b89e0f64111d20a0dfd86f41d391fe498">
+                    百度语音咨询QQ群<br>127072371
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=cb31e007673215fe7ac8898d7b3ea8c111be8448d26b624e4e6fc76b7c5950c5">
+                    文字识别咨询QQ群<br>631977213
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=5a95e619e0e408d8227623efc7d26ff0ab664b40dc8370cff671e145f304ace8">
+                    人脸识别咨询QQ群<br>282744268
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=983e8220ed2d66cb584042050737904d126f619abaf1ca507fee1c04dbb2087d">
+                    黄反识别咨询QQ群<br>375765194
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=fd150428654737d6366a853b2757e2ed37c7950f621b6c806ab3881a155f930d">
+                    视频分析咨询QQ群<br>632473158
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=3db0c036d4292053e6f9792ce4c1f071885848ec4a46ae7ad7d7b3888c41c5b7">
+                    自然语言咨询QQ群<br>632426386
+                </a>
+                <div class="ai-consulting-group-icon"></div>
+            </div>
+            <div id="feedback-btn" class="ai-consulting-group-btn"></div>
         </li>
         <li class="back-top">
             <a data-spec="返回顶部"></a>
