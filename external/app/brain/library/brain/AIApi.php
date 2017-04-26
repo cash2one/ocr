@@ -382,7 +382,7 @@ class Brain_AIApi
             unset($ret_data['log_id']);
             $result['data'] = $ret_data;
         }
-
+        Bd_Log::notice('API_DEMO_RESULT_ERROR_NO_'.$result['errno']);
         return $result;
     }
 
@@ -420,8 +420,7 @@ class Brain_AIApi
         curl_close($ch);
 
         if ($curl_errno > 0) {
-            Bd_Log::warning('Error code > 0, error code:'.$curl_errno);
-            Bd_Log::warning('Output is:'.$output);
+            //Bd_Log::warning('Output is:'.$output);
             return array(
                 'error_code' => $curl_errno,
                 'error_msg' => $curl_error,
