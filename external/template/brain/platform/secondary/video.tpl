@@ -44,18 +44,19 @@
                     <ul class="sub-top-nav" id="tech-service">
                         <li id="tech-speech">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>
-                                <a class="tech-secondary-page" href="/tech/speech">语音技术</a>
+                                <span class="tech-title-icon"></span>语音技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>语音识别</span>
+                                <!--<span>语音识别</span>-->
+                                <a class="tech-secondary-title" href="/tech/speech">语音识别</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/speech/asr">语音识别</a></li>
                                 <li><a href="/tech/speech/wake">语音唤醒</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>语音合成</span>
+                                <!--<span>语音合成</span>-->
+                                <a class="tech-secondary-title" href="/tech/speech">语音合成</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/speech/tts">语音合成</a></li>
@@ -66,7 +67,7 @@
                                 <span class="tech-title-icon"></span>图像技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>文字识别</span>
+                                <span class="tech-secondary-title">文字识别</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/ocr/general">通用文字识别</a></li>
@@ -89,7 +90,7 @@
                                 </li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>人脸识别</span>
+                                <span class="tech-secondary-title">人脸识别</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/face/detect">人脸检测</a></li>
@@ -97,7 +98,7 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>图像审核</span>
+                                <span class="tech-secondary-title">图像审核</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/antiporn">色情识别</a></li>
@@ -106,18 +107,19 @@
                         </li>
                         <li id="tech-nlp">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>
-                                <a class="tech-secondary-page" href="/tech/nlp">自然语言</a>
+                                <span class="tech-title-icon"></span>自然语言
                             </div>
                             <div class="sub-tech-title">
-                                <span>词汇级</span>
+                                <!--<span>词汇级</span>-->
+                                <a class="tech-secondary-title" href="/tech/nlp">词汇级</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/nlp/lexical">词法分析</a></li>
                                 <li><a href="/tech/nlp/word_embedding">中文词向量表示</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>短文本级</span>
+                                <!--<span>短文本级</span>-->
+                                <a class="tech-secondary-title" href="/tech/nlp">短文本级</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/nlp/dnnlm_cn">中文DNN语言模型</a></li>
@@ -125,7 +127,8 @@
                                 <li><a href="/tech/nlp/comment_tag">评论观点抽取</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>机器翻译</span>
+                                <!--<span>机器翻译</span>-->
+                                <a class="tech-secondary-title" href="http://api.fanyi.baidu.com/api/trans/product/index">机器翻译</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="http://api.fanyi.baidu.com/api/trans/product/index" target="_blank">机器翻译平台</a></li>
@@ -133,11 +136,11 @@
                         </li>
                         <li id="tech-video">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>
-                                <a class="tech-secondary-page" href="/tech/video">视频技术</a>
+                                <span class="tech-title-icon"></span>视频技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>智能视频分析</span>
+                                <!--<span>智能视频分析</span>-->
+                                <a class="tech-secondary-title" href="/tech/video">智能视频分析</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/video/vca" target="_blank">视频内容分析VCA</a></li>
@@ -149,7 +152,8 @@
                                 <span class="tech-title-icon"></span>深度学习
                             </div>
                             <div class="sub-tech-title">
-                                <span>PaddlePaddle</span>
+                                <!--<span>PaddlePaddle</span>-->
+                                <a class="tech-secondary-title" href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a></li>
@@ -161,7 +165,8 @@
                                 <span class="tech-title-icon"></span>AR增强现实
                             </div>
                             <div class="sub-tech-title">
-                                <span>AR增强现实</span>
+                                <!--<span>AR增强现实</span>-->
+                                <a class="tech-secondary-title" href="/tech/ar">AR内容平台</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/ar">AR内容平台</a></li>
@@ -173,7 +178,8 @@
                             </div>
                             <div class="tech-title-minor">
                                 <div class="sub-tech-title">
-                                    <span>用户画像</span>
+                                    <!--<span>用户画像</span>-->
+                                    <a class="tech-secondary-title" href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像</a>
                                 </div>
                                 <ul class="tech-list">
                                     <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
@@ -181,7 +187,8 @@
                             </div>
                             <div class="tech-title-minor">
                                 <div class="sub-tech-title">
-                                    <span>推荐云平台</span>
+                                    <!--<span>推荐云平台</span>-->
+                                    <a class="tech-secondary-title" href="http://recsys.baidu.com/" target="_blank">推荐云平台</a>
                                 </div>
                                 <ul class="tech-list">
                                     <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
@@ -276,7 +283,7 @@
         <div class="tech-catalog-gallery">
             <div class="tech-prod-container">
                 <div class="tech-prod-info">
-                    <div class="tech-prod-name">视频内容分析</div>
+                    <div class="tech-prod-name">视频内容分析(VCA)</div>
                     <div class="tech-prod-intro">
                         视频内容的智能分析和提取，自动提取视频中语音、文字、人脸、物体等元素，结合NLP语义理解，输出视频泛标签
                     </div>
@@ -291,7 +298,7 @@
             </div>
             <div class="tech-prod-container">
                 <div class="tech-prod-info">
-                    <div class="tech-prod-name">视频封面选图</div>
+                    <div class="tech-prod-name">视频封面选图(VCS)</div>
                     <div class="tech-prod-intro">
                         基于对视频内容的深度理解，自动选取视频中最具代表性的优质精彩画面，提升封面质量和视频播放量
                     </div>
@@ -316,17 +323,17 @@
                 <div class="tech-case-heading">应用场景</div>
                 <div class="tech-case-item-title">视频搜索和个性化推荐</div>
                 <div class="tech-case-item-info">
-                    <div>对海量历史视频、用户上传的视频，应用视频内容分析服务，实现对视频内容的自动解析，形成视频标签库，建立内<br>容索引，实现智能检索和个性化推荐</div>
-                    <div>
-                        <span class="item-info-head">业务痛点：</span>
-                        <span class="item-info-body">大量的视频因缺乏内容标签，无法被检索，一方面造成用户找不到想要的内容，另一方面视频的播放量无<br>法有效提升。传统的人工分类和标签标注带来更多问题：<br>
-                            1、人力成本高，耗时耗力。2、人工标注存在缺漏错误的情况多。3、新增热门标签，则需要对视频重新标注</span>
+                    <div class="tech-case-item-introduce">对海量历史视频、用户上传的视频，应用视频内容分析服务，实现对视频内容的自动解析，形成视频标签库，建立内容索引，实现智能检索和个性化推荐</div>
+                    <div class="tech-case-item-profess">
+                        业务痛点：
+                        <div class="tech-case-item-body">大量的视频因缺乏内容标签，无法被检索，一方面造成用户找不到想要的内容，另一方面视频的播放量无法有效提升。传统的人工分类和标签标注带来更多问题：<br>
+                            1、人力成本高，耗时耗力。2、人工标注存在缺漏错误的情况多。3、新增热门标签，则需要对视频重新标注。</div>
                     </div>
                     <div>
-                        <span class="item-info-head">如何解决：</span>
-                        <span class="item-info-body">智能视频内容分析技术提供实时服务。上传视频，即可自动识别并输出该视频的标签，标签可直接入库，<br>供视频个性化推荐和内容检索服务使用。极大的节省人力标注成本，提升业务效果</span>
+                        如何解决：
+                        <div class="tech-case-item-body">应用视频内容分析技术，通过上传视频，即可自动识别并输出该视频的标签，标签可直接入库，供视频个性化推荐和内容检索服务使用。极大的节省人力标注成本，提升业务效果</div>
                     </div>
-                    <div>主要服务：视频内容分析</div>
+                    主要服务：<a href="/tech/video/vca">视频内容分析(VCA)</a>
                 </div>
             </div>
         </div>
@@ -335,28 +342,28 @@
                 <div class="tech-case-heading">应用场景</div>
                 <div class="tech-case-item-title">视频智能缩略图</div>
                 <div class="tech-case-item-info">
-                    <div>通过对视频内容的分析，自动截取精彩高质最具代表性画面作为封面，有效解决视频文不对题、封面低质枯燥等问题</div>
-                    <div>
-                        <span class="item-info-head">业务痛点：</span>
-                        <span class="item-info-body">通常使用视频的首帧作为封面，但大多数情况下，首帧封面并不能代表视频的核心内容，且存在无意义、低<br>质、重复等诸多问题。传统的解决办法不能满足业务需求：<br>
-                            1、新视频需要上传者/创作者自行截帧作为精彩封面，大大增加了视频上传的复杂度<br>
-                            2、传统自动封面技术目前大多抽取首帧，或者简单判断图片的清晰度，无法解决内容相关性问题</span>
+                    <div class="tech-case-item-introduce">通过对视频内容的分析，自动截取精彩高质最具代表性画面作为封面，有效解决视频文不对题、封面低质枯燥等问题</div>
+                    <div class="tech-case-item-profess">
+                        业务痛点：
+                        <div class="tech-case-item-body">通常使用视频的首帧作为封面，但大多数情况下，首帧封面并不能代表视频的核心内容，且存在无意义、低质、重复等诸多问题。传统的解决办法不能满足业务需求：
+                            1、新视频需要上传者/创作者自行截帧作为精彩封面，大大增加了视频上传的复杂度
+                            2、传统自动封面技术目前大多抽取首帧，或者简单判断图片的清晰度，无法解决内容相关性问题</div>
                     </div>
                     <div>
-                        <span class="item-info-head">如何解决：</span>
-                        <span class="item-info-body">视频封面选图服务，支持对用户上传的视频实时处理，自动截取精彩高质最具代表性的画面作为封面。快速<br>提升网站整体视觉体验和视频点击量</span>
+                        如何解决：
+                        <div class="tech-case-item-body">视频封面选图服务，支持对用户上传的视频自动处理，智能选取精彩高质最具代表性的画面作为封面。快速提升网站整体视觉体验和视频点击量</div>
                     </div>
-                    <div>主要服务：视频封面选图 </div>
+                    主要服务：<a href="/tech/video/vcs">视频封面选图(VCS)</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="tech-case-option">
         <div class="tech-case-option-btn tech-case-option-btn-1 tech-case-active">
-            对话系统
+            视频个性化推荐
         </div>
         <div class="tech-case-option-btn tech-case-option-btn-2">
-            相似内容推荐
+            视频智能缩略图
         </div>
     </div>
 </div>
@@ -426,6 +433,28 @@
         </div>
     </div>
 </div>
+
+<div class="tech-section get-started tech-free">
+    <div class="ai-container">
+        <div class="tech-free-title">快速提交您的需求</div>
+        <div class="tech-free-info">欢迎各短视频平台、广电行业以及各行业优秀的技术合作伙伴与我们联系<br>
+            一起携手探索更多AI带给我们的更多可能性！</div>
+        <div class="tech-free-btn">
+            <a role="button"
+               {%if $src eq Null%}
+               class="btn-primary large ai-redirect"
+               href="https://cloud.baidu.com/survey/VCAApply.html?from=ai"
+               {%else%}
+               class="btn-primary large"
+               href="/survey/VCAApply.html"
+               {%/if%}>
+            商务合作
+            </a>
+        </div>
+    </div>
+</div>
+{%if $userInfo eq Null%}
+{%/if%}
 
 </div>
 <aside class="aside-action">
