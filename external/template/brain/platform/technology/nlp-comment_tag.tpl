@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/technology/nlp-comment_tag.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/technology/nlp-comment_tag.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1492602425/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1492773116/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -44,7 +44,8 @@
                     <ul class="sub-top-nav" id="tech-service">
                         <li id="tech-speech">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>语音技术
+                                <span class="tech-title-icon"></span>
+                                <a class="tech-secondary-page" href="/tech/speech">语音技术</a>
                             </div>
                             <div class="sub-tech-title">
                                 <span>语音识别</span>
@@ -99,13 +100,14 @@
                                 <span>图像审核</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/antiporn">黄反识别</a></li>
+                                <li><a href="/tech/antiporn">色情识别</a></li>
                                 <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>自然语言
+                                <span class="tech-title-icon"></span>
+                                <a class="tech-secondary-page" href="/tech/nlp">自然语言</a>
                             </div>
                             <div class="sub-tech-title">
                                 <span>词汇级</span>
@@ -131,7 +133,8 @@
                         </li>
                         <li id="tech-video">
                             <div class="tech-title">
-                                <span class="tech-title-icon"></span>视频技术
+                                <span class="tech-title-icon"></span>
+                                <a class="tech-secondary-page" href="/tech/video">视频技术</a>
                             </div>
                             <div class="sub-tech-title">
                                 <span>智能视频分析</span>
@@ -279,14 +282,14 @@
         <div class="nlp-function-list">
             <h2>单条评论观点抽取</h2>
             <p class="list-title">输入单条用户评论</p>
-            <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/nlp-comment/list-1.png">
+            <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/nlp-comment/list-1.png">
             <p class="list-intro">该形式需要用户或者准备demo中一次提供单条评论，评论观点挖掘工具通过对其中的情感观点抽取进行单独的标签展示</p>
             <p class="list-intro">评论观点标签极性包含好评和差评两个极性，不同极性的标签展示可适当通过颜色或其他形式进行区分</p>
         </div>
         <div class="nlp-function-list">
             <h2>产品评论观点挖掘</h2>
             <p class="list-title">输入实体评论集</p>
-            <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/nlp-comment/list-2.png" >
+            <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/nlp-comment/list-2.png" >
             <p class="list-intro">该形式需要用户或者准备demo中一次提供单个实体的若干条评论，通过评论观点抽取工具对每一条评论进行抽取，并最终进行汇总得到实体的总体标签结果进行展示</p>
             <p class="list-intro">评论观点标签极性包含好评和差评两个极性，不同极性的标签展示可适当通过颜色或其他形式进行区分</p>
         </div>
@@ -434,10 +437,31 @@
             <a id="ai-consult" data-spec="合作咨询"></a>
         </li>
         <li class="feedback">
-            <a data-spec="在线咨询"
-               href="https://ikefu.baidu.com/web/ai-platform"
-               target="_blank"
-               id="feedback-btn"></a>
+            <div class="ai-consulting-group">
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=9fcd4324c68023d2d383dda42ec18318479d74de0c77fa33fe32cf6f98da1abd">
+                    百度大脑咨询QQ群<br>224994340
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=4af05bf8f1a70c8eba04a191e62e9d2b89e0f64111d20a0dfd86f41d391fe498">
+                    百度语音咨询QQ群<br>127072371
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=cb31e007673215fe7ac8898d7b3ea8c111be8448d26b624e4e6fc76b7c5950c5">
+                    文字识别咨询QQ群<br>631977213
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=5a95e619e0e408d8227623efc7d26ff0ab664b40dc8370cff671e145f304ace8">
+                    人脸识别咨询QQ群<br>282744268
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=983e8220ed2d66cb584042050737904d126f619abaf1ca507fee1c04dbb2087d">
+                    黄反识别咨询QQ群<br>375765194
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=fd150428654737d6366a853b2757e2ed37c7950f621b6c806ab3881a155f930d">
+                    视频分析咨询QQ群<br>632473158
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=3db0c036d4292053e6f9792ce4c1f071885848ec4a46ae7ad7d7b3888c41c5b7">
+                    自然语言咨询QQ群<br>632426386
+                </a>
+                <div class="ai-consulting-group-icon"></div>
+            </div>
+            <div id="feedback-btn" class="ai-consulting-group-btn"></div>
         </li>
         <li class="back-top">
             <a data-spec="返回顶部"></a>
@@ -525,8 +549,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1492602425/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1492602425/js/technology/nlp-comment_tag.js"></script>
+<script src="//ai.bdstatic.com/dist/1492773116/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1492773116/js/technology/nlp-comment_tag.js"></script>
 
 <script>
     (function () {

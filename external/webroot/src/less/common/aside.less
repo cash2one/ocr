@@ -64,8 +64,9 @@ aside.aside-action {
                 .icon(@template-png, -65px, -22px);
             }
 
-            &.feedback > a:after {
-                background: url(../../../ai_images/icons/communication-icon.png) center;
+            .ai-consulting-group-btn {
+                height: 100%;
+                background: url(../../../ai_images/icons/ai-qq-group.png) center no-repeat;
                 background-size: 20px 20px;
             }
 
@@ -76,6 +77,48 @@ aside.aside-action {
             &.back-top > a:after {
                 .icon(@template-png, -125px, -2px);
             }
+            .ai-consulting-group-item {
+                color: #fff;
+            }
+        }
+    }
+}
+.ai-consulting-group {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 25px;
+    width: 150px;
+    height: 280px;
+    z-index: 9;
+    &-item  {
+        box-sizing: border-box;
+        display: inline-block;
+        padding-top: 5px;
+        height: 40px;
+        width: 130px;
+        background: #0073eb;
+        text-align: center;
+        font-size: 12px;
+        border-bottom: 1px solid #005fc2;
+        &:hover {
+            background-color: #1681ed;
+        }
+    }
+    &-icon {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        // 利用border来做三角形
+        border: 10px solid transparent;
+        border-left-color: #0073eb;
+    }
+}
+
+.feedback {
+    &:hover {
+        .ai-consulting-group {
+            display: block;
         }
     }
 }

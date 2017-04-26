@@ -21,9 +21,9 @@ class Action_Anti extends Ap_Action_Abstract {
 
         $inputKeys = array_keys($arrInput);
         $tech = $inputKeys[0];
-        $templateName = "$tech";
+        $templateName = $tech;
 
-        $arrPageInfo['page'] = $class_name.'_'.$tech;
+        $arrPageInfo['page'] = $tech;
         $arrPageInfo['src'] = 'cloud';
 
         if (in_array($tech, $techList)){
