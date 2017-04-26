@@ -71,8 +71,9 @@ export default class ConsultationModal extends Modal {
                 case 'speech':
                     selectedOption = '语音技术';
                     break;
+                case 'anti':
                 case 'antiporn':
-                    selectedOption = '黄反识别';
+                    selectedOption = '图像审核';
                     break;
                 case 'face':
                     selectedOption = '人脸识别';
@@ -85,7 +86,7 @@ export default class ConsultationModal extends Modal {
 
         this.setContent(applyTpl({
             options: [
-                'OCR文字识别', '人脸识别', '黄反识别', '语音技术',
+                'OCR文字识别', '人脸识别', '图像审核', '语音技术',
                 'NLP自然语言处理', '用户画像', '机器学习', 'AR增强现实',
                 '机器人', '人脸核身', '人脸闸机', '号码风险识别',
                 '我不确定'

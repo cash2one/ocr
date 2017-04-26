@@ -47,7 +47,6 @@
                                 <span class="tech-title-icon"></span>语音技术
                             </div>
                             <div class="sub-tech-title">
-                                <!--<span>语音识别</span>-->
                                 <a class="tech-secondary-title" href="/tech/speech">语音识别</a>
                             </div>
                             <ul class="tech-list">
@@ -55,7 +54,6 @@
                                 <li><a href="/tech/speech/wake">语音唤醒</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <!--<span>语音合成</span>-->
                                 <a class="tech-secondary-title" href="/tech/speech">语音合成</a>
                             </div>
                             <ul class="tech-list">
@@ -110,7 +108,6 @@
                                 <span class="tech-title-icon"></span>自然语言
                             </div>
                             <div class="sub-tech-title">
-                                <!--<span>词汇级</span>-->
                                 <a class="tech-secondary-title" href="/tech/nlp">词汇级</a>
                             </div>
                             <ul class="tech-list">
@@ -118,7 +115,6 @@
                                 <li><a href="/tech/nlp/word_embedding">中文词向量表示</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <!--<span>短文本级</span>-->
                                 <a class="tech-secondary-title" href="/tech/nlp">短文本级</a>
                             </div>
                             <ul class="tech-list">
@@ -127,7 +123,6 @@
                                 <li><a href="/tech/nlp/comment_tag">评论观点抽取</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <!--<span>机器翻译</span>-->
                                 <a class="tech-secondary-title" href="http://api.fanyi.baidu.com/api/trans/product/index">机器翻译</a>
                             </div>
                             <ul class="tech-list">
@@ -139,7 +134,6 @@
                                 <span class="tech-title-icon"></span>视频技术
                             </div>
                             <div class="sub-tech-title">
-                                <!--<span>智能视频分析</span>-->
                                 <a class="tech-secondary-title" href="/tech/video">智能视频分析</a>
                             </div>
                             <ul class="tech-list">
@@ -152,7 +146,6 @@
                                 <span class="tech-title-icon"></span>深度学习
                             </div>
                             <div class="sub-tech-title">
-                                <!--<span>PaddlePaddle</span>-->
                                 <a class="tech-secondary-title" href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a>
                             </div>
                             <ul class="tech-list">
@@ -165,7 +158,6 @@
                                 <span class="tech-title-icon"></span>AR增强现实
                             </div>
                             <div class="sub-tech-title">
-                                <!--<span>AR增强现实</span>-->
                                 <a class="tech-secondary-title" href="/tech/ar">AR内容平台</a>
                             </div>
                             <ul class="tech-list">
@@ -178,7 +170,6 @@
                             </div>
                             <div class="tech-title-minor">
                                 <div class="sub-tech-title">
-                                    <!--<span>用户画像</span>-->
                                     <a class="tech-secondary-title" href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像</a>
                                 </div>
                                 <ul class="tech-list">
@@ -187,7 +178,6 @@
                             </div>
                             <div class="tech-title-minor">
                                 <div class="sub-tech-title">
-                                    <!--<span>推荐云平台</span>-->
                                     <a class="tech-secondary-title" href="http://recsys.baidu.com/" target="_blank">推荐云平台</a>
                                 </div>
                                 <ul class="tech-list">
@@ -399,11 +389,11 @@
                         业务痛点：
                         <div class="tech-case-item-body">人机对话中，若无法准确识别用户意图，会造成返回信息错误或无法满足用户真实需求，从而导致用户体验下降甚至流失</div>
                     </div>
-                    <div>
+                    <div class="tech-case-item-profess">
                         如何解决：
                         <div class="tech-case-item-body">通过中文分词、专名识别等技术，能够准确的识别用户输入内容中体现意图及需求的关键信息，如酒店、餐饮、就医等服务内容，从而为准确判断用户意图提供依据</div>
                     </div>
-                    <div>主要服务：词法分析</div>
+                    <div>主要服务：<a href="http://ai.baidu.com/tech/nlp/lexical">词法分析</a></div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
                         <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/nlp/customer-1-1.png" alt="">
@@ -421,11 +411,11 @@
                         业务痛点：
                         <div class="tech-case-item-body">根据相似内容进行推荐是非常有效的推荐策略，要识别与目标含义相似的内容需要结合多种NLP技术并借助大量样本数据学习建模，技术门槛较高</div>
                     </div>
-                    <div>
+                    <div class="tech-case-item-profess">
                         如何解决：
                         <div class="tech-case-item-body">短文本相似度技术可以快速计算不同文本间的相似程度，从而为目标文本匹配出相似度最高的内容，从而完成相似内容推荐</div>
                     </div>
-                    <div>主要服务：中文短文本相似度 </div>
+                    <div>主要服务：<a href="http://ai.baidu.com/tech/nlp/simnet">中文短文本相似度</a></div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
                         <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/nlp/customer-1-2.png" alt="">
@@ -442,10 +432,11 @@
                     <div class="tech-case-item-profess">业务痛点：
                         <div class="tech-case-item-body">对UGC用户评论内容分析需要结合分词、专名识别、情感识别等多种NLP技术建立识别模型，存在较高技术门槛，对于不具备NLP技术基础的产品只能通过人工标注方式进行评论分析，效率较低</div>
                     </div>
-                    <div>如何解决：
+                    <div class="tech-case-item-profess">
+                        如何解决：
                         <div class="tech-case-item-body">通过评论观点抽取技术，可以接口化支持对海量用户评论数据中的评论主体、评论内容、情感倾向等内容进行快速、准确的识别和抽取，极大提升UGC评论内容分析的效率</div>
                     </div>
-                    <div>主要服务：评论观点抽取</div>
+                    <div>主要服务：<a href="http://ai.baidu.com/tech/nlp/comment_tag">评论观点抽取</a></div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
                         <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/nlp/customer-1-3.png" alt="">

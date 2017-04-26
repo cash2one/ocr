@@ -33,7 +33,7 @@
     .tech-catalog-prods(@n, @i: 1) when (@i <= @n) {
         .tech-prod-poster-@{i} {
             background: url("../../../../ai_images/technology/@{page-name}/sprite/prod-poster-@{i}.png") center center;
-            background-size: 300px 210px;
+            background-size: 300px 230px;
         }
 
         .tech-catalog-prods(@n, (@i + 1));
@@ -48,7 +48,7 @@
         display: inline-block;
         width: @prods-width;
         margin: 0 30px 35px;
-        height: 210px;
+        height: 230px;
         vertical-align: top;
         border: 1px solid #f2f2f2;
         background-color: #fff;
