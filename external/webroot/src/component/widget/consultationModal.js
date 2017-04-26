@@ -123,7 +123,7 @@ export default class ConsultationModal extends Modal {
             const form = $('#consult-form');
             const inputsToCheck = [
                 'input[name=company]', 'input[name=username]',
-                'input[name=phone]', 'input[name=mail]',
+                'input[name=phone]', 'input[name=email]',
                 'input[name=siteUrl]', '[name=requirement]',
                 'input[name=code]'
             ];
@@ -134,10 +134,19 @@ export default class ConsultationModal extends Modal {
 
             for (let i = 0, len = inputsToCheck.length; i < len; i++) {
                 const input = form.find(inputsToCheck[i]);
+                const infoWarning = form.find('.info-warning');
+                const inputVal = input.val().trim();
+                const reg = /([\w\.]+)@([\w\.]+)\.(\w+)/;
 
-                if (!input.val()) {
+                if (!inputVal) {
                     input.addClass('has-error');
-                    form.find('.info-warning').html(input.attr('placeholder'));
+                    infoWarning.html(input.attr('placeholder'));
+                    return false;
+                }
+                // 校验邮箱格式
+                if (input.attr('name') === 'email' && !reg.test(inputVal)) {
+                    input.addClass('has-error');
+                    infoWarning.html('请输入正确的邮箱格式');
                     return false;
                 }
             }
@@ -159,7 +168,7 @@ export default class ConsultationModal extends Modal {
                             company: form.find('input[name=company]').val(),
                             username: form.find('input[name=username]').val(),
                             phone: form.find('input[name=phone]').val(),
-                            email: form.find('input[name=mail]').val(),
+                            email: form.find('input[name=email]').val(),
                             trade: form.find('input[name=trade]').val(),
                             siteUrl: form.find('input[name=siteUrl]').val(),
                             business: form.find('textarea[name=business]').val(),
