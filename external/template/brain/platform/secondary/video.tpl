@@ -47,7 +47,6 @@
                                 <span class="tech-title-icon"></span>语音技术
                             </div>
                             <div class="sub-tech-title">
-                                <!--<span>语音识别</span>-->
                                 <a class="tech-secondary-title" href="/tech/speech">语音识别</a>
                             </div>
                             <ul class="tech-list">
@@ -55,7 +54,6 @@
                                 <li><a href="/tech/speech/wake">语音唤醒</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <!--<span>语音合成</span>-->
                                 <a class="tech-secondary-title" href="/tech/speech">语音合成</a>
                             </div>
                             <ul class="tech-list">
@@ -110,7 +108,6 @@
                                 <span class="tech-title-icon"></span>自然语言
                             </div>
                             <div class="sub-tech-title">
-                                <!--<span>词汇级</span>-->
                                 <a class="tech-secondary-title" href="/tech/nlp">词汇级</a>
                             </div>
                             <ul class="tech-list">
@@ -118,7 +115,6 @@
                                 <li><a href="/tech/nlp/word_embedding">中文词向量表示</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <!--<span>短文本级</span>-->
                                 <a class="tech-secondary-title" href="/tech/nlp">短文本级</a>
                             </div>
                             <ul class="tech-list">
@@ -127,7 +123,6 @@
                                 <li><a href="/tech/nlp/comment_tag">评论观点抽取</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <!--<span>机器翻译</span>-->
                                 <a class="tech-secondary-title" href="http://api.fanyi.baidu.com/api/trans/product/index">机器翻译</a>
                             </div>
                             <ul class="tech-list">
@@ -139,7 +134,6 @@
                                 <span class="tech-title-icon"></span>视频技术
                             </div>
                             <div class="sub-tech-title">
-                                <!--<span>智能视频分析</span>-->
                                 <a class="tech-secondary-title" href="/tech/video">智能视频分析</a>
                             </div>
                             <ul class="tech-list">
@@ -152,7 +146,6 @@
                                 <span class="tech-title-icon"></span>深度学习
                             </div>
                             <div class="sub-tech-title">
-                                <!--<span>PaddlePaddle</span>-->
                                 <a class="tech-secondary-title" href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a>
                             </div>
                             <ul class="tech-list">
@@ -165,7 +158,6 @@
                                 <span class="tech-title-icon"></span>AR增强现实
                             </div>
                             <div class="sub-tech-title">
-                                <!--<span>AR增强现实</span>-->
                                 <a class="tech-secondary-title" href="/tech/ar">AR内容平台</a>
                             </div>
                             <ul class="tech-list">
@@ -178,7 +170,6 @@
                             </div>
                             <div class="tech-title-minor">
                                 <div class="sub-tech-title">
-                                    <!--<span>用户画像</span>-->
                                     <a class="tech-secondary-title" href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像</a>
                                 </div>
                                 <ul class="tech-list">
@@ -187,7 +178,6 @@
                             </div>
                             <div class="tech-title-minor">
                                 <div class="sub-tech-title">
-                                    <!--<span>推荐云平台</span>-->
                                     <a class="tech-secondary-title" href="http://recsys.baidu.com/" target="_blank">推荐云平台</a>
                                 </div>
                                 <ul class="tech-list">
@@ -267,10 +257,15 @@
         </div>
         <div class="tech-banner-btn-list">
             <a role="button"
-               class="btn-primary media ai-redirect"
                target="_blank"
-               href="https://cloud.baidu.com/survey/VCAApply.html?from=ai&aibaiduid=2E6B2AA4C6EEF254517281FA424FE9F5:SL=0:NR=10:FG=1&fromai=1">
-                商务合作
+               {%if $src eq Null%}
+               class="btn-primary media ai-redirect"
+               href="https://cloud.baidu.com/survey/VCAApply.html?from=ai&aibaiduid=2E6B2AA4C6EEF254517281FA424FE9F5:SL=0:NR=10:FG=1&fromai=1"
+               {%else%}
+               class="btn-primary large"
+               href="/survey/VCAApply.html?from=ai&aibaiduid=2E6B2AA4C6EEF254517281FA424FE9F5:SL=0:NR=10:FG=1&fromai=1"
+               {%/if%}>
+            商务合作
             </a>
         </div>
     </div>
@@ -288,9 +283,17 @@
                         视频内容的智能分析和提取，自动提取视频中语音、文字、人脸、物体等元素，结合NLP语义理解，输出视频泛标签
                     </div>
                     <div class="tech-prod-panel">
-                        <a class="ai-redirect"
+                        <a role="button"
+                           target="_blank"
+                           {%if $src eq Null%}
+                           class="btn-primary media ai-redirect"
                            href="https://cloud.baidu.com/survey/VCAApply.html?from=ai&aibaiduid=D81D274072195D15CA29B98290A059CC:FG=1&fromai=1"
-                           target="_blank">立即使用</a>
+                           {%else%}
+                           class="btn-primary large"
+                           href="/survey/VCAApply.html?from=ai&aibaiduid=D81D274072195D15CA29B98290A059CC:FG=1&fromai=1"
+                           {%/if%}>
+                        商务合作
+                        </a>
                         <a href="http://ai.baidu.com/tech/video/vca">了解详情</a>
                     </div>
                 </div>
@@ -298,14 +301,22 @@
             </div>
             <div class="tech-prod-container">
                 <div class="tech-prod-info">
-                    <div class="tech-prod-name">视频封面选图(VCS)</div>
+                    <div class="tech-prod-name">视频封面选图</div>
                     <div class="tech-prod-intro">
                         基于对视频内容的深度理解，自动选取视频中最具代表性的优质精彩画面，提升封面质量和视频播放量
                     </div>
                     <div class="tech-prod-panel">
-                        <a class="ai-redirect"
+                        <a role="button"
+                           target="_blank"
+                           {%if $src eq Null%}
+                           class="btn-primary media ai-redirect"
                            href="https://cloud.baidu.com/survey/VCSApply.html?from=ai&aibaiduid=D81D274072195D15CA29B98290A059CC:FG=1&fromai=1"
-                           target="_blank">立即使用</a>
+                           {%else%}
+                           class="btn-primary large"
+                           href="/survey/VCSApply.html?from=ai&aibaiduid=D81D274072195D15CA29B98290A059CC:FG=1&fromai=1"
+                           {%/if%}>
+                        商务合作
+                        </a>
                         <a href="http://ai.baidu.com/tech/video/vcs">了解详情</a>
                     </div>
                 </div>
@@ -329,11 +340,11 @@
                         <div class="tech-case-item-body">大量的视频因缺乏内容标签，无法被检索，一方面造成用户找不到想要的内容，另一方面视频的播放量无法有效提升。传统的人工分类和标签标注带来更多问题：<br>
                             1、人力成本高，耗时耗力。2、人工标注存在缺漏错误的情况多。3、新增热门标签，则需要对视频重新标注。</div>
                     </div>
-                    <div>
+                    <div class="tech-case-item-profess">
                         如何解决：
                         <div class="tech-case-item-body">应用视频内容分析技术，通过上传视频，即可自动识别并输出该视频的标签，标签可直接入库，供视频个性化推荐和内容检索服务使用。极大的节省人力标注成本，提升业务效果</div>
                     </div>
-                    主要服务：<a href="/tech/video/vca">视频内容分析(VCA)</a>
+                    主要服务：<a href="http://ai.baidu.com/tech/video/vca">视频内容分析(VCA)</a>
                 </div>
             </div>
         </div>
@@ -345,22 +356,22 @@
                     <div class="tech-case-item-introduce">通过对视频内容的分析，自动截取精彩高质最具代表性画面作为封面，有效解决视频文不对题、封面低质枯燥等问题</div>
                     <div class="tech-case-item-profess">
                         业务痛点：
-                        <div class="tech-case-item-body">通常使用视频的首帧作为封面，但大多数情况下，首帧封面并不能代表视频的核心内容，且存在无意义、低质、重复等诸多问题。传统的解决办法不能满足业务需求：
-                            1、新视频需要上传者/创作者自行截帧作为精彩封面，大大增加了视频上传的复杂度
+                        <div class="tech-case-item-body">通常使用视频的首帧作为封面，但大多数情况下，首帧封面并不能代表视频的核心内容，且存在无意义、低质、重复等诸多问题。传统的解决办法不能满足业务需求：<br>
+                            1、新视频需要上传者/创作者自行截帧作为精彩封面，大大增加了视频上传的复杂度<br>
                             2、传统自动封面技术目前大多抽取首帧，或者简单判断图片的清晰度，无法解决内容相关性问题</div>
                     </div>
-                    <div>
+                    <div class="tech-case-item-profess">
                         如何解决：
                         <div class="tech-case-item-body">视频封面选图服务，支持对用户上传的视频自动处理，智能选取精彩高质最具代表性的画面作为封面。快速提升网站整体视觉体验和视频点击量</div>
                     </div>
-                    主要服务：<a href="/tech/video/vcs">视频封面选图(VCS)</a>
+                    主要服务：<a href="http://ai.baidu.com/tech/video/vcs">视频封面选图</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="tech-case-option">
         <div class="tech-case-option-btn tech-case-option-btn-1 tech-case-active">
-            视频个性化推荐
+            视频搜索和推荐
         </div>
         <div class="tech-case-option-btn tech-case-option-btn-2">
             视频智能缩略图
@@ -441,12 +452,13 @@
             一起携手探索更多AI带给我们的更多可能性！</div>
         <div class="tech-free-btn">
             <a role="button"
+               target="_blank"
                {%if $src eq Null%}
                class="btn-primary large ai-redirect"
-               href="https://cloud.baidu.com/survey/VCAApply.html?from=ai"
+               href="https://cloud.baidu.com/survey/VCAApply.html?from=ai&aibaiduid=2E6B2AA4C6EEF254517281FA424FE9F5:SL=0:NR=10:FG=1&fromai=1"
                {%else%}
                class="btn-primary large"
-               href="/survey/VCAApply.html"
+               href="/survey/VCAApply.html?from=ai&aibaiduid=2E6B2AA4C6EEF254517281FA424FE9F5:SL=0:NR=10:FG=1&fromai=1"
                {%/if%}>
             商务合作
             </a>
