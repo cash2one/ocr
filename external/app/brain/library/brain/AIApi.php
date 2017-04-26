@@ -404,12 +404,11 @@ class Brain_AIApi
         curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_COOKIE, 'BDUSS=' . $_COOKIE['BDUSS']);
-
         $header = array(
-            'Host: ai.baidu.com',
+            'Content-Type: application/x-www-form-urlencoded',
         );
         //curl_setopt($ch, CURLOPT_HEADER, true);
-        //curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
 
         $output = curl_exec($ch);
 
