@@ -159,7 +159,7 @@ export default class ConsultationModal extends Modal {
                             company: form.find('input[name=company]').val(),
                             username: form.find('input[name=username]').val(),
                             phone: form.find('input[name=phone]').val(),
-                            mail: form.find('input[name=mail]').val(),
+                            email: form.find('input[name=mail]').val(),
                             trade: form.find('input[name=trade]').val(),
                             siteUrl: form.find('input[name=siteUrl]').val(),
                             business: form.find('textarea[name=business]').val(),

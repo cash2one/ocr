@@ -87,7 +87,7 @@ class Brain_AIApi
         ),
         "face" => array(
             'type' => 'bce',
-            'url' => 'https://aip.baidubce.com/rest/2.0/face/v2/detect',
+            'url' => 'https://aip.baidubce.com/rest/2.0/face/v1/detect',
             'params' => array(
                 'max_face_num' => 20,
                 'face_fields' => 'age,beauty,expression,faceshape,gender,glasses,landmark,race',
@@ -421,8 +421,8 @@ class Brain_AIApi
         curl_close($ch);
 
         if ($curl_errno > 0) {
-            error_log('Error code > 0, error code:'. print_r($curl_errno, true));
-            error_log('Output is:'. print_r($output, true));
+            Bd_Log::warning('Error code > 0, error code:'.$curl_errno);
+            Bd_Log::warning('Output is:'.$output);
             return array(
                 'error_code' => $curl_errno,
                 'error_msg' => $curl_error,

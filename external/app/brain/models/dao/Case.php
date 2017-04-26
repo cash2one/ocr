@@ -148,6 +148,8 @@ class Dao_Case extends Dao_Base {
                     <td>{$data_content['phone']}</td>
                     <th>邮箱:</th>
                     <td>{$data_content['email']}</td>
+                </tr>
+                <tr>
                     <th>行业:</th>
                     <td>{$data_content['trade']}</td>
                 </tr>
