@@ -71,8 +71,9 @@ export default class ConsultationModal extends Modal {
                 case 'speech':
                     selectedOption = '语音技术';
                     break;
+                case 'anti':
                 case 'antiporn':
-                    selectedOption = '黄反识别';
+                    selectedOption = '图像审核';
                     break;
                 case 'face':
                     selectedOption = '人脸识别';
@@ -85,7 +86,7 @@ export default class ConsultationModal extends Modal {
 
         this.setContent(applyTpl({
             options: [
-                'OCR文字识别', '人脸识别', '黄反识别', '语音技术',
+                'OCR文字识别', '人脸识别', '图像审核', '语音技术',
                 'NLP自然语言处理', '用户画像', '机器学习', 'AR增强现实',
                 '机器人', '人脸核身', '人脸闸机', '号码风险识别',
                 '我不确定'
@@ -123,8 +124,9 @@ export default class ConsultationModal extends Modal {
             const form = $('#consult-form');
             const inputsToCheck = [
                 'input[name=company]', 'input[name=username]',
-                'input[name=phone]', 'input[name=siteUrl]',
-                '[name=requirement]', 'input[name=code]'
+                'input[name=phone]', 'input[name=email]',
+                'input[name=siteUrl]', '[name=requirement]',
+                'input[name=code]'
             ];
 
             // 清楚错误提示
@@ -133,10 +135,19 @@ export default class ConsultationModal extends Modal {
 
             for (let i = 0, len = inputsToCheck.length; i < len; i++) {
                 const input = form.find(inputsToCheck[i]);
+                const infoWarning = form.find('.info-warning');
+                const inputVal = input.val().trim();
+                const reg = /([\w\.]+)@([\w\.]+)\.(\w+)/;
 
-                if (!input.val()) {
+                if (!inputVal) {
                     input.addClass('has-error');
-                    form.find('.info-warning').html(input.attr('placeholder'));
+                    infoWarning.html(input.attr('placeholder'));
+                    return false;
+                }
+                // 校验邮箱格式
+                if (input.attr('name') === 'email' && !reg.test(inputVal)) {
+                    input.addClass('has-error');
+                    infoWarning.html('请输入正确的邮箱格式');
                     return false;
                 }
             }
@@ -158,6 +169,7 @@ export default class ConsultationModal extends Modal {
                             company: form.find('input[name=company]').val(),
                             username: form.find('input[name=username]').val(),
                             phone: form.find('input[name=phone]').val(),
+                            email: form.find('input[name=email]').val(),
                             trade: form.find('input[name=trade]').val(),
                             siteUrl: form.find('input[name=siteUrl]').val(),
                             business: form.find('textarea[name=business]').val(),

@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/home.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/home.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1492602425/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1492773116/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -47,14 +47,14 @@
                                 <span class="tech-title-icon"></span>语音技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>语音识别</span>
+                                <a class="tech-secondary-title" href="/tech/speech">语音识别</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/speech/asr">语音识别</a></li>
                                 <li><a href="/tech/speech/wake">语音唤醒</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>语音合成</span>
+                                <a class="tech-secondary-title" href="/tech/speech">语音合成</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/speech/tts">语音合成</a></li>
@@ -65,7 +65,7 @@
                                 <span class="tech-title-icon"></span>图像技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>文字识别</span>
+                                <span class="tech-secondary-title">文字识别</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/ocr/general">通用文字识别</a></li>
@@ -88,7 +88,7 @@
                                 </li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>人脸识别</span>
+                                <span class="tech-secondary-title">人脸识别</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/face/detect">人脸检测</a></li>
@@ -96,10 +96,10 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>图像审核</span>
+                                <span class="tech-secondary-title">图像审核</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/antiporn">黄反识别</a></li>
+                                <li><a href="/tech/antiporn">色情识别</a></li>
                                 <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
@@ -108,14 +108,14 @@
                                 <span class="tech-title-icon"></span>自然语言
                             </div>
                             <div class="sub-tech-title">
-                                <span>词汇级</span>
+                                <a class="tech-secondary-title" href="/tech/nlp">词汇级</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/nlp/lexical">词法分析</a></li>
                                 <li><a href="/tech/nlp/word_embedding">中文词向量表示</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>短文本级</span>
+                                <a class="tech-secondary-title" href="/tech/nlp">短文本级</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/nlp/dnnlm_cn">中文DNN语言模型</a></li>
@@ -123,7 +123,7 @@
                                 <li><a href="/tech/nlp/comment_tag">评论观点抽取</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>机器翻译</span>
+                                <a class="tech-secondary-title" href="http://api.fanyi.baidu.com/api/trans/product/index">机器翻译</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="http://api.fanyi.baidu.com/api/trans/product/index" target="_blank">机器翻译平台</a></li>
@@ -134,7 +134,7 @@
                                 <span class="tech-title-icon"></span>视频技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>智能视频分析</span>
+                                <a class="tech-secondary-title" href="/tech/video">智能视频分析</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/video/vca" target="_blank">视频内容分析VCA</a></li>
@@ -146,7 +146,7 @@
                                 <span class="tech-title-icon"></span>深度学习
                             </div>
                             <div class="sub-tech-title">
-                                <span>PaddlePaddle</span>
+                                <a class="tech-secondary-title" href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a></li>
@@ -158,7 +158,7 @@
                                 <span class="tech-title-icon"></span>AR增强现实
                             </div>
                             <div class="sub-tech-title">
-                                <span>AR增强现实</span>
+                                <a class="tech-secondary-title" href="/tech/ar">AR内容平台</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/ar">AR内容平台</a></li>
@@ -170,7 +170,7 @@
                             </div>
                             <div class="tech-title-minor">
                                 <div class="sub-tech-title">
-                                    <span>用户画像</span>
+                                    <a class="tech-secondary-title" href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像</a>
                                 </div>
                                 <ul class="tech-list">
                                     <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
@@ -178,7 +178,7 @@
                             </div>
                             <div class="tech-title-minor">
                                 <div class="sub-tech-title">
-                                    <span>推荐云平台</span>
+                                    <a class="tech-secondary-title" href="http://recsys.baidu.com/" target="_blank">推荐云平台</a>
                                 </div>
                                 <ul class="tech-list">
                                     <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
@@ -314,12 +314,12 @@
             </div>
         </li>
         <li>
-            <div class="banner-item" target="_blank">
+            <div class="banner-item">
                 <h1>&nbsp;</h1>
                 <p>只要搭载DuerOS系统的智能设备都能够直接与用户开口对话<br>
                     让用户获取所求</p>
                 <div>
-                    <a href="http://duer.baidu.com" class="get-started">了解详情</a>
+                    <a target="_blank" href="http://duer.baidu.com" class="get-started">了解详情</a>
                 </div>
             </div>
         </li>
@@ -328,7 +328,7 @@
                 <h1>独家合作&nbsp;应用免费推广服务</h1>
                 <p>百度手机助手&百度开发者平台</p>
                 <div>
-                    <button href="/impel/showBanner?mainkey=introagent&frompos=000022" class="get-started">了解详情</button>
+                    <a target="_blank" href="http://app.baidu.com/impel/showBanner?mainkey=introagent&frompos=000022" class="get-started">了解详情</a>
                 </div>
             </div>
         </li>
@@ -342,7 +342,7 @@
                     免费试用
                 </a>
             </div>
-            <video src="//ai.bdstatic.com/dist/1492602425/ai_images/home/banner-1.mp4">
+            <video src="//ai.bdstatic.com/dist/1492773116/ai_images/home/banner-1.mp4">
             </video>
         </li> -->
     </ul>
@@ -386,7 +386,9 @@
                 <div class="service-detail">
                     <div class="clear-float">
                         <div class="service-desc">
-                            <h3>语音技术</h3>
+                            <div class="service-desc-title">
+                                语音技术
+                            </div>
                             <p>多场景语音服务支持专家，让你的应用长上耳朵、开口说话</p>
                         </div>
                         <div class="service-icon"></div>
@@ -395,7 +397,7 @@
                     <div class="service-tech-list clear-float">
                         <ul>
                             <li>
-                                <h4>语音识别</h4>
+                                <a class="tech-service-secondary" href="/tech/speech">语音识别</a>
                                 <ul>
                                     <li>
                                         <a href="/tech/speech/asr">语音识别</a>
@@ -406,7 +408,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <h4>语音合成</h4>
+                                <a class="tech-service-secondary" href="/tech/speech">语音合成</a>
                                 <ul>
                                     <li>
                                         <a href="/tech/speech/tts">语音合成</a>
@@ -421,7 +423,7 @@
                 <div class="service-detail">
                     <div class="clear-float">
                         <div class="service-desc">
-                            <h3>图像技术</h3>
+                            <div class="service-desc-title">图像技术</div>
                             <p>基于深度学习算法，智能识别图像中的文字内容和含义、分析人脸图像以及检测图片色情度</p>
                         </div>
                         <div class="service-icon"></div>
@@ -430,7 +432,7 @@
                     <div class="service-tech-list clear-float">
                         <ul>
                             <li>
-                                <h4>文字识别</h4>
+                                <div class="tech-service-secondary">文字识别</div>
                                 <ul>
                                     <li>
                                         <a href="/tech/ocr/general">通用文字识别</a>
@@ -453,7 +455,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <h4>人脸识别</h4>
+                                <div class="tech-service-secondary">人脸识别</div>
                                 <ul>
                                     <li>
                                         <a href="/tech/face/detect">人脸检测</a>
@@ -467,9 +469,9 @@
                                 </ul>
                             </li>
                             <li>
-                                <h4>图像审核</h4>
+                                <div class="tech-service-secondary">图像审核</div>
                                 <ul>
-                                    <li><a href="/tech/antiporn">黄反识别</a></li>
+                                    <li><a href="/tech/antiporn">色情识别</a></li>
                                     <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
                                 </ul>
                             </li>
@@ -481,7 +483,9 @@
                 <div class="service-detail">
                     <div class="clear-float">
                         <div class="service-desc">
-                            <h3>自然语言</h3>
+                            <div class="service-desc-title">
+                                自然语言
+                            </div>
                             <p>基于自然语言处理技术，对人类自然语言进行分析、理解、生成、翻译，实现自然的人机对话交互</p>
                         </div>
                         <div class="service-icon"></div>
@@ -490,7 +494,7 @@
                     <div class="service-tech-list clear-float">
                         <ul>
                             <li>
-                                <h4>词汇级</h4>
+                                <a class="tech-service-secondary" href="/tech/nlp">词汇级</a>
                                 <ul>
                                     <li>
                                         <a href="/tech/nlp/lexical">
@@ -505,7 +509,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <h4>短文本级</h4>
+                                <a class="tech-service-secondary" href="/tech/nlp">短文本级</a>
                                 <ul>
                                     <li>
                                         <a href="/tech/nlp/dnnlm_cn">
@@ -525,7 +529,8 @@
                                 </ul>
                             </li>
                             <li>
-                                <h4>机器翻译</h4>
+                                <a class="tech-service-secondary" href="http://api.fanyi.baidu.com/api/trans/product/index"
+                                   target="_blank">机器翻译</a>
                                 <ul>
                                     <li>
                                         <a href="http://api.fanyi.baidu.com/api/trans/product/index"
@@ -543,7 +548,7 @@
                 <div class="service-detail">
                     <div class="clear-float">
                         <div class="service-desc">
-                            <h3>用户画像</h3>
+                            <div class="service-desc-title">用户画像</div>
                             <p>基于海量互联网数据，利用更大数据分析处理能力，理解用户特征、兴趣偏好，实现精准的用户分析和个性化推荐</p>
                         </div>
                         <div class="service-icon"></div>
@@ -569,7 +574,7 @@
                 <div class="service-detail">
                     <div class="clear-float">
                         <div class="service-desc">
-                            <h3>深度学习</h3>
+                            <div class="service-desc-title">深度学习</div>
                             <p>开放易用的深度学习平台PaddlePaddle，为企业级应用和学术调研提供支持</p>
                         </div>
                         <div class="service-icon"></div>
@@ -597,7 +602,7 @@
                 <div class="service-detail">
                     <div class="clear-float">
                         <div class="service-desc">
-                            <h3>AR增强现实</h3>
+                            <div class="service-desc-title">AR增强现实</div>
                             <p>增强现实技术（Augmented Reality，AR）将虚拟物体融合到现实世界中，创造不一样的感知体验</p>
                         </div>
                         <div class="service-icon"></div>
@@ -618,7 +623,9 @@
                 <div class="service-detail">
                     <div class="clear-float">
                         <div class="service-desc">
-                            <h3>智能视频分析</h3>
+                            <div class="service-desc-title">
+                                智能视频分析
+                            </div>
                             <p>行业首创基于视频内容理解的智能分析服务，实时输出视频分类、
                                 视频TAG、精彩视频封面等
                             </p>
@@ -627,16 +634,21 @@
                     </div>
                     <hr>
                     <div class="service-tech-list clear-float">
-                        <ul class="inline-list">
+                        <ul>
                             <li>
-                                <a href="/tech/video/vca"
-                                   target="_blank">视频内容分析VCA</a>
-                            </li>
-                            <li>
-                                <a href="/tech/video/vcs"
-                                   target="_blank">
-                                    视频封面选图
-                                </a>
+                                <a class="tech-service-secondary" href="/tech/video">视频分析</a>
+                                <ul>
+                                    <li>
+                                        <a href="/tech/video/vca"
+                                           target="_blank">视频内容分析VCA</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/video/vcs"
+                                           target="_blank">
+                                            视频封面选图
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -746,7 +758,7 @@
                     <img alt="百度语音基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1492602425/ai_images/home/video-1.png">
+                         src="//ai.bdstatic.com/dist/1492773116/ai_images/home/video-1.png">
                 </a>
                 <h5>百度语音基础介绍及应用场景</h5>
             </li>
@@ -756,7 +768,7 @@
                     <img alt="百度OCR基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1492602425/ai_images/home/video-2.png">
+                         src="//ai.bdstatic.com/dist/1492773116/ai_images/home/video-2.png">
                 </a>
                 <h5>百度OCR基础介绍及应用场景</h5>
             </li>
@@ -766,7 +778,7 @@
                     <img alt="百度人脸技术基础介绍及引用场景"
                         width="500"
                         height="280"
-                        src="//ai.bdstatic.com/dist/1492602425/ai_images/home/video-3.png">
+                        src="//ai.bdstatic.com/dist/1492773116/ai_images/home/video-3.png">
                 </a>
                 <h5>百度人脸技术基础介绍及引用场景</h5>
             </li>
@@ -777,7 +789,7 @@
                     <img alt="百度翻译产品介绍"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1492602425/ai_images/home/video-4.png">
+                         src="//ai.bdstatic.com/dist/1492773116/ai_images/home/video-4.png">
                 </a>
                 <h5>百度翻译产品介绍</h5>
             </li>
@@ -827,10 +839,31 @@
             <a id="ai-consult" data-spec="合作咨询"></a>
         </li>
         <li class="feedback">
-            <a data-spec="在线咨询"
-               href="https://ikefu.baidu.com/web/ai-platform"
-               target="_blank"
-               id="feedback-btn"></a>
+            <div class="ai-consulting-group">
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=9fcd4324c68023d2d383dda42ec18318479d74de0c77fa33fe32cf6f98da1abd">
+                    百度大脑咨询QQ群<br>224994340
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=4af05bf8f1a70c8eba04a191e62e9d2b89e0f64111d20a0dfd86f41d391fe498">
+                    百度语音咨询QQ群<br>127072371
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=cb31e007673215fe7ac8898d7b3ea8c111be8448d26b624e4e6fc76b7c5950c5">
+                    文字识别咨询QQ群<br>631977213
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=5a95e619e0e408d8227623efc7d26ff0ab664b40dc8370cff671e145f304ace8">
+                    人脸识别咨询QQ群<br>282744268
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=983e8220ed2d66cb584042050737904d126f619abaf1ca507fee1c04dbb2087d">
+                    黄反识别咨询QQ群<br>375765194
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=fd150428654737d6366a853b2757e2ed37c7950f621b6c806ab3881a155f930d">
+                    视频分析咨询QQ群<br>632473158
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=3db0c036d4292053e6f9792ce4c1f071885848ec4a46ae7ad7d7b3888c41c5b7">
+                    自然语言咨询QQ群<br>632426386
+                </a>
+                <div class="ai-consulting-group-icon"></div>
+            </div>
+            <div id="feedback-btn" class="ai-consulting-group-btn"></div>
         </li>
         <li class="back-top">
             <a data-spec="返回顶部"></a>
@@ -918,8 +951,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1492602425/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1492602425/js/home.js"></script>
+<script src="//ai.bdstatic.com/dist/1492773116/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1492773116/js/home.js"></script>
 
 <script>
     (function () {

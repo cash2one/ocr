@@ -146,6 +146,10 @@ class Dao_Case extends Dao_Base {
                 <tr>
                     <th>联系电话:</th>
                     <td>{$data_content['phone']}</td>
+                    <th>邮箱:</th>
+                    <td>{$data_content['email']}</td>
+                </tr>
+                <tr>
                     <th>行业:</th>
                     <td>{$data_content['trade']}</td>
                 </tr>

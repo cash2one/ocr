@@ -116,6 +116,19 @@ app.get('/tech/nlp', (req, res, next) => {
     );
 });
 
+app.get('/tech/video', (req, res, next) => {
+    renderSmarty(
+        'secondary/video.tpl',
+        getMockData({})
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
 app.get('/tech/antiporn', (req, res, next) => {
     renderSmarty(
         'technology/antiporn.tpl',

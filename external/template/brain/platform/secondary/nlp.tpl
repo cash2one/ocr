@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492602425/css/secondary/nlp.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/secondary/nlp.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1492602425/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1492773116/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -47,14 +47,14 @@
                                 <span class="tech-title-icon"></span>语音技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>语音识别</span>
+                                <a class="tech-secondary-title" href="/tech/speech">语音识别</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/speech/asr">语音识别</a></li>
                                 <li><a href="/tech/speech/wake">语音唤醒</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>语音合成</span>
+                                <a class="tech-secondary-title" href="/tech/speech">语音合成</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/speech/tts">语音合成</a></li>
@@ -65,7 +65,7 @@
                                 <span class="tech-title-icon"></span>图像技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>文字识别</span>
+                                <span class="tech-secondary-title">文字识别</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/ocr/general">通用文字识别</a></li>
@@ -88,7 +88,7 @@
                                 </li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>人脸识别</span>
+                                <span class="tech-secondary-title">人脸识别</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/face/detect">人脸检测</a></li>
@@ -96,10 +96,10 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>图像审核</span>
+                                <span class="tech-secondary-title">图像审核</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/antiporn">黄反识别</a></li>
+                                <li><a href="/tech/antiporn">色情识别</a></li>
                                 <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
@@ -108,14 +108,14 @@
                                 <span class="tech-title-icon"></span>自然语言
                             </div>
                             <div class="sub-tech-title">
-                                <span>词汇级</span>
+                                <a class="tech-secondary-title" href="/tech/nlp">词汇级</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/nlp/lexical">词法分析</a></li>
                                 <li><a href="/tech/nlp/word_embedding">中文词向量表示</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>短文本级</span>
+                                <a class="tech-secondary-title" href="/tech/nlp">短文本级</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/nlp/dnnlm_cn">中文DNN语言模型</a></li>
@@ -123,7 +123,7 @@
                                 <li><a href="/tech/nlp/comment_tag">评论观点抽取</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>机器翻译</span>
+                                <a class="tech-secondary-title" href="http://api.fanyi.baidu.com/api/trans/product/index">机器翻译</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="http://api.fanyi.baidu.com/api/trans/product/index" target="_blank">机器翻译平台</a></li>
@@ -134,7 +134,7 @@
                                 <span class="tech-title-icon"></span>视频技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>智能视频分析</span>
+                                <a class="tech-secondary-title" href="/tech/video">智能视频分析</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/video/vca" target="_blank">视频内容分析VCA</a></li>
@@ -146,7 +146,7 @@
                                 <span class="tech-title-icon"></span>深度学习
                             </div>
                             <div class="sub-tech-title">
-                                <span>PaddlePaddle</span>
+                                <a class="tech-secondary-title" href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a></li>
@@ -158,7 +158,7 @@
                                 <span class="tech-title-icon"></span>AR增强现实
                             </div>
                             <div class="sub-tech-title">
-                                <span>AR增强现实</span>
+                                <a class="tech-secondary-title" href="/tech/ar">AR内容平台</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/ar">AR内容平台</a></li>
@@ -170,7 +170,7 @@
                             </div>
                             <div class="tech-title-minor">
                                 <div class="sub-tech-title">
-                                    <span>用户画像</span>
+                                    <a class="tech-secondary-title" href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像</a>
                                 </div>
                                 <ul class="tech-list">
                                     <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
@@ -178,7 +178,7 @@
                             </div>
                             <div class="tech-title-minor">
                                 <div class="sub-tech-title">
-                                    <span>推荐云平台</span>
+                                    <a class="tech-secondary-title" href="http://recsys.baidu.com/" target="_blank">推荐云平台</a>
                                 </div>
                                 <ul class="tech-list">
                                     <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
@@ -384,19 +384,19 @@
                 <div class="tech-case-heading">应用场景</div>
                 <div class="tech-case-item-title">对话系统</div>
                 <div class="tech-case-item-info">
-                    <div>在智能对话系统中，通过分词、专名识别等技术，准确判断用户的真实需求，从而提供准确的服务内容</div>
-                    <div>
-                        <span class="item-info-head">业务痛点：</span>
-                        <span class="item-info-body">人机对话中，若无法准确识别用户意图，会造成返回信息错误或无法满足用户真实需求，从而导致用户体验<br>下降甚至流失</span>
+                    <div class="tech-case-item-introduce">在智能对话系统中，通过分词、专名识别等技术，准确判断用户的真实需求，从而提供准确的服务内容</div>
+                    <div class="tech-case-item-profess">
+                        业务痛点：
+                        <div class="tech-case-item-body">人机对话中，若无法准确识别用户意图，会造成返回信息错误或无法满足用户真实需求，从而导致用户体验下降甚至流失</div>
                     </div>
-                    <div>
-                        <span class="item-info-head">如何解决：</span>
-                        <span class="item-info-body">通过中文分词、专名识别等技术，能够准确的识别用户输入内容中体现意图及需求的关键信息，如酒店、餐<br>饮、就医等服务内容，从而为准确判断用户意图提供依据</span>
+                    <div class="tech-case-item-profess">
+                        如何解决：
+                        <div class="tech-case-item-body">通过中文分词、专名识别等技术，能够准确的识别用户输入内容中体现意图及需求的关键信息，如酒店、餐饮、就医等服务内容，从而为准确判断用户意图提供依据</div>
                     </div>
-                    <div>主要服务：词法分析</div>
+                    <div>主要服务：<a href="http://ai.baidu.com/tech/nlp/lexical">词法分析</a></div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/nlp/customer-1-1.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/nlp/customer-1-1.png" alt="">
                     </div>
                 </div>
             </div>
@@ -406,19 +406,19 @@
                 <div class="tech-case-heading">应用场景</div>
                 <div class="tech-case-item-title">相似内容推荐</div>
                 <div class="tech-case-item-info">
-                    <div>通过短文本相似度技术，可以准确的为目标文本匹配含义接近的内容，从而完成相似内容推荐</div>
-                    <div>
-                        <span class="item-info-head">业务痛点：</span>
-                        <span class="item-info-body">根据相似内容进行推荐是非常有效的推荐策略，要识别与目标含义相似的内容需要结合多种NLP技术并借助<br>大量样本数据学习建模，技术门槛较高</span>
+                    <div class="tech-case-item-introduce">通过短文本相似度技术，可以准确的为目标文本匹配含义接近的内容，从而完成相似内容推荐</div>
+                    <div class="tech-case-item-profess">
+                        业务痛点：
+                        <div class="tech-case-item-body">根据相似内容进行推荐是非常有效的推荐策略，要识别与目标含义相似的内容需要结合多种NLP技术并借助大量样本数据学习建模，技术门槛较高</div>
                     </div>
-                    <div>
-                        <span class="item-info-head">如何解决：</span>
-                        <span class="item-info-body">短文本相似度技术可以快速计算不同文本间的相似程度，从而为目标文本匹配出相似度最高的内容，从而完<br>成相似内容推荐</span>
+                    <div class="tech-case-item-profess">
+                        如何解决：
+                        <div class="tech-case-item-body">短文本相似度技术可以快速计算不同文本间的相似程度，从而为目标文本匹配出相似度最高的内容，从而完成相似内容推荐</div>
                     </div>
-                    <div>主要服务：中文短文本相似度 </div>
+                    <div>主要服务：<a href="http://ai.baidu.com/tech/nlp/simnet">中文短文本相似度</a></div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/nlp/customer-1-2.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/nlp/customer-1-2.png" alt="">
                     </div>
                 </div>
             </div>
@@ -428,13 +428,18 @@
                 <div class="tech-case-heading">应用场景</div>
                 <div class="tech-case-item-title">评论聚合</div>
                 <div class="tech-case-item-info">
-                    <div>通过评论观点抽取技术，将能够将特定行业的海量评论内容进行观点抽取和情感分析，从而对产品的口碑、舆情进行有效监控和分析</div>
-                    <div><span class="item-info-head">业务痛点：</span><span class="item-info-body">对UGC用户评论内容分析需要结合分词、专名识别、情感识别等多种NLP技术建立识别模型，存在较高技术<br>门槛，对于不具备NLP技术基础的产品只能通过人工标注方式进行评论分析，效率较低</span></div>
-                    <div><span class="item-info-head">如何解决：</span><span class="item-info-body">通过评论观点抽取技术，可以接口化支持对海量用户评论数据中的评论主体、评论内容、情感倾向等内容进<br>行快速、准确的识别和抽取，极大提升UGC评论内容分析的效率</span></div>
-                    <div>主要服务：评论观点抽取</div>
+                    <div class="tech-case-item-introduce">通过评论观点抽取技术，将能够将特定行业的海量评论内容进行观点抽取和情感分析，从而对产品的口碑、舆情进行有效监控和分析</div>
+                    <div class="tech-case-item-profess">业务痛点：
+                        <div class="tech-case-item-body">对UGC用户评论内容分析需要结合分词、专名识别、情感识别等多种NLP技术建立识别模型，存在较高技术门槛，对于不具备NLP技术基础的产品只能通过人工标注方式进行评论分析，效率较低</div>
+                    </div>
+                    <div class="tech-case-item-profess">
+                        如何解决：
+                        <div class="tech-case-item-body">通过评论观点抽取技术，可以接口化支持对海量用户评论数据中的评论主体、评论内容、情感倾向等内容进行快速、准确的识别和抽取，极大提升UGC评论内容分析的效率</div>
+                    </div>
+                    <div>主要服务：<a href="http://ai.baidu.com/tech/nlp/comment_tag">评论观点抽取</a></div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1492602425/ai_images/technology/nlp/customer-1-3.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/nlp/customer-1-3.png" alt="">
                     </div>
                 </div>
             </div>
@@ -542,10 +547,31 @@
             <a id="ai-consult" data-spec="合作咨询"></a>
         </li>
         <li class="feedback">
-            <a data-spec="在线咨询"
-               href="https://ikefu.baidu.com/web/ai-platform"
-               target="_blank"
-               id="feedback-btn"></a>
+            <div class="ai-consulting-group">
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=9fcd4324c68023d2d383dda42ec18318479d74de0c77fa33fe32cf6f98da1abd">
+                    百度大脑咨询QQ群<br>224994340
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=4af05bf8f1a70c8eba04a191e62e9d2b89e0f64111d20a0dfd86f41d391fe498">
+                    百度语音咨询QQ群<br>127072371
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=cb31e007673215fe7ac8898d7b3ea8c111be8448d26b624e4e6fc76b7c5950c5">
+                    文字识别咨询QQ群<br>631977213
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=5a95e619e0e408d8227623efc7d26ff0ab664b40dc8370cff671e145f304ace8">
+                    人脸识别咨询QQ群<br>282744268
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=983e8220ed2d66cb584042050737904d126f619abaf1ca507fee1c04dbb2087d">
+                    黄反识别咨询QQ群<br>375765194
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=fd150428654737d6366a853b2757e2ed37c7950f621b6c806ab3881a155f930d">
+                    视频分析咨询QQ群<br>632473158
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=3db0c036d4292053e6f9792ce4c1f071885848ec4a46ae7ad7d7b3888c41c5b7">
+                    自然语言咨询QQ群<br>632426386
+                </a>
+                <div class="ai-consulting-group-icon"></div>
+            </div>
+            <div id="feedback-btn" class="ai-consulting-group-btn"></div>
         </li>
         <li class="back-top">
             <a data-spec="返回顶部"></a>
@@ -633,8 +659,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1492602425/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1492602425/js/secondary/nlp.js"></script>
+<script src="//ai.bdstatic.com/dist/1492773116/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1492773116/js/secondary/nlp.js"></script>
 
 <script>
     (function () {
