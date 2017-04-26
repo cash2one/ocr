@@ -244,6 +244,7 @@ header.header-nav {
     .tech-title {
         font-size: @font-size-4;
         margin-bottom: 20px;
+        color: #999;
 
         .tech-title-icon {
             display: inline-block;
@@ -253,14 +254,15 @@ header.header-nav {
             margin-top: 2px;
             margin-right: 10px;
             background-size: 290px / 2 156px / 2;
+            opacity: .5;
         }
     }
 
     .sub-tech-title {
         position: relative;
-        color: #999;
+        color: #fff;
 
-        span {
+        .tech-secondary-title {
             padding: 0 10px 0 30px;
             background-color: @header-background-color;
             position: relative;
@@ -305,12 +307,13 @@ header.header-nav {
 
             & > a {
                 font-size: @font-size-1;
+                position: relative;
                 display: inline-block;
                 height: 26px;
                 padding: 0 10px;
                 width: 105px;
                 line-height: 26px;
-                position: relative;
+                color: #919191;
                 z-index: 1;
 
                 &:active {
