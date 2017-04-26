@@ -382,7 +382,7 @@ class Brain_AIApi
             unset($ret_data['log_id']);
             $result['data'] = $ret_data;
         }
-        Bd_Log::addNotice('API_DEMO_RESULT',$result);
+        Bd_Log::notice('API_DEMO_RESULT_ERROR_NO_'.$result['errno']);
         return $result;
     }
 
