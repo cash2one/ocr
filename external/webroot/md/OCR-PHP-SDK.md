@@ -516,5 +516,5 @@ $result = $apiOcr->idcard(file_get_contents('idcard.jpg'), $isFront, $options);
 | \+\+width        | Uint32 | 表示定位位置的长方形的宽度                            |
 | \+\+height       | Uint32 | 表示定位位置的长方形的高度                            |
 | \+words          | String | 识别结果字符串                                  |
-+\+height       | Uint32 | 表示定位位置的长方形的高度                            |
+| +\+height       | Uint32 | 表示定位位置的长方形的高度                            |
 | \+words          | String | 识别结果字符串                                  |
