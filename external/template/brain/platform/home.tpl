@@ -251,6 +251,15 @@
     <ul class="banner-content">
         <li class="active">
             <div class="banner-item">
+                <h1>人脸接口 更新V2版本</h1>
+                <p>性能大幅提升，功能全面完善<br>致力提供业界最优的人脸识别服务</p>
+                <div>
+                    <a href="/docs#/FACE-API/" class="get-started">了解详情</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="banner-item">
                 <h1>文字识别 计费系统上线</h1>
                 <p>
                     异地容灾，提高响应，降低风险<br>
@@ -287,15 +296,6 @@
         </li>
         <li>
             <div class="banner-item">
-                <h1>人脸查找</h1>
-                <p>为您提供1:N人脸查找匹配服务，帮助您轻松实现，从人脸库中<br>识别用户身份或查找相似人脸</p>
-                <div>
-                    <a href="/tech/face/search" class="get-started">了解详情</a>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="banner-item">
                 <h1>文字识别</h1>
                 <p>基于业界领先的深度学习技术<br>为您提供多场景、多语种、高精度的整体文字检测和识别服务</p>
                 <div>
@@ -323,32 +323,9 @@
                 </div>
             </div>
         </li>
-        <li>
-            <div class="banner-item">
-                <h1>独家合作&nbsp;应用免费推广服务</h1>
-                <p>百度手机助手&百度开发者平台</p>
-                <div>
-                    <a target="_blank" href="http://app.baidu.com/impel/showBanner?mainkey=introagent&frompos=000022" class="get-started">了解详情</a>
-                </div>
-            </div>
-        </li>
-        <!-- <li class="video-bg">
-            <h1>让 AI 变革发生</h1>
-            <p>更全面、优质、易用的人工智能服务<br>即刻开启AI发现之旅</p>
-            <div>
-                <a role="button"
-                   class="get-started ai-redirect"
-                   href="https://console.bce.baidu.com/?fromai=1#/aip/overview">
-                    免费试用
-                </a>
-            </div>
-            <video src="//ai.bdstatic.com/dist/1492773116/ai_images/home/banner-1.mp4">
-            </video>
-        </li> -->
     </ul>
     <ul class="banner-indicator">
         <li class="active"></li>
-        <li></li>
         <li></li>
         <li></li>
         <li></li>

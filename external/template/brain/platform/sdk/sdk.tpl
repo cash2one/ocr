@@ -277,7 +277,7 @@
         <a href="#sdk-category-anti">
             <div class="sdk-nav-item ">
                 <div class="sdk-nav-icon sdk-nav-icon-anti-porn"></div>
-                <span class="sdk-nav-text">黄反识别</span>
+                <span class="sdk-nav-text">色情识别</span>
             </div>
         </a>
     </div>
@@ -696,7 +696,7 @@
             </div>
         </div>
         <div class="sdk-category">
-            <a name="sdk-category-anti"><div class="sdk-category-name">黄反识别</div></a>
+            <a name="sdk-category-anti"><div class="sdk-category-name">色情识别</div></a>
             <div class="sdk-collection">
                 {%foreach $sdk.anti as $sdkItem%}
                 <div class="sdk-item-container">
