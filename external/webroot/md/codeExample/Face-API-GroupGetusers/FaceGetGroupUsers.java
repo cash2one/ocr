@@ -21,7 +21,7 @@ public class GetUsers {
     
     public static void main(String[] args) {
         // 人脸查找——组内用户列表查询 url
-        String getUsersUrl = "https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/group/getusers";
+        String getUsersUrl = "https://aip.baidubce.com/rest/2.0/face/v2/faceset/group/getusers";
         // 请求参数
         // 用户组ID
         String groupId = "test_group_2";

@@ -12,7 +12,7 @@ namespace APIFace
 		public static String delete()
 		{
 			string token = "########";
-			string host = "https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/user/delete?access_token=" + token;
+			string host = "https://aip.baidubce.com/rest/2.0/face/v2/faceset/user/delete?access_token=" + token;
 			Encoding encoding = Encoding.Default;
 			HttpWebRequest request = (HttpWebRequest)WebRequest.Create(host);
 			request.Method = "post";

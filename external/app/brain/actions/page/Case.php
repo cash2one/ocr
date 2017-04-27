@@ -34,6 +34,7 @@ class Action_Case extends Ap_Action_Abstract {
             $strUsername = $dataContent['username'] = Brain_Util::getParamAsString($arrInput, 'username');
             $strCompany = $dataContent['company'] =  Brain_Util::getParamAsString($arrInput, 'company');
             $strPhone = $dataContent['phone'] =  Brain_Util::getParamAsString($arrInput, 'phone');
+            $strEmail = $dataContent['email'] =  Brain_Util::getParamAsString($arrInput, 'email');
             $strContent = $dataContent['content'] =  Brain_Util::getParamAsString($arrInput, 'content');
             $strContactway= $dataContent['contactway'] =  Brain_Util::getParamAsString($arrInput, 'contactWay');
             $strTrade= $dataContent['trade'] =  Brain_Util::getParamAsString($arrInput, 'trade');

@@ -72,9 +72,6 @@
                 &:nth-child(7) {
                     .icon (url('../../ai_images/home/banner-7.png'), center, center);
                 }
-                &:nth-child(8) {
-                    .icon (url('../../ai_images/home/banner-8.png'), center, center);
-                }
 
                 & > .banner-item {
                     color: @white;
@@ -120,9 +117,9 @@
                 }
                 .get-cloud {
                     position: absolute;
-                    left:50%;
-                    top:50%;
-                    transform: translate(-50%,200%);
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, 200%);
                 }
             }
         }
@@ -331,15 +328,15 @@
                 }
                 .service-item-waiting {
                     position: relative;
-                    height: 171px;
-                        .waiting {
-                            position: absolute;
-                            left: 50%;
-                            top: 50%;
-                            transform: translate(-50%,-50%);
-                            font-size: 16px;
-                            color: #999;
-                        }
+                    height: 186px;
+                    .waiting {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 16px;
+                        color: #999;
+                    }
                 }
                 .service-detail {
                     padding: 30px 15px 15px;
@@ -393,7 +390,7 @@
                             margin-left: 80px;
                         }
 
-                        h3 {
+                        &-title {
                             color: #333;
                             font-size: 20px;
                             line-height: 20px;
@@ -416,18 +413,7 @@
                     }
 
                     .service-tech-list {
-                        font-size: @font-size-1;
-
-                        h4 {
-                            display: inline-block;
-                            color: #999;
-                            border-right: 1px solid fadeOut(@black, 95%);
-                            width: 60px;
-                            padding-right: 10px;
-                            text-align: right;
-                            vertical-align: middle;
-                            float: left;
-                        }
+                        font-size: 0;
 
                         & > ul > li {
                             display: block;
@@ -437,14 +423,14 @@
                         ul > li ul {
                             margin-left: 10px;
                             display: inline-block;
-                            vertical-align: middle;
+                            vertical-align: top;
                             width: 280px;
-                            float: left;
+                            font-size: @font-size-1;
                         }
 
                         ul > li li {
                             display: inline-block;
-                            float: left;
+                            vertical-align: top;
                             margin-bottom: 15px;
 
                             & + li {
@@ -465,13 +451,14 @@
                         & > li {
                             margin-right: 10px;
                             display: inline-block;
+                            font-size: @font-size-1;
                             float: left;
                         }
                     }
 
                     a {
                         display: inline-block;
-                        line-height: @font-size-1;
+                        line-height: @font-size-3;
                     }
                 }
 
@@ -481,6 +468,19 @@
                     text-align: center;
                     line-height: 174px;
                     margin: 0;
+                }
+            }
+            .tech-service-secondary {
+                display: inline-block;
+                vertical-align: top;
+                color: #0073eb;
+                border-right: 1px solid fadeOut(@black, 95%);
+                width: 60px;
+                padding-right: 10px;
+                text-align: right;
+                font-size: @font-size-1;
+                &:hover {
+                    color: #1a81ed;
                 }
             }
         }

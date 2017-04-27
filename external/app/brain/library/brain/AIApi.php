@@ -32,6 +32,7 @@ class Brain_AIApi
         'imgsrc.bdimg.com',
         'imgtn.bdimg.com',
         '10.57.6.47',
+        '10.95.106.174:8032'
     );
 
     //api list
@@ -382,7 +383,7 @@ class Brain_AIApi
             unset($ret_data['log_id']);
             $result['data'] = $ret_data;
         }
-
+        Bd_Log::notice('API_DEMO_RESULT_ERROR_NO_'.$result['errno']);
         return $result;
     }
 
@@ -404,12 +405,11 @@ class Brain_AIApi
         curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_COOKIE, 'BDUSS=' . $_COOKIE['BDUSS']);
-
         $header = array(
-            'Host: ai.baidu.com',
+            'Content-Type: application/x-www-form-urlencoded',
         );
         //curl_setopt($ch, CURLOPT_HEADER, true);
-        //curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
 
         $output = curl_exec($ch);
 
@@ -421,6 +421,7 @@ class Brain_AIApi
         curl_close($ch);
 
         if ($curl_errno > 0) {
+            //Bd_Log::warning('Output is:'.$output);
             return array(
                 'error_code' => $curl_errno,
                 'error_msg' => $curl_error,

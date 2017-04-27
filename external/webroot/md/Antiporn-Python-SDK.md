@@ -1,15 +1,15 @@
 # Python SDK文档
 
-本文档主要介绍黄反识别Python SDK的使用，在使用前请先确保已创建应用并具有相应权限。
+本文档主要介绍图像审核服务。在使用本文档前，您需要先了解图像审核服务。
 
-# 安装Python SDK
+# 安装图像审核服务 Python SDK
 
 **Python SDK目录结构**
 
         ├── README.md
         ├── aip                 //SDK目录
         │   ├── __init__.py     //导出类
-        │   ├── antiporn.py     //黄反识别
+        │   ├── antiporn.py     //色情识别
         │   ├── base.py         //aip基类
         │   ├── face.py         //人脸识别
         │   ├── http.py         //http请求
@@ -31,7 +31,7 @@
 
 # 快速入门
 
-基于百度业界领先的图像识别算法，提供图片黄反识别服务。
+图像审核服务，依托百度业界领先的图像识别算法，基于大数据深度学习技术，提供图片色情、性感、正常三个类别的识别服务。
 
 ## 初始化一个AipAntiPorn对象
 
@@ -106,9 +106,9 @@
 | 282204 | image frames limit error | gif总帧数超限    |
 | 282205 | image fromat must gif    | 图片格式错误      |
 
-# 黄反识别
+# 色情识别
 
-检测一张图片是否是黄反图片，示例代码如下：
+检测一张图片是否是色情图片，示例代码如下：
 
 
     # 引入AntiPorn SDK
@@ -127,19 +127,19 @@
         with open(filePath, 'rb') as fp:
             return fp.read()
     
-    # 调用黄反识别接口
+    # 调用色情识别接口
     result = aipAntiPorn.detect(get_file_content('antiporn.jpg'))
 
 
 
 
-**黄反识别 请求参数详情**
+**色情识别 请求参数详情**
 
 | 参数    | 类型     | 描述            | 是否必须 |
 | :---- | :----- | :------------ | :--- |
 | image | String | 图片参数仅支持图片文件内容 | 是    |
 
-**黄反识别 返回数据参数详情**
+**色情识别 返回数据参数详情**
 
 | 参数           | 类型       | 描述                          |
 | :----------- | :------- | :-------------------------- |
@@ -152,7 +152,7 @@
 **返回样例：**
 
 ```json
-// 三分类黄反识别算法
+// 三分类色情识别算法
 // 该分类probability分值越高，表示越趋近于该分类，最大值为1.0
 {
   "log_id": 1744190292,
@@ -176,28 +176,28 @@
 
 # GIF色情图像识别
 
-图片接受类型支持本地图片路径字符串，图片文件二进制数组，此接口只支持gif识别，若非gif接口，请使用[黄反识别](#黄反识别)接口。接口会对图片中每一帧进行识别，并返回所有检测结果中色情值最大的为结果。
+图片接受类型支持本地图片路径字符串，图片文件二进制数组，此接口只支持gif识别，若非gif接口，请使用[色情识别](#色情识别)接口。接口会对图片中每一帧进行识别，并返回所有检测结果中色情值最大的为结果。
 
-```
-# 引入AntiPorn SDK
-from aip import AipAntiPorn
 
-# 定义常量
-APP_ID = '你的 App ID'
-API_KEY = '你的 API Key'
-SECRET_KEY = '你的 Secret Key'
+	# 引入AntiPorn SDK
+	from aip import AipAntiPorn
+	
+	# 定义常量
+	APP_ID = '你的 App ID'
+	API_KEY = '你的 API Key'
+	SECRET_KEY = '你的 Secret Key'
+	
+	# 初始化AipAntiPorn对象
+	aipAntiPorn = AipAntiPorn(APP_ID, API_KEY, SECRET_KEY)
+	
+	# 读取图片
+	def get_file_content(filePath):
+	    with open(filePath, 'rb') as fp:
+	        return fp.read()
 
-# 初始化AipAntiPorn对象
-aipAntiPorn = AipAntiPorn(APP_ID, API_KEY, SECRET_KEY)
+	# 调用色情识别接口 必须是gif格式。
+	result = aipAntiPorn.detectGif(get_file_content('antiporn.gif'))
 
-# 读取图片
-def get_file_content(filePath):
-    with open(filePath, 'rb') as fp:
-        return fp.read()
-
-# 调用黄反识别接口 必须是gif格式。
-result = aipAntiPorn.detect(get_file_content('antiporn.gif'))
-```
 
 **GIF色情图像识别 请求参数详情**
 

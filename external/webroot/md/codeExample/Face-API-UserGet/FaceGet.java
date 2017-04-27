@@ -21,7 +21,7 @@ public class Get {
     
     public static void main(String[] args) {
         // 人脸查找——用户信息查询 url
-        String getUrl = "https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/user/get";
+        String getUrl = "https://aip.baidubce.com/rest/2.0/face/v2/faceset/user/get";
         // 请求参数
         // 用户ID
         String uid = "test_user_1";

@@ -4,7 +4,7 @@
 #include "identify.h"
 // libcurl库下载链接：https://curl.haxx.se/download.html
 // 接口url
-const static std::string identify_url = "https://aip.baidubce.com/rest/2.0/faceverify/v1/identify";
+const static std::string identify_url = "https://aip.baidubce.com/rest/2.0/face/v2/identify";
 static std::string identify_result;
 
 inline std::string int_to_string(int integer) {

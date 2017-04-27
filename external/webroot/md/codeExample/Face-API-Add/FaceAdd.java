@@ -25,7 +25,7 @@ public class Add {
     
     public static void main(String[] args) {
         // 人脸查找——注册 url
-        String addUrl = "https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/user/add";
+        String addUrl = "https://aip.baidubce.com/rest/2.0/face/v2/faceset/user/add";
         // 请求参数
         // 用户ID（用户自定义）
         String uid = "test_user_5";

@@ -4,7 +4,7 @@
 #include "verify.h"
 // libcurl库下载链接：https://curl.haxx.se/download.html
 // 接口url
-const static std::string verify_url = "https://aip.baidubce.com/rest/2.0/faceverify/v1/verify";
+const static std::string verify_url = "https://aip.baidubce.com/rest/2.0/face/v2/verify";
 static std::string verify_result;
 
 inline std::string int_to_string(int integer) {

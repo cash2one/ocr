@@ -15,7 +15,7 @@ namespace com.baidu.ai
 			string base643 = FileUtils.getFileBase64("/work/ai/images/face/search3.jpg");
 			string base644 = FileUtils.getFileBase64("/work/ai/images/face/search4.jpg");
 
-			string host = "https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/user/update?access_token=" + token;
+			string host = "https://aip.baidubce.com/rest/2.0/face/v2/faceset/user/update?access_token=" + token;
 			Encoding encoding = Encoding.Default;
 			HttpWebRequest request = (HttpWebRequest)WebRequest.Create(host);
 			request.Method = "post";

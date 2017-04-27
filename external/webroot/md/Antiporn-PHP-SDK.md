@@ -1,10 +1,10 @@
 # PHP SDK文档
 
-本文档主要介绍黄反识别服务。在使用本文档前，您需要先了解黄反识别服务。
+本文档主要介绍图像审核服务。在使用本文档前，您需要先了解图像审核服务。
 
-# 安装黄反识别 PHP SDK
+# 安装图像审核 PHP SDK
 
-**黄反识别 PHP SDK目录结构**
+**色情识别 PHP SDK目录结构**
 
     AipAntiPorn
            ├── AipAntiPorn.php                 //AntiPorn识别类
@@ -28,7 +28,7 @@
 
 # 快速入门
 
-黄反识别服务，依托百度业界领先的图像识别算法，基于大数据深度学习技术，提供图片色情、性感、正常三个类别的识别服务。
+图像审核服务，依托百度业界领先的图像识别算法，基于大数据深度学习技术，提供图片色情、性感、正常三个类别的识别服务。
 
 ## 初始化一个AipAntiPorn对象
 
@@ -105,12 +105,12 @@ $AipAntiPorn = new AipAntiPorn(APP_ID, API_KEY, SECRET_KEY);
 | 282204 | image frames limit error | gif总帧数超限    |
 | 282205 | image fromat must gif    | 图片格式错误      |
 
-# 黄反识别
+# 色情识别
 
 图片参数仅支持图片文件内容。
 
 ```php
-// 引入黄反识别 SDK
+// 引入色情识别 SDK
 require_once 'AipAntiPorn.php';
 
 // 定义常量
@@ -121,17 +121,17 @@ const SECRET_KEY = '你的 Secret Key';
 // 初始化AipAntiPorn
 $aipAntiPorn = new AipAntiPorn(APP_ID, API_KEY, SECRET_KEY);
 
-// 调用黄反识别接口
+// 调用色情识别接口
 $result = $aipAntiPorn->detect(file_get_contents('antiporn.jpg'));
 ```
 
-**黄反识别 请求参数详情**
+**色情识别 请求参数详情**
 
 | 参数    | 类型     | 描述            | 是否必须 |
 | :---- | :----- | :------------ | :--- |
 | image | String | 图片参数仅支持图片文件内容 | 是    |
 
-**黄反识别 返回数据参数详情**
+**色情识别 返回数据参数详情**
 
 | 参数           | 类型       | 描述                          |
 | :----------- | :------- | :-------------------------- |
@@ -143,10 +143,10 @@ $result = $aipAntiPorn->detect(file_get_contents('antiporn.jpg'));
 
 # GIF色情图像识别
 
-图片接受类型支持本地图片路径字符串，图片文件二进制数组，此接口只支持gif识别，若非gif接口，请使用[黄反识别](#黄反识别)接口。接口会对图片中每一帧进行识别，并返回所有检测结果中色情值最大的为结果。
+图片接受类型支持本地图片路径字符串，图片文件二进制数组，此接口只支持gif识别，若非gif接口，请使用[色情识别](#色情识别)接口。接口会对图片中每一帧进行识别，并返回所有检测结果中色情值最大的为结果。
 
 ```php
-// 引入黄反识别 SDK
+// 引入色情识别 SDK
 require_once 'AipAntiPorn.php';
 
 // 定义常量
@@ -157,7 +157,7 @@ const SECRET_KEY = '你的 Secret Key';
 // 初始化AipAntiPorn
 $aipAntiPorn = new AipAntiPorn(APP_ID, API_KEY, SECRET_KEY);
 
-// 调用黄反识别接口 必须是gif格式。
+// 调用色情识别接口 必须是gif格式。
 $result = $aipAntiPorn->detectGif(file_get_contents('antiporn.gif'));
 ```
 

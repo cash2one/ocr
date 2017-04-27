@@ -9,7 +9,7 @@ from token import access_token
 人脸查找之组内删除用户接口
 '''
 
-deleteUrl = "https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/group/deleteuser"
+deleteUrl = "https://aip.baidubce.com/rest/2.0/face/v2/faceset/group/deleteuser"
 params = dict(group_id="gid", uid="test_uid")
 params = urllib.urlencode(params)
 access_token = access_token.AuthService()

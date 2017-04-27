@@ -3,7 +3,7 @@
 #include "add_user.h"
 // libcurl库下载链接：https://curl.haxx.se/download.html
 // 接口url
-const static std::string add_user_url = "https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/user/add";
+const static std::string add_user_url = "https://aip.baidubce.com/rest/2.0/face/v2/faceset/user/add";
 static std::string add_user_result;
 
 /**

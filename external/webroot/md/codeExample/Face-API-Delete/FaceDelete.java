@@ -21,7 +21,7 @@ public class Delete {
     
     public static void main(String[] args) {
         // 人脸查找——删除 url
-        String deleteUrl = "https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/user/delete";
+        String deleteUrl = "https://aip.baidubce.com/rest/2.0/face/v2/faceset/user/delete";
         try {
             // 请求参数
             // 用户ID

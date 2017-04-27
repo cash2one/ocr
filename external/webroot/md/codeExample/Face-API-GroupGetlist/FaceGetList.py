@@ -9,7 +9,7 @@ from token import access_token
 人脸查找之组列表查询接口
 '''
 
-getListUrl = "https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/group/getlist"
+getListUrl = "https://aip.baidubce.com/rest/2.0/face/v2/faceset/group/getlist"
 # 参数start：默认值0，起始序号   end：返回数量，默认值100，最大值1000
 params = {"start": 0, "end": 100}
 params = urllib.urlencode(params)

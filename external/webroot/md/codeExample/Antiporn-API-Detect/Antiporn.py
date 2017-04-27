@@ -11,7 +11,7 @@ from token import access_token
 
 detectUrl = "https://aip.baidubce.com/rest/2.0/antiporn/v1/detect"
 # 参数image：图像base64编码
-params = {"image": "%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK"}
+params = {"image": "【图片base64编码】"}
 params = urllib.urlencode(params)
 access_token = access_token.AuthService()
 detectUrl = detectUrl + "?access_token=" + access_token

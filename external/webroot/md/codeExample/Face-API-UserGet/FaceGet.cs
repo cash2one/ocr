@@ -12,7 +12,7 @@ namespace com.baidu.ai
 		public static String get()
 		{
 			string token = "########";
-			string host = "https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/user/get?access_token=" + token;
+			string host = "https://aip.baidubce.com/rest/2.0/face/v2/faceset/user/get?access_token=" + token;
 			Encoding encoding = Encoding.Default;
 			HttpWebRequest request = (HttpWebRequest)WebRequest.Create(host);
 			request.Method = "post";

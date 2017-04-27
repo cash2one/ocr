@@ -9,7 +9,7 @@ from token import access_token
 人脸查找之用户信息查询接口
 '''
 
-userInfoUrl = "https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/user/get"
+userInfoUrl = "https://aip.baidubce.com/rest/2.0/face/v2/faceset/user/get"
 params = {"uid": "testuid"}
 params = urllib.urlencode(params)
 access_token = access_token.AuthService()

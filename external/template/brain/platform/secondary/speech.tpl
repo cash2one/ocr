@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/secondary/speech.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/secondary/speech.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1492773116/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1493288513/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -47,14 +47,14 @@
                                 <span class="tech-title-icon"></span>语音技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>语音识别</span>
+                                <a class="tech-secondary-title" href="/tech/speech">语音识别</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/speech/asr">语音识别</a></li>
                                 <li><a href="/tech/speech/wake">语音唤醒</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>语音合成</span>
+                                <a class="tech-secondary-title" href="/tech/speech">语音合成</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/speech/tts">语音合成</a></li>
@@ -65,7 +65,7 @@
                                 <span class="tech-title-icon"></span>图像技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>文字识别</span>
+                                <span class="tech-secondary-title">文字识别</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/ocr/general">通用文字识别</a></li>
@@ -88,7 +88,7 @@
                                 </li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>人脸识别</span>
+                                <span class="tech-secondary-title">人脸识别</span>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/face/detect">人脸检测</a></li>
@@ -96,10 +96,10 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>图像审核</span>
+                                <span class="tech-secondary-title">图像审核</span>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/antiporn">黄反识别</a></li>
+                                <li><a href="/tech/antiporn">色情识别</a></li>
                                 <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
@@ -108,14 +108,14 @@
                                 <span class="tech-title-icon"></span>自然语言
                             </div>
                             <div class="sub-tech-title">
-                                <span>词汇级</span>
+                                <a class="tech-secondary-title" href="/tech/nlp">词汇级</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/nlp/lexical">词法分析</a></li>
                                 <li><a href="/tech/nlp/word_embedding">中文词向量表示</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>短文本级</span>
+                                <a class="tech-secondary-title" href="/tech/nlp">短文本级</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/nlp/dnnlm_cn">中文DNN语言模型</a></li>
@@ -123,7 +123,7 @@
                                 <li><a href="/tech/nlp/comment_tag">评论观点抽取</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span>机器翻译</span>
+                                <a class="tech-secondary-title" href="http://api.fanyi.baidu.com/api/trans/product/index">机器翻译</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="http://api.fanyi.baidu.com/api/trans/product/index" target="_blank">机器翻译平台</a></li>
@@ -134,7 +134,7 @@
                                 <span class="tech-title-icon"></span>视频技术
                             </div>
                             <div class="sub-tech-title">
-                                <span>智能视频分析</span>
+                                <a class="tech-secondary-title" href="/tech/video">智能视频分析</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/video/vca" target="_blank">视频内容分析VCA</a></li>
@@ -146,7 +146,7 @@
                                 <span class="tech-title-icon"></span>深度学习
                             </div>
                             <div class="sub-tech-title">
-                                <span>PaddlePaddle</span>
+                                <a class="tech-secondary-title" href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="http://www.paddlepaddle.org/" target="_blank">PaddlePaddle</a></li>
@@ -158,7 +158,7 @@
                                 <span class="tech-title-icon"></span>AR增强现实
                             </div>
                             <div class="sub-tech-title">
-                                <span>AR增强现实</span>
+                                <a class="tech-secondary-title" href="/tech/ar">AR内容平台</a>
                             </div>
                             <ul class="tech-list">
                                 <li><a href="/tech/ar">AR内容平台</a></li>
@@ -170,7 +170,7 @@
                             </div>
                             <div class="tech-title-minor">
                                 <div class="sub-tech-title">
-                                    <span>用户画像</span>
+                                    <a class="tech-secondary-title" href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像</a>
                                 </div>
                                 <ul class="tech-list">
                                     <li><a href="http://datamart.baidu.com/datax-web/introduce_datax" target="_blank">用户画像平台</a></li>
@@ -178,7 +178,7 @@
                             </div>
                             <div class="tech-title-minor">
                                 <div class="sub-tech-title">
-                                    <span>推荐云平台</span>
+                                    <a class="tech-secondary-title" href="http://recsys.baidu.com/" target="_blank">推荐云平台</a>
                                 </div>
                                 <ul class="tech-list">
                                     <li><a href="http://recsys.baidu.com/" target="_blank">推荐云平台</a></li>
@@ -280,7 +280,7 @@
 <div class="tech-section tech-catalog">
     <div class="ai-container">
         <div class="tech-catalog-title">产品功能</div>
-        <div class="tech-catalog-intro">依托自然语言处理能力，可将声音转为文字，亦或将文字信息转为声音，可用于智能交互、深度问答、内容建模、用户画像建模、语义分析等场景</div>
+        <div class="tech-catalog-intro">依托自然语言处理能力，可将声音与文字信息进行相互转换，可用于智能交互、深度问答、内容建模、用户画像建模、语义分析等场景</div>
         <div class="tech-catalog-gallery">
             <div class="tech-prod-container">
                 <div class="tech-prod-info">
@@ -336,21 +336,16 @@
                 <div class="tech-case-heading">应用场景</div>
                 <div class="tech-case-item-title">智能导航</div>
                 <div class="tech-case-item-info">
-                    <div>交通出行中，实现全程语音导航，结合地图指示，方便安全。</div>
-                    <div>业务痛点：驾驶员在开车过程中，双手和双眼都需要配合驾驶，如果需要频繁进行查看导航操作，会增加交通事故风险</div>
-                    <div>如何解决：通过耳朵听取导航信息，代替眼睛进行操作，驾驶员的视觉焦点还是保持在路面，大大降低交通事故风险</div>
-                    <div>主要服务：语音合成</div>
+                    <div>自驾出行时，结合地图指示全程语音导航，方便安全</div>
+                    <div>业务痛点：驾驶过程中，频繁查看地图会增加驾驶风险</div>
+                    <div>如何解决：利用语音合成技术，将导航内容进行语音播报，摆脱导航对于双眼的束缚，有效保障交通安全，降低事故风险</div>
+                    <div>主要服务：<a href="http://ai.baidu.com/speech/tts">语音合成</a></div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/speech/customer-1-1.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1493288513/ai_images/technology/speech/customer-1-1.png" alt="">
                         <div>
                             百度地图
                         </div>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/speech/customer-1-2.png" alt="">
-                        <div>
-                            Baidu Carlife
-                        </div>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/speech/customer-1-3.png" alt="">
                     </div>
                 </div>
             </div>
@@ -360,17 +355,14 @@
                 <div class="tech-case-heading">应用场景</div>
                 <div class="tech-case-item-title">文学阅读</div>
                 <div class="tech-case-item-info">
-                    <div>浏览新闻、文章时，可通过百度语音技术，转化文字为声音，畅听世界</div>
-                    <div>业务痛点：阅读文章久了，眼睛会疲劳；也希望能在运动或者家务等过程中，还可以进行阅读，有效利用时间</div>
-                    <div>如何解决：利用百度语音合成技术进行高质量朗读，解放双眼，畅听世界</div>
-                    <div>主要服务：语音合成</div>
+                    <div>利用百度语音合成技术将小说文学作品进行有情感的朗读，多种设置，流畅清晰，解放双眼，畅听世界</div>
+                    <div>业务痛点：阅读文章时，长时间占用眼睛和双手，造成双眼疲劳，且无法同时进行其他事情</div>
+                    <div>如何解决：利用百度语音合成技术，对小说文学作品、新闻资讯报道等进行高质量的朗读，摆脱阅读对双眼双手的束缚</div>
+                    <div>主要服务：<a href="http://ai.baidu.com/speech/tts">语音合成</a></div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <div>阅读书城</div>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/speech/customer-2-1.png" alt="百度地图">
+                        <img src="//ai.bdstatic.com/dist/1493288513/ai_images/technology/speech/customer-2-1.png" alt="iReader">
                         <div>iReader</div>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/speech/customer-2-2.png" alt="">
-                        <div>塔读文学</div>
                     </div>
                 </div>
             </div>
@@ -380,19 +372,14 @@
                 <div class="tech-case-heading">应用场景</div>
                 <div class="tech-case-item-title">应用助手</div>
                 <div class="tech-case-item-info">
-                    <div>语音搜索代替拼音搜索，提升搜索效率，覆盖更多人群，是应用的好助手</div>
-                    <div>业务痛点：很多老人不会使用拼音输入</div>
-                    <div>如何解决：可以通过语音输入用户的搜索关键词，直接匹配出搜索结果，利用百度语音识别技术进行搜索的效率是拼音输入搜索的183.46%</div>
-                    <div>主要服务：语音识别</div>
+                    <div>语音输入代替键盘输入，提升搜索效率</div>
+                    <div>业务痛点：儿童和老人使用拼音输入较为不便，生僻字拼音输入较为复杂</div>
+                    <div>如何解决：手机百度可以通过用户语音输入搜索关键词，直接匹配出相应搜索结果，利用百度语音识别技术进行搜索的效率是拼音输入搜索的1.83倍</div>
+                    <div>主要服务：<a href="http://ai.baidu.com/speech/asr">语音识别</a></div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/speech/customer-3-1.png" alt="">
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/speech/customer-3-2.png" alt="">
-                        <div>去哪儿旅行</div>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/speech/customer-3-3.png" alt="">
-                        <div>乐视语音助手</div>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/speech/customer-3-4.png" alt="">
-                        <div>陌陌</div>
+                        <img src="//ai.bdstatic.com/dist/1493288513/ai_images/technology/speech/case-logo-4.png">
+                        <div>手机百度</div>
                     </div>
                 </div>
             </div>
@@ -418,33 +405,26 @@
         <div class="tech-feature-item tech-feature-shadow">
             <div class="tech-feature-icon tech-feature-icon-1"></div>
             <div class="tech-feature-desc">
-                <div class="tech-feature-desc-title">基础服务永久免费</div>
+                <div class="tech-feature-desc-title">使用方式灵活</div>
                 <div class="tech-feature-desc-info">
-                    为广大开发者提供免费、优质的基础服务
+                    支持Android、iOS以及全平台的REST API方式调用，提供多垂类识别，多语言、多音色合成
                 </div>
             </div>
         </div>
         <div class="tech-feature-item tech-feature-shadow">
             <div class="tech-feature-icon tech-feature-icon-2"></div>
             <div class="tech-feature-desc">
-                <div class="tech-feature-desc-title">接入流程简单</div>
-                <div class="tech-feature-desc-info">无需等待，快速开通，接入</div>
+                <div class="tech-feature-desc-title">效果表现优秀</div>
+                <div class="tech-feature-desc-info">提供基于百度大脑的业界顶级声学模型和语音模型，效果行业领先，为业务产品营造顺畅体验</div>
             </div>
         </div>
         <div class="tech-feature-item tech-feature-shadow">
             <div class="tech-feature-icon tech-feature-icon-3"></div>
             <div class="tech-feature-desc">
-                <div class="tech-feature-desc-title">效果完美</div>
+                <div class="tech-feature-desc-title">离线在线融合模式</div>
                 <div class="tech-feature-desc-info">
-                    行业领先技术
+                    根据当前用户网络状况，自动判断使用本地引擎还是云端引擎进行处理，可以兼顾速度及流量消耗
                 </div>
-            </div>
-        </div>
-        <div class="tech-feature-item tech-feature-shadow">
-            <div class="tech-feature-icon tech-feature-icon-4"></div>
-            <div class="tech-feature-desc">
-                <div class="tech-feature-desc-title">丰富解决方案</div>
-                <div class="tech-feature-desc-info">接口完善，丰富的行业解决方案</div>
             </div>
         </div>
     </div>
@@ -507,10 +487,31 @@
             <a id="ai-consult" data-spec="合作咨询"></a>
         </li>
         <li class="feedback">
-            <a data-spec="在线咨询"
-               href="https://ikefu.baidu.com/web/ai-platform"
-               target="_blank"
-               id="feedback-btn"></a>
+            <div class="ai-consulting-group">
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=9fcd4324c68023d2d383dda42ec18318479d74de0c77fa33fe32cf6f98da1abd">
+                    百度大脑咨询QQ群<br>224994340
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=4af05bf8f1a70c8eba04a191e62e9d2b89e0f64111d20a0dfd86f41d391fe498">
+                    百度语音咨询QQ群<br>127072371
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=cb31e007673215fe7ac8898d7b3ea8c111be8448d26b624e4e6fc76b7c5950c5">
+                    文字识别咨询QQ群<br>631977213
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=5a95e619e0e408d8227623efc7d26ff0ab664b40dc8370cff671e145f304ace8">
+                    人脸识别咨询QQ群<br>282744268
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=983e8220ed2d66cb584042050737904d126f619abaf1ca507fee1c04dbb2087d">
+                    图像审核咨询QQ群<br>375765194
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=fd150428654737d6366a853b2757e2ed37c7950f621b6c806ab3881a155f930d">
+                    视频分析咨询QQ群<br>632473158
+                </a>
+                <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=3db0c036d4292053e6f9792ce4c1f071885848ec4a46ae7ad7d7b3888c41c5b7">
+                    自然语言咨询QQ群<br>632426386
+                </a>
+                <div class="ai-consulting-group-icon"></div>
+            </div>
+            <div id="feedback-btn" class="ai-consulting-group-btn"></div>
         </li>
         <li class="back-top">
             <a data-spec="返回顶部"></a>
@@ -541,7 +542,7 @@
                     </li>
                     <li>
                         <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
-                           class="ai-redirect">黄反识别</a>
+                           class="ai-redirect">图像审核</a>
                     </li>
                 </ul>
             </nav>
@@ -598,8 +599,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1492773116/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1492773116/js/secondary/speech.js"></script>
+<script src="//ai.bdstatic.com/dist/1493288513/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1493288513/js/secondary/speech.js"></script>
 
 <script>
     (function () {
