@@ -394,40 +394,6 @@
         </div>
     </div>
 </div>
-
-<div class="tech-section tech-guide">
-    <div class="tech-guide-title">使用指南</div>
-    <div class="ai-container">
-        <div class="tech-guide-links">
-            <a href="http://ai.baidu.com/docs">新手指南</a>
-            <a href="http://ai.baidu.com/docs#/ASR-Android-SDK/">技术文档</a>
-            <a href="http://ai.baidu.com/sdk#sdk-category-bs">SDK下载</a>
-        </div>
-        <div class="tech-guide-route">
-            <div class="tech-guide-step">
-                <div class="tech-guide-step-num">1</div>
-                <div class="tech-guide-step-name">新手入门</div>
-            </div>
-            <div class="tech-guide-step">
-                <div class="tech-guide-step-num">2</div>
-                <div class="tech-guide-step-name">创建应用</div>
-            </div>
-            <div class="tech-guide-step">
-                <div class="tech-guide-step-num">3</div>
-                <div class="tech-guide-step-name">获取密钥</div>
-            </div>
-            <div class="tech-guide-step">
-                <div class="tech-guide-step-num">4</div>
-                <div class="tech-guide-step-name">生成签名</div>
-            </div>
-            <div class="tech-guide-step">
-                <div class="tech-guide-step-num">5</div>
-                <div class="tech-guide-step-name">启动开发</div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="tech-section get-started tech-free">
     <div class="ai-container">
         <div class="tech-free-title">快速提交您的需求</div>
@@ -436,15 +402,13 @@
         <div class="tech-free-btn">
             <a role="button"
                target="_blank"
-               class="ai-redirect"
+               class="btn-primary large ai-redirect"
                href="https://cloud.baidu.com/survey/VCAApply.html?from=ai&aibaiduid=2E6B2AA4C6EEF254517281FA424FE9F5:SL=0:NR=10:FG=1&fromai=1">
             商务合作
             </a>
         </div>
     </div>
 </div>
-{%if $userInfo eq Null%}
-{%/if%}
 
 </div>
 <aside class="aside-action">
@@ -467,7 +431,7 @@
                     人脸识别咨询QQ群<br>282744268
                 </a>
                 <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=983e8220ed2d66cb584042050737904d126f619abaf1ca507fee1c04dbb2087d">
-                    黄反识别咨询QQ群<br>375765194
+                    图像审核咨询QQ群<br>375765194
                 </a>
                 <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=fd150428654737d6366a853b2757e2ed37c7950f621b6c806ab3881a155f930d">
                     视频分析咨询QQ群<br>632473158
@@ -508,7 +472,7 @@
                     </li>
                     <li>
                         <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
-                           class="ai-redirect">黄反识别</a>
+                           class="ai-redirect">图像审核</a>
                     </li>
                 </ul>
             </nav>
