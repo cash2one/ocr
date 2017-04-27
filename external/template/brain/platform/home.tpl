@@ -251,8 +251,8 @@
     <ul class="banner-content">
         <li class="active">
             <div class="banner-item">
-                <h1>人脸接口 更新V2版本</h1>
-                <p>性能大幅提升，功能全面完善<br>致力提供业界最优的人脸识别服务</p>
+                <h1>人脸识别服务全新升级</h1>
+                <p>功能全面完善，性能大幅提升<br>致力提供业界最优的人脸识别服务</p>
                 <div>
                     <a href="/docs#/FACE-API/" class="get-started">了解详情</a>
                 </div>
@@ -830,7 +830,7 @@
                     人脸识别咨询QQ群<br>282744268
                 </a>
                 <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=983e8220ed2d66cb584042050737904d126f619abaf1ca507fee1c04dbb2087d">
-                    黄反识别咨询QQ群<br>375765194
+                    图像审核咨询QQ群<br>375765194
                 </a>
                 <a target="_blank" class="ai-consulting-group-item" href="http://shang.qq.com/wpa/qunwpa?idkey=fd150428654737d6366a853b2757e2ed37c7950f621b6c806ab3881a155f930d">
                     视频分析咨询QQ群<br>632473158
@@ -871,7 +871,7 @@
                     </li>
                     <li>
                         <a href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index"
-                           class="ai-redirect">黄反识别</a>
+                           class="ai-redirect">图像审核</a>
                     </li>
                 </ul>
             </nav>
