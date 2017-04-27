@@ -245,10 +245,7 @@
 
             .demo-data {
                 height: 38px;
-
-                & > * {
-                    float: left;
-                }
+                font-size: 0;
 
                 #demo-photo-url {
                     height: 36px;
@@ -263,6 +260,7 @@
                     margin: 0 10px;
                     display: inline-block;
                     line-height: 38px;
+                    font-size: 13px;
                     color: #999;
                 }
 
@@ -279,13 +277,16 @@
                 }
 
                 label {
-                    border: 1px solid @blue;
-                    background-color: @blue;
-                    color: @white;
+                    display: inline-block;
+                    vertical-align: top;
                     width: 100px;
                     height: 36px;
                     line-height: 36px;
+                    font-size: 13px;
+                    color: @white;
                     text-align: center;
+                    background-color: @blue;
+                    border: 1px solid @blue;
                     border-radius: 2px;
                     cursor: pointer;
 
