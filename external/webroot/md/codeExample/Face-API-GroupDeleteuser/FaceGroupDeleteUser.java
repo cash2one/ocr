@@ -21,7 +21,7 @@ public class DeleteUser {
     
     public static void main(String[] args) {
         // 人脸查找——组内删除用户 url
-        String deleteUserUrl = "https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/group/deleteuser";
+        String deleteUserUrl = "https://aip.baidubce.com/rest/2.0/face/v2/faceset/group/deleteuser";
         // 请求参数
         // 用户所在组
         String groupId = "test_group_2";

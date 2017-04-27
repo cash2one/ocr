@@ -25,7 +25,7 @@ public class Identify {
     
     public static void main(String[] args) {
         // 人脸查找——识别url （已用户照片，以图搜人）
-        String identifyUrl = "https://aip.baidubce.com/rest/2.0/faceverify/v1/identify";
+        String identifyUrl = "https://aip.baidubce.com/rest/2.0/face/v2/identify";
         // 请求参数
         // 用户组
         String groupId = "test_group_2";

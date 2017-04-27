@@ -9,7 +9,7 @@ from token import access_token
 人脸查找之删除接口
 '''
 
-deleteUrl = "https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/user/delete"
+deleteUrl = "https://aip.baidubce.com/rest/2.0/face/v2/faceset/user/delete"
 # 参数uid：用户id（由数字、字母、下划线组成），长度限制128B
 params = {"uid": "testuid"}
 params = urllib.urlencode(params)

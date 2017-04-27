@@ -13,7 +13,7 @@ namespace com.baidu.ai
 		{
 			string token = "########";
 			string base645 = FileUtils.getFileBase64("/work/ai/images/face/search5.jpg");
-			string host = "https://aip.baidubce.com/rest/2.0/faceverify/v1/identify?access_token=" + token;
+			string host = "https://aip.baidubce.com/rest/2.0/face/v2/identify?access_token=" + token;
 			Encoding encoding = Encoding.Default;
 			HttpWebRequest request = (HttpWebRequest)WebRequest.Create(host);
 			request.Method = "post";

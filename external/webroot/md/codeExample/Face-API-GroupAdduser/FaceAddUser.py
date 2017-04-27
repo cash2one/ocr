@@ -9,7 +9,7 @@ from token import access_token
 人脸查找之组内添加用户接口
 '''
 
-addUsersUrl = "https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/group/adduser"
+addUsersUrl = "https://aip.baidubce.com/rest/2.0/face/v2/faceset/group/adduser"
 # 参数group_id：用户组id  uid：用户id
 params = dict(group_id="gid", uid="test_uid")
 params = urllib.urlencode(params)

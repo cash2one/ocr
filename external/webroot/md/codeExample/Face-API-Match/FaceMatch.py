@@ -9,10 +9,10 @@ from token import access_token
 人脸比对接口
 '''
 
-matchUrl = "https://aip.baidubce.com/rest/2.0/faceverify/v1/match"
+matchUrl = "https://aip.baidubce.com/rest/2.0/face/v2/match"
 # 参数images：图像base64编码,多张图片半角逗号分隔
 params = {
-    "images": "%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK,%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK2"}
+    "images": "【图片base64编码】,【图片base64编码】"}
 params = urllib.urlencode(params)
 access_token = access_token.AuthService()
 matchUrl = matchUrl + "?access_token=" + access_token

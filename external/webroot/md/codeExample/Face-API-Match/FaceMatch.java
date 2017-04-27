@@ -25,7 +25,7 @@ public class Match {
     
     public static void main(String[] args) {
         // 人脸对比url
-        String matchUrl = "https://aip.baidubce.com/rest/2.0/faceverify/v1/match";
+        String matchUrl = "https://aip.baidubce.com/rest/2.0/face/v2/match";
         // 本地文件路径，可用多张图片
         String filePath1 = "#####本地文件路径#####";
         String filePath2 = "#####本地文件路径#####";

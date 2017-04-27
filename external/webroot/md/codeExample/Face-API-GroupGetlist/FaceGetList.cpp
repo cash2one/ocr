@@ -4,7 +4,7 @@
 #include "get_group_list.h"
 // libcurl库下载链接：https://curl.haxx.se/download.html
 // 接口url
-const static std::string get_group_list_url = "https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/group/getlist";
+const static std::string get_group_list_url = "https://aip.baidubce.com/rest/2.0/face/v2/faceset/group/getlist";
 static std::string get_group_list_result;
 
 inline std::string int_to_string(int integer) {

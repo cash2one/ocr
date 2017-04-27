@@ -7,11 +7,13 @@ Hi，您好，欢迎使用百度人脸识别API服务。
 * 在百度云控制台内[提交工单](http://ticket.bce.baidu.com/#/ticket/create)，咨询问题类型请选择**人工智能服务**；
 * 加入**开发者QQ群**：224994340；
 
+> **温馨提示：**人脸接口服务已推出v2版本，兼容v1版本，功能更全，性能更优，此文档只保留v2版本内容。
+
 ## 接口能力
 
 | 接口名称  | 接口能力简要描述                     |
 | :---- | :--------------------------- |
-| 人脸检测  | 检测人脸并定位，返回五官关键点，及人脸各属性值      |
+| 人脸检测  | 检测人脸并定位，返回五官关键点，及人脸各属性值  |
 | 人脸比对  | 返回两两比对的人脸相似值                 |
 | 人脸识别  | 在人脸库中查找相似的人脸                |
 | 人脸认证  | 识别上传的图片是否为指定用户               |
@@ -38,7 +40,7 @@ JSON格式
 | 接口名称  | 图片编码后大小限额 |
 | ----- | --------- |
 | 人脸检测  | 小于2M      |
-| 人脸比对  | 小于10M     |
+| 人脸比对  | 单次传入的两张图片，小于20M    |
 | 人脸识别  | 小于10M     |
 | 人脸认证  | 小于10M     |
 | 人脸库设置 | 小于10M     |
@@ -275,9 +277,13 @@ Body中放置请求参数，参数详情如下：
 
 ## 接口描述
 
+> **温馨提示：**此接口已更新为v2版本，兼容v1版本，功能更全，性能更优，建议v1版本老用户升级到v2版本。
+
 该请求用于比对多张图片中的人脸相似度并返回两两比对的得分，可用于判断两张脸是否是同一人的可能性大小。
 
 典型应用场景：如**人证合一验证**，**用户认证**等，可与您现有的人脸库进行比对验证。
+
+> **说明：**支持对比对的两张图片做在线活体检测
 
 ## 请求说明
 
@@ -285,7 +291,7 @@ Body中放置请求参数，参数详情如下：
 
 HTTP方法：`POST`
 
-请求URL： `https://aip.baidubce.com/rest/2.0/faceverify/v1/match`
+请求URL： `https://aip.baidubce.com/rest/2.0/face/v2/match`
 
 URL参数：
 
@@ -305,7 +311,9 @@ Body中放置请求参数，参数详情如下：
 
 | 参数     | 是否必选 | 类型     | 说明                              |
 | ------ | ----- | ------ | ------------------------------- |
-| images | 是    | string | base64编码后的图片数据，可单次传入多张，多张图片半角逗号分隔，总共最大10M |
+| images | 是    | string | base64编码后的**2张图片数据**，半角逗号分隔，单次请求总共最大20M |
+| ext_fields | 否  | string | 返回质量信息，取值固定: 目前支持qualities(质量检测)。(对所有图片都会做改处理) |
+| image_liveness | 否  | string | 返回的活体信息，“faceliveness,faceliveness” 表示对比对的两张图片都做活体检测；“,faceliveness” 表示对第一张图片不做活体检测、第二张图做活体检测；“faceliveness,” 表示对第一张图片做活体检测、第二张图不做活体检测 |
 
 **请求代码示例**
 
@@ -320,39 +328,31 @@ Body中放置请求参数，参数详情如下：
 **返回参数**
 
 | 字段         | 是否必选 | 类型            | 说明                                       |
-| ---------- | ------- | ------------- | ------------------------------------ |
-| log_id     | 是    | uint64        | 请求标识码，随机数，唯一                             |
-| result_num | 是    | uint32        | 返回结果数目，即：result数组中元素个数                   |
+| ---------- | ------- | ------------- | ----------------------------------- |
+| log_id     | 是    | uint64        | 请求唯一标识码，随机数             |
+| result_num | 是    | uint32        | 返回结果数目，即：result数组中元素个数   |
 | result     | 是    | array(object) | 结果数据，index和请求图片index对应。数组元素为每张图片的匹配得分数组，top n。 得分[0,100.0] |
-| +index_i   | 是    | uint32        | 比对图片1的index                              |
-| +index_j   | 是    | uint32        | 比对图片2的index                              |
-| +score     | 是    | double        | 比对得分                                     |
+| +index_i   | 是    | uint32        | 比对图片1的index         |
+| +index_j   | 是    | uint32        | 比对图片2的index         |
+| +score     | 是    | double        | 比对得分                 |
+| ext_info   | 否    | array（dict）  | 对应参数中的ext_fields   |
+| +qualities | 否    | string        | 质量相关的信息，无特殊需求可以不使用   |
+| +faceliveness | 否    | string     | 活体分数“0,0.9999”（表示第一个图不做活体检测、第二个图片活体分数为0.9999） |
 
 
 **返回示例**
 
 ```json
-//请求为四张图片，第三张解析失败
+//请求两张图片
 {
     "log_id": 73473737,
-    "result_num":3,
+    "result_num":1,
     "result": [
         {
             "index_i": 0,
             "index_j": 1,
             "score": 44.3
-        },
-        {
-            "index_i": 0,
-            "index_j": 3,
-            "score": 89.2
-        },
-        {
-            "index_i": 1,
-            "index_j": 3,
-            "score": 10.4
         }
-        ……
     ]
 }
 ```
@@ -360,6 +360,8 @@ Body中放置请求参数，参数详情如下：
 # 人脸识别
 
 ## 接口描述
+
+> **温馨提示：**此接口已更新为v2版本，兼容v1版本，功能更全，性能更优，建议v1版本老用户升级到v2版本。
 
 用于计算指定组内用户，与上传图像中人脸的相似度。识别前提为您已经创建了一个**[人脸库](#人脸注册)**。
 
@@ -375,7 +377,7 @@ Body中放置请求参数，参数详情如下：
 
 HTTP方法：`POST`
 
-请求URL： `https://aip.baidubce.com/rest/2.0/faceverify/v1/identify`
+请求URL： `https://aip.baidubce.com/rest/2.0/face/v2/identify`
 
 URL参数：
 
@@ -395,10 +397,10 @@ Body中放置请求参数，参数详情如下：
 
 | 参数           | 是否必选 | 类型     | 说明                            |
 | ------------ | ------- | ------- | ----------------------------- |
-| group_id     | 是    | string | 用户组id（由数字、字母、下划线组成），长度限制128B  |
-| images       | 是    | string | 图像base64编码，可单次传入多张，多张图片半角逗号分隔，总共最大10M |
-| user_top_num | 否    | uint32 | 返回用户top数，默认为1                 |
-| face_top_num | 否    | uint32 | 单用户人脸匹配得分top数，默认为1            |
+| group_id     | 是    | string | 用户组id（由数字、字母、下划线组成），长度限制128B，如果需要查询多个用户组id，用逗号分隔 |
+| images       | 是    | string | 图像base64编码，**每次仅支持单张图片，图片编码后大小不超过10M** |
+| ext_fields | 否     | string | 特殊返回信息，多个用逗号分隔，取值固定: 目前支持 faceliveness(活体检测) |
+| user_top_num | 否    | uint32 | 返回用户top数，默认为1，最多返回5个 |
 
 **请求代码示例**
 
@@ -414,12 +416,15 @@ Body中放置请求参数，参数详情如下：
 
 | 字段         | 是否必选 | 类型            | 说明                                |
 | ----------- | ------- | -------------- | --------------------------------- |
-| log_id     | 是    | uint64        | 请求标识码，随机数，唯一                      |
-| result_num | 是    | uint32        | 返回结果数目，即：result数组中元素个数            |
-| result     | 是    | array(double) | 结果数组                              |
-| +uid       | 是    | string        | 匹配到的用户id                          |
-| +user_info | 是    | string        | 注册时的用户信息                          |
-| +scores    | 是    | array(double) | 结果数组，数组元素为匹配得分，top n。 得分[0,100.0] |
+| log_id     | 是    | uint64        | 请求唯一标识码，随机数                 |
+| result_num | 是    | uint32        | 返回结果数目，即：result数组中元素个数   |
+| ext_info   | 否   | array | 对应参数中的ext_fields   |
+| +faceliveness | 否  | string | 活体分数，如0.49999   |
+| result     | 是    | array(object) | 结果数组             |
+| +group_id  | 是    | string        | 对应的这个用户的group_id |
+| +uid       | 是    | string        | 匹配到的用户id      |
+| +user_info | 是    | string        | 注册时的用户信息     |
+| +scores    | 是    | array(double) | 结果数组，数组元素为匹配得分，top n。得分[0,100.0] |
 
 
 **返回示例**
@@ -430,6 +435,7 @@ Body中放置请求参数，参数详情如下：
     "result_num":1,
     "result": [
         {
+            "group_id" : "test1",
             "uid": "u333333",
             "user_info": "Test User",
             "scores": [
@@ -445,11 +451,15 @@ Body中放置请求参数，参数详情如下：
 
 ## 接口描述
 
+> **温馨提示：**此接口已更新为v2版本，兼容v1版本，功能更全，性能更优，建议v1版本老用户升级到v2版本。
+
 用于识别上传的图片是否为指定用户，即查找前需要先确定要查找的用户在人脸库中的id。
 
 典型应用场景：如**人脸登录**，**人脸签到**等
 
 > **说明：**人脸认证与人脸识别的差别在于：人脸识别需要指定一个待查找的人脸库中的组；而人脸认证需要指定具体的用户id即可，不需要指定具体的人脸库中的组；实际应用中，人脸认证需要用户或系统先输入id，这增加了验证安全度，但也增加了复杂度，具体使用哪个接口需要视您的业务场景判断。
+
+> **说明：**请求参数中，新增在线活体检测
 
 ## 请求说明
 
@@ -457,7 +467,7 @@ Body中放置请求参数，参数详情如下：
 
 HTTP方法：`POST`
 
-请求URL： `https://aip.baidubce.com/rest/2.0/faceverify/v1/verify`
+请求URL： `https://aip.baidubce.com/rest/2.0/face/v2/verify`
 
 URL参数：
 
@@ -478,8 +488,11 @@ Body中放置请求参数，参数详情如下：
 | 参数      | 是否必选 | 类型     | 说明                            |
 | -------- | -------- | ------- | ----------------------------- |
 | uid     | 是    | string | 用户id（由数字、字母、下划线组成），长度限制128B   |
-| images  | 是    | string | 图像base64编码，可单次传入多张，多张图片半角逗号分隔，总共最大10M |
-| top_num | 否    | uint32 | 返回匹配得分top数，默认为1               |
+| images  | 是    | string | 图像base64编码，**每次仅支持单张图片，图片编码后大小不超过10M** |
+| group_id | 是  | string | 用逗号分隔，表示从指定的group中查找       |
+| top_num | 否    | uint32 | 返回匹配得分top数，默认为1              |
+| ext_fields | 否 | string | 特殊返回信息，多个用逗号分隔，取值固定: 目前支持 faceliveness(活体检测) |
+
 
 **请求代码示例**
 
@@ -495,27 +508,31 @@ Body中放置请求参数，参数详情如下：
 
 | 字段         | 是否必选 | 类型    | 说明                  |
 | ---------- | ------- | ------------- | --------------------------------- |
-| log_id     | 是    | uint64        | 请求标识码，随机数，唯一                             |
+| log_id     | 是    | uint64        | 请求唯一标识码，随机数            |
 | result_num | 是    | uint32        | 返回结果数目，即：result数组中元素个数                   |
-| result     | 是    | array(double) | 结果数组，数组元素为匹配得分，top n。 得分范围[0,100.0]。得分超过80可认为认证成功 |
+| result     | 是    | array(double) | 结果数组，数组元素为匹配得分，top n。 得分范围[0,100.0]。推荐得分超过80可认为认证成功 |
+| ext_info   | 否   | array | 对应参数中的ext_fields   |
+| +faceliveness | 否  | string | 活体分数，如0.49999   |
 
 
 **返回示例**
 
 ```json
 {
-  "results": [
-    93.86580657959,
-    92.237548828125
-  ],
-  "result_num": 2,
-  "log_id": 1629483134
+    "log_id": 73473737,
+    "result_num":2,
+    "result": [
+            99.3,
+            83.6
+    ]
 }
 ```
 
 # 人脸注册
 
 ## 接口描述
+
+> **温馨提示：**此接口已更新为v2版本，兼容v1版本，功能更全，性能更优，建议v1版本老用户升级到v2版本。
 
 用于从人脸库中新增用户，可以设定多个用户所在组，及组内用户的人脸图片，
 
@@ -542,13 +559,15 @@ Body中放置请求参数，参数详情如下：
 **说明：关于人脸库的设置限制** 
 
 * 每个开发者账号只能创建一个人脸库；
-* 每个人脸库下，可创建最多1000个用户组；
-* 每个用户组下，可添加最多2000张人脸，最多1000个用户uid；
-* 每个用户（uid）所能注册的最大人脸数量为5张；
+* 每个人脸库下，用户组（group）数量没有限制；
+* 每个用户组（group）下，可添加最多**300000**张人脸，如每个uid注册一张人脸，则**最多300000个**用户uid；
+* 每个用户（uid）所能注册的最大人脸数量**没有限制**；
 
 > **说明：**人脸注册完毕后，生效时间最长为**35s**，之后便可以进行识别或认证操作。
 
 > **说明：**注册的人脸，建议为用户正面人脸。
+
+> **说明：**uid在库中已经存在时，对此uid重复注册时，新注册的图片默认会**追加**到该uid下，如果手动选择`action_type:replace`，则会用新图替换库中该uid下所有图片。
 
 ## 请求说明
 
@@ -556,7 +575,7 @@ Body中放置请求参数，参数详情如下：
 
 HTTP方法：`POST`
 
-请求URL： `https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/user/add`
+请求URL： `https://aip.baidubce.com/rest/2.0/face/v2/faceset/user/add`
 
 URL参数：
 
@@ -578,8 +597,9 @@ Body中放置请求参数，参数详情如下：
 | ---------- | ------ | ------- | ----------------------------------- |
 | uid       | 是    | string | 用户id（由数字、字母、下划线组成），长度限制128B         |
 | user_info | 是    | string | 用户资料，长度限制256B                       |
-| group_id  | 是    | string | 用户组id，标识一组用户（由数字、字母、下划线组成），长度限制128B |
-| images    | 是    | string | 图像base64编码，可单次传入多张，多张图片半角逗号分隔，总共最大10M       |
+| group_id  | 是    | string | 用户组id，标识一组用户（由数字、字母、下划线组成），长度限制128B。如果需要将一个uid注册到多个uid下，group_id需要用多个逗号分隔，每个group_id长度限制为48个英文字符 |
+| images    | 是    | string | 图像base64编码，**每次仅支持单张图片，图片编码后大小不超过10M** |
+| action_type | 否   | string | 参数包含append、replace。如果为“replace”，则每次注册时进行替换replace（新增或更新）操作，默认为append操作 |
 
 **请求代码示例**
 
@@ -616,9 +636,13 @@ Body中放置请求参数，参数详情如下：
 
 ## 接口描述
 
+> **温馨提示：**此接口已更新为v2版本，兼容v1版本，功能更全，性能更优，建议v1版本老用户升级到v2版本。
+
 用于对人脸库中指定用户，更新其下的人脸图像。
 
-> **说明：**新上传的人脸图像将覆盖原有所有图像。
+> **说明：**针对一个uid执行更新操作，新上传的人脸图像将覆盖此uid原有所有图像。
+
+> **说明：**执行更新操作，如果该uid不存在时，会返回错误。如果添加了action_type:replace,则不会报错，并自动注册该uid，操作结果等同注册新用户。
 
 ## 请求说明
 
@@ -626,7 +650,7 @@ Body中放置请求参数，参数详情如下：
 
 HTTP方法：`POST`
 
-请求URL： `https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/user/update`
+请求URL： `https://aip.baidubce.com/rest/2.0/face/v2/faceset/user/update`
 
 URL参数：
 
@@ -684,12 +708,15 @@ Body中放置请求参数，参数详情如下：
 
 ## 接口描述
 
+> **温馨提示：**此接口已更新为v2版本，兼容v1版本，功能更全，性能更优，建议v1版本老用户升级到v2版本。
+
 用于从人脸库中删除一个用户。
 
 **人脸删除注意事项：**
 
 * 删除的内容，包括用户所有图像和身份信息；
-* 如果一个uid存在于多个用户组内，将会同时将从各个组中把用户删除。
+* 如果一个uid存在于多个用户组内，将会同时将从各个组中把用户删除
+* 如果指定了group_id，则只删除此group下的uid相关信息
 
 ## 请求说明
 
@@ -697,7 +724,7 @@ Body中放置请求参数，参数详情如下：
 
 HTTP方法：`POST`
 
-请求URL： `https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/user/delete`
+请求URL： `https://aip.baidubce.com/rest/2.0/face/v2/faceset/user/delete`
 
 URL参数：
 
@@ -718,6 +745,7 @@ Body中放置请求参数，参数详情如下：
 | 参数   | 是否必选 | 类型     | 说明                          |
 | ---- | ------- | ------- | ---------------------------- |
 | uid  | 是    | string | 用户id（由数字、字母、下划线组成），长度限制128B |
+| group_id | 否  | string | 选择指定group_id则只删除此group下的uid内容，如果不指定则删除group下对应uid的信息 |
 
 **请求代码示例**
 
@@ -754,15 +782,17 @@ Body中放置请求参数，参数详情如下：
 
 ## 接口描述
 
+> **温馨提示：**此接口已更新为v2版本，兼容v1版本，功能更全，性能更优，建议v1版本老用户升级到v2版本。
+
 用于查询人脸库中某用户的详细信息。
 
 ## 请求说明
 
 **请求示例**
 
-HTTP方法：`POST`
+HTTP方法：`GET`
 
-请求URL： `https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/user/get`
+请求URL： `https://aip.baidubce.com/rest/2.0/face/v2/faceset/user/get`
 
 URL参数：
 
@@ -808,14 +838,18 @@ Body中放置请求参数，参数详情如下：
 
 ```json
 {
+“result_num” : 2
     "result": {
-        "uid": "testuser2",
-        "user_info": "registed user info ...",
-        "groups": [
-            "grp1",
-            "grp2",
-            "grp3"
-        ]
+        [
+            "uid": "testuser2",
+            "user_info": "registed user info ...",
+            "group_id": "grep1",
+        ],
+        [
+            "uid": "testuser2",
+            "user_info": "registed user info2 ...",
+            "group_id": "grep2",
+        ],
     },
     "log_id": 2979357502
 }
@@ -825,15 +859,17 @@ Body中放置请求参数，参数详情如下：
 
 ## 接口描述
 
+> **温馨提示：**此接口已更新为v2版本，兼容v1版本，功能更全，性能更优，建议v1版本老用户升级到v2版本。
+
 用于查询用户组的列表。
 
 ## 请求说明
 
 **请求示例**
 
-HTTP方法：`POST`
+HTTP方法：`GET`
 
-请求URL： `https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/group/getlist`
+请求URL： `https://aip.baidubce.com/rest/2.0/face/v2/faceset/group/getlist`
 
 URL参数：
 
@@ -891,15 +927,17 @@ Body中放置请求参数，参数详情如下：
 
 ## 接口描述
 
+> **温馨提示：**此接口已更新为v2版本，兼容v1版本，功能更全，性能更优，建议v1版本老用户升级到v2版本。
+
 用于查询指定用户组中的用户列表。
 
 ## 请求说明
 
 **请求示例**
 
-HTTP方法：`POST`
+HTTP方法：`GET`
 
-请求URL： `https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/group/getusers`
+请求URL： `https://aip.baidubce.com/rest/2.0/face/v2/faceset/group/getusers`
 
 URL参数：
 
@@ -966,7 +1004,11 @@ Body中放置请求参数，参数详情如下：
 
 ## 接口描述
 
+> **温馨提示：**此接口已更新为v2版本，兼容v1版本，功能更全，性能更优，建议v1版本老用户升级到v2版本。
+
 用于将已经存在于人脸库中的用户添加到一个新的组。
+
+> **说明：**并不是向一个指定组内添加用户，而是直接从其它组复制用户信息
 
 ## 请求说明
 
@@ -974,7 +1016,7 @@ Body中放置请求参数，参数详情如下：
 
 HTTP方法：`POST`
 
-请求URL： `https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/group/adduser`
+请求URL： `https://aip.baidubce.com/rest/2.0/face/v2/faceset/group/adduser`
 
 URL参数：
 
@@ -994,8 +1036,9 @@ Body中放置请求参数，参数详情如下：
 
 | 参数       | 是否必选 | 类型     | 说明    |
 | -------- | ------- | ------- | ----- |
-| group_id | 是    | string | 用户组id |
+| group_id | 是    | string | 需要添加信息的组id，多个的话用逗号分隔 |
 | uid      | 是    | string | 用户id  |
+| src_group_id | 是    | string | 从指定group里复制信息 |
 
 **请求代码示例**
 
@@ -1032,6 +1075,8 @@ Body中放置请求参数，参数详情如下：
 
 ## 接口描述
 
+> **温馨提示：**此接口已更新为v2版本，兼容v1版本，功能更全，性能更优，建议v1版本老用户升级到v2版本。
+
 用于将用户从某个组中删除，但不会删除用户在其它组的信息。
 
 > **说明：**当用户仅属于单个分组时，本接口将返回错误，请使用**人脸删除接口**
@@ -1042,7 +1087,7 @@ Body中放置请求参数，参数详情如下：
 
 HTTP方法：`POST`
 
-请求URL： `https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/group/deleteuser`
+请求URL： `https://aip.baidubce.com/rest/2.0/face/v2/faceset/group/deleteuser`
 
 URL参数：
 
@@ -1062,7 +1107,7 @@ Body中放置请求参数，参数详情如下：
 
 | 参数       | 是否必选 | 类型     | 说明    |
 | -------- | ------- | ------ | -------- |
-| group_id | 是    | string | 用户组id |
+| group_id | 是    | string | 用户组id，多个的话用逗号分隔 |
 | uid      | 是    | string | 用户id  |
 
 **请求代码示例**
@@ -1121,29 +1166,29 @@ Body中放置请求参数，参数详情如下：
 | 17     | Open api daily request limit reached   | 每天流量超限额  |
 | 18     | Open api qps request limit reached   | QPS超限额  |
 | 19     | Open api total request limit reached  | 请求总量超限额  |
-| 100    | Invalid parameter             | 无效参数     |
+| 100    | Invalid parameter             | 无效的access_token参数   |
 | 110    | Access token invalid or no longer valid | Access Token失效 |
 | 111    | Access token expired | Access token过期 |
 | 216015 | module closed       | 模块关闭      |
-| 216100 | invalid param       | 非法参数      |
-| 216101 | not enough param    | 参数数量不够    |
-| 216102 | service not support | 业务不支持     |
-| 216103 | param too long      | 参数太长      |
-| 216110 | appid not exist     | APP ID不存在 |
-| 216111 | invalid userid      | 非法用户ID    |
-| 216200 | empty image         | 空的图片      |
+| 216100 | invalid param       | 参数异常      |
+| 216101 | not enough param    | 缺少必须的参数  |
+| 216102 | service not support | 请求了不支持的服务，请检查调用的url |
+| 216103 | param too long      | 请求超长，一般为一次传入图片个数超过系统限制 |
+| 216110 | appid not exist     | appid不存在，请重新检查后台应用列表中的应用信息 |
+| 216111 | invalid userid      | userid信息非法，请检查对应的参数 |
+| 216200 | empty image         | 图片为空或者base64解码错误 |
 | 216201 | image format error  | 图片格式错误    |
 | 216202 | image size error    | 图片大小错误    |
-| 216300 | db error            | DB错误      |
-| 216400 | backend error       | 后端系统错误    |
+| 216300 | db error            | 数据库异常，**少量发生时重试即可** |
+| 216400 | backend error       | 后端识别服务异常，可以根据具体msg查看错误原因 |
 | 216401 | internal error      | 内部错误      |
-| 216402 | face not found      | 没有找到人脸    |
+| 216402 | face not found      | 未找到人脸，请检查图片是否含有人脸 |
 | 216500 | unknown error       | 未知错误      |
-| 216611 | user not exist         | 用户不存在    |
-| 216613 | user not found         | 用户查找不到   |
-| 216614 | not enough images      | 图片信息不完整  |
-| 216615 | fail to process images | 处理图片信息失败 |
+| 216611 | user not exist         | 用户不存在，请确认该用户是否注册或注册已经生效(**需要已经注册超过35s**） |
+| 216613 | fail to delete user record  | 删除用户图片记录失败，重试即可 |
+| 216614 | not enough images      | 两两比对中图片数少于2张，无法比较 |
+| 216615 | fail to process images | 服务处理该图片失败，发生后重试即可 |
 | 216616 | image existed          | 图片已存在    |
-| 216617 | fail to add user       | 添加用户失败   |
-| 216618 | no user in group       | 群组里没有用户  |
-| 216630 | recognize error        | 识别错误     |
+| 216617 | fail to add user       | 新增用户图片失败 |
+| 216618 | no user in group       | 组内用户为空，确认该group是否存在或已经生效(需要已经注册超过35s)  |
+| 216631 | request add user overlimit | 本次请求添加的用户数量超限 |

@@ -25,7 +25,7 @@ public class Verify {
     
     public static void main(String[] args) {
         // 人脸查找——认证url （已知用户ID，根据人脸图片来验证）
-        String verifyUrl = "https://aip.baidubce.com/rest/2.0/faceverify/v1/verify";
+        String verifyUrl = "https://aip.baidubce.com/rest/2.0/face/v2/verify";
         // 请求参数
         // 用户ID
         String uid = "test_user_1";

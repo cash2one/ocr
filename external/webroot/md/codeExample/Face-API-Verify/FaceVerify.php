@@ -18,8 +18,8 @@ function request_post($url = '', $param = '') {
         return $data;
     }
 
-	$url = 'https://aip.baidubce.com/rest/2.0/faceverify/v1/verify?access_token=24.a1ff1c9e242129e0e88e506dfc223454.2592000.1492586050.282335-9395294';
-    $bodys = "{\"uid\":\"testuid\",\"images\":\"%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK\"}";
+	$url = 'https://aip.baidubce.com/rest/2.0/face/v2/verify?access_token=24.a1ff1c9e242129e0e88e506dfc223454.2592000.1492586050.282335-9395294';
+    $bodys = "{\"uid\":\"testuid\",\"images\":\"【图片base64编码】\"}";
     
     $res = request_post($url, $bodys);
 

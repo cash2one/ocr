@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/sdk/sdk.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/sdk/sdk.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1492773116/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1493288513/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -277,7 +277,7 @@
         <a href="#sdk-category-anti">
             <div class="sdk-nav-item ">
                 <div class="sdk-nav-icon sdk-nav-icon-anti-porn"></div>
-                <span class="sdk-nav-text">色情识别</span>
+                <span class="sdk-nav-text">图像审核</span>
             </div>
         </a>
     </div>
@@ -696,7 +696,7 @@
             </div>
         </div>
         <div class="sdk-category">
-            <a name="sdk-category-anti"><div class="sdk-category-name">色情识别</div></a>
+            <a name="sdk-category-anti"><div class="sdk-category-name">图像审核</div></a>
             <div class="sdk-collection">
                 {%foreach $sdk.anti as $sdkItem%}
                 <div class="sdk-item-container">
@@ -843,8 +843,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1492773116/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1492773116/js/sdk/sdk.js"></script>
+<script src="//ai.bdstatic.com/dist/1493288513/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1493288513/js/sdk/sdk.js"></script>
 
 <script>
     (function () {

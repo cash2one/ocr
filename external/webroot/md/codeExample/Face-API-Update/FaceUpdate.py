@@ -9,9 +9,9 @@ from token import access_token
 人脸查找之更新接口
 '''
 
-updateUrl = "https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/user/update"
+updateUrl = "https://aip.baidubce.com/rest/2.0/face/v2/faceset/user/update"
 # 参数uid:用户id（由数字、字母、下划线组成）,images:图像base64编码,多张图片半角逗号分隔
-params = {"uid": "testuid", "images": "%2F9j%2F4AAQSkZJRgABAQAAAQABAAD%2F4QDKRXhpZgAATU0AK"}
+params = {"uid": "testuid", "images": "【图片base64编码】"}
 params = urllib.urlencode(params)
 access_token = access_token.AuthService()
 updateUrl = updateUrl + "?access_token=" + access_token

@@ -9,7 +9,7 @@ from token import access_token
 人脸查找之组内用户列表查询接口
 '''
 
-getUsersUrl = "https://aip.baidubce.com/rest/2.0/faceverify/v1/faceset/group/getusers"
+getUsersUrl = "https://aip.baidubce.com/rest/2.0/face/v2/faceset/group/getusers"
 # 参数group_id：用户组id   start:默认值0，起始序号   end:返回数量，默认值100，最大值1000
 params = dict(group_id="gid", start=0, end=100)
 params = urllib.urlencode(params)

@@ -3,7 +3,7 @@
 #include "face_match.h"
 // libcurl库下载链接：https://curl.haxx.se/download.html
 // 人脸匹配接口url
-const static std::string face_match_url = "https://aip.baidubce.com/rest/2.0/faceverify/v1/match";
+const static std::string face_match_url = "https://aip.baidubce.com/rest/2.0/face/v2/match";
 static std::string face_match_result;
 
 /**

@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1492773116/css/secondary/speech.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/secondary/speech.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1492773116/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1493288513/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -342,7 +342,7 @@
                     <div>主要服务：<a href="http://ai.baidu.com/speech/tts">语音合成</a></div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/speech/customer-1-1.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1493288513/ai_images/technology/speech/customer-1-1.png" alt="">
                         <div>
                             百度地图
                         </div>
@@ -361,7 +361,7 @@
                     <div>主要服务：<a href="http://ai.baidu.com/speech/tts">语音合成</a></div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/speech/customer-2-1.png" alt="iReader">
+                        <img src="//ai.bdstatic.com/dist/1493288513/ai_images/technology/speech/customer-2-1.png" alt="iReader">
                         <div>iReader</div>
                     </div>
                 </div>
@@ -378,7 +378,7 @@
                     <div>主要服务：<a href="http://ai.baidu.com/speech/asr">语音识别</a></div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1492773116/ai_images/technology/speech/case-logo-4.png">
+                        <img src="//ai.bdstatic.com/dist/1493288513/ai_images/technology/speech/case-logo-4.png">
                         <div>手机百度</div>
                     </div>
                 </div>
@@ -599,8 +599,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1492773116/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1492773116/js/secondary/speech.js"></script>
+<script src="//ai.bdstatic.com/dist/1493288513/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1493288513/js/secondary/speech.js"></script>
 
 <script>
     (function () {

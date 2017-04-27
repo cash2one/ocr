@@ -1,11 +1,14 @@
+
 # OCR iOS SDK 开发者文档
+
+# 简介
 
 本文档主要介绍OCR iOS SDK的安装和使用。在使用本文档前，您需要先了解Optical Character Recognition(OCR)的基础知识，并已经开通了OCR服务。
 
 支持的系统和硬件版本
 
 - iOS: 8.0 以上
-- 架构：armv7, armv7s, arm64
+- 架构：i386 x86_64 armv7 armv7s arm64
 
 # 快速入门
 
@@ -42,7 +45,7 @@ iOS SDK提供了一个可快速运行的Demo工程，建议首先运行一下Dem
 2. 解压缩，双击打开 AipOcr.xcworkspace
 3. 在[管理控制台](https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/app/list)中新建文字识别应用，配置BundleId为AipOcrDemo的BunldeId(默认为`com.baidu.AipOcrDemo`)
 4. 在AipOcrDemo工程中`AipOcrDemo/ViewController.m` `viewDidLoad`方法中配置相应[管理控制台](https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/app/list)中新建的应用的Api Key, Secret Key
-5. 运行AipOcrDemo工程
+5. Build AipOcrSdk, 再运行AipOcrDemo
 
 **若运行提示"身份验证错误"，请确认填写了步骤4中的Api Key/Secret Key**
 
@@ -65,7 +68,7 @@ OCR iOS SDK提供了以下3种AccessToken管理方法.
 
 ```
 // 接口
-- (instancetype) authWithAK: (NSString *)ak andSK: (NSString *)sk;
+- (void) authWithAK: (NSString *)ak andSK: (NSString *)sk;
 // 示例
 [[AipOcrService shardService] authWithAK:@"Api Key" andSK:@"Secret Key"];
 
@@ -87,7 +90,7 @@ OCR iOS SDK提供了以下3种AccessToken管理方法.
 
 ```
 // 接口
-- (instancetype) authWithLicenseFileData: (NSData *)licenseFileContent;
+- (void) authWithLicenseFileData: (NSData *)licenseFileContent;
 	
 // 示例
 // 若未添加至主工程，则[NSBundle mainBundle]修改为对应bundle
@@ -108,7 +111,7 @@ NSData *licenseFileData = [NSData dataWithContentsOfFile:licenseFile];
 
 ```
 // 接口
-- (instancetype) authWithToken: (NSString *)token;
+- (void) authWithToken: (NSString *)token;
 // 示例
 [[AipOcrService shardService] authWithToken:@"Token here"];
 ```
@@ -425,5 +428,6 @@ static CGFloat const pinchMinscale = 0.5;
 
 | 上线日期      | 版本号   | 更新内容      |
 | --------- | ----- | --------- |
+| 2017.4.27 | 1.0.1 | 新增模拟器支持 |
 | 2017.3.16 | 1.0.0 | 在线OCR第一版！ |
 

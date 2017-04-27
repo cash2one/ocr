@@ -1,8 +1,39 @@
 # Java SDK文档
 
-本文档主要介绍人脸识别Java SDK的安装和使用。在使用本文档前，您需要先了解人脸识别的基础知识，并已经开通了人脸识别服务。
+# 简介
 
-# 安装人脸检测 Java SDK
+Hi，您好，欢迎使用百度人脸识别API服务。
+
+本文档主要针对API开发者，描述百度人脸识别接口服务的相关技术内容。如果您对文档内容有任何疑问，可以通过以下几种方式联系我们：
+
+* 在百度云控制台内[提交工单](http://ticket.bce.baidu.com/#/ticket/create)，咨询问题类型请选择**人工智能服务**；
+* 加入**开发者QQ群**：224994340；
+
+## 接口能力
+
+| 接口名称  | 接口能力简要描述                     |
+| :---- | :--------------------------- |
+| [人脸检测](#人脸检测)  | 检测人脸并定位，返回五官关键点，及人脸各属性值      |
+| [人脸比对](#人脸比对)  | 返回两两比对的人脸相似值                 |
+| [人脸识别](#人脸识别)  | 在人脸库中查找相似的人脸                |
+| [人脸认证](#人脸认证)  | 识别上传的图片是否为指定用户               |
+| [人脸库设置](#人脸注册) | 对人脸库的相关操作，如注册、删除、更新、查找用户信息等 |
+
+## 版本更新记录
+
+| 上线日期      | 版本号  | 更新内容                             |
+| --------- | ---- | -------------------------------- |
+| 2017.4.27 | 1.3.4 | 人脸比对、识别、认证和人脸库设置接口升级为v2版本 |
+| 2017.4.20 | 1.3.3 | AI SDK同步版本更新  |
+| 2017.4.13 | 1.3.2 | AI SDK同步版本更新  |
+| 2017.3.23 | 1.3 | 兼容Android环境 |
+| 2017.3.2  | 1.2  | 上线人脸查找接口，增加对图片参数要求限制的检查，增加设置超时接口 |
+| 2017.1.20 | 1.1  | 上线人脸比对接口，同时修复部分云用户调用不成功的错误       |
+| 2017.1.6  | 1.0  | 初始版本，上线人脸属性识别接口                  |
+
+#快速入门
+
+## 安装人脸检测 Java SDK
 
 **Face Java SDK目录结构**
 
@@ -27,18 +58,14 @@
 
 4.添加SDK工具包`face_sdk-version.jar`和第三方依赖工具包`third-party/*.jar`。
 
-其中，`version`为版本号，添加完成后，用户就可以在工程中使用BFR Java SDK。
+其中，`version`为版本号，添加完成后，用户就可以在工程中使用Face Java SDK。
 
-
-# 快速入门
-
-1.初始化一个AipFaceClient。
-
-AipFaceClient是与Baidu Face Recognition交互的客户端，所有人脸识别操作都是通过AipFaceClient完成的。您可以参考**新建AipFaceClient**，完成初始化客户端的操作。
 
 ## 新建AipFaceClient
 
-AipFaceClient是人脸识别的Java客户端，为使用人脸识别的开发人员提供了一系列的交互方法。
+1.初始化一个AipFaceClient。
+
+AipFaceClient是与Baidu Face Recognition交互的客户端，所有人脸识别操作都是通过AipFaceClient完成的。
 
 用户可以参考如下代码新建一AipFaceClient：
 
@@ -80,61 +107,21 @@ public class Sample {
 | setSocketTimeoutInMillis     | 通过打开的连接传输数据的超时时间（单位：毫秒） |
 
 
-# 错误信息格式
+#接口调用
 
-若请求错误，服务器将返回的JSON文本包含以下参数：
+## 人脸检测
 
-* **error_code：**错误码；关于错误码的详细信息请参考**通用错误码**和**业务相关错误码**。
-* **error_msg：**错误描述信息，帮助理解和解决发生的错误。
+### 接口描述
 
-**SDK本地检测参数返回的错误码**：
+检测请求图片中的人脸，返回人脸位置、72个关键点坐标、及人脸相关属性信息。
 
-| error_code | error_msg                        | 备注              |
-| ---------- | -------------------------------- | --------------- |
-| SDK100     | image size error                 | 图片大小超限          |
-| SDK101     | image length error               | 图片边长不符合要求       |
-| SDK102     | read image file error            | 读取图片文件错误        |
-| SDK103     | user_info size error             | user_info参数大小错误 |
-| SDK104     | group_id format error            | group_id有非法字符   |
-| SDK105     | group_id size error              | group_id参数大小错误  |
-| SDK106     | uid format error                 | uid有非法字符        |
-| SDK107     | uid size error                   | uid参数大小错误       |
-| SDK108     | connection or read data time out | 连接超时或读取数据超时     |
-| SDK109     | unsupported image format         | 不支持的图片格式        |
+检测响应速度，与图片中人脸数量相关，人脸数量较多时响应时间会有些许延长。
 
-**服务端返回的错误码**
+典型应用场景：如**人脸属性分析**，**基于人脸关键点的加工分析**，**人脸营销活动**等。
 
-| 错误码    | 错误信息                   | 描述        |
-| ------ | ---------------------- | --------- |
-| 216015 | module closed          | 模块关闭      |
-| 216100 | invalid param          | 非法参数      |
-| 216101 | not enough param       | 参数数量不够    |
-| 216102 | service not support    | 业务不支持     |
-| 216103 | param too long         | 参数太长      |
-| 216110 | appid not exist        | APP ID不存在 |
-| 216111 | invalid userid         | 非法用户ID    |
-| 216200 | empty image            | 空的图片      |
-| 216201 | image format error     | 图片格式错误    |
-| 216202 | image size error       | 图片大小错误    |
-| 216300 | db error               | DB错误      |
-| 216400 | backend error          | 后端系统错误    |
-| 216401 | internal error         | 内部错误      |
-| 216402 | face not found         | 没有找到人脸    |
-| 216500 | unknown error          | 未知错误      |
-| 216611 | user not exist         | 用户不存在     |
-| 216613 | user not found         | 用户查找不到    |
-| 216614 | not enough images      | 图片信息不完整   |
-| 216615 | fail to process images | 处理图片信息失败  |
-| 216616 | image existed          | 图片已存在     |
-| 216617 | fail to add user       | 添加用户失败    |
-| 216618 | no user in group       | 群组里没有用户   |
-| 216630 | recognize error        | 识别错误      |
+> 五官位置会标记具体坐标；72个关键点坐标也包含具体坐标，但不包含对应位置的详细位置描述。
 
-
-
-# 人脸检测
-
-人脸识别基于百度业界领先的智能人脸分析算法，提供人脸检测、人脸识别、关键点定位、属性识别和活体检测等一整套技术方案。
+### 请求说明
 
 图片接受类型支持本地图片路径字符串，图片文件二进制数组。
 
@@ -183,7 +170,7 @@ public void faceRecognize(AipFace client) {
 | max_face_num | unit32  | 最多处理人脸数目，默认值1                            | 是    |
 | image        | String  | 图像数据，支持本地图像文件路径，图像文件二进制数组                | 是    |
 
-**人脸检测 返回数据参数详情**
+###返回说明
 
 | 参数                      | 类型       | 是否一定输出 | 描述                                       |
 | :---------------------- | :------- | :----- | :--------------------------------------- |
@@ -232,12 +219,19 @@ public void faceRecognize(AipFace client) {
 | +++human                | double   | 是      | 真实人脸置信度，[0, 1]                           |
 | +++cartoon              | double   | 是      | 卡通人脸置信度，[0, 1]                           |
 
-# 人脸比对
+## 人脸比对
 
-人脸比对接口提供了对上传图片进行两两比对，并输出相似度得分的功能。
+###接口描述
 
-接受的参数为一系列本地图片路径的数组。
+该请求用于比对多张图片中的人脸相似度并返回两两比对的得分，可用于判断两张脸是否是同一人的可能性大小。
 
+典型应用场景：如**人证合一验证**，**用户认证**等，可与您现有的人脸库进行比对验证。
+
+> **说明：**支持对比对的两张图片做在线活体检测
+
+###请求说明
+
+接受的参数为一系列本地图片路径的数组，或图片二进制数据的数组。
 举例，要对两张图片进行人脸比对，具体的人脸信息在返回的result字段中：
 
 ```java
@@ -248,25 +242,33 @@ public void faceRecognize(AipFace client) {
     ArrayList<String> pathArray = new ArrayList<String>();
     pathArray.add(imagePath1);
     pathArray.add(imagePath2);
-    JSONObject response = client.match(pathArray);
+    JSONObject response = client.match(pathArray, new HashMap<String, String>());
     System.out.println(response.toString());
 }
 ```
 
-**人脸比对请求参数要求**：
+**人脸比对请求参数**：
 
-所有图片经base64编码后的图片数据总和不超过10M。
+所有图片经base64编码后的图片数据总和不超过10M。以下可选参数以HashMap形式放在接口最后的options参数中。
 
-**人脸比对返回数据参数详情**：
+| 参数             | 是否必选 | 类型     | 说明                                       |
+| -------------- | ---- | ------ | ---------------------------------------- |
+| ext_fields     | 否    | string | 返回质量信息，取值固定: 目前支持qualities(质量检测)。(对所有图片都会做改处理) |
+| image_liveness | 否    | string | 返回的活体信息，“faceliveness,faceliveness” 表示对比对的两张图片都做活体检测；“,faceliveness” 表示对第一张图片不做活体检测、第二张图做活体检测；“faceliveness,” 表示对第一张图片做活体检测、第二张图不做活体检测 |
 
-| 字段         | 是否必选 | 类型            | 说明                                       |
-| ---------- | ---- | ------------- | ---------------------------------------- |
-| log_id     | 是    | uint64        | 请求标识码，随机数，唯一                             |
-| result_num | 是    | uint32        | 返回结果数目，即：result数组中元素个数                   |
-| result     | 是    | array(object) | 结果数据，index和请求图片index对应。数组元素为每张图片的匹配得分数组，top n。 得分[0,100.0] |
-| +index_i   | 是    | uint32        | 比对图片1的index                              |
-| +index_j   | 是    | uint32        | 比对图片2的index                              |
-| +score     | 是    | double        | 比对得分                                     |
+###返回说明
+
+| 字段            | 是否必选 | 类型            | 说明                                       |
+| ------------- | ---- | ------------- | ---------------------------------------- |
+| log_id        | 是    | uint64        | 请求唯一标识码，随机数                              |
+| result_num    | 是    | uint32        | 返回结果数目，即：result数组中元素个数                   |
+| result        | 是    | array(object) | 结果数据，index和请求图片index对应。数组元素为每张图片的匹配得分数组，top n。 得分[0,100.0] |
+| +index_i      | 是    | uint32        | 比对图片1的index                              |
+| +index_j      | 是    | uint32        | 比对图片2的index                              |
+| +score        | 是    | double        | 比对得分                                     |
+| ext_info      | 否    | array（dict）   | 对应参数中的ext_fields                         |
+| +qualities    | 否    | string        | 质量相关的信息，无特殊需求可以不使用                       |
+| +faceliveness | 否    | string        | 活体分数“0,0.9999”（表示第一个图不做活体检测、第二个图片活体分数为0.9999） |
 
 **返回样例：**
 
@@ -296,33 +298,202 @@ public void faceRecognize(AipFace client) {
 }
 ```
 
-# 人脸查找
+## 人脸识别
 
-## 人脸注册
+### 接口描述
 
-人脸注册接口提供了使用上传图片进行注册新用户的功能，需要指定注册用户的id和描述信息，所在组id以及本地用户人脸图片。
-**注：每个用户（uid）所能注册的最大人脸数量为5张。** 
+用于计算指定组内用户，与上传图像中人脸的相似度。识别前提为您已经创建了一个**[人脸库](#人脸注册)**。
 
-举例，要注册一个新用户，用户id为uid1，加入组id为group1, 注册成功后服务端会返回操作的logid：
+典型应用场景：如**人脸闸机**，**考勤签到**，**安防监控**等。
+
+> **说明：**人脸识别返回值不直接判断是否是同一人，只返回用户信息及相似度分值。
+
+> **说明：**推荐可判断为同一人的相似度分值为**80**，您也可以根据业务需求选择更合适的阈值。
+
+###请求说明
+
+举例，要计算一张图片与指定组group1, group2内各用户相似度：
 
 ```java
-public void facesetAddUser(AipFace client) {
-    // 参数为本地图片路径
-    String path1 = "picture1.jpg";
-    String path2 = "picture2.jpg";
-    ArrayList<String> path = new ArrayList<String>();
-    path.add(path1);
-    path.add(path2);
-    JSONObject res = client.addUser("uid1", "test_user_info", "group1", path);
+public void identifyUser(AipFace client) {
+    String path = "test1.jpg";
+    HashMap<String, Object> options = new HashMap<String, Object>(1);
+    options.put("user_top_num", 1);
+    JSONObject res = client.identifyUser(Arrays.asList("group1", "group2"), path, options);
     System.out.println(res.toString(2));
 }
 ```
 
-**人脸注册请求参数要求**：
+**人脸识别请求参数详情**：
 
-所有图片经base64编码后的图片数据总和不超过10M。
+| 参数           | 是否必选 | 类型     | 说明                            |
+| ------------ | ---- | ------ | ----------------------------- |
+| group_id     | 是    | string | 用户组id（由数字、字母、下划线组成）列表，每个groupid长度限制48  |
+| imgPath/imgData| 是    | string | imgPath对应图片本地路径，imgData对应图片二进制数据，**要求图片base64编码后大小不超过10M** |
+| ext_fields   | 否    | string | 特殊返回信息，多个用逗号分隔，取值固定: 目前支持 faceliveness(活体检测) |
+| user_top_num | 否    | uint32 | 返回用户top数，默认为1，最多返回5个                     |
 
-**人脸注册返回数据参数详情**：
+###返回说明
+
+| 字段            | 是否必选 | 类型            | 说明                               |
+| ------------- | ---- | ------------- | -------------------------------- |
+| log_id        | 是    | uint64        | 请求唯一标识码，随机数                      |
+| result_num    | 是    | uint32        | 返回结果数目，即：result数组中元素个数           |
+| ext_info      | 否    | array         | 对应参数中的ext_fields                 |
+| +faceliveness | 否    | string        | 活体分数，如0.49999                    |
+| result        | 是    | array(object) | 结果数组                             |
+| +group_id     | 是    | string        | 对应的这个用户的group_id                 |
+| +uid          | 是    | string        | 匹配到的用户id                         |
+| +user_info    | 是    | string        | 注册时的用户信息                         |
+| +scores       | 是    | array(double) | 结果数组，数组元素为匹配得分，top n。得分[0,100.0] |
+
+
+**返回样例：**
+
+```json
+{
+    "log_id": 73473737,
+    "result_num":1,
+    "result": [
+        {
+            "group_id" : "test1",
+            "uid": "u333333",
+            "user_info": "Test User",
+            "scores": [
+                    99.3,
+                    83.4
+            ]
+        }
+    ]
+}
+```
+
+## 人脸认证
+
+### 接口描述
+
+用于识别上传的图片是否为指定用户，即查找前需要先确定要查找的用户在人脸库中的id。
+
+典型应用场景：如**人脸登录**，**人脸签到**等
+
+> **说明：**人脸认证与人脸识别的差别在于：人脸识别需要指定一个待查找的人脸库中的组；而人脸认证需要指定具体的用户id即可，不需要指定具体的人脸库中的组；实际应用中，人脸认证需要用户或系统先输入id，这增加了验证安全度，但也增加了复杂度，具体使用哪个接口需要视您的业务场景判断。
+
+> **说明：**请求参数中，新增在线活体检测
+
+### 请求说明
+
+举例，要认证一张图片在指定group中是否为uid1的用户：
+
+```java
+public void verifyUser(AipFace client) {
+    String path = "test1.jpg";
+    HashMap<String, Object> options = new HashMap<String, Object>(1);
+    options.put("top_num", 5);
+    JSONObject res = client.verifyUser("uid1", Arrays.asList("group1", "group2"), path, options);
+    System.out.println(res.toString(2));
+}
+```
+
+**人脸认证请求参数详情**：
+可选参数均以HashMap形式放在接口最后的options参数中。
+
+| 参数         | 是否必选 | 类型     | 说明                                       |
+| ---------- | ---- | ------ | ---------------------------------------- |
+| uid        | 是    | string | 用户id（由数字、字母、下划线组成），长度限制128B              |
+| imgPath/imgData| 是    | string | imgPath对应图片本地路径，imgData对应图片二进制数据，**要求图片base64编码后大小不超过10M** |
+| group_id     | 是    | string | 用户组id（由数字、字母、下划线组成）列表，每个groupid长度限制48  |
+| top_num    | 否    | uint32 | 返回匹配得分top数，默认为1                          |
+| ext_fields | 否    | string | 特殊返回信息，多个用逗号分隔，取值固定: 目前支持 faceliveness(活体检测) |
+
+###返回说明
+
+| 字段            | 是否必选 | 类型            | 说明                                       |
+| ------------- | ---- | ------------- | ---------------------------------------- |
+| log_id        | 是    | uint64        | 请求唯一标识码，随机数                              |
+| result_num    | 是    | uint32        | 返回结果数目，即：result数组中元素个数                   |
+| result        | 是    | array(double) | 结果数组，数组元素为匹配得分，top n。 得分范围[0,100.0]。推荐得分超过80可认为认证成功 |
+| ext_info      | 否    | array         | 对应参数中的ext_fields                         |
+| +faceliveness | 否    | string        | 活体分数，如0.49999                            |
+
+**返回样例：**
+
+```json
+{
+  "results": [
+    93.86580657959,
+    92.237548828125
+  ],
+  "result_num": 2,
+  "log_id": 1629483134
+}
+```
+
+
+## 人脸注册
+
+### 接口描述
+
+用于从人脸库中新增用户，可以设定多个用户所在组，及组内用户的人脸图片，
+
+典型应用场景：构建您的人脸库，如**会员人脸注册**，**已有用户补全人脸信息**等。
+
+人脸库、用户组、用户、用户下的人脸**层级关系**如下所示：
+
+```json
+|- 人脸库
+   |- 用户组一
+      |- 用户01
+         |- 人脸
+      |- 用户02
+         |- 人脸
+         |- 人脸
+         ....
+       ....
+   |- 用户组二
+   |- 用户组三
+   |- 用户组四
+   ....
+```
+
+**说明：关于人脸库的设置限制** 
+
+* 每个开发者账号只能创建一个人脸库；
+* 每个人脸库下，用户组（group）数量没有限制；
+* 每个用户组（group）下，可添加最多**300000**张人脸，如每个uid注册一张人脸，则**最多300000个**用户uid；
+* 每个用户（uid）所能注册的最大人脸数量**没有限制**；
+
+> **说明：**人脸注册完毕后，生效时间最长为**35s**，之后便可以进行识别或认证操作。
+
+> **说明：**注册的人脸，建议为用户正面人脸。
+
+> **说明：**uid在库中已经存在时，对此uid重复注册时，新注册的图片默认会**追加**到该uid下，如果手动选择`action_type:replace`，则会用新图替换库中该uid下所有图片。
+
+###请求说明
+
+举例，要注册一个新用户，用户id为uid1，加入组id为group1和group2, 注册成功后服务端会返回操作的logid：
+
+```java
+public void facesetAddUser(AipFace client) {
+    // 参数为本地图片路径
+    String path = "picture1.jpg";
+    HashMap<String, String> options = new HashMap<String, String>();
+    JSONObject res = client.addUser("uid1", "test_user_info", Arrays.asList("group1", "group2"), path, options);
+    System.out.println(res.toString(2));
+}
+```
+
+**人脸注册请求参数详情**：
+
+可选参数均以HashMap形式放在接口最后的options参数中。
+| 参数          | 是否必选 | 类型     | 说明                                       |
+| ----------- | ---- | ------ | ---------------------------------------- |
+| uid         | 是    | string | 用户id（由数字、字母、下划线组成），长度限制128B              |
+| user_info   | 是    | string | 用户资料，长度限制256B                            |
+| imgPath/imgData| 是    | string | imgPath对应图片本地路径，imgData对应图片二进制数据，**要求图片base64编码后大小不超过10M** |
+| group_id     | 是    | string | 用户组id（由数字、字母、下划线组成）列表，每个groupid长度限制48  |
+| action_type | 否    | string | 参数包含append、replace。如果为“replace”，则每次注册时进行替换replace（新增或更新）操作，默认为append操作 |
+
+###返回说明
 
 | 字段     | 是否必选 | 类型     | 说明           |
 | ------ | ---- | ------ | ------------ |
@@ -346,28 +517,39 @@ public void facesetAddUser(AipFace client) {
 
 ## 人脸更新
 
-人脸更新接口提供了为已有用户更新人脸图像的功能，**新上传的图片将覆盖原有图像**。
+### 接口描述
 
-举例，要更新一个新用户，用户id为uid1， 更新成功后服务端会返回操作的logid：
+用于对人脸库中指定用户，更新其下的人脸图像。
+
+> **说明：**针对一个uid执行更新操作，新上传的人脸图像将覆盖此uid原有所有图像。
+
+> **说明：**执行更新操作，如果该uid不存在时，会返回错误。如果添加了action_type:replace,则不会报错，并自动注册该uid，操作结果等同注册新用户。
+
+### 请求说明
+
+举例，要更新一个用户，用户id为uid1， 更新成功后服务端会返回操作的logid：
 
 ```java
 public void facesetUpdateUser(AipFace client) {
     // 参数为本地图片路径
-    String path1 = "picture1.jpg";
-    String path2 = "picture2.jpg";
-    ArrayList<String> path = new ArrayList<String>();
-    path.add(path1);
-    path.add(path2);
-    JSONObject res = client.updateUser("uid1", path);
+    String path = "picture1.jpg";
+    HashMap<String, String> options = new HashMap<String, String>();
+    JSONObject res = client.updateUser("uid1", "user_info_memo", "group1", path, options);
     System.out.println(res.toString(2));
 }
 ```
 
-**人脸更新请求参数要求**：
+**人脸更新请求参数详情**：
 
-uid需要在库中已存在，且组成为字母/数字/下划线，长度不超过128B。所有图片经base64编码后的图片数据总和不超过10M。
+| 参数     | 是否必选 | 类型     | 说明                                    |
+| ------ | ---- | ------ | ------------------------------------- |
+| uid    | 是    | string | 用户id（由数字、字母、下划线组成），长度限制128B           |
+| imgPath/imgData| 是    | string | imgPath对应图片本地路径，imgData对应图片二进制数据，**要求图片base64编码后大小不超过10M** |
+| group_id     | 是    | string | 用户组id（由数字、字母、下划线组成），长度限制48  |
+| user_info | 是 | string | 新的user_info信息 | "memo" |
+| action_type | 否 | string | 如果为replace时，则uid不存在时，不报错，会自动注册。 不存在该参数时，如果uid不存在会提示错误 | replace |
 
-**人脸注册返回数据参数详情**：
+###返回说明
 
 | 字段     | 是否必选 | 类型     | 说明           |
 | ------ | ---- | ------ | ------------ |
@@ -391,22 +573,40 @@ uid需要在库中已存在，且组成为字母/数字/下划线，长度不超
 
 ## 人脸删除
 
-人脸删除接口提供了从库中彻底删除一个用户的功能，包括用户所有图像和身份信息，同时也将从各个组中把用户删除。
+### 接口描述
 
-举例，要删除一个新用户，用户id为uid1， 删除成功后服务端会返回操作的logid：
+用于从人脸库中删除一个用户。
+
+**人脸删除注意事项：**
+
+* 删除的内容，包括用户所有图像和身份信息；
+* 如果一个uid存在于多个用户组内且没有指定group_id，将会同时将从各个组中把用户删除
+* 如果指定了group_id，则只删除此group下的uid相关信息
+
+### 请求说明
+
+举例，要删除一个用户，用户id为uid1， 删除成功后服务端会返回操作的logid：
 
 ```java
 public void facesetDeleteUser(AipFace client) {
-    JSONObject res = client.deleteUser("uid1");
+	// 只从指定组中删除用户
+    JSONObject res = client.deleteUser("uid1", Arrays.asList("group1"));
+    System.out.println(res.toString(2));
+
+	// 从人脸库中彻底删除用户
+	JSONObject res = client.deleteUser("uid1");
     System.out.println(res.toString(2));
 }
 ```
 
-**人脸删除请求参数要求**：
+**人脸删除请求参数**：
 
-uid需要在库中已存在，且组成为字母/数字/下划线，长度不超过128B。
+| 参数       | 是否必选 | 类型     | 说明                                       |
+| -------- | ---- | ------ | ---------------------------------------- |
+| uid      | 是    | string | 用户id（由数字、字母、下划线组成），长度限制128B              |
+| group_id | 否    | string | 选择指定group_id则只删除group列表下的uid内容，如果不指定则删除group下对应uid的信息 |
 
-**人脸删除返回数据参数详情**：
+###返回说明
 
 | 字段     | 是否必选 | 类型     | 说明           |
 | ------ | ---- | ------ | ------------ |
@@ -427,176 +627,37 @@ uid需要在库中已存在，且组成为字母/数字/下划线，长度不超
   "error_msg": "user not exist"
 }
 ```
-
-## 人脸删除
-
-人脸删除接口提供了从库中彻底删除一个用户的功能，包括用户所有图像和身份信息，同时也将从各个组中把用户删除。
-
-举例，要删除一个新用户，用户id为uid1， 删除成功后服务端会返回操作的logid：
-
-```java
-public void facesetDeleteUser(AipFace client) {
-    JSONObject res = client.deleteUser("uid1");
-    System.out.println(res.toString(2));
-}
-```
-
-**人脸删除请求参数要求**：
-
-uid需要在库中已存在，且组成为字母/数字/下划线，长度不超过128B。
-
-**人脸删除返回数据参数详情**：
-
-| 字段     | 是否必选 | 类型     | 说明           |
-| ------ | ---- | ------ | ------------ |
-| log_id | 是    | uint64 | 请求标识码，随机数，唯一 |
-
-
-**返回样例：**
-
-```json
-// 更新成功
-{
-    "log_id": 73473737,
-}
-// 更新发生错误
-{
-  "error_code": 216612,
-  "log_id": 1137508902,
-  "error_msg": "user not exist"
-}
-```
-
-## 人脸认证
-
-人脸认证接口用于识别上传的图片是否为指定用户。
-
-举例，要认证一些图片是否为uid1的用户：
-
-```java
-public void verifyUser(AipFace client) {
-    String path1 = "test1.jpg";
-    String path2 = "test2.jpg";
-    ArrayList<String> path = new ArrayList<String>();
-    path.add(path1);
-    path.add(path2);
-    HashMap<String, Object> options = new HashMap<String, Object>(1);
-    options.put("top_num", path.size());
-    JSONObject res = client.verifyUser("uid1", path, options);
-    System.out.println(res.toString(2));
-}
-```
-
-**人脸认证请求参数详情**：
-
-| 参数      | 是否必选 | 类型     | 说明                            |
-| ------- | ---- | ------ | ----------------------------- |
-| uid     | 是    | string | 用户id（由数字、字母、下划线组成），长度限制128B   |
-| images  | 是    | string | 图像base64编码,多张图片半角逗号分隔，总共最大10M |
-| top_num | 否    | uint32 | 返回匹配得分top数，默认为1               |
-
-**人脸认证返回数据参数详情**：
-
-| 字段         | 是否必选 | 类型            | 说明                                       |
-| ---------- | ---- | ------------- | ---------------------------------------- |
-| log_id     | 是    | uint64        | 请求标识码，随机数，唯一                             |
-| result_num | 是    | uint32        | 返回结果数目，即：result数组中元素个数                   |
-| result     | 是    | array(double) | 结果数组，数组元素为匹配得分，top n。 得分范围[0,100.0]。得分超过80可认为认证成功 |
-
-
-**返回样例：**
-
-```json
-{
-  "results": [
-    93.86580657959,
-    92.237548828125
-  ],
-  "result_num": 2,
-  "log_id": 1629483134
-}
-```
-
-## 人脸识别
-
-人脸识别接口用于计算指定组内用户与上传图像的相似度。
-
-举例，要计算一些图片与指定组内各用户相似度：
-
-```java
-public void identifyUser(AipFace client) {
-    String path1 = "test1.jpg";
-    String path2 = "test2.jpg";
-    ArrayList<String> path = new ArrayList<String>();
-    path.add(path1);
-    path.add(path2);
-    HashMap<String, Object> options = new HashMap<String, Object>(1);
-    options.put("user_top_num", path.size());
-    options.put("face_top_num", 10);
-    JSONObject res = client.identifyUser("group1", path, options);
-    System.out.println(res.toString(2));
-}
-```
-
-**人脸识别请求参数详情**：
-
-| 参数           | 是否必选 | 类型     | 说明                            |
-| ------------ | ---- | ------ | ----------------------------- |
-| group_id     | 是    | string | 用户组id（由数字、字母、下划线组成），长度限制128B  |
-| images       | 是    | string | 图像base64编码,多张图片半角逗号分隔，总共最大10M |
-| user_top_num | 否    | uint32 | 返回用户top数，默认为1                 |
-| face_top_num | 否    | uint32 | 单用户人脸匹配得分top数，默认为1            |
-
-**人脸识别返回数据参数详情**：
-
-| 字段         | 是否必选 | 类型            | 说明                                |
-| ---------- | ---- | ------------- | --------------------------------- |
-| log_id     | 是    | uint64        | 请求标识码，随机数，唯一                      |
-| result_num | 是    | uint32        | 返回结果数目，即：result数组中元素个数            |
-| result     | 是    | array(double) | 结果数组                              |
-| +uid       | 是    | string        | 匹配到的用户id                          |
-| +user_info | 是    | string        | 注册时的用户信息                          |
-| +scores    | 是    | array(double) | 结果数组，数组元素为匹配得分，top n。 得分[0,100.0] |
-
-
-**返回样例：**
-
-```json
-{
-    "log_id": 73473737,
-    "result_num":1,
-    "result": [
-        {
-            "uid": "u333333",
-            "user_info": "Test User",
-            "scores": [
-                    99.3,
-                    83.4
-            ]
-        }
-    ]
-}
-```
-
 
 ## 用户信息查询
 
-用户信息查询接口用于查询某用户的详细信息。
+### 接口描述
+
+用于查询人脸库中某用户的详细信息。
+
+### 请求说明
 
 举例，要查询指定用户的信息：
 
 ```java
 public void getUser(AipFace client) {
+	// 查询一个用户在所有组内的信息
     JSONObject res = client.getUser("uid1");
+    System.out.println(res.toString(2));
+
+	// 查询一个用户在指定组内的信息
+    JSONObject res = client.getUser("uid1", Arrays.asList("group1"));
     System.out.println(res.toString(2));
 }
 ```
 
-**用户信息查询请求参数要求**：
+**用户信息查询请求参数**：
 
-uid需要在库中已存在，且组成为字母/数字/下划线，长度不超过128B。
+| 参数   | 是否必选 | 类型     | 说明                          |
+| ---- | ---- | ------ | --------------------------- |
+| uid  | 是    | string | 用户id（由数字、字母、下划线组成），长度限制128B |
+| group_id | 否    | string | 选择指定group_id则只查找group列表下的uid内容，如果不指定则查找所有group下对应uid的信息 |
 
-**用户信息查询返回数据参数详情**：
+###返回说明
 
 | 字段         | 是否必选 | 类型            | 说明           |
 | ---------- | ---- | ------------- | ------------ |
@@ -625,7 +686,11 @@ uid需要在库中已存在，且组成为字母/数字/下划线，长度不超
 
 ## 组列表查询
 
-组列表查询接口用于查询一个app下所有组的列表。
+### 接口描述
+
+用于查询用户组的列表。
+
+### 请求说明
 
 举例：
 
@@ -645,8 +710,7 @@ public void getGroupList(AipFace client) {
 | start | 否    | uint32 | 默认值0，起始序号           |
 | end   | 否    | uint32 | 返回数量，默认值100，最大值1000 |
 
-**组列表查询返回数据参数详情**：
-
+###返回说明
 | 字段         | 是否必选 | 类型            | 说明           |
 | ---------- | ---- | ------------- | ------------ |
 | log_id     | 是    | uint64        | 请求标识码，随机数，唯一 |
@@ -668,8 +732,11 @@ public void getGroupList(AipFace client) {
 
 ## 组内用户列表查询
 
-组内用户列表查询接口用于查询一个用户组内所有的用户信息。
+### 接口描述
 
+用于查询指定用户组中的用户列表。
+
+### 请求说明
 举例：
 
 ```java
@@ -689,7 +756,7 @@ public void getGroupUsers(AipFace client) {
 | start    | 否    | uint32 | 默认值0，起始序号           |
 | end      | 否    | uint32 | 返回数量，默认值100，最大值1000 |
 
-**组内用户列表查询返回数据参数详情**：
+###返回说明
 
 | 字段         | 是否必选 | 类型            | 说明           |
 | ---------- | ---- | ------------- | ------------ |
@@ -720,24 +787,31 @@ public void getGroupUsers(AipFace client) {
 
 ## 组内添加用户
 
-组内添加用户接口用于把一个已经存在于库中的用户添加到新的用户组中。
+### 接口描述
+
+用于将已经存在于人脸库中的用户添加到一个新的组。
+
+> **说明：**并不是向一个指定组内添加用户，而是直接从其它组复制用户信息
+
+### 请求说明
 
 举例：
 
 ```java
 public void addGroupUser(AipFace client) {
-    JSONObject res = client.addGroupUser("group1", "uid1");
+    JSONObject res = client.addGroupUser("srcgroup", Arrays.asList("dstGroup1", "dstGroup2"), "uid1");
     System.out.println(res.toString(2));
 }
 ```
 **组内添加用户请求参数详情**：
 
-| 参数       | 是否必选 | 类型     | 说明    |
-| -------- | ---- | ------ | ----- |
-| group_id | 是    | string | 用户组id |
-| uid      | 是    | string | 用户id  |
+| 参数           | 是否必选 | 类型     | 说明                   |
+| ------------ | ---- | ------ | -------------------- |
+| src_group_id | 是    | string | 从指定group里复制信息        |
+| group_id     | 是    | string | 需要添加信息的组id列表 |
+| uid          | 是    | string | 用户id                 |
 
-**组内添加用户接口返回数据参数详情**：
+###返回说明
 
 | 字段     | 是否必选 | 类型     | 说明           |
 | ------ | ---- | ------ | ------------ |
@@ -760,13 +834,19 @@ public void addGroupUser(AipFace client) {
 
 ## 组内删除用户
 
-组内删除用户接口用于把一个用户从某个组中删除，但不会删除用户在其它组内的信息。当用户仅属于单个分组时，本接口将返回错误。
+### 接口描述
+
+用于将用户从某个组中删除，但不会删除用户在其它组的信息。
+
+> **说明：**当用户仅属于单个分组时，本接口将返回错误，请使用**人脸删除接口**
+
+### 请求说明
 
 举例：
 
 ```java
 public void deleteGroupUser(AipFace client) {
-    JSONObject res = client.deleteGroupUser("group1", "uid1");
+    JSONObject res = client.deleteGroupUser(Arrays.asList("group1", "group2"), "uid1");
     System.out.println(res.toString(2));
 }
 ```
@@ -774,10 +854,10 @@ public void deleteGroupUser(AipFace client) {
 
 | 参数       | 是否必选 | 类型     | 说明    |
 | -------- | ---- | ------ | ----- |
-| group_id | 是    | string | 用户组id |
+| group_id | 是    | string | 用户组id列表 |
 | uid      | 是    | string | 用户id  |
 
-**组内删除用户接口返回数据参数详情**：
+###返回说明
 
 | 字段     | 是否必选 | 类型     | 说明           |
 | ------ | ---- | ------ | ------------ |
@@ -798,12 +878,56 @@ public void deleteGroupUser(AipFace client) {
 }
 ```
 
-# 版本更新记录
+# 错误信息
 
-| 上线日期      | 版本号  | 更新内容                             |
-| --------- | ---- | -------------------------------- |
-| 2017.4.13 | 1.3.2 | AI SDK同步版本更新  |
-| 2017.3.23 | 1.3 | 兼容Android环境 |
-| 2017.3.2  | 1.2  | 上线人脸查找接口，增加对图片参数要求限制的检查，增加设置超时接口 |
-| 2017.1.20 | 1.1  | 上线人脸比对接口，同时修复部分云用户调用不成功的错误       |
-| 2017.1.6  | 1.0  | 初始版本，上线人脸属性识别接口                  |
+##错误返回格式
+
+若请求错误，服务器将返回的JSON文本包含以下参数：
+
+* **error_code：**错误码；关于错误码的详细信息请参考**通用错误码**和**业务相关错误码**。
+* **error_msg：**错误描述信息，帮助理解和解决发生的错误。
+
+##错误码
+**SDK本地检测参数返回的错误码**：
+
+| error_code | error_msg                        | 备注              |
+| ---------- | -------------------------------- | --------------- |
+| SDK100     | image size error                 | 图片大小超限          |
+| SDK101     | image length error               | 图片边长不符合要求       |
+| SDK102     | read image file error            | 读取图片文件错误        |
+| SDK103     | user_info size error             | user_info参数大小错误 |
+| SDK104     | group_id format error            | group_id有非法字符   |
+| SDK105     | group_id size error              | group_id参数大小错误  |
+| SDK106     | uid format error                 | uid有非法字符        |
+| SDK107     | uid size error                   | uid参数大小错误       |
+| SDK108     | connection or read data time out | 连接超时或读取数据超时     |
+| SDK109     | unsupported image format         | 不支持的图片格式        |
+
+**服务端返回的错误码**
+
+| 错误码    | 错误信息                   | 描述        |
+| ------ | ---------------------- | --------- |
+| 216015 | module closed          | 模块关闭      |
+| 216100 | invalid param          | 非法参数      |
+| 216101 | not enough param       | 参数数量不够    |
+| 216102 | service not support    | 业务不支持     |
+| 216103 | param too long         | 参数太长      |
+| 216110 | appid not exist        | APP ID不存在 |
+| 216111 | invalid userid         | 非法用户ID    |
+| 216200 | empty image            | 空的图片      |
+| 216201 | image format error     | 图片格式错误    |
+| 216202 | image size error       | 图片大小错误    |
+| 216300 | db error               | DB错误      |
+| 216400 | backend error          | 后端系统错误    |
+| 216401 | internal error         | 内部错误      |
+| 216402 | face not found         | 没有找到人脸    |
+| 216500 | unknown error          | 未知错误      |
+| 216611 | user not exist         | 用户不存在     |
+| 216613 | user not found         | 用户查找不到    |
+| 216614 | not enough images      | 图片信息不完整   |
+| 216615 | fail to process images | 处理图片信息失败  |
+| 216616 | image existed          | 图片已存在     |
+| 216617 | fail to add user       | 添加用户失败    |
+| 216618 | no user in group       | 群组里没有用户   |
+| 216630 | recognize error        | 识别错误      |
+
