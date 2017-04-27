@@ -32,7 +32,7 @@ class Brain_AIApi
         'imgsrc.bdimg.com',
         'imgtn.bdimg.com',
         '10.57.6.47',
-        '10.95.106.174'
+        '10.95.106.174:8032'
     );
 
     //api list
