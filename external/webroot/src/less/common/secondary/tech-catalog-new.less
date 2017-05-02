@@ -1,0 +1,115 @@
+/**
+ * @file ai二级页,产品功能部分通用样式
+ * @author FranckChen(chenfan02@baidu.com)
+ */
+
+.tech-catalog(@page-name: speech; @product-num;) {
+    .tech-catalog {
+        padding: 40px 0 20px;
+        background-color: #fafafa;
+
+        &-title {
+            padding: 15px 0 5px;
+            font-size: 30px;
+            text-align: center;
+            color: #333;
+        }
+
+        &-intro {
+            padding: 20px 0 40px;
+            font-size: 14px;
+            line-height: 18px;
+            text-align: center;
+            color: #666;
+        }
+
+        &-gallery {
+            font-size: 0;
+        }
+    }
+
+    .tech-catalog-prods(@product-num);
+    .tech-catalog-prods(@n, @i: 1) when (@i <= @n) {
+        .tech-prod-poster-@{i} {
+            background: url("../../../../ai_images/technology/@{page-name}/sprite/prod-poster-@{i}.png") center center;
+            background-size: 100% 100%;
+        }
+
+        .tech-catalog-prods(@n, (@i + 1));
+    }
+}
+
+@prods-width: (1180px / 3) - 40px;
+.tech-prod {
+    &-container {
+        position: relative;
+        box-sizing: border-box;
+        display: inline-block;
+        width: @prods-width;
+        margin: 0 20px 35px;
+        height: 300px;
+        vertical-align: top;
+        border-bottom: 2px solid #f2f2f2;
+        background-color: #fff;
+        font-size: 0;
+
+        &:hover {
+            border-bottom: 0;
+            box-shadow: 0 2px 8px rgba(0 ,0 ,0 , .2);
+
+            [class^="tech-prod-poster"] {
+                background-size: 150% 150%;
+            }
+        }
+    }
+
+    &-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        box-sizing: border-box;
+        height: 60%;
+        text-align: center;
+        padding: 15px 20px;
+    }
+
+    &-name {
+        padding-bottom: 10px;
+        font-size: 18px;
+        color: #333;
+    }
+
+    &-intro {
+        font-size: 13px;
+        text-align: left;
+        line-height: 25px;
+        color: #666;
+    }
+
+    &-panel {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #000;
+
+        a {
+            color: #0073eb;
+        }
+
+        a:hover {
+            color: #097ef1;
+        }
+
+        a:first-child {
+            margin-right: 15px;
+        }
+    }
+}
+
+[class^="tech-prod-poster"] {
+    height: 40%;
+    transition: all .3s linear;
+}

@@ -102,6 +102,20 @@ app.get('/tech/speech', (req, res, next) => {
     );
 });
 
+app.get('/tech/imagecensor', (req, res, next) => {
+    renderSmarty(
+        'secondary/imagecensor.tpl',
+        getMockData({})
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
+
 app.get('/tech/nlp', (req, res, next) => {
     renderSmarty(
         'secondary/nlp.tpl',
