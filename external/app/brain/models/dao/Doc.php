@@ -32,7 +32,9 @@ class Dao_Doc extends Dao_Base
     }
 
     /**
-     * 获取文档的filePath
+     * 获取doc
+     * @param $version
+     * @param $jsonPath
      * @return
      */
     public function getDoc($version, $jsonPath)
