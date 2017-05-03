@@ -2,18 +2,18 @@
 
 /**
  * Created by PhpStorm.
- * User: songqingyun
+ * User: wangyu61
  * Date: 2017/4/19
  * Time: 下午1:27
  */
 class Service_Page_Data
 {
 
-    private $sdkData;
+    private $doc;
 
     public function __construct()
     {
-        $this->sdkData = new Service_Data_Sdk();
+        $this->doc = new Service_Data_Doc();
     }
 
     /**
@@ -23,60 +23,49 @@ class Service_Page_Data
     {
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
-        $sdkId = Brain_Util::getParamAsInt($arrInput, 'sdkId');
-        if ($sdkId < 0) {
-            header("Location: /error");
-            return;
+        $version = Brain_Util::getParamAsInt($arrInput, 'version');
+        $jsonPath = Brain_Util::getParamAsInt($arrInput, 'jsonPath');
+        if ($version == '' && !empty($_COOKIE['docVersion'])) {
+            $version = $_COOKIE['docVersion'];
+        } else {
+            setcookie("docVersion", $version, time() + 365 * 24 * 3600);
         }
-        $sdk = $this->sdkData->getSdkById($sdkId);
 
-        if (empty($sdk)) {
+        if ($version == '') {
             header("Location: /error");
             return;
         }
-        $passId = '';
-        $ucId = '';
-        $serviceType = -1;
-        $language = -1;
-        $userInfo = Brain_User::getUserInfo();
-        if ($userInfo && !empty($userInfo)) {
-            if ($userInfo['type'] == 1) {
-                $passId = $userInfo['uid'];
-            } elseif ($userInfo['type'] == 2) {
-                $ucId = $userInfo['uid'];
+
+        $latestVersion = $this->doc->getLatestVersion();
+        Brain_Memcache::set("latestVersion", $latestVersion, 24 * 3600);
+
+        if ($version < $latestVersion) {
+            setcookie("docVersion", '');
+            $version = $latestVersion;
+            $filePath = "webroot/data/${version}/${jsonPath}.json";
+            $fileName = $jsonPath . ".json";
+            if (file_exists($filePath)) {
+                ob_start();
+                $size = filesize($filePath);
+                header("Content-type:  application/octet-stream ");
+                header("Accept-Ranges:  bytes ");
+                header("Accept-Length: " . $size);
+                header("Content-Disposition:  attachment;  filename=" . $fileName);
+                echo file_get_contents($filePath);
+                readfile($filePath);
+            } else {
+                $filePath = $this->doc->getFilePath($version, $jsonPath);
+                $ch = curl_init($filePath);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                echo file_put_contents("webroot/data/${version}/${jsonPath}.json", curl_exec($ch));
+                curl_close($ch);
             }
+        } else {
+            $filePath = $this->doc->getFilePath($version, $jsonPath);
+            $ch = curl_init($filePath);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            echo file_get_contents(curl_exec($ch));
+            curl_close($ch);
         }
-
-        $serviceType = $this->getSdkLogCat($sdk);
-        $language = $this->getSdkLogLan($sdk);
-        if ($serviceType != -1 && $language != -1 && http_response_code() != 302 && !isset($arrInput["castk"])) {
-            $dbSdkInfo = new Dao_SdkInfo();
-            $dbSdkInfo->insertSdkInfo($ucId, $passId, $serviceType, $language);
-        }
-        header("Location:" . $sdk['file_path']);
-    }
-
-    /**
-     * TODO: 临时方案
-     * sdk的category和 sdk log的分类关系映射
-     * @param $sdk
-     * @return
-     */
-    private function getSdkLogCat($sdk)
-    {
-        $catId = (int)$sdk['category'];
-        return $catId - 1;
-    }
-
-    /**
-     * TODO: 临时方案
-     * sdk的category和 sdk log的分类关系映射
-     * @param $sdk
-     * @return
-     */
-    private function getSdkLogLan($sdk)
-    {
-        $lanId = (int)$sdk['language'];
-        return $lanId - 1;
     }
 }

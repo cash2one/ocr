@@ -32,7 +32,7 @@ class Bootstrap extends Ap_Bootstrap_Abstract{
         $dispatcher->getRouter()->addRoute('file', new Ap_Route_Rewrite('file/:filePath',
             array('controller' => 'Main',"action"=>"File")
         ));
-        $dispatcher->getRouter()->addRoute('file', new Ap_Route_Rewrite('data/:jsonPath',
+        $dispatcher->getRouter()->addRoute('data', new Ap_Route_Rewrite('data/:jsonPath',
             array('controller' => 'Main',"action"=>"Data")
         ));
     }
