@@ -42,7 +42,7 @@ class Service_Page_Data
         if ($version <= $latestVersion) {
             setcookie("docVersion", '');
             $version = $latestVersion;
-            $filePath = $this->odpPath."/webroot/data/${version}/${jsonPath}.json";
+            $filePath = $this->odpPath."/webroot/data/$version/$jsonPath";
             if (file_exists($filePath)) {
                 ob_start();
                 echo file_get_contents($filePath);
@@ -53,7 +53,7 @@ class Service_Page_Data
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 $file = curl_exec($ch);
                 curl_close($ch);
-                file_put_contents($this->odpPath."/webroot/data/${version}/${jsonPath}.json", $file);
+                file_put_contents($this->odpPath."/webroot/data/$version/$jsonPath", $file);
                 echo $file;
             }
         } else {
