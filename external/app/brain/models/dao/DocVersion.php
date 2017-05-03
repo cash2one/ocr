@@ -38,7 +38,7 @@ class Dao_DocVersion extends Dao_Base
     {
         $arrFields = $this->arrDefaultFields;
         $arrConds = array(
-            'status=' => 0,
+            'status=' => 1,
         );
         $arrOptions = null;
         $arrAppends = array(

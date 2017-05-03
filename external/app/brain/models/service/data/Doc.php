@@ -23,6 +23,15 @@ class Service_Data_Doc
     }
 
     /**
+     * 清除缓存
+     * @return
+     */
+    public function cleanCache()
+    {
+        Brain_Memcache::delete($this->cacheLatestDocVersion);
+    }
+
+    /**
      * 获取最新的版本号
      * @return int 最新的版本号
      * @author wangyu61
@@ -32,7 +41,7 @@ class Service_Data_Doc
         $version = Brain_Memcache::get($this->cacheLatestDocVersion);
         if (empty($version)) {
             $docVersion = $this->docVersionDao->getLatestVersion();
-            $version = $docVersion['version'];
+            $version = $docVersion[0]['version'];
             Brain_Memcache::set($this->cacheLatestDocVersion, $version, 24 * 3600);
         }
         return $version;
