@@ -27,7 +27,7 @@ class Service_Page_Data
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
         $version = Brain_Util::getParamAsInt($arrInput, 'version');
-        $jsonPath = Brain_Util::getParamAsInt($arrInput, 'jsonPath');
+        $jsonPath = Brain_Util::getParamAsString($arrInput, 'jsonPath');
         if ($version == '') {
             $version = $_COOKIE['docVersion'];
         } else {
