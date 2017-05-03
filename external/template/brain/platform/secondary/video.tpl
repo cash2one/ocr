@@ -96,11 +96,11 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span class="tech-secondary-title">图像审核</span>
+                                <a class="tech-secondary-title tech-new" href="/tech/imagecensoring">图像审核</a>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/antiporn">色情识别</a></li>
-                                <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
+                                <li><a href="/tech/imagecensoring/antiporn">色情识别</a></li>
+                                <li><a class="tech-new" href="/tech/imagecensoring/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -259,7 +259,7 @@
             <a role="button"
                target="_blank"
                class="btn-primary media ai-redirect"
-               href="https://cloud.baidu.com/survey/VCAApply.html?from=ai&aibaiduid=2E6B2AA4C6EEF254517281FA424FE9F5:SL=0:NR=10:FG=1&fromai=1">
+               href="https://cloud.baidu.com/survey/VCAApply.html?fromai=1">
             商务合作
             </a>
         </div>
@@ -280,7 +280,7 @@
                     <div class="tech-prod-panel">
                         <a target="_blank"
                            class="ai-redirect"
-                           href="https://cloud.baidu.com/survey/VCAApply.html?from=ai&aibaiduid=D81D274072195D15CA29B98290A059CC:FG=1&fromai=1">
+                           href="https://cloud.baidu.com/survey/VCAApply.html?fromai=1">
                         商务合作
                         </a>
                         <a href="http://ai.baidu.com/tech/video/vca">了解详情</a>
@@ -297,7 +297,7 @@
                     <div class="tech-prod-panel">
                         <a target="_blank"
                            class="ai-redirect"
-                           href="https://cloud.baidu.com/survey/VCSApply.html?from=ai&aibaiduid=D81D274072195D15CA29B98290A059CC:FG=1&fromai=1">
+                           href="https://cloud.baidu.com/survey/VCSApply.html?fromai=1">
                         商务合作
                         </a>
                         <a href="http://ai.baidu.com/tech/video/vcs">了解详情</a>
@@ -320,8 +320,10 @@
                     <div class="tech-case-item-introduce">对海量历史视频、用户上传的视频，应用视频内容分析服务，实现对视频内容的自动解析，形成视频标签库，建立内容索引，实现智能检索和个性化推荐</div>
                     <div class="tech-case-item-profess">
                         业务痛点：
-                        <div class="tech-case-item-body">大量的视频因缺乏内容标签，无法被检索，一方面造成用户找不到想要的内容，另一方面视频的播放量无法有效提升。传统的人工分类和标签标注带来更多问题：<br>
-                            1、人力成本高，耗时耗力。2、人工标注存在缺漏错误的情况多。3、新增热门标签，则需要对视频重新标注。</div>
+                        <div class="tech-case-item-body">
+                            <p>大量的视频因缺乏内容标签，无法被检索，一方面造成用户找不到想要的内容，另一方面视频的播放量无法有效提升。传统的人工分类和标签标注带来更多问题：</p>
+                            <p>1、人力成本高，耗时耗力。2、人工标注存在缺漏错误的情况多。3、新增热门标签，则需要对视频重新标注。</p>
+                        </div>
                     </div>
                     <div class="tech-case-item-profess">
                         如何解决：
@@ -339,9 +341,11 @@
                     <div class="tech-case-item-introduce">通过对视频内容的分析，自动截取精彩高质最具代表性画面作为封面，有效解决视频文不对题、封面低质枯燥等问题</div>
                     <div class="tech-case-item-profess">
                         业务痛点：
-                        <div class="tech-case-item-body">通常使用视频的首帧作为封面，但大多数情况下，首帧封面并不能代表视频的核心内容，且存在无意义、低质、重复等诸多问题。传统的解决办法不能满足业务需求：<br>
-                            1、新视频需要上传者/创作者自行截帧作为精彩封面，大大增加了视频上传的复杂度<br>
-                            2、传统自动封面技术目前大多抽取首帧，或者简单判断图片的清晰度，无法解决内容相关性问题</div>
+                        <div class="tech-case-item-body">
+                            <p>通常使用视频的首帧作为封面，但大多数情况下，首帧封面并不能代表视频的核心内容，且存在无意义、低质、重复等诸多问题。传统的解决办法不能满足业务需求：</p>
+                            <p>1、新视频需要上传者/创作者自行截帧作为精彩封面，大大增加了视频上传的复杂度</p>
+                            <p>2、传统自动封面技术目前大多抽取首帧，或者简单判断图片的清晰度，无法解决内容相关性问题</p>
+                        </div>
                     </div>
                     <div class="tech-case-item-profess">
                         如何解决：
@@ -403,7 +407,7 @@
             <a role="button"
                target="_blank"
                class="btn-primary large ai-redirect"
-               href="https://cloud.baidu.com/survey/VCAApply.html?from=ai&aibaiduid=2E6B2AA4C6EEF254517281FA424FE9F5:SL=0:NR=10:FG=1&fromai=1">
+               href="https://cloud.baidu.com/survey/VCAApply.html?fromai=1">
             商务合作
             </a>
         </div>

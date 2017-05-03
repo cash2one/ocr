@@ -23,5 +23,18 @@ router.get('/antiterror', (req, res, next) => {
         next
     );
 });
+router.get('/antiporn', (req, res, next) => {
+    renderSmarty(
+        'technology/antiporn.tpl',
+        getMockData({})
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
 
 module.exports = router;

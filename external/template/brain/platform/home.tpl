@@ -96,11 +96,11 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span class="tech-secondary-title">图像审核</span>
+                                <a class="tech-secondary-title tech-new" href="/tech/imagecensoring">图像审核</a>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/antiporn">色情识别</a></li>
-                                <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
+                                <li><a href="/tech/imagecensoring/antiporn">色情识别</a></li>
+                                <li><a class="tech-new" href="/tech/imagecensoring/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -260,13 +260,13 @@
         </li>
         <li>
             <div class="banner-item">
-                <h1>文字识别 计费系统上线</h1>
+                <h1>文字识别服务 5月优惠升级</h1>
                 <p>
                     异地容灾，提高响应，降低风险<br>
                     7*24小时售后，无限次调用，更高的QPS
                 </p>
                 <div>
-                    <a href="/support/news?action=detail&id=131" class="get-started">了解详情</a>
+                    <a href="/support/news?action=detail&id=138" class="get-started">参与活动</a>
                 </div>
             </div>
         </li>
@@ -446,10 +446,10 @@
                                 </ul>
                             </li>
                             <li>
-                                <div class="tech-service-secondary">图像审核</div>
+                                <a class="tech-service-secondary" href="/tech/imagecensoring">图像审核</a>
                                 <ul>
-                                    <li><a href="/tech/antiporn">色情识别</a></li>
-                                    <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
+                                    <li><a href="/tech/imagecensoring/antiporn">色情识别</a></li>
+                                    <li><a class="tech-new" href="/tech/imagecensoring/antiterror">暴恐识别</a></li>
                                 </ul>
                             </li>
                         </ul>

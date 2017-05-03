@@ -96,11 +96,11 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span class="tech-secondary-title">图像审核</span>
+                                <a class="tech-secondary-title tech-new" href="/tech/imagecensoring">图像审核</a>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/antiporn">色情识别</a></li>
-                                <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
+                                <li><a href="/tech/imagecensoring/antiporn">色情识别</a></li>
+                                <li><a class="tech-new" href="/tech/imagecensoring/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -279,8 +279,10 @@
 <div class="tech-section tech-catalog">
     <div class="ai-container">
         <div class="tech-catalog-title">产品功能</div>
-        <div class="tech-catalog-intro">依托于百度强大的自然语言处理能力，对外开放分词、词性标注、专名识别、词向量、中文DNN语言模型、短文本相似度、观点抽取等API<br>
-            可用于智能交互、深度问答、内容建模、用户画像建模、语义分析等场景</div>
+        <div class="tech-catalog-intro">
+           <p>依托于百度强大的自然语言处理能力，对外开放分词、词性标注、专名识别、词向量、中文DNN语言模型、短文本相似度、观点抽取等API</p>
+            <p>可用于智能交互、深度问答、内容建模、用户画像建模、语义分析等场景</p>
+        </div>
         <div class="tech-catalog-gallery">
             <div class="tech-prod-container">
                 <div class="tech-prod-info">

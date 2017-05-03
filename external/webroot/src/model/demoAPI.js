@@ -53,11 +53,14 @@ export function scanTerrorgraphy({image = null, imageUrl = null, success = $.noo
     }).success(success).fail(fail);
 }
 
-export function getHeader({imageUrl = null, type, success = $.noop, fail = $.noop}) {
-    $.post('/aidemo', {
-        action: 'getHeader',
-        type: type,
-        'image_url': imageUrl
+
+export function getBase64({formData, success = $.noop, fail = $.noop}) {
+    $.ajax({
+        url: '/aidemo',
+        type: 'post',
+        data: formData,
+        processData: false,
+        contentType: false
     }).success(success).fail(fail);
 }
 

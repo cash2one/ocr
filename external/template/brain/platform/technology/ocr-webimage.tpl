@@ -96,11 +96,11 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span class="tech-secondary-title">图像审核</span>
+                                <a class="tech-secondary-title tech-new" href="/tech/imagecensoring">图像审核</a>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/antiporn">色情识别</a></li>
-                                <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
+                                <li><a href="/tech/imagecensoring/antiporn">色情识别</a></li>
+                                <li><a class="tech-new" href="/tech/imagecensoring/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -290,7 +290,7 @@
     </div>
 </div>
 
-<div class="tech-section tech-demo">
+<div class="tech-section tech-demo" id="tech-demo">
     <div class="ai-container">
         <div class="tech-demo-title">
             功能演示

@@ -96,11 +96,11 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span class="tech-secondary-title">图像审核</span>
+                                <a class="tech-secondary-title tech-new" href="/tech/imagecensoring">图像审核</a>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/antiporn">色情识别</a></li>
-                                <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
+                                <li><a href="/tech/imagecensoring/antiporn">色情识别</a></li>
+                                <li><a class="tech-new" href="/tech/imagecensoring/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -264,8 +264,8 @@
     </div>
 </section>
 
-<section class="tech-section tech-demo">
-    <div class="container" id="wake-demo">
+<section class="tech-section tech-demo" id="tech-demo">
+    <div class="container">
         <h2>功能演示</h2>
         <div class="demo-input">
             <h3>唤醒词评估<small>告诉你哪些词适合作唤醒词，唤醒词导出需登录百度账号</small></h3>

@@ -18,9 +18,11 @@
         &-intro {
             padding: 20px 0 40px;
             font-size: 14px;
-            line-height: 18px;
             text-align: center;
             color: #666;
+            p {
+                margin: 0;
+            }
         }
 
         &-gallery {
@@ -34,9 +36,14 @@
             background: url("../../../../ai_images/technology/@{page-name}/sprite/prod-poster-@{i}.png") center center;
             background-size: 100% 100%;
         }
+        .tech-prod-sign-@{i} {
+            background: url("../../../../ai_images/technology/@{page-name}/sprite/prod-sign-@{i}.png") center center;
+            background-size: 100% 100%;
+        }
 
         .tech-catalog-prods(@n, (@i + 1));
     }
+
 }
 
 @prods-width: (1180px / 3) - 40px;
@@ -59,6 +66,10 @@
 
             [class^="tech-prod-poster"] {
                 background-size: 150% 150%;
+            }
+
+            [class^="tech-prod-sign"] {
+                opacity: 1;
             }
         }
     }
@@ -110,6 +121,17 @@
 }
 
 [class^="tech-prod-poster"] {
+    position: relative;
     height: 40%;
+    transition: all .3s linear;
+}
+[class^="tech-prod-sign"] {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 70px;
+    height: 70px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
     transition: all .3s linear;
 }

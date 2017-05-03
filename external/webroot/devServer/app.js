@@ -54,11 +54,12 @@ app.get('/docs', (req, res, next) => {
 });
 
 // 挂载router
+app.use('/tech', require('./router/tech'));
 app.use('/tech/nlp', require('./router/nlp'));
 app.use('/tech/video', require('./router/video'));
 app.use('/tech/face', require('./router/face'));
 app.use('/tech/ocr', require('./router/ocr'));
-app.use('/tech/anti', require('./router/anti'));
+app.use('/tech/imagecensoring', require('./router/imagecensoring'));
 app.use('/', require('./router/aiDemo'));
 
 app.get('/sdk', (req, res, next) => {
@@ -88,74 +89,6 @@ app.get('/sdk', (req, res, next) => {
     );
 });
 
-app.get('/tech/speech', (req, res, next) => {
-    renderSmarty(
-        'secondary/speech.tpl',
-        getMockData({})
-    ).then(
-        content => {
-            res
-                .type('html')
-                .end(content);
-        },
-        next
-    );
-});
-
-app.get('/tech/imagecensor', (req, res, next) => {
-    renderSmarty(
-        'secondary/imagecensor.tpl',
-        getMockData({})
-    ).then(
-        content => {
-            res
-                .type('html')
-                .end(content);
-        },
-        next
-    );
-});
-
-app.get('/tech/nlp', (req, res, next) => {
-    renderSmarty(
-        'secondary/nlp.tpl',
-        getMockData({})
-    ).then(
-        content => {
-            res
-                .type('html')
-                .end(content);
-        },
-        next
-    );
-});
-
-app.get('/tech/video', (req, res, next) => {
-    renderSmarty(
-        'secondary/video.tpl',
-        getMockData({})
-    ).then(
-        content => {
-            res
-                .type('html')
-                .end(content);
-        },
-        next
-    );
-});
-app.get('/tech/antiporn', (req, res, next) => {
-    renderSmarty(
-        'technology/antiporn.tpl',
-        getMockData({})
-    ).then(
-        content => {
-            res
-                .type('html')
-                .end(content);
-        },
-        next
-    );
-});
 
 app.listen(port, () => {
     console.log('访问本地' + port + ',即可即时查看效果，enjoy it');
