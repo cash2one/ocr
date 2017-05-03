@@ -31,6 +31,8 @@ class Service_Page_Data
         $action = Brain_Util::getParamAsString($arrInput, "action");
         if ($action == 'cleanCache') {
             $this->docData->cleanCache();
+            Brain_Output::jsonOutput(0, "success");
+            return;
         }
         if ($version == '') {
             $version = $_COOKIE['docVersion'];
