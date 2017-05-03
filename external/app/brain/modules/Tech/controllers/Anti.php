@@ -13,7 +13,7 @@ class Controller_Anti extends Ap_Controller_Abstract
 {
     public $actions = array(
 
-        'terror' => 'actions/tech/antiporn/Terror.php',
+        'terror' => 'actions/tech/imagecensoring/Terror.php',
     );
 
 }
