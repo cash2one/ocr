@@ -28,25 +28,22 @@ class Service_Page_Data
         $arrInput = $arrRequest['request_param'];
         $version = Brain_Util::getParamAsInt($arrInput, 'version');
         $jsonPath = Brain_Util::getParamAsString($arrInput, 'jsonPath');
-        $action = Brain_Util::getParamAsString($arrInput,"action");
-        if ($action == 'cleanCache'){
+        $action = Brain_Util::getParamAsString($arrInput, "action");
+        if ($action == 'cleanCache') {
             $this->docData->cleanCache();
         }
         if ($version == '') {
             $version = $_COOKIE['docVersion'];
-        } else {
-            setcookie("docVersion", $version);
         }
-
         header("Content-type:application/json");
         $latestVersion = $this->docData->getLatestVersion();
         if (empty($version)) {
             $version = $latestVersion;
         }
         if ($version <= $latestVersion) {
-            setcookie("docVersion", '');
+            setcookie("docVersion", $version, time() - 3600);
             $version = $latestVersion;
-            $filePath = $this->odpPath."/webroot/data/$version/$jsonPath";
+            $filePath = $this->odpPath . "/webroot/data/$version/$jsonPath";
             if (file_exists($filePath)) {
                 ob_start();
                 echo file_get_contents($filePath);
@@ -56,10 +53,10 @@ class Service_Page_Data
                 curl_setopt($ch, CURLOPT_URL, $filePath);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 $file = curl_exec($ch);
-                if(!file_exists($this->odpPath."/webroot/data/$version/")){
-                    mkdir($this->odpPath."/webroot/data/$version/");
+                if (!file_exists($this->odpPath . "/webroot/data/$version/")) {
+                    mkdir($this->odpPath . "/webroot/data/$version/");
                 }
-                file_put_contents($this->odpPath."/webroot/data/$version/$jsonPath", $file);
+                file_put_contents($this->odpPath . "/webroot/data/$version/$jsonPath", $file);
                 curl_close($ch);
                 echo $file;
             }
