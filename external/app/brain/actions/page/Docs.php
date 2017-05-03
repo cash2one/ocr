@@ -1,23 +1,31 @@
 <?php
 /***************************************************************************
- * 
+ *
  * Copyright (c) 2016 Baidu.com, Inc. All Rights Reserved
- * 
+ *
  **************************************************************************/
- 
+
 /**
  * @file Docs.php
  * @author huanglinhao(huanglinhao@baidu.com)
  * @date 2016/06/18 18:48:45
- * @brief 
- *  
+ * @brief
+ *
  **/
-class Action_Docs extends Ap_Action_Abstract {
+class Action_Docs extends Ap_Action_Abstract
+{
 
-    public function execute() {
+    public function execute()
+    {
+        $arrRequest = Saf_SmartMain::getCgi();
+        $arrInput = $arrRequest['request_param'];
         $arrPageInfo['page'] = "docs";
+        $version = Brain_Util::getParamAsInt($arrInput, 'version');
+        if ($version !== '') {
+            setcookie("docVersion", $version);
+        }
         Brain_Output::htmlOutput(
-            $arrPageInfo, 
+            $arrPageInfo,
             'brain/platform/newDocument/newDocument.tpl'
 
         );
