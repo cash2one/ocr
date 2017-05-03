@@ -35,7 +35,7 @@ class Dao_Doc extends Dao_Base
      * 获取文档的filePath
      * @return
      */
-    public function getFilePath($version, $jsonPath)
+    public function getDoc($version, $jsonPath)
     {
         $arrFields = $this->arrDefaultFields;
         $arrConds = array(
@@ -43,7 +43,9 @@ class Dao_Doc extends Dao_Base
             'json_path=' => $jsonPath,
         );
         $arrOptions = null;
-        $arrAppends = null;
+        $arrAppends = array(
+            'limit 1'
+        );
         $strSQL = $this->objSQLAssember->getSelect($this->strTable, $arrFields, $arrConds, $arrOptions, $arrAppends);
         $arrDBRet = $this->query($strSQL);
         return $arrDBRet;

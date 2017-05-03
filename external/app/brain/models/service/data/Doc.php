@@ -14,6 +14,7 @@ class Service_Data_Doc
 
     protected $docDao;
     protected $docVersionDao;
+    private $cacheLatestDocVersion = "AIP_WEB_LATEST_DOC_VERSION";
 
     public function __construct()
     {
@@ -28,8 +29,13 @@ class Service_Data_Doc
      */
     public function getLatestVersion()
     {
-        $docVersion = $this->docVersionDao->getLatestVersion();
-        return $docVersion['version'];
+        $version = Brain_Memcache::get($this->cacheLatestDocVersion);
+        if (empty($version)) {
+            $docVersion = $this->docVersionDao->getLatestVersion();
+            $version = $docVersion['version'];
+            Brain_Memcache::set($this->cacheLatestDocVersion, $version, 24 * 3600);
+        }
+        return $version;
     }
 
     /**
@@ -39,8 +45,13 @@ class Service_Data_Doc
      */
     public function getFilePath($version, $jsonPath)
     {
-        $doc = $this->docDao->getLatestVersion($version, $jsonPath);
-        return $doc['file_path'];
+
+        $doc = $this->docDao->getDoc($version, $jsonPath);
+        if (!empty($doc)) {
+            $d = $doc[0];
+            return $d['file_path'];
+        }
+        return;
     }
 
 }
