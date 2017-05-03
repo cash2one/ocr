@@ -280,7 +280,7 @@
     <div class="ai-container">
         <div class="tech-catalog-title">产品功能</div>
         <div class="tech-catalog-intro">
-           <p>依托于百度强大的自然语言处理能力，对外开放分词、词性标注、专名识别、词向量、中文DNN语言模型、短文本相似度、观点抽取等API</p>
+            <p>依托于百度强大的自然语言处理能力，对外开放分词、词性标注、专名识别、词向量、中文DNN语言模型、短文本相似度、观点抽取等API</p>
             <p>可用于智能交互、深度问答、内容建模、用户画像建模、语义分析等场景</p>
         </div>
         <div class="tech-catalog-gallery">

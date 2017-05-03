@@ -14,7 +14,7 @@ class Action_Imagecensoring extends Ap_Action_Abstract{
         $arrPageInfo['page'] = "imagecensoring";
         Brain_Output::htmlOutput(
             $arrPageInfo,
-            "brain/platform/secondary/imagecensoring.tpl"
+            "brain/platform/secondary/imagecensor.tpl"
         );
     }
 }
