@@ -7,7 +7,7 @@
  */
 class Action_Index extends Ap_Action_Abstract{
     public function execute(){
-        $arrPageInfo['page'] = "antiporn";
+        $arrPageInfo['page'] = "imagecensoring_antiporn";
         Brain_Output::htmlOutput(
             $arrPageInfo,
             "brain/platform/technology/antiporn.tpl"

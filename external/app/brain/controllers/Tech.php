@@ -9,5 +9,6 @@ class Controller_Tech extends Ap_Controller_Abstract {
         "speech" =>"actions/tech/speech/Speech.php",
         "nlp" =>"actions/tech/nlp/Nlp.php",
         "video" =>"actions/tech/video/Video.php",
+        "imagecensoring" =>"actions/tech/imagecensoring/Imagecensoring.php",
     );
 }

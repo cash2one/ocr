@@ -11,7 +11,7 @@
  */
 class Action_Terror extends Ap_Action_Abstract{
     public function execute(){
-        $arrPageInfo['page'] = "antiterror";
+        $arrPageInfo['page'] = "imagecensoring_antiterror";
         Brain_Output::htmlOutput(
             $arrPageInfo,
             "brain/platform/technology/antiterror.tpl"

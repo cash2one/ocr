@@ -21,11 +21,11 @@ class Bootstrap extends Ap_Bootstrap_Abstract{
         $dispatcher->getRouter()->addRoute('tech_Ar', new Ap_Route_Rewrite('tech/ar',
             array("module"=>"tech", "controller"=>"ar", "action"=>"index")
             ));
-        $dispatcher->getRouter()->addRoute('tech_Antiporn', new Ap_Route_Rewrite('tech/antiporn',
+        $dispatcher->getRouter()->addRoute('tech_Antiporn', new Ap_Route_Rewrite('tech/imagecensoring/antiporn',
             array("module"=>"tech", "controller"=>"antiporn", "action"=>"index")
         ));
 
-        $dispatcher->getRouter()->addRoute('tech_Antiterror', new Ap_Route_Rewrite('tech/anti/antiterror',
+        $dispatcher->getRouter()->addRoute('tech_Antiterror', new Ap_Route_Rewrite('tech/imagecensoring/antiterror',
             array("module"=>"tech", "controller"=>"anti", "action"=>"terror")
         ));
 
