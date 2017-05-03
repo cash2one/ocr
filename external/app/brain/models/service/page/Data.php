@@ -56,8 +56,11 @@ class Service_Page_Data
                 curl_setopt($ch, CURLOPT_URL, $filePath);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 $file = curl_exec($ch);
-                curl_close($ch);
+                if(!file_exists($this->odpPath."/webroot/data/$version/")){
+                    mkdir($this->odpPath."/webroot/data/$version/");
+                }
                 file_put_contents($this->odpPath."/webroot/data/$version/$jsonPath", $file);
+                curl_close($ch);
                 echo $file;
             }
         } else {
