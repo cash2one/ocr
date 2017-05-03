@@ -171,7 +171,12 @@ class Action_AIDemo extends Ap_Action_Abstract
 
                 $image_data = fread(fopen($imageFile['tmp_name'], 'r'), filesize($imageFile['tmp_name']));
                 $filter_image = chunk_split(base64_encode($image_data));
-                Brain_Output::jsonOutput(0, "", base64_encode($image_data));
+                $data = array(
+                    'Content-Type' => $image_type,
+                    'Content-Length' => $imageFile['size'],
+                    'image_data' => base64_encode($image_data),
+                );
+                Brain_Output::jsonOutput(0, "success", $data);
             }
         }
     }
