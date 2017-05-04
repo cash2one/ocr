@@ -9,7 +9,7 @@
  * Date: 2017/3/6
  * Time: 下午3:09
  */
-class Action_Terror extends Ap_Action_Abstract{
+class Action_Antiterror extends Ap_Action_Abstract{
     public function execute(){
         $arrPageInfo['page'] = "imagecensoring_antiterror";
         Brain_Output::htmlOutput(

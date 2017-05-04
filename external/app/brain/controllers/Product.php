@@ -14,5 +14,6 @@ class Controller_Product extends Ap_Controller_Abstract {
         'ocr'      => 'actions/page/product/Ocr.php',
         'speech'   => 'actions/page/product/Speech.php',
         'video'   => 'actions/page/product/Video.php',
+        'imagecensoring' => 'actions/page/product/Imagecensoring.php',
     );
 }
