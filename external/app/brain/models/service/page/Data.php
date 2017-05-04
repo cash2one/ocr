@@ -47,6 +47,7 @@ class Service_Page_Data
             $version = $latestVersion;
             $filePath = $this->odpPath . "/webroot/data/$version/$jsonPath";
             if (file_exists($filePath)) {
+                Bd_Log::notice('DATA_FILE_PATH_'.$filePath);
                 ob_start();
                 echo file_get_contents($filePath);
             } else {
