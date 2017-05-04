@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493889275/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493904938/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493889275/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493889275/css/secondary/imagecensor.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493904938/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493904938/css/secondary/imagecensor.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1493889275/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1493904938/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -262,7 +262,7 @@
                href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">立即使用</a>
             <a role="button"
                class="btn-other media"
-               href="/docs#/Antiporn-API">
+               href="/docs#/ImageCensoring-API/top">
                 技术文档
             </a>
         </div>
@@ -393,8 +393,8 @@
                     </div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1493889275/ai_images/technology/imagecensor/customer-1-1.png" alt="">
-                        <img src="//ai.bdstatic.com/dist/1493889275/ai_images/technology/imagecensor/customer-1-2.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1493904938/ai_images/technology/imagecensor/customer-1-1.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1493904938/ai_images/technology/imagecensor/customer-1-2.png" alt="">
                     </div>
                 </div>
             </div>
@@ -422,7 +422,7 @@
                     </div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1493889275/ai_images/technology/imagecensor/customer-2-1.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1493904938/ai_images/technology/imagecensor/customer-2-1.png" alt="">
                     </div>
                 </div>
             </div>
@@ -665,8 +665,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1493889275/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1493889275/js/secondary/imagecensor.js"></script>
+<script src="//ai.bdstatic.com/dist/1493904938/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1493904938/js/secondary/imagecensor.js"></script>
 
 <script>
     (function () {

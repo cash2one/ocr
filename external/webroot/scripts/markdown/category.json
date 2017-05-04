@@ -92,6 +92,10 @@
               "md": "OCR-Python-SDK"
             },
             {
+              "text": "C#语言",
+              "md": "OCR-CSharp-SDK"
+            },
+            {
               "text": "iOS SDK",
               "md": "OCR-iOS-SDK"
             },
@@ -108,7 +112,7 @@
       "children": [
         {
           "text": "API文档",
-          "md": "FACE-API"
+          "md": "Face-API"
         },
         {
           "text": "SDK文档",
@@ -124,6 +128,10 @@
             {
               "text": "Python语言",
               "md": "Face-Python-SDK"
+            },
+            {
+              "text": "C#语言",
+              "md": "Face-CSharp-SDK"
             }
           ]
         }
@@ -150,6 +158,10 @@
             {
               "text": "Python语言",
               "md": "NLP-Python-SDK"
+            },
+            {
+              "text": "C#语言",
+              "md": "NLP-CSharp-SDK"
             }
           ]
         }
@@ -160,22 +172,26 @@
       "children": [
         {
           "text": "API文档",
-          "md": "Antiporn-API"
+          "md": "ImageCensoring-API"
         },
         {
           "text": "SDK文档",
           "children": [
             {
               "text": "JAVA语言",
-              "md": "Antiporn-Java-SDK"
+              "md": "ImageCensoring-Java-SDK"
             },
             {
               "text": "PHP语言",
-              "md": "Antiporn-PHP-SDK"
+              "md": "ImageCensoring-PHP-SDK"
             },
             {
               "text": "Python语言",
-              "md": "Antiporn-Python-SDK"
+              "md": "ImageCensoring-Python-SDK"
+            },
+            {
+              "text": "C#语言",
+              "md": "ImageCensoring-CSharp-SDK"
             }
           ]
         }
