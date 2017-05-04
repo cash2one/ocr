@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493889275/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/technology/antiporn.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493889275/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493889275/css/technology/antiporn.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1493288513/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1493889275/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -316,28 +316,28 @@
             <div>
                 <ul class="demo-card-list clear-float">
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1493288513/ai_images/technology/antiporn/demo-card-1.jpg" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1493889275/ai_images/technology/antiporn/demo-card-1.jpg" alt=" ">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1493288513/ai_images/technology/antiporn/demo-card-2.jpg" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1493889275/ai_images/technology/antiporn/demo-card-2.jpg" alt=" ">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1493288513/ai_images/technology/antiporn/demo-card-3.jpg" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1493889275/ai_images/technology/antiporn/demo-card-3.jpg" alt=" ">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1493288513/ai_images/technology/antiporn/demo-card-4.jpg" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1493889275/ai_images/technology/antiporn/demo-card-4.jpg" alt=" ">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1493288513/ai_images/technology/antiporn/demo-card-5.jpg" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1493889275/ai_images/technology/antiporn/demo-card-5.jpg" alt=" ">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1493288513/ai_images/technology/antiporn/demo-card-6.jpg" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1493889275/ai_images/technology/antiporn/demo-card-6.jpg" alt=" ">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1493288513/ai_images/technology/antiporn/demo-card-7.jpg" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1493889275/ai_images/technology/antiporn/demo-card-7.jpg" alt=" ">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1493288513/ai_images/technology/antiporn/demo-card-8.jpg" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1493889275/ai_images/technology/antiporn/demo-card-8.jpg" alt=" ">
                     </li>
                 </ul>
             </div>
@@ -581,8 +581,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1493288513/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1493288513/js/technology/antiporn.js"></script>
+<script src="//ai.bdstatic.com/dist/1493889275/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1493889275/js/technology/antiporn.js"></script>
 
 <script>
     (function () {
