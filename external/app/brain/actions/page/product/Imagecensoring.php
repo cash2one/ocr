@@ -23,7 +23,7 @@ class Action_Imagecensoring extends Ap_Action_Abstract {
 
         $inputKeys = array_keys($arrInput);
         $tech = $inputKeys[0];
-        $templateName = "$class_name-$tech";
+        $templateName = "$tech";
 
         $arrPageInfo['page'] = $class_name.'_'.$tech;
         $arrPageInfo['src'] = 'cloud';
