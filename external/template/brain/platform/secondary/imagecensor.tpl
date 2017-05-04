@@ -505,7 +505,7 @@
     <div class="ai-container">
         <div class="tech-guide-links">
             <a href="http://ai.baidu.com/docs">新手指南</a>
-            <a href="http://ai.baidu.com/docs#/Antiporn-API">技术文档</a>
+            <a href="http://ai.baidu.com/docs#/ImageCensoring-API/top">技术文档</a>
             <a href="http://ai.baidu.com/sdk#sdk-category-anti">SDK下载</a>
         </div>
         <div class="tech-guide-route">

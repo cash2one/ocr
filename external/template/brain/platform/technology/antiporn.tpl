@@ -260,7 +260,7 @@
                class="btn-other media"
                href="
                {%if $src eq Null%}
-               /docs#/Antiporn-API
+               /docs#/ImageCensoring-API/top
                {%else%}
                https://cloud.baidu.com/doc/ANTIPORN/index.html
                {%/if%}">
