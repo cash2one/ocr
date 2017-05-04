@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493889275/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/secondary/nlp.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493889275/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493889275/css/secondary/nlp.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1493288513/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1493889275/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -96,11 +96,11 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span class="tech-secondary-title">图像审核</span>
+                                <a class="tech-secondary-title tech-new" href="/tech/imagecensoring">图像审核</a>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/antiporn">色情识别</a></li>
-                                <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
+                                <li><a href="/tech/imagecensoring/antiporn">色情识别</a></li>
+                                <li><a class="tech-new" href="/tech/imagecensoring/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -279,8 +279,10 @@
 <div class="tech-section tech-catalog">
     <div class="ai-container">
         <div class="tech-catalog-title">产品功能</div>
-        <div class="tech-catalog-intro">依托于百度强大的自然语言处理能力，对外开放分词、词性标注、专名识别、词向量、中文DNN语言模型、短文本相似度、观点抽取等API<br>
-            可用于智能交互、深度问答、内容建模、用户画像建模、语义分析等场景</div>
+        <div class="tech-catalog-intro">
+            <p>依托于百度强大的自然语言处理能力，对外开放分词、词性标注、专名识别、词向量、中文DNN语言模型、短文本相似度、观点抽取等API</p>
+            <p>可用于智能交互、深度问答、内容建模、用户画像建模、语义分析等场景</p>
+        </div>
         <div class="tech-catalog-gallery">
             <div class="tech-prod-container">
                 <div class="tech-prod-info">
@@ -396,7 +398,7 @@
                     <div>主要服务：<a href="http://ai.baidu.com/tech/nlp/lexical">词法分析</a></div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1493288513/ai_images/technology/nlp/customer-1-1.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1493889275/ai_images/technology/nlp/customer-1-1.png" alt="">
                     </div>
                 </div>
             </div>
@@ -418,7 +420,7 @@
                     <div>主要服务：<a href="http://ai.baidu.com/tech/nlp/simnet">中文短文本相似度</a></div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1493288513/ai_images/technology/nlp/customer-1-2.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1493889275/ai_images/technology/nlp/customer-1-2.png" alt="">
                     </div>
                 </div>
             </div>
@@ -439,7 +441,7 @@
                     <div>主要服务：<a href="http://ai.baidu.com/tech/nlp/comment_tag">评论观点抽取</a></div>
                     <div class="tech-case-coop">
                         <div>合作案例:</div>
-                        <img src="//ai.bdstatic.com/dist/1493288513/ai_images/technology/nlp/customer-1-3.png" alt="">
+                        <img src="//ai.bdstatic.com/dist/1493889275/ai_images/technology/nlp/customer-1-3.png" alt="">
                     </div>
                 </div>
             </div>
@@ -659,8 +661,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1493288513/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1493288513/js/secondary/nlp.js"></script>
+<script src="//ai.bdstatic.com/dist/1493889275/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1493889275/js/secondary/nlp.js"></script>
 
 <script>
     (function () {

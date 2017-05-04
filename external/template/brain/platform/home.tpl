@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493889275/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/home.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493889275/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493889275/css/home.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1493288513/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1493889275/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -96,11 +96,11 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span class="tech-secondary-title">图像审核</span>
+                                <a class="tech-secondary-title tech-new" href="/tech/imagecensoring">图像审核</a>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/antiporn">色情识别</a></li>
-                                <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
+                                <li><a href="/tech/imagecensoring/antiporn">色情识别</a></li>
+                                <li><a class="tech-new" href="/tech/imagecensoring/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -251,6 +251,15 @@
     <ul class="banner-content">
         <li class="active">
             <div class="banner-item">
+                <h1>图像审核</h1>
+                <p>基于业界领先的深度学习技术，依赖于百度庞大的图库<br>为您带来多个垂类的图像识别和审核服务</p>
+                <div>
+                    <a href="/tech/imagecensoring" class="get-started">了解详情</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="banner-item">
                 <h1>人脸识别服务全新升级</h1>
                 <p>功能全面完善，性能大幅提升<br>致力提供业界最优的人脸识别服务</p>
                 <div>
@@ -260,13 +269,13 @@
         </li>
         <li>
             <div class="banner-item">
-                <h1>文字识别 计费系统上线</h1>
+                <h1>文字识别服务 5月优惠升级</h1>
                 <p>
                     异地容灾，提高响应，降低风险<br>
                     7*24小时售后，无限次调用，更高的QPS
                 </p>
                 <div>
-                    <a href="/support/news?action=detail&id=131" class="get-started">了解详情</a>
+                    <a href="/support/news?action=detail&id=138" class="get-started">参与活动</a>
                 </div>
             </div>
         </li>
@@ -291,15 +300,6 @@
                 </p>
                 <div>
                     <a href="/sdk#sdk-category-ocr" class="get-started">立即下载</a>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="banner-item">
-                <h1>文字识别</h1>
-                <p>基于业界领先的深度学习技术<br>为您提供多场景、多语种、高精度的整体文字检测和识别服务</p>
-                <div>
-                    <a href="/tech/ocr/general" class="get-started">了解详情</a>
                 </div>
             </div>
         </li>
@@ -446,10 +446,10 @@
                                 </ul>
                             </li>
                             <li>
-                                <div class="tech-service-secondary">图像审核</div>
+                                <a class="tech-service-secondary" href="/tech/imagecensoring">图像审核</a>
                                 <ul>
-                                    <li><a href="/tech/antiporn">色情识别</a></li>
-                                    <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
+                                    <li><a href="/tech/imagecensoring/antiporn">色情识别</a></li>
+                                    <li><a class="tech-new" href="/tech/imagecensoring/antiterror">暴恐识别</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -735,7 +735,7 @@
                     <img alt="百度语音基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1493288513/ai_images/home/video-1.png">
+                         src="//ai.bdstatic.com/dist/1493889275/ai_images/home/video-1.png">
                 </a>
                 <h5>百度语音基础介绍及应用场景</h5>
             </li>
@@ -745,7 +745,7 @@
                     <img alt="百度OCR基础介绍及应用场景"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1493288513/ai_images/home/video-2.png">
+                         src="//ai.bdstatic.com/dist/1493889275/ai_images/home/video-2.png">
                 </a>
                 <h5>百度OCR基础介绍及应用场景</h5>
             </li>
@@ -755,7 +755,7 @@
                     <img alt="百度人脸技术基础介绍及引用场景"
                         width="500"
                         height="280"
-                        src="//ai.bdstatic.com/dist/1493288513/ai_images/home/video-3.png">
+                        src="//ai.bdstatic.com/dist/1493889275/ai_images/home/video-3.png">
                 </a>
                 <h5>百度人脸技术基础介绍及引用场景</h5>
             </li>
@@ -766,7 +766,7 @@
                     <img alt="百度翻译产品介绍"
                          width="500"
                          height="280"
-                         src="//ai.bdstatic.com/dist/1493288513/ai_images/home/video-4.png">
+                         src="//ai.bdstatic.com/dist/1493889275/ai_images/home/video-4.png">
                 </a>
                 <h5>百度翻译产品介绍</h5>
             </li>
@@ -928,8 +928,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1493288513/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1493288513/js/home.js"></script>
+<script src="//ai.bdstatic.com/dist/1493889275/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1493889275/js/home.js"></script>
 
 <script>
     (function () {

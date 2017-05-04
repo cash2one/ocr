@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493889275/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493288513/css/technology/speech-tts.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493889275/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493889275/css/technology/speech-tts.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1493288513/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1493889275/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -96,11 +96,11 @@
                                 <li><a href="/tech/face/search">人脸查找</a></li>
                             </ul>
                             <div class="sub-tech-title">
-                                <span class="tech-secondary-title">图像审核</span>
+                                <a class="tech-secondary-title tech-new" href="/tech/imagecensoring">图像审核</a>
                             </div>
                             <ul class="tech-list">
-                                <li><a href="/tech/antiporn">色情识别</a></li>
-                                <li><a href="/tech/anti/antiterror">暴恐识别</a></li>
+                                <li><a href="/tech/imagecensoring/antiporn">色情识别</a></li>
+                                <li><a class="tech-new" href="/tech/imagecensoring/antiterror">暴恐识别</a></li>
                             </ul>
                         </li>
                         <li id="tech-nlp">
@@ -551,8 +551,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1493288513/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1493288513/js/technology/speech-tts.js"></script>
+<script src="//ai.bdstatic.com/dist/1493889275/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1493889275/js/technology/speech-tts.js"></script>
 
 <script>
     (function () {

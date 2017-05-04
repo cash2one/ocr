@@ -34,6 +34,7 @@ class Controller_Main extends Ap_Controller_Abstract {
         'file'     => 'actions/tools/File.php',
 
         'download' => 'actions/tools/Download.php',
+        'data' => 'actions/tools/Data.php',
 
     );
 }

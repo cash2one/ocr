@@ -71,8 +71,7 @@ export default class ConsultationModal extends Modal {
                 case 'speech':
                     selectedOption = '语音技术';
                     break;
-                case 'anti':
-                case 'antiporn':
+                case 'imagecensoring':
                     selectedOption = '图像审核';
                     break;
                 case 'face':
@@ -141,14 +140,14 @@ export default class ConsultationModal extends Modal {
 
                 if (!inputVal) {
                     input.addClass('has-error');
-                    infoWarning.html(input.attr('placeholder'));
-                    return false;
+                    infoWarning.text(input.attr('placeholder'));
+                    return;
                 }
                 // 校验邮箱格式
                 if (input.attr('name') === 'email' && !reg.test(inputVal)) {
                     input.addClass('has-error');
-                    infoWarning.html('请输入正确的邮箱格式');
-                    return false;
+                    infoWarning.text('请输入正确的邮箱格式');
+                    return;
                 }
             }
 

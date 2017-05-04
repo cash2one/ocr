@@ -43,8 +43,12 @@ class Action_File extends Ap_Action_Abstract
         $client = new BosClient($BOS_CONFIG);
         // 图片
         if ($file['type'] == 1) {
-            header("Content-Type:" . $file['content_type']);
-            header("Cache-Control:max-age=864000");
+            header("Cache-Control: public");
+            header("Pragma: cache");
+            $offset = 30 * 60 * 60 * 24; // cache 1 month
+            $ExpStr = "Expires: " . gmdate("D, d M Y H:i:s", time() + $offset) . " GMT";
+            header($ExpStr);
+            header("Content-Type:" . $file['content_type'] . ";");
             $str = $client->getObjectAsString("aip-web", $filePath);
             echo $str;
             exit;
