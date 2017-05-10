@@ -15,16 +15,10 @@
 class Action_Home extends Ap_Action_Abstract
 {
 
-    private $homePage;
-
-    function __construct()
-    {
-        $this->homePage = new Service_Page_Home();
-    }
-
     public function execute()
     {
-        $this->homePage->execute();
+        $page = new Service_Page_Home();
+        $page->execute();
     }
 }
 /* vim: set expandtab ts=4 sw=4 sts=4 tw=80: */
