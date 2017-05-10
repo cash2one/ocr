@@ -70,7 +70,7 @@ class Service_Data_Banner
         if (empty($banners)) {
             return $banners;
         }
-        foreach ($banners as $ban) {
+        foreach ($banners as &$ban) {
             foreach ($reviews as $r) {
                 if ((int)$ban['dis_order'] >= (int)$r['dis_order']) {
                     $ban['dis_order'] = (int)$ban['dis_order'] + 1;
