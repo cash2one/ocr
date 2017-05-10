@@ -22,6 +22,15 @@ class Service_Data_News
     }
 
     /**
+     * @return void
+     */
+    public function cleanCache()
+    {
+        Brain_Memcache::delete($this->cacheNewsList);
+        Brain_Memcache::delete($this->cacheLastestNews);
+    }
+
+    /**
      * 获取最新的新闻ID
      * @return int 最新的新闻ID
      * @author songqingyun
