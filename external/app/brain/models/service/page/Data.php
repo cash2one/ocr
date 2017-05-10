@@ -47,29 +47,24 @@ class Service_Page_Data
             $version = $latestVersion;
             $filePath = $this->odpPath . "/webroot/data/$version/$jsonPath";
             if (file_exists($filePath)) {
+                Bd_Log::notice('DATA_FILE_PATH_'.$filePath);
                 ob_start();
                 echo file_get_contents($filePath);
             } else {
-                $filePath = $this->docData->getFilePath($version, $jsonPath);
-                $ch = curl_init();
-                curl_setopt($ch, CURLOPT_URL, $filePath);
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                $file = curl_exec($ch);
+                $fileUrl= $this->docData->getFilePath($version, $jsonPath);
+                Bd_Log::notice('DATA_FILE_URL_'.$fileUrl);
+                $jsonFile = file_get_contents($fileUrl);
                 if (!file_exists($this->odpPath . "/webroot/data/$version/")) {
                     mkdir($this->odpPath . "/webroot/data/$version/");
                 }
-                file_put_contents($this->odpPath . "/webroot/data/$version/$jsonPath", $file);
-                curl_close($ch);
-                echo $file;
+                file_put_contents($this->odpPath . "/webroot/data/$version/$jsonPath", $jsonFile);
+                echo $jsonFile;
             }
         } else {
-            $filePath = $this->docData->getFilePath($version, $jsonPath);
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, $filePath);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            $file = curl_exec($ch);
-            curl_close($ch);
-            echo $file;
+            $fileUrl = $this->docData->getFilePath($version, $jsonPath);
+            Bd_Log::notice('DATA_FILE_URL_'.$fileUrl);
+            $jsonFile = file_get_contents($fileUrl);
+            echo $jsonFile;
         }
     }
 }
