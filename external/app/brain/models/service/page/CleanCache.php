@@ -47,7 +47,7 @@ class Service_Page_CleanCache
             return;
         }
         $salt = Bd_Conf::getAppConf('api_auth_salt/salt');
-        $key = md5($cleanType + $salt + $apiTime);
+        $key = md5($cleanType . $salt . $apiTime);
         if ($apiKey !== $key) {
             Brain_Output::jsonOutput(500, "key error");
             return;
