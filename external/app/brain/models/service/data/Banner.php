@@ -9,7 +9,7 @@
  * Date: 2017/3/8
  * Time: 下午5:41
  */
-class Service_Data_Doc
+class Service_Data_Banner
 {
 
     protected $bannerDao;
@@ -51,7 +51,8 @@ class Service_Data_Doc
      * 获取预览banner
      * @return array
      */
-    public function getBannerReview(){
+    public function getBannerReview()
+    {
         return $this->bannerReviewDao->getBannerReview();
     }
 
@@ -59,13 +60,29 @@ class Service_Data_Doc
      * 合并预览和在线banner
      * @return array
      */
-    public function mergeBanner(){
+    public function mergeBanner()
+    {
         $reviews = $this->getBannerReview();
         $banners = $this->getBanner();
-        if (empty($reviews)){
+        if (empty($reviews)) {
             return $banners;
         }
-
+        if (empty($banners)) {
+            return $banners;
+        }
+        foreach ($banners as $ban) {
+            foreach ($reviews as $r) {
+                if ($ban['dis_order'] >= $r['dis_order']) {
+                    $ban['dis_order'] = $ban['dis_order'] + 1;
+                }
+            }
+        }
+        $result = array_merge($banners, $reviews);
+        foreach ($result as $item) {
+            $key_array[] = $item["dis_order"];
+        }
+        array_multisort($key_array, SORT_ASC, $result);
+        return $result;
     }
 
 }
