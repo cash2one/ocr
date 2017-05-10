@@ -31,7 +31,7 @@ class Service_Page_Home
         } else {
             $banner = $this->bannerData->getBanner();
         }
-        $arrPageInfo['banner'] = $this->bannerData->getBannerData($banner);
+        $arrPageInfo['banners'] = $this->bannerData->getBannerData($banner);
         $arrPageInfo['messagelist'] = Bd_Conf::getAppConf('messagelist');
         $arrPageInfo['page'] = substr(strtolower(__CLASS__), 7);
         $lastestNews = $this->newsData->getLastestNews();

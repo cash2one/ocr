@@ -4,12 +4,12 @@
         {%if $banner.template_code == 'common'%}
         {%if $smarty.foreach.bannerFor.index == 0%}
         <li class="active">
-            {%/else%}
+            {%else%}
         <li style="background-image: url('{%$banner.background%}')">
             {%/if%}
             <div class="banner-item">
-                <h1>{%banner.title%}</h1>
-                <p>{%banner.abs%}</p>
+                <h1>{%$banner.title%}</h1>
+                <p>{%$banner.abs%}</p>
                 <div>
                     <a href="{%$banner.link%}" class="get-started">{%$banner.button%}</a>
                 </div>
@@ -22,7 +22,7 @@
         {%foreach from=$banners item=banner name=bannerFor%}
         {%if $smarty.foreach.bannerFor.index == 0%}
         <li class="active"></li>
-        {%/else%}
+        {%else%}
         <li></li>
         {%/if%}
         {%/foreach%}
