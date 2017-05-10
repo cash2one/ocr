@@ -348,7 +348,6 @@
                     <img src="{%$news.img%}" alt="{%$news.title%}">
                     <h4>{%$news.title%}</h4>
                     <p>{%$news.abs%}</p>
-                    <i class="more"></i>
                 </a>
             </li>
             {%/foreach%}
@@ -921,6 +920,7 @@
                 <li><a href="http://zhongbao.baidu.com" target="_blank">百度数据众包</a></li>
                 <li><a href="http://union.baidu.com" target="_blank">百度联盟</a></li>
                 <li><a href="http://tongji.baidu.com" target="_blank">百度统计</a></li>
+                <li><a href="http://bit.baidu.com" target="_blank">百度技术学院</a></li>
             </ul>
         </nav>
     </div>

@@ -291,7 +291,7 @@
         提供的主要功能：<br>
         &radic; 文字识别：通用文字识别、身份证识别、银行卡识别<br>
         &radic; 人脸识别：人脸检测、人脸对比、人脸查找<br>
-        &radic; 色情识别：色情识别
+        &radic; 图像审核：色情识别、暴恐识别
     </div>
     <div class="about-list-two-title">3. 自然语言处理</div>
     <div class="about-list-info">基于自然语言处理技术，结合基于大数据挖掘产生的知识图谱及相关技术，对人类自然语言进行分析、理解、生成、翻译，实现自然的人机对话交互。百度情感分析、英法机器翻译、句法分析、命名实体识别在国际标准评测集上世界第一。<br>
@@ -448,6 +448,7 @@
                 <li><a href="http://zhongbao.baidu.com" target="_blank">百度数据众包</a></li>
                 <li><a href="http://union.baidu.com" target="_blank">百度联盟</a></li>
                 <li><a href="http://tongji.baidu.com" target="_blank">百度统计</a></li>
+                <li><a href="http://bit.baidu.com" target="_blank">百度技术学院</a></li>
             </ul>
         </nav>
     </div>

@@ -521,6 +521,7 @@
                 <li><a href="http://zhongbao.baidu.com" target="_blank">百度数据众包</a></li>
                 <li><a href="http://union.baidu.com" target="_blank">百度联盟</a></li>
                 <li><a href="http://tongji.baidu.com" target="_blank">百度统计</a></li>
+                <li><a href="http://bit.baidu.com" target="_blank">百度技术学院</a></li>
             </ul>
         </nav>
     </div>
