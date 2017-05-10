@@ -98,7 +98,7 @@ class Service_Data_Banner
 
         $result = array();
         foreach ($banners as $banner) {
-            $json = json_decode($banner['value']);
+            $json = json_decode($banner['value'], true);
             $json['template_code'] = $banner['template_code'];
             $json['dis_order'] = $banner['dis_order'];
             $result[] = $json;
