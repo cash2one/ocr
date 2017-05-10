@@ -122,6 +122,12 @@ class Service_Data_News
             return Bd_String::json_decode($val, true);
         } else {
             $list = $this->newsDao->getLastestNews();
+            if (empty($list)) {
+                return;
+            }
+            foreach ($list as &$news) {
+                $news["abs"] = mb_substr($news["abs"], 0, 40);
+            }
             Brain_Memcache::set($this->cacheLastestNews, Bd_String::json_encode($list), Lib_Const::NEWS_CACHE_TIME);
             return $list;
         }
