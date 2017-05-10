@@ -72,8 +72,8 @@ class Service_Data_Banner
         }
         foreach ($banners as $ban) {
             foreach ($reviews as $r) {
-                if ($ban['dis_order'] >= $r['dis_order']) {
-                    $ban['dis_order'] = $ban['dis_order'] + 1;
+                if ((int)$ban['dis_order'] >= (int)$r['dis_order']) {
+                    $ban['dis_order'] = (int)$ban['dis_order'] + 1;
                 }
             }
         }
@@ -82,6 +82,27 @@ class Service_Data_Banner
             $key_array[] = $item["dis_order"];
         }
         array_multisort($key_array, SORT_ASC, $result);
+        return $result;
+    }
+
+    /**
+     * 解析banner数据
+     * @param $banners
+     * @return array
+     */
+    public function getBannerData($banners)
+    {
+        if (empty($banners)) {
+            return;
+        }
+
+        $result = array();
+        foreach ($banners as $banner) {
+            $json = json_decode($banner['value']);
+            $json['template_code'] = $banner['template_code'];
+            $json['dis_order'] = $banner['dis_order'];
+            $result[] = $json;
+        }
         return $result;
     }
 

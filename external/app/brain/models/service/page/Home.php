@@ -22,19 +22,20 @@ class Service_Page_Home
     /**
      * @return
      */
-    public function execute() {
+    public function execute()
+    {
         $arrRequest = Saf_SmartMain::getCgi();
         $arrInput = $arrRequest['request_param'];
         if (isset($arrInput['action']) && $arrInput['action'] == "reviewBanner") {
             $banner = $this->bannerData->mergeBanner();
-        }else{
+        } else {
             $banner = $this->bannerData->getBanner();
         }
-        $arrPageInfo['banner'] = $banner;
+        $arrPageInfo['banner'] = $this->bannerData->getBannerData($banner);
         $arrPageInfo['messagelist'] = Bd_Conf::getAppConf('messagelist');
         $arrPageInfo['page'] = substr(strtolower(__CLASS__), 7);
-        $lastestNews  = $this->newsData->getLastestNews();
-        $newsList  = $this->newsData->getHomeNewsList();
+        $lastestNews = $this->newsData->getLastestNews();
+        $newsList = $this->newsData->getHomeNewsList();
         $arrPageInfo['lastestNews'] = $lastestNews[0];
         $arrPageInfo['newsList'] = $newsList;
 
