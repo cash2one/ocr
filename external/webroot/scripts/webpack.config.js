@@ -123,8 +123,6 @@ webpackEntries['common.bundle'] = ['jquery', 'src/entry/base.js'];
 // 两个单独引入的css，目前没有想好如何处理
 webpackEntries.base = ['src/less/base.less'];
 webpackEntries.ie9 = ['src/less/ie9.less'];
-webpackEntries.template = ['src/view/common/template.html'];
-
 
 module.exports = {
     // 注意基准路径是webroot

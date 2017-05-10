@@ -359,19 +359,19 @@
         </ul>
     </div>
     <div class="video-category">
-        <h4 class="video-category-title">黄反识别</h4>
+        <h4 class="video-category-title">色情识别</h4>
         <ul class="video-list clear-float">
             <li>
                 <a href="http://www.chuanke.com/v7867982-208541-1281894.html" target="_blank">
                     <img src="//ai.bdstatic.com/dist/1493904938/ai_images/support/video/yellow-info.png">
                 </a>
-                <h5>黄反识别基础介绍及场景使用</h5>
+                <h5>色情识别基础介绍及场景使用</h5>
             </li>
             <li>
                 <a href="http://www.chuanke.com/v7867982-208174-1278733.html" target="_blank">
                     <img src="//ai.bdstatic.com/dist/1493904938/ai_images/support/video/yellow-api.png">
                 </a>
-                <h5>黄反识别API使用教程</h5>
+                <h5>色情识别API使用教程</h5>
             </li>
         </ul>
     </div>
@@ -489,6 +489,7 @@
                 <li><a href="http://zhongbao.baidu.com" target="_blank">百度数据众包</a></li>
                 <li><a href="http://union.baidu.com" target="_blank">百度联盟</a></li>
                 <li><a href="http://tongji.baidu.com" target="_blank">百度统计</a></li>
+                <li><a href="http://bit.baidu.com" target="_blank">百度技术学院</a></li>
             </ul>
         </nav>
     </div>
