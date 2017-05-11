@@ -11,18 +11,7 @@
                 <h1>{%$banner.title%}</h1>
                 <p>{%$banner.abs%}</p>
                 <div>
-                    {php}
-                    if(strripos($banner['link'],"http")>0){
-                    {/php}
-                    <a href="{%$banner.link%}" target="_blank" class="get-started">{%$banner.button%}</a>
-
-                    </php>
-                    }else{
-                    {/php}
-                    {php}
                     <a href="{%$banner.link%}" class="get-started">{%$banner.button%}</a>
-                    }
-                    {/php}
                 </div>
             </div>
         </li>
