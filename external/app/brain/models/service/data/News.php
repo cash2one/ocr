@@ -142,7 +142,7 @@ class Service_Data_News
         } else {
             $list = $this->newsDao->getHomeNewsList();
             foreach ($list as &$news) {
-                if (mb_strlen($news["abs"], "uft-8") >= 37) {
+                if (mb_strlen($news["abs"], "utf-8") >= 37) {
                     $news["abs"] = mb_substr($news["abs"], 0, 37, "utf-8")."...";
                 }
             }
