@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493904938/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1494475882/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493904938/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493904938/css/technology/face-compare.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1494475882/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1494475882/css/technology/face-compare.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1493904938/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1494475882/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -512,8 +512,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1493904938/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1493904938/js/technology/face-compare.js"></script>
+<script src="//ai.bdstatic.com/dist/1494475882/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1494475882/js/technology/face-compare.js"></script>
 
 <script>
     (function () {
