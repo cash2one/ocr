@@ -12,10 +12,22 @@ class Service_Data_News
     protected $newsDao;
     protected $newsTagDao;
 
+    private $cacheNewsList = "AIP-WEB-HOME-NEWS-LIST";
+    private $cacheLastestNews = "AIP-WEB-HOME-LASTEST-NEW";
+
     public function __construct()
     {
         $this->newsDao = new Dao_News();
         $this->newsTagDao = new Dao_NewsTag();
+    }
+
+    /**
+     * @return void
+     */
+    public function cleanCache()
+    {
+        Brain_Memcache::delete($this->cacheNewsList);
+        Brain_Memcache::delete($this->cacheLastestNews);
     }
 
     /**
@@ -54,7 +66,7 @@ class Service_Data_News
                 $newsStart = '' . (($offset - 1) * 10);
                 $newsIdList = $this->newsTagDao->getTagNewsIdList($tag, $newsStart, '10');
                 $newsList = array();
-                if(!empty($newsIdList)){
+                if (!empty($newsIdList)) {
                     $newsIds = array();
                     foreach ($newsIdList as $x_value) {
                         $newsIds[] = $x_value['news_id'];
@@ -86,9 +98,9 @@ class Service_Data_News
             } else {
                 $tagNewsCount = $this->newsTagDao->getTagNewsCount($tag);
             }
-            if(empty($tagNewsCount)){
+            if (empty($tagNewsCount)) {
                 $total = '0';
-            }else{
+            } else {
                 $total = '' . ceil(intval($tagNewsCount) / 10);
             }
             Brain_Memcache::set($tag_pagination, $total, Lib_Const::NEWS_CACHE_TIME);
@@ -96,6 +108,44 @@ class Service_Data_News
         } else {
             $total = $tag_pagination_total;
             return $total;
+        }
+    }
+
+    /**
+     * 获取最新新闻缓存10分钟
+     * @return
+     */
+    public function getLastestNews()
+    {
+        $val = Brain_Memcache::get($this->cacheLastestNews);
+        if ($val && !empty($val)) {
+            return Bd_String::json_decode($val, true);
+        } else {
+            $list = $this->newsDao->getLastestNews();
+            if (empty($list)) {
+                return;
+            }
+            Brain_Memcache::set($this->cacheLastestNews, Bd_String::json_encode($list), Lib_Const::NEWS_CACHE_TIME);
+            return $list;
+        }
+    }
+
+    /**
+     * 获取首页四条新闻缓存10分钟
+     * @return
+     */
+    public function getHomeNewsList()
+    {
+        $val = Brain_Memcache::get($this->cacheNewsList);
+        if ($val && !empty($val)) {
+            return Bd_String::json_decode($val, true);
+        } else {
+            $list = $this->newsDao->getHomeNewsList();
+            foreach ($list as &$news) {
+                $news["abs"] = mb_substr($news["abs"], 0, 40, "utf-8");
+            }
+            Brain_Memcache::set($this->cacheNewsList, Bd_String::json_encode($list), Lib_Const::NEWS_CACHE_TIME);
+            return $list;
         }
     }
 

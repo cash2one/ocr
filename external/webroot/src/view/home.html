@@ -1,88 +1,31 @@
 <section class="banner">
     <ul class="banner-content">
-        <li class="active">
+        {%foreach from=$banners item=banner name=bannerFor%}
+        {%if $banner.template_code == 'common'%}
+        {%if $smarty.foreach.bannerFor.index == 0%}
+        <li class="active" style="background-image: url('{%$banner.background%}')">
+            {%else%}
+        <li style="background-image: url('{%$banner.background%}')">
+            {%/if%}
             <div class="banner-item">
-                <h1>图像审核</h1>
-                <p>基于业界领先的深度学习技术，依赖于百度庞大的图库<br>为您带来多个垂类的图像识别和审核服务</p>
+                <h1>{%$banner.title%}</h1>
+                <p>{%$banner.abs%}</p>
                 <div>
-                    <a href="/tech/imagecensoring" class="get-started">了解详情</a>
+                    <a href="{%$banner.link%}" class="get-started">{%$banner.button%}</a>
                 </div>
             </div>
         </li>
-        <li>
-            <div class="banner-item">
-                <h1>人脸识别服务全新升级</h1>
-                <p>功能全面完善，性能大幅提升<br>致力提供业界最优的人脸识别服务</p>
-                <div>
-                    <a href="/docs#/FACE-API/" class="get-started">了解详情</a>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="banner-item">
-                <h1>文字识别服务 5月优惠升级</h1>
-                <p>
-                    异地容灾，提高响应，降低风险<br>
-                    7*24小时售后，无限次调用，更高的QPS
-                </p>
-                <div>
-                    <a href="/support/news?action=detail&id=138" class="get-started">参与活动</a>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="banner-item">
-                <h1>智能视频分析</h1>
-                <p>
-                精细化视频分析服务，多项技术业界领先<br>
-                提供视频分类、视频tag、优质精彩视频封面输出
-                </p>
-                <div>
-                    <a href="/tech/video/vca" class="get-started">了解详情</a>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="banner-item">
-                <h1>OCR SDK上线 iOS/Android</h1>
-                <p>
-                OCR iOS SDK，Android SDK全新上线，让您的应用快速集成<br>
-                通用文字识别、身份证识别、银行卡卡号识别的能力
-                </p>
-                <div>
-                    <a href="/sdk#sdk-category-ocr" class="get-started">立即下载</a>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="banner-item">
-                <h1>自然语言处理</h1>
-                <p>基于大数据和用户行为的分词、词性标注、命名实体识别<br>
-                    定位基本语言元素，消除歧义，支撑自然语言的准确理解</p>
-                <div>
-                    <a href="/tech/nlp/lexical" class="get-started">了解详情</a>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="banner-item">
-                <h1>&nbsp;</h1>
-                <p>只要搭载DuerOS系统的智能设备都能够直接与用户开口对话<br>
-                    让用户获取所求</p>
-                <div>
-                    <a target="_blank" href="http://duer.baidu.com" class="get-started">了解详情</a>
-                </div>
-            </div>
-        </li>
+        {%/if%}
+        {%/foreach%}
     </ul>
     <ul class="banner-indicator">
+        {%foreach from=$banners item=banner name=bannerFor%}
+        {%if $smarty.foreach.bannerFor.index == 0%}
         <li class="active"></li>
+        {%else%}
         <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        {%/if%}
+        {%/foreach%}
     </ul>
 </section>
 <section class="lastest-news">
@@ -99,7 +42,6 @@
                     <img src="{%$news.img%}" alt="{%$news.title%}">
                     <h4>{%$news.title%}</h4>
                     <p>{%$news.abs%}</p>
-                    <i class="more"></i>
                 </a>
             </li>
             {%/foreach%}
@@ -257,7 +199,8 @@
                                 </ul>
                             </li>
                             <li>
-                                <a class="tech-service-secondary" href="http://api.fanyi.baidu.com/api/trans/product/index"
+                                <a class="tech-service-secondary"
+                                   href="http://api.fanyi.baidu.com/api/trans/product/index"
                                    target="_blank">机器翻译</a>
                                 <ul>
                                     <li>
@@ -504,16 +447,16 @@
                 <a href="http://www.chuanke.com/v7867982-208540-1278742.html"
                    target="_blank">
                     <img alt="百度人脸技术基础介绍及引用场景"
-                        width="500"
-                        height="280"
-                        src="../../ai_images/home/video-3.png">
+                         width="500"
+                         height="280"
+                         src="../../ai_images/home/video-3.png">
                 </a>
                 <h5>百度人脸技术基础介绍及引用场景</h5>
             </li>
             <li>
                 <a
-                    href="http://www.chuanke.com/v7867982-208173-1278732.html"
-                    target="_blank">
+                        href="http://www.chuanke.com/v7867982-208173-1278732.html"
+                        target="_blank">
                     <img alt="百度翻译产品介绍"
                          width="500"
                          height="280"

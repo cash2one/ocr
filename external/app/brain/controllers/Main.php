@@ -35,6 +35,6 @@ class Controller_Main extends Ap_Controller_Abstract {
 
         'download' => 'actions/tools/Download.php',
         'data' => 'actions/tools/Data.php',
-
+        'cleancache' => 'actions/tools/CleanCache.php',
     );
 }

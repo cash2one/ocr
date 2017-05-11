@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493904938/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1494475882/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493904938/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1493904938/css/technology/ar.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1494475882/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1494475882/css/technology/ar.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1493904938/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1494475882/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -342,7 +342,7 @@
         <h2>产品与服务</h2>
         <div class="clear-float">
             <div class="flow-chart">
-                <img src="//ai.bdstatic.com/dist/1493904938/ai_images/technology/ar/process-flow.png">
+                <img src="//ai.bdstatic.com/dist/1494475882/ai_images/technology/ar/process-flow.png">
             </div>
             <div class="product-desc-list">
                 <div class="product-desc">
@@ -524,6 +524,7 @@
                 <li><a href="http://zhongbao.baidu.com" target="_blank">百度数据众包</a></li>
                 <li><a href="http://union.baidu.com" target="_blank">百度联盟</a></li>
                 <li><a href="http://tongji.baidu.com" target="_blank">百度统计</a></li>
+                <li><a href="http://bit.baidu.com" target="_blank">百度技术学院</a></li>
             </ul>
         </nav>
     </div>
@@ -531,8 +532,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1493904938/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1493904938/js/technology/ar.js"></script>
+<script src="//ai.bdstatic.com/dist/1494475882/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1494475882/js/technology/ar.js"></script>
 
 <script>
     (function () {
