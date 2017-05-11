@@ -142,8 +142,8 @@ class Service_Data_News
         } else {
             $list = $this->newsDao->getHomeNewsList();
             foreach ($list as &$news) {
-                if (mb_strlen($news["abs"], "utf-8") >= 38) {
-                    $news["abs"] = mb_substr($news["abs"], 0, 38, "utf-8")."...";
+                if (mb_strlen($news["abs"], "utf-8") >= 37) {
+                    $news["abs"] = mb_substr($news["abs"], 0, 37, "utf-8")."...";
                 }
             }
             Brain_Memcache::set($this->cacheNewsList, Bd_String::json_encode($list), Lib_Const::NEWS_CACHE_TIME);
