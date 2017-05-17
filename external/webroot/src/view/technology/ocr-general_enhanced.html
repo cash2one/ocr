@@ -14,7 +14,7 @@
             <a role="button"
                class="btn-primary media ai-redirect"
                href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=enhance_ocr">
-            开通付费
+                开通付费
             </a>
             <a class="tech-docs"
                href="
@@ -123,10 +123,10 @@
             <div class="tech-feature-icon tech-feature-icon-2"></div>
             <div class="tech-feature-desc">
                 <div class="tech-feature-desc-title">成熟稳定</div>
-            <div class="tech-feature-desc-info">
-                经过手机百度，百度翻译，涂书笔记，百度糯米等多款重量级产品实践检验，产品成熟稳定
-                支持实时文字识别能力、弹性灵活的高并发承载及99.95%的可用性保证
-            </div>
+                <div class="tech-feature-desc-info">
+                    经过手机百度，百度翻译，涂书笔记，百度糯米等多款重量级产品实践检验，产品成熟稳定
+                    支持实时文字识别能力、弹性灵活的高并发承载及99.95%的可用性保证
+                </div>
             </div>
         </div>
         <div class="tech-feature-item tech-feature-shadow">
@@ -267,9 +267,18 @@
         </div>
         <div class="tech-free-product-btn">
             <a role="button"
+               {%if $src eq Null%}
+               class="btn-primary large ai-redirect"
+               {%else%}
+               class="btn-primary large"
+               {%/if%}
+            href="https://cloud.baidu.com/calculator.html#/ocr/price">
+            价格计算器
+            </a>
+            <a role="button"
                class="btn-primary large ai-redirect"
                href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=enhance_ocr">
-            开通付费
+                开通付费
             </a>
         </div>
     </div>
@@ -288,7 +297,7 @@
                class="btn-primary large"
                href="/survey/AICooperativeConsultingApply.html"
                {%/if%}>
-                合作咨询
+            合作咨询
             </a>
         </div>
     </div>
