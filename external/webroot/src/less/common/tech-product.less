@@ -1,6 +1,6 @@
 @import '../common/initialize.less';
 
-.tech-product (@wrapper-height: 380px;@num: 4; @pric-1-num: 2; @pric-1-row: 7;@pric-3-num: 4;@pric-3-row: 3; @pric-2-num: 1) {
+.tech-product (@num: 4; @pric-1-num: 2; @pric-1-row: 8; @pric-3-num: 4; @pric-3-row: 3; @pric-2-num: 1) {
     @pric-1-width :(1/@pric-1-num)*560px;
     @pric-3-width :(1/@pric-3-num)*560px;
     @pric-2-width :(1/@pric-2-num)*560px;
@@ -33,7 +33,6 @@
     }
     &-wrapper {
         width: 1180px;
-        height: @wrapper-height;
         font-size: 0;
         margin-bottom: 30px;
     }
@@ -83,14 +82,18 @@
     .product-form-1 {
         padding:0 10px 10px 0;
     }
-    .pric-item-1{
+    .pric-item-1 {
         width: @pric-1-width;
     }
     .pric-item-foot {
         line-height: 30px;
         font-size: 13px;
     }
-
+    .pric-item-2 {
+        .cooperation-color {
+            color: #0073eb;
+        }
+    }
     //表单三不同之处
     .product-form-3 {
         padding-right: 10px;
