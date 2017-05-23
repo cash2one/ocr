@@ -3,7 +3,9 @@
  * @author FranckChen(chenfan02@baidu.com)
  */
 
-.tech-catalog(@page-name: speech; @product-num;) {
+.tech-catalog(@page-name: speech; @product-num; @num: 3) {
+    @prods-margin:(60px / @num);
+    @prods-width: (1180px / @num) - (2 * @prods-margin);
     .tech-catalog {
         padding: 40px 0 20px;
         background-color: #fafafa;
@@ -46,14 +48,13 @@
 
 }
 
-@prods-width: (1180px / 3) - 40px;
 .tech-prod {
     &-container {
         position: relative;
         box-sizing: border-box;
         display: inline-block;
         width: @prods-width;
-        margin: 0 20px 35px;
+        margin: 0 @prods-margin 35px;
         height: 300px;
         vertical-align: top;
         border-bottom: 2px solid #f2f2f2;

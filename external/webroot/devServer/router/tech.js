@@ -65,5 +65,18 @@ router.get('/imagecensoring', (req, res, next) => {
         next
     );
 });
+router.get('/template', (req, res, next) => {
+    renderSmarty(
+        'secondary/template.tpl',
+        getMockData({})
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
 
 module.exports = router;

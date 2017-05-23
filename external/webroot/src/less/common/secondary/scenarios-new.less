@@ -1,0 +1,29 @@
+/**
+ * @file 二级页应用场景轮播图样式
+ * @author FranckChen(chenfan02@baidu.com)
+ */
+
+@import '../initialize.less';
+
+// 案例
+.tech-case(@num: 3; @row-num: 3) {
+    @item-width: (1180 / @row-num) - 40px;
+    .tech-case {
+        text-align: center;
+        padding: 30px 0 50px;
+        background-color: #fafafa;
+
+        &-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+        &-item {
+            display: inline-block;
+            width: @item-width;
+            margin: 0 20px 0;
+            height: 296px;
+            background-color: @white;
+        }
+    }
+}
