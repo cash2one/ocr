@@ -1,29 +1,71 @@
-/**
- * @file 二级页应用场景轮播图样式
- * @author FranckChen(chenfan02@baidu.com)
- */
-
 @import '../initialize.less';
 
 // 案例
-.tech-case(@num: 3; @row-num: 3) {
-    @item-width: (1180 / @row-num) - 40px;
-    .tech-case {
+.tech-case {
+    background: #f4f5f7;
+    overflow: hidden;
+    padding-bottom: 80px;
+    font-size: 0;
+    .tech-case-title {
         text-align: center;
-        padding: 30px 0 50px;
-        background-color: #f4f5f7;
-
-        &-title {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 24px;
-        }
-        &-item {
-            display: inline-block;
-            width: @item-width;
-            margin: 0 20px 0;
-            height: 296px;
-            background-color: @white;
-        }
+        font-size: 30px;
+        font-weight: bold;
+        color: #333;
+        letter-spacing: 6px;
+        padding: 50px 0 60px;
+    }
+    .tech-case-list {
+        width: 1180px;
+        margin: 0 auto;
+    }
+    .tech-case-item {
+        width: (1180px / 3) - 40px;
+        margin: 0 20px 20px;
+        padding: 34px 30px 0;
+        box-sizing: border-box;
+        background: #fff;
+        font-size: 16px;
+        display: inline-block;
+        vertical-align: top;
     }
 }
+
+.tech-case-desc {
+    .tech-case-desc-title {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    .tech-case-desc-info {
+        font-size: 14px;
+        line-height: 34px;
+        color: #666;
+    }
+}
+
+.tech-case-serve {
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #eee;
+    .main-serve {
+        font-size: 14px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .bioassay, .face-contrast{
+        margin: 0 8px;
+        color: #0073eb;
+    }
+}
+
+.tech-case-cooperation {
+    height: 70px;
+    line-height: 70px;
+    .cooperation-case {
+        font-size: 14px;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
