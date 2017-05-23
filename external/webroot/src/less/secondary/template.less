@@ -1,24 +1,18 @@
 @import "../common/initialize.less";
 @import "../common/banner-new.less";
-@import "../common/tech-feature.less";
+@import "../common/tech-feature-new.less";
 @import "../common/modal.less";
 @import "../common/secondary/tech-catalog-new.less";
 
 @import "../common/secondary/scenarios-new.less";
 @import "../common/secondary/guid-new.less";
 
-// 技术单页前缀
-@prefix: tech;
 
 // 调用通用的banner模块
-.@{prefix}-banner {
-    .banner(@page-name: imagecensor);
-}
+.banner(@page-name: imagecensor);
 
 // 调用通用的tech-feature模块
-.@{prefix}-feature {
-    .tech-feature(@page-name: imagecensor; @icon-num: 3)
-}
+.tech-feature(@page-name: imagecensor; @icon-num: 3);
 
 
 .tech-case(@num: 3);

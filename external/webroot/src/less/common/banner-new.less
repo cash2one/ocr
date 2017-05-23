@@ -3,36 +3,39 @@
 // banner
 // @page-name: 单页名称
 .banner (@page-name: nlp-word_embedding) {
-    box-sizing: border-box;
-    height: 450px;
-    padding: 50px 0 40px;
-    background: url('../../../ai_images/technology/@{page-name}/banner.png') no-repeat center center;
-    background-size: 2000px 450px;
-
-    .ai-container {
+    .tech-banner {
         box-sizing: border-box;
-        text-align: center;
-    }
+        height: 450px;
+        padding: 50px 0 40px;
+        background: url('../../../ai_images/technology/@{page-name}/banner.png') no-repeat center center;
+        background-size: 2000px 450px;
 
-    // banner标题
-    &-title {
-        width: 1180px;
-        padding: 50px 0 28px;
-        font-size: 42px;
-    }
+        .ai-container {
+            box-sizing: border-box;
+            text-align: center;
+        }
 
-    // banner简介
-    &-info {
-        width: 600px;
-        margin: 0 290px;
-        padding-bottom: 30px;
-        font-size: @module-info-size;
-        line-height: 2;
-        color: @light-black;
-    }
+        // banner标题
+        &-title {
+            width: 1180px;
+            padding: 50px 0 28px;
+            font-size: 48px;
+            font-weight: bold;
+        }
 
-    // banner按钮
-    .media {
-        margin-right: 10px;
+        // banner简介
+        &-info {
+            width: 600px;
+            margin: 0 290px;
+            padding-bottom: 30px;
+            font-size: @module-info-size;
+            line-height: 2;
+            color: @light-black;
+        }
+
+        // banner按钮
+        .media {
+            margin-right: 10px;
+        }
     }
 }
