@@ -4,13 +4,15 @@
 // @width: 每个item宽度
 // @column: 每列栏目数
 
-.tech-feature(@page-name: nlp-word_embedding; @icon-num: 3; @width: 320px; @column: 3) {
+.tech-feature(@page-name: nlp-word_embedding; @icon-num: 3; @width: 290px; @column: 3) {
     @margin: (1180px - @width * @column) / (2 * (@column) );
     .tech-feature {
         // 技术特色标题
         &-title {
-            padding: 50px 0 60px;
+            padding: 80px 0 50px;
             font-size: @big-title-size;
+            font-weight: bold;
+            letter-spacing: 6px;
             text-align: center;
             color: @deep-black;
         }
@@ -51,10 +53,12 @@
         &-desc {
             // 技术特色信息名
             &-title {
+                padding: 20px 0 15px;
                 font-size: @small-title-size;
+                font-weight: bold;
                 color: @deep-black;
                 text-align: center;
-                padding: 20px 0 15px;
+
             }
             // 技术特色信息简介(需要设置高度)
             &-info {
