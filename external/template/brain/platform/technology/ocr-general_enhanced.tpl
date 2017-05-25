@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1494475882/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1494475882/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1494475882/css/technology/ocr-general_enhanced.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/technology/ocr-general_enhanced.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1494475882/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1495707314/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -259,11 +259,8 @@
         <div class="tech-banner-btn-list">
             <a role="button"
                class="btn-primary media ai-redirect"
-               href="https://cloud.baidu.com/calculator.html#/ocr/price">价格计算器</a>
-            <a role="button"
-               class="btn-primary media ai-redirect"
                href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=enhance_ocr">
-            开通付费
+                开通付费
             </a>
             <a class="tech-docs"
                href="
@@ -275,10 +272,10 @@
             </a>
         </div>
         <div class="tech-billing">
-            5月限时优惠活动，
+            价格大幅下调，千次调用低至<span class="price">4.7元</span>，
             <a target="_blank"
                class="tech-billing-btn"
-               href="http://ai.baidu.com/support/news?action=detail&id=138&from=tech">详情点击&gt;&gt;
+               href="http://ai.baidu.com/support/news?action=detail&id=149">详情点击&gt;&gt;
             </a>
         </div>
     </div>
@@ -323,28 +320,28 @@
                 </div>
                 <div class="tech-demo-card-list">
                     <div class="tech-demo-card-item tech-demo-card-active">
-                        <img src="//ai.bdstatic.com/dist/1494475882/ai_images/technology/ocr-general_enhanced/demo-card-1.png">
+                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-general_enhanced/demo-card-1.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1494475882/ai_images/technology/ocr-general_enhanced/demo-card-2.png">
+                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-general_enhanced/demo-card-2.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1494475882/ai_images/technology/ocr-general_enhanced/demo-card-3.png">
+                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-general_enhanced/demo-card-3.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1494475882/ai_images/technology/ocr-general_enhanced/demo-card-4.png">
+                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-general_enhanced/demo-card-4.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1494475882/ai_images/technology/ocr-general_enhanced/demo-card-5.png">
+                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-general_enhanced/demo-card-5.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1494475882/ai_images/technology/ocr-general_enhanced/demo-card-6.png">
+                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-general_enhanced/demo-card-6.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1494475882/ai_images/technology/ocr-general_enhanced/demo-card-7.png">
+                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-general_enhanced/demo-card-7.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1494475882/ai_images/technology/ocr-general_enhanced/demo-card-8.png">
+                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-general_enhanced/demo-card-8.png">
                     </div>
                 </div>
             </div>
@@ -372,10 +369,10 @@
             <div class="tech-feature-icon tech-feature-icon-2"></div>
             <div class="tech-feature-desc">
                 <div class="tech-feature-desc-title">成熟稳定</div>
-            <div class="tech-feature-desc-info">
-                经过手机百度，百度翻译，涂书笔记，百度糯米等多款重量级产品实践检验，产品成熟稳定
-                支持实时文字识别能力、弹性灵活的高并发承载及99.95%的可用性保证
-            </div>
+                <div class="tech-feature-desc-info">
+                    经过手机百度，百度翻译，涂书笔记，百度糯米等多款重量级产品实践检验，产品成熟稳定
+                    支持实时文字识别能力、弹性灵活的高并发承载及99.95%的可用性保证
+                </div>
             </div>
         </div>
         <div class="tech-feature-item tech-feature-shadow">
@@ -474,21 +471,32 @@
                     <div class="pric-item-header pric-item-1">月调用量</div>
                     <div class="pric-item-header pric-item-1">单价</div>
                     <div class="pric-item-connent pric-item-1">0&lt;调用量&lt;=5w</div>
-                    <div class="pric-item-connent pric-item-1">0.060元/次</div>
+                    <div class="pric-item-connent pric-item-1">0.01元/次</div>
                     <div class="pric-item-connent pric-item-1">5w&lt;调用量&lt;=10w</div>
-                    <div class="pric-item-connent pric-item-1">0.055元/次</div>
+                    <div class="pric-item-connent pric-item-1">0.008元/次</div>
                     <div class="pric-item-connent pric-item-1">10w&lt;调用量&lt;=20w</div>
-                    <div class="pric-item-connent pric-item-1">0.050元/次</div>
+                    <div class="pric-item-connent pric-item-1">0.0065元/次</div>
                     <div class="pric-item-connent pric-item-1">20w&lt;调用量&lt;=50w</div>
-                    <div class="pric-item-connent pric-item-1">0.045元/次</div>
-                    <div class="pric-item-connent pric-item-1">50w&lt;调用量</div>
-                    <div class="pric-item-connent pric-item-1">0.040元/次</div>
+                    <div class="pric-item-connent pric-item-1">0.0055元/次</div>
+                    <div class="pric-item-connent pric-item-1">50w&lt;调用量&lt;=100w</div>
+                    <div class="pric-item-connent pric-item-1">0.005元/次</div>
+                    <div class="pric-item-connent pric-item-1">100w&lt;调用量</div>
+                    <div class="pric-item-connent pric-item-1">0.0047元/次</div>
                 </div>
             </div>
             <div class="product-form-2">
                 <div class="product-head pric-head-2">合作咨询</div>
                 <div class="product-body pric-body-2">
-                    <div class="pric-item-header pric-item-2">如果您有以下的需求或其他需求，您可以提交合作咨询：</div>
+                    <div class="pric-item-header pric-item-2">如果您有以下的需求或其他需求，您可以提交
+                        <a {%if $src eq Null%}
+                           class="cooperation-color consult"
+                           {%else%}
+                           target="_blank"
+                           class="cooperation-color"
+                           href="https://cloud.baidu.com/survey/AICooperativeConsultingApply.html"
+                           {%/if%}
+                           >合作咨询</a>
+                    </div>
                     <div class="pric-item-connent pric-item-2">1.如果您的调用量远大于最大的阶梯段，并需要更低的价格；</div>
                     <div class="pric-item-connent pric-item-2">2.如果您需要更高的QPS/并发；</div>
                     <div class="pric-item-connent pric-item-2">3.如果您有其他的OCR要求；</div>
@@ -517,31 +525,18 @@
         <div class="tech-free-product-btn">
             <a role="button"
                class="btn-primary large ai-redirect"
-               href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=enhance_ocr">
-            开通付费
+               href="https://cloud.baidu.com/calculator.html#/ocr/price">
+                价格计算器
             </a>
-        </div>
-    </div>
-</div>
-<div class="tech-section get-started tech-free">
-    <div class="ai-container">
-        <div class="tech-free-title">快速提交您的需求</div>
-        <div class="tech-free-info">您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</div>
-        <div class="tech-free-btn">
             <a role="button"
-               {%if $src eq Null%}
-               class="btn-primary large consult"
-               data-operation="cooperation"
-               {%else%}
-               target="_blank"
-               class="btn-primary large"
-               href="/survey/AICooperativeConsultingApply.html"
-               {%/if%}>
-                合作咨询
+               class="btn-primary large ai-redirect"
+               href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=enhance_ocr">
+                开通付费
             </a>
         </div>
     </div>
 </div>
+
 {%if $src eq Null%}
 <div class="tech-section tech-guide">
     <div class="ai-container">
@@ -681,8 +676,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1494475882/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1494475882/js/technology/ocr-general_enhanced.js"></script>
+<script src="//ai.bdstatic.com/dist/1495707314/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1495707314/js/technology/ocr-general_enhanced.js"></script>
 
 <script>
     (function () {

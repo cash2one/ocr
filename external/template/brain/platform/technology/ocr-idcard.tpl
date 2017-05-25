@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1494475882/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1494475882/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1494475882/css/technology/ocr-idcard.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/technology/ocr-idcard.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1494475882/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1495707314/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -254,11 +254,11 @@
         <div>
             <a role="button"
                class="btn-primary media ai-redirect"
-               href="https://cloud.baidu.com/calculator.html#/ocr/price">价格计算器</a>
+               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">免费试用</a>
             <a role="button"
                class="btn-primary media ai-redirect"
                href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=id_ocr">
-            开通付费
+                开通付费
             </a>
             <a class="tech-docs"
                href="
@@ -270,10 +270,10 @@
             </a>
         </div>
         <div class="tech-billing">
-            5月限时优惠活动，
+            价格大幅下调，千次调用低至<span class="price">9元</span>，
             <a target="_blank"
                class="tech-billing-btn"
-               href="http://ai.baidu.com/support/news?action=detail&id=138&from=tech">详情点击&gt;&gt;
+               href="http://ai.baidu.com/support/news?action=detail&id=149">详情点击&gt;&gt;
             </a>
         </div>
     </div>
@@ -317,22 +317,22 @@
                 <p class="demo-desc">提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片，图片大小不超过2M，长边不超过2048像素。为保证正常识别效果，请保持身份证正面向上，并为图片主体部分。此演示暂只支持正面识别。</p>
                 <ul class="demo-card-list clear-float">
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1494475882/ai_images/technology/ocr-idcard/demo-card-1.png">
+                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-idcard/demo-card-1.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1494475882/ai_images/technology/ocr-idcard/demo-card-2.png">
+                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-idcard/demo-card-2.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1494475882/ai_images/technology/ocr-idcard/demo-card-3.png">
+                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-idcard/demo-card-3.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1494475882/ai_images/technology/ocr-idcard/demo-card-4.png">
+                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-idcard/demo-card-4.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1494475882/ai_images/technology/ocr-idcard/demo-card-5.png">
+                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-idcard/demo-card-5.png">
                     </li>
                     <li>
-                        <img src="//ai.bdstatic.com/dist/1494475882/ai_images/technology/ocr-idcard/demo-card-6.png">
+                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-idcard/demo-card-6.png">
                     </li>
                 </ul>
             </div>
@@ -434,15 +434,17 @@
                     <div class="pric-item-header pric-item-1">月调用量</div>
                     <div class="pric-item-header pric-item-1">单价</div>
                     <div class="pric-item-connent pric-item-1">0&lt;调用量&lt;=5w</div>
-                    <div class="pric-item-connent pric-item-1">0.050元/次</div>
+                    <div class="pric-item-connent pric-item-1">0.02元/次</div>
                     <div class="pric-item-connent pric-item-1">5w&lt;调用量&lt;=10w</div>
-                    <div class="pric-item-connent pric-item-1">0.045元/次</div>
+                    <div class="pric-item-connent pric-item-1">0.016元/次</div>
                     <div class="pric-item-connent pric-item-1">10w&lt;调用量&lt;=20w</div>
-                    <div class="pric-item-connent pric-item-1">0.040元/次</div>
+                    <div class="pric-item-connent pric-item-1">0.013元/次</div>
                     <div class="pric-item-connent pric-item-1">20w&lt;调用量&lt;=50w</div>
-                    <div class="pric-item-connent pric-item-1">0.035元/次</div>
-                    <div class="pric-item-connent pric-item-1">50w&lt;调用量</div>
-                    <div class="pric-item-connent pric-item-1">0.030元/次</div>
+                    <div class="pric-item-connent pric-item-1">0.011元/次</div>
+                    <div class="pric-item-connent pric-item-1">50w&lt;调用量&lt;=100w</div>
+                    <div class="pric-item-connent pric-item-1">0.01元/次</div>
+                    <div class="pric-item-connent pric-item-1">100w&lt;调用量</div>
+                    <div class="pric-item-connent pric-item-1">0.009元/次</div>
                     <div class="pric-item-foot">
                         免费配额：每日500次免费调用次数，超出免费配额，开始计费
                     </div>
@@ -451,7 +453,16 @@
             <div class="product-form-2">
                 <div class="product-head pric-head-2">合作咨询</div>
                 <div class="product-body pric-body-2">
-                    <div class="pric-item-header pric-item-2">如果您有以下的需求或其他需求，您可以提交合作咨询：</div>
+                    <div class="pric-item-header pric-item-2">如果您有以下的需求或其他需求，您可以提交
+                        <a {%if $src eq Null%}
+                           class="cooperation-color consult"
+                           {%else%}
+                           target="_blank"
+                           class="cooperation-color"
+                           href="https://cloud.baidu.com/survey/AICooperativeConsultingApply.html"
+                           {%/if%}
+                        >合作咨询</a>
+                    </div>
                     <div class="pric-item-connent pric-item-2">1.如果您的调用量远大于最大的阶梯段，并需要更低的价格；</div>
                     <div class="pric-item-connent pric-item-2">2.如果您需要更高的QPS/并发；</div>
                     <div class="pric-item-connent pric-item-2">3.如果您有其他的OCR要求；</div>
@@ -487,36 +498,18 @@
         <div class="tech-free-product-btn">
             <a role="button"
                class="btn-primary large ai-redirect"
-               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">
-                免费使用
+               href="https://cloud.baidu.com/calculator.html#/ocr/price">
+                价格计算器
             </a>
             <a role="button"
                class="btn-primary large ai-redirect"
                href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=id_ocr">
-            开通付费
+                开通付费
             </a>
         </div>
     </div>
 </div>
-<div class="tech-section get-started tech-free">
-    <div class="ai-container">
-        <div class="tech-free-title">快速提交您的需求</div>
-        <div class="tech-free-info">您可以点击下方按钮提交合作咨询表单，我们会尽快与您取得联系</div>
-        <div class="tech-free-btn">
-            <a role="button"
-               {%if $src eq Null%}
-               class="btn-primary large consult"
-               data-operation="cooperation"
-               {%else%}
-               target="_blank"
-               class="btn-primary large"
-               href="/survey/AICooperativeConsultingApply.html"
-               {%/if%}>
-            合作咨询
-            </a>
-        </div>
-    </div>
-</div>
+
 {%if $src eq Null%}
 <section class="tech-section tech-guide">
     <div class="container">
@@ -524,8 +517,8 @@
         <div class="guide-link clear-float">
             <h3>开发指南</h3>
             <ul>
-                <li><a href="/docs#OCR-API">技术文档 ></a></li>
-                <li><a href="/sdk">SDK下载 ></a></li>
+                <li><a href="/docs#OCR-API">技术文档 &gt;</a></li>
+                <li><a href="/sdk">SDK下载 &gt;</a></li>
             </ul>
         </div>
         <div class="question-link clear-float">
@@ -660,8 +653,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1494475882/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1494475882/js/technology/ocr-idcard.js"></script>
+<script src="//ai.bdstatic.com/dist/1495707314/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1495707314/js/technology/ocr-idcard.js"></script>
 
 <script>
     (function () {
