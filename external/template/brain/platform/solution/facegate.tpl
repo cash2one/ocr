@@ -113,6 +113,8 @@
                             <ul class="tech-list">
                                 <li><a href="/tech/nlp/lexical">词法分析</a></li>
                                 <li><a href="/tech/nlp/word_embedding">中文词向量表示</a></li>
+                                <li><a class="tech-new"
+                                       href="/tech/nlp/word_emb_sim">词义相似度</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <a class="tech-secondary-title" href="/tech/nlp">短文本级</a>
@@ -121,6 +123,7 @@
                                 <li><a href="/tech/nlp/dnnlm_cn">中文DNN语言模型</a></li>
                                 <li><a href="/tech/nlp/simnet">短文本相似度</a></li>
                                 <li><a href="/tech/nlp/comment_tag">评论观点抽取</a></li>
+                                <li><a class="tech-new" href="/tech/nlp/sentiment_classify">情感倾向分析</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <a class="tech-secondary-title" href="http://api.fanyi.baidu.com/api/trans/product/index">机器翻译</a>
