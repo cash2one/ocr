@@ -21,7 +21,7 @@ class Action_Redirect extends Ap_Action_Abstract
         $arrInput = $arrRequest['request_param'];
         $url = Brain_Util::getParamAsString($arrInput, 'url');
         $param = array(
-            "aibaiduid" => Bd_Str::urldecode($_COOKIE['BAIDUID']),
+            "aibaiduid" => Bd_Str::urlencode($_COOKIE['BAIDUID']),
             "fromai" => 1,
         );
         foreach ($arrInput as $k => $v) {
