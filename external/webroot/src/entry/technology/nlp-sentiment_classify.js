@@ -5,5 +5,6 @@
 
 import '../../less/technology/nlp-sentiment_classify.less';
 
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/nlp-sentiment_classify.html';
 
 import '../common/tech-case.js';

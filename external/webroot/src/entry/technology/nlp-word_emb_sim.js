@@ -5,5 +5,6 @@
 
 import '../../less/technology/nlp-word_emb_sim.less';
 
+import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/nlp-word_emb_sim.html';
 
 import '../common/tech-case.js';
