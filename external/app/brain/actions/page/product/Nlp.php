@@ -19,7 +19,8 @@ class Action_Nlp extends Ap_Action_Abstract {
         $arrInput = $arrRequest['request_param'];
 
         $class_name = substr(strtolower(__CLASS__), strlen('action_'));
-        $techList = array('comment_tag', 'dnnlm_cn', 'lexical', 'simnet', 'word_embedding');
+        $techList = array('comment_tag', 'dnnlm_cn', 'lexical', 'simnet',
+            'word_embedding', 'sentiment_classify', 'word_emb_sim');
 
         $inputKeys = array_keys($arrInput);
         $tech = $inputKeys[0];
