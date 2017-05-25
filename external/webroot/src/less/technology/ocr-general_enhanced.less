@@ -31,6 +31,10 @@
         &-btn {
             color: #f00;
         }
+        em{
+            color:#f00;
+            font-style: normal;
+        }
     }
 }
 // 调用通用的tech-feature模块
@@ -401,7 +405,7 @@
 }
 
 .@{prefix}-product {
-    .tech-product(@wrapper-height: 320px; @pric-1-row: 6;@pric-3-num: 2;@pric-3-row: 2);
+.tech-product(@pric-1-row: 7; @pric-3-num: 2; @pric-3-row: 2);
     .pric-item-2 {
         line-height: 30px;
     }
