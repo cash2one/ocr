@@ -59,6 +59,33 @@
             box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .4);
         }
 
+        &.btn-primary-new {
+            position: relative;
+            border: 1px solid @white;
+            color: #fff;
+            z-index: 1;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 0;
+                width: 0;
+                height: 100%;
+                background: #fff;
+                transition: all 0.3s ease;
+                z-index: -1;
+            }
+
+            &:hover {
+                color: #333;
+                &::after {
+                    left: 0;
+                    width: 100%;
+                }
+            }
+        }
+
         &.btn-primary {
             border: 1px solid @blue;
             background-color: @blue;
@@ -92,10 +119,24 @@
             line-height: 26px;
         }
 
+        &.media-new {
+            width: 120px;
+            height: 40px;
+            font-size: 21px;
+            line-height: 40px;
+        }
+
         &.media {
             width: 110px;
             height: 38px;
             line-height: 38px;
+        }
+
+        &.large-new {
+            width: 215px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 18px;
         }
 
         &.large {

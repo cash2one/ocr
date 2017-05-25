@@ -1,0 +1,46 @@
+@import './initialize.less';
+
+// banner
+// @page-name: 单页名称
+.banner (@page-name: nlp-word_embedding) {
+    .tech-banner {
+        box-sizing: border-box;
+        height: 450px;
+        padding: 90px 0 80px;
+        text-align: center;
+        background: url('../../../ai_images/technology/@{page-name}/banner.jpg') no-repeat center;
+        background-size: cover;
+
+        .ai-container {
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        // banner标题
+        &-title {
+            width: 1180px;
+            padding: 30px 0;
+            font-size: 48px;
+            letter-spacing: 6px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        // banner简介
+        &-info {
+            width: 500px;
+            margin: 0 auto;
+            padding-bottom: 30px;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+
+        // banner按钮
+        .media-new {
+            margin-right: 40px;
+        }
+    }
+}
+

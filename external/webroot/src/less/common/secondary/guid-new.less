@@ -1,0 +1,80 @@
+@import '../initialize.less';
+
+.tech-guide {
+    padding: 50px 0;
+    font-size: 0;
+    text-align: center;
+
+    &-title {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &-route {
+        margin-left: 70px;
+    }
+    &-links {
+        position: relative;
+        font-size: 0;
+        padding-top: 20px;
+
+        a {
+            font-size: 16px;
+            margin: 0 15px;
+            color: #0073eb;
+
+            &:hover {
+                color: #097ef1;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &-step {
+        position: relative;
+        display: inline-block;
+        width: 164px;
+        vertical-align: top;
+        text-align: left;
+
+        &-num,
+        &-name {
+            display: inline-block;
+            font-size: 16px;
+            color: #666
+        }
+
+        &-num {
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            border: 1px solid #999;
+            border-radius: 50%;
+            font-size: 14px;
+            text-align: center;
+            color: #999;
+        }
+
+        &-name {
+            padding: 0 12px 0 10px;
+        }
+
+        // 横线
+        &:after {
+            position: absolute;
+            top: 50%;
+            right: 12px;
+            content: "";
+            width: 50px;
+            height: 1px;
+            background-color: #999;
+        }
+
+        // 最后一步没有横线
+        &:last-child:after {
+            display: none;
+        }
+
+    }
+}
