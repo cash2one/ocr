@@ -38,39 +38,25 @@
         }
 
         // banner按钮
-        
+
         .tech-banner-btn-list {
+            font-size: 0;
             .media-new {
-                margin: 0 20px;
-                width: 120px;
-                height: 40px;
-                font-size: 21px;
-                line-height: 40px;
+                margin: 0 15px;
+                width: 116px;
+                height: 38px;
+                font-size: 20px;
+                line-height: 38px;
             }
             .btn-primary-new {
                 position: relative;
                 border: 1px solid @white;
                 color: #fff;
                 z-index: 1;
-
-                &::after {
-                    content: '';
-                    position: absolute;
-                    left: 50%;
-                    top: 0;
-                    width: 0;
-                    height: 100%;
-                    background: #fff;
-                    transition: all 0.3s ease;
-                    z-index: -1;
-                }
-
+                transition: all .3s ease;
                 &:hover {
                     color: #333;
-                    &::after {
-                        left: 0;
-                        width: 100%;
-                    }
+                    background: #fff;
                 }
             }
         }

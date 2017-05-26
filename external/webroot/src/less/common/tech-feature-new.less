@@ -4,6 +4,8 @@
 // @width: 每个item宽度
 // @column: 每列栏目数
 
+@light-black: #999;
+
 .tech-feature(@page-name: nlp-word_embedding; @icon-num: 3; @width: 290px; @column: 3) {
     @margin: (1180px - @width * @column) / (2 * (@column) );
     .tech-feature {
@@ -26,9 +28,9 @@
         &-item {
             width: @width;
             box-sizing: border-box;
-            padding: 20px;
+            padding: 0 20px;
             float: left;
-            margin: 0 @margin 50px;
+            margin: 0 @margin;
         }
 
         // 技术特色icon
