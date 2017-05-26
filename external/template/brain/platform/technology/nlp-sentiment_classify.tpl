@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/technology/nlp-sentiment_classify.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/technology/nlp-sentiment_classify.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1495707314/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1495804556/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -283,7 +283,7 @@
             针对带有主观描述的中文文本，可自动判断该文本的情感极性类别并给出相应的置信度。情感极性分为积极、消极、中性。情感倾向分析能帮助企业理解用户消费习惯、分析热点话题和危机舆情监控，为企业提供有力的决策支持
         </div>
         <div class="tech-catalog-show">
-            <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/nlp-sentiment_classify/introduce.jpg" class="tech-catalog-img" alt="">
+            <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/nlp-sentiment_classify/introduce.jpg" class="tech-catalog-img" alt="">
         </div>
     </div>
 </div>
@@ -291,9 +291,9 @@
 <div class="tech-section tech-case">
     <div class="tech-case-title">应用场景</div>
     <div class="tech-case-list">
-        <div class="tech-case-item">
+        <div class="tech-case-item tech-feature-shadow">
             <div class="tech-case-desc">
-                <div class="tech-case-desc-title">用户评论分析与决策</div>
+                <div class="tech-case-desc-title">评论分析与决策</div>
                 <div class="tech-case-desc-info">通过对产品多维度评论观点进行倾向性分析，给用户提供该产品全方位的评价，方便用户进行决策
                 </div>
                 <div class="tech-case-serve"></div>
@@ -305,10 +305,10 @@
                 </div>
             </div>
         </div>
-        <div class="tech-case-item">
+        <div class="tech-case-item tech-feature-shadow">
             <div class="tech-case-desc">
                 <div class="tech-case-desc-title">评论分类</div>
-                <div class="tech-case-desc-info">通过对评论进行情感倾向性分析，筛选在同一事件或对象下不同用户的不同的情感评论进行相应展示
+                <div class="tech-case-desc-info">通过对评论进行情感倾向性分析，将不同用户针对同一事件或对象的评论内容按情感极性予以分类展示
                 </div>
                 <div class="tech-case-serve"></div>
                 <div class="tech-case-line"></div>
@@ -318,12 +318,13 @@
                 </div>
             </div>
         </div>
-        <div class="tech-case-item">
+        <div class="tech-case-item tech-feature-shadow">
             <div class="tech-case-desc">
                 <div class="tech-case-desc-title">舆情监控</div>
                 <div class="tech-case-desc-info">通过对需要舆情监控的实时文字数据流进行情感倾向性分析，把握用户对热点信息的情感倾向性变化</div>
                 <div class="tech-case-serve"></div>
                 <div class="tech-case-cooperation">
+                    <span class="cooperation-case">&nbsp;</span>
                 </div>
             </div>
         </div>
@@ -483,7 +484,7 @@
         <nav class="friendly-links">
             <h3>友情链接</h3>
             <ul>
-                <li><a href="http://www.paddlepaddle.org/cn/index.html" target="_blank">PaddlePaddle机器学习平台</a></li>
+                <li><a href="http://www.paddlepaddle.org/index.cn.html" target="_blank">PaddlePaddle深度学习平台</a></li>
                 <li><a href="http://yuyin.baidu.com/" target="_blank">百度语音</a></li>
                 <li><a href="http://fanyi.baidu.com/" target="_blank">百度翻译</a></li>
                 <li><a href="http://idl.baidu.com/" target="_blank">百度深度学习实验室</a></li>
@@ -504,8 +505,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1495707314/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1495707314/js/technology/nlp-sentiment_classify.js"></script>
+<script src="//ai.bdstatic.com/dist/1495804556/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1495804556/js/technology/nlp-sentiment_classify.js"></script>
 
 <script>
     (function () {
