@@ -24,4 +24,32 @@ router.get('/lexical', (req, res, next) => {
     );
 });
 
+router.get('/sentiment_classify', (req, res, next) => {
+    renderSmarty(
+        'technology/nlp-sentiment_classify.tpl',
+        getMockData({})
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
+
+router.get('/word_emb_sim', (req, res, next) => {
+    renderSmarty(
+        'technology/nlp-word_emb_sim.tpl',
+        getMockData({})
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
+
 module.exports = router;

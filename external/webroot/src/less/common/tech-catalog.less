@@ -1,0 +1,36 @@
+@catalog-prefix: tech-catalog;
+
+.@{catalog-prefix} {
+    &-info {
+        width: 600px;
+        line-height: 30px;
+        padding-bottom: 50px;
+        margin: 0 auto;
+        font-size: 16px;
+        color: #999;
+        text-align: center;
+    }
+    &-show {
+        height: 400px;
+        overflow: hidden;
+        text-align: center;
+        .@{catalog-prefix}-img {
+            height: 100%;
+        }
+    }
+}
+
+//复写large
+
+.tech-guide {
+    a[role="button"]{
+        &.large {
+            width: 212px;
+            height: 60px;
+            line-height: 60px;
+        }
+        &:hover.large {
+            background: #3095ff;
+        }
+    }
+}

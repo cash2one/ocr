@@ -15,10 +15,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/newDocument/newDocument.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/newDocument/newDocument.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -34,7 +34,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1495707314/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1495804556/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -114,6 +114,8 @@
                             <ul class="tech-list">
                                 <li><a href="/tech/nlp/lexical">词法分析</a></li>
                                 <li><a href="/tech/nlp/word_embedding">中文词向量表示</a></li>
+                                <li><a class="tech-new" href="/tech/nlp/word_emb_sim">词义相似度</a></li>
+
                             </ul>
                             <div class="sub-tech-title">
                                 <a class="tech-secondary-title" href="/tech/nlp">短文本级</a>
@@ -122,6 +124,7 @@
                                 <li><a href="/tech/nlp/dnnlm_cn">中文DNN语言模型</a></li>
                                 <li><a href="/tech/nlp/simnet">短文本相似度</a></li>
                                 <li><a href="/tech/nlp/comment_tag">评论观点抽取</a></li>
+                                <li><a class="tech-new" href="/tech/nlp/sentiment_classify">情感倾向分析</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <a class="tech-secondary-title" href="http://api.fanyi.baidu.com/api/trans/product/index">机器翻译</a>
@@ -248,8 +251,8 @@
     </div>
 </header>
 <div id="app"></div>
-<script src="//ai.bdstatic.com/dist/1495707314/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1495707314/js/newDocument/newDocument.js"></script>
+<script src="//ai.bdstatic.com/dist/1495804556/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1495804556/js/newDocument/newDocument.js"></script>
 <script>
     (function () {
         var bp = document.createElement('script');

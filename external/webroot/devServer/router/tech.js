@@ -38,6 +38,22 @@ router.get('/speech', (req, res, next) => {
     );
 });
 
+router.get('/template', (req, res, next) => {
+    renderSmarty(
+    'secondary/template.tpl',
+    getMockData({})
+).then(
+    content => {
+        res
+            .type('html')
+            .end(content);
+        },
+        next
+    );
+});
+
+
+
 router.get('/video', (req, res, next) => {
     renderSmarty(
         'secondary/video.tpl',
@@ -55,6 +71,19 @@ router.get('/video', (req, res, next) => {
 router.get('/imagecensoring', (req, res, next) => {
     renderSmarty(
         'secondary/imagecensor.tpl',
+        getMockData({})
+    ).then(
+        content => {
+            res
+                .type('html')
+                .end(content);
+        },
+        next
+    );
+});
+router.get('/template', (req, res, next) => {
+    renderSmarty(
+        'secondary/template.tpl',
         getMockData({})
     ).then(
         content => {

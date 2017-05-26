@@ -1,0 +1,39 @@
+@import "../secondary/template.less";
+@import "../common/tech-catalog.less";
+
+.banner(@page-name: nlp-word_emb_sim);
+
+.tech-feature(@page-name: nlp-word_emb_sim; @icon-num: 3; @width: 290px; @column: 3);
+
+.tech-case(@page-name: nlp-word_emb_sim; @item-num: 2);
+
+@catalog-prefix: tech-catalog;
+@tech-prefix: tech-case;
+
+.@{catalog-prefix} {
+    padding: 40px 0 0;
+    &-show {
+        margin-top: 0;
+        height: 600px;
+        overflow: hidden;
+        text-align: center;
+        .@{catalog-prefix}-img {
+            height: 100%;
+        }
+    }
+}
+
+.@{tech-prefix} {
+    &-desc-info {
+        height: 68px;
+        padding-bottom: 20px;
+    }
+    &-title {
+        padding: 0 0 60px;
+    }
+    &-serve {
+        height: 80px;
+    }
+}
+
+

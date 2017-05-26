@@ -96,6 +96,10 @@
               "md": "OCR-CSharp-SDK"
             },
             {
+              "text": "Node.js语言",
+              "md": "OCR-Node-SDK"
+            },
+            {
               "text": "iOS SDK",
               "md": "OCR-iOS-SDK"
             },
@@ -132,6 +136,10 @@
             {
               "text": "C#语言",
               "md": "Face-CSharp-SDK"
+            },
+            {
+              "text": "Node.js语言",
+              "md": "Face-Node-SDK"
             }
           ]
         }
@@ -162,6 +170,10 @@
             {
               "text": "C#语言",
               "md": "NLP-CSharp-SDK"
+            },
+            {
+              "text": "Node.js语言",
+              "md": "NLP-Node-SDK"
             }
           ]
         }
@@ -192,6 +204,10 @@
             {
               "text": "C#语言",
               "md": "ImageCensoring-CSharp-SDK"
+            },
+            {
+              "text": "Node.js语言",
+              "md": "ImageCensoring-Node-SDK"
             }
           ]
         }

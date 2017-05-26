@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/technology/antiterror.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/technology/antiterror.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1495707314/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1495804556/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -113,6 +113,8 @@
                             <ul class="tech-list">
                                 <li><a href="/tech/nlp/lexical">词法分析</a></li>
                                 <li><a href="/tech/nlp/word_embedding">中文词向量表示</a></li>
+                                <li><a class="tech-new"
+                                       href="/tech/nlp/word_emb_sim">词义相似度</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <a class="tech-secondary-title" href="/tech/nlp">短文本级</a>
@@ -121,6 +123,7 @@
                                 <li><a href="/tech/nlp/dnnlm_cn">中文DNN语言模型</a></li>
                                 <li><a href="/tech/nlp/simnet">短文本相似度</a></li>
                                 <li><a href="/tech/nlp/comment_tag">评论观点抽取</a></li>
+                                <li><a class="tech-new" href="/tech/nlp/sentiment_classify">情感倾向分析</a></li>
                             </ul>
                             <div class="sub-tech-title">
                                 <a class="tech-secondary-title" href="http://api.fanyi.baidu.com/api/trans/product/index">机器翻译</a>
@@ -258,14 +261,17 @@
         </div>
         <div class="tech-banner-btn-list">
             <a role="button"
+               class="btn-primary media ai-redirect"
+               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">立即使用</a>
+            <a role="button"
+               class="btn-other media"
+               href="
                {%if $src eq Null%}
-               class="btn-primary media consult"
-               data-operation="cooperation"
+               /docs#/ImageCensoring-API
                {%else%}
-               class="btn-primary media"
-               href="mailto://ai@baidu.com"
-               {%/if%}>
-            合作咨询
+               https://cloud.baidu.com/doc/ANTIPORN/index.html
+               {%/if%}">
+                技术文档
             </a>
         </div>
     </div>
@@ -319,28 +325,28 @@
         <div>
             <ul class="demo-card-list clear-float">
                 <li class="card-list-item">
-                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/antiporn/demo-card-1.jpg">
+                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/antiporn/demo-card-1.jpg">
                 </li>
                 <li class="card-list-item">
-                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/antiporn/demo-card-2.jpg">
+                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/antiporn/demo-card-2.jpg">
                 </li>
                 <li class="card-list-item">
-                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/antiporn/demo-card-3.jpg">
+                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/antiporn/demo-card-3.jpg">
                 </li>
                 <li class="card-list-item">
-                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/antiporn/demo-card-4.jpg">
+                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/antiporn/demo-card-4.jpg">
                 </li>
                 <li class="card-list-item">
-                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/antiporn/demo-card-5.jpg">
+                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/antiporn/demo-card-5.jpg">
                 </li>
                 <li class="card-list-item">
-                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/antiporn/demo-card-6.jpg">
+                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/antiporn/demo-card-6.jpg">
                 </li>
                 <li class="card-list-item">
-                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/antiporn/demo-card-7.jpg">
+                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/antiporn/demo-card-7.jpg">
                 </li>
                 <li class="card-list-item">
-                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/antiporn/demo-card-8.jpg">
+                    <img class="card-list-img" src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/antiporn/demo-card-8.jpg">
                 </li>
             </ul>
         </div>
@@ -520,7 +526,7 @@
         <nav class="friendly-links">
             <h3>友情链接</h3>
             <ul>
-                <li><a href="http://www.paddlepaddle.org/cn/index.html" target="_blank">PaddlePaddle机器学习平台</a></li>
+                <li><a href="http://www.paddlepaddle.org/index.cn.html" target="_blank">PaddlePaddle深度学习平台</a></li>
                 <li><a href="http://yuyin.baidu.com/" target="_blank">百度语音</a></li>
                 <li><a href="http://fanyi.baidu.com/" target="_blank">百度翻译</a></li>
                 <li><a href="http://idl.baidu.com/" target="_blank">百度深度学习实验室</a></li>
@@ -541,8 +547,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1495707314/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1495707314/js/technology/antiterror.js"></script>
+<script src="//ai.bdstatic.com/dist/1495804556/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1495804556/js/technology/antiterror.js"></script>
 
 <script>
     (function () {
