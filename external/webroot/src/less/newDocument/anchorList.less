@@ -5,6 +5,7 @@
 @import "./newDocument";
 
 .anchor-list {
+    padding-top: 23px;
     box-sizing: border-box;
     overflow: auto;
     font-size: 14px;
@@ -12,19 +13,8 @@
 }
 
 .anchor-item {
-    position: relative;
-    height: 40px;
-    line-height: 40px;
     font-size: 0;
     cursor: pointer;
-}
-
-.anchor-text,
-.anchor-index,
-.anchor-dot {
-    position: absolute;
-    top: 0;
-    bottom: 0;
 }
 
 .anchor-text {
@@ -38,66 +28,41 @@
 }
 
 .anchor-level-1 {
+    padding: 45px 0 15px;
     .anchor-index,
     .anchor-text {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .anchor-index {
         // top和bottom已在公共部分设置
-        left: 0;
-        width: 35px;
-        color: #ccc;
-        text-align: center;
+        float: left;
+        color: #666;
+        padding: 0 6px 0 28px;
+        font-weight: 600;
     }
 
     .anchor-text {
-        left: 35px;
-        right: 5px;
+
         color: #666;
     }
 }
 
 .anchor-level-2 {
     box-sizing: border-box;
-    color: #999;
-
-    .anchor-dot {
-        // top和bottom在公共部分设置了
-        left: 1 * @level-padding;
-        width: @dot-width;
-
-        &:after {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 4px;
-            height: 4px;
-            content: "";
-            transform: translate(-50%, -50%);
-            background-color: #999;
-            border-radius: 50%;
-        }
-    }
-
+    color: #666;
+    padding: 15px 0;
     .anchor-text {
         // 1px是border
-        left: 1 * @level-padding + @dot-width;
-        right: 3px;
+       padding-left: 44px;
     }
 }
 
 // 当前阅读的标题的样式
 .anchor-reached {
-    background-color: #0073eb;
-
-    .anchor-dot {
-        &:after {
-            background-color: #fff;
-        }
-    }
-
+    color: #0073eb;
+    .anchor-index,
     .anchor-text {
-        color: #fff;
+        color: #0073eb;
     }
 }

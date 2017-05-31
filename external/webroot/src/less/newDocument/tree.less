@@ -2,8 +2,6 @@
 
 .tree-node {
     box-sizing: border-box;
-    height: 48px;
-    line-height: 48px;
     cursor: pointer;
     // 为了选中遮盖右侧边框效果
     z-index: 2;
@@ -14,10 +12,6 @@
 
     &.node-selected {
         position: relative;
-        // 选中时加了边框，所以行高缩小了2px.这里要从48变为46
-        line-height: 46px;
-        border-top: 1px solid #ebebeb;
-        border-bottom: 1px solid #ebebeb;
         background-color: #fff;
         color: #0073eb;
 
@@ -54,7 +48,7 @@
 
     &:after {
         position: absolute;
-        top: 50%;
+        top: 10px;
         left: 50%;
         width: 4px;
         height: 4px;
@@ -72,29 +66,10 @@
     position: relative;
 }
 
-.leaf-text,
-.leaf-dot {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-}
-
 .level-1 {
     color: #333;
-
     &.tree-node {
-        padding-left: 20px;
-    }
-
-    .leaf-dot {
-        // top和bottom值在公共部分已经定义了
-        left: 20px;
-        // 宽度有公共定义
-    }
-
-    .leaf-text {
-        left: 20px + @category-dot-width;
-        right: 0;
+        padding: 15px 10px 15px;
     }
 }
 
@@ -102,42 +77,23 @@
     color: #666;
 
     &.tree-node {
-        padding-left: 35px;
-        font-size: 12px;
-    }
-
-    .leaf-text {
-        left: 35px;
-        right: 0;
+        padding: 15px 0 15px 50px;
+        font-size: 14px;
     }
 }
 
 .level-3 {
     color: #999;
-
     &.tree-node {
-        padding-left: 30px;
-        font-size: 0;
-    }
-
-    .leaf-dot {
-        // top和bottom值在公共部分已经定义了
-        left: 30px;
-        // 宽度有公共定义
-    }
-
-    .leaf-text {
-        left: 35px + @category-dot-width;
-        // 右侧有15px留白
-        right: 15px;
-        font-size: 12px;
+        padding: 15px 0 15px 56px;
+        font-size: 14px;
     }
 }
 
 .non-leaf-arrow {
     position: absolute;
-    top: 50%;
-    right: 15px;
+    top: 26px;
+    right: 20px;
     width: 8px;
     height: 8px;
     transform: translateY(-50%) rotateZ(90deg);

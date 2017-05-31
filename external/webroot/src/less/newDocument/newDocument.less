@@ -1,5 +1,5 @@
-@category-width: 240px;
-@anchor-list-width: 160px;
+@category-width: 294px;
+@anchor-list-width: 226px;
 @anchor-list-lite-width: 60px;
 
 html,
@@ -32,7 +32,7 @@ body {
     position: absolute;
     height: 100%;
     overflow: auto;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .category,
@@ -48,8 +48,8 @@ body {
 // 几个主要部分的宽度, 没有分拆到单独文件中
 .category {
     left: 0;
+    padding-top: 15px;
     width: @category-width;
-    background-color: #fafafa;
 
     // 不使用border，为了选中后遮盖border的效果
     &:after {
