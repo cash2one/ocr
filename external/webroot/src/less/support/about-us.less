@@ -14,24 +14,137 @@
 @dark-block: #333;
 @light-block: #666;
 
+
 // 段落间距
 
 .@{prefix}-banner {
     background: url(../../../ai_images/support/about-us/about-banner.png) no-repeat center;
+    //background-color: skyblue;
+    height: 256px;
 
     .@{prefix}-title {
         color: #fff;
-        font-size: 42px;
-        line-height: 54px;
-        padding: 100px 0;
+        font-size: 48px;
+        line-height: 48px;
+        padding-top: 80px;
         text-align: center;
     }
+
+    .@{prefix}-desc {
+        font-size: @font-size-2;
+        line-height: 38px;
+        text-align: center;
+    }
+
 }
 .ai-platform {
 
-    .@{prefix}-introduction {
-        padding: 50px 0;
+    .container{
+        width: 1200px;
+        padding: 0;
     }
+
+    .@{prefix}-introduction {
+        //padding: 50px 0;
+    }
+
+    .@{prefix}-inner {
+        padding: 38px 188px 0;
+    }
+    .c-title {
+        font-size: 30px;
+        line-height: 46px;
+        padding: 70px 0 30px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .o-h {
+        overflow: hidden;
+    }
+    .process-list {
+        padding-bottom : 100px;
+    }
+    .process-item {
+        border: 1px solid #e5e5e5;
+        float: left;
+        width: 212px;
+        height: 236px;
+        position: relative;
+        margin-left: 32px;
+    }
+    .process-item:first-child {
+        margin-left: 0;
+    }
+    .process-icon {
+        width: 42px;
+        height: 46px;
+        margin: 34px 0 0 36px;
+    }
+    .process-icon1 {
+        background-image: url(http://bduxc.bj.bcebos.com/test/ai/s3_01.png);
+    }
+    .process-icon2 {
+        background-image: url(http://bduxc.bj.bcebos.com/test/ai/s3_02.png);
+    }
+    .process-icon3 {
+        background-image: url(http://bduxc.bj.bcebos.com/test/ai/s3_03.png);
+    }
+    .process-icon4 {
+        background-image: url(http://bduxc.bj.bcebos.com/test/ai/s3_04.png);
+    }
+    .process-icon5 {
+        background-image: url(http://bduxc.bj.bcebos.com/test/ai/s3_05.png);
+    }
+    .process-title {
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 12px;
+        text-indent: 34px;
+        text-align: left;
+    }
+    .process-seq {
+        position: absolute;
+        left: 33px;
+        bottom: 0;
+    }
+    .process-seq1 {
+        background-image: url(http://bduxc.bj.bcebos.com/test/ai/s3_11.png);
+        width: 32px;
+        height: 82px;
+    }
+    .process-seq2 {
+        background-image: url(http://bduxc.bj.bcebos.com/test/ai/s3_12.png);
+        width: 58px;
+        height: 84px;
+    }
+    .process-seq3 {
+        background-image: url(http://bduxc.bj.bcebos.com/test/ai/s3_13.png);
+        width: 60px;
+        height: 86px;
+    }
+    .process-seq4 {
+        background-image: url(http://bduxc.bj.bcebos.com/test/ai/s3_14.png);
+        width: 65px;
+        height: 82px;
+    }
+    .process-seq5 {
+        background-image: url(http://bduxc.bj.bcebos.com/test/ai/s3_15.png);
+        width: 60px;
+        height: 84px;
+    }
+    .process-op {
+        margin-top: 38px;
+    }
+    .process-btn {
+        background-color: #006fef;
+        color: #fff;
+        display: inline-block;
+        font-size: 21px;
+        width: 212px;
+        height: 60px;
+        line-height: 60px;
+    }
+
 }
 
 // 分割border
@@ -45,23 +158,34 @@
 
     // 一级标题
     &-one-title {
-        font-size: @font-size-4;
+        font-size: @font-size-5;
+        line-height: 24px;
         color: @dark-block;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+
+        &:first-child{
+            padding-top: 42px;
+            margin-bottom: 12px;
+        }
     }
 
     // 二级标题
     &-two-title {
-        font-size: @font-size-3;
+        font-size: @font-size-4;
         color: @dark-block;
+        line-height: 18px;
+        margin-bottom: 22px;
     }
 
     // 内容
     &-info {
-        font-size: @font-size-1;
-        line-height: 25px;
+        font-size: @font-size-2;
+        line-height: 30px;
         color: @light-block;
-        margin: 14px 0 44px;
+        margin-bottom: 42px;
+        &.about-list-info-num{
+            margin-bottom: 32px;
+        }
     }
 
     // 图片

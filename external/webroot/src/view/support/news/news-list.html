@@ -1,6 +1,6 @@
 <section class="news-banner">
     <div class="container">
-        <h1>新闻动态</h1>
+        <h1>新闻中心</h1>
     </div>
 </section>
 <div class="news-content">
@@ -12,7 +12,7 @@
                     <h3>{%$news.title%}</h3>
                     <span class="time">发布日期：{%$news.time|date_format:'%Y-%m-%d %H:%M:%S'%}</span><span class="pv">浏览量：{%$news.pv%}次</span>
                     <p>{%$news.abs%}</p>
-                    <i class="more"></i>
+                    <span class="more">查看详情</span>
                 </a>
             </div>
             {%/foreach%}
@@ -31,6 +31,7 @@
                 {%if $pagination.offset gt 1%}
                 <a href="/support/news?tag={%$currentTag%}&amp;offset={%$pagination.offset - 1%}">上一页</a>
                 {%/if%}
+
                 {%if $pagination.total gt $pagination.offset%}
                 <a href="/support/news?tag={%$currentTag%}&amp;offset={%$pagination.offset + 1%}">下一页</a>
                 {%/if%}
