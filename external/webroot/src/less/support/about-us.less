@@ -1,7 +1,7 @@
 @import '../common/helper.less';
 @import '../common/global.less';
 @import '../common/tech-page.less';
-
+@import '../common/support-process.less';
 @banner: url('../../../ai_images/support/about-us/about-banner.png');
 @icons: none;
 @intro-bg: none;
@@ -14,24 +14,46 @@
 @dark-block: #333;
 @light-block: #666;
 
+
 // 段落间距
 
 .@{prefix}-banner {
     background: url(../../../ai_images/support/about-us/about-banner.png) no-repeat center;
+    //background-color: skyblue;
+    height: 256px;
 
     .@{prefix}-title {
         color: #fff;
-        font-size: 42px;
-        line-height: 54px;
-        padding: 100px 0;
+        font-size: 48px;
+        line-height: 48px;
+        padding-top: 80px;
         text-align: center;
     }
+
+    .@{prefix}-desc {
+        font-size: @font-size-2;
+        line-height: 38px;
+        text-align: center;
+        color: #fff;
+    }
+
 }
 .ai-platform {
 
-    .@{prefix}-introduction {
-        padding: 50px 0;
+    .container{
+        width: 1200px;
+        padding: 0;
     }
+
+    .@{prefix}-introduction {
+        //padding: 50px 0;
+    }
+
+    .@{prefix}-inner {
+        padding: 38px 188px 0;
+    }
+
+
 }
 
 // 分割border
@@ -45,23 +67,34 @@
 
     // 一级标题
     &-one-title {
-        font-size: @font-size-4;
+        font-size: 24px;
+        line-height: 24px;
         color: @dark-block;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+
+        &:first-child{
+            padding-top: 42px;
+            margin-bottom: 12px;
+        }
     }
 
     // 二级标题
     &-two-title {
-        font-size: @font-size-3;
+        font-size: @font-size-4;
         color: @dark-block;
+        line-height: 18px;
+        margin-bottom: 22px;
     }
 
     // 内容
     &-info {
-        font-size: @font-size-1;
-        line-height: 25px;
+        font-size: @font-size-2;
+        line-height: 30px;
         color: @light-block;
-        margin: 14px 0 44px;
+        margin-bottom: 42px;
+        &.about-list-info-num{
+            margin-bottom: 32px;
+        }
     }
 
     // 图片

@@ -72,7 +72,7 @@ $.extend($.fn, {
         function r() {
             var t = '<div class="cfx" style="text-align: center">';
             t += r1();
-            t += r3();
+            // t += r3();
             // t += r2();
             t += '</div>';
             me.html(t);
