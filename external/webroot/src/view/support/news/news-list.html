@@ -8,17 +8,18 @@
         <div class="news-list">
             {%foreach $newsList as $news%}
             <div class="news-item">
-                <a href="/support/news?action=detail&amp;id={%$news.id%}">
-                    <h3>{%$news.title%}</h3>
-                    <span class="time">发布日期：{%$news.time|date_format:'%Y-%m-%d %H:%M:%S'%}</span><span class="pv">浏览量：{%$news.pv%}次</span>
-                    <p>{%$news.abs%}</p>
-                    <span class="more">查看详情</span>
+                <a class="news-item-area" href="/support/news?action=detail&amp;id={%$news.id%}">
+                    <h3 class="news-item-title">{%$news.title%}</h3>
+                    <span class="news-item-time">发布日期：{%$news.time|date_format:'%Y-%m-%d %H:%M:%S'%}</span>
+                    <span class="news-item-pv">浏览量：{%$news.pv%}次</span>
+                    <p class="news-item-txt">{%$news.abs%}</p>
+                    <span class="news-item-more">查看详情</span>
                 </a>
             </div>
             {%/foreach%}
         </div>
         <div class="tag-list">
-            <h3>热门标签</h3>
+            <h3 class="tag-list-title">热门标签</h3>
             <a href="/support/news" class="{%if $currentTag eq ''%}selected{%/if%}">全部</a>
             {%foreach $tagList as $tag%}
             <a href="/support/news?tag={%$tag.id%}" class="{%if $tag.id eq $currentTag%}selected{%/if%}">{%$tag.name%}</a>
