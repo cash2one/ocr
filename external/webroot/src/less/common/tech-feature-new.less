@@ -1,4 +1,4 @@
-@import '../common/initialize.less';
+@import 'initialize.less';
 // @page-name: 单页名称
 // @icon-num: icon循环数量
 // @width: 每个item宽度
@@ -13,8 +13,7 @@
         &-title {
             padding: 80px 0 50px;
             font-size: @big-title-size;
-            font-weight: bold;
-            letter-spacing: 6px;
+            letter-spacing: 2px;
             text-align: center;
             color: @deep-black;
         }
@@ -55,21 +54,19 @@
         &-desc {
             // 技术特色信息名
             &-title {
-                padding: 20px 0 15px;
+                padding: 35px 0 15px;
                 font-size: @small-title-size;
-                font-weight: bold;
                 color: @deep-black;
                 text-align: center;
 
             }
             // 技术特色信息简介(需要设置高度)
             &-info {
+                text-align: center;
                 color: @light-black;
                 line-height: 1.8;
-                padding-bottom: 10px;
             }
         }
-
         &-shadow {
             position: relative;
             z-index: 1;
@@ -83,10 +80,6 @@
                 right: 0;
                 background-color: @white;
                 z-index: -1;
-            }
-
-            &:hover:after {
-                box-shadow: 0 2px 8px fadeOut(@black, 80%);
             }
         }
     }

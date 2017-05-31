@@ -1,16 +1,24 @@
-@import './initialize.less';
+@import 'initialize.less';
 
 // banner
 // @page-name: 单页名称
 .banner (@page-name: nlp-word_embedding) {
     .tech-banner {
         box-sizing: border-box;
+        position: relative;
         height: 450px;
         padding: 90px 0 80px;
         text-align: center;
         background: url('../../../ai_images/technology/@{page-name}/banner.jpg') no-repeat center;
         background-size: cover;
-
+        .tech-banner-shape {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, .3);
+        }
         .ai-container {
             box-sizing: border-box;
             text-align: center;
@@ -32,21 +40,26 @@
             margin: 0 auto;
             padding-bottom: 30px;
             font-size: 16px;
-            line-height: 24px;
+            line-height: 28px;
             letter-spacing: 2px;
             color: #fff;
         }
-
         // banner按钮
 
         .tech-banner-btn-list {
             font-size: 0;
             .media-new {
                 margin: 0 15px;
-                width: 116px;
+                padding: 0 16px;
                 height: 38px;
-                font-size: 20px;
-                line-height: 38px;
+                font-size: 16px;
+                box-sizing: border-box;
+                line-height: 36px;
+                box-shadow: none;
+            }
+            a[role="button"] {
+                min-width: 116px;
+                border-radius: 0;
             }
             .btn-primary-new {
                 position: relative;
@@ -57,6 +70,7 @@
                 &:hover {
                     color: #333;
                     background: #fff;
+                    box-shadow: none;
                 }
             }
         }

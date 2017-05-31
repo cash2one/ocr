@@ -1,7 +1,10 @@
+/**
+*   ai二级页 底部按钮通用样式
+*/
 @import '../initialize.less';
 
 .tech-guide {
-    padding: 100px 0;
+    padding: 94px 0;
     font-size: 0;
     text-align: center;
 
@@ -16,10 +19,8 @@
     &-links {
         position: relative;
         font-size: 0;
-        padding-top: 20px;
-
         a {
-            font-size: 16px;
+            font-size: 14px;
             margin: 0 20px;
             color: #0073eb;
 
@@ -40,15 +41,15 @@
         &-num,
         &-name {
             display: inline-block;
-            font-size: 16px;
-            color: #666
+            font-size: 14px;
+            color: #999
         }
 
         &-num {
-            width: 20px;
-            height: 20px;
-            line-height: 20px;
-            border: 1px solid #999;
+            width: 18px;
+            height: 18px;
+            line-height: 18px;
+            border: 1px solid #e1e1e1;
             border-radius: 50%;
             font-size: 14px;
             text-align: center;
@@ -63,17 +64,32 @@
         &:after {
             position: absolute;
             top: 50%;
-            right: 12px;
+            right: 10px;
             content: "";
-            width: 50px;
+            width: 60px;
             height: 1px;
-            background-color: #999;
+            background-color: #e1e1e1;
         }
 
         // 最后一步没有横线
         &:last-child:after {
             display: none;
         }
-
+    }
+    .tech-guide {
+        a[role="button"] {
+            &.large {
+                width: 212px;
+                height: 60px;
+                line-height: 60px;
+                box-shadow: none;
+                border: none;
+            }
+            &:hover.large {
+                background: #3095ff;
+                box-shadow: none;
+                border: none;
+            }
+        }
     }
 }

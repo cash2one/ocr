@@ -4,16 +4,15 @@
  */
 
 .tech-catalog(@page-name: speech; @product-num; @num: 3) {
-    @prods-margin:(60px / @num);
-    @prods-width: (1180px / @num) - (2 * @prods-margin);
+    @prods-margin: 18px;
+    @prods-width: (1216px / @num) - 36px;
     .tech-catalog {
         background-color: #f4f5f7;
 
         &-title {
             padding: 80px 0 50px;
             font-size: 30px;
-            font-weight: bold;
-            letter-spacing: 6px;
+            letter-spacing: 2px;
             text-align: center;
             color: #333;
         }
@@ -22,7 +21,7 @@
             padding: 20px 0 40px;
             font-size: 14px;
             text-align: center;
-            color: #666;
+            color: #999;
             p {
                 margin: 0;
             }
@@ -58,16 +57,20 @@
         margin: 0 @prods-margin 35px;
         height: 380px;
         vertical-align: top;
-        border-bottom: 2px solid #f2f2f2;
         background-color: #fff;
         font-size: 0;
+        &:nth-child(3n-2) {
+            margin-left: 0;
+        }
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
 
         &:hover {
-            border-bottom: 0;
-            box-shadow: 0 2px 8px rgba(0 ,0 ,0 , .2);
+            box-shadow: 2px 2px 8px fadeOut(@black, 97%);
 
             [class^="tech-prod-poster"] {
-                background-size: 150% 150%;
+                background-size: 110% 110%;
             }
 
             [class^="tech-prod-sign"] {
@@ -81,23 +84,23 @@
         bottom: 0;
         left: 0;
         box-sizing: border-box;
-        height: 160px;
+        height: 158px;
         width: 100%;
         text-align: center;
-        padding: 15px 20px;
+        padding: 20px;
     }
 
     &-name {
-        padding-bottom: 20px;
+        padding-bottom: 14px;
         font-size: 18px;
-        font-weight: bold;
         color: #333;
     }
 
     &-intro {
         font-size: 14px;
-        line-height: 25px;
-        color: #666;
+        line-height: 26px;
+        color: #999;
+        text-align: left;
     }
 
     &-panel {
@@ -111,14 +114,11 @@
 
         a {
             color: #0073eb;
+            margin: 0 15px;
         }
 
         a:hover {
             color: #097ef1;
-        }
-
-        a:first-child {
-            margin-right: 30px;
         }
     }
 }

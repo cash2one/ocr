@@ -12,8 +12,7 @@
 
 
 // font styles
-@fonts: "Microsoft YaHei", "Arial", "sans-serif", "Apple LiGothic Medium";
-
+@fonts: "font－family：tahoma,arial,”Hiragino Sans GB”,”Microsoft YaHei sans-serif";
 // reset
 
 .ai-platform {
@@ -62,20 +61,15 @@
     button,
     a[role="button"] {
         display: inline-block;
-        width: 90px;
+        min-width: 90px;
         height: 32px;
         line-height: 32px;
-        border-radius: 2px;
         cursor: pointer;
         box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
         transition: all .1s linear;
         text-align: center;
         box-sizing: content-box;
         padding: 0;
-
-        &:hover {
-            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .4);
-        }
 
         &.btn-primary {
             border: 1px solid @blue;
