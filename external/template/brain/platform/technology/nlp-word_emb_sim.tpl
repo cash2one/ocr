@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/technology/nlp-word_emb_sim.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/technology/nlp-word_emb_sim.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1495707314/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1495804556/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -283,7 +283,7 @@
             本技术用于计算两个给定词语的语义相似度，基于自然语言中的分布假设，即越是经常共同出现的词之间的相似度越高。词义相似度是自然语言处理中的重要基础技术，是专名挖掘、query改写、词性标注等常用技术的基础之一
         </div>
         <div class="tech-catalog-show">
-            <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/nlp-word_emb_sim/introduce.png" class="tech-catalog-img" alt="">
+            <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/nlp-word_emb_sim/introduce.png" class="tech-catalog-img" alt="">
         </div>
     </div>
 </div>
@@ -296,7 +296,6 @@
                 <div class="tech-case-desc-title">专名挖掘</div>
                 <div class="tech-case-desc-info">通过词语间语义相关性计算寻找人名、地名、机构名等词的相关词，扩大专有名词的词典，更好的辅助应用
                 </div>
-                <div class="tech-case-serve"></div>
             </div>
         </div>
         <div class="tech-case-item">
@@ -304,7 +303,6 @@
                 <div class="tech-case-desc-title">query改写</div>
                 <div class="tech-case-desc-info">通过寻找搜索query中词语的相似词，进行合理的替换，从而达到改写query的目的，提高搜索结果的多样性
                 </div>
-                <div class="tech-case-serve"></div>
             </div>
         </div>
     </div>
@@ -464,7 +462,7 @@
         <nav class="friendly-links">
             <h3>友情链接</h3>
             <ul>
-                <li><a href="http://www.paddlepaddle.org/cn/index.html" target="_blank">PaddlePaddle机器学习平台</a></li>
+                <li><a href="http://www.paddlepaddle.org/index.cn.html" target="_blank">PaddlePaddle深度学习平台</a></li>
                 <li><a href="http://yuyin.baidu.com/" target="_blank">百度语音</a></li>
                 <li><a href="http://fanyi.baidu.com/" target="_blank">百度翻译</a></li>
                 <li><a href="http://idl.baidu.com/" target="_blank">百度深度学习实验室</a></li>
@@ -485,8 +483,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1495707314/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1495707314/js/technology/nlp-word_emb_sim.js"></script>
+<script src="//ai.bdstatic.com/dist/1495804556/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1495804556/js/technology/nlp-word_emb_sim.js"></script>
 
 <script>
     (function () {

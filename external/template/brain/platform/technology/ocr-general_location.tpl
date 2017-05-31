@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/technology/ocr-general_location.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/technology/ocr-general_location.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1495707314/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1495804556/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -329,28 +329,28 @@
                 </div>
                 <div class="tech-demo-card-list">
                     <div class="tech-demo-card-item tech-demo-card-active">
-                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-general_location/demo-card-1.jpeg" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/ocr-general_location/demo-card-1.jpeg" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-general_location/demo-card-2.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/ocr-general_location/demo-card-2.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-general_location/demo-card-3.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/ocr-general_location/demo-card-3.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-general_location/demo-card-4.jpg" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/ocr-general_location/demo-card-4.jpg" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-general_location/demo-card-5.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/ocr-general_location/demo-card-5.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-general_location/demo-card-6.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/ocr-general_location/demo-card-6.png" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-general_location/demo-card-7.jpeg" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/ocr-general_location/demo-card-7.jpeg" alt=" ">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/ocr-general_location/demo-card-8.png" alt=" ">
+                        <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/ocr-general_location/demo-card-8.png" alt=" ">
                     </div>
                 </div>
             </div>
@@ -764,7 +764,7 @@
         <nav class="friendly-links">
             <h3>友情链接</h3>
             <ul>
-                <li><a href="http://www.paddlepaddle.org/cn/index.html" target="_blank">PaddlePaddle机器学习平台</a></li>
+                <li><a href="http://www.paddlepaddle.org/index.cn.html" target="_blank">PaddlePaddle深度学习平台</a></li>
                 <li><a href="http://yuyin.baidu.com/" target="_blank">百度语音</a></li>
                 <li><a href="http://fanyi.baidu.com/" target="_blank">百度翻译</a></li>
                 <li><a href="http://idl.baidu.com/" target="_blank">百度深度学习实验室</a></li>
@@ -785,8 +785,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1495707314/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1495707314/js/technology/ocr-general_location.js"></script>
+<script src="//ai.bdstatic.com/dist/1495804556/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1495804556/js/technology/ocr-general_location.js"></script>
 
 <script>
     (function () {

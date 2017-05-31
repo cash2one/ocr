@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/ie9.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495707314/css/technology/nlp-word_embedding.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/base.style.css">
+    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/technology/nlp-word_embedding.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1495707314/ai_images/logo.png" alt="百度大脑">
+                <img src="//ai.bdstatic.com/dist/1495804556/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -287,7 +287,7 @@
             词表中所有的词向量构成一个向量空间，每一个词都是这个词向量空间中的一个点，利用这种方法，实现文本的可计算
         </div>
         <div class="tech-function-pic">
-            <img width="500" src="//ai.bdstatic.com/dist/1495707314/ai_images/technology/nlp-word_embedding/function-pic.png" >
+            <img width="500" src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/nlp-word_embedding/function-pic.png" >
         </div>
     </div>
 </div>
@@ -495,7 +495,7 @@
         <nav class="friendly-links">
             <h3>友情链接</h3>
             <ul>
-                <li><a href="http://www.paddlepaddle.org/cn/index.html" target="_blank">PaddlePaddle机器学习平台</a></li>
+                <li><a href="http://www.paddlepaddle.org/index.cn.html" target="_blank">PaddlePaddle深度学习平台</a></li>
                 <li><a href="http://yuyin.baidu.com/" target="_blank">百度语音</a></li>
                 <li><a href="http://fanyi.baidu.com/" target="_blank">百度翻译</a></li>
                 <li><a href="http://idl.baidu.com/" target="_blank">百度深度学习实验室</a></li>
@@ -516,8 +516,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1495707314/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1495707314/js/technology/nlp-word_embedding.js"></script>
+<script src="//ai.bdstatic.com/dist/1495804556/js/common.bundle.js"></script>
+<script src="//ai.bdstatic.com/dist/1495804556/js/technology/nlp-word_embedding.js"></script>
 
 <script>
     (function () {
