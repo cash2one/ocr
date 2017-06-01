@@ -8,6 +8,9 @@
 
     &:hover {
         color: #0073eb;
+        .leaf-dot {
+            background: #0073ed;
+        }
     }
 
     &.node-selected {
@@ -22,12 +25,11 @@
             bottom: 0;
             right: -1px;
             width: 1px;
+            z-index: 2;
             background-color: #fff;
         }
     }
 }
-
-.leaf-dot,
 .leaf-text {
     display: inline-block;
     vertical-align: top;
@@ -39,24 +41,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-}
-
-// 叶子节点前的小点，左右垂直居中
-.leaf-dot {
-    position: relative;
-    width: @category-dot-width;
-
-    &:after {
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        width: 4px;
-        height: 4px;
-        content: "";
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        background-color: #ccc;
-    }
 }
 
 // 非叶子节点和叶子节点
@@ -75,7 +59,6 @@
 
 .level-2 {
     color: #666;
-
     &.tree-node {
         padding: 15px 0 15px 50px;
         font-size: 14px;
@@ -85,8 +68,16 @@
 .level-3 {
     color: #999;
     &.tree-node {
-        padding: 15px 0 15px 56px;
+        padding: 15px 0 15px 62px;
         font-size: 14px;
+    }
+    .leaf-dot {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        top: 24px;
+        left: 54px;
+        background: #999;
     }
 }
 
