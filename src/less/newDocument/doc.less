@@ -1,0 +1,148 @@
+.doc-container {
+    position: absolute;
+    top: 74px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 30px 0 50px;
+    box-sizing: border-box;
+    width: 800px;
+    a {
+        color: #0073eb;
+
+        &:hover {
+            border-bottom: 1px solid #0073eb;
+        }
+    }
+
+    h1 {
+        // 注意是用margin,不要用padding,为了bfc
+        // margin: 0 0 30px;
+        padding: 30px 0 20px;
+        font-size: 18px;
+        line-height: 18px;
+        color: #333;
+    }
+
+    h2 {
+        padding: 30px 0 20px;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 1px;
+        color: #333;
+    }
+
+    h3 {
+        margin: 10px 0;
+        font-size: 14px;
+        color: #666;
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 26px;
+        word-wrap: break-word;
+        color: #666;
+    }
+
+    ul {
+        margin: 10px 0;
+        padding-left: 20px;
+        list-style: disc;
+    }
+
+    li {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #666;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    code {
+        // code span左右有5px的间距
+        margin: 0 5px;
+        padding: 2px 5px;
+        border: 1px solid #ebebeb;
+        font-size: 12px;
+    }
+
+    // 块级代码
+    pre {
+        margin: 0;
+        code {
+            margin: 0;
+            padding: 20px;
+            border: 0;
+            max-width: 100%;
+            overflow: auto;
+            border-radius: 2px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    }
+
+    strong {
+        color: #666;
+        font-weight: normal;
+    }
+
+    table,
+    th,
+    tr,
+    td,
+    thead {
+        box-sizing: border-box;
+        word-break: break-all;
+    }
+
+    table {
+        display: block;
+        max-width: 100%;
+        // margin: 15px 0;
+        font-size: 14px;
+        border-collapse: collapse;
+    }
+
+    thead {
+        background-color: #e6f2fd;
+        color: #666;
+    }
+
+    th,
+    td {
+        min-width: 80px;
+        padding: 6px 20px;
+        border: 1px solid #ebebeb;
+        font-size: 14px;
+        color: #666;
+    }
+
+    // 标题文字不允许折行
+    th {
+        white-space: nowrap;
+    }
+
+    td {
+        &:last-child {
+            white-space: normal;
+        }
+    }
+
+    tr:nth-child(2n) {
+        background-color: #fafafa;
+    }
+
+    blockquote {
+        margin: 10px 0;
+        border-left: 3px solid #0073eb;
+        color: #5a788c;
+
+        >* {
+            margin-left: 10px;
+        }
+    }
+}

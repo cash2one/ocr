@@ -1,0 +1,106 @@
+@import '../common/initialize.less';
+@import '../common/banner.less';
+@import '../common/tech-feature.less';
+@import '../common/tech-scenario.less';
+@import '../common/tech-commom.less';
+@import '../common/modal.less';
+@import '../common/tech-function.less';
+
+// 技术单页前缀
+@prefix: tech;
+
+// 调用通用的banner模块
+.@{prefix}-banner {
+    .banner(@page-name: video-cover);
+}
+
+// 调用通用的tech-feature模块
+.@{prefix}-feature {
+    .tech-feature(@page-name: video-cover, @icon-num: 3);
+}
+
+// 调用通用的apply-scenario模块
+.@{prefix}-scenario {
+    .apply-scenario(@page-name: video-cover, @icon-num: 2,@column: 2);
+}
+
+
+// 功能介绍
+.@{prefix}-function {
+
+    //功能介绍标题，文字
+    .tech-function(@page-name: video-cover);
+
+    //功能介绍详情
+    &-detail {
+        padding: 30px 35px 0;
+        .scan-box {
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+            width: 370px;
+            height: 300px;
+            color: @white;
+            &-image {
+                width: 180px;
+                height: 130px;
+                margin-left: 90px;
+                background-size: 100% 100%;
+            }
+            &:nth-child(1) .scan-box-image {
+                background-image: url('../../../ai_images/technology/video-cover/intro-case-1.png');
+            }
+            &:nth-child(2) .scan-box-image {
+                background-image: url('../../../ai_images/technology/video-cover/intro-case-2.png');
+            }
+            &:nth-child(3) .scan-box-image {
+                background-image: url('../../../ai_images/technology/video-cover/intro-case-3.png');
+            }
+            &-title {
+                font-size: 16px;
+                text-align: center;
+                padding: 30px 0 20px;
+            }
+            &-connent {
+                width: 310px;
+                font-size: 13px;
+                line-height: 30px;
+                margin-left: 40px;
+                text-align: left;
+            }
+        }
+
+    }
+}
+.@{prefix}-demo {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ebebeb;
+    &-title {
+        text-align: center;
+        padding: 50px 0 30px;
+        font-size: @big-title-size;
+    }
+}
+.@{prefix}-product {
+    border-top: 1px solid rgba(0, 0, 0, .05);
+    .container {
+        width: 830px;
+        padding-bottom: 50px;
+    }
+    .tech-product-title {
+        text-align: center;
+    }
+    .title-main {
+        font-size: 30px;
+        padding: 50px 0 30px;
+    }
+    .title-minor {
+        font-size: 18px;
+        padding-bottom: 50px;
+    }
+    .tech-product-connent {
+        height: 202px;
+        background-image: url('../../../ai_images/technology/video-cover/product.png');
+        background-size: 100% 100%;
+    }
+}

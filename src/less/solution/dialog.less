@@ -1,0 +1,113 @@
+@import '../common/helper.less';
+@import '../common/global.less';
+
+@banner: url('../../../ai_images/solution/dialog/banner.png');
+@icons: url('../../../ai_images/solution/dialog/icons.png');
+@intro-bg: none;
+@case-icons: url('../../../ai_images/solution/dialog/case-icons.png');
+@import '../common/tech-page.less';
+
+.tech-section {
+    &.tech-intro.solution {
+        .solution-case {
+            width: 910px;
+            height: 210px;
+            margin-left: 135px;
+
+            .solution-desc {
+                & > ul {
+                    margin-top: 29px;
+                    padding-left: 30px;
+                    line-height: 30px;
+                    color: #666;
+                    font-size: @font-size-1;
+
+                    & > li {
+                        position: relative;
+
+                        &:before {
+                            content: "";
+                            display: inline-block;
+                            height: 6px;
+                            width: 6px;
+                            border-radius: 2px;
+                            border: 1px solid #999;
+                            position: absolute;
+                            top: 11px;
+                            left: -20px;
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.tech-feature {
+        .feature-item + .feature-item {
+            margin-left: 110px;
+        }
+        .feature-item .feature-icon {
+            background-size: 520px / 2 270px / 2;
+        }
+
+        .feature-item:nth-child(1) .feature-icon {
+            .icon(@icons, -5px, -5px);
+        }
+        .feature-item:nth-child(2) .feature-icon {
+            .icon(@icons, -90px, -5px);
+        }
+        .feature-item:nth-child(3) .feature-icon {
+            .icon(@icons, -175px, -5px);
+        }
+    }
+
+    &.tech-scene {
+        .scene-item .scene-icon {
+            background-size: 520px / 2 270px / 2;
+        }
+
+        .scene-item + .scene-item {
+            margin-left: 50px;
+        }
+
+        .scene-item:nth-child(1) .scene-icon {
+            .icon(@icons, -5px, -90px);
+        }
+        .scene-item:nth-child(2) .scene-icon {
+            .icon(@icons, -50px, -90px);
+        }
+
+        .scene-item:nth-child(3) .scene-icon {
+            .icon(@icons, -95px, -90px);
+        }
+    }
+
+    &.tech-case {
+        .case-item .case-icon {
+            background-size: 800px / 2 270px / 2;
+        }
+        .case-item:nth-child(1) {
+            .icon(url('../../../ai_images/solution/dialog/case-1.png'), center, center);
+
+        }
+        .case-item:nth-child(2) {
+            .icon(url('../../../ai_images/solution/dialog/case-2.png'), center, center);
+        }
+        .case-item:nth-child(3) {
+            .icon(url('../../../ai_images/solution/dialog/case-3.png'), center, center);
+        }
+
+        .case-indicator {
+            & > li:nth-child(1) {
+                .icon(@case-icons, -10px, -10px);
+            }
+            & > li:nth-child(2) {
+                .icon(@case-icons, -160px, -10px);
+            }
+            & > li:nth-child(3) {
+                .icon(@case-icons, -310px, -10px);
+            }
+        }
+    }
+}

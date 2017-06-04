@@ -1,0 +1,119 @@
+@import '../common/initialize.less';
+// 还得优化
+// @page-name: 单页名称
+// @num: 案例数量
+
+// 案例
+.tech-case(@page-name: nlp-word_embedding; @num: 2; @case-logo: ture;) {
+    position: relative;
+    height: 370px;
+
+    // 循环生成案例背景图
+    .case-big-bg(@num);
+    .case-big-bg(@n, @i: 1) when (@i =< @n) {
+        &-item-@{i} {
+            background: url("../../../ai_images/technology/@{page-name}/case-@{i}.png") no-repeat center center;
+            background-size: cover;
+
+            .tech-case-item-logo when (@case-logo = ture) {
+                background: url("../../../ai_images/technology/@{page-name}/sprite/case-logo-@{i}.png") no-repeat center center;
+                background-size: cover;
+            }
+        }
+
+        .case-big-bg(@n, (@i + 1));
+    }
+
+    &-item {
+        box-sizing: border-box;
+        height: 370px;
+        margin-top: -370px;
+        padding-top: 95px;
+        text-align: center;
+        transition: all 1s ease;
+        opacity: 0;
+        color: #fff;
+
+        & when (@case-logo = ture) {
+            padding-top: 60px;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+
+        &.tech-case-active {
+            opacity: 1;
+        }
+
+        &-logo {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto;
+        }
+
+        &-title {
+            margin: 0 auto;
+            vertical-align: middle;
+            padding: 15px 0;
+            font-size: 30px;
+        }
+
+        &-info {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+    }
+
+    &-option {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 0;
+
+        &-btn {
+            position: relative;
+            z-index: 3;
+            display: inline-block;
+            min-width: 120px;
+            padding: 12px 10px;
+            text-align: center;
+            vertical-align: bottom;
+            color: #fff;
+            font-size: @module-info-size;
+            cursor: pointer;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: rgba(0, 0, 0, .5);
+                z-index: -1;
+            }
+
+            &.tech-case-active {
+                padding: 17px 10px;
+
+                &:after {
+                    background: rgba(0,115,235,.7)
+                }
+            }
+        }
+
+        // 循环生成案例icons
+        .case-icons(@num);
+        .case-icons(@n, @i: 1) when (@i =< @n) {
+            &-btn-@{i} when (@n > 1) {
+                background: url("../../../ai_images/technology/@{page-name}/sprite/case-icon-@{i}.png") no-repeat center center;
+                background-size: cover;
+            }
+            .case-icons(@n, (@i + 1));
+        }
+    }
+}

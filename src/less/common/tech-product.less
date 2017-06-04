@@ -1,0 +1,129 @@
+@import '../common/initialize.less';
+
+.tech-product (@num: 4; @pric-1-num: 2; @pric-1-row: 8; @pric-3-num: 4; @pric-3-row: 3; @pric-2-num: 1) {
+    @pric-1-width :(1/@pric-1-num)*560px;
+    @pric-3-width :(1/@pric-3-num)*560px;
+    @pric-2-width :(1/@pric-2-num)*560px;
+    @pric-2-height :(@pric-1-row)*30px;
+    @pric-4-height :(@pric-3-row)*30px;
+
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+
+    .container-product {
+        display: block;
+        width: 1180px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+    .btn-primary {
+        margin: 0 20px;
+    }
+    &-title {
+        padding-bottom: 20px;
+        color: #333;
+        font-size: 30px;
+    }
+    &-info {
+        padding-bottom: 30px;
+        font-size: 16px;
+        color: #666;
+    }
+    &-wrapper {
+        width: 1180px;
+        font-size: 0;
+        margin-bottom: 30px;
+    }
+    .product-price {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 10px;
+        width: 84px;
+        height: 16px;
+        background: url('../../../ai_images/icons/product-price.png') no-repeat center center;
+        background-size: 84px 14px;
+    }
+    [class^='product-form-'] {
+        display: inline-block;
+        vertical-align: top;
+        width: 585px;
+    }
+    .product-head {
+        padding-left: 20px;
+        line-height: 30px;
+        font-size: 16px;
+        text-align: left;
+        font-weight: 600;
+        border: 1px solid #ccc;
+    }
+    .product-body {
+        padding-left: 20px;
+        border: 1px solid #ccc;
+        border-top: 0;
+        text-align: left;
+    }
+    .pric-item-header {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 30px;
+        font-size: 14px;
+    }
+    .pric-item-connent {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 30px;
+        font-size: 13px;
+        color: rgba(0,0,0,.6);
+    }
+
+    //表单一不同之处
+    .product-form-1 {
+        padding:0 10px 10px 0;
+    }
+    .pric-item-1 {
+        width: @pric-1-width;
+    }
+    .pric-item-foot {
+        line-height: 30px;
+        font-size: 13px;
+    }
+    .pric-item-2 {
+        .cooperation-color {
+            color: #0073eb;
+        }
+    }
+    //表单三不同之处
+    .product-form-3 {
+        padding-right: 10px;
+    }
+    .pric-item-3 {
+        width: @pric-3-width;
+    }
+
+    //表单二不同之处
+    .pric-body-2 {
+        height: @pric-2-height;
+    }
+    .pric-item-2 {
+        width: @pric-2-width;
+        line-height: 35px;
+    }
+
+    //表单四不同之处
+    .product-form-4 {
+        font-size: 15px;
+    }
+    .pric-body-4 {
+        padding-right: 20px;
+        height: @pric-4-height;
+    }
+    .pric-item-4 {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        color: rgba(0,0,0,1);
+    }
+}

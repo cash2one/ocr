@@ -1,0 +1,157 @@
+/**
+ * @file 二级页应用场景轮播图样式
+ * @author FranckChen(chenfan02@baidu.com)
+ */
+
+@import '../initialize.less';
+
+// 案例
+.tech-case(@page-name: nlp-word_embedding; @num: 2; @case-logo: ture;) {
+    .tech-case {
+        position: relative;
+        height: 470px;
+
+        // 循环生成案例背景图
+        .case-big-bg(@num);
+        .case-big-bg(@n, @i: 1) when (@i =< @n) {
+            &-item-@{i} {
+                background: url("../../../../ai_images/technology/@{page-name}/case-@{i}.png") no-repeat center center;
+                background-size: cover;
+                position: relative;
+            }
+
+            .case-big-bg(@n, (@i + 1));
+        }
+
+        &-heading {
+            padding: 15px 0 20px;
+            font-size: 30px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+        }
+
+        &-item {
+            box-sizing: border-box;
+            height: 470px;
+            margin-top: -470px;
+            padding-top: 25px;
+            text-align: left;
+            transition: all 1s ease;
+            opacity: 0;
+            color: #fff;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &-title {
+                margin: 0 auto;
+                padding: 35px 0 15px;
+                font-size: 24px;
+            }
+
+            &.tech-case-active {
+                opacity: 1;
+                z-index: 5;
+            }
+
+            &-info {
+                font-size: 15px;
+                color: rgba(255, 255, 255, .8);
+                line-height: 1.8;
+            }
+            &-body {
+                display: inline-block;
+                vertical-align: top;
+                width: 830px;
+                p {
+                    margin: 0;
+                }
+            }
+            &-introduce {
+                display: inline-block;
+                vertical-align: top;
+                width: 850px;
+            }
+            &-profess {
+                margin-top: 10px;
+            }
+        }
+
+        &-option {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 0;
+            z-index: 9;
+
+            &-btn {
+                position: relative;
+                z-index: 3;
+                display: inline-block;
+                min-width: 120px;
+                padding: 12px 10px;
+                text-align: center;
+                vertical-align: bottom;
+                color: #fff;
+                font-size: @module-info-size;
+                cursor: pointer;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    background: rgba(0, 0, 0, .5);
+                    z-index: -1;
+                }
+
+                &.tech-case-active {
+                    padding: 17px 10px;
+                    &:after {
+                        background: rgba(0, 115, 235, .7)
+                    }
+                }
+            }
+
+            // 循环生成案例icons
+            .case-icons(@num);
+            .case-icons(@n, @i: 1) when (@i =< @n) {
+                &-btn-@{i} when (@n > 1) {
+                    background: url("../../../../ai_images/technology/@{page-name}/sprite/case-icon-@{i}.png") no-repeat center center;
+                    background-size: cover;
+                }
+                .case-icons(@n, (@i + 1));
+            }
+        }
+
+        &-coop {
+
+
+            padding-top: 30px;
+
+            * {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            div {
+                padding-right: 30px;
+
+                // 合作案例文字
+                &:first-child {
+                    padding-right: 15px;
+                }
+            }
+
+            img {
+                max-height: 40px;
+                padding-right: 10px;
+            }
+        }
+    }
+}

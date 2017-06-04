@@ -1,0 +1,453 @@
+@import '../common/helper.less';
+@import '../common/global.less';
+@import '../common/modal.less';
+@import '../common/tech-product.less';
+@import '../common/tech-commom.less';
+
+@banner: url('../../../ai_images/technology/ocr-bankcard/banner.png');
+@icons: url('../../../ai_images/technology/ocr-bankcard/icons.png');
+@intro-bg: url('../../../ai_images/technology/ocr-bankcard/intro-bg.png');
+@intro: url('../../../ai_images/technology/ocr-bankcard/intro.png');
+@case-icons: url('../../../ai_images/technology/ocr-bankcard/case-icons.png');
+
+@import '../common/tech-page.less';
+.tech-banner {
+    .tech-docs {
+        display: inline-block;
+        vertical-align: top;
+        width: 82px;
+        height: 40px;
+        background: url('../../../ai_images/icons/tech-docs.png') no-repeat center center;
+        background-size: 82px 15px;
+    }
+    .tech-billing {
+        margin-top: 20px;
+        &-btn {
+            color: #f00;
+        }
+        .price {
+            color:#f00;
+        }
+    }
+}
+.tech-section {
+    &.tech-intro {
+        .tech-intro-detail {
+            margin-top: 40px;
+
+            & > div {
+                float: left;
+                display: inline-block;
+            }
+        }
+
+        .original-card {
+            width: 400px;
+            height: 250px;
+            margin-left: 115px;
+            position: relative;
+            overflow: hidden;
+            .icon(@intro, -10px, -311px);
+
+            &::before {
+                content: "";
+                width: 400px;
+                height: 130px;
+                position: absolute;
+                display: inline-block;
+                left: 0;
+                top: -130px;
+                .icon(@intro, -500px, -310px);
+            }
+
+            &.scanning::before {
+                top: 100%;
+
+                transition: top 3s linear;
+            }
+
+            &.scanned {
+                .icon(@intro, -10px, -11px);
+            }
+        }
+
+        .arrow {
+            width: 50px;
+            height: 250px;
+            margin: 0 50px;
+            .icon(@intro, -440px, -10px);
+        }
+
+        .scan-result {
+            width: 400px;
+            height: 250px;
+            opacity: 0;
+
+            transition: opacity 1.5s ease-out;
+
+            &.scanned {
+                opacity: 1;
+                .icon(@intro, -510px, -10px);
+            }
+        }
+    }
+
+    &.tech-demo {
+        .demo-container {
+            .data-view {
+                height: 350px;
+                width: 50%;
+                float: left;
+                position: relative;
+                box-sizing: border-box;
+                padding-right: 10px;
+
+                &:nth-child(n+3) {
+                    margin-top: 10px;
+                }
+
+                &[data-label] {
+                    color: #666;
+                    background-color: #fafafa;
+                    border: 1px solid #ebebeb;
+                    overflow: hidden;
+                    padding-right: 0;
+
+                    & + .data-view[data-label] {
+                        border-left: none;
+                    }
+
+                    &::after {
+                        content: attr(data-label);
+                        display: inline-block;
+                        border: 1px solid #cce3fb;
+                        background-color: #e6fafd;
+                        position: absolute;
+                        left: -1px;
+                        top: -1px;
+                        padding: 0 15px;
+                        line-height: 30px;
+                        z-index: 9;
+                    }
+                }
+            }
+
+            #demo-result {
+                #issuing-bank {
+                    position: absolute;
+                    left: 155px;
+                    top: 220px;
+                    color: #fff;
+                    font-size: 15px;
+                }
+
+                #card-type {
+                    position: absolute;
+                    left: 155px;
+                    top: 250px;
+                    color: #fff;
+                    font-size: 15px;
+                }
+
+                .result-background {
+                    height: 100%;
+                    width: 100%;
+
+                    &::after {
+                        content: "";
+                        display: inline-block;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+                    }
+
+                    &.error-image-format::after {
+                        .icon(url('../../../ai_images/error/image-format.png'), center, center);
+                    }
+                    &.error-upload-fail::after {
+                        .icon(url('../../../ai_images/error/upload-fail.png'), center, center);
+                    }
+                    &.error-no-result::after {
+                        .icon(url('../../../ai_images/error/no-bankcard-result.png'), center, center);
+                    }
+                    &.error-timeout::after {
+                        .icon(url('../../../ai_images/error/timeout.png'), center, center);
+                    }
+                    &.loading::after {
+                        color: #666;
+                        content: "图片上传中";
+                        line-height: 348px;
+                        text-align: center;
+                    }
+                    &.has-result::after {
+                        background-size: 762px / 2 490px / 2;
+                        .icon(url('../../../ai_images/technology/ocr-bankcard/bankcard.png'), center, center);
+                    }
+
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        position: absolute;
+                        left: 340px;
+                        top: 75px;
+                        width: 110px;
+                        height: 120px;
+                        z-index: 2;
+                    }
+
+                    &.loading::before {
+                        .icon(url('../../../ai_images/loading.png'), center, center);
+                        left: 277px;
+                        top: 115px;
+                        width: 32px;
+                        height: 32px;
+                        .animate(uploading, 0.8s, 0, infinite, ease-in);
+
+                        @keyframes uploading {
+                            from {
+                                transform: rotate(0deg);
+                            }
+                            to {
+                                transform: rotate(360deg);
+                            }
+                        }
+
+                    }
+
+                    & > span {
+                        display: none;
+                        position: absolute;
+                        font-size: 24px;
+                        color: @white;
+                        z-index: 9;
+
+                        &.bank-card-num {
+                            left: 155px;
+                            top: 185px;
+                        }
+                    }
+
+                    &.has-result > span {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            #demo-json {
+                p {
+                    white-space: pre-wrap;
+                    padding: 40px 30px;
+                    margin: 0;
+                    overflow: auto;
+                    height: 100%;
+                    box-sizing: border-box;
+                }
+            }
+
+            .demo-desc {
+                font-size: @font-size-1;
+                line-height: @font-size-1 + 8px;
+                margin-top: 14px;
+                color: #999;
+            }
+
+            .demo-data {
+                height: 38px;
+
+                & > * {
+                    float: left;
+                }
+
+                #demo-photo-url {
+                    height: 36px;
+                    line-height: 36px;
+                    border: 1px solid #ebebeb;
+                    padding: 0 11px;
+                    width: 318px;
+                    color: #333;
+                }
+
+                span {
+                    margin: 0 10px;
+                    display: inline-block;
+                    line-height: 38px;
+                    color: #999;
+                }
+
+                .btn-primary {
+                    line-height: 36px;
+                    width: 100px;
+                    height: 36px;
+                    box-shadow: none;
+                }
+
+                input[type="file"] {
+                    width: 0;
+                    height: 0;
+                }
+
+                label {
+                    border: 1px solid @blue;
+                    background-color: @blue;
+                    color: @white;
+                    width: 100px;
+                    height: 36px;
+                    line-height: 36px;
+                    text-align: center;
+                    border-radius: 2px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #1a81ed;
+                    }
+                }
+            }
+
+            .demo-card-list {
+                margin-top: 16px;
+                border: 1px solid #ebebeb;
+
+                & > li {
+                    box-sizing: border-box;
+                    display: inline-block;
+                    width: 33.333333%;
+                    height: 120px;
+                    text-align: center;
+                    vertical-align: middle;
+                    float: left;
+                    background-color: #fafafa;
+                    padding: 10px;
+                    position: relative;
+                    cursor: pointer;
+
+                    &:nth-child(3n+1),
+                    &:nth-child(3n+2) {
+                        border-right: 1px solid fadeOut(@black, 95%);
+                    }
+
+                    &:nth-child(n+4) {
+                        border-top: 1px solid fadeOut(@black, 95%);
+                    }
+
+
+                    &.active::after,
+                    &:hover::after {
+                        content: "";
+                        display: inline-block;
+                        border: 2px solid #7fb9f5;
+                        position: absolute;
+                        left: -1px;
+                        top: -1px;
+                        right: -1px;
+                        bottom: -1px;
+                        box-sizing: border-box;
+                        z-index: 9;
+                    }
+
+                    & > img {
+                        max-height: 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    &.tech-feature {
+        .feature-item .feature-icon {
+            background-size: 550px / 2 270px / 2;
+        }
+
+        .feature-item + .feature-item {
+            margin-left: 110px;
+        }
+
+        .feature-item:nth-child(1) .feature-icon {
+            .icon(@icons, -5px, -5px);
+        }
+        .feature-item:nth-child(2) .feature-icon {
+            .icon(@icons, -90px, -5px);
+        }
+        .feature-item:nth-child(3) .feature-icon {
+            .icon(@icons, -175px, -5px);
+        }
+    }
+    &.tech-scene {
+        .scene-item .scene-icon {
+            background-size: 550px / 2 270px / 2;
+        }
+
+        .scene-item:nth-child(1) {
+            margin-left: 150px;
+            margin-right: 80px;
+            & .scene-icon {
+                .icon(@icons, -5px, -90px);
+            }
+        }
+        .scene-item:nth-child(2) {
+            margin-left: 80px;
+            margin-right: 150px;
+            & .scene-icon {
+                .icon(@icons, -50px, -90px);
+            }
+        }
+    }
+
+    &.tech-case {
+        .case-item .case-icon {
+            background-size: 800px / 2 260px / 2;
+        }
+
+        .case-item:nth-child(1) {
+            .icon(url('../../../ai_images/technology/ocr-bankcard/case-1.png'), center, center);
+
+            .case-icon {
+                .icon(@case-icons, -5px, -5px);
+            }
+        }
+
+        .case-item:nth-child(2) {
+            .icon(url('../../../ai_images/technology/ocr-bankcard/case-2.png'), center, center);
+
+            .case-icon {
+                .icon(@case-icons, -105px, -5px);
+            }
+        }
+
+        .case-item:nth-child(3) {
+            .icon(url('../../../ai_images/technology/ocr-bankcard/case-3.png'), center, center);
+
+            .case-icon {
+                .icon(@case-icons, -205px, -5px);
+            }
+        }
+
+        .case-item:nth-child(4) {
+            .icon(url('../../../ai_images/technology/ocr-bankcard/case-4.png'), center, center);
+
+            .case-icon {
+                .icon(@case-icons, -305px, -5px);
+            }
+        }
+
+        .case-indicator {
+            & > li:nth-child(1) {
+                .icon(@case-icons, -10px, -200px);
+            }
+            & > li:nth-child(2) {
+                .icon(@case-icons, -210px, -200px);
+            }
+            & > li:nth-child(3) {
+                .icon(@case-icons, -410px, -200px);
+            }
+            & > li:nth-child(4) {
+                .icon(@case-icons, -610px, -200px);
+            }
+        }
+    }
+}
+.tech-product {
+    .tech-product()
+}

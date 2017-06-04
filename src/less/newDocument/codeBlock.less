@@ -1,0 +1,82 @@
+@block-height: 400px;
+
+.code-block {
+    margin: 15px 0;
+
+    p {
+        display: none;
+    }
+
+    pre {
+        margin: 0;
+
+        // 代码示例中的code标签无圆角，利用高权重覆盖
+        code {
+            // codespan左右有间距，这里要覆盖
+            margin: 0;
+            border-radius: 0;
+        }
+    }
+
+    code {
+        box-sizing: border-box;
+        // 因为外层是border-box,又有2px的border，所以实际高度是(400 - 2)px
+        min-height: @block-height - 2px;
+    }
+}
+
+.code-block-tab-container {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background-color: #e6f1fd;
+    font-size: 0;
+}
+
+.code-block-title {
+    display: inline-block;
+    min-width: 60px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: top;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        color: #0073eb;
+    }
+}
+
+.block-active {
+    position: relative;
+    color: #0073eb;
+
+    &:after {
+        position: absolute;
+        box-sizing: border-box;
+        left: 50%;
+        bottom: -5px;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        background-color: #2b303b;
+        transform: translateX(-50%) rotate(45deg);
+        transform-origin: 50% 50%;
+    }
+}
+
+[data-lan] {
+    height: @block-height;
+    box-sizing: border-box;
+    overflow: auto;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+
+    code {
+        border: 0;
+    }
+}

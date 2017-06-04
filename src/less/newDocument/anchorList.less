@@ -1,0 +1,78 @@
+// 每个层级的padding
+@level-padding: 35px;
+@dot-width: 15px;
+
+@import "./newDocument";
+
+.anchor-list {
+    padding-top: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+    font-size: 14px;
+    line-height: 40px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, .12);
+}
+
+.anchor-item {
+    font-size: 0;
+    cursor: pointer;
+    &:hover {
+        background: #f2f2f2;
+    }
+}
+
+.anchor-text {
+    box-sizing: border-box;
+    padding-right: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: left;
+}
+
+.anchor-level-1 {
+    .anchor-index,
+    .anchor-text {
+        font-size: 14px;
+        line-height: 40px;
+    }
+
+    .anchor-index {
+        // top和bottom已在公共部分设置
+        float: left;
+        color: #666;
+        padding: 0 5px 0 20px;
+    }
+
+    .anchor-text {
+        color: #666;
+    }
+    &.anchor-reached {
+        .anchor-index,
+        .anchor-text {
+            color: #666;
+        }
+    }
+}
+
+.anchor-level-2 {
+    box-sizing: border-box;
+    color: #999;
+    line-height: 40px;
+    .anchor-text {
+        // 1px是border
+       padding-left: 38px;
+    }
+}
+
+// 当前阅读的标题的样式
+.anchor-reached {
+    color: #999;
+    background: #f7f7f7;
+    .anchor-index,
+    .anchor-text {
+        color: #999;
+    }
+}

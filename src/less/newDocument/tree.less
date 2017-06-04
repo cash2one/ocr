@@ -1,0 +1,141 @@
+@category-dot-width: 15px;
+
+.tree-node {
+    box-sizing: border-box;
+    cursor: pointer;
+    // 为了选中遮盖右侧边框效果
+    z-index: 2;
+
+    &:hover {
+        color: #333;
+        .leaf-dot {
+            background: #f7f7f7;
+        }
+        background: #f7f7f7;
+    }
+
+    &.node-selected {
+        position: relative;
+        background-color: #f2f2f2;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -1px;
+            width: 1px;
+            z-index: 2;
+            background-color: #fff;
+        }
+    }
+}
+.leaf-text {
+    padding-right: 20px;
+}
+
+// 叶子节点内的文本段
+.leaf-text {
+    // 超出省略
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// 非叶子节点和叶子节点
+.non-leaf-node,
+.leaf-node {
+    // 非叶子节点，为箭头做位置参考
+    position: relative;
+}
+
+.level-1 {
+    color: #333;
+    &.tree-node {
+        line-height: 40px;
+        padding-left: 30px;
+        font-size: 14px;
+    }
+}
+
+.level-2 {
+    color: #666;
+    &.tree-node {
+        padding-left: 44px;
+        font-size: 14px;
+        line-height: 40px;
+    }
+}
+
+.level-3 {
+    color: #999;
+    &.tree-node {
+        padding-left: 50px;
+        line-height: 40px;
+        font-size: 14px;
+    }
+    .leaf-dot {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        top: 20px;
+        left: 44px;
+        background: #999;
+    }
+    &:hover {
+        background-color: #f7f7f7;
+        color: #999;
+        .leaf-dot {
+            background-color: #999;
+        }
+    }
+}
+
+.non-leaf-arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 8px;
+    height: 8px;
+    transform: translateY(-50%) rotateZ(90deg);
+    transform-origin: 50% 50%;
+    background: url(../../../ai_images/newDocument/icons/arrow.png);
+    background-size: contain;
+    transition: transform .2s linear;
+}
+
+.non-leaf-collapsed {
+    .non-leaf-arrow {
+        transform: translateY(-50%) rotateZ(0);
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .main-content {
+        margin-left: 0;
+        // 目录展开时主体内容
+        &.doc-shrink {
+            left: @anchor-list-width + @category-width;
+            margin-left: 0;
+            .anchor-mode-switch {
+                // position: fixed;
+                left: @anchor-list-width + @category-width;
+                margin-left: 0;
+                transition: left .016s linear; 
+            }
+        }
+
+        // 目录收缩时主体内容
+        &.doc-expand {
+            left: @category-width;
+            margin-left: 0;
+            .anchor-mode-switch {
+                // position: fixed;
+                left: @category-width;
+                margin-left: 0;
+                transition: left .016s linear; 
+            }
+        }
+        transition: all .016s linear; 
+    }
+}

@@ -1,0 +1,359 @@
+@import '../common/helper.less';
+@import '../common/global.less';
+
+@light-gray: #fcfcfc;
+@gray: #f6f6f6;
+@font-gray: #666;
+@font-black: #14191e;
+
+// class前缀
+@prefix: sdk;
+
+/**
+ * 左侧导航部分变量
+ */
+// 左侧导航左右留白
+@nav-padding: 35px;
+// 左侧导航title高度
+@nav-header-height: 45px;
+// 左侧导航条目高度
+@nav-item-height: 40px;
+
+/**
+ * 下载条目部分变量
+ */
+// 下载条目左侧栏比例
+@item-aside-radio: 35%;
+
+.ai-platform {
+    .@{prefix}-download-container {
+        background-color: #fafafa;
+        padding: 0;
+    }
+}
+
+// 命名空间，防止冲突
+.@{prefix}-download-container {
+    // inline-block 3px
+    font-size: 0;
+    border-left: 1px solid @gray;
+    // background-color: @light-gray;
+}
+
+.@{prefix}-aside,
+.@{prefix}-main {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+// 左侧导航
+.@{prefix}-aside {
+    width: 20%;
+}
+
+// 左侧导航栏title
+.@{prefix}-aside-header {
+    height: @nav-header-height;
+    line-height: @nav-header-height;
+    padding: 2px @nav-padding;
+    border-bottom: 1px solid #efefef;
+    font-size: 18px;
+    color: #666;
+    background-color: @white;
+}
+
+.@{prefix}-nav {
+    // 左侧列表的一个选项
+    &-item {
+        height: @nav-item-height;
+        line-height: @nav-item-height;
+        font-size: @font-size-2;
+        padding-left: 30px;
+
+        &:hover {
+            color: @blue;
+            cursor: pointer;
+
+            .sdk-nav-icon {
+                background-image: url(../../../ai_images/sdk/icon-sprite-active.png);
+            }
+        }
+    }
+
+    &-icon {
+        display: inline-block;
+        background: url(../../../ai_images/sdk/icon-sprite.png) no-repeat;
+        background-size: 105px 21px;
+        vertical-align: middle;
+
+        &-bs {
+            .nav-icon-sprite(-5px, -5px, 32px, 32px);
+        }
+
+        &-ocr {
+            .nav-icon-sprite(-47px, -5px, 32px, 32px);
+        }
+
+        &-bfr {
+            .nav-icon-sprite(-89px, -5px, 32px, 32px);
+        }
+
+        &-nlp {
+            .nav-icon-sprite(-131px, -5px, 32px, 32px);
+        }
+
+        &-anti-porn {
+            .nav-icon-sprite(-173px, -5px, 32px, 32px);
+        }
+    }
+
+    &-text {
+        vertical-align: middle;
+    }
+}
+
+// 右侧主体
+.@{prefix}-main {
+    width: 80%;
+    box-sizing: border-box;
+    padding-left: 40px;
+    border-left: 1px solid @gray;
+    background-color: @white;
+}
+
+.@{prefix}-item-aside,
+.@{prefix}-info {
+    display: inline-block;
+}
+
+// 一个sdk项的下载侧部分
+.@{prefix}-item-aside {
+    width: 35%;
+}
+
+// sdk的图标
+.@{prefix}-item-icon {
+    position: absolute;
+    top: 0;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+}
+
+// 下载按键
+.@{prefix}-download-button {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    // 按键占侧栏宽度的80%
+    width: 25%;
+    line-height: 30px;
+    background-color: @blue;
+    border-radius: 2px;
+    font-size: @font-size-1;
+    color: @white;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #1a81ed;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+    }
+}
+
+// 一个sdk介绍部分
+.@{prefix}-info {
+    width: 100% - @item-aside-radio;
+}
+
+// sdk分组名
+.@{prefix}-category-name {
+    padding: 20px 0 20px 10px;
+    font-size: @font-size-3;
+    font-weight: bold;
+}
+
+// sdk分组内容容器
+.@{prefix}-collection {
+    margin: 0 -5px;
+}
+
+// 一个sdk介绍
+.@{prefix}-item-container {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 33.333%;
+    padding: 10px;
+    vertical-align: top;
+}
+
+// 版本和发布时间容器
+.@{prefix}-bottom-info {
+    position: absolute;
+    bottom: 20px;
+    left: 35%;
+}
+
+// 一个sdk项
+.@{prefix}-item {
+    position: relative;
+    box-sizing: border-box;
+    height: 165px;
+    padding: 25px 0 10px;
+    background-color: @light-gray;
+    border: 1px solid @gray;
+}
+
+// sdk名称
+.@{prefix}-item-name {
+    font-size: @font-size-2;
+    font-weight: bold;
+    padding: 5px 0;
+    color: @font-black;
+}
+
+// sdk介绍
+.@{prefix}-description {
+    font-size: @font-size-1;
+    // 支持多行介绍
+    //height: 55px;
+    padding: 3px 0;
+    color: @font-gray;
+}
+
+// sdk版本
+.@{prefix}-version {
+    padding-bottom: 2px;
+    font-size: @font-size-1;
+    color: @font-gray;
+}
+
+// sdk更新日期
+.@{prefix}-update-date {
+    font-size: @font-size-1;
+    color: @font-gray;
+}
+
+// 底部试用区块
+.@{prefix}-trial-block {
+    padding: 50px 0;
+    text-align: center;
+    background-color: @gray;
+}
+
+// 试用信息title
+.@{prefix}-trial-title {
+    font-size: 35px;
+    padding: 5px 0;
+}
+
+// 试用信息内容
+.@{prefix}-trial-info {
+    font-size: @font-size-3;
+    padding: 15px 0;
+}
+
+.@{prefix}-trial-accept {
+    width: 150px;
+    padding: 15px 0;
+    margin: 10px auto 0;
+    background-color: @blue;
+    font-size: @font-size-3;
+    color: @white;
+}
+
+// mixin
+.language-stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    width: @width / 2;
+    height: @height / 2;
+    background-position: @x / 2 @y / 2;
+}
+
+.@{prefix}-language-sprite {
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: url(../../../ai_images/sdk/language.png) no-repeat;
+    background-size: 133px 23px;
+    transform-origin: center;
+
+    &.@{prefix}-android {
+        .language-stitches-sprite(-5px, -5px, 36px, 36px);
+    }
+
+    &.@{prefix}-ios {
+        .language-stitches-sprite(-112px, -5px, 36px, 36px);
+    }
+
+    &.@{prefix}-php {
+        .language-stitches-sprite(-160px, -5px, 48px, 36px);
+    }
+
+    &.@{prefix}-java {
+        .language-stitches-sprite(-51px, -5px, 52px, 36px);
+    }
+
+    &.@{prefix}-python {
+        .language-stitches-sprite(-224px, -5px, 34px, 36px);
+    }
+
+    &.@{prefix}-csharp {
+        width: 24px;
+        height: 18px;
+        background: url("../../../ai_images/sdk/icons/csharp.png") no-repeat;
+        background-size: contain;
+    }
+    &.@{prefix}-nodejs {
+        width: 35px;
+        height: 18px;
+        background: url("../../../ai_images/sdk/icons/nodejs.png") no-repeat;
+        background-size: contain;
+    }
+}
+
+.category-stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+}
+
+.@{prefix}-category-icon {
+    display: block;
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    background: url(../../../ai_images/sdk/category-icon.png) no-repeat;
+    background-size: 440px 75px;
+
+    &.@{prefix}-ocr {
+        .category-stitches-sprite(-142.5px, -2.5px, 70px, 70px);
+    }
+
+    &.@{prefix}-nlp {
+        .category-stitches-sprite(-292.5px, -2.5px, 70px, 70px);
+    }
+
+    &.@{prefix}-anti {
+        .category-stitches-sprite(-367.5px, -2.5px, 70px, 70px);
+    }
+
+    &.@{prefix}-bfr {
+        .category-stitches-sprite(-217.5px, -2.5px, 70px, 70px);
+    }
+
+    &.@{prefix}-bs {
+        .category-stitches-sprite(-68.5px, -2.5px, 70px, 70px);
+    }
+
+    &.@{prefix}-bs-package {
+        .category-stitches-sprite(-2.5px, -2.5px, 60px, 59px);
+    }
+}
+
+.nav-icon-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x / 2 @y / 2;
+    width: @width / 2;
+    height: @height / 2;
+}

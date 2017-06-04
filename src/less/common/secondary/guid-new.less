@@ -1,0 +1,95 @@
+/**
+*   ai二级页 底部按钮通用样式
+*/
+@import '../initialize.less';
+
+.tech-guide {
+    padding: 94px 0;
+    font-size: 0;
+    text-align: center;
+
+    &-title {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &-route {
+        margin-left: 70px;
+    }
+    &-links {
+        position: relative;
+        font-size: 0;
+        a {
+            font-size: 14px;
+            margin: 0 20px;
+            color: #0073eb;
+
+            &:hover {
+                color: #097ef1;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &-step {
+        position: relative;
+        display: inline-block;
+        width: 164px;
+        vertical-align: top;
+        text-align: left;
+
+        &-num,
+        &-name {
+            display: inline-block;
+            font-size: 14px;
+            color: #999
+        }
+
+        &-num {
+            width: 18px;
+            height: 18px;
+            line-height: 18px;
+            border: 1px solid #e1e1e1;
+            border-radius: 50%;
+            font-size: 14px;
+            text-align: center;
+            color: #999;
+        }
+
+        &-name {
+            padding: 0 12px 0 10px;
+        }
+
+        // 横线
+        &:after {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            content: "";
+            width: 60px;
+            height: 1px;
+            background-color: #e1e1e1;
+        }
+
+        // 最后一步没有横线
+        &:last-child:after {
+            display: none;
+        }
+    }
+    .tech-guide {
+        a[role="button"] {
+            &.large {
+                width: 212px;
+                height: 60px;
+                line-height: 60px;
+                box-shadow: none;
+                border: none;
+            }
+            &:hover.large {
+                background: #3095ff;
+                box-shadow: none;
+                border: none;
+            }
+        }
+    }
+}

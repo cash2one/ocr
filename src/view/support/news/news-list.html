@@ -1,0 +1,55 @@
+<section class="news-banner">
+    <div class="container">
+        <h1>新闻中心</h1>
+    </div>
+</section>
+<div class="news-content">
+    <div class="container news-gallery">
+        <div class="news-list">
+            {%foreach $newsList as $news%}
+            <div class="news-item">
+                <a class="news-item-area" href="/support/news?action=detail&amp;id={%$news.id%}">
+                    <h3 class="news-item-title">{%$news.title%}</h3>
+                    <span class="news-item-time">发布日期：{%$news.time|date_format:'%Y-%m-%d %H:%M:%S'%}</span>
+                    <span class="news-item-pv">浏览量：{%$news.pv%}次</span>
+                    <p class="news-item-txt">{%$news.abs%}</p>
+                    <span class="news-item-more">查看详情</span>
+                </a>
+            </div>
+            {%/foreach%}
+        </div>
+        <div class="tag-list">
+            <h3 class="tag-list-title">热门标签</h3>
+            <a href="/support/news" class="{%if $currentTag eq ''%}selected{%/if%}">全部</a>
+            {%foreach $tagList as $tag%}
+            <a href="/support/news?tag={%$tag.id%}" class="{%if $tag.id eq $currentTag%}selected{%/if%}">{%$tag.name%}</a>
+            {%/foreach%}
+        </div>
+    </div>
+    <div class="container">
+        <div class="news-pg-container">
+            <div class="pg" data-total="{%$pagination.total%}" data-offset="{%$pagination.offset%}" data-tag="{%$currentTag%}">
+                {%if $pagination.offset gt 1%}
+                <a href="/support/news?tag={%$currentTag%}&amp;offset={%$pagination.offset - 1%}">上一页</a>
+                {%/if%}
+
+                {%if $pagination.total gt $pagination.offset%}
+                <a href="/support/news?tag={%$currentTag%}&amp;offset={%$pagination.offset + 1%}">下一页</a>
+                {%/if%}
+            </div>
+        </div>
+    </div>
+</div>
+{%if $userInfo eq Null%}
+<section class="tech-section get-started">
+    <div class="container">
+        <h2>立即获取免费API Key</h2>
+        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
+        <div>
+            <a role="button"
+               class="btn-primary large ai-redirect"
+               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+        </div>
+    </div>
+</section>
+{%/if%}

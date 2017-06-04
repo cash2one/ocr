@@ -1,0 +1,85 @@
+@import '../common/initialize.less';
+// @page-name: 单页名称
+// @icon-num: icon循环数量
+// @width: 每个item宽度
+// @column: 每列栏目数
+
+.tech-feature(@page-name: nlp-word_embedding; @icon-num: 3; @width: 320px; @column: 3) {
+    @margin: (1180px - @width * @column) / (2 * (@column) );
+    // 技术特色标题
+    &-title {
+        padding: 50px 0 60px;
+        font-size: @big-title-size;
+        text-align: center;
+        color: @deep-black;
+    }
+
+    // 技术特色list
+    &-list {
+        // margin: 0 -@margin;
+    }
+
+    // 技术特色模块
+    &-item {
+        width: @width;
+        box-sizing: border-box;
+        padding: 20px;
+        float: left;
+        margin: 0 @margin 50px;
+    }
+
+    // 技术特色icon
+    &-icon {
+        width: 85px;
+        height: 85px;
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+
+    // 循环生成技术特色icon
+    .feature-icon(@icon-num);
+    .feature-icon(@n, @i: 1) when (@i =< @n) {
+        &-icon-@{i} {
+            background: url("../../../ai_images/technology/@{page-name}/sprite/feature-icon-@{i}.png") no-repeat;
+            background-size: contain;
+        }
+        .feature-icon(@n, (@i + 1));
+    }
+
+    // 技术特色信息
+    &-desc {
+        // 技术特色信息名
+        &-title {
+            font-size: @small-title-size;
+            color: @deep-black;
+            text-align: center;
+            padding: 20px 0 15px;
+        }
+        // 技术特色信息简介(需要设置高度)
+        &-info {
+            color: @light-black;
+            line-height: 1.8;
+            padding-bottom: 10px;
+        }
+    }
+
+    &-shadow {
+        position: relative;
+        z-index: 1;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: @white;
+            z-index: -1;
+        }
+
+        &:hover:after {
+            box-shadow: 0 2px 8px fadeOut(@black, 80%);
+        }
+    }
+}

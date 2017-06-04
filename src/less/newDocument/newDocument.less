@@ -1,0 +1,143 @@
+@category-width: 200px;
+@anchor-list-width: 200px;
+@anchor-list-lite-width: 0;
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+}
+
+.app {
+    position: absolute;
+    // position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    // background: rgba(0,0,0,.1);
+    // height: 500px;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0;
+}
+
+.category,
+.anchor-list,
+.anchor-list-lite,
+.main-content {
+    position: absolute;
+    height: 100%;
+    overflow: auto;
+    font-size: 16px;
+}
+
+.category,
+.anchor-list,
+.anchor-list-lite {
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+// 几个主要部分的宽度, 没有分拆到单独文件中
+.category {
+    left: 0;
+    width: @category-width;
+    border-right: 1px solid #ebebeb;
+    box-sizing: border-box;
+}
+
+.anchor-list {
+    left: @category-width;
+    width: @anchor-list-width;
+    transition: all .016s linear;
+}
+
+.anchor-list-lite {
+    left: @category-width;
+    width: @anchor-list-lite-width;
+
+}
+
+.main-content {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    left: 50%;
+    margin-left: -200px;
+    transition: left .016s linear;
+
+    // 目录展开时主体内容
+    &.doc-shrink {
+        margin-left: -200px;
+    }
+
+    // 目录收缩时主体内容
+    &.doc-expand {
+        margin-left: -400px;
+        .anchor-mode-switch {
+            margin-left: -400px;
+        }
+        .doc-container {
+            width: 1000px;
+            transition: width .016s linear;
+        }
+    }
+}
+
+.anchor-mode-switch {
+    position: fixed;
+    top: 50%;
+    margin-top: -44px;
+    left: 50%;
+    margin-left: -200px;
+    width: 14px;
+    height: 88px;
+    border: 1px solid #ebebeb;
+    border-left: 1px solid #fff;
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, .12);
+    z-index: 99;
+    transition: all .016s linear;
+}
+
+.switch-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -1px;
+    width: 8px;
+    height: 8px;
+    transform-origin: 50% 50%;
+    background: url(../../../ai_images/newDocument/icons/arrow.png);
+    background-size: contain;
+    transition: transform .016s linear;
+
+    &.arrow-left {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+
+    &.arrow-right {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+}
+
+@import "./accordion";
+@import "./tree";
+@import "./anchorList";
+@import "./anchorListLite";
+@import "./doc";
+@import "./breadCrumb";
+@import "./codeBlock";

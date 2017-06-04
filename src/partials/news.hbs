@@ -1,0 +1,15 @@
+<ul>
+    {{#if news.length}}
+        {{#each news}}
+            <li>
+                <a href="/support/news?action=detail&id={{id}}"
+                   target="_blank"
+                   title="{{title}}">
+                    [{{time}}] {{title}}
+                </a>
+            </li>
+        {{/each}}
+    {{else}}
+        <li><a href="#">暂无新闻</a></li>
+    {{/if}}
+</ul>

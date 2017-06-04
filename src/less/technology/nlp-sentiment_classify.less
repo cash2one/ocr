@@ -1,0 +1,34 @@
+@import "../secondary/template.less";
+@import "../common/tech-catalog.less";
+
+@prefix: tech-case-cooperation;
+
+@nuomi: url(../../../ai_images/technology/nlp-sentiment_classify/icon-nuomi.png) no-repeat;
+@dumi:  url(../../../ai_images/technology/nlp-sentiment_classify/icon-dumi.png) no-repeat;
+
+.banner(@page-name: nlp-sentiment_classify);
+
+.tech-feature(@page-name: nlp-sentiment_classify; @icon-num: 3; @width: 290px; @column: 3);
+
+.tech-case(@page-name: nlp-sentiment_classify; @item-num: 3);
+
+.@{prefix} {
+    &-nuomi:before {
+        content: '';
+        background: @nuomi;
+    }
+    &-dumi:before {
+        content: '';
+        background: @dumi;
+    }
+    &-icon:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+    }
+}
+

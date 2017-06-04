@@ -1,0 +1,285 @@
+<section class="tech-section tech-banner">
+    <div class="container">
+        <h1>身份证识别</h1>
+        <p>基于业界领先的深度学习技术<br>为用户提供二代身份证正反面识别服务</p>
+        <div>
+            <a role="button"
+               class="btn-primary media ai-redirect"
+               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">免费试用</a>
+            <a role="button"
+               class="btn-primary media ai-redirect"
+               href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=id_ocr">
+                开通付费
+            </a>
+            <a class="tech-docs"
+               href="
+               {%if $src eq Null%}
+               /docs#/OCR-API
+               {%else%}
+               /doc/OCR/index.html
+               {%/if%}">
+            </a>
+        </div>
+        <div class="tech-billing">
+            价格大幅下调，千次调用低至<span class="price">9元</span>，
+            <a target="_blank"
+               class="tech-billing-btn"
+               href="http://ai.baidu.com/support/news?action=detail&id=149">详情点击&gt;&gt;
+            </a>
+        </div>
+    </div>
+</section>
+<section class="tech-section tech-intro">
+    <div class="container">
+        <h2>功能介绍</h2>
+        <p>支持二代身份证正反面关键字段识别，可识别所有字段，对倾斜、暗光、过曝、阴影等异常情况稳定性好、识别准确率高达98%以上<br>请尽量保证上传的图像80%以上是身份证区域</p>
+        <div class="tech-intro-detail">
+            <div class="original-card"></div>
+            <div class="arrow"></div>
+            <div class="scan-result"></div>
+        </div>
+    </div>
+</section>
+<section class="tech-section tech-demo" id="tech-demo">
+    <div class="container">
+        <h2>功能演示</h2>
+        <div class="demo-container clear-float">
+            <div class="data-view" data-label="原始图片" id="demo-origin"></div>
+            <div class="data-view" data-label="识别结果" id="demo-result">
+                <div class="result-background">
+                    <span class="name"></span>
+                    <span class="gender"></span>
+                    <span class="folk"></span>
+                    <span class="birthday"></span>
+                    <span class="address"></span>
+                    <span class="card-no"></span>
+
+                </div>
+            </div>
+            <div class="data-view">
+                <div class="demo-data">
+                    <label for="demo-photo-url" style="display:none"></label>
+                    <input type="text" id="demo-photo-url" placeholder="请输入网络图片URL">
+                    <button type="button" class="btn-primary" id="scan-photo">检测</button>
+                    <span>或</span>
+                    <label id="demo-photo-upload"><input type="file" >本地上传</label>
+                </div>
+
+                <p class="demo-desc">提示：可支持PNG、JPG、BMP图片文件，不支持GIF图片，图片大小不超过2M，长边不超过2048像素。为保证正常识别效果，请保持身份证正面向上，并为图片主体部分。此演示暂只支持正面识别。</p>
+                <ul class="demo-card-list clear-float">
+                    <li>
+                        <img src="../../../ai_images/technology/ocr-idcard/demo-card-1.png">
+                    </li>
+                    <li>
+                        <img src="../../../ai_images/technology/ocr-idcard/demo-card-2.png">
+                    </li>
+                    <li>
+                        <img src="../../../ai_images/technology/ocr-idcard/demo-card-3.png">
+                    </li>
+                    <li>
+                        <img src="../../../ai_images/technology/ocr-idcard/demo-card-4.png">
+                    </li>
+                    <li>
+                        <img src="../../../ai_images/technology/ocr-idcard/demo-card-5.png">
+                    </li>
+                    <li>
+                        <img src="../../../ai_images/technology/ocr-idcard/demo-card-6.png">
+                    </li>
+                </ul>
+            </div>
+            <div class="data-view" data-label="RESPONSE JSON" id="demo-json">
+                <p></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="tech-section tech-feature">
+    <div class="container">
+        <h2>技术特色</h2>
+        <div class="feature-list clear-float">
+            <div class="feature-item shadow">
+                <div class="feature-icon"></div>
+                <div class="feature-desc">
+                    <h3>准确性高</h3>
+                    <p>国内首个公有云OCR产品，基于百度深度学习研究院（IDL）强大的深度学习算法和中文检测识别技术，身份证识别率98%以上</p>
+                </div>
+            </div>
+            <div class="feature-item shadow">
+                <div class="feature-icon"></div>
+                <div class="feature-desc">
+                    <h3>成熟稳定</h3>
+                    <p>经过百度钱包等重量级产品实践检验，产品成熟稳定。支持实时文字识别能力、弹性灵活的高并发承载及99.95%的可用性保证</p>
+                </div>
+            </div>
+            <div class="feature-item shadow">
+                <div class="feature-icon"></div>
+                <div class="feature-desc">
+                    <h3>简单易用</h3>
+                    <p>提供符合RESTful规范的API访问接口，兼容性强，使用方便</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="tech-section tech-scene">
+    <div class="container">
+        <h2>应用场景</h2>
+        <div class="scene-list clear-float">
+            <div class="scene-item shadow">
+                <div class="scene-icon"></div>
+                <div class="scene-desc">
+                    <h3>金融场景</h3>
+                    <p>银行保险券商等行业用于客户身份识别，身份信息绑定，个人信息核实等场景，减少身份证输入操作，提高工作效率和用户的体验</p>
+                </div>
+            </div>
+            <div class="scene-item shadow">
+                <div class="scene-icon"></div>
+                <div class="scene-desc">
+                    <h3>视频场景</h3>
+                    <p>用户身份认证，直播实名认证等场景，减少用户身份证输入操作，提高用户体验</p>
+                </div>
+            </div>
+            <div class="scene-item shadow">
+                <div class="scene-icon"></div>
+                <div class="scene-desc">
+                    <h3>电商场景</h3>
+                    <p>用于电商用户身份绑定、实名认证、商家身份认证等场景，减少用户输入操作，提升用户体验</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tech-section tech-case">
+    <ul class="case-list">
+        <li class="case-item active">
+            <div class="container">
+                <div class="case-icon"></div>
+                <h2>百度钱包</h2>
+                <p>百度钱包是中国领先的在线支付应用和服务平台<br>调用百度身份证OCR接口进行用户身份证识别，识别速度快，准确率高<br>减少了用户的输入操作，有效的提高了用户的体验</p>
+            </div>
+        </li>
+    </ul>
+    <ul class="case-indicator">
+        <li class="active"><a>百度钱包</a></li>
+    </ul>
+</section>
+<div class="tech-section get-started tech-product">
+    <div class="container-product">
+        <div class="tech-product-title">产品定价</div>
+        <div class="tech-product-info">本产品为按调用量付费的后付费产品，定价采取分段式阶梯定价方式
+            <a class="product-price"
+               href="
+               {%if $src eq Null%}
+               /docs#/OCR-Pricing
+               {%else%}
+               /doc/OCR/OCR-Pricing.html
+               {%/if%}">
+            </a>
+        </div>
+        <div class="tech-product-wrapper">
+            <div class="product-form-1">
+                <div class="product-head pric-head-1">价目表</div>
+                <div class="product-body pric-body-1">
+                    <div class="pric-item-header pric-item-1">月调用量</div>
+                    <div class="pric-item-header pric-item-1">单价</div>
+                    <div class="pric-item-connent pric-item-1">0&lt;调用量&lt;=5w</div>
+                    <div class="pric-item-connent pric-item-1">0.02元/次</div>
+                    <div class="pric-item-connent pric-item-1">5w&lt;调用量&lt;=10w</div>
+                    <div class="pric-item-connent pric-item-1">0.016元/次</div>
+                    <div class="pric-item-connent pric-item-1">10w&lt;调用量&lt;=20w</div>
+                    <div class="pric-item-connent pric-item-1">0.013元/次</div>
+                    <div class="pric-item-connent pric-item-1">20w&lt;调用量&lt;=50w</div>
+                    <div class="pric-item-connent pric-item-1">0.011元/次</div>
+                    <div class="pric-item-connent pric-item-1">50w&lt;调用量&lt;=100w</div>
+                    <div class="pric-item-connent pric-item-1">0.01元/次</div>
+                    <div class="pric-item-connent pric-item-1">100w&lt;调用量</div>
+                    <div class="pric-item-connent pric-item-1">0.009元/次</div>
+                    <div class="pric-item-foot">
+                        免费配额：每日500次免费调用次数，超出免费配额，开始计费
+                    </div>
+                </div>
+            </div>
+            <div class="product-form-2">
+                <div class="product-head pric-head-2">合作咨询</div>
+                <div class="product-body pric-body-2">
+                    <div class="pric-item-header pric-item-2">如果您有以下的需求或其他需求，您可以提交
+                        <a {%if $src eq Null%}
+                           class="cooperation-color consult"
+                           {%else%}
+                           target="_blank"
+                           class="cooperation-color"
+                           href="https://cloud.baidu.com/survey/AICooperativeConsultingApply.html"
+                           {%/if%}
+                        >合作咨询</a>
+                    </div>
+                    <div class="pric-item-connent pric-item-2">1.如果您的调用量远大于最大的阶梯段，并需要更低的价格；</div>
+                    <div class="pric-item-connent pric-item-2">2.如果您需要更高的QPS/并发；</div>
+                    <div class="pric-item-connent pric-item-2">3.如果您有其他的OCR要求；</div>
+                    <div class="pric-item-connent pric-item-2">4.如果您对现有的接口/SDK/文档有任何建议意见。</div>
+                </div>
+            </div>
+            <div class="product-form-3">
+                <div class="product-head pric-head-3">付费配置</div>
+                <div class="product-body pric-body-3">
+                    <div class="pric-item-header pric-item-3"></div>
+                    <div class="pric-item-header pric-item-3">500/日免费配额</div>
+                    <div class="pric-item-header pric-item-3">超过免费配额</div>
+                    <div class="pric-item-header pric-item-3">QPS限制</div>
+                    <div class="pric-item-header pric-item-3">免费</div>
+                    <div class="pric-item-connent pric-item-3">拥有</div>
+                    <div class="pric-item-connent pric-item-3">不响应请求</div>
+                    <div class="pric-item-connent pric-item-3">不保证并发</div>
+                    <div class="pric-item-header pric-item-3">付费</div>
+                    <div class="pric-item-connent pric-item-3">拥有</div>
+                    <div class="pric-item-connent pric-item-3">响应请求</div>
+                    <div class="pric-item-connent pric-item-3">保证10次并发</div>
+                </div>
+            </div>
+            <div class="product-form-4">
+                <div class="product-head pric-head-4">调用失败如何计费？</div>
+                <div class="product-body pric-body-4">
+                    <div class="pric-item-connent pric-item-4">
+                        身份证识别除去识别身份证错误（错误码：216633；错误信息：recognize idcard  error）算作需计费的调用，并按照价目表中阶梯价格计费。其余调用失败均不算作需计费的调用，不产生任何费用
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tech-free-product-btn">
+            <a role="button"
+               class="btn-primary large ai-redirect"
+               href="https://cloud.baidu.com/calculator.html#/ocr/price">
+                价格计算器
+            </a>
+            <a role="button"
+               class="btn-primary large ai-redirect"
+               href="https://console.bce.baidu.com/ai/#/ai/ocr/order/create~serviceType=id_ocr">
+                开通付费
+            </a>
+        </div>
+    </div>
+</div>
+
+{%if $src eq Null%}
+<section class="tech-section tech-guide">
+    <div class="container">
+        <h2>使用指南</h2>
+        <div class="guide-link clear-float">
+            <h3>开发指南</h3>
+            <ul>
+                <li><a href="/docs#OCR-API">技术文档 &gt;</a></li>
+                <li><a href="/sdk">SDK下载 &gt;</a></li>
+            </ul>
+        </div>
+        <div class="question-link clear-float">
+            <h3>常见问题</h3>
+            <ul>
+                <li><a href="/docs#/FAQ/27a8606d">图片格式和分辨率有限制么？</a></li>
+                <li><a href="/docs#/FAQ/27a8606d">图片大小有限制么？</a></li>
+                <li><a href="/docs#/FAQ/27a8606d">怎么提高识别的准确率和识别速度？</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+{%/if%}

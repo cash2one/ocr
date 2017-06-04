@@ -1,0 +1,510 @@
+<section class="banner">
+    <ul class="banner-content">
+        {%foreach from=$banners item=banner name=bannerFor%}
+        {%if $banner.template_code == 'common'%}
+        {%if $smarty.foreach.bannerFor.index == 0%}
+        <li class="active" style="background-image: url('{%$banner.background%}')">
+            {%else%}
+        <li style="background-image: url('{%$banner.background%}')">
+            {%/if%}
+            <div class="banner-item">
+                <h1>{%$banner.title%}</h1>
+                <p>{%$banner.abs%}</p>
+                <div>
+                    <a href="{%$banner.link%}" class="get-started">{%$banner.button%}</a>
+                </div>
+            </div>
+        </li>
+        {%/if%}
+        {%/foreach%}
+    </ul>
+    <ul class="banner-indicator">
+        {%foreach from=$banners item=banner name=bannerFor%}
+        {%if $smarty.foreach.bannerFor.index == 0%}
+        <li class="active"></li>
+        {%else%}
+        <li></li>
+        {%/if%}
+        {%/foreach%}
+    </ul>
+</section>
+<section class="lastest-news">
+    <div class="container">
+        <h4>新闻速递</h4><a href="/support/news?action=detail&amp;id={%$lastestNews.id%}">{%$lastestNews.title%}</a>
+    </div>
+</section>
+<section class="news">
+    <div class="container">
+        <ul>
+            {%foreach $newsList as $news%}
+            <li>
+                <a href="/support/news?action=detail&amp;id={%$news.id%}">
+                    <img src="{%$news.img%}" alt="{%$news.title%}">
+                    <h4>{%$news.title%}</h4>
+                    <p>{%$news.abs%}</p>
+                </a>
+            </li>
+            {%/foreach%}
+        </ul>
+    </div>
+</section>
+<section class="tech-service home-section">
+    <div class="container">
+        <h2>技术服务</h2>
+        <div class="service-container clear-float">
+            <div class="service-item">
+                <div class="service-detail">
+                    <div class="clear-float">
+                        <div class="service-desc">
+                            <div class="service-desc-title">
+                                语音技术
+                            </div>
+                            <p>多场景语音服务支持专家，让你的应用长上耳朵、开口说话</p>
+                        </div>
+                        <div class="service-icon"></div>
+                    </div>
+                    <hr>
+                    <div class="service-tech-list clear-float">
+                        <ul>
+                            <li>
+                                <a class="tech-service-secondary" href="/tech/speech">语音识别</a>
+                                <ul>
+                                    <li>
+                                        <a href="/tech/speech/asr">语音识别</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/speech/wake">语音唤醒</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="tech-service-secondary" href="/tech/speech">语音合成</a>
+                                <ul>
+                                    <li>
+                                        <a href="/tech/speech/tts">语音合成</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-detail">
+                    <div class="clear-float">
+                        <div class="service-desc">
+                            <div class="service-desc-title">图像技术</div>
+                            <p>基于深度学习算法，智能识别图像中的文字内容和含义、分析人脸图像以及检测图片色情度</p>
+                        </div>
+                        <div class="service-icon"></div>
+                    </div>
+                    <hr>
+                    <div class="service-tech-list clear-float">
+                        <ul>
+                            <li>
+                                <div class="tech-service-secondary">文字识别</div>
+                                <ul>
+                                    <li>
+                                        <a href="/tech/ocr/general">通用文字识别</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/ocr/idcard">身份证识别</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/ocr/bankcard">银行卡识别</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/ocr/general_location">通用文字识别（含位置信息版）</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/ocr/webimage">网络图片文字识别</a>
+                                    </li>
+                                    <li class="service-tech-left">
+                                        <a href="/tech/ocr/general_enhanced">通用文字识别（含生僻字版）</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="tech-service-secondary">人脸识别</div>
+                                <ul>
+                                    <li>
+                                        <a href="/tech/face/detect">人脸检测</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/face/compare">人脸对比</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/face/search">人脸查找</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="tech-service-secondary" href="/tech/imagecensoring">图像审核</a>
+                                <ul>
+                                    <li><a href="/tech/imagecensoring/antiporn">色情识别</a></li>
+                                    <li><a class="tech-new" href="/tech/imagecensoring/antiterror">暴恐识别</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-detail">
+                    <div class="clear-float">
+                        <div class="service-desc">
+                            <div class="service-desc-title">
+                                自然语言
+                            </div>
+                            <p>基于自然语言处理技术，对人类自然语言进行分析、理解、生成、翻译，实现自然的人机对话交互</p>
+                        </div>
+                        <div class="service-icon"></div>
+                    </div>
+                    <hr>
+                    <div class="service-tech-list clear-float">
+                        <ul>
+                            <li>
+                                <a class="tech-service-secondary" href="/tech/nlp">词汇级</a>
+                                <ul>
+                                    <li>
+                                        <a href="/tech/nlp/lexical">
+                                            词法分析
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/nlp/word_embedding">
+                                            中文词向量表示
+                                        </a>
+                                    </li>
+                                    <li><a class="tech-new" href="/tech/nlp/word_emb_sim">词义相似度</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="tech-service-secondary" href="/tech/nlp">短文本级</a>
+                                <ul>
+                                    <li>
+                                        <a href="/tech/nlp/dnnlm_cn">
+                                            中文DNN语言模型
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/nlp/simnet">
+                                            短文本相似度
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/nlp/comment_tag">
+                                            评论观点抽取
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="tech-new" href="/tech/nlp/sentiment_classify">
+                                            情感倾向分析
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="tech-service-secondary"
+                                   href="http://api.fanyi.baidu.com/api/trans/product/index"
+                                   target="_blank">机器翻译</a>
+                                <ul>
+                                    <li>
+                                        <a href="http://api.fanyi.baidu.com/api/trans/product/index"
+                                           target="_blank">
+                                            机器翻译平台
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-detail">
+                    <div class="clear-float">
+                        <div class="service-desc">
+                            <div class="service-desc-title">用户画像</div>
+                            <p>基于海量互联网数据，利用更大数据分析处理能力，理解用户特征、兴趣偏好，实现精准的用户分析和个性化推荐</p>
+                        </div>
+                        <div class="service-icon"></div>
+                    </div>
+                    <hr>
+                    <div class="service-tech-list clear-float">
+                        <ul class="inline-list">
+                            <li>
+                                <a href="http://datamart.baidu.com/datax-web/introduce_datax"
+                                   target="_blank">用户画像平台</a>
+                            </li>
+                            <li>
+                                <a href="http://recsys.baidu.com/"
+                                   target="_blank">
+                                    推荐云平台
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-detail">
+                    <div class="clear-float">
+                        <div class="service-desc">
+                            <div class="service-desc-title">深度学习</div>
+                            <p>开放易用的深度学习平台PaddlePaddle，为企业级应用和学术调研提供支持</p>
+                        </div>
+                        <div class="service-icon"></div>
+                    </div>
+                    <hr>
+                    <div class="service-tech-list clear-float">
+                        <ul class="inline-list">
+                            <li>
+                                <a href="http://www.paddlepaddle.org/"
+                                   target="_blank">
+                                    PaddlePaddle
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://book.paddlepaddle.org"
+                                   target="_blank">
+                                    深度学习入门
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-detail">
+                    <div class="clear-float">
+                        <div class="service-desc">
+                            <div class="service-desc-title">AR增强现实</div>
+                            <p>增强现实技术（Augmented Reality，AR）将虚拟物体融合到现实世界中，创造不一样的感知体验</p>
+                        </div>
+                        <div class="service-icon"></div>
+                    </div>
+                    <hr>
+                    <div class="service-tech-list clear-float">
+                        <ul class="inline-list">
+                            <li>
+                                <a href="/tech/ar">
+                                    AR内容平台
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-detail">
+                    <div class="clear-float">
+                        <div class="service-desc">
+                            <div class="service-desc-title">
+                                智能视频分析
+                            </div>
+                            <p>行业首创基于视频内容理解的智能分析服务，实时输出视频分类、
+                                视频TAG、精彩视频封面等
+                            </p>
+                        </div>
+                        <div class="service-icon"></div>
+                    </div>
+                    <hr>
+                    <div class="service-tech-list clear-float">
+                        <ul>
+                            <li>
+                                <a class="tech-service-secondary" href="/tech/video">视频分析</a>
+                                <ul>
+                                    <li>
+                                        <a href="/tech/video/vca"
+                                           target="_blank">视频内容分析VCA</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tech/video/vcs"
+                                           target="_blank">
+                                            视频封面选图
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item service-item-waiting">
+                <div class="waiting">敬请期待</div>
+            </div>
+            <div class="service-item service-item-waiting">
+                <div class="waiting">敬请期待</div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="solution home-section">
+    <div class="container">
+        <h2>解决方案</h2>
+        <div class="solution-container">
+            <div class="solution-detail">
+                <div id="robot" class="solution-desc">
+                    <h3>机器人</h3>
+                    <div>
+                        <p>流畅的远场语音会话交互，包括离线唤醒、离在线语音识别、多音色情感合成</p>
+                        <p>灵活开放的语义解析，精准理解用户意图，并支持自助拓展</p>
+                        <p>提供多种服务接驳或答案回复、基于行业场景的私有知识图谱建设</p>
+                    </div>
+                    <div>
+                        <a role="button"
+                           class="btn-primary"
+                           href="/solution/robot">了解详情</a>
+                    </div>
+                </div>
+                <div id="face-mobile-detect" class="solution-desc">
+                    <h3>人脸核身</h3>
+                    <div>
+                        <p>简化金融等行业线下复杂的身份验证流程</p>
+                        <p>通过拍照人脸识别、身份证比对验证等方式，在线确认用户身份</p>
+                        <p>极大缩短业务办理时间，提升业务的便捷性和安全性。</p>
+                    </div>
+                    <div>
+                        <a role="button"
+                           class="btn-primary"
+                           href="/solution/faceprint">了解详情</a>
+                    </div>
+                </div>
+                <div id="face-gate" class="solution-desc">
+                    <h3>人脸闸机</h3>
+                    <div>
+                        <p>基于业界领先的深度学习算法，提供多种场景的刷脸通行解决方案</p>
+                        <p>实现企业人脸门禁管理，打造便捷、安全、可靠的企业环境与品牌形象</p>
+                    </div>
+                    <div>
+                        <a role="button"
+                           class="btn-primary"
+                           href="/solution/facegate">了解详情</a>
+                    </div>
+                </div>
+                <div id="phone-dialing-test" class="solution-desc">
+                    <h3>号码风险识别</h3>
+                    <div>
+                        <p>基于百度系业务在打击黑产工作中的数据和技术积累，提供用户手机号风险等级识别服务</p>
+                        <p>可广泛用于营销补贴业务的反作弊和反欺诈等场景</p>
+                    </div>
+                    <div>
+                        <a role="button"
+                           class="btn-primary"
+                           href="/solution/dialog">了解详情</a>
+                    </div>
+                </div>
+            </div>
+            <ul class="solution-tab">
+                <li>
+                    <a href="#robot" class="active">
+                        <span class="solution-icon"></span>
+                        <span>机器人</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#face-mobile-detect">
+                        <span class="solution-icon"></span>
+                        <span>人脸核身</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#face-gate">
+                        <span class="solution-icon"></span>
+                        <span>人脸闸机</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#phone-dialing-test">
+                        <span class="solution-icon"></span>
+                        <span>号码风险识别</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="tech-video home-section">
+    <div class="container">
+        <h2>视频教程</h2>
+        <ul class="video-list clear-float">
+            <li>
+                <a href="http://www.chuanke.com/v7867982-208144-1278714.html"
+                   target="_blank">
+                    <img alt="百度语音基础介绍及应用场景"
+                         width="500"
+                         height="280"
+                         src="../../ai_images/home/video-1.png">
+                </a>
+                <h5>百度语音基础介绍及应用场景</h5>
+            </li>
+            <li>
+                <a href="http://www.chuanke.com/v7867982-208539-1278740.html"
+                   target="_blank">
+                    <img alt="百度OCR基础介绍及应用场景"
+                         width="500"
+                         height="280"
+                         src="../../ai_images/home/video-2.png">
+                </a>
+                <h5>百度OCR基础介绍及应用场景</h5>
+            </li>
+            <li>
+                <a href="http://www.chuanke.com/v7867982-208540-1278742.html"
+                   target="_blank">
+                    <img alt="百度人脸技术基础介绍及引用场景"
+                         width="500"
+                         height="280"
+                         src="../../ai_images/home/video-3.png">
+                </a>
+                <h5>百度人脸技术基础介绍及引用场景</h5>
+            </li>
+            <li>
+                <a
+                        href="http://www.chuanke.com/v7867982-208173-1278732.html"
+                        target="_blank">
+                    <img alt="百度翻译产品介绍"
+                         width="500"
+                         height="280"
+                         src="../../ai_images/home/video-4.png">
+                </a>
+                <h5>百度翻译产品介绍</h5>
+            </li>
+        </ul>
+        <div class="more-videos">
+            <a role="button" class="btn-normal" href="/support/video">更多视频</a>
+        </div>
+    </div>
+</section>
+<section class="user-case home-section">
+    <div class="container">
+        <h2>技术应用方</h2>
+        <ul class="user-brand-list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</section>
+{%if $userInfo eq Null%}
+<section class="register-now home-section">
+    <div class="container">
+        <h2>立即获取免费API Key</h2>
+        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
+        <div>
+            <a role="button"
+               class="btn-normal large ai-redirect"
+               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">
+                免费试用
+            </a>
+        </div>
+    </div>
+</section>
+{%/if%}

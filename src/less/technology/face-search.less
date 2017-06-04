@@ -1,0 +1,97 @@
+@import '../common/initialize.less';
+@import '../common/banner.less';
+@import '../common/tech-feature.less';
+@import '../common/tech-scenario.less';
+@import '../common/tech-case.less';
+@import '../common/tech-commom.less';
+@import "../common/tech-guid.less";
+@import '../common/modal.less';
+
+
+// 技术单页前缀
+@prefix: tech;
+
+// 调用通用的banner模块
+.@{prefix}-banner {
+    .banner(@page-name: face-search);
+}
+
+// 调用通用的tech-feature模块
+.@{prefix}-feature {
+    .tech-feature(@page-name: face-search, @icon-num: 3)
+}
+
+// 调用通用的apply-scenario模块
+.@{prefix}-scenario {
+    .apply-scenario(@page-name: face-search, @icon-num: 3);
+}
+
+// 调用通用的tech-case模块
+.@{prefix}-case {
+    .tech-case(@page-name: face-search; @num: 2; @case-logo: false;)
+}
+
+// 功能介绍
+.@{prefix}-function {
+    height: 735px;
+    background: url(../../../ai_images/technology/face-search/intro-bg.png) no-repeat top center;
+    background-size: cover;
+    text-align: center;
+    color: @white;
+
+    // 功能介绍标题
+    &-title {
+        padding: 30px 0 20px;
+        font-size: @big-title-size;
+    }
+
+    // 功能介绍简介
+    &-info {
+        width: 870px;
+        margin: 0 auto;
+        padding-bottom: 70px;
+        line-height: 25 / 14;
+    }
+
+    // demo
+    &-demo {
+        width: 1047px;
+        height: 428px;
+        margin: 0 auto;
+        background: url(../../../ai_images/technology/face-search/intro.png) no-repeat;
+
+        &-list {
+            width: 740px;
+            float: left;
+        }
+
+        &-item {
+            box-sizing: border-box;
+            width: 185px;
+            height: 214px;
+            transition: all .3s ease;
+            border: 3px solid transparent;
+            float: left;
+        }
+
+        &-wrong.tech-function-scanning {
+            border-color: #fa0000;
+            background-color: rgba(255, 0, 0, .2)
+        }
+
+        &-right.tech-function-scanning {
+            border-color: #0073eb;
+            background-color: rgba(0, 115, 235, .2)
+        }
+
+        &-wrong.tech-function-scanned {
+            border-color: rgba(0, 0, 0, .85);
+            background-color: rgba(0, 0, 0, .85);
+        }
+
+        &-right.tech-function-scanned {
+            border-color: #0073eb;
+            background-color: transparent;
+        }
+    }
+}

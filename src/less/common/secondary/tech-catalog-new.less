@@ -1,0 +1,140 @@
+/**
+ * @file ai二级页,产品功能部分通用样式
+ * @author FranckChen(chenfan02@baidu.com)
+ */
+
+.tech-catalog(@page-name: speech; @product-num; @num: 3) {
+    @prods-margin: 18px;
+    @prods-width: (1216px / @num) - 36px;
+    .tech-catalog {
+        background-color: #f4f5f7;
+
+        &-title {
+            padding: 80px 0 50px;
+            font-size: 30px;
+            letter-spacing: 2px;
+            text-align: center;
+            color: #333;
+        }
+
+        &-intro {
+            padding: 20px 0 40px;
+            font-size: 14px;
+            text-align: center;
+            color: #999;
+            p {
+                margin: 0;
+            }
+        }
+
+        &-gallery {
+            font-size: 0;
+        }
+    }
+
+    .tech-catalog-prods(@product-num);
+    .tech-catalog-prods(@n, @i: 1) when (@i <= @n) {
+        .tech-prod-poster-@{i} {
+            background: url("../../../../ai_images/technology/@{page-name}/sprite/prod-poster-@{i}.png") center center;
+            background-size: 100% 100%;
+        }
+        .tech-prod-sign-@{i} {
+            background: url("../../../../ai_images/technology/@{page-name}/sprite/prod-sign-@{i}.png") center center;
+            background-size: 100% 100%;
+        }
+
+        .tech-catalog-prods(@n, (@i + 1));
+    }
+
+}
+
+.tech-prod {
+    &-container {
+        position: relative;
+        box-sizing: border-box;
+        display: inline-block;
+        width: @prods-width;
+        margin: 0 @prods-margin 35px;
+        height: 380px;
+        vertical-align: top;
+        background-color: #fff;
+        font-size: 0;
+        &:nth-child(3n-2) {
+            margin-left: 0;
+        }
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+
+        &:hover {
+            box-shadow: 2px 2px 8px fadeOut(@black, 97%);
+
+            [class^="tech-prod-poster"] {
+                background-size: 110% 110%;
+            }
+
+            [class^="tech-prod-sign"] {
+                opacity: 1;
+            }
+        }
+    }
+
+    &-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        box-sizing: border-box;
+        height: 158px;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    &-name {
+        padding-bottom: 14px;
+        font-size: 18px;
+        color: #333;
+    }
+
+    &-intro {
+        font-size: 14px;
+        line-height: 26px;
+        color: #999;
+        text-align: left;
+    }
+
+    &-panel {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #000;
+
+        a {
+            color: #0073eb;
+            margin: 0 15px;
+        }
+
+        a:hover {
+            color: #097ef1;
+        }
+    }
+}
+
+[class^="tech-prod-poster"] {
+    position: relative;
+    height: 220px;
+    transition: all .3s linear;
+}
+[class^="tech-prod-sign"] {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 70px;
+    height: 70px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s linear;
+}

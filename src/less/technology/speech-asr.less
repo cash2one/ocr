@@ -1,0 +1,59 @@
+@import '../common/initialize.less';
+@import '../common/banner.less';
+@import '../common/tech-feature.less';
+@import '../common/tech-scenario.less';
+@import '../common/tech-case.less';
+@import '../common/tech-commom.less';
+@import '../common/modal.less';
+@import "../common/tech-guid.less";
+
+// 技术单页前缀
+@prefix: tech;
+
+// 调用通用的banner模块
+.@{prefix}-banner {
+    .banner(@page-name: speech-asr);
+}
+
+// 调用通用的tech-feature模块
+.@{prefix}-feature {
+    .tech-feature(@page-name: speech-asr, @icon-num: 5)
+}
+
+// 调用通用的apply-scenario模块
+.@{prefix}-scenario {
+    .apply-scenario(@page-name: speech-asr, @icon-num: 5);
+}
+
+// 调用通用的tech-case模块
+.@{prefix}-case {
+    .tech-case(@page-name: speech-asr; @num: 3; @case-logo: ture;)
+}
+
+// 功能介绍
+.@{prefix}-function {
+    height: 440px;
+    background: url(../../../ai_images/technology/speech-asr/intro-bg.png) no-repeat top center;
+    background-size: cover;
+    text-align: center;
+    color: @white;
+
+    // 功能介绍标题
+    &-title {
+        padding: 30px 0 20px;
+        font-size: @big-title-size;
+    }
+
+    // 功能介绍简介
+    &-info {
+        width: 870px;
+        margin: 0 auto;
+        line-height: 25 / 14;
+    }
+
+    // 功能介绍图片
+    &-pic {
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+}

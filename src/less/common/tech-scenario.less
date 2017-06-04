@@ -1,0 +1,84 @@
+@import '../common/initialize.less';
+
+// @page-name: 单页名称
+// @icon-num: icon循环数量
+// @width: 每个item宽度
+// @column: 每列栏目数
+.apply-scenario(@page-name: nlp-word_embendding; @icon-num: 2; @width: 340px; @column: 3) {
+    @margin: (1180px - @width * @column) / (2 * (@column));
+    // 应用场景标题
+    &-title {
+        padding: 50px 0 60px;
+        font-size: @big-title-size;
+        text-align: center;
+        color: @deep-black;
+    }
+
+    // 应用场景list
+    &-list {
+         //margin: 0 -@margin;
+    }
+
+    // 应用场景模块
+    &-item {
+        width: @width;
+        box-sizing: border-box;
+        padding: 20px;
+        float: left;
+        margin: 0 @margin 50px;
+    }
+
+    // 技术特色icon
+    &-icon {
+        width: 45px;
+        height: 45px;
+        float: left;
+    }
+
+    // 循环生成技术特色icon
+    .scenario-icon(@icon-num);
+    .scenario-icon(@n, @i: 1) when (@i =< @n) {
+        &-icon-@{i} {
+            background: url("../../../ai_images/technology/@{page-name}/sprite/scenario-icon-@{i}.png");
+            background-size: contain;
+        }
+        .scenario-icon(@n, (@i + 1));
+    }
+
+    // 应用场景信息
+    &-desc {
+        padding-left: 65px;
+
+        // 应用场景信息名
+        &-name {
+            color: @deep-black;
+            font-size: @small-title-size;
+            padding-bottom: 10px;
+        }
+        // 应用场景信息简介
+        &-info {
+            line-height: 1.8;
+            color: @light-black;
+        }
+    }
+
+    .tech-scenario-shadow {
+        position: relative;
+        z-index: 1;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: @white;
+            z-index: -1;
+        }
+
+        &:hover:after {
+            box-shadow: 0 2px 8px fadeOut(@black, 80%);
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@import '../common/initialize.less';
+@import '../common/banner.less';
+@import '../common/tech-feature.less';
+@import '../common/tech-scenario.less';
+@import '../common/tech-case.less';
+@import '../common/tech-commom.less';
+@import '../common/modal.less';
+@import "../common/tech-guid.less";
+
+// 技术单页前缀
+@prefix : tech;
+
+// 调用通用的banner模块
+.@{prefix}-banner {
+    .banner(@page-name: nlp-word_embedding);
+}
+
+// 调用通用的tech-feature模块
+.@{prefix}-feature {
+    .tech-feature(@page-name: nlp-word_embedding, @icon-num: 3)
+}
+
+// 调用通用的apply-scenario模块
+.@{prefix}-scenario {
+    .apply-scenario(@page-name: nlp-word_embedding, @icon-num: 2);
+    // 居中特殊处理
+    text-align: center;
+
+    &-list {
+        display: inline-block;
+        text-align: left;
+    }
+}
+
+// 调用通用的tech-case模块
+.@{prefix}-case {
+    .tech-case(@page-name: nlp-word_embedding; @num: 1; @case-logo: false;)
+}
+
+// 功能介绍
+.@{prefix}-function {
+    height: 440px;
+    background: url(../../../ai_images/technology/nlp-word_embedding/function-bg.png) no-repeat top center;
+    background-size: cover;
+    text-align: center;
+    color: @white;
+
+    // 功能介绍标题
+    &-title {
+        padding: 30px 0 20px;
+        font-size: @big-title-size;
+    }
+
+    // 功能介绍简介
+    &-info {
+        width: 870px;
+        margin: 0 auto;
+        line-height: 25 / 14;
+    }
+
+    // 功能介绍图片
+    &-pic {
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+}
+
+

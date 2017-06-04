@@ -1,0 +1,28 @@
+<section class="container news-main">
+    <div class="news-title">{%$data.title%}</div>
+    <div class="news-info-container">
+        <span class="time">发布日期：{%$data.time|date_format:'%Y-%m-%d %H:%M:%S'%}</span><span class="pv">浏览量：{%$data.pv%}次</span>
+        <div class="tag-list">
+            {%foreach $tagList as $tag%}
+            <a href="/support/news?tag={%$tag.id%}">{%$tag.name%}</a>
+            {%/foreach%}
+        </div>
+    </div>
+    <hr class="news-info-split">
+    <div class="news-content">
+        {%$data.content%}
+    </div>
+</section>
+{%if $userInfo eq Null%}
+<section class="tech-section get-started">
+    <div class="container">
+        <h2>立即获取免费API Key</h2>
+        <p>现在试用，获取免费API Key，免费调用各项开放能力API</p>
+        <div>
+            <a role="button"
+               class="btn-primary large ai-redirect"
+               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+        </div>
+    </div>
+</section>
+{%/if%}

@@ -1,0 +1,239 @@
+<div class="tech-section tech-banner">
+    <div class="ai-container">
+        <div class="tech-banner-title">
+            网络图片文字识别
+        </div>
+        <div class="tech-banner-info">
+            <p>依托全网海量优质数据和业界领先的深度学习技术<br>
+                专门对网络图片进行识别优化，支持更多字体和复杂背景下的文字识别</p>
+        </div>
+        <div class="tech-banner-btn-list">
+            <a role="button"
+               class="btn-primary media ai-redirect"
+               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/ocr/overview/index">立即使用</a>
+            <a role="button"
+               class="btn-other media"
+               href="
+               {%if $src eq Null%}
+               /docs#OCR-API
+               {%else%}
+               /doc/OCR/index.html
+               {%/if%}">
+                技术文档
+            </a>
+        </div>
+    </div>
+</div>
+<div class="tech-section tech-function">
+    <div class="ai-container">
+        <div class="tech-function-title">
+            功能介绍
+        </div>
+        <div class="tech-function-info">
+            支持互联网场景下的整图文字检测识别。多项ICDAR指标世界第一，支持任意场景、复杂背景、任意版面识别，支持10多种语言的识别<br>
+            在图片文字清晰，小幅度倾斜、无明显背光等情况下识别率高达90%以上
+        </div>
+        <div class="tech-function-detail tech-clear">
+            <div class="tech-function-original-card"></div>
+            <div class="tech-function-arrow"></div>
+            <div class="tech-function-scan-result"></div>
+        </div>
+    </div>
+</div>
+
+<div class="tech-section tech-demo" id="tech-demo">
+    <div class="ai-container">
+        <div class="tech-demo-title">
+            功能演示
+        </div>
+        <div class="tech-demo-container">
+            <div class="tech-demo-data-view tech-demo-origin" data-label="原始图片" id="demo-origin"></div>
+            <div class="tech-demo-data-view" data-label="识别结果" id="demo-result"></div>
+            <div class="tech-demo-choose">
+                <div class="tech-demo-upload tech-clear">
+                    <label>
+                        <input type="text" class="ocr-demo-photo-url" id="demo-photo-url" placeholder="请输入网络图片URL">
+                    </label>
+                    <button type="button" class="btn-primary" id="scan-url">检测</button>
+                    <div class="ocr-demo-huo">或</div>
+                    <label class="ocr-demo-local" id="demo-photo-upload">
+                        <input type="file" id="img-upload">本地上传
+                    </label>
+                </div>
+                <div class="tech-demo-desc">
+                    提示：可支持PNG、JPG、JPEG、BMP图片文件，不支持GIF图片，
+                    图片大小不超过2M，长边不超过2048像素
+                    为保证正常识别效果，请保证需要识别部分为图片主体部分
+                </div>
+                <div class="tech-demo-card-list">
+                    <div class="tech-demo-card-item tech-demo-card-active">
+                        <img src="../../../ai_images/technology/ocr-webimage/demo-card-1.png" alt=" ">
+                    </div>
+                    <div class="tech-demo-card-item">
+                        <img src="../../../ai_images/technology/ocr-webimage/demo-card-2.png" alt=" ">
+                    </div>
+                    <div class="tech-demo-card-item">
+                        <img src="../../../ai_images/technology/ocr-webimage/demo-card-3.png" alt=" ">
+                    </div>
+                    <div class="tech-demo-card-item">
+                        <img src="../../../ai_images/technology/ocr-webimage/demo-card-4.png" alt=" ">
+                    </div>
+                    <div class="tech-demo-card-item">
+                        <img src="../../../ai_images/technology/ocr-webimage/demo-card-5.png" alt=" ">
+                    </div>
+                    <div class="tech-demo-card-item">
+                        <img src="../../../ai_images/technology/ocr-webimage/demo-card-6.png" alt=" ">
+                    </div>
+                    <div class="tech-demo-card-item">
+                        <img src="../../../ai_images/technology/ocr-webimage/demo-card-7.png" alt=" ">
+                    </div>
+                    <div class="tech-demo-card-item">
+                        <img src="../../../ai_images/technology/ocr-webimage/demo-card-8.png" alt=" ">
+                    </div>
+                </div>
+            </div>
+            <div class="tech-demo-data-view tech-demo-json"
+                 id="demo-json"
+                 data-label="RESPONSE JSON">
+                <p></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ai-container tech-section tech-feature">
+    <div class="tech-feature-title">技术特色</div>
+    <div class="tech-feature-list tech-clear">
+        <div class="tech-feature-item tech-feature-shadow">
+            <div class="tech-feature-icon tech-feature-icon-1"></div>
+            <div class="tech-feature-desc">
+                <div class="tech-feature-desc-title">准确性高</div>
+                <div class="tech-feature-desc-info">
+                    国内首个公有云OCR产品，基于百度深度学习研究院（IDL）强大的深度学习算法和中文检测识别技术，
+                    整图中文识别准确率达85%以上，英文91%以上
+                </div>
+            </div>
+        </div>
+        <div class="tech-feature-item tech-feature-shadow">
+            <div class="tech-feature-icon tech-feature-icon-2"></div>
+            <div class="tech-feature-desc">
+                <div class="tech-feature-desc-title">成熟稳定</div>
+            <div class="tech-feature-desc-info">
+                经过手机百度，百度翻译，涂书笔记，百度糯米等多款重量级产品实践检验，产品成熟稳定
+                支持实时文字识别能力、弹性灵活的高并发承载及99.95%的可用性保证
+            </div>
+            </div>
+        </div>
+        <div class="tech-feature-item tech-feature-shadow">
+            <div class="tech-feature-icon tech-feature-icon-3"></div>
+            <div class="tech-feature-desc">
+                <div class="tech-feature-desc-title">简单易用</div>
+                <div class="tech-feature-desc-info">
+                    提供符合RESTful规范的API访问接口，移动端SDK及服务端SDK，使用便捷
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="tech-section-border">
+<div class="ai-container tech-section tech-scenario">
+    <div class="tech-scenario-title">应用场景</div>
+    <div class="tech-scenario-list tech-clear">
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-1"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">通用网络场景</div>
+                <div class="tech-scenario-desc-info">
+                    针对互联网图片中的文字进行了专项优化，对各种复杂的互联网图片中文字识别效果更好
+                </div>
+            </div>
+        </div>
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-2"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">图片反作弊</div>
+                <div class="tech-scenario-desc-info">
+                    识别互联网中用户头像、聊天图像、社交圈图片、电商平台图片等场景中的文字，方便用户进行违规处理和风险管控
+                </div>
+            </div>
+        </div>
+        <div class="tech-scenario-item tech-scenario-shadow">
+            <div class="tech-scenario-icon tech-scenario-icon-3"></div>
+            <div class="tech-scenario-desc">
+                <div class="tech-scenario-desc-name">视频场景</div>
+                <div class="tech-scenario-desc-info">
+                    用于短视频、长视频、直播等视频场景下的文字识别，方便用户进行视频标注，视频违规判断等操作
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tech-section tech-case">
+    <div class="tech-case-list">
+        <div class="tech-case-item tech-case-item-1 tech-case-active">
+            <div class="ai-container bd-spread">
+                <div class="tech-case-item-logo"></div>
+                <div class="tech-case-item-info">
+                    百度凤巢是百度旗下的专业广告推广系统<br>
+                    调用百度网络图片文字识别接口对各种图片中的文字进行识别，从而进行反作弊判断和风险管控
+                </div>
+            </div>
+        </div>
+        <div class="tech-case-item tech-case-item-2">
+            <div class="ai-container">
+                <div class="tech-case-item-logo"></div>
+                <div class="tech-case-item-title">手机百度</div>
+                <div class="tech-case-item-info">
+                    手机百度是百度推出的一款方便手机用户随时随地使用百度搜索服务的应用<br>
+                    手机百度调用百度通用OCR接口进行多模拍照文字识别，拍题识别，文字翻译等功能
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tech-case-option">
+        <div class="tech-case-option-btn tech-case-option-btn-1 tech-case-active">
+            百度推广
+        </div>
+        <div class="tech-case-option-btn tech-case-option-btn-2">
+            手机百度
+        </div>
+    </div>
+</div>
+{%if $userInfo eq Null%}
+<div class="tech-section get-started tech-free">
+    <div class="ai-container">
+        <div class="tech-free-title">立即获取免费API Key</div>
+        <div class="tech-free-info">现在试用，获取免费API Key，免费调用各项开放能力API</div>
+        <div class="tech-free-btn">
+            <a role="button"
+               class="btn-primary large ai-redirect"
+               href="https://console.bce.baidu.com/?fromai=1#/aip/overview">免费试用</a>
+        </div>
+    </div>
+</div>
+{%/if%}
+{%if $src eq Null%}
+<div class="tech-section tech-guide">
+    <div class="ai-container">
+        <div class="tech-guide-title">使用指南</div>
+        <div class="tech-guide-question tech-clear">
+            <div class="tech-guide-question-title">开发指南</div>
+            <div class="tech-guide-question-list">
+                <a class="tech-link-btn" href="/docs#OCR-API">技术文档&nbsp;&gt;</a>
+                <a class="tech-link-btn" href="/sdk">SDK下载&nbsp;&gt;</a>
+            </div>
+            </div>
+            <div class="tech-guide-question tech-clear">
+            <div class="tech-guide-question-title">常见问题</div>
+            <div class="tech-guide-question-list">
+                <a class="tech-link-btn" href="/docs#/FAQ/27a8606d">图片格式和分辨率有限制吗?</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/27a8606d">字体有要求吗？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/27a8606d">支持哪些语言识别？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/27a8606d">支持文档扫描图片的文字识别吗？</a>
+                <a class="tech-link-btn" href="/docs#/FAQ/27a8606d">怎么提高文字识别的准确率和识别速度？</a>
+            </div>
+        </div>
+    </div>
+</div>
+{%/if%}
+

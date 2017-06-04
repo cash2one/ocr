@@ -1,0 +1,512 @@
+@import '../common/helper.less';
+@import '../common/global.less';
+@import '../common/tech-page.less';
+@import '../common/modal.less';
+
+@banner: url('../../../ai_images/technology/nlp-comment/banner.png');
+@icons: url('../../../ai_images/technology/nlp-comment/icon.png');
+@intro-bg: none;
+@case-icons: url('../../../ai_images/technology/nlp-comment/case-icons.png');
+
+// 前缀
+@prefix: nlp;
+
+//颜色
+@light-white: #fefefe;
+@dark-gray: #828281;
+@positive: #51972a;
+@negative: #bd403a;
+@light-gray: #ebebeb;
+@gray: darken(@light-gray, 15%);
+@light-blue: #0073eb;
+
+// 功能介绍部分
+.@{prefix}-function {
+    height: 680px;
+    background: url(../../../ai_images/technology/nlp-comment/function-bg.png) center;
+    text-align: center;
+    color: @white;
+    font-size: 0;
+
+    // 功能介绍4个字
+    &-title {
+        padding: 30px 0 20px;
+        font-size: 30px;
+    }
+
+    &-intro {
+        width: 900px;
+        font-size: @font-size-2;
+        line-height: 25px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #616d77;
+        margin: 0 auto;
+    }
+
+    &-list {
+        width: 800px;
+        margin: 0 auto;
+        text-align: left;
+        color: @white;
+
+        h2 {
+            font-size: 20px;
+            line-height: 30px;
+            color: @light-white;
+            margin-top: 25px;
+        }
+
+        .list-title {
+            font-size: @font-size-2;
+            line-height: 25px;
+            padding-left: 13px;
+            margin: 0;
+            position: relative;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 2px;
+                height: 15px;
+                background: @white;
+                position: absolute;
+                top: 6px;
+                left: 0;
+            }
+        }
+
+        img {
+            margin: 5px 0;
+            width: 100%;
+        }
+
+        .list-intro {
+            white-space:nowrap;
+            font-size: @font-size-1;
+            line-height: 15px;
+            margin: 0;
+            padding: 3px 0 3px 6px;
+            position: relative;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 2px;
+                height: 2px;
+                background: @white;
+                position: absolute;
+                top: 10px;
+                left: 0;
+            }
+        }
+    }
+}
+
+// 每个特色介绍间的距离
+@feature-padding: 100px;
+@scenario-padding: 30px;
+@function-padding: 40px;
+
+.@{prefix}-feature {
+    &-title {
+        padding: 30px 0;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    // 容器
+    &-container {
+        margin: 0 0 - (@feature-padding / 2) 40px;
+        font-size: 0;
+    }
+
+    &-item-container {
+        display: inline-block;
+        width: 33.333%;
+        box-sizing: border-box;
+        vertical-align: top;
+        padding: 10px @feature-padding / 2 0;
+    }
+
+    // 特色条目
+    &-item {
+        position: relative;
+        padding: 20px 0 ;
+
+        &:hover {
+            opacity: 1;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    // 特色图标
+    &-icon {
+        margin: 0 auto 10px;
+        background: url(../../../ai_images/technology/nlp-comment/feature.png) no-repeat center;
+        background-size: 255px 85px;
+
+        &.feature-1 {
+            .feature-sprite(0, 0, 85px, 85px);
+        }
+
+        &.feature-2 {
+            .feature-sprite(-85px, 0px, 85px, 85px);
+        }
+
+        &.feature-3 {
+            .feature-sprite(-170px, 0px, 85px, 85px);
+        }
+    }
+
+    // 特色名称
+    &-name {
+        padding: 0 0 15px;
+        text-align: center;
+        font-size: @font-size-4;
+    }
+
+    // 特色信息
+    &-info {
+        padding: 0 23px;
+        font-size: @font-size-2;
+        line-height: 25px;
+        color: @dark-gray;
+    }
+}
+
+// 分割线
+.@{prefix}-section-border {
+    border: 0;
+    height: 1px;
+    background-color: #efefef;
+}
+
+// 特色图标sprite
+.feature-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    width: @width;
+    height: @height;
+    background-position: @x @y;
+}
+
+// 使用场景图标sprite mixin
+.scenario-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    width: @width;
+    height: @height;
+    background: url(../../../ai_images/technology/nlp-comment/scenario.png) no-repeat @x @y;
+    background-size: 135px 45px;
+}
+
+.function-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+}
+
+.ai-platform {
+    .@{prefix}-scenario {
+        padding-bottom: 40px;
+        text-align: center;
+    }
+}
+
+// 使用场景
+.@{prefix}-scenario {
+    font-size: 0;
+    padding-bottom: 40px;
+
+    // 使用场景title
+    &-title {
+        padding: 30px 0;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    // 使用场景条目
+    &-item {
+        display: inline-block;
+        width: 33.333%;
+        margin-bottom: 10px;
+        padding: 20px 40px;
+        box-sizing: border-box;
+        vertical-align: top;
+        font-size: 0;
+
+        &:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    // 使用场景标题
+    &-header {
+        font-size: @font-size-4;
+        padding: 0 0 10px;
+    }
+
+    &-intro {
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+    }
+
+    // 使用场景图标
+    &-icon-container {
+        width: 15%;
+        display: inline-block;
+    }
+
+    &-icon-1 {
+        .scenario-sprite(0px, -0px, 45px, 45px);
+    }
+
+    &-icon-2 {
+        .scenario-sprite(-45px, 0px, 45px, 45px);
+    }
+
+    &-icon-3 {
+        .scenario-sprite(-90px, 0px, 45px, 45px);
+    }
+
+    &-icon-4 {
+        .scenario-sprite(-135px, 0px, 45px, 45px);
+    }
+
+    &-icon-5 {
+        .scenario-sprite(-180px, 0px, 45px, 45px);
+    }
+
+    // 使用场景介绍信息容器
+    &-intro {
+        width: 85%;
+        box-sizing: border-box;
+        padding: 0 0 0 5px;
+    }
+
+    // 使用场景介绍信息详情
+    &-detail {
+        font-size: @font-size-2;
+        line-height: 25px;
+        color: @dark-gray;
+    }
+}
+
+
+.tech-section {
+    &.tech-case {
+        .case-item .case-icon {
+            background-size: 800px / 2 270px / 2;
+        }
+        .case-item:nth-child(1) {
+            .icon(url('../../../ai_images/technology/nlp-comment/case-1.png'), center, center);
+
+        }
+        .case-item:nth-child(2) {
+            .icon(url('../../../ai_images/technology/nlp-comment/case-2.png'), center, center);
+        }
+
+        .case-indicator {
+            & > li:nth-child(1) {
+                .icon(@case-icons, -210px, -10px);
+            }
+            & > li:nth-child(2) {
+                .icon(@case-icons, -10px, -10px);
+            }
+        }
+        .case-list {
+            & > li {
+                padding-top: 88px;
+
+                .case-icon {
+                    width: auto;
+                    margin-top: 15px;
+                }
+
+                &:nth-child(1) {
+                    .case-icon {
+                        background: url("../../../ai_images/technology/nlp-comment/case-logo-1.png") no-repeat center center;
+                    }
+                }
+
+                &:nth-child(2) {
+                    .case-icon {
+                        background: url("../../../ai_images/technology/nlp-comment/case-logo-2.png") no-repeat center center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@bar-height: 8px;
+@tag-item-height: 30px;
+
+.comment-demo {
+    width: 960px;
+    margin: 0 auto 20px;
+    font-size: 0;
+
+    &-title {
+        font-size: 30px;
+        color: #333333;
+        text-align: center;
+        line-height: 50px;
+        margin-top: 40px;
+    }
+
+    &-left,
+    &-right,
+    &-contrast {
+        display: inline-block;
+        box-sizing: border-box;
+        vertical-align: middle;
+    }
+
+    // 左右侧对比栏
+    &-left,
+    &-right {
+        width: 40%;
+        border: 1px solid @gray;
+        padding: 15px;
+        font-size: 0;
+    }
+
+    // 中间对比项
+    &-contrast {
+        width: 20%;
+        background: url(../../../ai_images/technology/nlp-comment/contrast-icon.png) no-repeat center;
+        height: 100px;
+    }
+
+    // 一个评论句子
+    &-case {
+        padding: 5px 0;
+        font-size: 14px;
+    }
+}
+
+.attitude {
+    // 负面情绪文字
+    &-0 {
+        color: @negative;
+    }
+
+    // 正面情绪文字
+    &-1 {
+        color: @positive;
+    }
+
+    // 无情绪文字
+    &-2 {
+        color: @dark-gray;
+    }
+}
+
+.comment {
+    // 右侧列表头部行
+    &-title {
+        font-size: 0;
+    }
+
+    &-positive,
+    &-negative,
+    &-tag-title {
+        display: inline-block;
+        box-sizing: border-box;
+        vertical-align: top;
+    }
+
+    &-positive,
+    &-negative {
+        width: 35%;
+        padding-bottom: 8px;
+        font-size: 16px;
+        border-bottom: 1px solid @gray;
+    }
+
+    &-positive {
+        text-align: left;
+        color: @positive;
+    }
+
+    &-negative {
+        text-align: right;
+        color: @negative;
+    }
+
+    // 顶部中间占位
+    &-tag-title {
+        width: 30%;
+    }
+
+    // 一个评论项
+    &-tag-item {
+        height: @tag-item-height;
+        margin: 5px 0;
+        font-size: 0;
+        text-align: center;
+    }
+
+    // 正负向条
+    &-positive-bar,
+    &-negative-bar {
+        position: relative;
+        display: inline-block;
+        width: 35%;
+        height: 100%;
+        vertical-align: top;
+    }
+
+    &-positive-value,
+    &-negative-value {
+        position: absolute;
+        top: 50%;
+        margin-top: 0 - (@bar-height / 2);
+        height: @bar-height;
+        width: 100%;
+    }
+
+    &-positive-value {
+        left: 0;
+        background-color: @positive;
+    }
+
+    &-negative-value {
+        right: 0;
+        background-color: @negative;
+    }
+
+    &-tag-name {
+        background-color: @light-gray;
+    }
+
+    // 关键词
+    &-tag-name-container {
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 0 8px;
+        width: 30%;
+        height: 100%;
+        line-height: @tag-item-height;
+        font-size: 15px;
+        color: @dark-gray;
+    }
+}
+
+.demo-switch {
+    position: relative;
+    padding: 10px 0 10px 25px;
+    color: @light-blue;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 12px;
+        left: 0;
+        display: block;
+        width: 17px;
+        height: 17px;
+        background: url("../../../ai_images/technology/nlp-lexer/change-icon.png") no-repeat;
+        background-size: 17px 17px;
+    }
+}
