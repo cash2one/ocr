@@ -12,13 +12,13 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
+    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/ie9.style.css">
+    <link rel="stylesheet" href="/ai_dist/1495804556/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/newDocument/newDocument.style.css">
+    <link rel="stylesheet" href="/ai_dist/1495804556/css/base.style.css">
+    <link rel="stylesheet" href="/ai_dist/1495804556/css/newDocument/newDocument.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -34,7 +34,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1495804556/ai_images/logo.png" alt="百度大脑">
+                <img src="/ai_dist/1495804556/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -72,16 +72,6 @@
                                 <li><a href="/tech/ocr/general">通用文字识别</a></li>
                                 <li><a href="/tech/ocr/idcard">身份证识别</a></li>
                                 <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
-                                <li>
-                                    <a href="/tech/ocr/general_enhanced" id="ocr-enhanced-link">
-                                        通用文字识别（含生僻字版）
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/tech/ocr/general_location" id="ocr-location-link">
-                                        通用文字识别（含位置信息版）
-                                    </a>
-                                </li>
                                 <li>
                                     <a href="/tech/ocr/webimage">
                                         网络图片文字识别
@@ -251,8 +241,8 @@
     </div>
 </header>
 <div id="app"></div>
-<script src="//ai.bdstatic.com/dist/1495804556/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1495804556/js/newDocument/newDocument.js"></script>
+<script src="/ai_dist/1495804556/js/common.bundle.js"></script>
+<script src="/ai_dist/1495804556/js/newDocument/newDocument.js"></script>
 <script>
     (function () {
         var bp = document.createElement('script');

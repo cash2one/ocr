@@ -5,7 +5,6 @@
 @import '../initialize.less';
 
 @scene-prefix: tech-case;
-@content-prefix: tech-case-desc;
 
 .tech-case(@page-name: nlp-sentiment_classify; @item-num: 3) {
     .tech-case{
@@ -49,85 +48,62 @@
             border: none;
             background-color: #eee;
         }
-    }
-
-}
-
-.@{content-prefix} {
-    &-title {
-        font-size: 18px;
-        color: #333;
-        padding-bottom: 24px;
-    }
-    &-info {
-        font-size: 14px;
-        height: 78px;
-        line-height: 26px;
-        padding-bottom: 24px;
-        color: #999;
-    }
-}
-// 主要服务没有内容时
-.@{scene-prefix}-serve-no {
-    font-size: 0;
-}
-
-// 主要服务有内容时
-.@{scene-prefix}-serve-yes {
-    font-size: 14px;
-    padding-bottom: 20px;
-    .main-serve {
-        font-size: 14px;
-        display: inline-block;
-        vertical-align: top;
-        color: #999;
-    }
-    .bioassay,
-    .face-contrast {
-        margin: 0 5px 0 10px;
-        color: #0073eb;
-        &:hover {
-            text-decoration: underline;
+        &-desc {
+            &-title {
+                font-size: 18px;
+                color: #333;
+                padding-bottom: 24px;
+            }
+            &-info {
+                font-size: 14px;
+                height: 78px;
+                line-height: 26px;
+                padding-bottom: 24px;
+                color: #999;
+            }
+        }
+        &-serve-no {
+            font-size: 0;
+        }
+        &-serve-yes {
+            font-size: 14px;
+            padding-bottom: 20px;
+            .main-serve {
+                font-size: 14px;
+                display: inline-block;
+                vertical-align: top;
+                color: #999;
+            }
+            .bioassay,
+            .face-contrast {
+                margin: 0 5px 0 10px;
+                color: #0073eb;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        &-cooperation {
+            padding: 25px 0;
+            font-size: 0;
+            .cooperation-case {
+                font-size: 14px;
+                line-height: 20px;
+                color: #999;
+                display: inline-block;
+                vertical-align: top;
+            }
+            &-icon {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                font-size: 14px;
+                padding-left: 28px;
+                line-height: 20px;
+                margin: 0 10px 0 8px;
+                color: #999;
+            }
         }
     }
 }
 
-.@{scene-prefix}-cooperation {
-    padding: 25px 0;
-    font-size: 0;
-    .cooperation-case {
-        font-size: 14px;
-        line-height: 20px;
-        color: #999;
-        display: inline-block;
-        vertical-align: top;
-    }
-    &-nuomi:before {
-        content: '';
-        background: url(../../../../ai_images/technology/nlp-sentiment_classify/icon-nuomi.png) no-repeat;
-    }
-    &-dumi:before {
-        content: '';
-        background: url(../../../../ai_images/technology/nlp-sentiment_classify/icon-dumi.png) no-repeat;
-    }
-    &-nuomi,
-    &-dumi {
-        position: relative;
-        display: inline-block;
-        vertical-align: top;
-        font-size: 14px;
-        padding-left: 28px;
-        line-height: 20px;
-        margin: 0 10px 0 8px;
-        color: #999;
-        &:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 20px;
-            height: 20px;
-            background-size: contain;
-        }
-    }
-}

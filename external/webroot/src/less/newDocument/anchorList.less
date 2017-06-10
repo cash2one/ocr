@@ -5,64 +5,74 @@
 @import "./newDocument";
 
 .anchor-list {
-    padding-top: 23px;
+    padding-top: 20px;
     box-sizing: border-box;
     overflow: auto;
     font-size: 14px;
-    box-shadow: 1px 0 3px rgba(204, 204, 204, .3);
+    line-height: 40px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, .12);
 }
 
 .anchor-item {
     font-size: 0;
     cursor: pointer;
+    &:hover {
+        background: #f2f2f2;
+    }
 }
 
 .anchor-text {
     box-sizing: border-box;
-    padding-right: 10px;
+    padding-right: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 40px;
     text-align: left;
 }
 
 .anchor-level-1 {
-    padding: 45px 0 15px;
     .anchor-index,
     .anchor-text {
         font-size: 14px;
+        line-height: 40px;
     }
 
     .anchor-index {
         // top和bottom已在公共部分设置
         float: left;
         color: #666;
-        padding: 0 6px 0 28px;
-        font-weight: 600;
+        padding: 0 5px 0 20px;
     }
 
     .anchor-text {
-        font-weight: 600;
         color: #666;
+    }
+    &.anchor-reached {
+        .anchor-index,
+        .anchor-text {
+            color: #666;
+        }
     }
 }
 
 .anchor-level-2 {
     box-sizing: border-box;
-    color: #666;
-    padding: 15px 0;
+    color: #999;
+    line-height: 40px;
     .anchor-text {
         // 1px是border
-       padding-left: 44px;
+       padding-left: 38px;
     }
 }
 
 // 当前阅读的标题的样式
 .anchor-reached {
-    color: #0073eb;
+    color: #999;
+    background: #f7f7f7;
     .anchor-index,
     .anchor-text {
-        color: #0073eb;
+        color: #999;
     }
 }

@@ -11,13 +11,13 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
+    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/ie9.style.css">
+    <link rel="stylesheet" href="/ai_dist/1495804556/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/technology/nlp-word_emb_sim.style.css">
+    <link rel="stylesheet" href="/ai_dist/1495804556/css/base.style.css">
+    <link rel="stylesheet" href="/ai_dist/1495804556/css/technology/nlp-word_emb_sim.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1495804556/ai_images/logo.png" alt="百度大脑">
+                <img src="/ai_dist/1495804556/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -71,16 +71,6 @@
                                 <li><a href="/tech/ocr/general">通用文字识别</a></li>
                                 <li><a href="/tech/ocr/idcard">身份证识别</a></li>
                                 <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
-                                <li>
-                                    <a href="/tech/ocr/general_enhanced" id="ocr-enhanced-link">
-                                    通用文字识别（含生僻字版）
-                                    </a>
-                                </li>
-                                 <li>
-                                    <a href="/tech/ocr/general_location" id="ocr-location-link">
-                                    通用文字识别（含位置信息版）
-                                    </a>
-                                </li>
                                 <li>
                                     <a href="/tech/ocr/webimage">
                                         网络图片文字识别
@@ -251,27 +241,29 @@
 </header>
 <div class="ai-platform page-content">
     <div class="tech-section tech-banner">
-    <div class="ai-container">
-        <div class="tech-banner-title">
-            词义相似度
-        </div>
-        <div class="tech-banner-info">
-            依托全网海量优质数据和深度神经网络技术，通过词语向量化来计算两个词之间的相似度
-        </div>
-        <div class="tech-banner-btn-list">
-            <a role="button"
-               class="btn-primary-new media-new ai-redirect"
-               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">免费试用</a>
-            <a role="button"
-               class="btn-primary-new media-new"
-               href="
+    <div class="tech-banner-shape">
+        <div class="ai-container">
+            <div class="tech-banner-title">
+                词义相似度
+            </div>
+            <div class="tech-banner-info">
+                依托全网海量优质数据和深度神经网络技术，通过词语向量化来计算两个词之间的相似度
+            </div>
+            <div class="tech-banner-btn-list">
+                <a role="button"
+                   class="btn-primary-new media-new ai-redirect"
+                   href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">免费试用</a>
+                <a role="button"
+                   class="btn-primary-new media-new"
+                   href="
                {%if $src eq Null%}
                /docs#NLP-API
                {%else%}
                https://cloud.baidu.com/doc/NLP/index.html
                {%/if%}">
-                技术文档
-            </a>
+                    技术文档
+                </a>
+            </div>
         </div>
     </div>
 </div>
@@ -283,7 +275,7 @@
             本技术用于计算两个给定词语的语义相似度，基于自然语言中的分布假设，即越是经常共同出现的词之间的相似度越高。词义相似度是自然语言处理中的重要基础技术，是专名挖掘、query改写、词性标注等常用技术的基础之一
         </div>
         <div class="tech-catalog-show">
-            <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/nlp-word_emb_sim/introduce.png" class="tech-catalog-img" alt="">
+            <img src="/ai_dist/1495804556/ai_images/technology/nlp-word_emb_sim/introduce.png" class="tech-catalog-img" alt="">
         </div>
     </div>
 </div>
@@ -483,8 +475,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1495804556/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1495804556/js/technology/nlp-word_emb_sim.js"></script>
+<script src="/ai_dist/1495804556/js/common.bundle.js"></script>
+<script src="/ai_dist/1495804556/js/technology/nlp-word_emb_sim.js"></script>
 
 <script>
     (function () {

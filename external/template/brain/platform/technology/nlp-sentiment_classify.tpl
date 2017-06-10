@@ -11,13 +11,13 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
+    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/ie9.style.css">
+    <link rel="stylesheet" href="/ai_dist/1495804556/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/technology/nlp-sentiment_classify.style.css">
+    <link rel="stylesheet" href="/ai_dist/1495804556/css/base.style.css">
+    <link rel="stylesheet" href="/ai_dist/1495804556/css/technology/nlp-sentiment_classify.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1495804556/ai_images/logo.png" alt="百度大脑">
+                <img src="/ai_dist/1495804556/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -71,16 +71,6 @@
                                 <li><a href="/tech/ocr/general">通用文字识别</a></li>
                                 <li><a href="/tech/ocr/idcard">身份证识别</a></li>
                                 <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
-                                <li>
-                                    <a href="/tech/ocr/general_enhanced" id="ocr-enhanced-link">
-                                    通用文字识别（含生僻字版）
-                                    </a>
-                                </li>
-                                 <li>
-                                    <a href="/tech/ocr/general_location" id="ocr-location-link">
-                                    通用文字识别（含位置信息版）
-                                    </a>
-                                </li>
                                 <li>
                                     <a href="/tech/ocr/webimage">
                                         网络图片文字识别
@@ -251,39 +241,43 @@
 </header>
 <div class="ai-platform page-content">
     <div class="tech-section tech-banner">
-    <div class="ai-container">
-        <div class="tech-banner-title">
-            情感倾向分析
-        </div>
-        <div class="tech-banner-info">
-                自动对包含主观信息的文本进行情感倾向性判断为口碑分析、话题监控、舆情分析等应用提供基础技术支持
-        </div>
-        <div class="tech-banner-btn-list">
-            <a role="button"
-               class="btn-primary-new media-new ai-redirect"
-               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">免费试用</a>
-            <a role="button"
-               class="btn-primary-new media-new"
-               href="
+    <div class="tech-banner-shape">
+        <div class="ai-container">
+            <div class="tech-banner-title">
+                情感倾向分析
+            </div>
+            <div class="tech-banner-info">
+                自动对包含主观信息的文本进行情感倾向性判断，为口碑分析、话题监控、舆情分析等应用提供基础技术支持
+            </div>
+            <div class="tech-banner-btn-list">
+                <a role="button"
+                   class="btn-primary-new media-new ai-redirect"
+                   href="https://console.bce.baidu.com/ai/?fromai=1#/ai/nlp/overview/index">免费试用</a>
+                <a role="button"
+                   class="btn-primary-new media-new"
+                   href="
                {%if $src eq Null%}
                /docs#NLP-API
                {%else%}
                https://cloud.baidu.com/doc/NLP/index.html
-               {%/if%}">
-                技术文档
-            </a>
+               {%/if%}">技术文档</a>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="tech-section tech-catalog">
+<div {%if $src eq Null%}
+     class="tech-section tech-catalog"
+     {%else%}
+     class="tech-section tech-catalog tech-cloud"
+     {%/if%}>
     <div class="ai-container">
         <div class="tech-catalog-title">功能介绍</div>
         <div class="tech-catalog-info">
             针对带有主观描述的中文文本，可自动判断该文本的情感极性类别并给出相应的置信度。情感极性分为积极、消极、中性。情感倾向分析能帮助企业理解用户消费习惯、分析热点话题和危机舆情监控，为企业提供有力的决策支持
         </div>
         <div class="tech-catalog-show">
-            <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/nlp-sentiment_classify/introduce.jpg" class="tech-catalog-img" alt="">
+            <img src="/ai_dist/1495804556/ai_images/technology/nlp-sentiment_classify/introduce.jpg" class="tech-catalog-img" alt="">
         </div>
     </div>
 </div>
@@ -291,38 +285,44 @@
 <div class="tech-section tech-case">
     <div class="tech-case-title">应用场景</div>
     <div class="tech-case-list">
-        <div class="tech-case-item tech-feature-shadow">
+        <div class="tech-case-item">
             <div class="tech-case-desc">
                 <div class="tech-case-desc-title">评论分析与决策</div>
                 <div class="tech-case-desc-info">通过对产品多维度评论观点进行倾向性分析，给用户提供该产品全方位的评价，方便用户进行决策
                 </div>
-                <div class="tech-case-serve"></div>
-                <div class="tech-case-line"></div>
+                <div class="tech-case-serve-yes">
+                    <span class="main-serve">主要服务:</span><a href="" class="bioassay">活体检测</a><a href="" class="face-contrast">人脸对比</a>
+                </div>
+                <hr class="tech-case-line">
                 <div class="tech-case-cooperation">
                     <span class="cooperation-case">合作案例:</span>
-                    <span class="tech-case-cooperation-nuomi">百度糯米</span>
-                    <span class="tech-case-cooperation-dumi">度秘</span>
+                    <span class="tech-case-cooperation-icon tech-case-cooperation-nuomi">百度糯米</span>
+                    <span class="tech-case-cooperation-icon tech-case-cooperation-dumi">度秘</span>
                 </div>
             </div>
         </div>
-        <div class="tech-case-item tech-feature-shadow">
+        <div class="tech-case-item">
             <div class="tech-case-desc">
                 <div class="tech-case-desc-title">评论分类</div>
                 <div class="tech-case-desc-info">通过对评论进行情感倾向性分析，将不同用户针对同一事件或对象的评论内容按情感极性予以分类展示
                 </div>
-                <div class="tech-case-serve"></div>
-                <div class="tech-case-line"></div>
+                <div class="tech-case-serve-yes">
+                    <span class="main-serve">主要服务:</span><a href="" class="bioassay">活体检测</a><a href="" class="face-contrast">人脸对比</a>
+                </div>
+                <hr class="tech-case-line">
                 <div class="tech-case-cooperation">
                     <span class="cooperation-case">合作案例:</span>
-                    <span class="tech-case-cooperation-nuomi">百度糯米</span>
+                    <span class="tech-case-cooperation-icon tech-case-cooperation-nuomi">百度糯米</span>
                 </div>
             </div>
         </div>
-        <div class="tech-case-item tech-feature-shadow">
+        <div class="tech-case-item">
             <div class="tech-case-desc">
                 <div class="tech-case-desc-title">舆情监控</div>
                 <div class="tech-case-desc-info">通过对需要舆情监控的实时文字数据流进行情感倾向性分析，把握用户对热点信息的情感倾向性变化</div>
-                <div class="tech-case-serve"></div>
+                <div class="tech-case-serve-yes">
+                    &nbsp;
+                </div>
                 <div class="tech-case-cooperation">
                     <span class="cooperation-case">&nbsp;</span>
                 </div>
@@ -505,8 +505,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1495804556/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1495804556/js/technology/nlp-sentiment_classify.js"></script>
+<script src="/ai_dist/1495804556/js/common.bundle.js"></script>
+<script src="/ai_dist/1495804556/js/technology/nlp-sentiment_classify.js"></script>
 
 <script>
     (function () {

@@ -2,8 +2,8 @@
     <div>
         <template v-for="(name, index) in path"
                   :class="getBreadCrumbItemClass(index)">
-            <span>{{name}}</span>
-            <span v-if="index < path.length - 1" class="bread-crumb-arrow">&gt;</span>
+            <span v-if="index == path.length - 1">{{name}}</span>
+            <!-- <span v-if="index == path.length - 1" class="bread-crumb-arrow">&gt;</span> -->
         </template>
     </div>
 </template>

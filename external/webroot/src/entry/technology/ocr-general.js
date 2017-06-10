@@ -9,10 +9,9 @@ import DemoCanvas from '../../component/widget/demoCanvas';
 import {scanGeneralText} from '../../model/demoAPI';
 import AlertModal from '../../component/widget/alertModal';
 
-import 'less/technology/ocr-general.less';
 
 /* eslint-disable */
-
+import 'less/technology/ocr-general.less';
 
 import '!file-loader?name=./../../template/cloud/[name].html!extract-loader!html-loader!view/technology/ocr-general.html';
 /* eslint-enable */
@@ -33,19 +32,40 @@ $(document).ready(function () {
         throttle(
             () => {
                 if ($(document).scrollTop() >= 100) {
-                    $('.tech-intro-detail').trigger('demo');
+                    $('.tech-function-detail').trigger('demo');
                 }
             },
             300
         )
     );
 
+    $(window).scroll(
+        throttle(
+            () => {
+                if ($(document).scrollTop() >= 500) {
+                    $('.tech-tab').addClass('tech-top');
+                } else {
+                    $('.tech-tab').removeClass('tech-top');
+                }
+            },
+            16
+        )
+    )
+
+    // tab切换
+    $('.ocr-general-1, .ocr-general-2').hide();
+    $('.tech-tab-list .tech-tab-item').eq(0).addClass('tech-tab-change');
+    $('.tech-tab-list').on('click', '.tech-tab-item', function() {
+        $(this).addClass('tech-tab-change').siblings().removeClass('tech-tab-change');
+        $('.ocr-general-'+($(this).index())).show().siblings('.ocr-general').hide();
+    })
+
     // 绑定功能介绍动画
-    $('.tech-intro-detail').one('demo', function () {
-        $('.original-card').addClass('scanning');
+    $('.tech-function-detail').one('demo', function () {
+        $('.tech-function-original-card').addClass('tech-function-scanning');
         setTimeout(function () {
-            $('.original-card').removeClass('scanning').addClass('scanned');
-            $('.scan-result').addClass('scanned');
+            $('.tech-function-original-card').removeClass('tech-function-scanning').addClass('tech-function-scanned');
+            $('.tech-function-scan-result').addClass('tech-function-scanned');
         }, 3000);
     });
 
@@ -123,7 +143,7 @@ $(document).ready(function () {
         $('#demo-photo-upload, #scan-photo').addClass('disabled');
         let file = $(this)[0].files[0];
         new DemoCanvas({
-            selector: '#demo-origin',
+            selector: '#demo-origin-general',
             image: file,
             type: 'stream',
             success(imgSrc) {
@@ -152,7 +172,7 @@ $(document).ready(function () {
         let url = $('#demo-photo-url').val();
         $('#demo-photo-upload, #scan-photo').addClass('disabled');
         new DemoCanvas({
-            selector: '#demo-origin',
+            selector: '#demo-origin-general',
             image: url,
             type: 'url',
             apiType: 'commontext',
@@ -184,7 +204,7 @@ $(document).ready(function () {
         let url = `${window.location.protocol}${$(this).find('img').attr('src')}`;
         $('#demo-photo-upload, #scan-photo').addClass('disabled');
         new DemoCanvas({
-            selector: '#demo-origin',
+            selector: '#demo-origin-general',
             image: url,
             type: 'url',
             toCheck: false,

@@ -11,13 +11,13 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
+    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/ie9.style.css">
+    <link rel="stylesheet" href="/ai_dist/1495804556/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/technology/ocr-general_enhanced.style.css">
+    <link rel="stylesheet" href="/ai_dist/1495804556/css/base.style.css">
+    <link rel="stylesheet" href="/ai_dist/1495804556/css/technology/ocr-general_enhanced.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1495804556/ai_images/logo.png" alt="百度大脑">
+                <img src="/ai_dist/1495804556/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -71,16 +71,6 @@
                                 <li><a href="/tech/ocr/general">通用文字识别</a></li>
                                 <li><a href="/tech/ocr/idcard">身份证识别</a></li>
                                 <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
-                                <li>
-                                    <a href="/tech/ocr/general_enhanced" id="ocr-enhanced-link">
-                                    通用文字识别（含生僻字版）
-                                    </a>
-                                </li>
-                                 <li>
-                                    <a href="/tech/ocr/general_location" id="ocr-location-link">
-                                    通用文字识别（含位置信息版）
-                                    </a>
-                                </li>
                                 <li>
                                     <a href="/tech/ocr/webimage">
                                         网络图片文字识别
@@ -323,28 +313,28 @@
                 </div>
                 <div class="tech-demo-card-list">
                     <div class="tech-demo-card-item tech-demo-card-active">
-                        <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/ocr-general_enhanced/demo-card-1.png">
+                        <img src="/ai_dist/1495804556/ai_images/technology/ocr-general_enhanced/demo-card-1.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/ocr-general_enhanced/demo-card-2.png">
+                        <img src="/ai_dist/1495804556/ai_images/technology/ocr-general_enhanced/demo-card-2.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/ocr-general_enhanced/demo-card-3.png">
+                        <img src="/ai_dist/1495804556/ai_images/technology/ocr-general_enhanced/demo-card-3.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/ocr-general_enhanced/demo-card-4.png">
+                        <img src="/ai_dist/1495804556/ai_images/technology/ocr-general_enhanced/demo-card-4.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/ocr-general_enhanced/demo-card-5.png">
+                        <img src="/ai_dist/1495804556/ai_images/technology/ocr-general_enhanced/demo-card-5.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/ocr-general_enhanced/demo-card-6.png">
+                        <img src="/ai_dist/1495804556/ai_images/technology/ocr-general_enhanced/demo-card-6.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/ocr-general_enhanced/demo-card-7.png">
+                        <img src="/ai_dist/1495804556/ai_images/technology/ocr-general_enhanced/demo-card-7.png">
                     </div>
                     <div class="tech-demo-card-item">
-                        <img src="//ai.bdstatic.com/dist/1495804556/ai_images/technology/ocr-general_enhanced/demo-card-8.png">
+                        <img src="/ai_dist/1495804556/ai_images/technology/ocr-general_enhanced/demo-card-8.png">
                     </div>
                 </div>
             </div>
@@ -679,8 +669,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1495804556/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1495804556/js/technology/ocr-general_enhanced.js"></script>
+<script src="/ai_dist/1495804556/js/common.bundle.js"></script>
+<script src="/ai_dist/1495804556/js/technology/ocr-general_enhanced.js"></script>
 
 <script>
     (function () {

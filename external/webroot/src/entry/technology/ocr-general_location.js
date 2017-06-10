@@ -57,8 +57,8 @@ $window.on(
 
 // 功能介绍动画
 const playDemo = () => {
-    const $techFunctionDemoOrigin = $('.tech-function-original-card');
-    const $techFunctionDemoResult = $('.tech-function-scan-result');
+    const $techFunctionDemoOrigin = $('.tech-function-original-card-location');
+    const $techFunctionDemoResult = $('.tech-function-scan-result-location');
 
     $techFunctionDemoOrigin.addClass('tech-function-scanning');
 

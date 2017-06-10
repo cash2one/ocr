@@ -22,7 +22,7 @@
                  class="tree-node leaf-node"
                  :class="getLeafNodeClass(item.md)">
                 <div class="leaf-dot" v-if="level === 3"></div>
-                <div class="leaf-text">{{item.text}}</div>
+                <div class="leaf-text" v-bind:title="item.text">{{item.text}}</div>
             </div>
         </template>
     </div>

@@ -88,23 +88,31 @@ $.extend($.fn, {
                 + '">上一页</span>';
 
             var pc = pageCount(total, pageNum);
+            var pageStore = [];
             for (var i = 0; i < pc; i++) {
-                if (i === now - 3 && i > 0) {
-                    t += '<span>...</span>';
-                }
-                if (i < now + 3 && i > now - 3 || i === pc - 1 || i === 0) {
-                    t += '<span class="page-num'
-                        + (i === now ? ' pg-on' : '')
-                        + '" data-index="'
-                        + i
-                        + '">'
-                        + (i + 1)
-                        + '</span>';
-                }
+                pageStore.push(i);
+                if(pc > 10 && (pc - now) < 10 ) {
+                    // 显示倒数十页
+                    pageStore = pageStore.slice(-10);
+                } else {
 
-                if (i === now + 3 && i < pc - 1) {
-                    t += '<span>...</span>';
                 }
+                // if (i === now - 3 && i > 0) {
+                //     t += '<span>...</span>';
+                // }
+                // if (i < now + 3 && i > now - 3 || i === pc - 1 || i === 0) {
+                //     t += '<span class="page-num'
+                //         + (i === now ? ' pg-on' : '')
+                //         + '" data-index="'
+                //         + i
+                //         + '">'
+                //         + (i + 1)
+                //         + '</span>';
+                // }
+
+                // if (i === now + 3 && i < pc - 1) {
+                //     t += '<span>...</span>';
+                // }
             }
             t += '<span class="pg-func next'
                 + (now === pc - 1 ? ' disabled' : '')
