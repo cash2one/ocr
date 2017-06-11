@@ -11,13 +11,13 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="//ai.bdstatic.com/dist/ai_images/favicon-32.ico">
+    <link rel="shortcut icon" href="/ai_dist/ai_images/favicon-32.ico">
 
     <!--[if IE 9]>
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/ie9.style.css">
+    <link rel="stylesheet" href="/ai_dist/1495804556/css/ie9.style.css">
     <![endif]-->
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/base.style.css">
-    <link rel="stylesheet" href="//ai.bdstatic.com/dist/1495804556/css/secondary/template.style.css">
+    <link rel="stylesheet" href="/ai_dist/1495804556/css/base.style.css">
+    <link rel="stylesheet" href="/ai_dist/1495804556/css/secondary/template.style.css">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -33,7 +33,7 @@
     <div class="container">
         <div class="logo">
             <a href="https://ai.baidu.com">
-                <img src="//ai.bdstatic.com/dist/1495804556/ai_images/logo.png" alt="百度大脑">
+                <img src="/ai_dist/1495804556/ai_images/logo.png" alt="百度大脑">
             </a>
         </div>
         <nav class="top-nav">
@@ -71,16 +71,6 @@
                                 <li><a href="/tech/ocr/general">通用文字识别</a></li>
                                 <li><a href="/tech/ocr/idcard">身份证识别</a></li>
                                 <li><a href="/tech/ocr/bankcard">银行卡识别</a></li>
-                                <li>
-                                    <a href="/tech/ocr/general_enhanced" id="ocr-enhanced-link">
-                                    通用文字识别（含生僻字版）
-                                    </a>
-                                </li>
-                                 <li>
-                                    <a href="/tech/ocr/general_location" id="ocr-location-link">
-                                    通用文字识别（含位置信息版）
-                                    </a>
-                                </li>
                                 <li>
                                     <a href="/tech/ocr/webimage">
                                         网络图片文字识别
@@ -251,25 +241,24 @@
 </header>
 <div class="ai-platform page-content">
     <div class="tech-section tech-banner">
-    <div class="ai-container">
-        <div class="tech-banner-title">
-            图像审核
-        </div>
-        <div class="tech-banner-info">
-            <p>
-                基于深度学习的智能内容审核方案，准确识别图片和视频中的涉黄、涉暴涉恐、政治敏感、微商广告、恶心等内容，也能从美观和清晰等维度对图像进行筛选，通过简单的API调用，即可快速规避内容违规风险，解放审核人力
-            </p>
-        </div>
-        <div class="tech-banner-btn-list">
-            <a role="button"
-               class="btn-primary-new media-new ai-redirect"
-               target="_blank"
-               href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">立即使用</a>
-            <a role="button"
-               class="btn-primary-new media-new"
-               href="/docs#/ImageCensoring-API/top">
-                技术文档
-            </a>
+    <div class="tech-banner-shape">
+        <div class="ai-container">
+            <div class="tech-banner-title">
+                图像审核
+            </div>
+            <div class="tech-banner-info">
+                <p>
+                    基于深度学习的智能内容审核方案，准确识别图片和视频中的涉黄、涉暴涉恐、政治敏感、微商广告、恶心等内容，也能从美观和清晰等维度对图像进行筛选，通过简单的API调用，</p>
+            </div>
+            <div class="tech-banner-btn-list">
+                <a role="button"
+                  class="btn-primary-new media-new ai-redirect"
+                  target="_blank"
+                  href="https://console.bce.baidu.com/ai/?fromai=1#/ai/antiporn/overview/index">立即使用</a>
+                <a role="button"
+                  class="btn-primary-new media-new"
+                  href="/docs#/ImageCensoring-API/top">技术文档</a>
+            </div>
         </div>
     </div>
 </div>
@@ -302,7 +291,7 @@
                 <div class="tech-prod-info">
                     <div class="tech-prod-name">暴恐识别</div>
                     <div class="tech-prod-intro">
-                        智能识别暴力，血腥场景及恐怖组织头目，旗帜标语等各类涉嫌违禁的图片和视频内容，降低应用涉暴涉恐的风险
+                        智能识别暴力，血腥场景及恐怖组织头目，旗帜标语等各类涉嫌违禁的图片和视频内容
                     </div>
                     <div class="tech-prod-panel">
                         <a class="consult">合作咨询</a>
@@ -317,7 +306,7 @@
                 <div class="tech-prod-info">
                     <div class="tech-prod-name">政治敏感识别</div>
                     <div class="tech-prod-intro">
-                        利用业界领先的人脸识别技术和庞大的政治人物数据库智能识别政治人物，同时能对敏感政治事件场景进行识别，帮助UGC、IM、BBS类产品在敏感时期规避相关风险
+                        利用业界领先的人脸识别技术和庞大的政治人物数据库智能识别政治人物，同事
                     </div>
                     <div class="tech-prod-panel">
                         <a class="consult">合作咨询</a>
@@ -331,8 +320,7 @@
                 <div class="tech-prod-info">
                     <div class="tech-prod-name">广告检测</div>
                     <div class="tech-prod-intro">
-                        智能检测图像中的文字、水印、二维码、条形码，并能在不影响原图的效果下去除各种水印，过滤各种微商，虚假诈骗广告，净化您的应用
-                    </div>
+                        智能检测图像中的文字、水印、二维码、条形码，并能在不影响原图的效果下去除各种</div>
                     <div class="tech-prod-panel">
                         <a class="consult">合作咨询</a>
                     </div>
@@ -345,7 +333,7 @@
                 <div class="tech-prod-info">
                     <div class="tech-prod-name">恶心图像识别</div>
                     <div class="tech-prod-intro">
-                        能准确识别恶心，令人不适类的图像，包含尸体、解剖、昆虫类、生理病变、会引起密集恐惧症等图像，让您的应用远离该类图片，提升用户感受
+                        能准确识别恶心，令人不适类的图像，包含尸体、解剖、昆虫类、生理病变、会
                     </div>
                     <div class="tech-prod-panel">
                         <a class="consult">合作咨询</a>
@@ -359,8 +347,7 @@
                 <div class="tech-prod-info">
                     <div class="tech-prod-name">图像质量检测</div>
                     <div class="tech-prod-intro">
-                        提供图像美观度识别，清晰度识别。美观度包括：图像色彩，构图，主体是否明确等维度；清晰度包括：图像模糊、失焦、噪点、锯齿以及马赛克等维度。适用于各类图库产品，提升整体图像质量
-                    </div>
+                        提供图像美观度识别，清晰度识别。美观度包括：图像色彩，构图，主体是否明确等维度</div>
                     <div class="tech-prod-panel">
                         <a class="consult">合作咨询</a>
                     </div>
@@ -376,8 +363,9 @@
         <div class="tech-case-item">
             <div class="tech-case-desc">
                 <div class="tech-case-desc-title">金融核身</div>
-                <div class="tech-case-desc-info">金融在线业务，用户真实性判断一直都是个棘手的问题，往往只能通过的比较传统的柜台业务辅助才可，这无疑增加了用户的办理成本。通过在客户端的人脸活体检测，判断用户为真人；进而通过用户输入字。</div>
-                <div class="tech-case-serve">
+                <div class="tech-case-desc-info">金融在线业务，用户真实性判断一直都是个棘手的问题，往往只能通过的比较传统的柜台业务辅助才可
+                </div>
+                <div class="tech-case-serve-yes">
                     <span class="main-serve">主要服务:</span><a href="" class="bioassay">活体检测</a><a href="" class="face-contrast">人脸对比</a>
                 </div>
                 <div class="tech-case-cooperation">
@@ -388,10 +376,12 @@
         <div class="tech-case-item">
             <div class="tech-case-desc">
                 <div class="tech-case-desc-title">金融核身</div>
-                <div class="tech-case-desc-info">金融在线业务，用户真实性判断一直都是个棘手的问题，往往只能通过的比较传统的柜台业务辅助才可，这无疑增加了用户的办理成本。通过在客户端的人脸活体检测，判断用户为真人；进而通过用户输入字。</div>
-                <div class="tech-case-serve">
+                <div class="tech-case-desc-info">金融在线业务，用户真实性判断一直都是个棘手的问题，往往只能通过的比较传统的柜台业务辅助才可
+                </div>
+                <div class="tech-case-serve-yes">
                     <span class="main-serve">主要服务:</span><a href="" class="bioassay">活体检测</a><a href="" class="face-contrast">人脸对比</a>
                 </div>
+                <hr class="tech-case-line">
                 <div class="tech-case-cooperation">
                     <span class="cooperation-case">合作案例:</span>
                 </div>
@@ -400,10 +390,11 @@
         <div class="tech-case-item">
             <div class="tech-case-desc">
                 <div class="tech-case-desc-title">金融核身</div>
-                <div class="tech-case-desc-info">金融在线业务，用户真实性判断一直都是个棘手的问题，往往只能通过的比较传统的柜台业务辅助才可，这无疑增加了用户的办理成本。通过在客户端的人脸活体检测，判断用户为真人；进而通过用户输入字。</div>
-                <div class="tech-case-serve">
+                <div class="tech-case-desc-info">金融在线业务，用户真实性判断一直都是个棘手的问题，往往只能通过的比较传统的柜台业务辅助才可，</div>
+                <div class="tech-case-serve-yes">
                     <span class="main-serve">主要服务:</span><a href="" class="bioassay">活体检测</a><a href="" class="face-contrast">人脸对比</a>
                 </div>
+                <hr class="tech-case-line">
                 <div class="tech-case-cooperation">
                     <span class="cooperation-case">合作案例:</span>
                 </div>
@@ -600,8 +591,8 @@
         <p class="copyright">©2017 Baidu <a href="https://www.baidu.com/duty/" target="_blank">使用百度必读</a></p>
     </div>
 </footer>
-<script src="//ai.bdstatic.com/dist/1495804556/js/common.bundle.js"></script>
-<script src="//ai.bdstatic.com/dist/1495804556/js/secondary/template.js"></script>
+<script src="/ai_dist/1495804556/js/common.bundle.js"></script>
+<script src="/ai_dist/1495804556/js/secondary/template.js"></script>
 
 <script>
     (function () {
